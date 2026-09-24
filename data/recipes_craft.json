@@ -48,5 +48,73 @@
     ],
     "minutes": 4320,
     "unlock": "start"
+  },
+  {
+    "id": "cut_fillet",
+    "station": "cutting_table",
+    "in": [
+      [
+        "tag:fish",
+        1
+      ]
+    ],
+    "out": [
+      "fillet",
+      1
+    ],
+    "extra": [
+      [
+        "fish_guts",
+        1
+      ]
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cut_bait",
+    "station": "cutting_table",
+    "in": [
+      [
+        "tag:fish",
+        1
+      ]
+    ],
+    "out": [
+      "bait",
+      5
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "render_oil",
+    "station": "renderer",
+    "in": [
+      [
+        "fish_guts",
+        5
+      ]
+    ],
+    "out": [
+      "fish_oil",
+      1
+    ],
+    "minutes": 240,
+    "unlock": "start"
+  },
+  {
+    "id": "settle_whale_oil",
+    "station": "settling_tank",
+    "in": [
+      [
+        "fish_oil",
+        2
+      ]
+    ],
+    "out": [
+      "whale_oil",
+      1
+    ],
+    "minutes": 1440,
+    "unlock": "start"
   }
 ]

@@ -11,6 +11,8 @@ var tiles: Dictionary = {}
 var last_harvest: Dictionary = {}
 # Seasonal wild finds per map: [{item, x, y}] in tiles.
 var wild: Dictionary = {}
+# Peat bog tiles dug this season: "x,y" -> season key; each tile recovers once a season (13.13).
+var peat_dug: Dictionary = {}
 
 
 func _key(cell: Vector2i) -> String:
@@ -39,6 +41,7 @@ func get_tile(cell: Vector2i) -> Dictionary:
 func reset() -> void:
 	tiles.clear()
 	wild.clear()
+	peat_dug.clear()
 	Events.farm_changed.emit()
 
 
@@ -240,6 +243,27 @@ func spawn_wild(index: int) -> void:
 		wild[map_id] = list
 
 
+func in_peat_bog(map_id: String, cell: Vector2i) -> bool:
+	var bog: Dictionary = Data.tables.get("forage", {}).get("peat_bog", {})
+	var rect: Array = bog.get("rect", [0, 0, 0, 0])
+	return str(bog.get("map", "")) == map_id and cell.x >= int(rect[0]) and cell.x < int(rect[0]) + int(rect[2]) \
+		and cell.y >= int(rect[1]) and cell.y < int(rect[1]) + int(rect[3])
+
+
+func dig_peat(map_id: String, cell: Vector2i) -> int:
+	var key := _key(cell)
+	if not in_peat_bog(map_id, cell) or int(peat_dug.get(key, -1)) == _season_key():
+		return 0
+	var amount: Array = Data.tables["forage"]["peat_bog"].get("amount", [1, 2])
+	var n := _rng(cell, 977).randi_range(int(amount[0]), int(amount[1]))
+	if not Inventory.can_fit("peat", n):
+		return 0
+	peat_dug[key] = _season_key()
+	Inventory.add("peat", n)
+	Skills.add_xp("foraging", 2)
+	return n
+
+
 func collect_wild(map_id: String, spot: Dictionary) -> bool:
 	var list: Array = wild.get(map_id, [])
 	var index := list.find(spot)
@@ -250,11 +274,15 @@ func collect_wild(map_id: String, spot: Dictionary) -> bool:
 
 
 func serialize() -> Dictionary:
-	return {"tiles": tiles, "wild": wild}
+	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug}
 
 
 func deserialize(d: Dictionary) -> void:
 	tiles = d.get("tiles", {}).duplicate(true)
+	peat_dug.clear()
+	var saved_peat: Dictionary = d.get("peat_dug", {})
+	for key in saved_peat:
+		peat_dug[str(key)] = int(saved_peat[key])
 	wild.clear()
 	var saved_wild: Dictionary = d.get("wild", {})
 	for map_id in saved_wild:

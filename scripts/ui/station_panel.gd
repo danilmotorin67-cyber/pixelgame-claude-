@@ -63,6 +63,8 @@ func _ready() -> void:
 			buttons.add_child(_button("Забрать", collect))
 		_:
 			buttons.add_child(_button("Сделать", act))
+			if int(Crafting.station(str(obj()["id"])).get("batch", 1)) > 1:
+				buttons.add_child(_button("×5", func() -> void: act(5)))
 	buttons.add_child(_button("Закрыть", close))
 	refresh()
 	if _list.item_count > 0:
@@ -126,7 +128,7 @@ func refresh() -> void:
 		_list.select(mini(selected[0], _list.item_count - 1))
 
 
-func act() -> String:
+func act(count: int = 1) -> String:
 	var picked := _list.get_selected_items()
 	if picked.is_empty() or picked[0] >= _rows.size():
 		return "unknown"
@@ -137,7 +139,7 @@ func act() -> String:
 		"process":
 			result = Crafting.start(obj(), str(_rows[picked[0]]))
 		_:
-			result = Crafting.make(str(_rows[picked[0]]))
+			result = Crafting.make(str(_rows[picked[0]]), count)
 	refresh()
 	if kind() != "process" or result != "ok":
 		_status.text = RESULT_TEXT.get(result, "")

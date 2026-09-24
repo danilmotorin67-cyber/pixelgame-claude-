@@ -306,3 +306,19 @@ season.spring,Весна,Spring
 season.summer,Лето,Summer
 season.autumn,Осень,Autumn
 season.winter,Зима,Winter
+item.fillet.name,Филе,Fillet
+item.fillet.desc,"Для копчения, вяления и котлет. Рыба без лишних подробностей.","For smoking, drying and fishcakes. Fish without the details."
+item.fish_guts.name,Рыбьи потроха,Fish guts
+item.fish_guts.desc,"Для жиротопки и наживки. Никто их не любит, маяк — любит.",For the renderer and bait. Nobody loves them; the lighthouse does.
+item.bait.name,Наживка,Bait
+item.bait.desc,Для удочки и ловушек. Рыба ест рыбу — море не сентиментально.,For rods and traps. Fish eat fish; the sea is not sentimental.
+item.peat.name,Торф,Peat
+item.peat.desc,"Топливо для очага, горна и жиротопки. Пустошь, которая горит медленно.","Fuel for the hearth, forge and renderer. A moor that burns slowly."
+item.renderer.name,Жиротопка,Renderer
+item.renderer.desc,Ставится на мысу: 5 потрохов → 1 рыбий жир за 4 часа на торфе. Запах бесплатно.,Placed on the cape: 5 guts → 1 fish oil in 4 hours on peat. The smell is free.
+item.settling_tank.name,Отстойник,Settling tank
+item.settling_tank.desc,"Ставится на мысу: 2 рыбьего жира → 1 ворвань за день. Терпение, очищенное до прозрачности.",Placed on the cape: 2 fish oil → 1 whale oil in a day. Patience refined to clarity.
+station.cutting_table,Разделочный стол,Cutting table
+station.renderer,Жиротопка,Renderer
+station.settling_tank,Отстойник,Settling tank
+mail.station_delivery,"Лоцманская управа. Рюкзак переполнен, поэтому %s доставлен почтой. Распишитесь. Не там.","Pilot Directorate. Your backpack was full, so the %s came by post. Sign here. No, there."

@@ -1175,5 +1175,55 @@
     "category": "decor",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "fillet",
+    "name": "item.fillet.name",
+    "desc": "item.fillet.desc",
+    "category": "fish_product",
+    "price": 45,
+    "stack": 99
+  },
+  {
+    "id": "fish_guts",
+    "name": "item.fish_guts.name",
+    "desc": "item.fish_guts.desc",
+    "category": "fish_product",
+    "price": 2,
+    "stack": 99
+  },
+  {
+    "id": "bait",
+    "name": "item.bait.name",
+    "desc": "item.bait.desc",
+    "category": "bait",
+    "price": 1,
+    "stack": 999
+  },
+  {
+    "id": "peat",
+    "name": "item.peat.name",
+    "desc": "item.peat.desc",
+    "category": "fuel_misc",
+    "price": 10,
+    "stack": 99
+  },
+  {
+    "id": "renderer",
+    "name": "item.renderer.name",
+    "desc": "item.renderer.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 1,
+    "place": "renderer"
+  },
+  {
+    "id": "settling_tank",
+    "name": "item.settling_tank.name",
+    "desc": "item.settling_tank.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 1,
+    "place": "settling_tank"
   }
 ]

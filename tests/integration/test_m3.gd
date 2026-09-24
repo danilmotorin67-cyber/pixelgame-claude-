@@ -416,6 +416,74 @@ func _check_world_objects() -> void:
 	await get_tree().process_frame
 
 
+func _find_station(id: String) -> Dictionary:
+	for obj in Crafting.placed.get("cape", []):
+		if str(obj["id"]) == id:
+			return obj
+	return {}
+
+
+func _select(id: String) -> void:
+	for index in Inventory.capacity:
+		if Inventory.slots[index]["id"] == id:
+			Inventory.select_hotbar(index)
+
+
+func _check_fuel_chain() -> void:
+	_fresh()
+	Crafting.reset()
+	Inventory.add("fish_cod", 27)
+	_check(Crafting.make("cut_fillet", 30) == "ok" and Inventory.count_of("fillet") == 20
+		and Inventory.count_of("fish_guts") == 20 and Inventory.count_of("fish_cod") == 7,
+		"the cutting table works in batches of up to 20: fish -> fillet + guts")
+	_check(Crafting.make("cut_bait") == "ok" and Inventory.count_of("bait") == 5, "one fish -> 5 bait")
+
+	_check(Knowledge.blocked_reason("M2") == "points", "the renderer needs sea notes")
+	Knowledge.add_points("sea", 8)
+	_check(Knowledge.unlock_node("M2") and Inventory.count_of("renderer") == 1, "M2 hands over a renderer")
+	_check(Knowledge.unlock_node("M3") and Inventory.count_of("settling_tank") == 1, "M3 hands over a settling tank")
+	_select("renderer")
+	_check(Crafting.place_selected("cape", Vector2(760, 470)), "the renderer is placed on the cape")
+	_select("settling_tank")
+	_check(Crafting.place_selected("cape", Vector2(800, 470)), "the settling tank is placed on the cape")
+	var renderer := _find_station("renderer")
+	var tank := _find_station("settling_tank")
+	Clock.set_time(8, 0)
+	_check(Crafting.start(renderer, "render_oil") == "fuel", "the renderer burns peat")
+	Inventory.add("peat", 2)
+	_check(Crafting.start(renderer, "render_oil") == "ok" and Inventory.count_of("peat") == 1
+		and Inventory.count_of("fish_guts") == 15, "5 guts and 1 peat go in")
+	Clock.set_time(11, 50)
+	_check(Crafting.collect(renderer) == 0, "rendering takes 4 hours")
+	Clock.set_time(12, 0)
+	_check(Crafting.collect(renderer) == 1 and Inventory.count_of("fish_oil") == 1, "5 guts make 1 fish oil")
+	Inventory.add("fish_oil", 1)
+	_check(Crafting.start(tank, "settle_whale_oil") == "ok" and Inventory.count_of("fish_oil") == 0, "2 fish oil settle")
+	Clock.day_index = 1
+	_check(Crafting.collect(tank) == 1 and Inventory.count_of("whale_oil") == 1, "a day later: 1 whale oil")
+	_check(Lighthouse.refill() == 1 and Lighthouse.components()["fuel"] == 6, "whale oil in the reservoir: 6 points")
+
+	Clock.day_index = 0
+	var bog := Vector2i(15, 45)
+	var got := Farm.dig_peat("moor", bog)
+	_check(got >= 1 and got <= 2 and Farm.dig_peat("moor", bog) == 0, "a bog tile gives 1-2 peat once a season")
+	_check(Farm.dig_peat("moor", Vector2i(40, 10)) == 0 and Farm.dig_peat("cape", bog) == 0, "peat only in the moor bog")
+	Clock.day_index = 28
+	_check(Farm.dig_peat("moor", bog) >= 1, "the bog recovers next season")
+	Clock.day_index = 0
+	Clock.set_time(10, 0)
+	var kerosene := {}
+	for entry in Economy.shop_stock("shop_grim"):
+		if entry["item"] == "kerosene":
+			kerosene = entry
+	Economy.money = 500
+	_check(Economy.buy("shop_grim", kerosene) == "ok" and Economy.money == 380, "Grim sells kerosene at 120")
+	Clock.day_index = 6
+	_check(Economy.shop_closed_reason("shop_grim") == "day", "the trading house is closed on Sundays")
+	Crafting.reset()
+	Farm.reset()
+
+
 func _run() -> void:
 	await _check_world_objects()
 	_check_components()
@@ -427,6 +495,7 @@ func _run() -> void:
 	_check_salary_and_mail()
 	_check_inspections()
 	_check_knowledge()
+	_check_fuel_chain()
 	_fresh()
 	print("M3 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

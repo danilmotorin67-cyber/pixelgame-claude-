@@ -59,6 +59,11 @@ func unlock_node(id: String) -> bool:
 	for kind in cost:
 		add_points(kind, -int(cost[kind]))
 	unlock(id)
+	for tag in node(id).get("unlocks", []):
+		if str(tag).begins_with("station:"):
+			var item := str(Crafting.station(str(tag).substr(8)).get("item", ""))
+			if item != "" and Inventory.add(item, 1) != 1:
+				Mail.send("mail.station_delivery", [Loc.t(str(Data.by_id("items", item).get("name", item)))], 0, [[item, 1]])
 	return true
 
 

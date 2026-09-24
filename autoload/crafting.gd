@@ -1,6 +1,7 @@
 extends Node
 
-const DEFAULT_PLACED := {"cape": [["workbench", 560, 372], ["hearth", 536, 330], ["compost_pit", 648, 392]]}
+const DEFAULT_PLACED := {"cape": [["workbench", 560, 372], ["hearth", 536, 330], ["compost_pit", 648, 392],
+	["cutting_table", 520, 372]]}
 const PLACE_REACH := 48.0
 
 # Station objects per map: {uid, id, x, y, queue: [{recipe, ready_at}], slots: [...]}.
@@ -82,14 +83,23 @@ func _fuel_for(station_id: String) -> String:
 	return ""
 
 
-# Workbench and hearth: instant, consumes ingredients (and one fuel at the hearth).
-func make(recipe_id: String) -> String:
+# Workbench, hearth and cutting table: instant; `count` repeats the recipe up to the station's batch.
+func make(recipe_id: String, count: int = 1) -> String:
 	var recipe := _recipe(recipe_id)
 	if recipe.is_empty() or not knows(recipe):
 		return "unknown"
 	var info := station(str(recipe["station"]))
 	if str(info.get("kind", "")) not in ["instant", "cook"]:
 		return "unknown"
+	count = clampi(count, 1, int(info.get("batch", 1)))
+	for n in count:
+		var result := _make_once(recipe, info)
+		if result != "ok":
+			return "ok" if n > 0 else result
+	return "ok"
+
+
+func _make_once(recipe: Dictionary, info: Dictionary) -> String:
 	if not has_ingredients(recipe):
 		return "ingredients"
 	var fuel := ""
@@ -100,11 +110,16 @@ func make(recipe_id: String) -> String:
 	var out: Array = recipe["out"]
 	if not Inventory.can_fit(str(out[0]), int(out[1])):
 		return "space"
+	for extra in recipe.get("extra", []):
+		if not Inventory.can_fit(str(extra[0]), int(extra[1])):
+			return "space"
 	for need in recipe["in"]:
 		Inventory.take_matching(str(need[0]), int(need[1]))
 	if fuel != "":
 		Inventory.take(fuel, 1)
 	Inventory.add(str(out[0]), int(out[1]))
+	for extra in recipe.get("extra", []):
+		Inventory.add(str(extra[0]), int(extra[1]))
 	if str(info["kind"]) == "instant":
 		Skills.add_xp("crafting", 2 + recipe["in"].size())
 	return "ok"
@@ -128,8 +143,15 @@ func start(obj: Dictionary, recipe_id: String) -> String:
 		return "full"
 	if not has_ingredients(recipe):
 		return "ingredients"
+	var fuel := ""
+	if station(str(obj["id"])).has("fuel"):
+		fuel = _fuel_for(str(obj["id"]))
+		if fuel == "":
+			return "fuel"
 	for need in recipe["in"]:
 		Inventory.take_matching(str(need[0]), int(need[1]))
+	if fuel != "":
+		Inventory.take(fuel, 1)
 	var begin := now()
 	if not queue.is_empty():
 		begin = maxi(begin, int(queue[-1]["ready_at"]))
@@ -270,5 +292,12 @@ func deserialize(d: Dictionary) -> void:
 				restored["slots"] = slots
 			list.append(restored)
 		placed[map_id] = list
+	for map_id in DEFAULT_PLACED:
+		for entry in DEFAULT_PLACED[map_id]:
+			var present := false
+			for obj in placed.get(map_id, []):
+				present = present or str(obj["id"]) == str(entry[0])
+			if not present:
+				_add(map_id, str(entry[0]), int(entry[1]), int(entry[2]))
 	learned = d.get("learned", {}).duplicate()
-	next_uid = maxi(int(d.get("next_uid", 1)), 1)
+	next_uid = maxi(int(d.get("next_uid", 1)), next_uid)

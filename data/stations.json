@@ -9,6 +9,7 @@
     "name": "station.hearth",
     "kind": "cook",
     "fuel": [
+      "peat",
       "driftwood"
     ]
   },
@@ -24,5 +25,28 @@
     "kind": "storage",
     "slots": 24,
     "item": "chest"
+  },
+  {
+    "id": "cutting_table",
+    "name": "station.cutting_table",
+    "kind": "instant",
+    "batch": 20
+  },
+  {
+    "id": "renderer",
+    "name": "station.renderer",
+    "kind": "process",
+    "queue": 3,
+    "fuel": [
+      "peat"
+    ],
+    "item": "renderer"
+  },
+  {
+    "id": "settling_tank",
+    "name": "station.settling_tank",
+    "kind": "process",
+    "queue": 3,
+    "item": "settling_tank"
   }
 ]

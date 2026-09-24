@@ -140,6 +140,22 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			Inventory.select_hotbar(Inventory.selected_hotbar + 1)
 			return
+	if event.is_action_pressed("use_tool") and Inventory.selected_id() == "tool_shovel" \
+			and Router.current_map != "cape":
+		var at := get_global_mouse_position()
+		var cell := Vector2i(floori(at.x / 16.0), floori(at.y / 16.0))
+		if Farm.in_peat_bog(Router.current_map, cell) and global_position.distance_to(at) <= 40.0:
+			var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+			if energy <= 0.0:
+				hint.text = "Нужен отдых, сил на работу нет."
+			else:
+				var got := Farm.dig_peat(Router.current_map, cell)
+				if got > 0:
+					spend_energy("shovel")
+					play_tool("hoe", at)
+				hint.text = ("Торф: +%d" % got) if got > 0 else "Здесь уже копали в этом сезоне."
+			get_viewport().set_input_as_handled()
+			return
 	if event.is_action_pressed("use_tool") and Router.current_map == "cape":
 		var garden := get_tree().current_scene.get_node_or_null("Garden")
 		if garden and garden.use_at(get_global_mouse_position(), self):

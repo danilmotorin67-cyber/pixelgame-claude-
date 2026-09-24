@@ -303,5 +303,37 @@
         "price": 50
       }
     ]
+  },
+  {
+    "id": "shop_grim",
+    "name": "Торговый дом Грима",
+    "open": 9,
+    "close": 17,
+    "closed": [
+      "sun"
+    ],
+    "region": "village",
+    "buys": [
+      "fish",
+      "fish_product"
+    ],
+    "stock": [
+      {
+        "item": "kerosene",
+        "price": 120
+      },
+      {
+        "item": "glass",
+        "price": 100
+      },
+      {
+        "item": "coffee",
+        "price": 150
+      },
+      {
+        "item": "rum",
+        "price": 200
+      }
+    ]
   }
 ]

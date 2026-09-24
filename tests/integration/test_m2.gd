@@ -407,7 +407,7 @@ func _check_crafting() -> void:
 	Skills.reset()
 	Clock.day_index = 0
 	Clock.set_time(10, 0)
-	for id in ["workbench", "hearth", "compost_pit"]:
+	for id in ["workbench", "hearth", "compost_pit", "cutting_table"]:
 		_check(not _station(id).is_empty(), "the cape starts with a " + id)
 	var boards := {}
 	for entry in Economy.shop_stock("shop_ilm"):
@@ -606,7 +606,7 @@ func _run() -> void:
 		"the cape shows every gift of the morning")
 	_check_eating(cape.get_node("Player"))
 	var stations: Stations = cape.get_node_or_null("Stations")
-	_check(stations != null and stations.get_child_count() == 3, "the cape shows its three stations")
+	_check(stations != null and stations.get_child_count() == 4, "the cape shows its four stations")
 	var hearth_node: StationObject = null
 	for child in stations.get_children():
 		if child.station_id == "hearth":
