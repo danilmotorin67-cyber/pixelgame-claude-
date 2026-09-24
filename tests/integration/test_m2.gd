@@ -483,6 +483,102 @@ func _check_crafting() -> void:
 	Skills.reset()
 
 
+func _low_tide_minute(index: int) -> int:
+	var best := 6 * 60
+	for minute in range(6 * 60, 20 * 60, 10):
+		if Clock.tide_height_at(index, minute) < Clock.tide_height_at(index, best):
+			best = minute
+	return best
+
+
+# Spec 36, M2 done-criterion: a week of spring without the lighthouse or the graveyard.
+func _check_spring_week() -> void:
+	Save.save_root = "user://saltlight_m2_test_saves"
+	Save.current_slot = 2
+	Game.reset()
+	Game.world_seed = 7
+	Clock.reset()
+	Weather.reset()
+	Clock.day_index = 0
+	Weather.start_day(0)
+	Economy.reset()
+	Inventory.reset()
+	Farm.reset()
+	Sea.reset()
+	Skills.reset()
+	Crafting.reset()
+	Farm.spawn_wild(0)
+	Sea.generate_gifts(0, false)
+	Inventory.add("seed_turnip", 15)
+	Inventory.add("bread_rye", 3)
+	Inventory.add("tool_hoe")
+	Inventory.add("tool_can")
+	Game.player_state = {"energy": Game.max_energy()}
+	var beds: Array[Vector2i] = []
+	for x in 10:
+		beds.append(Vector2i(x, 0))
+	var nights := 0
+	var gathered := 0
+	var sold_turnips := 0
+	var money_start := Economy.money
+	var reports: Array = []
+	var catcher := func(report: Dictionary) -> void: reports.append(report)
+	Events.night_resolved.connect(catcher)
+	for day in 7:
+		var energy := float(Game.player_state.get("energy", Game.max_energy()))
+		Clock.set_time(7, 0)
+		for cell in beds:
+			if Farm.get_tile(cell).is_empty() and energy >= 2.0:
+				Farm.till(cell)
+				energy -= Game.action_cost("hoe")
+			var tile := Farm.get_tile(cell)
+			if bool(tile.get("ready", false)):
+				Farm.harvest(cell)
+			if str(tile.get("crop", "x")) == "" and Inventory.count_of("seed_turnip") > 0:
+				Farm.plant(cell, "seed_turnip")
+			if not tile.is_empty() and Farm.water(cell):
+				energy -= Game.action_cost("can")
+		if energy < Game.max_energy() * 0.3:
+			for index in Inventory.capacity:
+				if str(Inventory.slots[index]["id"]) == "bread_rye":
+					Inventory.select_hotbar(index)
+			if Inventory.count_of("bread_rye") > 0:
+				Inventory.take("bread_rye", 1)
+				energy = minf(energy + 50.0, Game.max_energy())
+		var low := _low_tide_minute(Clock.day_index)
+		Clock.set_time(low / 60, low % 60)
+		for gift in Sea.gifts.get("cape", []).duplicate():
+			if Sea.collect_gift("cape", gift):
+				gathered += 1
+		Clock.set_time(10, 0)
+		if Economy.shop_closed_reason("shop_berg") == "" and Inventory.count_of("seed_turnip") < 10:
+			for entry in Economy.shop_stock("shop_berg"):
+				if str(entry.get("item", "")) == "seed_turnip" and Economy.can_pay(200):
+					Economy.buy("shop_berg", entry, 10)
+		for index in Inventory.capacity:
+			var id := str(Inventory.slots[index]["id"])
+			if id == "turnip":
+				sold_turnips += int(Inventory.slots[index]["count"])
+			if id in ["turnip", "driftwood", "scallop_shell", "sea_glass", "red_kelp"]:
+				Economy.ship_slot(index)
+		Game.player_state["energy"] = energy
+		_check(energy >= 0.0, "the keeper never works below zero energy (day %d)" % day)
+		Clock.set_time(22, 0)
+		Night.end_day(false)
+		nights += 1
+	Events.night_resolved.disconnect(catcher)
+	_check(nights == 7 and Clock.day_index == 7 and reports.size() == 7, "seven spring nights resolved")
+	_check(Clock.season == "spring" and Clock.day == 8, "the week ends on Spring 8")
+	_check(gathered >= 20, "the shore feeds a keeper all week (%d finds)" % gathered)
+	_check(sold_turnips > 0 and Economy.money > money_start, "turnips and gifts turn into crowns")
+	_check(bool(reports[-1].get("saved", false)) and Save.has_save(2), "every night saves the game")
+	_check(float(Game.player_state.get("energy", 0.0)) == Game.max_energy(), "sleeping before midnight restores energy")
+	for file_path in Save._candidate_paths(2):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(file_path))
+	Save.save_root = "user://saves"
+	Save.current_slot = 0
+
+
 func _run() -> void:
 	Game.reset()
 	Game.world_seed = 42
@@ -527,6 +623,7 @@ func _run() -> void:
 		panel.close()
 	Inventory.reset()
 	cape.queue_free()
+	_check_spring_week()
 	Farm.reset()
 	Inventory.reset()
 	print("M2 integration: %d failure(s)" % failures.size())
