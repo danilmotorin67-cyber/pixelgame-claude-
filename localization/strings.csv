@@ -4402,3 +4402,532 @@ npc.grump.event.villains.02,Теперь хожу в ночь двадцать �
 npc.grump.event.villains.03,Мой журнал рейсов приобщили к делу. Сорок лет записей. Кто бы мог подумать — пригодились.,My voyage log's gone into evidence. Forty years of entries. Who'd have thought — they came in handy.
 npc.grump.event.villains.04,Артель отправила на материк первую партию. Честную. Я везу с удовольствием. Даже рыбу.,The Artel's shipped its first consignment to the mainland. An honest one. I carry it gladly. Even the fish.
 npc.grump.event.villains.05,"Спасибо, смотритель. Я отправил тебе пирог. Сам. Как обещал. С рыбой. Прости. Другого не было.","Thank you, keeper. I've sent you a pie. Myself. As promised. A fish pie. Sorry. There wasn't any other."
+npc.nut.spring.01,Чего уставился? Рыбак как рыбак. Иди к своему фонарю.,What are you staring at? A fisherman like any other. Go back to your lamp.
+npc.nut.spring.02,"Весной треска идёт. Мы с Рудом берём, сколько Грим скажет. Не больше.",The cod run in spring. Rud and I take what Grim tells us. No more.
+npc.nut.spring.03,"Лёд сошёл, а море злое. Весной оно всегда злое. Как хозяин с утра.",The ice has gone and the sea's in a temper. It always is in spring. Like the boss first thing in the morning.
+npc.nut.spring.04,"Сети чинить — бабье дело, говорил отец. А потом сам чинил. Всю жизнь.","Mending nets is women's work, Father used to say. Then he mended them himself. All his life."
+npc.nut.spring.05,{Новый|Новая} на мысу? Агата тоже была новая. Сорок лет назад. Все мы были.,New out on the cape? Agatha was new once too. Forty years back. We all were.
+npc.nut.spring.06,"Весной на Зубах воды мало, камни торчат. Не ходи туда. Просто совет.",In spring there's little water over the Teeth; the rocks stick out. Don't go there. Just advice.
+npc.nut.spring.07,Грим платит в срок. Больше никто на острове в срок не платит. Думай.,Grim pays on time. Nobody else on this island pays on time. Think about it.
+npc.nut.spring.08,"Птицы вернулись. Орут с утра. Я б их всех… ладно, пусть орут.","The birds are back. Screaming from dawn. I'd wring every… fine, let them scream."
+npc.nut.spring.09,"Руд опять весь вечер молчал. Когда он молчит, мне хуже, чем когда он пьёт.",Rud kept quiet all evening again. When he's quiet I feel worse than when he's drinking.
+npc.nut.spring.10,"Спуск лодок скоро. Бенедикт брызнет водой, и все поверят, что это поможет. Ну-ну.",The Boat Launch is coming. Benedict'll splash some water and everyone'll believe it helps. Sure.
+npc.nut.summer.01,Жара. Рыба ушла вглубь. Мы тоже скоро уйдём — в таверну.,Heat. The fish have gone deep. We'll be going soon too — to the tavern.
+npc.nut.summer.02,Летом ночи светлые. Плохо для… для рыбалки. Плохо.,Summer nights are light. Bad for… for fishing. Bad.
+npc.nut.summer.03,"Туристы с «Королевы» спрашивают, опасны ли Зубы. Говорю — нет. Пусть боятся меньше.",Tourists off the Queen ask if the Teeth are dangerous. I say no. Let them be less scared.
+npc.nut.summer.04,Регата. Грим ставит на нас. Если проиграем — вычтет из жалованья. Шутит. Наверно.,The regatta. Grim bets on us. If we lose he'll dock our pay. He's joking. Probably.
+npc.nut.summer.05,"Скумбрия пошла. Руд радуется, как мальчишка. Я — нет. Я считаю ящики.",The mackerel are running. Rud's happy as a boy. I'm not. I count crates.
+npc.nut.summer.06,"Ты по ночам не спишь, смотритель. Мы тоже. Только ты — на свету, а мы…","You don't sleep at night, keeper. Neither do we. Only you're in the light, and we…"
+npc.nut.summer.07,Комары на болоте злее Грима. Почти.,The mosquitoes on the moor are nastier than Grim. Almost.
+npc.nut.summer.08,Я не пью летом. Вру. Пью. Но меньше.,I don't drink in summer. Lie. I do. But less.
+npc.nut.summer.09,Лив Хокон ходит с блокнотом. Записывает туман. Кому нужен записанный туман?,Liv Hakon walks around with a notebook. Writing down the fog. Who needs fog written down?
+npc.nut.summer.10,В Ночь Белого Солнца все пляшут. Мы с Рудом сидим на причале. Семейная традиция.,On White Sun Night everyone dances. Rud and I sit on the pier. Family tradition.
+npc.nut.autumn.01,"Осень. Штормов больше, кораблей больше, работы больше. Не спрашивай какой.","Autumn. More storms, more ships, more work. Don't ask what work."
+npc.nut.autumn.02,"Сельдь пошла. Ярмарка. Грим скупает у всех за полцены, а мы грузим.",The herring's in. The Fair. Grim buys from everyone at half price and we load it.
+npc.nut.autumn.03,Мой день рождения осенью. Руд дарит мне одно и то же — нож. У меня их восемь.,My birthday's in autumn. Rud gives me the same thing every year — a knife. I've got eight.
+npc.nut.autumn.04,Ночь Утопленников. Не хожу. Мёртвым свечи не нужны. Им нужно было раньше.,Drowned Night. I don't go. The dead don't need candles. They needed something earlier.
+npc.nut.autumn.05,Ветер с севера. Ночью будет весело. Кому-то.,Wind from the north. It'll be lively tonight. For someone.
+npc.nut.autumn.06,Двадцать восьмое осени. Не люблю это число. Не спрашивай.,The twenty-eighth of autumn. I don't like that date. Don't ask.
+npc.nut.autumn.07,Сети в водорослях. Весь день выпутывал. Руки как у старика.,Nets full of weed. Spent all day untangling them. Hands like an old man's.
+npc.nut.autumn.08,Ты хоронишь чужих. Зачем? Они тебе никто.,You bury strangers. Why? They're nobody to you.
+npc.nut.autumn.09,Осенью в таверне тесно. Все жмутся к огню. Даже я.,In autumn the tavern's crowded. Everyone huddles by the fire. Even me.
+npc.nut.autumn.10,"Сёмга в реке. Грим не разрешает её брать — говорит, мелочь. А мне нравится.",Salmon in the river. Grim won't let us take it — says it's small change. But I like it.
+npc.nut.winter.01,Зима. Лёд у причала. Лодки на берегу. Скука.,Winter. Ice at the pier. Boats hauled up. Boredom.
+npc.nut.winter.02,Зимой Грим платит меньше. Говорит — рыбы нет. А сам на что живёт?,In winter Grim pays less. Says there's no fish. So what's he living on?
+npc.nut.winter.03,Долгая ночь. Твой огонь видно из нашего окна. Руд смотрит на него часами.,The Long Night. Your light's visible from our window. Rud watches it for hours.
+npc.nut.winter.04,Ледовый праздник. Бьорн вырезает фигуры. Я однажды вырезал — вышла рыба. Он сказал — медведь.,The Ice Festival. Björn carves figures. I carved one once — it came out a fish. He said a bear.
+npc.nut.winter.05,Пальцы не гнутся. Ром помогает. Не спорь.,My fingers won't bend. Rum helps. Don't argue.
+npc.nut.winter.06,Зимой мёртвых мало. Море замерзает — и отдаёт реже. Хоть что-то хорошее.,In winter there are few dead. The sea freezes and gives them back less often. Something good at least.
+npc.nut.winter.07,Снег на крыше. Руд полез чистить. Я держал лестницу. Так и живём.,Snow on the roof. Rud climbed up to clear it. I held the ladder. That's how we live.
+npc.nut.winter.08,"Метель. Хорошо, что в метель никто никуда не плывёт. Никто.",Blizzard. Good that nobody sails anywhere in a blizzard. Nobody.
+npc.nut.winter.09,Мать умерла зимой. Двенадцать лет назад. Грим тогда дал денег на гроб. Долг до сих пор.,Mother died in winter. Twelve years ago. Grim gave us money for the coffin then. We're still in debt.
+npc.nut.winter.10,Весна скоро. Опять всё сначала.,Spring soon. Everything starts over again.
+npc.nut.weather.rain.01,"Дождь. Сети мокрые, я мокрый, жизнь мокрая.","Rain. The nets are wet, I'm wet, life is wet."
+npc.nut.weather.rain.02,"В дождь рыба клюёт. Жаль, что и я мокну.",Fish bite in the rain. Shame I get soaked too.
+npc.nut.weather.storm.01,"Шторм. Сиди дома, смотритель. Или на маяке. Только не на воде.","Storm. Stay home, keeper. Or in the lighthouse. Just not on the water."
+npc.nut.weather.storm.02,"В такую ночь хорошо, что есть маяк. Хоть один настоящий.",On a night like this it's good there's a lighthouse. At least one real one.
+npc.nut.weather.fog.01,Туман. Ни зги. Как раз… неважно.,Fog. Can't see a thing. Just the… never mind.
+npc.nut.weather.fog.02,В тумане звуки врут. Колокол слышно не оттуда. Помни.,"In fog, sounds lie. The bell seems to come from the wrong place. Remember that."
+npc.nut.weather.snow.01,Снег. Руд радуется. Я — нет.,Snow. Rud's happy. I'm not.
+npc.nut.weather.cloud.01,"Облака. Ни света, ни луны. Хорошая погода. Для рыбы.","Clouds. No sun, no moon. Good weather. For fish."
+npc.nut.festival.boat_blessing.01,Бенедикт брызнул на нашу лодку. Руд перекрестился. Я — нет. Лодка не заметила.,Benedict splashed our boat. Rud crossed himself. I didn't. The boat didn't notice.
+npc.nut.festival.regatta.01,"Регата! Грим ставит на нас. Если придём первыми — премия. Держись, смотритель.","Regatta! Grim's betting on us. If we come first — a bonus. Hold on, keeper."
+npc.nut.festival.herring_fair.01,"Сельдяная ярмарка. Грузим с утра до ночи. Праздник, ага.",The Herring Fair. Loading from dawn till night. Some holiday.
+npc.nut.festival.drowned_night.01,"Не пойду я на берег. Свечи ставят те, кому не стыдно.",I'm not going down to the shore. Candles are for those who aren't ashamed.
+npc.nut.festival.01,"Праздник. Значит, Грим даст выходной. Или нет.",A holiday. Means Grim'll give us the day off. Or not.
+npc.nut.festival.02,Пляшут. Пусть пляшут. Я посмотрю отсюда.,Dancing. Let them dance. I'll watch from here.
+npc.nut.gift.love.01,"Ром! Вот это по-нашему. Ты, смотритель, не такой уж пропащий.","Rum! Now that's our kind. You're not such a lost cause, keeper."
+npc.nut.gift.love.02,"Это мне? Правда? …Спасибо. Не говори Руду, что я сказал «спасибо».",For me? Really? …Thanks. Don't tell Rud I said 'thanks'.
+npc.nut.gift.like.01,"Сойдёт. Нет, правда сойдёт. Хорошо.","It'll do. No, really, it'll do. Good."
+npc.nut.gift.like.02,Копчёное — это дело. Беру.,Smoked stuff — that's proper. I'll take it.
+npc.nut.gift.neutral.01,Ну… спасибо. Наверно.,Well… thanks. I suppose.
+npc.nut.gift.neutral.02,Положу куда-нибудь. Руд разберётся.,I'll put it somewhere. Rud'll sort it out.
+npc.nut.gift.dislike.01,Цветы? Мне? Ты перепутал{|а} Скау.,Flowers? For me? You've got the wrong Skau.
+npc.nut.gift.dislike.02,Сладкое — для детей. Отдай Нильсу.,Sweet stuff's for kids. Give it to Nils.
+npc.nut.gift.hate.01,"Это что, издёвка? Забери.","What is this, a joke? Take it back."
+npc.nut.gift.hate.02,Чай из вереска? Я похож на старуху Хельгу? Не отвечай.,Heather tea? Do I look like old Helga? Don't answer.
+npc.nut.birthday.01,Сегодня мне тридцать один. Или тридцать. Руд знает точно.,I'm thirty-one today. Or thirty. Rud knows for sure.
+npc.nut.birthday.02,День рождения. Руд подарит нож. Девятый.,Birthday. Rud'll give me a knife. The ninth.
+npc.nut.birthday_gift.01,"Ты помнишь, когда у меня день рождения? Зачем? …Спасибо.",You remember when my birthday is? Why? …Thanks.
+npc.nut.birthday_gift.02,Мне никто ничего не дарит. Кроме Руда. Теперь — ты. Странно.,Nobody gives me anything. Except Rud. Now — you. Strange.
+npc.nut.act1.01,"Смотритель новый, а маяк старый. Посмотрим, кто кого.",The keeper's new and the lighthouse is old. We'll see who wins.
+npc.nut.act1.02,«Святая Берта» разбилась? Бывает. Зубы голодные.,The Saint Bertha broke up? It happens. The Teeth are hungry.
+npc.nut.act1.03,"Сход в таверне? Грим сказал, чтоб мы молчали. Мы и молчим.",A meeting in the tavern? Grim said we should keep quiet. So we keep quiet.
+npc.nut.act1.04,Ты по берегу ходишь много. Зачем? Там только мусор и мёртвые.,You walk the shore a lot. What for? There's only rubbish and the dead there.
+npc.nut.act1.05,Агата была упрямая. Ты — тоже? Плохая черта для смотрителя.,Agatha was stubborn. You too? A bad trait in a keeper.
+npc.nut.act1.06,Двадцать тел. Ты их всех хоронишь? Зачем? Они не узнают.,Twenty bodies. You're burying all of them? Why? They'll never know.
+npc.nut.act2.01,Ты задаёшь вопросы. Грим не любит вопросов. Я — тоже.,You ask questions. Grim doesn't like questions. Neither do I.
+npc.nut.act2.02,"Опять крушение. Опять ясная ночь. Ну, бывает. Бывает же?","Another wreck. Another clear night. Well, it happens. It does happen, doesn't it?"
+npc.nut.act2.03,Держись подальше от руин старого маяка. Там камни сыпятся. Честно.,Keep away from the ruins of the old lighthouse. Stones fall there. Honest.
+npc.nut.act2.04,Лив всё пишет и пишет. Когда-нибудь допишется.,Liv keeps writing and writing. One day she'll write herself into trouble.
+npc.nut.act2.05,"Руд говорил с тобой? О чём? …Ладно. Ни о чём, значит.","Did Rud talk to you? What about? …Fine. About nothing, then."
+npc.nut.act2.06,Грим спрашивал про тебя. Я сказал — {безобидный|безобидная}. Не подведи.,Grim asked about you. I said you're harmless. Don't let me down.
+npc.nut.act3.01,Ты копаешь. Я вижу. Все видят. Зачем тебе это?,You're digging. I can see it. Everyone can. What do you want with it?
+npc.nut.act3.02,Руд плохо спит. Кричит во сне. Раньше не кричал.,Rud sleeps badly. Shouts in his sleep. He never used to.
+npc.nut.act3.03,"Если бы у тебя был долг, как у нас, ты бы тоже делал{|а}, что скажут.","If you had a debt like ours, you'd do what you were told too."
+npc.nut.act3.04,Не ходи на Зубы в туман. Я серьёзно. Первый и последний раз говорю.,Don't go to the Teeth in fog. I mean it. First and last time I'm saying it.
+npc.nut.act3.05,"Этот Штерн — гладкий, как угорь. Грим перед ним шапку снимает. Грим!",That Stern — slippery as an eel. Grim takes his hat off to him. Grim!
+npc.nut.act3.06,"Ты думаешь, мы звери? Мы рыбаки. Просто рыба стала другая.",You think we're beasts? We're fishermen. Only the fish have changed.
+npc.nut.act4.01,Всё рушится. Я чувствую. Как лёд весной.,Everything's falling apart. I can feel it. Like ice in spring.
+npc.nut.act4.02,"Руд с тобой говорит больше, чем со мной. Что ты ему сделал{|а}?",Rud talks to you more than to me. What have you done to him?
+npc.nut.act4.03,Если меня заберут — присмотри за Рудом. Он без меня пропадёт. Или я без него.,If they take me — look after Rud. He'll be lost without me. Or I'll be lost without him.
+npc.nut.act4.04,Ненавижу твой свет. Его видно отовсюду. От него не спрячешься.,I hate your light. You can see it from everywhere. You can't hide from it.
+npc.nut.act4.05,Отец говорил: море всё помнит. Я думал — сказка. А оно помнит.,Father used to say: the sea remembers everything. I thought it was a tale. But it does remember.
+npc.nut.act4.06,"Уходи с дороги, смотритель. Или стой до конца. Середины не будет.","Get out of the way, keeper. Or stand your ground to the end. There's no middle."
+npc.nut.married_other.01,"Свадьба? Поздравляю. Грим подарил вам что-нибудь? Проверь, нет ли там долга.",A wedding? Congratulations. Did Grim give you something? Check there's no debt attached.
+npc.nut.married_other.02,Теперь ты при семье. Семья — это когда есть что терять. Понимаешь?,Now you've got a family. Family is when you've got something to lose. Understand?
+npc.nut.married_other.03,"Руд плакал на твоей свадьбе. Не говори ему, что я сказал.",Rud cried at your wedding. Don't tell him I told you.
+npc.nut.married_other.04,"Женат{ый|ая} смотритель. Как Агата была — нет, она не была. Ну, ты {первый|первая}.","A married keeper. Like Agatha — no, she never was. Well, you're the first."
+npc.nut.married_other.05,Совет да любовь. Больше ничего не скажу. Не умею.,Love and harmony. I won't say more. Don't know how.
+npc.nut.event.wreck.01,Опять разбились. Не смотри на меня так.,Another wreck. Don't look at me like that.
+npc.nut.event.wreck.02,Зубы взяли своё. Как всегда. Я тут ни при чём.,The Teeth took their due. As always. It's nothing to do with me.
+npc.nut.event.wreck.03,"Грим уже считает, что вынесет прибой. Мы — грузим.",Grim's already counting what the surf'll bring in. We load it.
+npc.nut.event.wreck.04,Слышал колокол ночью? Я слышал. Всю ночь слышал.,Did you hear the bell last night? I did. All night long.
+npc.nut.event.wreck.05,Живых нет? …Жаль. Правда жаль. Не смейся.,No survivors? …Pity. Really a pity. Don't laugh.
+npc.nut.event.funeral.01,Похоронил{|а}? Быстро ты. Агата дольше возилась.,Buried them? You're quick. Agatha took longer.
+npc.nut.event.funeral.02,Могил на мысу всё больше. Скоро некуда будет.,More and more graves on the cape. Soon there'll be no room.
+npc.nut.event.funeral.03,"Я не пошёл. Не люблю, когда поют. Мёртвые не слышат.",I didn't go. I don't like singing. The dead can't hear.
+npc.nut.event.funeral.04,"Ты ставишь им имена. Зачем? Затем, чтобы кто-то помнил? Ну… ладно.",You put names on them. Why? So someone remembers? Well… fine.
+npc.nut.event.funeral.05,Руд ходил на похороны. Стоял в стороне. Вернулся — молчит.,Rud went to the funeral. Stood off to the side. Came back — silent.
+npc.nut.event.hmar.01,Ночь Хмари. Мы сидели под столом. Оба. Не смейся.,Hmar Night. We sat under the table. Both of us. Don't laugh.
+npc.nut.event.hmar.02,Я видел корабль без огней. Он шёл прямо к Зубам. И прошёл сквозь них.,I saw a ship with no lights. It sailed straight for the Teeth. And passed through them.
+npc.nut.event.hmar.03,"Мать говорила: в Хмарь мёртвые спрашивают, кто виноват. Я закрыл окно.",Mother used to say: in the Hmar the dead ask who's to blame. I shut the window.
+npc.nut.event.hmar.04,Ты держал{|а} огонь всю ночь? Хорошо. Хоть кто-то.,You kept the light going all night? Good. At least someone did.
+npc.nut.event.hmar.05,Больше не хочу такой ночи. Никогда.,I never want a night like that again. Never.
+npc.nut.event.inspection.01,"Пальм приезжал. Посмотрел на меня, как на пятно в журнале.",Palm came. Looked at me like a blot in a logbook.
+npc.nut.event.inspection.02,"Сдал{|а}? Ну и хорошо. Грим сказал — «жаль». Шутка, наверно.","Passed? Well, good. Grim said 'shame'. A joke, probably."
+npc.nut.event.inspection.03,Пальм спрашивал про ночи у Зубов. Мы сказали — спали. Спали же.,Palm asked about the nights at the Teeth. We said we were asleep. We were asleep.
+npc.nut.event.inspection.04,Инспектор — это как шторм. Пережил — и дальше.,An inspector's like a storm. You get through it and move on.
+npc.nut.event.inspection.05,Ты хорошо держишь маяк. Даже слишком.,"You keep the lighthouse well. Too well, even."
+npc.nut.event.wedding.01,Свадьба на острове. Давно не было. Я даже побрился.,A wedding on the island. Been a long time. I even shaved.
+npc.nut.event.wedding.02,Бьорн наливал бесплатно. Я выпил за вас. Шесть раз.,Björn was pouring for free. I drank to you. Six times.
+npc.nut.event.wedding.03,"Руд танцевал. Руд! Я думал, он не умеет.",Rud danced. Rud! I thought he couldn't.
+npc.nut.event.wedding.04,"Совет да любовь. Живите долго. Не так, как мы.",Love and harmony. Live long. Not like us.
+npc.nut.event.wedding.05,Свадьба — это хорошо. Хоть кто-то на острове счастлив.,A wedding's a good thing. At least someone on the island is happy.
+npc.nut.event.villains.01,"Всё. Кончилось. Я не знаю, радоваться или бежать.",That's it. It's over. I don't know whether to be glad or to run.
+npc.nut.event.villains.02,"Руд сдался сам. Я — нет. Но я рад, что он сдался. Понимаешь?",Rud gave himself up. I didn't. But I'm glad he did. Understand?
+npc.nut.event.villains.03,Грим теперь никто. А долг наш куда делся? Вместе с ним.,Grim's nobody now. And our debt? Gone with him.
+npc.nut.event.villains.04,Пальм сказал — будем отмечаться у него каждый сезон. Пусть. Лишь бы море.,Palm said we'll report to him every season. Fine. As long as there's the sea.
+npc.nut.event.villains.05,Я больше не зажгу ни одного огня. Кроме печки. Клянусь.,I'll never light another fire. Except the stove. I swear.
+npc.rud.spring.01,Весна. Мой день рождения шестнадцатого. Нут опять забудет. Или подарит сеть.,Spring. My birthday's on the sixteenth. Nut'll forget again. Or give me a net.
+npc.rud.spring.02,"Здравствуй, смотритель. Как огонь? Горит? Хорошо. Хорошо, что горит.","Hello, keeper. How's the light? Burning? Good. It's good that it burns."
+npc.rud.spring.03,"Треска пошла. Отец говорил: весенняя треска — самая честная. Не знаю, что он имел в виду.",The cod are running. Father used to say spring cod are the most honest. I don't know what he meant.
+npc.rud.spring.04,"Я люблю, когда птицы возвращаются. Значит, зима кончилась. Значит, живём.",I love it when the birds come back. Means winter's over. Means we're alive.
+npc.rud.spring.05,"Агата угощала нас сухарями, когда мы были мальчишками. Нут не помнит. Я помню.",Agatha used to give us rusks when we were boys. Nut doesn't remember. I do.
+npc.rud.spring.06,Весной сети рвутся чаще. Лёд режет. Сижу чиню. Люблю чинить. Руки заняты — голова пустая.,"In spring nets tear more often. The ice cuts them. I sit and mend. I like mending. Busy hands, empty head."
+npc.rud.spring.07,"Ты с материка? Там много огней, говорят. У нас — один. Твой. Береги его.",You're from the mainland? They say there are lots of lights there. We have one. Yours. Look after it.
+npc.rud.spring.08,Нут ворчит — не слушай. Он такой с детства. Внутри он… тоже такой. Но не весь.,Nut grumbles — don't listen. He's been like that since he was a boy. Inside he's… also like that. But not all of him.
+npc.rud.spring.09,Спуск лодок скоро. Я всегда прошу у Бенедикта двойное благословение. На всякий случай.,The Boat Launch is coming. I always ask Benedict for a double blessing. Just in case.
+npc.rud.spring.10,Весна пахнет водорослями и дёгтем. Самый лучший запах.,Spring smells of seaweed and tar. The best smell there is.
+npc.rud.summer.01,"Скумбрия пошла! Смотри, какая. Полосатая. Как тельняшка.",The mackerel are running! Look at this one. Striped. Like a sailor's shirt.
+npc.rud.summer.02,Летом ночи светлые. Я люблю светлые ночи. В светлые ночи ничего плохого не бывает.,In summer the nights are light. I love light nights. Nothing bad happens on a light night.
+npc.rud.summer.03,Жарко. Искупался у причала. Вода ледяная. Нут смеялся. Первый раз за месяц.,Hot. Went swimming off the pier. Water like ice. Nut laughed. First time in a month.
+npc.rud.summer.04,Регата скоро. Грим ставит на нас. Я бы лучше просто покатался.,The regatta's soon. Grim's betting on us. I'd rather just go for a sail.
+npc.rud.summer.05,"Лив Хокон спрашивала, где туман гуще. Я показал. Не всё показал.",Liv Hakon asked where the fog is thickest. I showed her. Not everything.
+npc.rud.summer.06,Ночь Белого Солнца. Мы с Нутом сидим на причале. Как в детстве. Только отца нет.,White Sun Night. Nut and I sit on the pier. Like when we were boys. Only Father's not there.
+npc.rud.summer.07,Нильс с Фрейей просили научить вязать узлы. Научил морскому. Они завязали кота.,Nils and Freya asked me to teach them knots. I taught them a sailor's one. They tied up the cat.
+npc.rud.summer.08,"Летом у Зубов тюлени. Лежат на камнях, как мешки. Хорошие звери. Не врут.",In summer there are seals by the Teeth. They lie on the rocks like sacks. Good creatures. They don't lie.
+npc.rud.summer.09,Ты загорел{|а}. Тебе идёт. Смотритель должен быть с солнцем в лице.,You've got a tan. Suits you. A keeper should have the sun in their face.
+npc.rud.summer.10,Бьорн сварил новый грог. Летом грог — грех. Я грешу.,Björn's brewed a new grog. Grog in summer is a sin. I sin.
+npc.rud.autumn.01,Осень. Штормы. Я не люблю осень. Осенью всё случается.,Autumn. Storms. I don't like autumn. Everything happens in autumn.
+npc.rud.autumn.02,Сельдь пошла. Грузим день и ночь. Спина болит. Душа тоже. Не знаю почему.,The herring's in. We load day and night. My back hurts. My soul too. I don't know why.
+npc.rud.autumn.03,"У Нута день рождения восемнадцатого. Я подарю ему нож. Девятый. Он их любит, только не говорит.","Nut's birthday is on the eighteenth. I'll give him a knife. The ninth. He loves them, only he won't say."
+npc.rud.autumn.04,"В Ночь Утопленников я ставлю свечу. Три. За отца, за мать и… просто так.","On Drowned Night I light a candle. Three. For Father, for Mother and… just because."
+npc.rud.autumn.05,Ветер воет в трубе. Нут говорит — к деньгам. Я говорю — к беде.,The wind's howling in the chimney. Nut says it means money. I say it means trouble.
+npc.rud.autumn.06,Двадцать восьмое… Не люблю это число. Отец тоже не любил. Теперь я понимаю.,The twenty-eighth… I don't like that date. Father didn't either. Now I understand why.
+npc.rud.autumn.07,Осенью я хожу к часовне. Просто сижу. Бенедикт не спрашивает. Хороший он.,In autumn I go to the chapel. Just sit. Benedict doesn't ask. He's a good man.
+npc.rud.autumn.08,Грибы в берёзовой роще. Мама их солила. Я пробовал — не то. Руки не те.,Mushrooms in the birch grove. Mother used to salt them. I tried — not the same. Not the same hands.
+npc.rud.autumn.09,Ты хоронишь всех. И чужих тоже. Это правильно. Кто-то должен.,You bury everyone. Strangers too. That's right. Someone has to.
+npc.rud.autumn.10,"Длинные вечера. Сидим с Нутом, молчим. Раньше говорили. Теперь молчим.","Long evenings. Nut and I sit, silent. We used to talk. Now we're silent."
+npc.rud.winter.01,"Зима. Лодки на берегу. Я рад. Когда лодки на берегу, ничего плохого не бывает.","Winter. Boats hauled up. I'm glad. When the boats are ashore, nothing bad happens."
+npc.rud.winter.02,Долгая ночь. Я смотрю на твой огонь из окна. Всю ночь. Он меня держит.,The Long Night. I watch your light from the window. All night. It holds me up.
+npc.rud.winter.03,Ледовый праздник! Я вырезал тюленя. Бьорн сказал — похож. Нут сказал — на Бьорна.,Ice Festival! I carved a seal. Björn said it's a good likeness. Nut said — of Björn.
+npc.rud.winter.04,Мама умерла зимой. Я до сих пор ставлю ей чашку на Долгую ночь.,Mother died in winter. I still set a cup for her on the Long Night.
+npc.rud.winter.05,Снег чистый. Ничего на нём не спрячешь. Хорошо.,Snow is clean. You can't hide anything on it. Good.
+npc.rud.winter.06,"Зимой Грим платит мало. Я рад. Значит, работы мало.",In winter Grim pays little. I'm glad. It means there's little work.
+npc.rud.winter.07,"Холодно. Держи варежки. У меня вторые есть. Мама вязала. Бери, бери.","Cold. Take these mittens. I've got another pair. Mother knitted them. Take them, go on."
+npc.rud.winter.08,Метель. Ты сегодня на маяке? Горит? Хорошо. Я спокоен.,Blizzard. Are you at the lighthouse today? Burning? Good. I'm easy then.
+npc.rud.winter.09,"Лёд трещит ночью. Как будто кто-то ходит. Я знаю, что никто. Но слушаю.",The ice cracks at night. As if someone's walking. I know it's nobody. But I listen.
+npc.rud.winter.10,Весной начнётся снова. Не хочу весны. Первый раз в жизни.,In spring it'll start again. I don't want spring. First time in my life.
+npc.rud.weather.rain.01,Дождь. Хороший. Смывает.,Rain. Good rain. It washes things away.
+npc.rud.weather.rain.02,"В дождь я сижу под навесом и чиню. Иди сюда, места хватит.","When it rains I sit under the awning and mend. Come here, there's room."
+npc.rud.weather.storm.01,Шторм. Слава богу. В шторм никто не выходит. Никто.,A storm. Thank God. Nobody goes out in a storm. Nobody.
+npc.rud.weather.storm.02,"Держи огонь, смотритель. Сегодня особенно. Прошу тебя.","Keep the light, keeper. Especially today. I beg you."
+npc.rud.weather.fog.01,Туман. Не люблю туман. В тумане… не люблю.,Fog. I don't like fog. In fog… I don't like it.
+npc.rud.weather.fog.02,Звони в колокол сегодня почаще. Хорошо? Почаще.,Ring the bell more often today. All right? More often.
+npc.rud.weather.snow.01,"Снег! Нут ворчит, а я леплю бабу. Ему назло.",Snow! Nut's grumbling and I'm building a snowman. To spite him.
+npc.rud.weather.cloud.01,"Пасмурно. Ни звёзд, ни луны. Твой огонь сегодня — единственный. Береги.","Overcast. No stars, no moon. Your light is the only one tonight. Look after it."
+npc.rud.festival.boat_blessing.01,Бенедикт благословил лодку дважды. Я попросил. Ей нужно.,Benedict blessed the boat twice. I asked. She needs it.
+npc.rud.festival.drowned_night.01,"Три свечи. Одну — за тех, кого не знаю. Их больше всех.",Three candles. One for those I don't know. There are more of them than anyone.
+npc.rud.festival.long_night.01,Долгая ночь. Посиди со мной немного. Потом иди к огню.,The Long Night. Sit with me a while. Then go to your light.
+npc.rud.festival.ice_festival.01,Смотри — тюлень! Сам вырезал. Правда похож?,Look — a seal! Carved it myself. Isn't it a likeness?
+npc.rud.festival.01,"Праздник! Все вместе. Я люблю, когда все вместе.",A holiday! Everyone together. I love it when everyone's together.
+npc.rud.festival.02,"Потанцуй, смотритель. Я не умею. Посмотрю.","Go and dance, keeper. I can't. I'll watch."
+npc.rud.gift.love.01,"Грог! Горячий! Ты… ты знаешь, как согреть человека.",Grog! Hot! You… you know how to warm a man.
+npc.rud.gift.love.02,Уха. Как у мамы. Почти. Спасибо. Я… спасибо.,Fish soup. Like Mother's. Almost. Thank you. I… thank you.
+npc.rud.gift.like.01,"Ой, спасибо! Поделюсь с Нутом. Половину. Ну, треть.","Oh, thanks! I'll share with Nut. Half. Well, a third."
+npc.rud.gift.like.02,Хорошая вещь. Буду беречь.,A good thing. I'll look after it.
+npc.rud.gift.neutral.01,Спасибо. Правда. Мне редко что-то дарят.,Thank you. Really. People rarely give me anything.
+npc.rud.gift.neutral.02,"Интересно. Не знаю, что с этим делать, но спасибо.","Interesting. I don't know what to do with it, but thanks."
+npc.rud.gift.dislike.01,"Это… мусор? Ну… спасибо. Наверно, ты не нарочно.",This is… rubbish? Well… thanks. I suppose you didn't mean it.
+npc.rud.gift.dislike.02,Я возьму. Из вежливости. Не обижайся.,I'll take it. Out of politeness. Don't be offended.
+npc.rud.gift.hate.01,Убери. Пожалуйста. Не могу на это смотреть.,Put it away. Please. I can't look at it.
+npc.rud.gift.hate.02,Фонарь? Керосин? Зачем ты мне это даёшь? Ты… знаешь что-то?,A lantern? Kerosene? Why are you giving me this? Do you… know something?
+npc.rud.birthday.01,Сегодня мой день! Нут подарил сеть. Опять. Я рад. Правда рад.,It's my day today! Nut gave me a net. Again. I'm glad. Really glad.
+npc.rud.birthday.02,Тридцать четыре. Отец в тридцать четыре уже был седой. Я — нет. Пока.,Thirty-four. Father was grey at thirty-four. I'm not. Yet.
+npc.rud.birthday_gift.01,"Ты вспомнил{|а}! Никто не помнит, кроме Нута. А он делает вид, что забыл.",You remembered! Nobody remembers except Nut. And he pretends to forget.
+npc.rud.birthday_gift.02,Подарок? Мне? В день рождения? Я… посижу немного. Хорошо?,A present? For me? On my birthday? I'll… sit down for a moment. All right?
+npc.rud.act1.01,Ты родственни{к|ца} Агаты? Она была хорошая. Добрая. Нам с Нутом сухари давала.,You're Agatha's relative? She was good. Kind. She gave Nut and me rusks.
+npc.rud.act1.02,"«Святая Берта»… Я видел, как она шла. Потом не видел. Не спрашивай.",The Saint Bertha… I saw her coming. Then I didn't. Don't ask.
+npc.rud.act1.03,Двадцать человек. Ты их всех похоронишь? Спасибо. От всех нас. От меня.,Twenty people. You'll bury them all? Thank you. From all of us. From me.
+npc.rud.act1.04,"Сход в таверне будет. Ты приходи. Там все скажут, что думают. Кроме нас.",There'll be a meeting in the tavern. Do come. Everyone'll say what they think. Except us.
+npc.rud.act1.05,Маяк горит. Я каждую ночь смотрю — горит ли. Привычка.,The lighthouse is burning. I check every night whether it is. A habit.
+npc.rud.act1.06,Если Нут грубит — прости его. Он за двоих злится. За меня тоже.,If Nut's rude — forgive him. He's angry for two. For me as well.
+npc.rud.act2.01,Опять разбились. Я не спал. Я никогда не сплю в такие ночи.,Another wreck. I didn't sleep. I never sleep on nights like that.
+npc.rud.act2.02,Ты ходишь к руинам? Не ходи ночью. Прошу. Днём — можно.,You go to the ruins? Not at night. Please. By day — you can.
+npc.rud.act2.03,"Грим добрый, когда платит. Когда не платит — нет. Мы в долгу. Давно.",Grim's kind when he pays. When he doesn't — he's not. We're in debt. For a long time.
+npc.rud.act2.04,Лив спрашивает много. Ты тоже. Вы похожи. Это хорошо. И плохо.,Liv asks a lot. So do you. You're alike. That's good. And bad.
+npc.rud.act2.05,Иногда я хочу уплыть на материк. Далеко. Но Нут не поедет. А я без него — как?,Sometimes I want to sail away to the mainland. Far away. But Nut won't go. And me without him — how?
+npc.rud.act2.06,Ты держишь огонь честно. Это видно. Нельзя подделать честный огонь. Нельзя.,You keep the light honestly. It shows. You can't fake an honest light. You can't.
+npc.rud.act3.01,Мне снятся лица. Каждую ночь. Я их не знаю. Но они знают меня.,I dream of faces. Every night. I don't know them. But they know me.
+npc.rud.act3.02,"Нут говорит — молчи. Я молчу. От молчания тяжелее, чем от сетей.",Nut says keep quiet. I keep quiet. Silence weighs more than nets.
+npc.rud.act3.03,Ты что-то ищешь. Я вижу. Ищи. Я… не буду мешать.,You're looking for something. I can see. Keep looking. I… won't get in the way.
+npc.rud.act3.04,Если бы можно было всё вернуть… Нельзя. Но можно не продолжать.,If only everything could be undone… It can't. But you can stop carrying on.
+npc.rud.act3.05,"Штерн смотрит на людей, как на цифры. Грим — как на рыбу. А ты — как на людей.",Stern looks at people like numbers. Grim — like fish. And you — like people.
+npc.rud.act3.06,"Я ставлю свечи в часовне. Бенедикт видит. Не спрашивает. Однажды я скажу ему. Может, тебе.",I light candles in the chapel. Benedict sees. Doesn't ask. One day I'll tell him. Maybe you.
+npc.rud.act4.01,Скоро всё решится. Я чувствую. Я готов. Кажется.,Soon it'll all be decided. I can feel it. I'm ready. I think.
+npc.rud.act4.02,Если позовёшь — приду. Куда угодно. Даже туда. Особенно туда.,If you call — I'll come. Anywhere. Even there. Especially there.
+npc.rud.act4.03,"Я не хочу, чтобы Нут пострадал. Он не злой. Он просто младший.",I don't want Nut to get hurt. He's not wicked. He's just the younger one.
+npc.rud.act4.04,"Твой огонь — единственное, что я хочу видеть с воды. Единственное.",Your light is the only thing I want to see from the water. The only thing.
+npc.rud.act4.05,Мама говорила: правда — как тело в море. Всё равно всплывёт. Лучше самому вытащить.,Mother used to say: the truth is like a body in the sea. It'll surface anyway. Better to pull it out yourself.
+npc.rud.act4.06,Спасибо тебе. За всё. Даже если потом будет плохо. Спасибо.,Thank you. For everything. Even if it goes badly afterwards. Thank you.
+npc.rud.married_other.01,Свадьба! Я так рад за тебя. Правда. Ты заслужил{|а}.,A wedding! I'm so glad for you. Truly. You deserve it.
+npc.rud.married_other.02,"Я танцевал. Первый раз в жизни. Не смейся. Ну, смейся.","I danced. First time in my life. Don't laugh. Well, laugh."
+npc.rud.married_other.03,"Береги её. Или его. Береги. На острове мало счастья, его надо беречь.",Take care of them. Take care. There's little happiness on the island; it needs looking after.
+npc.rud.married_other.04,Теперь на мысу двое. Два огня. Хорошо.,Now there are two on the cape. Two lights. Good.
+npc.rud.married_other.05,"Приходите к нам в гости. Нут поворчит, а потом нальёт. Обещаю.","Come and visit us. Nut'll grumble, then pour you a drink. I promise."
+npc.rud.event.wreck.01,Опять… Я не мог уснуть. Я знал. Я всегда знаю.,Again… I couldn't sleep. I knew. I always know.
+npc.rud.event.wreck.02,Прости. Не за что? Есть за что. Потом скажу.,Sorry. For nothing? There's something. I'll tell you later.
+npc.rud.event.wreck.03,"Ты ходил{|а} на берег? Кто-нибудь живой? …Нет. Конечно, нет.",Did you go down to the shore? Anyone alive? …No. Of course not.
+npc.rud.event.wreck.04,Я поставлю свечу. Бенедикт уже привык.,I'll light a candle. Benedict's used to it by now.
+npc.rud.event.wreck.05,Зубы… Это не Зубы. Не только Зубы.,The Teeth… It isn't the Teeth. Not only the Teeth.
+npc.rud.event.funeral.01,"Спасибо, что похоронил{|а} их. По-человечески. Им это важно. Мне — тоже.",Thank you for burying them. Properly. It matters to them. To me too.
+npc.rud.event.funeral.02,Я стоял в стороне. Не смог подойти. Не имею права.,I stood off to the side. Couldn't come closer. I've no right.
+npc.rud.event.funeral.03,Ты читал{|а} над ними? Что? …Хорошие слова. Я запомню.,You read over them? What? …Good words. I'll remember them.
+npc.rud.event.funeral.04,Могилы на мысу — как строчки. Когда-нибудь кто-нибудь прочтёт.,The graves on the cape are like lines of writing. Someday someone will read them.
+npc.rud.event.funeral.05,Я принёс цветы на могилу. Вереск. Больше нет ничего.,I brought flowers to the grave. Heather. There's nothing else.
+npc.rud.event.hmar.01,Хмарь… Они приходили. Я слышал их у окна. Они звали по имени.,The Hmar… They came. I heard them at the window. They called my name.
+npc.rud.event.hmar.02,Ты держал{|а} огонь всю ночь. Я видел. Он меня спас. Не знаю от чего.,You kept the light all night. I saw. It saved me. I don't know from what.
+npc.rud.event.hmar.03,Нут закрыл ставни и сидел в углу. Я не закрыл. Я смотрел на маяк.,Nut shut the shutters and sat in the corner. I didn't. I watched the lighthouse.
+npc.rud.event.hmar.04,"Мама говорила: в Хмарь мёртвые ищут, кто их помнит. Я помню. Их всех.",Mother used to say: in the Hmar the dead look for who remembers them. I remember. All of them.
+npc.rud.event.hmar.05,После такой ночи хочется жить иначе. Просто — иначе.,After a night like that you want to live differently. Just — differently.
+npc.rud.event.inspection.01,Инспектор был? Сдал{|а}? Я рад. Правда рад.,The inspector's been? You passed? I'm glad. Really glad.
+npc.rud.event.inspection.02,Пальм спрашивал нас про ночи. Нут ответил за двоих. Я молчал.,Palm asked us about the nights. Nut answered for both of us. I kept quiet.
+npc.rud.event.inspection.03,"Пальм — честный. Я видел, как он смотрит. Как ты.",Palm's honest. I saw the way he looks. Like you.
+npc.rud.event.inspection.04,Инспекция — это хорошо. Хоть кто-то смотрит. Хоть кто-то.,An inspection's a good thing. At least someone's watching. At least someone.
+npc.rud.event.inspection.05,Если бы я мог ему всё сказать… Не могу. Пока.,If only I could tell him everything… I can't. Not yet.
+npc.rud.event.wedding.01,Свадьба! Я плакал. Нут сказал — от лука. Лука не было.,A wedding! I cried. Nut said it was the onions. There were no onions.
+npc.rud.event.wedding.02,Я подарил вам сеть. Больше ничего нет. Она крепкая. Как вы.,I gave you a net. I haven't anything else. It's strong. Like the two of you.
+npc.rud.event.wedding.03,Такая свадьба! Весь остров пришёл. Даже Нут. Даже побрился.,What a wedding! The whole island came. Even Nut. He even shaved.
+npc.rud.event.wedding.04,"Совет да любовь. И пусть огонь горит. Ваш — и тот, что на маяке.",Love and harmony. And may the fire burn. Yours — and the one in the lighthouse.
+npc.rud.event.wedding.05,"Хорошо, когда люди женятся. Значит, верят, что будет завтра.",It's good when people marry. It means they believe there'll be a tomorrow.
+npc.rud.event.villains.01,Я сдался. Сам. Мне легче. Первый раз за десять лет — легче.,I gave myself up. Myself. I feel lighter. For the first time in ten years — lighter.
+npc.rud.event.villains.02,Нут на меня злится. Пусть. Живой — и пусть злится.,Nut's angry with me. Let him be. He's alive — let him be angry.
+npc.rud.event.villains.03,"Я рассказал Пальму всё. Про огонь, про деньги, про ночи. Он записал. Каждое слово.","I told Palm everything. About the fire, the money, the nights. He wrote it down. Every word."
+npc.rud.event.villains.04,"Спасибо, что ты не бросил{|а} нас. Меня. Ты мог{|ла}.",Thank you for not abandoning us. Me. You could have.
+npc.rud.event.villains.05,Теперь я буду рыбачить. Просто рыбачить. И смотреть на твой огонь без страха.,Now I'll fish. Just fish. And look at your light without fear.
+ev.rud2.l01,"А, смотритель. Садись. Нут у лодки, караулит сети. Я один сегодня.","Ah, keeper. Sit down. Nut's with the boat, guarding the nets. I'm on my own tonight."
+ev.rud2.l02,"Бьорн, грога. Два. Не спорь, я угощаю. Грим заплатил сегодня.","Björn, grog. Two. Don't argue, I'm buying. Grim paid today."
+ev.rud2.l03,Два грога Скау. Редкий случай. Запишу в летопись.,Two grogs for a Skau. A rare event. I'll write it in the chronicle.
+ev.rud2.l04,"Знаешь, смотритель… Отец был рыбаком. Дед был рыбаком. А мы с Нутом — вроде как рыбаки. Вроде как.","You know, keeper… Father was a fisherman. Grandfather was a fisherman. And Nut and me — sort of fishermen. Sort of."
+ev.rud2.c01,«Вроде как?»,'Sort of?'
+ev.rud2.c02,«Выпьем за отца.»,'Let's drink to your father.'
+ev.rud2.l05,"Рыбу ловим — да. А платят нам не за рыбу. Платят за то, что мы молчим. И за… Неважно. Выпей.",We catch fish — yes. But we're not paid for the fish. We're paid for keeping quiet. And for… Never mind. Drink.
+ev.rud2.l06,"За отца. Он бы тебе понравился. Он всегда кланялся маяку, когда выходил в море. Смешно, да?","To Father. You'd have liked him. He always bowed to the lighthouse when he put to sea. Funny, eh?"
+ev.rud2.l07,Я тоже кланяюсь. Тайком. Нут не знает.,I bow to it too. Secretly. Nut doesn't know.
+ev.rud2.l08,Приходи ещё. Когда Нута нет. Он хороший. Просто… при нём я молчу.,Come again. When Nut's not here. He's a good lad. Just… around him I keep quiet.
+ev.rud4.l01,"Смотритель… Я ждал тебя. Не спрашивай, откуда знал, что пойдёшь здесь. Все здесь ходят. Кроме нас.",Keeper… I was waiting for you. Don't ask how I knew you'd come this way. Everyone walks here. Except us.
+ev.rud4.l02,"Видишь Зубы? Там, в темноте. Ты когда-нибудь видел{|а} огонь не там, где твой? Ночью. Двадцать восьмого.","See the Teeth? There, in the dark. Have you ever seen a light that wasn't yours? At night. On the twenty-eighth."
+ev.rud4.c01,«Видел{|а}. Ты что-то знаешь?»,'I have. Do you know something?'
+ev.rud4.c02,«Я никому не скажу. Говори.»,'I won't tell anyone. Speak.'
+ev.rud4.c03,«Если знаешь — иди к Пальму.»,'If you know something — go to Palm.'
+ev.rud4.l03,"Знаю?! …Прости. Знаю. Не всё. Достаточно, чтобы не спать.",Know?! …Sorry. I do. Not everything. Enough not to sleep.
+ev.rud4.l04,Ты правда… Ладно. Не сейчас. Нут меня убьёт. Но когда придёт время — я скажу. Тебе {первому|первой}.,You really… All right. Not now. Nut would kill me. But when the time comes — I'll tell. You first.
+ev.rud4.l05,К Пальму… Он запишет. А Нута заберут. Нет. Не так. Не сейчас.,To Palm… He'll write it down. And they'll take Nut. No. Not like that. Not now.
+ev.rud4.l06,Одно прошу: держи огонь двадцать восьмого. Всегда. Что бы ни случилось. Если ты будешь гореть — я… я выберу правильно.,I ask one thing: keep the light on the twenty-eighth. Always. Whatever happens. If you're burning — I'll… I'll choose right.
+ev.rud4.l07,"(Руд уходит, не оглядываясь. Над Зубами темно.)",(Rud walks away without looking back. Over the Teeth it is dark.)
+mail.rud.h4,"Смотритель. Пишу, потому что сказать не смогу. Спасибо, что слушаешь. Посылаю копчёной скумбрии — сам коптил, по отцовскому рецепту. Нуту не говори, что это я тебе. Руд.","Keeper. I'm writing because I couldn't say it. Thank you for listening. I'm sending some smoked mackerel — smoked it myself, Father's way. Don't tell Nut it was me. Rud."
+npc.sandro.spring.01,"Пятница! Шебека «Пёстрая» у причала! Специи, кофе, редкости — всё с юга, всё почти честное!","Friday! The shebeka Pyostraya's at the pier! Spices, coffee, curiosities — all from the south, all nearly honest!"
+npc.sandro.spring.02,Весна у вас — это зима у нас. Я привёз лимоны. Они замёрзли по дороге. Продаю как мороженое.,Your spring is our winter. I brought lemons. They froze on the way. I'm selling them as ice cream.
+npc.sandro.spring.03,"Ай, {друг мой|подруга моя}! Ты новый смотритель? Первая покупка — со скидкой. Вторая — тоже. Третья — посмотрим.","Ah, my friend! You're the new keeper? First purchase — at a discount. The second too. The third — we'll see."
+npc.sandro.spring.04,"Моя мама говорила: «Сандро, торгуйся, пока солнце светит». На севере солнце светит мало. Приходится торговаться быстро.","My mother used to say: 'Sandro, haggle while the sun shines.' Up north the sun shines little. I have to haggle fast."
+npc.sandro.spring.05,"Птицы летят на север, а я — тоже на север. Мы с птицами коллеги. Только они не платят пошлину.",The birds fly north and so do I. The birds and I are colleagues. Only they don't pay duty.
+npc.sandro.spring.06,Весенний шторм чуть не утопил мою корицу. Корицу! Я молился трём святым и одному купцу.,A spring storm almost drowned my cinnamon. Cinnamon! I prayed to three saints and one merchant.
+npc.sandro.spring.07,У меня есть часовая пружина. Тик-так! Отличная вещь. Для часов. Или для чего угодно — я не спрашиваю.,I've got a clock spring. Tick-tock! Splendid thing. For clocks. Or for anything at all — I don't ask.
+npc.sandro.spring.08,"Тора Берг опять сбила цену на латунь. Эта женщина торгуется, как адмирал. Я восхищён и разорён.",Tora Berg knocked down the price of brass again. That woman haggles like an admiral. I'm in awe and in ruin.
+npc.sandro.spring.09,Весной у вас пахнет рыбой и надеждой. У нас — апельсинами и налогами.,In spring it smells of fish and hope here. Back home — of oranges and taxes.
+npc.sandro.spring.10,Приходи в пятницу! И в следующую! Сандро никогда не пропускает пятницы. Кроме штормовых. И праздничных. И…,Come on Friday! And the next! Sandro never misses a Friday. Except stormy ones. And holidays. And…
+npc.sandro.summer.01,"Лето! Мой день рождения девятого. Я дарю себе скидку. Себе — десять процентов, тебе — пять.","Summer! My birthday's on the ninth. I give myself a discount. Ten percent for me, five for you."
+npc.sandro.summer.02,Жара? Это не жара. Приезжай ко мне на юг — там у рыбы в море варятся уши.,Heat? This isn't heat. Come south to my place — there the fish get their ears boiled in the sea.
+npc.sandro.summer.03,Туристы с «Королевы»! Мои любимые покупатели. Покупают всё. Даже «настоящий зуб кракена». Особенно его.,Tourists off the Queen! My favourite customers. They buy everything. Even the 'genuine kraken tooth'. Especially that.
+npc.sandro.summer.04,"Солнце не садится. Как торговать, если нельзя закрыться «по случаю ночи»?",The sun won't set. How can I trade if I can't close 'on account of night'?
+npc.sandro.summer.05,Регата! Я ставлю на всех. Кто-нибудь да выиграет. Сандро всегда в плюсе.,The regatta! I bet on everyone. Somebody's bound to win. Sandro's always in profit.
+npc.sandro.summer.06,Морошка! Северное золото! На юге за неё дают перец. На севере — смеются. Я покупаю и молчу.,Cloudberries! Northern gold! Down south they give pepper for them. Up north they laugh. I buy and keep quiet.
+npc.sandro.summer.07,"Лив Хокон купила у меня барометр. Сказала — врёт. Я сказал — все барометры врут, мой хотя бы красивый.","Liv Hakon bought a barometer from me. Said it lies. I said all barometers lie, at least mine's pretty."
+npc.sandro.summer.08,Летом море спокойное. Я даже сплю на палубе. Как король. Маленький торговый король.,In summer the sea's calm. I even sleep on deck. Like a king. A small trading king.
+npc.sandro.summer.09,"Музыкальная шкатулка! Играет южную песню. Грустную. Все южные песни грустные, зато танцуем мы весело.","A music box! It plays a southern song. A sad one. All southern songs are sad, but we dance merrily."
+npc.sandro.summer.10,Бьорн хочет купить у меня бочку южного вина. Я хочу купить у Бьорна его рецепт грога. Мы торгуемся третий год.,Björn wants to buy a barrel of southern wine from me. I want to buy Björn's grog recipe. We've been haggling for three years.
+npc.sandro.autumn.01,"Осень! Штормы! Моя «Пёстрая» пляшет у причала, как пьяная невеста.",Autumn! Storms! My Pyostraya dances at the pier like a tipsy bride.
+npc.sandro.autumn.02,"Сельдяная ярмарка — это праздник для всех, кроме моего носа.",The Herring Fair is a holiday for everyone except my nose.
+npc.sandro.autumn.03,Янтарь! Осенью море выносит янтарь. Приноси — куплю. Честно. Почти честно. Честно.,Amber! In autumn the sea brings up amber. Bring it — I'll buy. Honestly. Nearly honestly. Honestly.
+npc.sandro.autumn.04,Ночь Утопленников… У нас тоже есть такая. Мы пускаем по воде лимоны со свечами. Здесь я пускаю свечу без лимона.,Drowned Night… We have one too. We float lemons with candles on the water. Here I float a candle without a lemon.
+npc.sandro.autumn.05,Грим предлагал мне возить его грузы. Я отказался. У его ящиков странный вес. Сандро чувствует вес.,Grim offered me his cargo to carry. I refused. His crates weigh strangely. Sandro can feel weight.
+npc.sandro.autumn.06,В тумане у Зубов я видел огонь. Думал — маяк. Повернул — чуть не лёг на камни. С тех пор хожу по компасу и молитве.,In the fog by the Teeth I saw a light. Thought it was the lighthouse. Turned — nearly ran onto the rocks. Since then I sail by compass and prayer.
+npc.sandro.autumn.07,Осенью я продаю тёплые носки с юга. Они не греют. Но они весёлые.,In autumn I sell warm socks from the south. They don't warm. But they're cheerful.
+npc.sandro.autumn.08,"Грибы! Ваши берёзовые грибы — на юге деликатес. Я вожу их туда, а оттуда — трюфели. Круговорот грибов.",Mushrooms! Your birch mushrooms are a delicacy down south. I take them there and bring back truffles. The circle of mushrooms.
+npc.sandro.autumn.09,"Длинные вечера. Сижу на палубе, считаю деньги. Мало. Считаю ещё раз. Всё равно мало.",Long evenings. I sit on deck counting money. Not enough. I count again. Still not enough.
+npc.sandro.autumn.10,"Последняя пятница осени — распродажа! Всё за полцены! Кроме того, что дорого.",Last Friday of autumn — clearance sale! Everything at half price! Except what's expensive.
+npc.sandro.winter.01,Зима! «Пёстрая» пробилась через лёд. Ледокол «Упрямый» шёл впереди. Я ему махал. Он не махал.,Winter! The Pyostraya broke through the ice. The icebreaker Stubborn went ahead. I waved. It didn't wave back.
+npc.sandro.winter.02,Холодно! У меня три шубы и все южные. То есть — никакие.,Cold! I've got three fur coats and they're all southern. Meaning — useless.
+npc.sandro.winter.03,"Долгая ночь. У нас на юге есть день, а у вас — ночь. Я продаю свечи. Много свечей.",The Long Night. Down south we have a day and you have a night. I'm selling candles. Lots of candles.
+npc.sandro.winter.04,Ледовый праздник! Бьорн вырезал меня изо льда. Похож. Только холодный. А я — горячий!,Ice Festival! Björn carved me out of ice. Good likeness. Only cold. And I'm hot-blooded!
+npc.sandro.winter.05,Зимой торговля медленная. Как мёд в мороз. Но сладкая. Как мёд.,In winter trade is slow. Like honey in frost. But sweet. Like honey.
+npc.sandro.winter.06,"Кофе! Горячий! Из самой Ароматии! Пей, пока не замёрз.",Coffee! Hot! From Aromatia itself! Drink it before it freezes.
+npc.sandro.winter.07,"Снег на палубе. Мой матрос лепит снеговика. Он с юга, он видит снег впервые. Плачет от счастья.","Snow on deck. My sailor's building a snowman. He's from the south, he's seeing snow for the first time. Crying with joy."
+npc.sandro.winter.08,"Зимой у вас темно, а в таверне светло. Я там торгую байками. Бесплатно. Байки — реклама.","In winter it's dark here, but bright in the tavern. I trade tales there. For free. Tales are advertising."
+npc.sandro.winter.09,"Звёздный янтарь! Одна штука на весь свет. Цена — пятьдесят тысяч. Не торгуюсь. Ну, чуть-чуть.","Star amber! One piece in the whole world. Price — fifty thousand. No haggling. Well, a little."
+npc.sandro.winter.10,Весной вернусь с новыми товарами! Если меня не съест лёд. Лёд здесь голодный.,I'll be back in spring with new goods! If the ice doesn't eat me. The ice here is hungry.
+npc.sandro.weather.rain.01,"Дождь! Моя корица! Навес, навес, скорее!","Rain! My cinnamon! The awning, the awning, quick!"
+npc.sandro.weather.rain.02,В дождь покупают зонты. У меня нет зонтов. Надо было везти зонты!,In rain people buy umbrellas. I have no umbrellas. I should've brought umbrellas!
+npc.sandro.weather.storm.01,Шторм! «Пёстрая» стоит на трёх якорях и одной молитве. Торговля закрыта. Для тебя — приоткрыта.,Storm! The Pyostraya's riding on three anchors and one prayer. Trade's closed. For you — ajar.
+npc.sandro.weather.storm.02,В такую погоду только сумасшедшие и торговцы у причала. Я — оба.,In weather like this only madmen and merchants stay at the pier. I'm both.
+npc.sandro.weather.fog.01,"Туман! Как в бане, только холодный. На юге за такое брали бы деньги.","Fog! Like a bathhouse, only cold. Down south they'd charge for it."
+npc.sandro.weather.fog.02,В тумане я звоню в колокольчик. Покупатели идут на звон. Как рыба на свет.,In fog I ring a little bell. Customers follow the sound. Like fish to a light.
+npc.sandro.weather.snow.01,"Снег! Белый! Бесплатный! Жаль, не продашь.",Snow! White! Free! Shame you can't sell it.
+npc.sandro.weather.cloud.01,Облака. Хорошо — товар не выгорает.,Clouds. Good — the goods don't fade.
+npc.sandro.festival.boat_blessing.01,Спуск лодок! Бенедикт благословил и «Пёструю». Я заплатил ему корицей. Он доволен.,The Boat Launch! Benedict blessed the Pyostraya too. I paid him in cinnamon. He's pleased.
+npc.sandro.festival.regatta.01,"Регата! Ставлю на тебя, {друг мой|подруга моя}. И на всех остальных. На всякий случай.","Regatta! I'm betting on you, my friend. And on everyone else. Just in case."
+npc.sandro.festival.herring_fair.01,Ярмарка! Я продаю специи к селёдке. Селёдка с корицей — вкус будущего!,The Fair! I'm selling spices for herring. Herring with cinnamon — the taste of the future!
+npc.sandro.festival.white_sun.01,"Ночь Белого Солнца! Я танцую тарантеллу. Здешние думают, что меня укусил тюлень.",White Sun Night! I dance the tarantella. The locals think a seal bit me.
+npc.sandro.festival.01,"Праздник! Праздничные цены! То есть обычные, но с улыбкой.","A holiday! Holiday prices! That is, the usual ones but with a smile."
+npc.sandro.festival.02,Люди веселы — люди покупают. Праздники — лучшее изобретение торговцев.,Happy people buy things. Holidays are the merchants' finest invention.
+npc.sandro.gift.love.01,"Морошковый пирог! {Друг мой|Подруга моя}, ты разбил{|а} сердце старого торговца! Беру даром. Невиданно!","Cloudberry pie! My friend, you've broken an old merchant's heart! I'll take it for free. Unheard of!"
+npc.sandro.gift.love.02,"Жемчуг? Мне? Я… я не знаю, сколько это стоит. Впервые в жизни не знаю. Спасибо.",A pearl? For me? I… I don't know what it's worth. First time in my life I don't know. Thank you.
+npc.sandro.gift.like.01,О! Кофе! Ты знаешь путь к сердцу южанина. Он лежит через желудок и кошелёк.,Oh! Coffee! You know the way to a southerner's heart. It runs through the stomach and the purse.
+npc.sandro.gift.like.02,Хорошая вещь! Продам… то есть сохраню. Сохраню!,A fine thing! I'll sell… I mean keep it. Keep it!
+npc.sandro.gift.neutral.01,"Интересно! Сколько ты за это хочешь? Ах, подарок? Ещё интереснее.","Interesting! How much do you want for it? Oh, it's a gift? More interesting still."
+npc.sandro.gift.neutral.02,Спасибо! Найду покупателя. Шучу. Наверно.,Thanks! I'll find a buyer. Joking. Probably.
+npc.sandro.gift.dislike.01,Солёная селёдка? Мне? У меня от неё снятся налоговые инспекторы.,Salted herring? For me? It gives me dreams about tax inspectors.
+npc.sandro.gift.dislike.02,Это… на юге за такое вызывают на дуэль. Но мы на севере. Спасибо.,This… down south they'd challenge you to a duel for this. But we're in the north. Thanks.
+npc.sandro.gift.hate.01,«Настоящий зуб кракена»? Где ты его… А. У меня. Я не беру свой товар назад! Правила торговли!,A 'genuine kraken tooth'? Where did you get… Ah. From me. I don't take back my own goods! Rules of trade!
+npc.sandro.gift.hate.02,"Нет, нет, нет. Это не подарок, это оскорбление с бантиком.","No, no, no. That's not a gift, that's an insult with a bow on it."
+npc.sandro.birthday.01,Сегодня мой день рождения! Скидка для всех! Два процента! Не благодари!,It's my birthday today! A discount for everyone! Two percent! Don't thank me!
+npc.sandro.birthday.02,"Мне сорок… пять. Или шесть. Южане не считают года, мы считаем прибыль.","I'm forty… five. Or six. Southerners don't count years, we count profits."
+npc.sandro.birthday_gift.01,"Ты запомнил{|а} мой день рождения?! Сандро тронут! Сандро рыдает! Сандро дарит тебе скидку навсегда! Ну, на неделю.","You remembered my birthday?! Sandro is touched! Sandro weeps! Sandro gives you a discount for ever! Well, for a week."
+npc.sandro.birthday_gift.02,"Подарок в день рождения на чужом острове… Это дороже звёздного янтаря. Не говори никому, что я так сказал.",A present on my birthday on a foreign island… That's worth more than star amber. Don't tell anyone I said so.
+npc.sandro.act1.01,"Новый смотритель! Добро пожаловать! Покупай у Сандро, и тебя не обманут. Сильно.",A new keeper! Welcome! Buy from Sandro and you won't be cheated. Much.
+npc.sandro.act1.02,Я знал Агату. Она покупала у меня только чай и марки. Никогда не торговалась. Я скучаю по честным покупателям.,I knew Agatha. She bought only tea and stamps from me. Never haggled. I miss honest customers.
+npc.sandro.act1.03,«Святая Берта»? Я видел её в порту Кронвальда. Грузили камни. Странный груз для брига.,The Saint Bertha? I saw her in Kronvald harbour. They were loading stones. Strange cargo for a brig.
+npc.sandro.act1.04,"Ялик? Для ялика нужна хорошая лакировка. У меня есть. Южная. Блестит, как мои глаза, когда я вижу покупателя.",A skiff? A skiff needs good lacquer. I've got some. Southern. Shines like my eyes when I see a customer.
+npc.sandro.act1.05,"Здесь все говорят о мёртвых. На юге говорят о ценах. Не знаю, что грустнее.",Here everyone talks about the dead. Down south they talk about prices. I don't know which is sadder.
+npc.sandro.act1.06,Марка «Пёстрая»! Коллекционная! Всего пятьдесят кроун! Агата купила бы.,The Pyostraya stamp! A collector's piece! Only fifty crowns! Agatha would have bought one.
+npc.sandro.act2.01,Ещё одно крушение? Мои страховщики подняли цену. Говорят — Сольвик проклят. Я говорю — Сольвик плохо освещён.,Another wreck? My insurers have raised the premium. They say Solvik is cursed. I say Solvik is badly lit.
+npc.sandro.act2.02,Страховое общество «Нептун»… Они платят быстро. Слишком быстро. Честные страховщики так не платят.,The Neptune insurance company… They pay quickly. Too quickly. Honest insurers don't pay like that.
+npc.sandro.act2.03,Я слышал в тавернах юга: «кто ставит корабли у Сольвика — тот богатеет». Я не понял. Пока.,I heard it in southern taverns: 'whoever parks ships off Solvik gets rich.' I didn't understand. Not yet.
+npc.sandro.act2.04,"Лив Хокон покупает у меня блокноты дюжинами. Что она там пишет? Ах, лучше не знать. Торговцы любят не знать.","Liv Hakon buys notebooks from me by the dozen. What does she write in them? Ah, better not to know. Merchants love not knowing."
+npc.sandro.act2.05,Колокол! Ты собираешь колокол? Медь могу достать. Южная медь звенит мелодичнее. Наверно.,A bell! You're making a bell? I can get copper. Southern copper rings more sweetly. Probably.
+npc.sandro.act2.06,"Грим спрашивал, куда я хожу по ночам. Я сказал — к любовнице. Он поверил. Хорошо, что у меня лицо любовника.",Grim asked where I go at night. I said — to my sweetheart. He believed me. Good thing I've got a lover's face.
+npc.sandro.act3.01,"Смотритель, ты ищешь улики? Ах, я ничего не говорил! Но если нужна копия накладной из Кронвальда… У Сандро есть знакомые.","Keeper, are you looking for evidence? Ah, I said nothing! But if you need a copy of a Kronvald bill of lading… Sandro has friends."
+npc.sandro.act3.02,Штерн — я его знаю. Он страховал мою первую шебеку. Она утонула. Он заплатил. Мне стыдно до сих пор.,Stern — I know him. He insured my first shebeka. She sank. He paid out. I'm still ashamed.
+npc.sandro.act3.03,"На юге говорят: «Кто торгует смертью, того ждёт плохая погода». Здесь погода плохая всегда. Но сейчас — хуже.",Down south they say: 'Whoever trades in death has bad weather coming.' Here the weather's always bad. But now it's worse.
+npc.sandro.act3.04,"Я боюсь, {друг мой|подруга моя}. Сандро редко боится. Но Сандро видел, как Грим смотрит на твой маяк.","I'm afraid, my friend. Sandro rarely is. But Sandro has seen how Grim looks at your lighthouse."
+npc.sandro.act3.05,Если понадобится уплыть быстро — «Пёстрая» быстрая. Для тебя — бесплатно. Первый раз в жизни говорю это слово.,If you need to get away fast — the Pyostraya's quick. For you — free. First time in my life I've said that word.
+npc.sandro.act3.06,Я привёз тебе подарок: фонарь с юга. Не продаю! Даю! Сандро болен. Не говори никому.,I've brought you a present: a lantern from the south. Not for sale! A gift! Sandro must be ill. Don't tell anyone.
+npc.sandro.act4.01,"Решается, да? Я чувствую. Как перед штормом, когда цены на канаты растут.","It's being decided, isn't it? I can feel it. Like before a storm, when the price of rope goes up."
+npc.sandro.act4.02,Если что — я увезу Лив и детей Бергов на «Пёстрой». Я уже прибрал в трюме. Выбросил корицу. Корицу!,If anything happens — I'll take Liv and the Berg children away on the Pyostraya. I've already cleared the hold. Threw out the cinnamon. Cinnamon!
+npc.sandro.act4.03,"Ты храбр{ый|ая}. На юге храбрых поют в песнях. Грустных. Не становись песней, прошу.",You're brave. Down south they sing of the brave in songs. Sad ones. Please don't become a song.
+npc.sandro.act4.04,Сандро всю жизнь продавал вещи. Сейчас хочется купить одно: чтобы ты вернул{ся|ась}.,Sandro has sold things all his life. Now he wants to buy just one: your safe return.
+npc.sandro.act4.05,Держи огонь. Шебека будет стоять у причала всю ночь. Если что — звони в колокол. Я услышу.,Keep the light. The shebeka will stay at the pier all night. If anything happens — ring the bell. I'll hear.
+npc.sandro.act4.06,"Когда всё кончится, я устрою распродажу. Всё за бесплатно! Ну, за полцены. Но от всего сердца.","When it's all over I'll hold a sale. Everything free! Well, half price. But from the heart."
+npc.sandro.married_other.01,Свадьба! Я привёз южного вина! Целую бочку! Бьорн пытался купить. Не продал! Подарил вам!,A wedding! I brought southern wine! A whole barrel! Björn tried to buy it. I didn't sell! I gave it to you!
+npc.sandro.married_other.02,На юге молодым бросают рис. Здесь — рыбу. Я бросил рис. На меня посмотрели странно.,Down south they throw rice at newlyweds. Here — fish. I threw rice. They looked at me strangely.
+npc.sandro.married_other.03,"Совет да любовь! И скидка для молодожёнов! Навсегда! Ну, на сезон.","Love and harmony! And a discount for newlyweds! For ever! Well, for a season."
+npc.sandro.married_other.04,Я плакал на свадьбе. Южане всегда плачут на свадьбах. И на похоронах. И на распродажах.,I cried at the wedding. Southerners always cry at weddings. And funerals. And sales.
+npc.sandro.married_other.05,"Будьте счастливы! Счастье — единственный товар, который я не умею продавать.",Be happy! Happiness is the one thing I don't know how to sell.
+npc.sandro.event.wreck.01,Опять разбились. Я видел обломки по дороге. Бедные. Торговцы тоже люди. Моряки — тем более.,Another wreck. I saw the wreckage on the way in. Poor souls. Merchants are people too. Sailors all the more.
+npc.sandro.event.wreck.02,"Я не буду продавать обломки. Никогда. Сандро торгует всем, кроме этого.",I won't sell wreckage. Never. Sandro trades in everything but that.
+npc.sandro.event.wreck.03,Страховщики опять заплатят. Кто-то опять разбогатеет. Кто-то — нет.,The insurers will pay again. Someone will get rich again. Someone won't.
+npc.sandro.event.wreck.04,"Я поставлю свечу в часовне. Южную, с ароматом. Мёртвым тоже нужна красота.","I'll light a candle in the chapel. A southern one, scented. The dead need beauty too."
+npc.sandro.event.wreck.05,"Ясная ночь, а корабль на камнях. Сандро не понимает. Сандро не хочет понимать.",A clear night and a ship on the rocks. Sandro doesn't understand. Sandro doesn't want to understand.
+npc.sandro.event.funeral.01,Ты похоронил{|а} их? По-человечески. Спасибо. На юге сказали бы: «Святой смотритель».,You buried them? Properly. Thank you. Down south they'd say: 'A saintly keeper'.
+npc.sandro.event.funeral.02,Я принёс южные цветы на похороны. Они замёрзли. Всё равно красиво.,I brought southern flowers to the funeral. They froze. Still beautiful.
+npc.sandro.event.funeral.03,"Хорошо, что есть кому хоронить. На юге моряков хоронит море. Здесь — ты.",It's good there's someone to bury them. Down south the sea buries its sailors. Here — you.
+npc.sandro.event.funeral.04,Я не пошёл. Не могу смотреть. Но я пожертвовал на гробы. Инкогнито. Теперь не инкогнито.,I didn't go. I can't watch. But I donated for coffins. Anonymously. Not any more.
+npc.sandro.event.funeral.05,На похоронах все молчат. Тишина дороже золота. Даже для торговца.,At funerals everyone's silent. Silence is worth more than gold. Even to a merchant.
+npc.sandro.event.hmar.01,Хмарь! Я спрятался в трюме с корицей. Корица меня спасла. Или ты.,The Hmar! I hid in the hold with the cinnamon. The cinnamon saved me. Or you did.
+npc.sandro.event.hmar.02,Я видел корабль-призрак. Он шёл без ветра. Я хотел продать ему фонарь. Он не остановился.,I saw the ghost ship. It sailed without wind. I wanted to sell it a lantern. It didn't stop.
+npc.sandro.event.hmar.03,Мой матрос поседел за ночь. Теперь выглядит солидно. Подниму ему жалованье.,My sailor went grey overnight. Now he looks distinguished. I'll raise his wages.
+npc.sandro.event.hmar.04,"На юге нет Хмари. У нас есть сирокко. Сирокко хуже для волос, Хмарь — для души.","There's no Hmar down south. We have the sirocco. The sirocco's worse for your hair, the Hmar for your soul."
+npc.sandro.event.hmar.05,Ты держал{|а} огонь? Всю ночь? Сандро снимает шляпу. У Сандро нет шляпы. Сандро купит шляпу и снимет.,You kept the light? All night? Sandro takes off his hat. Sandro has no hat. Sandro will buy a hat and take it off.
+npc.sandro.event.inspection.01,Инспектор Пальм купил у меня чай. Один пакет. Не торговался. Я растерялся.,Inspector Palm bought tea from me. One packet. Didn't haggle. I was quite thrown.
+npc.sandro.event.inspection.02,Сдал{|а} инспекцию? Браво! Скидка! Три процента! Для героев!,Passed the inspection? Bravo! A discount! Three percent! For heroes!
+npc.sandro.event.inspection.03,"Пальм спросил, есть ли у меня лицензия. Есть! Южная. Он читал её час. Со словарём.",Palm asked whether I have a licence. I do! A southern one. He read it for an hour. With a dictionary.
+npc.sandro.event.inspection.04,"Инспекторы — как таможенники, только честные. Редкий вид.","Inspectors are like customs men, only honest. A rare breed."
+npc.sandro.event.inspection.05,Хороший огонь — хорошая торговля. Корабли видят маяк — плывут ко мне. Спасибо!,A good light is good trade. Ships see the lighthouse — they sail to me. Thank you!
+npc.sandro.event.wedding.01,Свадьба! Лучший день на острове! Я продал все ленты! И подарил остальные!,A wedding! The best day on the island! I sold all my ribbons! And gave the rest away!
+npc.sandro.event.wedding.02,Южное вино на северной свадьбе — это дипломатия. Я посол вина.,Southern wine at a northern wedding is diplomacy. I'm the ambassador of wine.
+npc.sandro.event.wedding.03,"Я станцевал тарантеллу. Хельга сказала, что это обряд изгнания. Может быть.",I danced the tarantella. Helga said it was an exorcism. Maybe so.
+npc.sandro.event.wedding.04,"Совет да любовь! Пусть у вас будет всё, что есть у меня в трюме. И немного больше.",Love and harmony! May you have everything in my hold. And a little more.
+npc.sandro.event.wedding.05,"Свадьба — это договор, где обе стороны в выигрыше. Лучшая сделка на свете.",A wedding is a contract where both sides win. The best deal in the world.
+npc.sandro.event.villains.01,Грим арестован?! Я знал! Я чувствовал вес его ящиков! Сандро — пророк!,Grim arrested?! I knew it! I felt the weight of his crates! Sandro's a prophet!
+npc.sandro.event.villains.02,«Нептун утонул» — я купил сто газет. Буду продавать на юге. По двойной цене. Заслужили.,'Neptune sinks' — I bought a hundred papers. I'll sell them down south. At double the price. They've earned it.
+npc.sandro.event.villains.03,Артель Сольвика? Честные цены? Мне будет трудно конкурировать. Я счастлив.,The Solvik Artel? Honest prices? I'll find it hard to compete. I'm delighted.
+npc.sandro.event.villains.04,Ты сделал{|а} это. Ты. Сандро торговал со многими героями. Ты — первый настоящий.,You did it. You. Sandro has traded with many heroes. You're the first real one.
+npc.sandro.event.villains.05,"Теперь я могу ходить мимо Зубов ночью. Бесплатно. Без молитвы. Ну, с одной.","Now I can sail past the Teeth at night. For free. Without praying. Well, with one prayer."
+npc.stern.spring.01,"А, наш лучший штамп! Как свежо. Как солоно. Как далеко от конторы.","Ah, our best stamp! How fresh. How salty. How far from the office."
+npc.stern.spring.02,Весна — время продления договоров. Я люблю весну. Она предсказуема.,Spring is the season of contract renewals. I love spring. It's predictable.
+npc.stern.spring.03,Ваш стол в конторе пустует. Мы поставили туда фикус. Фикус ставит печати медленнее.,Your desk at the office stands empty. We put a ficus there. The ficus stamps more slowly.
+npc.stern.spring.04,Какой воздух! Пахнет рыбой и… неучтёнными рисками. Прелестно.,What air! It smells of fish and… unaccounted risks. Charming.
+npc.stern.spring.05,"Двадцатое весны — хорошая дата для подписей. Чернила сохнут быстро, а решения — навсегда.","The twentieth of spring is a good date for signatures. Ink dries fast, and decisions are for ever."
+npc.stern.spring.06,Я приплыл на «Чайке». Капитан ворчал всю дорогу. Я застраховал его ворчание. Шучу. Пока.,I came on the Chayka. The captain grumbled the whole way. I insured his grumbling. Joking. For now.
+npc.stern.spring.07,"Ваш маяк красив. Дорого содержать, я полагаю. Всё красивое дорого содержать.","Your lighthouse is handsome. Costly to maintain, I imagine. Everything handsome is costly to maintain."
+npc.stern.spring.08,Весенние шторма приносят нам работу. А работа — дивиденды. Ничего личного.,Spring storms bring us work. And work — dividends. Nothing personal.
+npc.stern.spring.09,Сольвик… В нашей отчётности этот остров — отдельная графа. Очень красивая графа.,Solvik… In our books this island has a column of its own. A very pretty column.
+npc.stern.spring.10,"До встречи, наш лучший штамп. Не торопитесь с ответом. Торопятся только тонущие.","Until next time, our best stamp. Don't rush your answer. Only the drowning rush."
+npc.stern.summer.01,"Лето! Туристы, регаты, светлые ночи. Светлые ночи — плохие для бизнеса. Ваш бизнес, разумеется.","Summer! Tourists, regattas, light nights. Light nights are bad for business. Your business, of course."
+npc.stern.summer.02,Четырнадцатое лета. Второй визит. Я всегда возвращаюсь к интересным активам.,The fourteenth of summer. My second visit. I always come back to interesting assets.
+npc.stern.summer.03,Солнце не садится? Удивительно. У нас в конторе оно не восходит.,The sun doesn't set? Remarkable. In our office it never rises.
+npc.stern.summer.04,«Нептун-1» стоит у пирса. Моя яхта. Застрахована в три цены. Шучу. В две.,The Neptune-1 is at the pier. My yacht. Insured at three times her value. Joking. Twice.
+npc.stern.summer.05,Ваш огонь стал ярче. Я заметил с воды. Я всегда замечаю… перемены.,Your light has grown brighter. I noticed from the water. I always notice… changes.
+npc.stern.summer.06,Жара. Я в сюртуке. Директор не снимает сюртук. Сюртук — это договор с приличиями.,Heat. I'm in a frock coat. A director never takes off his frock coat. The frock coat is a contract with propriety.
+npc.stern.summer.07,"Туристы спрашивают, опасны ли Зубы. Я отвечаю: «Статистически — да». Они покупают страховку.",Tourists ask whether the Teeth are dangerous. I reply: 'Statistically — yes.' They buy insurance.
+npc.stern.summer.08,"Регата — прекрасное зрелище. Шестнадцать судов, ни одного застрахованного у нас. Упущенная выгода.","The regatta is a splendid sight. Sixteen vessels, not one insured with us. A missed opportunity."
+npc.stern.summer.09,Мне нравится ваш остров. Здесь люди умирают тихо. В городе они подают жалобы.,I like your island. Here people die quietly. In the city they file complaints.
+npc.stern.summer.10,Лето коротко. Как человеческая память. Как срок исковой давности.,Summer is short. Like human memory. Like the statute of limitations.
+npc.stern.autumn.01,Осень — сезон страховых случаев. Мой любимый сезон. Профессионально.,Autumn is claims season. My favourite season. Professionally speaking.
+npc.stern.autumn.02,Четырнадцатое осени… Помните бриг «Милосердие»? Вы ставили печать. Отличная скорость.,The fourteenth of autumn… Do you remember the brig Mercy? You stamped it. Excellent speed.
+npc.stern.autumn.03,"Двадцать восьмое — особый день в нашей отчётности. Круглые цифры, знаете ли.","The twenty-eighth is a special day in our books. Round numbers, you know."
+npc.stern.autumn.04,Осенью ветер северный. Северный ветер несёт корабли к Сольвику. А Сольвик… принимает.,In autumn the wind is northerly. The north wind carries ships to Solvik. And Solvik… receives them.
+npc.stern.autumn.05,Ярмарка сельди. Я не ем сельдь. У неё слишком честные глаза.,The Herring Fair. I don't eat herring. Its eyes are too honest.
+npc.stern.autumn.06,Ночь Утопленников — трогательный обычай. Мы в конторе тоже ставим свечу. В бухгалтерии. Для настроения.,Drowned Night — a touching custom. We light a candle at the office too. In accounts. For the mood.
+npc.stern.autumn.07,"Ваши похороны… Я читал в газете. Трогательно. Нерентабельно, но трогательно.","Your burials… I read about them in the paper. Touching. Unprofitable, but touching."
+npc.stern.autumn.08,Осенью я читаю поэзию. Особенно о море. Поэты так прекрасно ничего не понимают в море.,In autumn I read poetry. Especially about the sea. Poets understand so beautifully nothing about the sea.
+npc.stern.autumn.09,Туман у Зубов — наш партнёр. Молчаливый. Надёжный. Не требует процентов.,The fog by the Teeth is our partner. Silent. Reliable. Asks no percentage.
+npc.stern.autumn.10,Я уезжаю до весны. Не скучайте. Скучать — нерационально.,I'm leaving until spring. Don't miss me. Missing people is irrational.
+npc.stern.winter.01,"Зима. Судов мало, премий мало. Зима — время аудита. И размышлений.","Winter. Few ships, few premiums. Winter is the time for audits. And reflection."
+npc.stern.winter.02,"Вы живёте на краю света, во тьме, при одном огне. Романтично. И крайне рискованно.","You live at the edge of the world, in the dark, by one light. Romantic. And extremely risky."
+npc.stern.winter.03,Долгая ночь. Ваш огонь горит шестнадцать часов. Сколько керосина. Сколько расходов. Сколько упрямства.,The Long Night. Your light burns sixteen hours. So much kerosene. So much expense. So much stubbornness.
+npc.stern.winter.04,Лёд — лучший страховщик. Он никого не выпускает в море. Никаких случаев. Скучно.,Ice is the best insurer. It lets no one out to sea. No claims. Dull.
+npc.stern.winter.05,Метель. Я застрял на острове. Какая неэффективность. Какой… покой. Странно.,A blizzard. I'm stuck on the island. How inefficient. How… peaceful. Strange.
+npc.stern.winter.06,"Ледовый праздник? Ледяные скульптуры тают весной. Как договоры, которые не подписали вовремя.",An Ice Festival? Ice sculptures melt in spring. Like contracts that weren't signed in time.
+npc.stern.winter.07,Зимой я вспоминаю отца. Он был моряком. Утонул. Страховка не покрыла. С тех пор я на другой стороне.,In winter I remember my father. He was a sailor. Drowned. The insurance didn't cover it. Since then I've been on the other side.
+npc.stern.winter.08,Горячий кофе. Благодарю. Вы всегда были внимательны к деталям. Это и опасно.,Hot coffee. Thank you. You always paid attention to details. That's what makes you dangerous.
+npc.stern.winter.09,"Снег скрывает следы. Прекрасное свойство. Жаль, что весной он тает.",Snow hides tracks. A splendid property. Pity it melts in spring.
+npc.stern.winter.10,Весной я вернусь. С новым предложением. Или с последним.,In spring I'll return. With a new offer. Or a final one.
+npc.stern.weather.rain.01,Дождь. Как в Кронвальде. Почти как дома. Только без зонта у двери.,Rain. Like in Kronvald. Almost like home. Only without an umbrella by the door.
+npc.stern.weather.rain.02,Дождь смывает следы. Полезное явление природы.,Rain washes away tracks. A useful natural phenomenon.
+npc.stern.weather.storm.01,"Шторм. Где-то сейчас кто-то становится страховым случаем. Надеюсь, не вы.",A storm. Somewhere right now someone is becoming an insurance claim. I hope it's not you.
+npc.stern.weather.storm.02,Я не выхожу в море в шторм. Я выхожу в море в отчётах.,I don't go to sea in a storm. I go to sea in reports.
+npc.stern.weather.fog.01,Туман. Великолепная погода. Для некоторых видов деятельности.,Fog. Magnificent weather. For certain kinds of business.
+npc.stern.weather.fog.02,"В тумане все огни выглядят одинаково. Интересно, правда?","In fog every light looks the same. Interesting, isn't it?"
+npc.stern.weather.snow.01,Снег. Белый лист. Как чистый бланк договора.,Snow. A blank sheet. Like a clean contract form.
+npc.stern.weather.cloud.01,"Облачно. Ни звёзд, ни луны. Только ваш огонь. Какая ответственность.","Overcast. No stars, no moon. Only your light. What a responsibility."
+npc.stern.festival.boat_blessing.01,"Благословение лодок. Трогательно. Мы предлагаем то же самое, но с гарантией выплаты.","The blessing of the boats. Touching. We offer the same, but with a guaranteed payout."
+npc.stern.festival.regatta.01,Регата. Люди рискуют ради кубка. Мы рискуем ради дивидендов. Разница — в масштабе.,The regatta. People take risks for a cup. We take risks for dividends. The difference is scale.
+npc.stern.festival.drowned_night.01,Свечи за утонувших. Красиво. Я ставлю одну. За статистику.,Candles for the drowned. Beautiful. I light one. For the statistics.
+npc.stern.festival.long_night.01,Самая длинная ночь. Самая дорогая для смотрителя. Вы подсчитали?,The longest night. The costliest for a keeper. Have you done the sums?
+npc.stern.festival.01,Праздник. Люди веселятся. Я наблюдаю. Это тоже удовольствие.,A holiday. People are enjoying themselves. I observe. That's a pleasure too.
+npc.stern.festival.02,Праздники — прекрасное время для подписания договоров. Все подобрели.,Holidays are a fine time for signing contracts. Everyone's softened up.
+npc.stern.gift.love.01,Старый аквавит. Выдержанный. Вы помните мой вкус. Опасная память.,Old aquavit. Aged. You remember my taste. A dangerous memory.
+npc.stern.gift.love.02,Редкая книга… Благодарю. Искренне. Это слово редко встречается в моём лексиконе.,A rare book… Thank you. Sincerely. That word seldom appears in my vocabulary.
+npc.stern.gift.like.01,"Кофе. Приемлемо. Вы всегда знали, чем меня задобрить.",Coffee. Acceptable. You always knew how to win me over.
+npc.stern.gift.like.02,Благодарю. Внесу в реестр подарков. Там немного записей.,Thank you. I'll enter it in the register of gifts. There are few entries.
+npc.stern.gift.neutral.01,Хм. Любопытно. Какова рыночная стоимость? Не отвечайте.,Hm. Curious. What's the market value? Don't answer.
+npc.stern.gift.neutral.02,Благодарю. Мой секретарь найдёт этому применение.,Thank you. My secretary will find a use for it.
+npc.stern.gift.dislike.01,Рыба. Мне. Директору «Нептуна». Смело.,Fish. For me. The director of Neptune. Bold.
+npc.stern.gift.dislike.02,Я приму это как… жест. Не более.,I'll accept this as… a gesture. Nothing more.
+npc.stern.gift.hate.01,"Лютефиск. Как… символично. Месть подана холодной, я полагаю?","Lutefisk. How… symbolic. Revenge served cold, I take it?"
+npc.stern.gift.hate.02,Разбитый фонарь? Это намёк? Я не понимаю намёков. Юридически.,A broken lantern? Is that a hint? I don't understand hints. Legally.
+npc.stern.birthday.01,День рождения? В моём досье стоит прочерк. Я предпочитаю не стареть официально.,A birthday? My file has a dash there. I prefer not to age officially.
+npc.stern.birthday.02,Возраст — это риск. Я не страхую собственные риски.,Age is a risk. I don't insure my own risks.
+npc.stern.birthday_gift.01,Подарок? Без повода? Подозрительно. И… приятно. Не говорите никому.,A present? For no reason? Suspicious. And… pleasant. Don't tell anyone.
+npc.stern.birthday_gift.02,"Вы нашли мой день рождения? В конторе его не знает никто. Вы опаснее, чем я думал.",You found my birthday? No one at the office knows it. You're more dangerous than I thought.
+npc.stern.act1.01,"А, наш лучший штамп! Вы ушли от нас так эффектно. Я процитирую вас однажды.","Ah, our best stamp! You left us so memorably. I'll quote you one day."
+npc.stern.act1.02,У меня для вас предложение. Договор. «Договор Нептуна». Очень выгодный. Для всех сторон. Почти для всех.,I have an offer for you. A contract. The Neptune Contract. Very advantageous. For all parties. Nearly all.
+npc.stern.act1.03,«Святая Берта»… Прискорбно. Мы уже произвели выплату. Отличная скорость. Как в старые времена.,The Saint Bertha… Regrettable. We've already paid out. Excellent speed. Like the old days.
+npc.stern.act1.04,"Люди — это цифры, а цифры не тонут. Вы же помните? Вы ставили печати под этим.","People are numbers, and numbers don't drown. Remember? You stamped under that."
+npc.stern.act1.05,"Мой друг Хальвдан Грим — образцовый клиент. Страхует всё. Даже то, что ещё не утонуло.",My friend Halvdan Grim is a model client. He insures everything. Even what hasn't sunk yet.
+npc.stern.act1.06,Подумайте над предложением. Оно действует до конца зимы. Дальше — только некрологи. Шучу.,Think over the offer. It's valid until the end of winter. After that — only obituaries. Joking.
+npc.stern.act2.01,"Вы задаёте вопросы, наш лучший штамп. Вопросы — это невыгодно.","You're asking questions, our best stamp. Questions don't pay."
+npc.stern.act2.02,Ещё одно крушение. Отчётность в порядке. Всё всегда в порядке. Кроме погоды.,Another wreck. The books are in order. Everything's always in order. Except the weather.
+npc.stern.act2.03,Ваш маяк горит всё ярче. Это… неожиданные расходы. Для кого-то.,Your lighthouse burns brighter and brighter. That's… an unexpected expense. For someone.
+npc.stern.act2.04,"Я слышал, вы опознаёте утонувших. Пишете семьям. Как… сентиментально. И какая переписка.",I hear you identify the drowned. Write to their families. How… sentimental. And what correspondence.
+npc.stern.act2.05,"Лив Хокон — журналистка? Нет, метеоролог. Хорошо. Журналистов мы не страхуем. Они всегда тонут.","Liv Hakon — a journalist? No, a meteorologist. Good. We don't insure journalists. They always sink."
+npc.stern.act2.06,Моё предложение ещё в силе. Торговый дом Грима хранит копию. До зимы.,My offer still stands. Grim's trading house holds a copy. Until winter.
+npc.stern.act3.01,"Весна двадцатое. Второй год. Я вернулся, как видите. Вы — тоже ещё здесь. Удивительно.","The twentieth of spring. The second year. I'm back, as you see. And you're still here. Remarkable."
+npc.stern.act3.02,Несчастные случаи у нас в отчётности называются статистикой. Не становитесь статистикой.,"In our books, accidents are called statistics. Don't become a statistic."
+npc.stern.act3.03,"Вы что-то ищете. Бумаги? Телеграммы? Любопытство, наш лучший штамп, — дорогой вид спорта.","You're looking for something. Papers? Telegrams? Curiosity, our best stamp, is an expensive sport."
+npc.stern.act3.04,"Помните, что вы сказали мне в конторе? Я помню каждое слово. Я вообще всё помню. Профессия.",Remember what you said to me at the office? I remember every word. I remember everything. Occupational hazard.
+npc.stern.act3.05,Я мог бы предложить вам больше. Намного больше. Присмотреть за Зубами — и всё.,I could offer you more. Much more. Keep an eye on the Teeth — that's all.
+npc.stern.act3.06,Олаф Бергсон… почтальон с телеграфом. Интересный человек. Слишком много слышит.,Olaf Bergson… the postman with the telegraph. An interesting man. Hears too much.
+npc.stern.act4.01,Вы упрямы. Упрямство в нашей отчётности — это форс-мажор.,"You're stubborn. In our books, stubbornness is force majeure."
+npc.stern.act4.02,Если всё выйдет наружу — у меня лучшие адвокаты Кронвальда. У вас — маяк. Ставки неравны.,If it all comes out — I have the best lawyers in Kronvald. You have a lighthouse. The stakes aren't equal.
+npc.stern.act4.03,"Знаете, почему я выбрал Сольвик? Здесь некому смотреть. Не было. До вас.",Do you know why I chose Solvik? There was no one here to watch. There wasn't. Until you.
+npc.stern.act4.04,"Мой отец утонул, и никто не заплатил. Я просто сделал так, чтобы платили. Мне.",My father drowned and nobody paid. I simply arranged for them to pay. Me.
+npc.stern.act4.05,Порванный договор — тоже договор. Просто короче. Ваш — очень короткий.,A torn contract is still a contract. Just shorter. Yours is very short.
+npc.stern.act4.06,"Прощайте, наш лучший штамп. Или до свидания. Это зависит не от меня. Впервые.","Farewell, our best stamp. Or goodbye for now. That doesn't depend on me. For the first time."
+npc.stern.married_other.01,"Свадьба? Поздравляю. Хотите застраховать брак? У нас есть полис. Покрывает всё, кроме любви.",A wedding? Congratulations. Would you like to insure the marriage? We have a policy. Covers everything except love.
+npc.stern.married_other.02,"Семья — это новые риски. И новые рычаги. Не беспокойтесь, я просто размышляю вслух.","A family means new risks. And new levers. Don't worry, I'm just thinking aloud."
+npc.stern.married_other.03,Совет да любовь. Как говорят на островах. В конторе говорят: «Срок действия — бессрочно».,"Love and harmony, as they say on the islands. At the office we say: 'Term — indefinite'."
+npc.stern.married_other.04,"Вы {женились|вышли замуж} на острове. Значит, остаётесь. Значит, это надолго. Жаль.",You married on the island. So you're staying. So it's for the long haul. Pity.
+npc.stern.married_other.05,Мой подарок — открытка от «Нептуна». Прочтите мелкий шрифт. Шучу. Там только поздравление.,My gift — a card from Neptune. Read the small print. Joking. It's only congratulations.
+npc.stern.event.wreck.01,Крушение. Прискорбно. Выплата будет произведена в установленные сроки.,A wreck. Regrettable. Payment will be made within the established time limits.
+npc.stern.event.wreck.02,Я уже получил телеграмму. Отличная скорость. У нас в Кронвальде всё отлажено.,I've already received a telegram. Excellent speed. In Kronvald we run a smooth operation.
+npc.stern.event.wreck.03,Зубы. Опять Зубы. Удивительно постоянное явление природы.,The Teeth. The Teeth again. A remarkably constant natural phenomenon.
+npc.stern.event.wreck.04,Экипаж? Прискорбно. В отчёте будет строка. Одна строка — это немало.,The crew? Regrettable. There'll be a line in the report. One line is not nothing.
+npc.stern.event.wreck.05,Вы видели крушение? Как свидетель вы очень ценны. Для всех сторон.,You saw the wreck? As a witness you're very valuable. To all parties.
+npc.stern.event.funeral.01,Вы похоронили их. С надписями. Как расточительно. Как… человечно.,You buried them. With inscriptions. How wasteful. How… human.
+npc.stern.event.funeral.02,Похороны — не наша статья расходов. Но я оценил. Как зритель.,Funerals aren't our line of expense. But I appreciated it. As a spectator.
+npc.stern.event.funeral.03,Опознанные тела — это документы. Документы — это вопросы. Вопросы — это…,Identified bodies are documents. Documents mean questions. Questions mean…
+npc.stern.event.funeral.04,Я прислал венок. От «Нептуна». Мы всегда присылаем венки. Это дешевле судов.,I sent a wreath. From Neptune. We always send wreaths. They're cheaper than lawsuits.
+npc.stern.event.funeral.05,Мёртвые не подают исков. Это их главное достоинство.,The dead don't file claims. That's their chief virtue.
+npc.stern.event.hmar.01,Ночь Хмари? Массовая истерия. Хотя… мой кофе замёрз в чашке. В каюте. Летом.,Hmar Night? Mass hysteria. Though… my coffee froze in the cup. In the cabin. In summer.
+npc.stern.event.hmar.02,"Мне снились лица. Я их не знаю. Надеюсь, это просто плохой ужин.",I dreamed of faces. I don't know them. I hope it was just a bad supper.
+npc.stern.event.hmar.03,"Корабль-призрак? Не застрахован. Значит, не существует.",A ghost ship? Not insured. So it doesn't exist.
+npc.stern.event.hmar.04,"Вы продержали огонь всю ночь? Героически. Нерационально, но героически.","You kept the light all night? Heroic. Irrational, but heroic."
+npc.stern.event.hmar.05,Я не верю в призраков. Призраки не подписывают бумаг.,I don't believe in ghosts. Ghosts don't sign papers.
+npc.stern.event.inspection.01,Инспектор Пальм… Педантичный человек. Такие бывают полезны. И неудобны.,Inspector Palm… A pedantic man. That kind can be useful. And inconvenient.
+npc.stern.event.inspection.02,Вы сдали инспекцию. Поздравляю. Хорошая репутация — хороший актив.,You passed the inspection. Congratulations. A good reputation is a good asset.
+npc.stern.event.inspection.03,Пальм спрашивал меня о крушениях. Я показал отчёты. Всё в порядке. Всегда в порядке.,Palm asked me about the wrecks. I showed him the reports. All in order. Always in order.
+npc.stern.event.inspection.04,"Инспекции — это ритуал. Как ваши похороны. Все делают вид, что это важно.",Inspections are a ritual. Like your funerals. Everyone pretends it matters.
+npc.stern.event.inspection.05,"Отчёт инспектора пойдёт в Дирекцию. Я читаю всё, что идёт в Дирекцию.",The inspector's report will go to the Directorate. I read everything that goes to the Directorate.
+npc.stern.event.wedding.01,Свадьба на острове. Трогательно. Я пришлю открытку. С печатью.,A wedding on the island. Touching. I'll send a card. With a stamp.
+npc.stern.event.wedding.02,"Любовь — единственный риск, который мы отказываемся страховать. Слишком непредсказуемо.",Love is the only risk we refuse to insure. Too unpredictable.
+npc.stern.event.wedding.03,"Совет да любовь. И долгих лет. Страховые таблицы, впрочем, скептичны.","Love and harmony. And many years. The actuarial tables, however, are sceptical."
+npc.stern.event.wedding.04,"Я видел, как вы танцевали. Удивительно. В конторе вы только ставили печати.",I saw you dancing. Remarkable. At the office all you did was stamp.
+npc.stern.event.wedding.05,Свадьба — договор без пункта о расторжении. Смело.,A wedding is a contract with no termination clause. Bold.
+npc.stern.event.villains.01,"Вы думаете, это конец? Для Грима — возможно. Я — другое дело. У меня хорошие адвокаты.",You think this is the end? For Grim — perhaps. I'm another matter. I have good lawyers.
+npc.stern.event.villains.02,«Нептун утонул». Какой газетный заголовок. Я бы застраховал его от плагиата.,'Neptune sinks'. What a headline. I'd insure it against plagiarism.
+npc.stern.event.villains.03,"Вы победили, наш лучший штамп. Отличная скорость. Как в старые времена.","You've won, our best stamp. Excellent speed. Like the old days."
+npc.stern.event.villains.04,"Люди — это цифры. Вы доказали, что цифры иногда тонут. Поздравляю.",People are numbers. You've proved that numbers sometimes drown. Congratulations.
+npc.stern.event.villains.05,Я был прав в одном: вы — лучший штамп. Ваша печать оказалась на моём деле.,I was right about one thing: you're the best stamp. Your seal ended up on my case.

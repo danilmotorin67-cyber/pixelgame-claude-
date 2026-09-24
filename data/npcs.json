@@ -434,12 +434,25 @@
    "coat": "#1f2a36"
   },
   "gifts": {
-   "love": [],
-   "like": [
-    "coffee"
+   "love": [
+    "aged_aquavit",
+    "rare_book",
+    "star_amber"
    ],
-   "dislike": [],
-   "hate": []
+   "like": [
+    "coffee",
+    "spices",
+    "stamp_pyostraya",
+    "tag:expensive"
+   ],
+   "dislike": [
+    "tag:fish",
+    "tag:trash"
+   ],
+   "hate": [
+    "lutefisk",
+    "broken_lantern"
+   ]
   },
   "visitor": true
  },
@@ -926,16 +939,29 @@
   },
   "gifts": {
    "love": [
-    "rum"
+    "rum",
+    "fish_porbeagle",
+    "smoked_mackerel"
    ],
    "like": [
     "ale",
-    "tag:smoked"
+    "dark_ale",
+    "tag:smoked",
+    "grog"
    ],
    "dislike": [
-    "tag:flower"
+    "tag:flower",
+    "tea",
+    "tag:sweet"
    ],
-   "hate": []
+   "hate": [
+    "heather_tea",
+    "bouquet_armeria"
+   ]
+  },
+  "birthday": {
+   "season": "autumn",
+   "day": 18
   }
  },
  {
@@ -953,14 +979,38 @@
   },
   "gifts": {
    "love": [
-    "grog"
+    "grog",
+    "fish_pie",
+    "ukha"
    ],
    "like": [
     "ale",
-    "tag:dish"
+    "tag:dish",
+    "tag:smoked",
+    "rosehip_tea"
    ],
-   "dislike": [],
-   "hate": []
+   "dislike": [
+    "tag:trash"
+   ],
+   "hate": [
+    "broken_lantern",
+    "kerosene"
+   ]
+  },
+  "birthday": {
+   "season": "spring",
+   "day": 16
+  },
+  "letters": {
+   "4": {
+    "text": "mail.rud.h4",
+    "items": [
+     [
+      "smoked_mackerel",
+      3
+     ]
+    ]
+   }
   }
  },
  {
@@ -977,16 +1027,33 @@
    "coat": "#a0402a"
   },
   "gifts": {
-   "love": [],
+   "love": [
+    "cloudberry_pie",
+    "heather_honey",
+    "pearl"
+   ],
    "like": [
     "coffee",
-    "amber"
+    "amber",
+    "spices",
+    "sea_glass",
+    "cloudberry"
    ],
-   "dislike": [],
-   "hate": []
+   "dislike": [
+    "salted_herring",
+    "lutefisk",
+    "tag:trash"
+   ],
+   "hate": [
+    "fake_kraken_tooth"
+   ]
   },
   "visitor": true,
-  "trades": "shop_sandro"
+  "trades": "shop_sandro",
+  "birthday": {
+   "season": "summer",
+   "day": 9
+  }
  },
  {
   "id": "npc_grump",
