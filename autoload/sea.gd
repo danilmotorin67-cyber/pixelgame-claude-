@@ -114,8 +114,9 @@ func generate_gifts(index: int, storm: bool) -> void:
 			if storm and rng.randf() < 0.15:
 				table = config.get("storm", table)
 			_place(placed, used, rng, columns, row, _pick(rng, table))
-		if mercy >= 40.0:
-			var rare: Array = config.get("rare", ["sea_glass"])
+		# 12.2: a friendly sea leaves one sure gift a day, a generous one another rare one.
+		var rare: Array = config.get("rare", ["sea_glass"])
+		for _n in (2 if mercy >= 60.0 else 1) if mercy >= 40.0 else 0:
 			_place(placed, used, rng, columns, rng.randi_range(FAR_ROW, SHORE_ROWS - 1),
 				str(rare[rng.randi_range(0, rare.size() - 1)]))
 		gifts[map_id] = placed

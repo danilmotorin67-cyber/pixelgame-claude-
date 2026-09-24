@@ -226,6 +226,21 @@
       }
     }
   },
+  "rann": {
+    "at": [70, 56],
+    "loves": ["gold_ingot", "black_pearl", "music_box"],
+    "likes": ["pearl", "amber", "silver_ingot", "bright_water"],
+    "neutral": ["scallop_shell", "bread_rye", "potato_flatbread", "ale"],
+    "dislikes": ["stone", "rock"],
+    "hates": ["neptune_can", "harpoon_bolt"],
+    "mercy": {"loves": 10, "likes": 5, "neutral": 1, "dislikes": -2, "hates": -5},
+    "calm_min_mercy": 60,
+    "calm_free_mercy": 80,
+    "calm_cost": 5,
+    "release_mercy": 0.1,
+    "release_cap": 1.0,
+    "release_legend": 10
+  },
   "sea": {
     "size": [
       120,

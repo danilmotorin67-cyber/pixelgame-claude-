@@ -13,6 +13,8 @@ var bait: String = ""
 var tackles: Array = []
 var fish: Dictionary = {}
 var sim: FishingSim
+var landed: Dictionary = {}
+var landed_left: float = 0.0
 var _rng := RandomNumberGenerator.new()
 
 
@@ -72,7 +74,17 @@ func _cast() -> void:
 	_hint("Поплавок покачивается…")
 
 
+# A few seconds after a catch E lets the fish go back to the sea (12.1).
+func _input(event: InputEvent) -> void:
+	if landed_left > 0.0 and event.is_action_pressed("interact"):
+		get_viewport().set_input_as_handled()
+		landed_left = 0.0
+		if RannStone.release(str(landed["id"]), int(landed["quality"])):
+			_hint("Рыба ушла в глубину. Море заметило.")
+
+
 func _process(delta: float) -> void:
+	landed_left = maxf(0.0, landed_left - delta)
 	var holding := Input.is_action_pressed("use_tool")
 	match state:
 		"charging":
@@ -128,8 +140,11 @@ func _finish(result: String) -> void:
 			if sim.chest_won:
 				Inventory.add("overgrown_chest", 1)
 			var name := Loc.t(str(Data.by_id("items", str(fish["id"])).get("name", fish["id"])))
-			_hint("%s · %d см%s%s" % [name, int(got.get("size", 0)), " · идеально!" if sim.perfect else "",
+			_hint("%s · %d см%s%s · E — отпустить" % [name, int(got.get("size", 0)), " · идеально!" if sim.perfect else "",
 				" · и сундучок!" if sim.chest_won else ""])
+			if not got.is_empty():
+				landed = got
+				landed_left = 3.0
 		"snapped":
 			if bait != "":
 				Inventory.take(bait, 1)

@@ -39,6 +39,10 @@ func _ready() -> void:
 		var at: Array = Game.balance("sea", {}).get("cape_landing", [900, 850])
 		landing.position = Vector2(float(at[0]), float(at[1]) - 16.0)
 		add_child(landing)
+		var stone := RannStoneObject.new()
+		stone.name = "RannStone"
+		stone.position = RannStone.position()
+		add_child(stone)
 	add_child(BodiesLayer.new())
 	if map_id == "cape":
 		var bell := TowerBell.new()

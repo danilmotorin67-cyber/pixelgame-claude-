@@ -18,6 +18,7 @@ var wind_strength: int = 0
 var hmar_night: bool = false
 var last_hmar_day: int = -100
 var forecast: Array = []
+var requested_calm: int = -1
 
 
 func _day_rng(index: int, salt: int) -> RandomNumberGenerator:
@@ -31,10 +32,17 @@ func _season_of(index: int) -> int:
 
 
 func weather_for_day(index: int) -> String:
-	if index < 3:
+	if index < 3 or index == requested_calm:
 		return "clear"
 	var season_idx := _season_of(index)
 	var weights: Array = WEIGHTS[season_idx].duplicate()
+	# 12.2: a hostile sea brings half again as many storms, a generous one 30% fewer.
+	var storm_mult := 1.5 if Sea.mercy < 20.0 else (0.7 if Sea.mercy >= 60.0 else 1.0)
+	if storm_mult != 1.0:
+		for i in weights.size():
+			weights[i] = int(weights[i]) * 10
+		weights[4] = int(round(weights[4] * storm_mult))
+		weights[6] = int(round(weights[6] * storm_mult))
 	var day_of_season := index % Clock.DAYS_PER_SEASON + 1
 	if season_idx == 2 and day_of_season >= 8 and day_of_season <= 14:
 		weights[4] *= 2
@@ -51,7 +59,9 @@ func weather_for_day(index: int) -> String:
 
 
 func calm_on(index: int) -> bool:
-	# Summer: 10% of all days are calm, i.e. one clear day in five.
+	# Summer: 10% of all days are calm, i.e. one clear day in five; or the calm asked of Rann.
+	if index == requested_calm:
+		return true
 	return _season_of(index) == 1 and weather_for_day(index) == "clear" \
 		and _day_rng(index, 23).randf() < 0.2
 
@@ -93,6 +103,7 @@ func reset() -> void:
 	aurora = false
 	hmar_night = false
 	last_hmar_day = -100
+	requested_calm = -1
 	forecast.clear()
 
 
@@ -107,6 +118,12 @@ func start_day(index: int) -> void:
 	hmar_night = _day_rng(index, 131).randf() < hmar_chance(index)
 	if hmar_night:
 		last_hmar_day = index
+	forecast_refresh(index)
+
+
+func forecast_refresh(index: int = -1) -> void:
+	if index < 0:
+		index = Clock.day_index
 	forecast.clear()
 	for offset in range(1, 8):
 		forecast.append(weather_for_day(index + offset))
@@ -138,7 +155,8 @@ func set_weather(id: String) -> void:
 func serialize() -> Dictionary:
 	return {"current": current, "calm": calm, "aurora": aurora, "wind": wind,
 		"wind_direction": wind_direction, "wind_strength": wind_strength,
-		"hmar_night": hmar_night, "last_hmar_day": last_hmar_day, "forecast": forecast}
+		"hmar_night": hmar_night, "last_hmar_day": last_hmar_day, "forecast": forecast,
+		"requested_calm": requested_calm}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -152,4 +170,5 @@ func deserialize(d: Dictionary) -> void:
 	hmar_night = bool(d.get("hmar_night", false))
 	last_hmar_day = int(d.get("last_hmar_day", -100))
 	forecast = d.get("forecast", []).duplicate()
+	requested_calm = int(d.get("requested_calm", -1))
 	Events.weather_changed.emit(current)

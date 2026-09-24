@@ -364,11 +364,112 @@ func _check_boat() -> void:
 	_check(Sea.boat == "sloop" and Sea.hold.size() == 24 and Sea.visited.has("rest_place"), "the boat survives a save")
 
 
+func _check_rann() -> void:
+	_fresh()
+	var tastes := {"gold_ingot": "loves", "fish_king_herring": "", "amber": "likes", "fish_cod": "neutral",
+		"mussels": "neutral", "bread_rye": "neutral", "scallop_shell": "neutral", "old_boot": "dislikes",
+		"stone": "dislikes", "neptune_can": "hates", "tool_shovel": ""}
+	for fish in Data.all("fish"):
+		if bool(fish.get("legendary", false)):
+			tastes[str(fish["id"])] = "loves"
+	for id in tastes:
+		if Data.exists("items", id) or id == "gold_ingot":
+			_check(RannStone.taste(id) == tastes[id], "Rann's taste for %s: %s" % [id, tastes[id]])
+	_check(RannStone.taste("fish_cod", 2) == "likes", "a flawless fish pleases Rann")
+
+	Clock.day_index = 5
+	Inventory.add("amber", 1)
+	Inventory.add("neptune_can", 2)
+	Inventory.add("tool_shovel", 1)
+	var slot := func(id: String) -> int:
+		return Inventory.slots.find_custom(func(s: Dictionary) -> bool: return s["id"] == id)
+	_check(not bool(RannStone.offer(slot.call("tool_shovel"))["ok"]) and Inventory.count_of("tool_shovel") == 1,
+		"the sea does not take a shovel")
+	var got := RannStone.offer(slot.call("amber"))
+	_check(bool(got["ok"]) and is_equal_approx(Sea.mercy, 35.0) and Inventory.count_of("amber") == 0, "amber: +5 mercy")
+	_check(str(got["text"]).contains(Loc.t("rann.likes_1")) or str(got["text"]).contains(Loc.t("rann.likes_2")),
+		"the surf whispers back")
+	_check(not bool(RannStone.offer(slot.call("neptune_can"))["ok"]), "one offering a day")
+	Clock.day_index = 6
+	_check(bool(RannStone.offer(slot.call("neptune_can"))["ok"]) and is_equal_approx(Sea.mercy, 30.0), "Neptune tins: -5")
+	Clock.day_index = 7
+	Sea.blessings.append("priliva")
+	Inventory.add("fish_cod", 2)
+	_check(RannStone.offers_left() == 2 and bool(RannStone.offer(slot.call("fish_cod"))["ok"])
+		and bool(RannStone.offer(slot.call("fish_cod"))["ok"]), "Priliva's blessing: two offerings a day")
+	_check(is_equal_approx(Sea.mercy, 32.0), "any fish: +1")
+	Sea.blessings.clear()
+
+	Sea.mercy = 55.0
+	_check(not bool(RannStone.request_calm()["ok"]), "no calm on request below 60 mercy")
+	Sea.mercy = 65.0
+	Clock.day_index = 30
+	_check(bool(RannStone.request_calm()["ok"]) and is_equal_approx(Sea.mercy, 60.0), "calm tomorrow costs 5 mercy")
+	_check(not bool(RannStone.request_calm()["ok"]), "one request a week")
+	_check(Weather.forecast[0] == "clear" and Weather.calm_on(31), "tomorrow is set for a calm")
+	Clock.start_next_day()
+	_check(Weather.calm and Weather.wind_strength == 0 and Weather.current == "clear", "the calm comes")
+	Clock.day_index = 37
+	Sea.mercy = 85.0
+	_check(bool(RannStone.request_calm()["ok"]) and is_equal_approx(Sea.mercy, 85.0), "the sea's favourite asks for a calm free")
+
+	Sea.mercy = 30.0
+	Inventory.reset()
+	Inventory.add("fish_cod", 15)
+	for n in 15:
+		RannStone.release("fish_cod")
+	_check(Inventory.count_of("fish_cod") == 0 and is_equal_approx(Sea.mercy, 31.0), "released fish: +0.1 each, +1 a day at most")
+	Sea.night_mercy()
+	RannStone.release("fish_cod")
+	var legend := ""
+	for fish in Data.all("fish"):
+		if bool(fish.get("legendary", false)) and legend == "":
+			legend = str(fish["id"])
+	Inventory.add(legend, 1)
+	_check(RannStone.release(legend) and is_equal_approx(Sea.mercy, 41.0), "a released legend: +10")
+
+	var storms := func(mercy: float) -> int:
+		Sea.mercy = mercy
+		var n := 0
+		for index in range(3, 3 + 1120):
+			if Weather.weather_for_day(index) in ["storm", "blizzard"]:
+				n += 1
+		return n
+	var hostile: int = storms.call(10.0)
+	var plain: int = storms.call(30.0)
+	var generous: int = storms.call(70.0)
+	_check(hostile > plain * 1.1 and generous < plain * 0.85, "mercy moves the storms (%d / %d / %d)" % [hostile, plain, generous])
+
+	var rare := func(mercy: float) -> int:
+		Sea.mercy = mercy
+		var n := 0
+		for index in 20:
+			Sea.generate_gifts(100 + index, false)
+			for gift in Sea.gifts.get("seal_shore", []):
+				if str(gift["item"]) in Data.tables["forage"].get("rare", []):
+					n += 1
+		return n
+	_check(rare.call(65.0) > rare.call(45.0), "a generous sea leaves rarer gifts")
+	Sea.mercy = 30.0
+
+	var b := Graveyard.spawn_body(Graveyard.registry_entry("reg_nils_berg"), "cape")
+	Graveyard.carried = str(b["id"])
+	_check(SeaBurial.perform().contains("парусину"), "only a body sewn in canvas goes to the sea")
+	b["sewn"] = true
+	_check(SeaBurial.perform().contains("груз"), "the body needs a weight")
+	Inventory.add("stone", 3)
+	SeaBurial.perform()
+	_check(str(b["where"]) == "sea" and Graveyard.carried == "" and is_equal_approx(Sea.mercy, 34.0)
+		and Inventory.count_of("stone") == 0 and int(Game.counters.get("sea_burials", 0)) == 1,
+		"a sea burial: 3 stones, +4 mercy")
+
+
 func _run() -> void:
 	_check_every_fish()
 	_check_minigame_rules()
 	await _check_q1_3()
 	_check_gear()
 	_check_boat()
+	_check_rann()
 	print("M5 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)
