@@ -64,7 +64,10 @@ func learn(recipe_id: String) -> void:
 
 
 func knows(recipe: Dictionary) -> bool:
-	return str(recipe.get("unlock", "")) == "start" or learned.has(str(recipe.get("id", "")))
+	var unlock := str(recipe.get("unlock", ""))
+	if unlock.begins_with("skill:"):
+		return Skills.level(unlock.get_slice(":", 1)) >= int(unlock.get_slice(":", 2))
+	return unlock == "start" or learned.has(str(recipe.get("id", "")))
 
 
 func recipes_for(station_id: String) -> Array:

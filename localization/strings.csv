@@ -40,7 +40,7 @@ item.canvas.desc,Для парусов и саванов.,For sails and shrouds.
 item.thread.name,Нитки,Thread
 item.thread.desc,Последний стежок — через нос.,Last stitch through the nose.
 item.fish_cod.name,Треска,Cod
-item.fish_cod.desc,Остров стоит на ней.,The island stands on it.
+item.fish_cod.desc,Основа ухи и острова. Остров стоит на ней.,The base of fish soup and of the island. The island stands on it.
 q.p2.title,Первый огонь,First Fire
 q.p2.s1,Зажечь лампу в фонарной,Light the lamp in the lantern room
 q.q1_1.title,Море возвращает,The Sea Returns
@@ -450,3 +450,147 @@ q.g13.title,Проверь огонь,Check the Fire
 q.g13.s1,Семь ночей подряд — Сила Огня 50 и выше,Seven nights running with fire power 50+
 mail.quest_parcel,Лоцманская управа. Ваша посылка не поместилась в руки и пришла почтой.,Pilot Directorate. Your parcel did not fit in your hands and came by post.
 mail.ghost_gift,"На пороге покойницкой — свёрток без подписи. Вы знаете, от кого.",On the morgue step lies an unsigned parcel. You know who from.
+item.fish_saithe.name,Сайда,Saithe
+item.fish_saithe.desc,"Для жарки и засолки. Вечно спешит, как почтальон.","For frying and salting. Always in a hurry, like a postman."
+item.fish_haddock.name,Пикша,Haddock
+item.fish_haddock.desc,Нежное мясо для копчения. Чёрное пятно — отпечаток пальца святого. Или краска.,Tender meat for smoking. The black spot is a saint's thumbprint. Or paint.
+item.fish_herring.name,Сельдь,Herring
+item.fish_herring.desc,"Для засолки и бочек. Серебро, которое пахнет.",For salting and barrels. Silver that smells.
+item.fish_mackerel.name,Скумбрия,Mackerel
+item.fish_mackerel.desc,"Для копчения. Полосатая, как арестантская роба.",For smoking. Striped like a convict's shirt.
+item.fish_capelin.name,Мойва,Capelin
+item.fish_capelin.desc,"Живая наживка: треска и палтус её любят. Мелкая, но нужная.",Live bait: cod and halibut love it. Small but needed.
+item.fish_flounder.name,Камбала,Flounder
+item.fish_flounder.desc,Для жарки. Оба глаза с одной стороны — удобно подглядывать.,"For frying. Both eyes on one side, handy for peeking."
+item.fish_bullhead.name,Бычок-керчак,Bullhead
+item.fish_bullhead.desc,На уху и наживку. Выглядит обиженным на весь свет.,For soup and bait. Looks offended by the whole world.
+item.fish_lumpfish.name,Пинагор,Lumpfish
+item.fish_lumpfish.desc,Икра на хлеб — деликатес. Сам он похож на брошенный башмак.,Its roe on bread is a delicacy. It looks like a lost shoe.
+item.fish_redfish.name,Морской окунь,Redfish
+item.fish_redfish.desc,"Красный, глазастый, с глубины. Смотрит с укором.","Red, big-eyed, from the deep. Looks at you reproachfully."
+item.fish_wolffish.name,Зубатка,Wolffish
+item.fish_wolffish.desc,Улыбается как налоговый инспектор.,Smiles like a tax inspector.
+item.fish_navaga.name,Навага,Navaga
+item.fish_navaga.desc,Зимняя рыба для строганины. Мёрзнет с удовольствием.,A winter fish for frozen shavings. Enjoys freezing.
+item.fish_smelt.name,Корюшка,Smelt
+item.fish_smelt.desc,Пахнет свежим огурцом. Никто не знает почему.,Smells of fresh cucumber. Nobody knows why.
+item.fish_halibut.name,Палтус,Halibut
+item.fish_halibut.desc,"Для запекания с пореем. Ложится на дно и думает, что его не видно.",Baked with leeks. Lies on the bottom and thinks it's invisible.
+item.fish_skate.name,Скат,Skate
+item.fish_skate.desc,"Крылья на жаркое. Плывёт, как простыня на ветру.",Wings for roasting. Swims like a sheet on a line.
+item.fish_monkfish.name,Морской чёрт,Monkfish
+item.fish_monkfish.desc,"Вкусен, если не смотреть. Смотреть не рекомендуется.",Tasty if you don't look. Looking is not recommended.
+item.fish_squid.name,Кальмар,Squid
+item.fish_squid.desc,Ловится ночью на свет фонаря. Чернила — для надгробий.,Caught at night by lantern light. Its ink is for epitaphs.
+item.fish_porbeagle.name,Сельдевая акула,Porbeagle
+item.fish_porbeagle.desc,Хедда обожает. Акула — не очень.,"Hedda adores them. The shark, less so."
+item.fish_whiting.name,Мерланг,Whiting
+item.fish_whiting.desc,"Дождевая рыба. Клюёт, когда все сидят дома.",A rain fish. Bites when everyone stays home.
+item.fish_sandeel.name,Песчанка,Sand eel
+item.fish_sandeel.desc,"Живёт в песке, ловится на отливе. Любимое блюдо тупиков.","Lives in sand, caught at low tide. Puffins' favourite dinner."
+item.fish_sea_scorpion.name,Морская собачка,Sea scorpion
+item.fish_sea_scorpion.desc,Лужевая рыбка. Лает? Нет. Кусается? Немного.,A rock-pool fish. Does it bark? No. Bite? A little.
+item.fish_garfish.name,Сарган,Garfish
+item.fish_garfish.desc,"Зелёные кости. Не волнуйтесь, так и задумано.","Green bones. Don't worry, that's intended."
+item.fish_sea_trout.name,Кумжа,Sea trout
+item.fish_sea_trout.desc,"Дождевая форель ручья. Прыгает выше, чем надо.",The stream's rain trout. Jumps higher than it needs to.
+item.fish_char.name,Голец,Arctic char
+item.fish_char.desc,Живёт в Вересковом озере со времён ледника. Не торопится.,Has lived in the Heather Lake since the ice age. Takes its time.
+item.fish_grayling.name,Хариус,Grayling
+item.fish_grayling.desc,Пахнет тимьяном. Рыба-гурман.,Smells of thyme. A gourmet fish.
+item.fish_salmon.name,Лосось,Salmon
+item.fish_salmon.desc,Идёт домой вверх по ручью. Уважайте упрямство.,Heads home up the stream. Respect the stubbornness.
+item.fish_burbot.name,Налим,Burbot
+item.fish_burbot.desc,Зимний ночной озёрный житель. Похож на усатого дядю.,A winter night lake-dweller. Looks like a moustached uncle.
+item.fish_pike.name,Щука,Pike
+item.fish_pike.desc,"Хищница заводи. В сказках исполняет желания, тут — нет.",The lagoon's predator. Grants wishes in tales; not here.
+item.fish_perch.name,Окунь,Perch
+item.fish_perch.desc,"Озёрный, полосатый, простой. Честная рыба.","Striped, lake-bred, simple. An honest fish."
+item.fish_eel.name,Угорь,Eel
+item.fish_eel.desc,Ночной и дождевой. Выскальзывает из рук и из разговора.,Night and rain. Slips out of hands and out of conversations.
+item.fish_stickleback.name,Колюшка,Stickleback
+item.fish_stickleback.desc,Рыба-разочарование.,The disappointment fish.
+item.fish_eelpout.name,Бельдюга,Eelpout
+item.fish_eelpout.desc,"Живородящая. Рожает мальков, как люди, — с жалобами.","Viviparous. Gives birth like people do, with complaints."
+item.fish_whitefish.name,Сиг,Whitefish
+item.fish_whitefish.desc,"Серебристый озёрный аристократ. Ест мало, выглядит дорого.","A silvery lake aristocrat. Eats little, looks expensive."
+item.fish_old_codger.name,Старый Хрыч,Old Codger
+item.fish_old_codger.desc,"Огромная треска у Зубов. Помнит всех, кто пытался.",A giant cod by the Teeth. Remembers everyone who tried.
+item.fish_herring_king.name,Селёдочный король,Herring King
+item.fish_herring_king.desc,"Ремень-рыба из шторма. Корона из плавников, свита из пены.","An oarfish from the storm. A crown of fins, a retinue of foam."
+item.fish_golden_halibut.name,Золотой палтус,Golden Halibut
+item.fish_golden_halibut.desc,"У Тюленьего камня. Тюлени знают, но молчат.",By the Seal Rock. The seals know and keep quiet.
+item.fish_grandmother.name,Бабка,Grandmother
+item.fish_grandmother.desc,Она помнит основание Сольвика. И вкус первого смотрителя.,She remembers the founding of Solvik. And the taste of the first keeper.
+item.fish_lantern_fish.name,Рыба-Фонарь,Lanternfish
+item.fish_lantern_fish.desc,"Светится в Ночь Хмари у Мёртвого Огня. Свет, который не спасает.",Glows by the Dead Fire on Hmar nights. A light that saves no one.
+item.rock_crab.name,Краб каменный,Rock crab
+item.rock_crab.desc,Для супа и подарков. Ходит боком по жизни.,For soup and gifts. Walks through life sideways.
+item.snow_crab.name,Краб-стригун,Snow crab
+item.snow_crab.desc,"Длинные ноги, короткий нрав.","Long legs, short temper."
+item.lobster.name,Омар,Lobster
+item.lobster.desc,Для «Омара на пару». Бронированная роскошь.,For steamed lobster. Armoured luxury.
+item.shrimp.name,Креветка,Shrimp
+item.shrimp.desc,"Для омлета и наживки. Маленькая, но с усами.","For omelettes and bait. Small, but with whiskers."
+item.mussels.name,Мидии,Mussels
+item.mussels.desc,"Для «Мидий в эле». Держатся за камень крепче, чем вы за жалованье.",For mussels in ale. They cling to rock harder than you to your wage.
+item.oyster.name,Устрица,Oyster
+item.oyster.desc,"Редко на скалах. Иногда с жемчужиной, чаще с песком.","Rarely on rocks. Sometimes a pearl, more often sand."
+item.whelk.name,Трубач,Whelk
+item.whelk.desc,"Для похлёбки. Раковина поёт, если поднести к уху.",For chowder. The shell sings if you hold it to your ear.
+item.sea_urchin.name,Морской ёж,Sea urchin
+item.sea_urchin.desc,"Икра — деликатес, иглы — нет.",The roe is a delicacy; the spines are not.
+item.periwinkle.name,Литорина,Periwinkle
+item.periwinkle.desc,"Улитка отлива. Жуётся долго, как проповедь.",The low-tide snail. Chews as long as a sermon.
+item.mya_clam.name,Мия,Soft-shell clam
+item.mya_clam.desc,Песчаная ракушка: лопатой по пузырькам на отливе.,A sand clam: shovel the bubbles at low tide.
+item.starfish.name,Морская звезда,Starfish
+item.starfish.desc,"Декор для подоконника. Звезда, которая упала не туда.",A windowsill decoration. A star that fell in the wrong place.
+item.anemone.name,Актиния,Anemone
+item.anemone.desc,"«Актиния в банке» — декор. Цветок, который ест.",An anemone in a jar makes decor. A flower that eats.
+item.old_boot.name,Старый сапог,Old boot
+item.old_boot.desc,"Мусор. Второй где-то там, ищет пару.","Rubbish. The other one is out there, looking for a partner."
+item.soggy_paper.name,Размокшая газета,Soggy newspaper
+item.soggy_paper.desc,"Мусор. Новости, которые уже никого не утопят.",Rubbish. News that will drown no one now.
+item.broken_lantern.name,Сломанный фонарь,Broken lantern
+item.broken_lantern.desc,Мусор. Когда-то чей-то свет.,"Rubbish. Someone's light, once."
+item.snag.name,Коряга,Snag
+item.snag.desc,"Разобрать на плавник. Лес, который научился плавать.",Break it into driftwood. Forest that learned to swim.
+item.neptune_can.name,Консервы «Нептун»,Neptune tinned fish
+item.neptune_can.desc,«Рыба. Наверное». Ранн ненавидит.,“Fish. Probably.” Rann hates them.
+item.net_scrap.name,Обрывок сети,Net scrap
+item.net_scrap.desc,"На нитки у верстака. Сеть, которая больше никого не держит.",Thread at the workbench. A net that holds no one now.
+item.rod_agatha.name,Удочка Агаты,Agatha's rod
+item.rod_agatha.desc,"Ивовая, без наживки и снастей; клюёт медленнее. Помнит её руки.","Willow, no bait or tackle; slower bites. It remembers her hands."
+item.rod_composite.name,Составная удочка,Composite rod
+item.rod_composite.desc,"Наживка; дальность +1. Три колена, одно мнение.","Takes bait; range +1. Three sections, one opinion."
+item.rod_reel.name,Удочка с катушкой,Reel rod
+item.rod_reel.desc,"Наживка и снасть; выбирание +15%. Катушка стрекочет, как кузнечик.",Bait and a tackle; reeling +15%. The reel chirps like a cricket.
+item.rod_master.name,Удочка мастера,Master rod
+item.rod_master.desc,Наживка и две снасти; зелёная зона +5. Рыба её уважает.,Bait and two tackles; green zone +5. Fish respect it.
+item.worms.name,Черви,Worms
+item.worms.desc,Наживка: клёв быстрее ×0.8. Благородное дело после дождя.,Bait: bites come ×0.8 faster. Noble work after rain.
+item.float_guard.name,Поплавок-сторож,Watchful float
+item.float_guard.desc,Снасть: окно подсечки +0.3 с. Не спит за вас.,Tackle: strike window +0.3 s. Stays awake for you.
+item.silk_line.name,Шёлковая леска,Silk line
+item.silk_line.desc,"Снасть: зелёная зона +10. Тоньше волоса, крепче обещаний.","Tackle: green zone +10. Thinner than hair, stronger than promises."
+item.torpedo_sinker.name,Грузило-торпеда,Torpedo sinker
+item.torpedo_sinker.desc,Снасть: тонущие рыбы тянут на 30% слабее.,Tackle: sinking fish pull 30% weaker.
+item.herring_spoon.name,Блесна «Селёдка»,Herring spoon
+item.herring_spoon.desc,Снасть: +20% к шансу морских хищников. Врёт рыбе в лицо.,Tackle: +20% sea predators. Lies to fish's faces.
+item.treasure_hunter.name,Ловец сокровищ,Treasure hunter
+item.treasure_hunter.desc,Снасть: сундучки ×3. Море любит делиться хламом.,Tackle: chests ×3. The sea loves to share its junk.
+item.fish_bell.name,Колокольчик,Little bell
+item.fish_bell.desc,"Снасть: сам подсекает и вываживает рыбу сложнее 40 — нет, проще 40.",Tackle: strikes and lands fish below difficulty 40 by itself.
+item.overgrown_chest.name,Обросший сундучок,Overgrown chest
+item.overgrown_chest.desc,"Вскрыть у Торы за 25 кр. Внутри то, что море сочло лишним.",Tora opens it for 25 kr. Inside: what the sea found surplus.
+item.trap.name,Ловушка (верша),Crab pot
+item.trap.desc,Ставится в воду у берега или причала: наживка → улов в сутки.,"Set it in the water by a shore or pier: bait in, catch out daily."
+item.set_net.name,Ставная сеть,Set net
+item.set_net.desc,Ставится на отливе в приливной полосе; снимается на следующем отливе.,Set it at low tide on the tidal strip; lift it at the next low tide.
+item.hand_net.name,Сачок,Hand net
+item.hand_net.desc,Для приливных луж на отливе: 1–3 обитателя.,For rock pools at low tide: 1-3 creatures.
+q.q1_3.title,Удочка Агаты,Agatha's Rod
+q.q1_3.s1,"Забрать удочку у Эрланда (лодочная лавка, Сольвик)","Collect the rod from Erland (boat shop, Solvik)"
+q.q1_3.s2,Поймать 3 рыбы,Catch 3 fish
+mail.q1_3_erland,"Эрланд. «Зайди, у меня удочка Агаты. Она просила отдать тому, кто зажжёт огонь. Я, признаться, ставил на кота»","Erland: “Drop by, I have Agatha's rod. She asked me to give it to whoever lit the fire. Frankly, I bet on the cat.”"

@@ -165,8 +165,7 @@
     },
     "tags": [
       "fish",
-      "sea",
-      "coastal"
+      "sea"
     ]
   },
   {
@@ -1373,6 +1372,877 @@
     "name": "item.pim_harmonica.name",
     "desc": "item.pim_harmonica.desc",
     "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fish_saithe",
+    "name": "item.fish_saithe.name",
+    "desc": "item.fish_saithe.desc",
+    "category": "fish",
+    "price": 70,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_haddock",
+    "name": "item.fish_haddock.name",
+    "desc": "item.fish_haddock.desc",
+    "category": "fish",
+    "price": 100,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_herring",
+    "name": "item.fish_herring.name",
+    "desc": "item.fish_herring.desc",
+    "category": "fish",
+    "price": 40,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_mackerel",
+    "name": "item.fish_mackerel.name",
+    "desc": "item.fish_mackerel.desc",
+    "category": "fish",
+    "price": 110,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_capelin",
+    "name": "item.fish_capelin.name",
+    "desc": "item.fish_capelin.desc",
+    "category": "fish",
+    "price": 25,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ],
+    "bait": 0.7
+  },
+  {
+    "id": "fish_flounder",
+    "name": "item.fish_flounder.name",
+    "desc": "item.fish_flounder.desc",
+    "category": "fish",
+    "price": 85,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_bullhead",
+    "name": "item.fish_bullhead.name",
+    "desc": "item.fish_bullhead.desc",
+    "category": "fish",
+    "price": 20,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_lumpfish",
+    "name": "item.fish_lumpfish.name",
+    "desc": "item.fish_lumpfish.desc",
+    "category": "fish",
+    "price": 150,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_redfish",
+    "name": "item.fish_redfish.name",
+    "desc": "item.fish_redfish.desc",
+    "category": "fish",
+    "price": 160,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_wolffish",
+    "name": "item.fish_wolffish.name",
+    "desc": "item.fish_wolffish.desc",
+    "category": "fish",
+    "price": 220,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_navaga",
+    "name": "item.fish_navaga.name",
+    "desc": "item.fish_navaga.desc",
+    "category": "fish",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_smelt",
+    "name": "item.fish_smelt.name",
+    "desc": "item.fish_smelt.desc",
+    "category": "fish",
+    "price": 45,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_halibut",
+    "name": "item.fish_halibut.name",
+    "desc": "item.fish_halibut.desc",
+    "category": "fish",
+    "price": 400,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_skate",
+    "name": "item.fish_skate.name",
+    "desc": "item.fish_skate.desc",
+    "category": "fish",
+    "price": 200,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_monkfish",
+    "name": "item.fish_monkfish.name",
+    "desc": "item.fish_monkfish.desc",
+    "category": "fish",
+    "price": 350,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_squid",
+    "name": "item.fish_squid.name",
+    "desc": "item.fish_squid.desc",
+    "category": "fish",
+    "price": 180,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_porbeagle",
+    "name": "item.fish_porbeagle.name",
+    "desc": "item.fish_porbeagle.desc",
+    "category": "fish",
+    "price": 700,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_whiting",
+    "name": "item.fish_whiting.name",
+    "desc": "item.fish_whiting.desc",
+    "category": "fish",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_sandeel",
+    "name": "item.fish_sandeel.name",
+    "desc": "item.fish_sandeel.desc",
+    "category": "fish",
+    "price": 15,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_sea_scorpion",
+    "name": "item.fish_sea_scorpion.name",
+    "desc": "item.fish_sea_scorpion.desc",
+    "category": "fish",
+    "price": 30,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_garfish",
+    "name": "item.fish_garfish.name",
+    "desc": "item.fish_garfish.desc",
+    "category": "fish",
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea"
+    ]
+  },
+  {
+    "id": "fish_sea_trout",
+    "name": "item.fish_sea_trout.name",
+    "desc": "item.fish_sea_trout.desc",
+    "category": "fish",
+    "price": 160,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_char",
+    "name": "item.fish_char.name",
+    "desc": "item.fish_char.desc",
+    "category": "fish",
+    "price": 180,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_grayling",
+    "name": "item.fish_grayling.name",
+    "desc": "item.fish_grayling.desc",
+    "category": "fish",
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_salmon",
+    "name": "item.fish_salmon.name",
+    "desc": "item.fish_salmon.desc",
+    "category": "fish",
+    "price": 450,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_burbot",
+    "name": "item.fish_burbot.name",
+    "desc": "item.fish_burbot.desc",
+    "category": "fish",
+    "price": 110,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_pike",
+    "name": "item.fish_pike.name",
+    "desc": "item.fish_pike.desc",
+    "category": "fish",
+    "price": 140,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_perch",
+    "name": "item.fish_perch.name",
+    "desc": "item.fish_perch.desc",
+    "category": "fish",
+    "price": 40,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_eel",
+    "name": "item.fish_eel.name",
+    "desc": "item.fish_eel.desc",
+    "category": "fish",
+    "price": 250,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_stickleback",
+    "name": "item.fish_stickleback.name",
+    "desc": "item.fish_stickleback.desc",
+    "category": "fish",
+    "price": 5,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_eelpout",
+    "name": "item.fish_eelpout.name",
+    "desc": "item.fish_eelpout.desc",
+    "category": "fish",
+    "price": 70,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_whitefish",
+    "name": "item.fish_whitefish.name",
+    "desc": "item.fish_whitefish.desc",
+    "category": "fish",
+    "price": 130,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "fresh"
+    ]
+  },
+  {
+    "id": "fish_old_codger",
+    "name": "item.fish_old_codger.name",
+    "desc": "item.fish_old_codger.desc",
+    "category": "fish",
+    "price": 1500,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_herring_king",
+    "name": "item.fish_herring_king.name",
+    "desc": "item.fish_herring_king.desc",
+    "category": "fish",
+    "price": 2500,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_golden_halibut",
+    "name": "item.fish_golden_halibut.name",
+    "desc": "item.fish_golden_halibut.desc",
+    "category": "fish",
+    "price": 2000,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_grandmother",
+    "name": "item.fish_grandmother.name",
+    "desc": "item.fish_grandmother.desc",
+    "category": "fish",
+    "price": 3000,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_lantern_fish",
+    "name": "item.fish_lantern_fish.name",
+    "desc": "item.fish_lantern_fish.desc",
+    "category": "fish",
+    "price": 5000,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "rock_crab",
+    "name": "item.rock_crab.name",
+    "desc": "item.rock_crab.desc",
+    "category": "shellfish",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "snow_crab",
+    "name": "item.snow_crab.name",
+    "desc": "item.snow_crab.desc",
+    "category": "shellfish",
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "lobster",
+    "name": "item.lobster.name",
+    "desc": "item.lobster.desc",
+    "category": "shellfish",
+    "price": 250,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "shrimp",
+    "name": "item.shrimp.name",
+    "desc": "item.shrimp.desc",
+    "category": "shellfish",
+    "price": 40,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "mussels",
+    "name": "item.mussels.name",
+    "desc": "item.mussels.desc",
+    "category": "shellfish",
+    "price": 30,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "oyster",
+    "name": "item.oyster.name",
+    "desc": "item.oyster.desc",
+    "category": "shellfish",
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "whelk",
+    "name": "item.whelk.name",
+    "desc": "item.whelk.desc",
+    "category": "shellfish",
+    "price": 50,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "sea_urchin",
+    "name": "item.sea_urchin.name",
+    "desc": "item.sea_urchin.desc",
+    "category": "shellfish",
+    "price": 80,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "periwinkle",
+    "name": "item.periwinkle.name",
+    "desc": "item.periwinkle.desc",
+    "category": "shellfish",
+    "price": 10,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "mya_clam",
+    "name": "item.mya_clam.name",
+    "desc": "item.mya_clam.desc",
+    "category": "shellfish",
+    "price": 45,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "starfish",
+    "name": "item.starfish.name",
+    "desc": "item.starfish.desc",
+    "category": "shellfish",
+    "price": 25,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "anemone",
+    "name": "item.anemone.name",
+    "desc": "item.anemone.desc",
+    "category": "shellfish",
+    "price": 35,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "shellfish",
+      "sea"
+    ]
+  },
+  {
+    "id": "old_boot",
+    "name": "item.old_boot.name",
+    "desc": "item.old_boot.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "soggy_paper",
+    "name": "item.soggy_paper.name",
+    "desc": "item.soggy_paper.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "broken_lantern",
+    "name": "item.broken_lantern.name",
+    "desc": "item.broken_lantern.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "snag",
+    "name": "item.snag.name",
+    "desc": "item.snag.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "neptune_can",
+    "name": "item.neptune_can.name",
+    "desc": "item.neptune_can.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "net_scrap",
+    "name": "item.net_scrap.name",
+    "desc": "item.net_scrap.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99,
+    "tags": [
+      "trash"
+    ]
+  },
+  {
+    "id": "rod_agatha",
+    "name": "item.rod_agatha.name",
+    "desc": "item.rod_agatha.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "rod": {
+      "bait": 0,
+      "tackle": 0,
+      "wait": 1.5,
+      "range": 0
+    }
+  },
+  {
+    "id": "rod_composite",
+    "name": "item.rod_composite.name",
+    "desc": "item.rod_composite.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "rod": {
+      "bait": 1,
+      "tackle": 0,
+      "range": 1
+    }
+  },
+  {
+    "id": "rod_reel",
+    "name": "item.rod_reel.name",
+    "desc": "item.rod_reel.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "rod": {
+      "bait": 1,
+      "tackle": 1,
+      "reel": 1.15
+    }
+  },
+  {
+    "id": "rod_master",
+    "name": "item.rod_master.name",
+    "desc": "item.rod_master.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "rod": {
+      "bait": 1,
+      "tackle": 2,
+      "green": 5
+    }
+  },
+  {
+    "id": "worms",
+    "name": "item.worms.name",
+    "desc": "item.worms.desc",
+    "category": "bait",
+    "price": 2,
+    "stack": 999,
+    "bait": 0.8
+  },
+  {
+    "id": "float_guard",
+    "name": "item.float_guard.name",
+    "desc": "item.float_guard.desc",
+    "category": "tackle",
+    "price": 150,
+    "stack": 1,
+    "tackle": {
+      "window": 0.3
+    }
+  },
+  {
+    "id": "silk_line",
+    "name": "item.silk_line.name",
+    "desc": "item.silk_line.desc",
+    "category": "tackle",
+    "price": 750,
+    "stack": 1,
+    "tackle": {
+      "green": 10
+    }
+  },
+  {
+    "id": "torpedo_sinker",
+    "name": "item.torpedo_sinker.name",
+    "desc": "item.torpedo_sinker.desc",
+    "category": "tackle",
+    "price": 400,
+    "stack": 1,
+    "tackle": {
+      "sinking": 0.7
+    }
+  },
+  {
+    "id": "herring_spoon",
+    "name": "item.herring_spoon.name",
+    "desc": "item.herring_spoon.desc",
+    "category": "tackle",
+    "price": 300,
+    "stack": 1,
+    "tackle": {
+      "predators": 1.2
+    }
+  },
+  {
+    "id": "treasure_hunter",
+    "name": "item.treasure_hunter.name",
+    "desc": "item.treasure_hunter.desc",
+    "category": "tackle",
+    "price": 500,
+    "stack": 1,
+    "tackle": {
+      "chest": 3
+    }
+  },
+  {
+    "id": "fish_bell",
+    "name": "item.fish_bell.name",
+    "desc": "item.fish_bell.desc",
+    "category": "tackle",
+    "price": 600,
+    "stack": 1,
+    "tackle": {
+      "auto": 40
+    }
+  },
+  {
+    "id": "overgrown_chest",
+    "name": "item.overgrown_chest.name",
+    "desc": "item.overgrown_chest.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "trap",
+    "name": "item.trap.name",
+    "desc": "item.trap.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place_water": "trap"
+  },
+  {
+    "id": "set_net",
+    "name": "item.set_net.name",
+    "desc": "item.set_net.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place_water": "net"
+  },
+  {
+    "id": "hand_net",
+    "name": "item.hand_net.name",
+    "desc": "item.hand_net.desc",
+    "category": "tool",
     "price": 0,
     "stack": 1
   }

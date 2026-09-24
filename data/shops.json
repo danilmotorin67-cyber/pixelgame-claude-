@@ -201,6 +201,10 @@
         "upgrade": "backpack",
         "slots": 36,
         "price": 10000
+      },
+      {
+        "item": "worms",
+        "price": 5
       }
     ]
   },
@@ -282,6 +286,70 @@
         "seasons": [
           "summer"
         ]
+      },
+      {
+        "item": "rod_composite",
+        "price": 1800,
+        "requires": [
+          "fishing",
+          2
+        ]
+      },
+      {
+        "item": "rod_reel",
+        "price": 5000,
+        "requires": [
+          "fishing",
+          5
+        ]
+      },
+      {
+        "item": "rod_master",
+        "price": 15000,
+        "requires": [
+          "fishing",
+          8
+        ]
+      },
+      {
+        "item": "bait",
+        "price": 5
+      },
+      {
+        "item": "float_guard",
+        "price": 300
+      },
+      {
+        "item": "herring_spoon",
+        "price": 600
+      },
+      {
+        "item": "torpedo_sinker",
+        "price": 800,
+        "requires": [
+          "fishing",
+          6
+        ]
+      },
+      {
+        "item": "treasure_hunter",
+        "price": 1000,
+        "requires": [
+          "fishing",
+          8
+        ]
+      },
+      {
+        "item": "fish_bell",
+        "price": 1200
+      },
+      {
+        "item": "resin",
+        "price": 30
+      },
+      {
+        "item": "trap",
+        "price": 1000
       }
     ]
   },

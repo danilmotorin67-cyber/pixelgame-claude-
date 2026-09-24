@@ -1,28 +1,956 @@
 [
-  {
-    "id": "fish_cod",
-    "where": [
-      "coast",
-      "pier",
-      "sea_z1",
-      "sea_z2"
-    ],
-    "seasons": [
-      "spring",
-      "autumn",
-      "winter"
-    ],
-    "hours": [
-      6,
-      20
-    ],
-    "weather": "any",
-    "tide": "any",
-    "difficulty": 35,
-    "behavior": "calm",
-    "size_cm": [
-      30,
-      90
-    ]
-  }
+ {
+  "id": "fish_cod",
+  "where": [
+   "coast",
+   "pier",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "spring",
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 35,
+  "behavior": "calm",
+  "size_cm": [
+   30,
+   90
+  ]
+ },
+ {
+  "id": "fish_saithe",
+  "where": [
+   "coast",
+   "pier"
+  ],
+  "seasons": [
+   "spring",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 30,
+  "behavior": "darting",
+  "size_cm": [
+   30,
+   70
+  ]
+ },
+ {
+  "id": "fish_haddock",
+  "where": [
+   "pier",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 40,
+  "behavior": "calm",
+  "size_cm": [
+   30,
+   60
+  ]
+ },
+ {
+  "id": "fish_herring",
+  "where": [
+   "coast",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "spring",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    12
+   ],
+   [
+    18,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 25,
+  "behavior": "school",
+  "size_cm": [
+   18,
+   30
+  ]
+ },
+ {
+  "id": "fish_mackerel",
+  "where": [
+   "pier",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    8,
+    18
+   ]
+  ],
+  "weather": "clear",
+  "tide": "any",
+  "difficulty": 45,
+  "behavior": "jumping",
+  "size_cm": [
+   25,
+   45
+  ]
+ },
+ {
+  "id": "fish_capelin",
+  "where": [
+   "coast"
+  ],
+  "seasons": [
+   "spring"
+  ],
+  "hours": [
+   [
+    4,
+    8
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 15,
+  "behavior": "darting",
+  "size_cm": [
+   10,
+   20
+  ]
+ },
+ {
+  "id": "fish_flounder",
+  "where": [
+   "sand"
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "low",
+  "difficulty": 30,
+  "behavior": "sinking",
+  "size_cm": [
+   25,
+   50
+  ]
+ },
+ {
+  "id": "fish_bullhead",
+  "where": [
+   "tidepool",
+   "pier"
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    0,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 10,
+  "behavior": "calm",
+  "size_cm": [
+   10,
+   25
+  ]
+ },
+ {
+  "id": "fish_lumpfish",
+  "where": [
+   "rocky"
+  ],
+  "seasons": [
+   "spring"
+  ],
+  "hours": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 40,
+  "behavior": "sinking",
+  "size_cm": [
+   30,
+   50
+  ]
+ },
+ {
+  "id": "fish_redfish",
+  "where": [
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 50,
+  "behavior": "sinking",
+  "size_cm": [
+   30,
+   60
+  ]
+ },
+ {
+  "id": "fish_wolffish",
+  "where": [
+   "rocky",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "winter",
+   "spring"
+  ],
+  "hours": [
+   [
+    6,
+    16
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 60,
+  "behavior": "cunning",
+  "size_cm": [
+   50,
+   110
+  ]
+ },
+ {
+  "id": "fish_navaga",
+  "where": [
+   "coast",
+   "ice"
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "hours": [
+   [
+    8,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 25,
+  "behavior": "darting",
+  "size_cm": [
+   20,
+   35
+  ]
+ },
+ {
+  "id": "fish_smelt",
+  "where": [
+   "lagoon",
+   "estuary",
+   "ice"
+  ],
+  "seasons": [
+   "spring",
+   "winter"
+  ],
+  "hours": [
+   [
+    6,
+    12
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 20,
+  "behavior": "darting",
+  "size_cm": [
+   12,
+   22
+  ]
+ },
+ {
+  "id": "fish_halibut",
+  "where": [
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 75,
+  "behavior": "sinking",
+  "size_cm": [
+   60,
+   200
+  ]
+ },
+ {
+  "id": "fish_skate",
+  "where": [
+   "sea_z1",
+   "sea_z2"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    10,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "low",
+  "difficulty": 55,
+  "behavior": "sinking",
+  "size_cm": [
+   50,
+   120
+  ]
+ },
+ {
+  "id": "fish_monkfish",
+  "where": [
+   "sea_z3"
+  ],
+  "seasons": [
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    20,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 70,
+  "behavior": "cunning",
+  "size_cm": [
+   50,
+   120
+  ]
+ },
+ {
+  "id": "fish_squid",
+  "where": [
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    20,
+    26
+   ]
+  ],
+  "weather": "clear",
+  "tide": "any",
+  "difficulty": 50,
+  "behavior": "darting",
+  "size_cm": [
+   30,
+   60
+  ],
+  "lantern": true
+ },
+ {
+  "id": "fish_porbeagle",
+  "where": [
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    8,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 85,
+  "behavior": "jumping",
+  "size_cm": [
+   150,
+   300
+  ]
+ },
+ {
+  "id": "fish_whiting",
+  "where": [
+   "pier",
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "rain",
+  "tide": "any",
+  "difficulty": 30,
+  "behavior": "calm",
+  "size_cm": [
+   25,
+   45
+  ]
+ },
+ {
+  "id": "fish_sandeel",
+  "where": [
+   "sand"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    0,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "low",
+  "difficulty": 10,
+  "behavior": "darting",
+  "size_cm": [
+   10,
+   20
+  ]
+ },
+ {
+  "id": "fish_sea_scorpion",
+  "where": [
+   "tidepool"
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "hours": [
+   [
+    0,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "low",
+  "difficulty": 15,
+  "behavior": "darting",
+  "size_cm": [
+   10,
+   20
+  ]
+ },
+ {
+  "id": "fish_garfish",
+  "where": [
+   "sea_z1",
+   "sea_z2",
+   "sea_z3"
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "hours": [
+   [
+    8,
+    18
+   ]
+  ],
+  "weather": "clear",
+  "tide": "high",
+  "difficulty": 45,
+  "behavior": "jumping",
+  "size_cm": [
+   40,
+   80
+  ]
+ },
+ {
+  "id": "fish_sea_trout",
+  "where": [
+   "stream",
+   "estuary"
+  ],
+  "seasons": [
+   "spring",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "rain",
+  "tide": "any",
+  "difficulty": 50,
+  "behavior": "jumping",
+  "size_cm": [
+   30,
+   70
+  ]
+ },
+ {
+  "id": "fish_char",
+  "where": [
+   "lake"
+  ],
+  "seasons": [
+   "winter",
+   "spring"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 55,
+  "behavior": "cunning",
+  "size_cm": [
+   30,
+   60
+  ]
+ },
+ {
+  "id": "fish_grayling",
+  "where": [
+   "stream"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "clear",
+  "tide": "any",
+  "difficulty": 45,
+  "behavior": "jumping",
+  "size_cm": [
+   25,
+   45
+  ]
+ },
+ {
+  "id": "fish_salmon",
+  "where": [
+   "stream",
+   "estuary"
+  ],
+  "seasons": [
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 70,
+  "behavior": "jumping",
+  "size_cm": [
+   50,
+   110
+  ],
+  "days": [
+   15,
+   21
+  ]
+ },
+ {
+  "id": "fish_burbot",
+  "where": [
+   "lake"
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "hours": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 45,
+  "behavior": "sinking",
+  "size_cm": [
+   30,
+   70
+  ]
+ },
+ {
+  "id": "fish_pike",
+  "where": [
+   "lagoon"
+  ],
+  "seasons": [
+   "spring",
+   "summer"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 50,
+  "behavior": "darting",
+  "size_cm": [
+   40,
+   100
+  ]
+ },
+ {
+  "id": "fish_perch",
+  "where": [
+   "lake"
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    20
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 20,
+  "behavior": "calm",
+  "size_cm": [
+   15,
+   30
+  ]
+ },
+ {
+  "id": "fish_eel",
+  "where": [
+   "lagoon"
+  ],
+  "seasons": [
+   "summer",
+   "autumn"
+  ],
+  "hours": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "rain",
+  "tide": "any",
+  "difficulty": 65,
+  "behavior": "cunning",
+  "size_cm": [
+   50,
+   110
+  ]
+ },
+ {
+  "id": "fish_stickleback",
+  "where": [
+   "lagoon",
+   "stream"
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    0,
+    24
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 5,
+  "behavior": "darting",
+  "size_cm": [
+   4,
+   8
+  ]
+ },
+ {
+  "id": "fish_eelpout",
+  "where": [
+   "lagoon",
+   "coast"
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 35,
+  "behavior": "sinking",
+  "size_cm": [
+   25,
+   45
+  ]
+ },
+ {
+  "id": "fish_whitefish",
+  "where": [
+   "lake"
+  ],
+  "seasons": [
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    6,
+    18
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 40,
+  "behavior": "calm",
+  "size_cm": [
+   30,
+   55
+  ]
+ },
+ {
+  "id": "fish_old_codger",
+  "where": [
+   "sea_teeth"
+  ],
+  "seasons": [
+   "spring"
+  ],
+  "hours": [
+   [
+    6,
+    10
+   ]
+  ],
+  "weather": "rain",
+  "tide": "high",
+  "difficulty": 100,
+  "behavior": "legendary",
+  "size_cm": [
+   150,
+   190
+  ],
+  "legendary": true
+ },
+ {
+  "id": "fish_herring_king",
+  "where": [
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    0,
+    24
+   ]
+  ],
+  "weather": "storm",
+  "tide": "any",
+  "difficulty": 110,
+  "behavior": "legendary",
+  "size_cm": [
+   300,
+   500
+  ],
+  "legendary": true
+ },
+ {
+  "id": "fish_golden_halibut",
+  "where": [
+   "seal_rock"
+  ],
+  "seasons": [
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    12
+   ]
+  ],
+  "weather": "clear",
+  "tide": "low",
+  "difficulty": 105,
+  "behavior": "legendary",
+  "size_cm": [
+   120,
+   180
+  ],
+  "legendary": true
+ },
+ {
+  "id": "fish_grandmother",
+  "where": [
+   "ice_field"
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "hours": [
+   [
+    20,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 120,
+  "behavior": "legendary",
+  "size_cm": [
+   400,
+   550
+  ],
+  "legendary": true
+ },
+ {
+  "id": "fish_lantern_fish",
+  "where": [
+   "dead_fire"
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    22,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 130,
+  "behavior": "legendary",
+  "size_cm": [
+   60,
+   90
+  ],
+  "legendary": true,
+  "hmar": true
+ }
 ]

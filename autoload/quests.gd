@@ -12,6 +12,7 @@ func _ready() -> void:
 	Events.item_added.connect(func(id: String, _n: int) -> void: notify("item_added", id))
 	Events.lamp_lit.connect(func(_on_time: bool) -> void: notify("lamp_lit", ""))
 	Events.quest_event.connect(func(name: String, arg: String) -> void: notify(name, arg))
+	Events.fish_caught.connect(func(id: String, _q: int, _size: float) -> void: notify("fish_caught", id))
 
 
 func reset() -> void:
@@ -26,7 +27,9 @@ func start(id: String) -> void:
 	if states.has(id):
 		return
 	var info := quest(id)
-	states[id] = {"steps": [], "done": false}
+	states[id] = {"steps": [], "done": false, "counts": {}}
+	if info.has("mail_on_start"):
+		Mail.send(str(info["mail_on_start"]))
 	for flag in info.get("flags", []):
 		Game.set_flag(str(flag))
 	for entry in info.get("on_start", []):
@@ -59,6 +62,12 @@ func notify(event: String, arg: String, extra: Dictionary = {}) -> void:
 				continue
 			if step.has("correct") and bool(step["correct"]) != bool(extra.get("correct", false)):
 				continue
+			if step.has("count"):
+				var counts: Dictionary = states[id].get("counts", {})
+				counts[str(step["id"])] = int(counts.get(str(step["id"]), 0)) + 1
+				states[id]["counts"] = counts
+				if int(counts[str(step["id"])]) < int(step["count"]):
+					continue
 			states[id]["steps"].append(str(step["id"]))
 			Events.quest_step_done.emit(id)
 		if states[id]["steps"].size() >= info.get("steps", []).size():
@@ -86,6 +95,8 @@ func complete(id: String) -> void:
 				Game.set_flag(str(reward[1]))
 			"mail":
 				Mail.send(str(reward[1]))
+			"recipe":
+				Crafting.learn(str(reward[1]))
 	Events.quest_completed.emit(id)
 
 
@@ -130,4 +141,9 @@ func deserialize(d: Dictionary) -> void:
 	var saved: Dictionary = d.get("states", {})
 	for id in saved:
 		var entry: Dictionary = saved[id]
-		states[str(id)] = {"steps": entry.get("steps", []).duplicate(), "done": bool(entry.get("done", false))}
+		var counts := {}
+		var saved_counts: Dictionary = entry.get("counts", {})
+		for key in saved_counts:
+			counts[str(key)] = int(saved_counts[key])
+		states[str(id)] = {"steps": entry.get("steps", []).duplicate(), "done": bool(entry.get("done", false)),
+			"counts": counts}

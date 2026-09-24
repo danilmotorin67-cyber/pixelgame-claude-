@@ -9,13 +9,14 @@ var music_vol: float = 0.8
 var sfx_vol: float = 1.0
 var save_anytime: bool = false
 var fortuna_reminder: bool = true
+var fishing_assist: bool = false
 
 func serialize() -> Dictionary:
 	return {
 		"language": language, "ui_scale": ui_scale, "shake": shake,
 		"lightning_flash": lightning_flash, "master_vol": master_vol,
 		"music_vol": music_vol, "sfx_vol": sfx_vol, "save_anytime": save_anytime,
-		"fortuna_reminder": fortuna_reminder,
+		"fortuna_reminder": fortuna_reminder, "fishing_assist": fishing_assist,
 	}
 
 func deserialize(d: Dictionary) -> void:
@@ -28,3 +29,4 @@ func deserialize(d: Dictionary) -> void:
 	sfx_vol = float(d.get("sfx_vol", 1.0))
 	save_anytime = bool(d.get("save_anytime", false))
 	fortuna_reminder = bool(d.get("fortuna_reminder", true))
+	fishing_assist = bool(d.get("fishing_assist", false))

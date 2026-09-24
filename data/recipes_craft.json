@@ -150,5 +150,58 @@
       1
     ],
     "unlock": "start"
+  },
+  {
+    "id": "craft_set_net",
+    "station": "workbench",
+    "in": [
+      [
+        "thread",
+        10
+      ],
+      [
+        "cork_float",
+        5
+      ],
+      [
+        "stone",
+        2
+      ]
+    ],
+    "out": [
+      "set_net",
+      1
+    ],
+    "unlock": "skill:fishing:2"
+  },
+  {
+    "id": "craft_net_thread",
+    "station": "workbench",
+    "in": [
+      [
+        "net_scrap",
+        1
+      ]
+    ],
+    "out": [
+      "thread",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "craft_snag_wood",
+    "station": "workbench",
+    "in": [
+      [
+        "snag",
+        1
+      ]
+    ],
+    "out": [
+      "driftwood",
+      2
+    ],
+    "unlock": "start"
   }
 ]

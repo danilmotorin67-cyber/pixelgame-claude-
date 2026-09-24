@@ -27,4 +27,9 @@ func interact(_player: Player) -> void:
 			[info.get("name", ""), int(info.get("open", 0)), int(info.get("close", 0))]
 			if reason == "hours" else [info.get("name", "")])
 		return
+	if shop_id == "shop_erland" and Quests.state("q1_3_rod") == "active" and not Quests.step_done("q1_3_rod", "rod"):
+		Inventory.add("rod_agatha", 1)
+		Events.quest_event.emit("rod_received", "")
+		(scene.get_node("HUD/Hint") as Label).text = "Эрланд: «Держи. Ива помнит её руки. Твои — пусть привыкают»."
+		return
 	ShopPanel.open(scene.get_node("HUD"), shop_id)

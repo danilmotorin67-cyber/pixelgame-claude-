@@ -115,6 +115,8 @@ func shop_stock(shop_id: String) -> Array:
 			continue
 		if Clock.day < int(entry.get("from_day", 1)):
 			continue
+		if entry.has("requires") and Skills.level(str(entry["requires"][0])) < int(entry["requires"][1]):
+			continue
 		if str(entry.get("upgrade", "")) == "backpack":
 			if int(entry["slots"]) != Inventory.capacity + Inventory.HOTBAR:
 				continue

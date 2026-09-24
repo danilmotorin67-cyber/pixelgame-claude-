@@ -1,1 +1,74 @@
-[]
+[
+ {
+  "id": "rock_crab",
+  "how": [
+   "trap_shore",
+   "net"
+  ]
+ },
+ {
+  "id": "snow_crab",
+  "how": [
+   "trap_sea"
+  ]
+ },
+ {
+  "id": "lobster",
+  "how": [
+   "trap_rocks"
+  ]
+ },
+ {
+  "id": "shrimp",
+  "how": [
+   "trap_shore",
+   "trap_sea",
+   "net"
+  ]
+ },
+ {
+  "id": "mussels",
+  "how": [
+   "trap_shore",
+   "trap_rocks"
+  ]
+ },
+ {
+  "id": "oyster",
+  "how": []
+ },
+ {
+  "id": "whelk",
+  "how": [
+   "trap_sea"
+  ]
+ },
+ {
+  "id": "sea_urchin",
+  "how": [
+   "net"
+  ]
+ },
+ {
+  "id": "periwinkle",
+  "how": [
+   "net"
+  ]
+ },
+ {
+  "id": "mya_clam",
+  "how": []
+ },
+ {
+  "id": "starfish",
+  "how": [
+   "net"
+  ]
+ },
+ {
+  "id": "anemone",
+  "how": [
+   "net"
+  ]
+ }
+]

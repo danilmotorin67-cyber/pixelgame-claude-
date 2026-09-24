@@ -62,6 +62,17 @@ func _pick(rng: RandomNumberGenerator, table: Array) -> String:
 
 
 # Night step 8: yesterday's gifts wash away and the tide brings new ones (18.2).
+# Night step 8 (first half): the day's fishing and the drowned left on the shore weigh on Rann (12.1).
+func night_mercy() -> void:
+	if int(Game.counters.get("fish_today", 0)) > 60:
+		add_mercy(-1.0)
+	Game.counters["fish_today"] = 0
+	Game.counters["released_today"] = 0
+	for b in Graveyard.bodies:
+		if str(b["where"]) == "shore":
+			add_mercy(-1.0)
+
+
 func generate_gifts(index: int, storm: bool) -> void:
 	var config: Dictionary = Data.tables.get("forage", {})
 	gifts.clear()

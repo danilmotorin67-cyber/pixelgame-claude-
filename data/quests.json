@@ -82,6 +82,37 @@
   ]
  },
  {
+  "id": "q1_3_rod",
+  "type": "main",
+  "title": "q.q1_3.title",
+  "start": "day_index >= 1",
+  "mail_on_start": "mail.q1_3_erland",
+  "steps": [
+   {
+    "id": "rod",
+    "text": "q.q1_3.s1",
+    "on": "rod_received"
+   },
+   {
+    "id": "catch",
+    "text": "q.q1_3.s2",
+    "on": "fish_caught",
+    "count": 3
+   }
+  ],
+  "rewards": [
+   [
+    "item",
+    "bait",
+    20
+   ],
+   [
+    "recipe",
+    "cook_keeper_soup"
+   ]
+  ]
+ },
+ {
   "id": "q1_5_registry",
   "type": "main",
   "title": "q.q1_5.title",

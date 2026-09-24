@@ -44,6 +44,9 @@ func _physics_process(delta: float) -> void:
 		_update_sprite(true)
 		return
 	var dir := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var fishing_hud := get_tree().current_scene.get_node_or_null("HUD/FishingHud") as FishingHud if get_tree().current_scene else null
+	if fishing_hud and fishing_hud.active():
+		dir = Vector2.ZERO
 	if dir.length() > 0.1:
 		facing = dir.normalized()
 	var spd := slow_speed if Input.is_action_pressed("walk_slow") else walk_speed
@@ -153,6 +156,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 	if event.is_action_pressed("use_tool") and Graveyard.carried != "":
 		_say("С ношей на плечах инструменты не взять. E — положить.")
+		get_viewport().set_input_as_handled()
+		return
+	if event.is_action_pressed("use_tool") and not Fishing.rod(Inventory.selected_id()).is_empty():
+		var hud := get_tree().current_scene.get_node_or_null("HUD") as CanvasLayer
+		if hud and not FishingHud.of(hud).active():
+			FishingHud.of(hud).begin(self, Inventory.selected_id())
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("use_tool") and _use_on_object(get_global_mouse_position()):
