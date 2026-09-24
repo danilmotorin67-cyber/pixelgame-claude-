@@ -217,6 +217,8 @@ def check_tags() -> list:
     with open(ROOT / "localization" / "strings.csv", encoding="utf-8") as f:
         for row in csv.reader(f):
             for text in row[1:]:
+                if "{{" in text or "}}" in text:
+                    errs.append(f"string {row[0]} has doubled braces")
                 if text.count("{") != text.count("}"):
                     errs.append(f"string {row[0]} has unbalanced braces")
                 for tag in re.findall(r"\{([^{}]*)\}", text):
@@ -230,7 +232,7 @@ SCENE_COMMANDS = {"fade_out", "fade_in", "place", "move", "face", "wait", "emote
                   "set_weather", "effects", "end", "branch"}
 EFFECTS = {"friendship", "flag", "give", "item", "take", "money", "honor", "points", "xp", "start_quest", "step_quest",
            "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy",
-           "shore_gift"}
+           "shore_gift", "collect"}
 
 
 def loc_keys():

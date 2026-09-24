@@ -2729,5 +2729,21 @@
     "price": 0,
     "stack": 1,
     "warmth": 15
+  },
+  {
+    "id": "rowan_staff",
+    "name": "item.rowan_staff.name",
+    "desc": "item.rowan_staff.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "captain_compass",
+    "name": "item.captain_compass.name",
+    "desc": "item.captain_compass.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
   }
 ]

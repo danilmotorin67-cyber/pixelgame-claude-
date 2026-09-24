@@ -1,0 +1,417 @@
+{
+ "events": [
+  {
+   "id": "ev_helga_1_tale",
+   "npc": "npc_helga",
+   "hearts": 1,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 1 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga1_tale.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga1_tale.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "tale_1"
+      ],
+      [
+       "collect",
+       "tales",
+       "tale_1"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_helga_2",
+   "npc": "npc_helga",
+   "hearts": 2,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 2 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga2.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga2.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "tale_2"
+      ],
+      [
+       "collect",
+       "tales",
+       "tale_2"
+      ],
+      [
+       "xp",
+       "foraging",
+       30
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_helga_4",
+   "npc": "npc_helga",
+   "hearts": 4,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 4 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga4.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga4.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "tale_4"
+      ],
+      [
+       "collect",
+       "tales",
+       "tale_4"
+      ],
+      [
+       "flag",
+       "evidence_hint_fortuna"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_helga_6",
+   "npc": "npc_helga",
+   "hearts": 6,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 6 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga6.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga6.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "tale_6"
+      ],
+      [
+       "collect",
+       "tales",
+       "tale_6"
+      ],
+      [
+       "flag",
+       "pact_words"
+      ],
+      [
+       "recipe",
+       "cook_rowan_brew"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_helga_8",
+   "npc": "npc_helga",
+   "hearts": 8,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 8 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga8.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga8.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "give",
+       "rowan_staff",
+       1
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_helga_10",
+   "npc": "npc_helga",
+   "hearts": 10,
+   "trigger": {
+    "map": "moor_helga",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "hearts('npc_helga') >= 10 and weekday != 'sun'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga10.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.helga10.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "tale_12"
+      ],
+      [
+       "collect",
+       "tales",
+       "tale_12"
+      ],
+      [
+       "flag",
+       "helga_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

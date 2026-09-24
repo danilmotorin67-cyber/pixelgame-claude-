@@ -3449,3 +3449,291 @@ ev.benedict8.l03,Я слышу их. Голоса. Они не зовут. Он�
 ev.benedict8.l04,Можно на берег. Пожалуйста. Но — спасибо. Это было чудо. Маленькое. Моё.,Back to shore now. Please. But — thank you. That was a miracle. A small one. Mine.
 ev.benedict10.l01,Садитесь. Сегодня не служба. Сегодня — чай. Со священником. Редкое таинство.,Sit. Tonight's no service. Tonight's tea. With the priest. A rare sacrament.
 ev.benedict10.l02,"Вы знаете, я много лет думал, что Бог живёт в тишине. Теперь думаю — он живёт в тех, кто держит огонь.","You know, for many years I thought God lives in silence. Now I think — He lives in those who keep a fire burning."
+item.rowan_staff.name,Рябиновый посох,Rowan staff
+item.rowan_staff.desc,"Хмарники не подходят ближе трёх тайлов. Хельга вырезала его, когда ей было семьдесят. «Для начала».",Fog-wraiths won't come within three tiles. Helga carved it when she was seventy. 'To start with.'
+npc.helga.spring.01,"Я пережила всех, кто собирался меня хоронить. Двоих — дважды.",I've outlived everyone who planned to bury me. Two of them twice.
+npc.helga.spring.02,"Весна, {внучок|внучка}. Ложечница взошла. От цинги помогает. От старости — нет. Проверяла.","Spring, dearie. The scurvy-grass is up. Helps with scurvy. Not with old age. I've checked."
+npc.helga.spring.03,Девяносто седьмая весна. Все одинаковые. Все прекрасные.,My ninety-seventh spring. All alike. All beautiful.
+npc.helga.spring.04,Вереск ещё спит. Я — нет. Я вообще мало сплю. Некогда.,The heather's still asleep. I'm not. I hardly sleep at all. No time.
+npc.helga.spring.05,Сажай ложечницу у моря. Ей соль нипочём. Как мне.,Plant scurvy-grass by the sea. Salt means nothing to it. Same as me.
+npc.helga.spring.06,Весной море добреет. Ненадолго. Как мужчины после бани.,In spring the sea gets kinder. Not for long. Like men after the sauna.
+npc.helga.spring.07,"Приходи на пустошь. Покажу, где растёт то, что лечит. И то, что калечит. Рядом растут.",Come to the moor. I'll show you what heals. And what harms. They grow side by side.
+npc.helga.spring.08,Девять Дев стоят. Все девять. Пока светится ни одна. Засветятся. Я доживу.,The Nine Maidens stand. All nine. Not one glowing yet. They will. I'll live to see it.
+npc.helga.spring.09,"Мне приносят молоко. Думают, я немощная. Я его пью. Пусть думают.",They bring me milk. Think I'm frail. I drink it. Let them think.
+npc.helga.spring.10,"Садись, {внучок|внучка}. Сказку хочешь? Не сегодня. Сегодня — чай. Сказки — по заслугам.","Sit down, dearie. Want a tale? Not today. Today — tea. Tales are earned."
+npc.helga.summer.01,"Лето. Травы в силе. Я в силе. Все в силе, кроме Карла.","Summer. The herbs are in their prime. So am I. Everyone is, except Karl."
+npc.helga.summer.02,Морошка поспевает. Первую ягоду — Ранн. Традиция. Кто забудет — у того морошка кислая.,The cloudberries are ripening. The first berry goes to Rann. Tradition. Forget it and your cloudberries turn sour.
+npc.helga.summer.03,"Лив ходит за мной с блокнотом. Записывает травы. Я называю неправильно. Проверяю, заметит ли.",Liv follows me with her notebook. Writing down herbs. I name them wrong. Testing if she'll notice.
+npc.helga.summer.04,"Белые ночи. В мои годы солнце — единственный, кто не спит так же долго, как я.",White nights. At my age the sun's the only one who stays up as long as I do.
+npc.helga.summer.05,"{Загорел|Загорела} ты, {внучок|внучка}. Кожа — как у моряка. Хорошо. Бледных море любит больше.","You've tanned, dearie. Skin like a sailor's. Good. The sea likes pale ones better."
+npc.helga.summer.06,Иван-чай цветёт на погосте. Покойники любят иван-чай. Я — тоже. Мы похожи.,Fireweed's blooming in the graveyard. The dead love fireweed. So do I. We're alike.
+npc.helga.summer.07,Летом я собираю вереск. Сушу. Зимой пью. Зима — это лето в чашке.,In summer I gather heather. Dry it. Drink it in winter. Winter is summer in a cup.
+npc.helga.summer.08,Мухомор красивый. Как Грим в молодости. И такой же полезный.,Fly agaric's pretty. Like Grim in his youth. And just as useful.
+npc.helga.summer.09,Лето коротко. Жизнь — длинна. Мне ли не знать.,Summer is short. Life is long. Who'd know better than me.
+npc.helga.summer.10,"Приходи вечером. Пустошь поёт. Слушать надо, а не смотреть.","Come in the evening. The moor sings. You have to listen, not look."
+npc.helga.autumn.01,"Осень. Брусника, клюква, рябина. Красное всё. Кровь земли. Не бойся — полезная.","Autumn. Lingonberry, cranberry, rowan. All red. The earth's blood. Don't be afraid — it's good for you."
+npc.helga.autumn.02,День рождения у меня осенью. Первого числа. Девяносто восьмой. Или седьмой. Сбилась.,My birthday's in autumn. The first. Ninety-eighth. Or seventh. I've lost count.
+npc.helga.autumn.03,Ночь Утопленников — не сказка. Я ходила к Камню шестьдесят раз. Ранн помнит меня.,Drowned Night isn't a fairy tale. I've been to the Stone sixty times. Rann remembers me.
+npc.helga.autumn.04,Рябину собирай после первого инея. Тогда она сладкая. Как старость. Не верь — пробуй.,Pick rowan after the first frost. Then it's sweet. Like old age. Don't believe me — taste it.
+npc.helga.autumn.05,"{Устал|Устала}, {внучок|внучка}? Вот отвар. Горький. Горькое лечит. Сладкое — только утешает.","Tired, dearie? Here's a brew. Bitter. Bitter heals. Sweet only comforts."
+npc.helga.autumn.06,Листья падают. Я считаю. Каждый год меньше деревьев на пустоши. Больше — на погосте. Кресты.,The leaves fall. I count them. Every year fewer trees on the moor. More in the graveyard. Crosses.
+npc.helga.autumn.07,Туман осенью гуще. Горе копится. Как вода в болоте.,The fog's thicker in autumn. Grief builds up. Like water in a bog.
+npc.helga.autumn.08,Грибы. Лисички — хорошие. Мухоморы — плохие. Люди — по-разному.,Mushrooms. Chanterelles — good. Fly agarics — bad. People — it depends.
+npc.helga.autumn.09,"Осенью я рассказываю сказки чаще. Люди слушают, когда холодно.",In autumn I tell tales more often. People listen when it's cold.
+npc.helga.autumn.10,Ветер с моря. Пахнет солью и памятью. Я помню этот ветер девяносто лет.,Wind off the sea. It smells of salt and memory. I've known this wind ninety years.
+npc.helga.winter.01,"Зима. Печка, травы, тишина. Лучшее время для старухи.","Winter. The stove, herbs, silence. The best time for an old woman."
+npc.helga.winter.02,Долгая ночь. Я рассказываю сказы. Двенадцать. Все — правда. Почти все.,The long night. I tell the tales. Twelve. All true. Nearly all.
+npc.helga.winter.03,Зимняя капуста хороша. Мороз ей — друг. Как мне.,Winter cabbage is good. Frost's its friend. Like mine.
+npc.helga.winter.04,Сияние — это танец дочерей Ранн. Лив говорит — частицы. Частицы тоже танцуют. Пусть.,The aurora is Rann's daughters dancing. Liv says particles. Particles dance too. Let them.
+npc.helga.winter.05,"{Замёрз|Замёрзла}, {внучок|внучка}? Иди к печке. Вот вересковый чай. Хедда его ненавидит. Хедда глупая.","Frozen, dearie? Come to the stove. Here's heather tea. Hedda hates it. Hedda's a fool."
+npc.helga.winter.06,"Лютефиск! Зимой — только лютефиск. Единственная на острове, кто его любит. Остальные — не доросли.",Lutefisk! In winter — only lutefisk. The only one on the island who loves it. The rest haven't grown up to it.
+npc.helga.winter.07,Снег лёг на Девять Дев. Шапки как у невест. Красиво.,Snow's settled on the Nine Maidens. Caps like brides. Pretty.
+npc.helga.winter.08,Зимой я помню больше. Холод бережёт память. Как мясо.,In winter I remember more. Cold preserves memory. Like meat.
+npc.helga.winter.09,Метель. Никто не придёт. Хорошо. Поговорю с котом. Кот умный.,Blizzard. Nobody'll come. Good. I'll talk to the cat. The cat's clever.
+npc.helga.winter.10,"Твой огонь видно с пустоши. Как звезда, которая не уходит. Агатин огонь был такой же.",Your light can be seen from the moor. Like a star that won't leave. Agatha's light was the same.
+npc.helga.weather.rain.01,Дождь. Травам — пир. Мне — ревматизм. Зато всё растёт.,Rain. A feast for the herbs. Rheumatism for me. But everything grows.
+npc.helga.weather.rain.02,"{Промок|Промокла}? Отвар от простуды — вот. Пей, {внучок|внучка}, не морщись.","Soaked? Here's a brew for colds. Drink it, dearie, don't make faces."
+npc.helga.weather.storm.01,Шторм. Ранн сердится. Не на тебя. На всех. Держи огонь — она это уважает.,Storm. Rann's angry. Not at you. At everyone. Keep the light — she respects that.
+npc.helga.weather.storm.02,В такой шторм сорок лет назад погибла «Фортуна». Нет. Та была ясная ночь. Шторм был в сердцах.,In a storm like this forty years ago the Fortuna was lost. No. That was a clear night. The storm was in people's hearts.
+npc.helga.weather.fog.01,Туман. Хмарь плачет. Не ходи далеко. И рябину возьми.,Fog. The Fog is weeping. Don't go far. And take some rowan.
+npc.helga.weather.fog.02,"Слышишь? В тумане девочка зовёт маму. Это горе. Горе не злое. Оно просто не знает, куда идти.",Hear that? In the fog a girl is calling her mother. That's grief. Grief isn't wicked. It just doesn't know where to go.
+npc.helga.weather.snow.01,Снег. Белое. Чистое. Как саван. Я не мрачная — я честная.,Snow. White. Clean. Like a shroud. I'm not gloomy — I'm honest.
+npc.helga.weather.cloud.01,Облака. Дочери Ранн поднялись посмотреть на нас. Помаши им.,Clouds. Rann's daughters have risen to look at us. Wave to them.
+npc.helga.festival.drowned_night.01,Ночь Утопленников. Я поведу тебя к Камню. Когда придёт время. Время придёт.,Drowned Night. I'll lead you to the Stone. When the time comes. It'll come.
+npc.helga.festival.drowned_night.02,"Это не праздник, {внучок|внучка}. Это долг. Праздник — это то, что мы из долга сделали.","It's not a holiday, dearie. It's a duty. The holiday's what we made of the duty."
+npc.helga.festival.bird_day.01,"День птиц. Птицы — души, которые не захотели в море. Уважай их.",Bird Day. Birds are souls that didn't want the sea. Respect them.
+npc.helga.festival.long_night.01,Долгая ночь. Сказ за сказом. До рассвета. Я не устаю. Я уже устала лет пятьдесят назад и перестала.,The Long Night. Tale after tale. Till dawn. I don't tire. I got tired fifty years ago and stopped.
+npc.helga.festival.white_sun.01,"Белое Солнце. В эту ночь можно увидеть тех, кто ушёл. На горизонте. Я вижу. Ты — научишься.",White Sun. On this night you can see those who've gone. On the horizon. I see them. You'll learn.
+npc.helga.festival.01,Праздник. Танцевать не буду — колени. Буду смотреть. Смотреть я умею лучше всех.,A holiday. I won't dance — my knees. I'll watch. I watch better than anyone.
+npc.helga.gift.love.01,"Лютефиск! Ох, {внучок|внучка}, ты {единственный|единственная}, кто понимает! Садись, расскажу сказ.","Lutefisk! Oh, dearie, you're the only one who understands! Sit down, I'll tell you a tale."
+npc.helga.gift.love.02,Морошка! Первая? Ранн {отдал|отдала}? Молодец. Теперь — мне. Спасибо.,Cloudberries! The first? Gave one to Rann? Good. Now — for me. Thank you.
+npc.helga.gift.like.01,Травы! Хорошие. Сушить буду. Зимой вспомню тебя добрым словом.,Herbs! Good ones. I'll dry them. In winter I'll think of you kindly.
+npc.helga.gift.like.02,Цветы? Ох. Мне давно не дарили цветов. Лет семьдесят. Спасибо.,Flowers? Oh. Nobody's given me flowers in a long time. Seventy years or so. Thank you.
+npc.helga.gift.neutral.01,Спасибо. Сгодится. В моём возрасте всё годится.,Thanks. It'll do. At my age everything will do.
+npc.helga.gift.neutral.02,"Хм. {Принёс|Принесла} — значит, {думал|думала} обо мне. Это главное, {внучок|внучка}.","Hm. You brought it — so you thought of me. That's what matters, dearie."
+npc.helga.gift.dislike.01,Это не лечит и не радует. Но руки у тебя добрые. Спасибо.,This neither heals nor cheers. But your hands are kind. Thank you.
+npc.helga.gift.dislike.02,Отдам курам Маргит. Куры не привередливые.,I'll give it to Margit's hens. Hens aren't fussy.
+npc.helga.gift.hate.01,"Консервы «Нептун»? В мой дом? Уноси, пока я не прокляла. Шучу. Не шучу.",Neptune tins? In my house? Take them away before I curse you. Joking. I'm not.
+npc.helga.gift.hate.02,Это — смерть в банке. Я знаю смерть. Она выглядит иначе. Честнее.,That's death in a tin. I know death. It looks different. More honest.
+npc.helga.birthday.01,Девяносто восемь. Или девяносто семь. Всё равно много. Всё равно мало.,"Ninety-eight. Or ninety-seven. Either way, a lot. Either way, not enough."
+npc.helga.birthday.02,Сегодня мой день. Я пережила ещё один год. Два похоронщика ждут. Пусть ждут.,Today's my day. I've outlived another year. Two undertakers are waiting. Let them wait.
+npc.helga.birthday_gift.01,"Подарок! Ох, {внучок|внучка}. В мои годы подарки — редкость. Подарки живым, в смысле.","A present! Oh, dearie. At my age presents are rare. Presents for the living, I mean."
+npc.helga.birthday_gift.02,Ты помнишь. Надо же. Помни и дальше. Мне приятно быть в чьей-то памяти заранее.,You remember. Well I never. Keep remembering. It's nice to be in someone's memory in advance.
+npc.helga.act1.01,Агата была моей ученицей. Упрямая. Как ты. Я её учила травам. Она выучила огонь.,Agatha was my pupil. Stubborn. Like you. I taught her herbs. She learned fire.
+npc.helga.act1.02,"Ты {пришёл|пришла}, {внучок|внучка}. Я ждала. Агата сказала: «Придёт — помоги». Помогу.","You've come, dearie. I was waiting. Agatha said: 'When they come — help.' I will."
+npc.helga.act1.03,Первая ночь — огонь горел. Я видела с пустоши. Заплакала. Первый раз за двадцать лет.,The first night — the light burned. I saw it from the moor. I wept. For the first time in twenty years.
+npc.helga.act1.04,"Не верь тому, что утопленники говорят в первую ночь. Агата права. Они не врут. Но и правды не знают.",Don't believe what the drowned say on the first night. Agatha's right. They don't lie. But they don't know the truth either.
+npc.helga.act1.05,"Гильдейский дом не трогай. Там живут те, кому некуда идти. Грим хочет снести. Грим много чего хочет.",Leave the Guild House alone. Those with nowhere else to go live there. Grim wants to pull it down. Grim wants a lot of things.
+npc.helga.act1.06,Конец весны. Смотри на Зубы в ночь двадцать восьмого. Не спрашивай. Смотри.,End of spring. Watch the Teeth on the night of the twenty-eighth. Don't ask. Watch.
+npc.helga.act2.01,Белая Хмарь. Это не туман. Это горе. Я говорила. Теперь ты знаешь.,The White Fog. It's not fog. It's grief. I told you. Now you know.
+npc.helga.act2.02,"Рябина — от Хмари. Свет — тоже. Свет и рябина. Больше ничего не помогает. Ну, ещё чай.","Rowan — against the Fog. Light too. Light and rowan. Nothing else helps. Well, tea."
+npc.helga.act2.03,"Двадцать в гротах — это «Фортуна». Я была девочкой, когда её разбили. Помню колокол. Всю ночь.",The twenty in the grottoes are the Fortuna. I was a girl when she was wrecked. I remember the bell. All night.
+npc.helga.act2.04,"Сказы мои слушай. В них всё. Уговор, огонь, Ранн. Без имён. Имена ты найдёшь {сам|сама}.","Listen to my tales. It's all in them. The Pact, the fire, Rann. Without names. The names you'll find yourself."
+npc.helga.act2.05,Лив смеётся над сказками. Уже меньше. После Хмари — меньше.,Liv laughs at the tales. Less now. Less after the Fog.
+npc.helga.act2.06,Большая Хмарь осенью. Шесть костров вокруг деревни. Торф. Плавник. И твой огонь. Иначе — беда.,The Great Fog in autumn. Six fires round the village. Peat. Driftwood. And your light. Otherwise — disaster.
+npc.helga.act3.01,Теперь ты знаешь правду. Агата внизу. Держит дверь. Держит Хмарь. Держит нас всех.,Now you know the truth. Agatha's down below. Holding the door. Holding the Fog. Holding us all.
+npc.helga.act3.02,Камень Уговора — в трёх кусках. Найди все. Сложи на Камне Ранн. Тогда поговорим с морем.,The Stone of the Pact is in three pieces. Find them all. Put them together on Rann's Stone. Then we'll talk to the sea.
+npc.helga.act3.03,Раз в полвека вода уходит. Врата открываются. Я видела. Мне было сорок семь. Страшно было. Красиво было.,Once in fifty years the water goes out. The Gate opens. I saw it. I was forty-seven. It was frightening. It was beautiful.
+npc.helga.act3.04,Грим знает про Уговор больше меня. Его род его и испортил. Я не говорю имён. Ты {сам|сама} скажешь.,Grim knows more about the Pact than me. His family's the one that spoiled it. I say no names. You'll say them yourself.
+npc.helga.act3.05,"Звонарь в затонувшей церкви — пастор Нильсен. Он звонил, пока вода не сомкнулась. До сих пор звонит.",The Bell-ringer in the sunken church is Pastor Nilsen. He rang till the water closed over him. Still rings.
+npc.helga.act3.06,"Иди в Глубь, {внучок|внучка}. Но помни: вниз — легко. Вверх — только с огнём в сердце.","Go into the Deep, dearie. But remember: down is easy. Up — only with fire in your heart."
+npc.helga.act4.01,Двадцать седьмое. Ночь Утопленников. Я поведу тебя к Камню. Слова Уговора помнишь?,The twenty-seventh. Drowned Night. I'll lead you to the Stone. Do you remember the words of the Pact?
+npc.helga.act4.02,"Завтра. Держи огонь, пока не пройдёт корабль. Потом иди по дну. Не оглядывайся. Мёртвые не любят, когда на них смотрят.",Tomorrow. Keep the light till the ship has passed. Then walk the sea floor. Don't look back. The dead don't like being looked at.
+npc.helga.act4.03,"Ранн говорит «мы». Не бойся. Её «мы» — это все, кого море взяло. И твоя бабка тоже.",Rann says 'we'. Don't be afraid. Her 'we' is everyone the sea has taken. Your grandmother too.
+npc.helga.act4.04,"Хмарь — дочь. Потерянная. Утешь её, если сможешь. Это важнее, чем победить.",The Fog is a daughter. A lost one. Comfort her if you can. That matters more than winning.
+npc.helga.act4.05,Мне девяносто семь. Я видела один Прилив. Второй — увижу. Третий — твоя очередь.,I'm ninety-seven. I've seen one Tide. I'll see the second. The third is your turn.
+npc.helga.act4.06,"Возвращайся, {внучок|внучка}. У меня ещё один сказ. Последний. Для тебя.","Come back, dearie. I have one more tale. The last one. For you."
+npc.helga.married_other.01,"Поздравляю, {внучок|внучка}. Любовь — как вереск. Цветёт на бедной земле. Лучше, чем на богатой.","Congratulations, dearie. Love is like heather. It blooms on poor soil. Better than on rich."
+npc.helga.married_other.02,"Вот вам отвар. От ссор. Пейте по ложке, когда захочется кричать. Помогает. Иногда.",Here's a brew for you both. Against quarrels. A spoonful whenever you want to shout. It helps. Sometimes.
+npc.helga.married_other.03,"Я была замужем однажды. Семьдесят лет назад. Хороший был. Жаль, что я его пережила.",I was married once. Seventy years ago. A good man. A pity I outlived him.
+npc.helga.married_other.04,Свадьба — это когда двое обещают держать один огонь. Держите.,A wedding is when two promise to keep one fire. Keep it.
+npc.helga.married_other.05,"Живите долго. Не так долго, как я — это слишком. Но долго.",Live long. Not as long as me — that's too much. But long.
+npc.helga.event.wreck.01,Крушение. Ранн плачет. Не она топит. Её заставляют забирать.,A wreck. Rann's weeping. It's not her who drowns them. She's made to take them.
+npc.helga.event.wreck.02,Ясная ночь и чужой огонь. Как с «Фортуной». Сорок лет — и ничего не изменилось.,A clear night and a stranger's fire. Like the Fortuna. Forty years — and nothing's changed.
+npc.helga.event.wreck.03,"Похорони их. Все, кого море вернуло, хотят земли. Не отказывай им.",Bury them. Everyone the sea returns wants earth. Don't deny them.
+npc.helga.event.wreck.04,"Я сварю отвар для тех, кто копает. Тебе тоже. Не спорь.",I'll brew something for those who dig. For you too. Don't argue.
+npc.helga.event.wreck.05,Море мне сказало: скоро конец. Чей — не сказало. Море хитрое.,The sea told me: the end is near. Whose — it didn't say. The sea is sly.
+npc.helga.event.funeral.01,{Похоронил|Похоронила}? Хорошо. Землю на могилу {бросал|бросала}? Три горсти. Не две. Три.,Buried? Good. Did you throw earth on the grave? Three handfuls. Not two. Three.
+npc.helga.event.funeral.02,Мёртвые в земле спят. В море — ходят. Ты даёшь им сон. Лучше подарка нет.,The dead in earth sleep. In the sea — they walk. You give them sleep. No better gift.
+npc.helga.event.funeral.03,Положи на могилу вереск. Сухой. Он не вянет. Как память.,Put heather on the grave. Dry heather. It doesn't wilt. Like memory.
+npc.helga.event.funeral.04,Каждая могила — одним горем меньше в тумане. Хмарь слабеет. Я чувствую.,Every grave is one less grief in the fog. The Fog grows weaker. I can feel it.
+npc.helga.event.funeral.05,Ты хорошо хоронишь. Агата хоронила так же. Молча. Бережно. С огнём.,You bury well. Agatha buried the same way. Silently. Carefully. With fire.
+npc.helga.event.hmar.01,Ночь Хмари. Я сидела на пороге с рябиной. Туман обошёл хижину. Старуху боится.,Fog Night. I sat on the doorstep with rowan. The fog went round the hut. It's afraid of the old woman.
+npc.helga.event.hmar.02,Хмарь плакала громче обычного. Горе копится. Скоро прорвёт.,The Fog wept louder than usual. Grief builds up. Soon it'll burst.
+npc.helga.event.hmar.03,"Утопцы выходили на пустошь. Искали дорогу домой. Я показывала — туда, на погост. К тебе.","The drowned came up onto the moor. Looking for the way home. I pointed — that way, to the graveyard. To you."
+npc.helga.event.hmar.04,"Твой свет — единственное, что Хмарь уважает. Она его боится и любит. Как дети — отца.",Your light is the only thing the Fog respects. It fears it and loves it. Like children a father.
+npc.helga.event.hmar.05,"Не бойся, {внучок|внучка}. Хмарь не злая. Она потерялась. А потерянные цепляются за всех.","Don't be afraid, dearie. The Fog isn't wicked. It's lost. And the lost cling to everyone."
+npc.helga.event.inspection.01,Инспектор Пальм купил отвар от нервов. Сказал: для жены. Жены у него нет.,Inspector Palm bought a brew for the nerves. Said: for his wife. He has no wife.
+npc.helga.event.inspection.02,{Сдал|Сдала}? Агата тоже сдавала. Она говорила: «Инспекция — это ерунда. Огонь — не ерунда».,Passed? Agatha passed too. She used to say: 'Inspections are nonsense. The fire isn't.'
+npc.helga.event.inspection.03,"Пальм спросил, сколько мне лет. Я сказала — больше, чем ваших пунктов. Он записал.",Palm asked how old I am. I said — more than your clauses. He wrote it down.
+npc.helga.event.inspection.04,Бумаги приходят и уходят. Огонь остаётся. Держи огонь.,Papers come and go. The fire remains. Keep the fire.
+npc.helga.event.inspection.05,"Инспекция — как зима. Приходит каждый сезон, пугает и уходит.","An inspection's like winter. Comes every season, frightens you and leaves."
+npc.helga.event.wedding.01,Свадьба. Я сидела в первом ряду. Мне можно — я старше всех.,A wedding. I sat in the front row. I'm allowed — I'm older than everyone.
+npc.helga.event.wedding.02,Я подарила молодым отвар. Для долгой любви. Пить по капле. Сорок лет.,I gave the couple a brew. For long love. A drop at a time. Forty years.
+npc.helga.event.wedding.03,Бенедикт венчал хорошо. Стоял далеко от окна. Правильно — море любит свадьбы. Может позавидовать.,Benedict married them well. Stood far from the window. Quite right — the sea loves weddings. It might get jealous.
+npc.helga.event.wedding.04,"Все танцевали. Я — сидела. И видела, как танцуют те, кто ушёл. С нами. Красиво.",Everyone danced. I sat. And saw those who've gone dancing. With us. Beautiful.
+npc.helga.event.wedding.05,Совет да любовь. И рябину у порога. Обязательно рябину.,Love and harmony. And rowan by the door. Rowan without fail.
+npc.helga.event.villains.01,Грим… Его прапрадед испортил Уговор. Правнук ответил. Море ждало триста лет.,Grim… His great-great-grandfather spoiled the Pact. His great-grandson has answered for it. The sea waited three hundred years.
+npc.helga.event.villains.02,"Я дожила. Я знала, что доживу. Вредность — лучшее лекарство.",I lived to see it. I knew I would. Spite is the best medicine.
+npc.helga.event.villains.03,Хмарь стала тише. Намного. Горе услышали. Горю этого и надо было.,The Fog's quieter. Much quieter. The grief's been heard. That's all grief ever needed.
+npc.helga.event.villains.04,"Ингрид приходила. Спросила, проклят ли её род. Я сказала — нет. Род — это не кровь. Род — это выбор.",Ingrid came. Asked if her family's cursed. I said no. A family isn't blood. A family is a choice.
+npc.helga.event.villains.05,"Спасибо, {внучок|внучка}. Я девяносто семь лет ждала, кто это сделает. Дождалась.","Thank you, dearie. Ninety-seven years I waited for someone to do it. And here you are."
+ev.helga1_tale.l01,"Садись, {внучок|внучка}. Сегодня — сказ.","Sit, dearie. Today — a tale."
+ev.helga1_tale.l02,"«Как Ранн пришла за солью». Давно-давно море было пресным. Дочери Ранн плакали по утонувшим, и слёзы их стали солью. С тех пор море солёное — оно помнит каждого.","'How Rann Came for Salt.' Long, long ago the sea was fresh. Rann's daughters wept for the drowned, and their tears became salt. Since then the sea is salty — it remembers everyone."
+ev.helga2.l01,"Садись, {внучок|внучка}. Сегодня — сказ.","Sit, dearie. Today — a tale."
+ev.helga2.l02,"«Девять Дев». У Ранн девять дочерей. Каждая — волна. Когда дочь благословляет человека, на пустоши загорается камень. Девять камней. Одна дочь потерялась. Её камень не горит никогда.","'The Nine Maidens.' Rann has nine daughters. Each one a wave. When a daughter blesses someone, a stone lights up on the moor. Nine stones. One daughter was lost. Her stone never glows."
+ev.helga4.l01,"Садись, {внучок|внучка}. Сегодня — сказ.","Sit, dearie. Today — a tale."
+ev.helga4.l02,"«Грим Кривой Фонарь». Жил человек с фонарём. Зажигал огонь не там, где надо. Корабли шли на свет и разбивались. Он брал груз. Сорок лет назад он погубил «Фортуну». Больше ничего не скажу. Имён не называю.",'Grim Crooked Lantern.' There was a man with a lantern. He lit his fire in the wrong place. Ships came to the light and broke apart. He took the cargo. Forty years ago he sank the Fortuna. I'll say no more. I name no names.
+ev.helga6.l01,"Садись, {внучок|внучка}. Сегодня — сказ.","Sit, dearie. Today — a tale."
+ev.helga6.l02,"«Слова Уговора». Море — нам рыбу, мы — морю честность. Огонь — живым, земля — мёртвым. Кто обманет — того заберёт вода. Эти слова говорят у Камня в Ночь Утопленников. Запомни их.","'The Words of the Pact.' The sea gives us fish, we give the sea honesty. Fire for the living, earth for the dead. Whoever cheats — the water takes. These words are spoken at the Stone on Drowned Night. Remember them."
+ev.helga8.l01,"Держи. Рябиновый посох. Вырезала, когда мне было семьдесят. Для начала.",Take this. A rowan staff. I carved it when I was seventy. To start with.
+ev.helga8.l02,"Хмарники не подойдут к тебе ближе трёх шагов. Рябина помнит, что туман — это горе. А горе боится памяти.",Fog-wraiths won't come within three paces of you. Rowan remembers that fog is grief. And grief is afraid of memory.
+ev.helga10.l01,"Садись, {внучок|внучка}. Сегодня — сказ.","Sit, dearie. Today — a tale."
+ev.helga10.l02,"«Последний сказ». Молодая Агата, семнадцать лет. Первая ночь её вахты. Шторм, лампа гаснет трижды. Трижды она зажигает. Утром спускается и говорит мне: «Хельга, я поняла. Огонь не спрашивает, устал ли ты». Это был лучший день в моей жизни. Я была её учительницей.","'The Last Tale.' Young Agatha, seventeen. The first night of her watch. A storm, the lamp goes out three times. Three times she relights it. In the morning she comes down and tells me: 'Helga, I understand. The fire doesn't ask if you're tired.' It was the best day of my life. I was her teacher."
+item.captain_compass.name,Капитанский компас,The captain's compass
+item.captain_compass.desc,"На морской карте виден ваш курс и ветер. Стрелка чуть дрожит, когда рядом Агатины места.",Your heading and the wind show on the sea chart. The needle trembles a little near Agatha's places.
+npc.erland.spring.01,Море не злое. Оно просто не читает инструкций.,The sea isn't wicked. It just doesn't read instructions.
+npc.erland.spring.02,"Весна, юнга! Лёд ушёл, ветер пришёл. Самое время чинить то, что сломалось зимой.","Spring, {cabin boy|cabin lass}! The ice has gone, the wind's come. Just the time to mend what broke in winter."
+npc.erland.spring.03,"Удочки, наживка, смола — всё есть. Совет бесплатно: не забрасывай против ветра. Поймаешь себя.","Rods, bait, resin — all in stock. Free advice: don't cast into the wind. You'll catch yourself."
+npc.erland.spring.04,"Я живу в перевёрнутой лодке. Сорок лет. Крыша течёт только когда лодка вспоминает, что она лодка.",I live in an upturned boat. Forty years. The roof leaks only when the boat remembers it's a boat.
+npc.erland.spring.05,"Треска пошла вдоль мыса. Агата всегда говорила: «Сначала мыс, потом причал». Она была права. Всегда.","Cod running along the cape. Agatha always said: 'The cape first, then the jetty.' She was right. Always."
+npc.erland.spring.06,"Ветер с юго-запада. Юнга, запомни: юго-запад — ветер для дураков и для счастливчиков.","Wind from the south-west. Remember, {boy|lass}: the south-west's a wind for fools and lucky men."
+npc.erland.spring.07,Весенний туман — самый коварный. Ложится вдруг и уходит вдруг. Как молодость.,Spring fog is the most treacherous. Falls all at once and lifts all at once. Like youth.
+npc.erland.spring.08,Приходи на причал. Научу вязать узлы. Одним — лодку держать. Другим — удачу.,Come down to the jetty. I'll teach you knots. One to hold a boat. Another to hold luck.
+npc.erland.spring.09,Семьдесят вёсен видел. Каждая — как первая. Только колени скрипят громче.,I've seen seventy springs. Each one like the first. Only my knees creak louder.
+npc.erland.spring.10,"Ну что, смотритель? Огонь горит? Хорошо. Значит, я сплю спокойно. Вполглаза. Старая привычка.","Well, keeper? Is the light burning? Good. Then I sleep easy. With one eye open. Old habit."
+npc.erland.summer.01,"Лето! Скумбрия! Иди сюда, юнга, покажу блесну. Сам делал. Из ложки Бенедикта. Он не знает.","Summer! Mackerel! Come here, {boy|lass}, I'll show you a spoon lure. Made it myself. From Benedict's spoon. He doesn't know."
+npc.erland.summer.02,Мой день рождения летом. Семьдесят. Или семьдесят один. На флоте года считали по штормам.,My birthday's in summer. Seventy. Or seventy-one. In the navy we counted years by storms.
+npc.erland.summer.03,Регата! Я не участвую. Уже. В последний раз обогнал всех. Потом лодка утонула. От гордости.,The regatta! I don't enter. Any more. Last time I beat everyone. Then the boat sank. From pride.
+npc.erland.summer.04,"Лив спрашивала, как определить широту по звёздам. Летом звёзд нет. Показал по чайкам. Врал, конечно.","Liv asked how to find latitude by the stars. There are no stars in summer. Showed her by the gulls. Lying, of course."
+npc.erland.summer.05,Жара. Смола плавится. Хорошо для лодок. Плохо для штанов.,Heat. Resin's melting. Good for boats. Bad for trousers.
+npc.erland.summer.06,"Белые ночи — лучшее время для рыбалки. Рыба не понимает, когда спать. Как и я.",White nights — best time for fishing. The fish don't know when to sleep. Neither do I.
+npc.erland.summer.07,"Ты хорошо держишь удочку, юнга. Почти как Агата. Почти — это комплимент.","You hold a rod well, {boy|lass}. Almost like Agatha. 'Almost' is a compliment."
+npc.erland.summer.08,Летом море спокойное. Не верь ему. Оно просто копит силы.,In summer the sea's calm. Don't trust it. It's just saving its strength.
+npc.erland.summer.09,Грог летом — ошибка. Я совершаю её каждый вечер.,Grog in summer is a mistake. I make it every evening.
+npc.erland.summer.10,"Пойдём к лагуне. Там окунь. Глупый, толстый и счастливый. Как я в молодости.","Let's go to the lagoon. There's perch. Stupid, fat and happy. Like me when I was young."
+npc.erland.autumn.01,"Осень. Сельдь идёт стеной. Юнга, видел когда-нибудь стену из рыбы? Увидишь.","Autumn. The herring come in a wall. Ever seen a wall of fish, {boy|lass}? You will."
+npc.erland.autumn.02,Шторма осенью — как старые друзья. Приходят без стука и всё ломают.,Autumn storms are like old friends. Come in without knocking and break everything.
+npc.erland.autumn.03,Лодки на зимовку. Ильм помогает. Молча. Лучший помощник. Молчание — лучший инструмент.,Boats laid up for winter. Ilm helps. Silently. Best helper there is. Silence is the best tool.
+npc.erland.autumn.04,"Сорок лет назад, осенью, я видел огонь на Зубах. Тогда я был молодой и глупый. Решил — показалось.","Forty years ago, in autumn, I saw a light on the Teeth. I was young and foolish then. Decided I'd imagined it."
+npc.erland.autumn.05,Агата любила осень. Говорила: «Осенью море честное». Я смеялся. Теперь не смеюсь.,Agatha loved autumn. Said: 'In autumn the sea's honest.' I laughed. Now I don't.
+npc.erland.autumn.06,Ярмарка! Продаю снасти. Покупают все. Ловят немногие. Такова жизнь.,The fair! Selling tackle. Everyone buys. Few catch. That's life.
+npc.erland.autumn.07,"Ветер рвёт снасти с лодок. Хорошо, что я торгую снастями. Плохо, что я моряк.",The wind tears the rigging off the boats. Good that I sell rigging. Bad that I'm a sailor.
+npc.erland.autumn.08,"Длинные вечера. Грог, трубка, воспоминания. Воспоминаний больше, чем табака.","Long evenings. Grog, pipe, memories. More memories than tobacco."
+npc.erland.autumn.09,Если пойдёшь в море осенью — бери запасное весло. И запасную голову. У тебя одна? Береги.,If you go to sea in autumn — take a spare oar. And a spare head. You've only got one? Look after it.
+npc.erland.autumn.10,Ночь Утопленников. Я несу фонарь за команду «Альбатроса». Двенадцать человек. Я был тринадцатым.,Drowned Night. I carry a lantern for the Albatross's crew. Twelve men. I was the thirteenth.
+npc.erland.winter.01,"Зима. Лодки на берегу, я — у печки. Моя перевёрнутая лодка — самый тёплый дом на острове. Вру. Но уютный.","Winter. Boats ashore, me by the stove. My upturned boat is the warmest house on the island. A lie. But cosy."
+npc.erland.winter.02,"Подлёдный лов, юнга. Лунка, леска, терпение. Терпения больше всего.","Ice fishing, {boy|lass}. A hole, a line, patience. Mostly patience."
+npc.erland.winter.03,Долгая ночь. Рассказываю байки. Все про море. Все правда. Процентов на тридцать.,The long night. Telling yarns. All about the sea. All true. About thirty percent.
+npc.erland.winter.04,Северное сияние. На флоте его звали «небесный лот». Меряет глубину неба. Бездонное.,The aurora. In the navy we called it the sky's sounding line. Measuring the depth of heaven. Bottomless.
+npc.erland.winter.05,Метель. Моя лодка засыпана по киль. Внутри — тепло и грог. Снаружи — пусть хоть потоп.,Blizzard. My boat's buried up to the keel. Inside — warmth and grog. Outside — let the flood come.
+npc.erland.winter.06,Зимой море спит. Но не крепко. Как старый капитан.,In winter the sea sleeps. But not soundly. Like an old captain.
+npc.erland.winter.07,"Лёд у берега трещит. Это море ворочается во сне. Не бойся. Бойся, когда затихнет.",The ice by the shore is cracking. That's the sea turning over in its sleep. Don't be afraid. Be afraid when it goes quiet.
+npc.erland.winter.08,Твой огонь видно из моей лодки. В щель. Каждую ночь проверяю. Агатин тоже проверял.,I can see your light from my boat. Through a crack. I check it every night. I used to check Agatha's too.
+npc.erland.winter.09,"Зимой я чиню снасти для всех. Бесплатно. Руки должны быть заняты, иначе голова начинает вспоминать.","In winter I mend tackle for everyone. Free. Hands have to be busy, or the head starts remembering."
+npc.erland.winter.10,"Весна придёт, юнга. Море проснётся. Мы — тоже.","Spring will come, {boy|lass}. The sea will wake. So will we."
+npc.erland.weather.rain.01,Дождь! Рыба у поверхности — ей тоже любопытно. Забрасывай.,Rain! The fish come up — they're curious too. Cast away.
+npc.erland.weather.rain.02,Мокро. На флоте мы говорили: мокрее моря не будет. Ошибались.,Wet. In the navy we'd say: nothing's wetter than the sea. We were wrong.
+npc.erland.weather.storm.01,Шторм! Все лодки у причала? Пересчитал. Все. Можно пить грог.,Storm! Every boat at the jetty? Counted them. All there. Now I can drink grog.
+npc.erland.weather.storm.02,"В такой шторм «Альбатрос» лёг на борт. Двенадцать ушли. Держи огонь, юнга. Держи.","In a storm like this the Albatross went over. Twelve lost. Keep the light, {boy|lass}. Keep it."
+npc.erland.weather.fog.01,"Туман. Слушай колокол, а не глаза. Глаза в тумане врут. Колокол — никогда.","Fog. Listen to the bell, not your eyes. Eyes lie in fog. A bell never does."
+npc.erland.weather.fog.02,"В тумане я слышу, как Агата гребёт. Раз-два. Раз-два. Она гребла ровнее всех.",In fog I hear Agatha rowing. One-two. One-two. She rowed more evenly than anyone.
+npc.erland.weather.snow.01,"Снег на палубе. Скользко. Снег на крыше лодки — тепло. Всё зависит от того, где ты.",Snow on deck. Slippery. Snow on a boat roof — warm. It all depends on where you are.
+npc.erland.weather.cloud.01,Облачно. Хороший свет для рыбалки. Рыба не видит тени лодки.,Cloudy. Good light for fishing. The fish can't see the boat's shadow.
+npc.erland.festival.boat_blessing.01,"Спуск лодок! Мои лодки. Мои снасти. Моё сердце на воде. Бенедикт, дотянись!","The Boat Launch! My boats. My tackle. My heart on the water. Benedict, reach out!"
+npc.erland.festival.regatta.01,"Регата! Посмотрим, кто сегодня самый быстрый дурак. Шучу. Все молодцы. Кроме второго места.","The regatta! Let's see who's the fastest fool today. Joking. Well done, all. Except second place."
+npc.erland.festival.drowned_night.01,Ночь Утопленников. Двенадцать фонарей. «Альбатрос». И тринадцатый — для Агаты. В этом году.,Drowned Night. Twelve lanterns. The Albatross. And a thirteenth — for Agatha. This year.
+npc.erland.festival.herring_fair.01,Ярмарка. Снасти нарасхват. Сельдь нарасхват. Я — нарасхват. Все хотят байку.,The fair. Tackle's selling fast. Herring's selling fast. I'm in demand. Everyone wants a yarn.
+npc.erland.festival.01,"Праздник! Грог на столе, песни в воздухе, море за стеной. Хорошо!","A holiday! Grog on the table, songs in the air, the sea beyond the wall. Good!"
+npc.erland.festival.02,Спеть тебе морскую? Я пою хуже Бьорна. Но громче моря.,Shall I sing you a sea shanty? I sing worse than Bjorn. But louder than the sea.
+npc.erland.gift.love.01,"Грог! Юнга, ты понимаешь старого капитана. Садись, выпьем за море.","Grog! {Boy|Lass}, you understand an old captain. Sit down, let's drink to the sea."
+npc.erland.gift.love.02,"Старая морская карта! Сто лет ей, не меньше. Ты… Спасибо. Я повешу её над койкой.",An old sea chart! A hundred years old if it's a day. You… Thank you. I'll hang it over my bunk.
+npc.erland.gift.like.01,"Хорошая рыба! Вижу, ловить {научился|научилась}. Молодец.",Good fish! I see you've learned to catch. Well done.
+npc.erland.gift.like.02,"Спасибо, юнга. Пригодится. В хозяйстве капитана всё пригодится.","Thanks, {boy|lass}. It'll come in handy. Everything's useful to a captain."
+npc.erland.gift.neutral.01,Хм. Спасибо. Положу в сундук. Там много всего. Половина — не моё.,Hm. Thanks. I'll put it in the sea chest. There's lots in there. Half of it's not mine.
+npc.erland.gift.neutral.02,"Ладно, юнга. Спасибо. Не знаю, что это, но возьму.","All right, {boy|lass}. Thanks. Don't know what it is, but I'll take it."
+npc.erland.gift.dislike.01,"Сладкое? Юнга, у меня зубов осталось меньше, чем на компасе делений.","Sweets? {Boy|Lass}, I've fewer teeth left than there are points on a compass."
+npc.erland.gift.dislike.02,Не моё. Отдай Бьорну. Он всё ест.,Not my thing. Give it to Bjorn. He eats anything.
+npc.erland.gift.hate.01,Это? Мне? На флоте за такой подарок бросали за борт. Шучу. Наполовину.,This? For me? In the navy you'd go overboard for a gift like this. Joking. Half.
+npc.erland.gift.hate.02,"Убери, юнга. Я старый, но не настолько.","Put it away, {boy|lass}. I'm old, but not that old."
+npc.erland.birthday.01,"День рождения. Семьдесят. Пережил два корабля, трёх капитанов и одну любовь. Неплохо.","My birthday. Seventy. Outlived two ships, three captains and one love. Not bad."
+npc.erland.birthday.02,"Сегодня я пью грог за всех, кто не дожил до семидесяти. Их много. Грога хватит.",Today I drink grog for everyone who didn't make seventy. There are many. There's enough grog.
+npc.erland.birthday_gift.01,"Подарок! Юнга, ты меня {растрогал|растрогала}. Не смотри — у меня соль в глазу.","A present! {Boy|Lass}, you've got to me. Don't look — I've salt in my eye."
+npc.erland.birthday_gift.02,Ты помнишь мой день. Агата тоже помнила. Каждый год. Приносила табак.,You remember my day. Agatha did too. Every year. Brought me tobacco.
+npc.erland.act1.01,"Удочка Агаты — у меня. Держал двадцать лет. Ждал, кто придёт. {Пришёл|Пришла} ты.",Agatha's rod — I've got it. Kept it twenty years. Waited for someone to come. You came.
+npc.erland.act1.02,Лодку Агаты Ильм починит. Я дам смолу. Лодка хорошая. Она знает дорогу сама.,Ilm will fix Agatha's boat. I'll give the resin. A good boat. She knows the way herself.
+npc.erland.act1.03,"Первый огонь. Я стоял на причале. Снял шапку. Как на флоте, когда поднимают флаг.",The first light. I stood on the jetty. Took off my cap. Like in the navy when they raise the flag.
+npc.erland.act1.04,"Три рыбы {поймал|поймала}? Молодец, юнга. Первые три — самые важные. Остальные — просто рыба.","Caught three fish? Well done, {boy|lass}. The first three are the most important. The rest are just fish."
+npc.erland.act1.05,Весной у Зубов опасно. Всегда было. Даже когда Агата светила. Особенно в ясные ночи.,The Teeth are dangerous in spring. Always were. Even when Agatha was lighting. Especially on clear nights.
+npc.erland.act1.06,Двадцать восьмое. Не выходи в море. Слушай старика. Хоть раз.,The twenty-eighth. Don't go to sea. Listen to an old man. Just once.
+npc.erland.act2.01,«Святая Берта». Я видел огонь на Зубах сорок лет назад. И сейчас. Тот же. Как будто сорок лет не прошло.,The Saint Bertha. I saw the fire on the Teeth forty years ago. And now. The same. As if forty years hadn't passed.
+npc.erland.act2.02,"Водолазный колокол! Юнга, мы сделаем его вместе с Торой. Десять медных слитков. Ищи.","A diving bell! {Boy|Lass}, we'll build it together with Tora. Ten copper ingots. Go and find them."
+npc.erland.act2.03,"Шлюпка с парусом. Сорок досок, три парусины, полторы тысячи. Дорого? Море стоит дороже.","A sloop with a sail. Forty boards, three canvases, fifteen hundred. Dear? The sea's dearer."
+npc.erland.act2.04,Кай на Мёртвом Огне — он был помощником Агаты. Хороший парень. Был. Возьми керосин — он любит керосин.,Kai at the Dead Fire — he was Agatha's assistant. A good lad. Was. Take kerosene — he loves kerosene.
+npc.erland.act2.05,"Двадцать в гротах — это «Фортуна». Я был юнгой, когда она разбилась. Я помню колокол.",The twenty in the grottoes are the Fortuna. I was a {cabin boy|cabin lass} when she was wrecked. I remember the bell.
+npc.erland.act2.06,Большая Хмарь. Приготовлю лодки. Если придётся уводить людей морем — уведу.,The Great Fog. I'll ready the boats. If people have to be taken off by sea — I'll take them.
+npc.erland.act3.01,Агату разбили у Зубов. Не море. Люди. Я знаю это двадцать лет. Молчал. Трус.,Agatha was wrecked at the Teeth. Not by the sea. By men. I've known it twenty years. Kept quiet. Coward.
+npc.erland.act3.02,Ныряешь к обломкам её лодки? Там жестяная коробка. Агата всё записывала. Всё.,Diving to the wreck of her boat? There's a tin box there. Agatha wrote everything down. Everything.
+npc.erland.act3.03,"Если пойдёшь на Зубы ночью — возьми меня. Я знаю, где мели. Я знаю, где свет не видно.",If you go to the Teeth at night — take me. I know where the shoals are. I know where the light can't see.
+npc.erland.act3.04,Затонувший Сольвик… Мой дед родился там. До Большой Воды. Там есть наш дом? Там кто-нибудь есть?,Sunken Solvik… My grandfather was born there. Before the Great Water. Is our house there? Is anyone there?
+npc.erland.act3.05,Скафандр. В моё время ныряли без скафандра. И тонули без скафандра. Прогресс.,A diving suit. In my day we dived without one. And drowned without one. Progress.
+npc.erland.act3.06,"Я любил её, юнга. Агату. Пятьдесят лет. Она знала. Она выбрала огонь. Правильно выбрала.","I loved her, {boy|lass}. Agatha. Fifty years. She knew. She chose the fire. She chose right."
+npc.erland.act4.01,"В ночь Прилива моя лодка будет у мыса. Для отступления. Если что — прыгай, я поймаю.","On Tide Night my boat will be off the cape. For retreat. If need be — jump, I'll catch you."
+npc.erland.act4.02,Море уйдёт. Я увижу дно. Где «Альбатрос». Где Агата. Где моя молодость.,The sea will go out. I'll see the bottom. Where the Albatross lies. Where Agatha is. Where my youth is.
+npc.erland.act4.03,Если встретишь её там — скажи… Нет. Она знает. Она всегда знала.,If you meet her down there — tell her… No. She knows. She always knew.
+npc.erland.act4.04,"Семьдесят лет я жду чего-то. Кажется, дождался. Страшно. Хорошо.",Seventy years I've been waiting for something. Seems I've waited long enough. Frightening. Good.
+npc.erland.act4.05,"Держи огонь, юнга. «Королева» пройдёт. Я верю. Я видел, как ты держишь огонь.","Keep the light, {boy|lass}. The Queen will get through. I believe it. I've seen how you keep a light."
+npc.erland.act4.06,"После — выйдем в море. Вместе. На тихой воде. Я покажу тебе, где Агата любила ловить.",Afterwards — we'll put to sea. Together. On calm water. I'll show you where Agatha liked to fish.
+npc.erland.married_other.01,"Поздравляю, юнга! Брак — как лодка. Грести вдвоём. В одну сторону.","Congratulations, {boy|lass}! Marriage is like a boat. Two rowing. In the same direction."
+npc.erland.married_other.02,Хорошая свадьба. Я пел. Бенедикт упал. Всё как надо.,A good wedding. I sang. Benedict fell over. All as it should be.
+npc.erland.married_other.03,Совет старого капитана: никогда не ложись спать в ссоре. И никогда не выходи в море в ясную ночь.,An old captain's advice: never go to sleep on a quarrel. And never put to sea on a clear night.
+npc.erland.married_other.04,Я подарю вам лодку. Маленькую. Для двоих. Ильм сделает. Я заплачу.,I'll give you a boat. A small one. For two. Ilm will make it. I'll pay.
+npc.erland.married_other.05,Живите долго. Дольше меня. Мне семьдесят — это нетрудно. Но постарайтесь.,Live long. Longer than me. I'm seventy — it's not hard. But try.
+npc.erland.event.wreck.01,Крушение. Я вышел на лодке на рассвете. Искал. Нашёл обломки. Только обломки. Старею.,A wreck. I went out in the boat at dawn. Searched. Found wreckage. Only wreckage. I'm getting old.
+npc.erland.event.wreck.02,"Ясная ночь, опытный капитан, крушение. Я видел такое сорок лет назад. И двадцать. И сейчас.","A clear night, an experienced captain, a wreck. I saw this forty years ago. And twenty. And now."
+npc.erland.event.wreck.03,"Похорони их, юнга. Они заслужили землю. Моряки всю жизнь мечтают о твёрдой земле.","Bury them, {boy|lass}. They've earned the earth. Sailors dream of solid ground all their lives."
+npc.erland.event.wreck.04,Команда была хорошая. Я видел их в гавани прошлым летом. Капитан спрашивал про Зубы. Я сказал — обходи. Он не послушал. Или его обманули.,A good crew. I saw them in harbour last summer. The captain asked about the Teeth. I told him — steer clear. He didn't listen. Or he was deceived.
+npc.erland.event.wreck.05,"Я чиню сети. Молча. Когда тонут моряки, старые моряки молчат.","I'm mending nets. Silently. When sailors drown, old sailors keep quiet."
+npc.erland.event.funeral.01,"{Похоронил|Похоронила}? Правильно. Моряк в земле — это моряк, который наконец доплыл.",Buried him? Good. A sailor in the earth is a sailor who's finally reached port.
+npc.erland.event.funeral.02,"Я пришёл на погост. Снял шапку. Как на флоте. Прощай, товарищ.","I came to the graveyard. Took off my cap. As in the navy. Farewell, shipmate."
+npc.erland.event.funeral.03,Положи ему в могилу ракушку. Традиция. Чтобы море не искало.,Put a shell in his grave. Tradition. So the sea won't come looking.
+npc.erland.event.funeral.04,Твой погост — лучшая гавань на острове. Тихая. Надёжная. Никто не уходит.,Your graveyard is the best harbour on the island. Quiet. Safe. Nobody leaves.
+npc.erland.event.funeral.05,Двенадцать моих товарищей так и не легли в землю. Этот — лёг. Хорошо.,Twelve of my shipmates never got an earth grave. This one did. Good.
+npc.erland.event.hmar.01,Ночь Хмари. Я сидел в лодке. Туман стучал по днищу. Как вёсла. Кто-то грёб рядом.,Fog Night. I sat in my boat. The fog knocked on the hull. Like oars. Someone was rowing close by.
+npc.erland.event.hmar.02,Слышал команду «Альбатроса». Они звали меня по имени. Сорок лет не слышал своего имени их голосами.,I heard the Albatross's crew. They called me by name. Forty years since I heard my name in their voices.
+npc.erland.event.hmar.03,"Твой луч проходил над моей лодкой. Каждый раз я говорил: «Спасибо, Агата». Потом вспоминал, что это ты.","Your beam passed over my boat. Each time I said: 'Thank you, Agatha.' Then remembered it was you."
+npc.erland.event.hmar.04,Утром на причале следы. Босые. Детские. Я их видел раньше. Сорок лет назад. После «Фортуны».,In the morning there were footprints on the jetty. Bare. A child's. I've seen them before. Forty years ago. After the Fortuna.
+npc.erland.event.hmar.05,"Хмарь — это не погода, юнга. Погоду я знаю семьдесят лет. Это — кто-то.","The Fog's not weather, {boy|lass}. I've known weather seventy years. This is someone."
+npc.erland.event.inspection.01,Пальм! Он когда-то был юнгой на «Чайке». Я его учил вязать узлы. Он и тогда всё записывал.,Palm! He was once a {cabin boy|cabin lass} on the Chayka. I taught him knots. He wrote everything down back then too.
+npc.erland.event.inspection.02,{Сдал|Сдала}? Молодец. Агата сдавала с первого раза. Каждый раз. Двадцать лет подряд.,Passed? Well done. Agatha passed first time. Every time. Twenty years running.
+npc.erland.event.inspection.03,Инспекция — ерунда. Настоящая инспекция — шторм. А её ты сдаёшь каждую ночь.,Inspections are nonsense. The real inspection is a storm. And you pass that every night.
+npc.erland.event.inspection.04,Пальм спросил про мои лодки. Я сказал — плавают. Он записал: «плавают». Хороший парень.,Palm asked about my boats. I said — they float. He wrote: 'they float'. Good lad.
+npc.erland.event.inspection.05,После инспекции — грог. Традиция. Моя.,After an inspection — grog. Tradition. Mine.
+npc.erland.event.wedding.01,"Свадьба! Я пел морские песни. Три. Про шторм, про любовь и про то, как одно ведёт к другому.","A wedding! I sang sea shanties. Three. About storms, about love, and how one leads to the other."
+npc.erland.event.wedding.02,"Хорошая пара. Держитесь друг за друга, как за леер в шторм.",A good match. Hold on to each other like a lifeline in a storm.
+npc.erland.event.wedding.03,"Бенедикт упал от сельди Хедды. Лучшее, что я видел на свадьбах за сорок лет.",Benedict went down under Hedda's herring. Best thing I've seen at a wedding in forty years.
+npc.erland.event.wedding.04,Я танцевал! С Маргит. Мы оба вдовые. Нам можно. Мы осторожно.,I danced! With Margit. We're both widowed. We're allowed. We're careful.
+npc.erland.event.wedding.05,Попутного ветра вам. Всю жизнь. И тихой гавани в конце.,A fair wind to you. All your life. And a quiet harbour at the end.
+npc.erland.event.villains.01,Грим… Агату разбил он. Или его люди. Двадцать лет я знал и молчал. Теперь могу говорить. Поздно. Но могу.,Grim… It was him who wrecked Agatha. Or his men. Twenty years I knew and kept quiet. Now I can speak. Too late. But I can.
+npc.erland.event.villains.02,Я вышел на лодке к Зубам. Один. Там тихо. Никаких огней. Я плакал. Старик плачет — смешно. Пусть.,I took the boat out to the Teeth. Alone. It's quiet there. No lights. I cried. An old man crying — funny. So be it.
+npc.erland.event.villains.03,"«Альбатрос», «Фортуна», Агата. Теперь я знаю, за кем носить фонари. И кого благодарить.","The Albatross, the Fortuna, Agatha. Now I know who to carry lanterns for. And who to thank."
+npc.erland.event.villains.04,Братья Скау… Я учил их вязать узлы. Они научились. Не тем узлам.,The Skau brothers… I taught them knots. They learned. The wrong knots.
+npc.erland.event.villains.05,"Спасибо, юнга. Нет — спасибо, капитан. Ты теперь капитан. Этого острова.","Thank you, {boy|lass}. No — thank you, captain. You're a captain now. Of this island."
+ev.erland2.l01,"Юнга! Садись. Урок навигации. Первый и главный: всегда знай, где твой дом.",{Boy|Lass}! Sit down. A navigation lesson. The first and most important: always know where home is.
+ev.erland2.l02,Видишь маяк? Это твой дом. Днём — башня. Ночью — огонь. Держи его по левому борту — и ты у Сольвика. По правому — у Зубов.,See the lighthouse? That's your home. By day — a tower. By night — a light. Keep it to port and you're at Solvik. To starboard — at the Teeth.
+ev.erland2.c01,А если огонь не мой?,And if the light isn't mine?
+ev.erland2.c02,"{Понял|Поняла}, капитан.","Understood, captain."
+ev.erland2.l03,Хороший вопрос. Лучший за сорок лет. Если огонь не твой — считай вспышки. Твой мигает. Чужой — горит ровно. Как ложь.,A good question. The best in forty years. If the light isn't yours — count the flashes. Yours blinks. A false one burns steady. Like a lie.
+ev.erland2.l04,"Понял он. Посмотрим, как поймёшь в тумане. Но начало хорошее.","Understood, he says. We'll see how you understand in fog. But it's a good start."
+ev.erland4.l01,"Хочешь про Агату? Молодую. Ей было восемнадцать, мне — двадцать. Она гребла ровнее всех на острове.","Want to hear about Agatha? Young. She was eighteen, I was twenty. She rowed more evenly than anyone on the island."
+ev.erland4.l02,Однажды она обогнала меня на регате. На вёслах против моего паруса. Я предложил ей руку и сердце. Она сказала: «Сначала догони».,Once she beat me in the regatta. Oars against my sail. I asked for her hand. She said: 'Catch me first.'
+ev.erland4.l03,Я так и не догнал. Она ушла в огонь. Я — в море. Потом вернулся. А её место было уже занято. Маяком.,I never caught her. She went into the fire. I went to sea. Then came back. And her place was already taken. By the lighthouse.
+ev.erland6.l01,"Держи. Капитанский компас. Мой. Пятьдесят лет со мной. Три шторма, два корабля.","Here. The captain's compass. Mine. Fifty years with me. Three storms, two ships."
+ev.erland6.l02,Теперь твой. Он показывает север. И ещё кое-что. Стрелка дрожит у Агатиных мест. Сам увидишь.,Now it's yours. It points north. And something else. The needle trembles near Agatha's places. You'll see.
+ev.erland8.l01,Юнга. Регата скоро. Я выхожу. Последний раз. Мне нужен напарник. Ты.,{Boy|Lass}. The regatta's soon. I'm entering. For the last time. I need a partner. You.
+ev.erland8.l02,Хедда обгоняет всех восемь лет. Я хочу обогнать её один раз. Потом можно на берег. Навсегда.,Hedda's beaten everyone for eight years. I want to beat her once. Then I can go ashore. For good.
+ev.erland8.c01,"Я с тобой, капитан.","I'm with you, captain."
+ev.erland8.c02,Хедда нас утопит.,Hedda will sink us.
+ev.erland8.l03,"Ха! Значит, договорились. Готовь руки, юнга. Грести будешь ты. Командовать — я. Как на флоте.","Ha! Then it's agreed. Get your arms ready, {boy|lass}. You row. I command. Like in the navy."
+ev.erland10.l01,Садись на край причала. Ноги свесь. Смотри на огонь. Твой огонь.,Sit on the edge of the jetty. Let your legs hang. Look at the light. Your light.
+ev.erland10.l02,Пятьдесят лет я смотрел на этот огонь и думал о ней. Теперь смотрю — и думаю: хорошие руки держат. Спокойно.,Fifty years I looked at that light and thought of her. Now I look — and think: good hands are holding it. I'm at peace.
