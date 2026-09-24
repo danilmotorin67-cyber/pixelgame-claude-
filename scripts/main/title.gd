@@ -14,7 +14,7 @@ func _on_new_game() -> void:
 	Clock.reset()
 	Weather.reset()
 	Weather.start_day(0)
-	Economy.money = 500
+	Economy.reset()
 	Inventory.reset()
 	Farm.reset()
 	Lighthouse.reset()

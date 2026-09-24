@@ -27,6 +27,7 @@ func end_day(fainted: bool = false) -> void:
 	var bedtime := Clock.minutes
 	var night_index := Clock.day_index
 	var aurora_tonight := Weather.aurora
+	var storm_today := Weather.current in ["storm", "blizzard"]
 	_step(report, "lighthouse", func() -> void:
 		report["lighthouse"] = Lighthouse.resolve_night())
 	_step(report, "weather_tides", func() -> void:
@@ -34,6 +35,8 @@ func end_day(fainted: bool = false) -> void:
 		report["hmar_night"] = Weather.hmar_night)
 	_step(report, "farm", func() -> void:
 		Farm.advance_day())
+	_step(report, "sales", func() -> void:
+		report["sales"] = Economy.collect_shipping(night_index, storm_today))
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))
 	_wake_hero(report, bedtime, fainted, night_index, player)

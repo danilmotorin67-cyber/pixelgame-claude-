@@ -79,6 +79,20 @@ func take(id: String, count: int = 1) -> bool:
 				return true
 	return left <= 0
 
+func take_slot(index: int, count: int) -> bool:
+	if index < 0 or index >= slots.size() or count <= 0:
+		return false
+	var s: Dictionary = slots[index]
+	if str(s["id"]) == "" or int(s["count"]) < count:
+		return false
+	s["count"] = int(s["count"]) - count
+	if int(s["count"]) <= 0:
+		s["id"] = ""
+		s["quality"] = 0
+		s["meta"] = {}
+	Events.inventory_changed.emit()
+	return true
+
 func serialize() -> Dictionary:
 	return {"slots": slots, "selected_hotbar": selected_hotbar}
 

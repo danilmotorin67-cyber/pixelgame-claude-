@@ -113,6 +113,11 @@ func _on_night_resolved(report: Dictionary) -> void:
 		int(round(float(light.get("power", 0.0)))), int(round(float(light.get("light", 0.0))))]
 	if bool(light.get("no_fire", false)):
 		light_line = "\nМаяк: огонь не требовался · Свет: %d" % int(round(float(light.get("light", 0.0))))
+	var sales: Dictionary = report.get("sales", {})
+	if int(sales.get("income", 0)) > 0:
+		light_line += "\nВыручка «Чайки»: %d кр" % int(sales["income"])
+	elif bool(sales.get("storm", false)) and int(sales.get("waiting", 0)) > 0:
+		light_line += "\nШторм: «Чайка» не пришла, ящик ждёт до завтра"
 	morning_text.text = "Утро, %s %d. %s\n%s%s%s\n%s" % [
 		report["season"], report["day"], WEATHER_NAMES.get(report["weather"], ""),
 		reason, loss, light_line, save_line]

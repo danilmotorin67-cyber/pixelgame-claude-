@@ -139,6 +139,11 @@ func _build_landmarks() -> void:
 			sign.add_theme_font_size_override("font_size", 8)
 			shop.add_child(sign)
 			add_child(shop)
+	if biome == "village" and coast_row > 0:
+		var box := ShippingBox.new()
+		box.name = "ShippingBox"
+		box.position = Vector2(30 * TILE + 8, (coast_row - 2) * TILE + 8)
+		add_child(box)
 	if biome == "birch":
 		# A narrow plank crossing at y=20 keeps both sides of the grove connected.
 		_add_wall(Vector2(14 * TILE, 9 * TILE), Vector2(5 * TILE, 18 * TILE))

@@ -97,6 +97,36 @@ func _check_calendar_rules() -> void:
 		"sleep energy table (8.4)")
 
 
+func _check_shipping() -> void:
+	Economy.reset()
+	Inventory.reset()
+	Clock.day_index = 5
+	Clock.set_time(10, 0)
+	Inventory.add("turnip", 3, 2)
+	Inventory.add("tool_hoe", 1)
+	_check(Economy.sell_price("turnip", 2) == 30 and Economy.sell_price("tool_hoe") == 0,
+		"sell price must apply the quality multiplier and refuse tools")
+	_check(not Economy.ship_slot(1) and Inventory.count_of("tool_hoe") == 1, "tools cannot be shipped")
+	_check(Economy.ship_slot(0) and Inventory.count_of("turnip") == 0 and Economy.shipping_value() == 90,
+		"shipping must move the whole stack into the box")
+	_check(Economy.take_back_last() and Inventory.count_of("turnip") == 3, "the last stack can be taken back")
+	Economy.ship_slot(0)
+	Clock.set_time(18, 30)
+	_check(not Economy.take_back_last(), "the «Чайка» already took today's box at 18:00")
+	Inventory.add("fish_cod", 1)
+	Economy.ship_slot(0)
+	_check(int(Economy.shipping[-1]["due"]) == 6, "goods boxed after 18:00 wait for tomorrow")
+	var stormy := Economy.collect_shipping(5, true)
+	_check(int(stormy["income"]) == 0 and Economy.shipping.size() == 2 and Economy.money == 500,
+		"no «Чайка» in a storm")
+	var paid := Economy.collect_shipping(6, false)
+	_check(int(paid["income"]) == 180 and Economy.money == 680 and Economy.shipping.is_empty(),
+		"the storm-delayed box must be paid the next night")
+	Economy.reset()
+	Inventory.reset()
+	Clock.day_index = 0
+
+
 func _run() -> void:
 	var tree := get_tree()
 	var night_reports: Array[Dictionary] = []
@@ -193,6 +223,7 @@ func _run() -> void:
 	Weather.set_weather("clear")
 	Lighthouse.reset()
 	_check_calendar_rules()
+	_check_shipping()
 
 	Game.set_flag("m1_roundtrip", true)
 	Game.add_stat("m1_test_items", 3)
@@ -264,6 +295,21 @@ func _run() -> void:
 	_check(Inventory.count_of("fish_oil") == oil_before + 1 and Economy.money == money_before - 40,
 		"the Bergs' shop must be closed on Wednesdays")
 	Clock.day_index = 0
+	var village_box: ShippingBox = tree.current_scene.get_node_or_null("Terrain/ShippingBox")
+	_check(village_box != null and village_box.collision_layer == 8, "the village harbor needs a shipping box")
+	if village_box:
+		var bread_slot := -1
+		for index in Inventory.HOTBAR:
+			if Inventory.slots[index]["id"] == "bread_rye":
+				bread_slot = index
+		Inventory.select_hotbar(bread_slot)
+		var bread_before := Inventory.count_of("bread_rye")
+		village_box.interact(tree.current_scene.get_node("Player"))
+		_check(bread_slot >= 0 and Inventory.count_of("bread_rye") == 0 and Economy.shipping.size() == 1,
+			"the village box must take the selected stack")
+		Economy.take_back_last()
+		_check(Inventory.count_of("bread_rye") == bread_before and Economy.shipping.is_empty(),
+			"a boxed stack can be taken back until the «Чайка» takes it")
 	_check(Router.goto_map("moor", Vector2(568, 904)), "village to moor failed")
 	await tree.process_frame
 	_check(tree.current_scene.get("map_id") == "moor", "moor scene did not load")
@@ -278,6 +324,9 @@ func _run() -> void:
 			tree.current_scene.get_node("Terrain/To_wreck_bay").interact(tree.current_scene.get_node("Player"))
 			_check(Router.current_map == "seal_shore", "bay must open on Spring 5")
 	Clock.set_time(1, 50)
+	Weather.set_weather("clear")
+	Economy.shipping.append({"id": "turnip", "count": 2, "quality": 0, "due": Clock.day_index})
+	var money_before_night := Economy.money
 	Clock.paused = false
 	var previous_day := Clock.day_index
 	Clock.advance(10)
@@ -291,7 +340,7 @@ func _run() -> void:
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
 	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
-		"lighthouse", "weather_tides", "farm", "luck", "autosave", "report"],
+		"lighthouse", "weather_tides", "farm", "sales", "luck", "autosave", "report"],
 		"night resolution must follow the order of spec 6.4")
 	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(
@@ -301,6 +350,11 @@ func _run() -> void:
 		"night resolution must record the lamp score and burn its fuel")
 	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Маяк: 35"),
 		"morning report must show the lighthouse score")
+	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Выручка «Чайки»: 40 кр"),
+		"the morning report must show the shipping income")
+	_check(Economy.money == money_before_night + 40 - mini(int(floor(float(money_before_night + 40) * 0.1)), 1000),
+		"shipping income is paid before the faint penalty")
+	_check(morning_scene.get_node_or_null("ShippingBox") is ShippingBox, "the cape pier needs a shipping box")
 	_check(int(Farm.get_tile(garden_cell)["days"]) == 1, "watered crop did not grow overnight")
 	for day_offset in 3:
 		Farm.water(garden_cell)
