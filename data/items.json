@@ -18,7 +18,10 @@
     "edible": {
       "energy": 16,
       "health": 4
-    }
+    },
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "bread_rye",
@@ -106,7 +109,8 @@
     "desc": "item.fish_oil.desc",
     "category": "fuel",
     "price": 40,
-    "stack": 20
+    "stack": 20,
+    "artisan": true
   },
   {
     "id": "kelp",
@@ -140,8 +144,9 @@
     "name": "item.canvas.name",
     "desc": "item.canvas.desc",
     "category": "material",
-    "price": 30,
-    "stack": 50
+    "price": 250,
+    "stack": 50,
+    "artisan": true
   },
   {
     "id": "thread",
@@ -204,7 +209,10 @@
     "category": "crop",
     "price": 80,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_pea",
@@ -221,7 +229,10 @@
     "category": "crop",
     "price": 30,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_barley",
@@ -289,7 +300,10 @@
     "category": "crop",
     "price": 70,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_carrot",
@@ -306,7 +320,10 @@
     "category": "crop",
     "price": 70,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_cabbage",
@@ -323,7 +340,10 @@
     "category": "crop",
     "price": 170,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_rutabaga",
@@ -340,7 +360,10 @@
     "category": "crop",
     "price": 130,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_strawberry",
@@ -357,7 +380,10 @@
     "category": "crop",
     "price": 60,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "berry"
+    ]
   },
   {
     "id": "seed_hops",
@@ -391,7 +417,10 @@
     "category": "crop",
     "price": 55,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_beans",
@@ -408,7 +437,10 @@
     "category": "crop",
     "price": 40,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_onion",
@@ -425,7 +457,10 @@
     "category": "crop",
     "price": 60,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_dill",
@@ -459,7 +494,10 @@
     "category": "crop",
     "price": 320,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_beet",
@@ -476,7 +514,10 @@
     "category": "crop",
     "price": 90,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_kale",
@@ -493,7 +534,10 @@
     "category": "crop",
     "price": 110,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_leek",
@@ -510,7 +554,10 @@
     "category": "crop",
     "price": 140,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_parsnip",
@@ -527,7 +574,10 @@
     "category": "crop",
     "price": 120,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "seed_rye",
@@ -561,7 +611,10 @@
     "category": "crop",
     "price": 200,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "vegetable"
+    ]
   },
   {
     "id": "flour",
@@ -592,33 +645,40 @@
     "name": "item.salt.name",
     "desc": "item.salt.desc",
     "category": "ingredient",
-    "price": 15,
-    "stack": 99
+    "price": 30,
+    "stack": 99,
+    "artisan": true
   },
   {
     "id": "butter",
     "name": "item.butter.name",
     "desc": "item.butter.desc",
     "category": "ingredient",
-    "price": 60,
-    "stack": 99
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "artisan": true
   },
   {
     "id": "milk",
     "name": "item.milk.name",
     "desc": "item.milk.desc",
     "category": "ingredient",
-    "price": 40,
-    "stack": 99
+    "price": 125,
+    "stack": 99,
+    "quality": true
   },
   {
     "id": "egg",
     "name": "item.egg.name",
     "desc": "item.egg.desc",
     "category": "egg",
-    "price": 30,
+    "price": 50,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "egg"
+    ]
   },
   {
     "id": "compost",
@@ -778,7 +838,10 @@
     "category": "forage",
     "price": 30,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "flower"
+    ]
   },
   {
     "id": "cottongrass",
@@ -787,7 +850,10 @@
     "category": "forage",
     "price": 25,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "flower"
+    ]
   },
   {
     "id": "blueberry",
@@ -800,7 +866,10 @@
     "edible": {
       "energy": 10,
       "health": 3
-    }
+    },
+    "tags": [
+      "berry"
+    ]
   },
   {
     "id": "cloudberry",
@@ -813,7 +882,10 @@
     "edible": {
       "energy": 16,
       "health": 5
-    }
+    },
+    "tags": [
+      "berry"
+    ]
   },
   {
     "id": "heather",
@@ -822,7 +894,10 @@
     "category": "forage",
     "price": 25,
     "stack": 99,
-    "quality": true
+    "quality": true,
+    "tags": [
+      "flower"
+    ]
   },
   {
     "id": "birch_bolete",
@@ -861,7 +936,10 @@
     "edible": {
       "energy": 10,
       "health": 3
-    }
+    },
+    "tags": [
+      "berry"
+    ]
   },
   {
     "id": "cranberry",
@@ -874,7 +952,10 @@
     "edible": {
       "energy": 8,
       "health": 3
-    }
+    },
+    "tags": [
+      "berry"
+    ]
   },
   {
     "id": "rosehip",
@@ -960,7 +1041,10 @@
     "desc": "item.heather_bouquet.desc",
     "category": "gift",
     "price": 150,
-    "stack": 20
+    "stack": 20,
+    "tags": [
+      "flower"
+    ]
   },
   {
     "id": "keeper_soup",
@@ -1040,7 +1124,8 @@
     "desc": "item.whale_oil.desc",
     "category": "fuel",
     "price": 110,
-    "stack": 20
+    "stack": 20,
+    "artisan": true
   },
   {
     "id": "kerosene",
@@ -1063,8 +1148,9 @@
     "name": "item.glass.name",
     "desc": "item.glass.desc",
     "category": "material",
-    "price": 50,
-    "stack": 99
+    "price": 100,
+    "stack": 99,
+    "artisan": true
   },
   {
     "id": "cargo_fishing",
@@ -1117,7 +1203,8 @@
     "desc": "item.cloth.desc",
     "category": "material",
     "price": 60,
-    "stack": 99
+    "stack": 99,
+    "artisan": true
   },
   {
     "id": "spices",
@@ -1308,7 +1395,10 @@
     "desc": "item.wax_candle.desc",
     "category": "candle",
     "price": 20,
-    "stack": 99
+    "stack": 99,
+    "tags": [
+      "candle"
+    ]
   },
   {
     "id": "fresh_water",
@@ -1411,7 +1501,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "sea"
+      "sea",
+      "small"
     ]
   },
   {
@@ -1437,7 +1528,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "sea"
+      "sea",
+      "small"
     ],
     "bait": 0.7
   },
@@ -1516,7 +1608,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "sea"
+      "sea",
+      "winter_fish"
     ]
   },
   {
@@ -1529,7 +1622,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "fresh"
+      "fresh",
+      "small"
     ]
   },
   {
@@ -1620,7 +1714,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "sea"
+      "sea",
+      "small"
     ]
   },
   {
@@ -1711,7 +1806,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "fresh"
+      "fresh",
+      "winter_fish"
     ]
   },
   {
@@ -1737,7 +1833,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "fresh"
+      "fresh",
+      "small"
     ]
   },
   {
@@ -1763,7 +1860,8 @@
     "quality": true,
     "tags": [
       "fish",
-      "fresh"
+      "fresh",
+      "small"
     ]
   },
   {
@@ -2260,7 +2358,10 @@
     "desc": "item.bouquet_armeria.desc",
     "category": "gift",
     "price": 50,
-    "stack": 1
+    "stack": 1,
+    "tags": [
+      "flower"
+    ]
   },
   {
     "id": "wood_lacquer",
@@ -2297,7 +2398,7 @@
     "name": "item.ale.name",
     "desc": "item.ale.desc",
     "category": "food",
-    "price": 30,
+    "price": 180,
     "stack": 20,
     "edible": {
       "energy": 20,
@@ -2305,14 +2406,16 @@
     },
     "tags": [
       "drink"
-    ]
+    ],
+    "quality": true,
+    "artisan": true
   },
   {
     "id": "dark_ale",
     "name": "item.dark_ale.name",
     "desc": "item.dark_ale.desc",
     "category": "food",
-    "price": 45,
+    "price": 220,
     "stack": 20,
     "edible": {
       "energy": 25,
@@ -2320,14 +2423,16 @@
     },
     "tags": [
       "drink"
-    ]
+    ],
+    "quality": true,
+    "artisan": true
   },
   {
     "id": "grog",
     "name": "item.grog.name",
     "desc": "item.grog.desc",
     "category": "food",
-    "price": 45,
+    "price": 398,
     "stack": 20,
     "edible": {
       "energy": 35,
@@ -2342,7 +2447,7 @@
     "name": "item.ukha.name",
     "desc": "item.ukha.desc",
     "category": "food",
-    "price": 60,
+    "price": 128,
     "stack": 20,
     "edible": {
       "energy": 70,
@@ -2354,7 +2459,7 @@
     "name": "item.fish_pie.name",
     "desc": "item.fish_pie.desc",
     "category": "food",
-    "price": 100,
+    "price": 248,
     "stack": 20,
     "edible": {
       "energy": 110,
@@ -2438,8 +2543,9 @@
     "name": "item.wool.name",
     "desc": "item.wool.desc",
     "category": "material",
-    "price": 50,
-    "stack": 99
+    "price": 340,
+    "stack": 99,
+    "quality": true
   },
   {
     "id": "brass",
@@ -2554,31 +2660,34 @@
     "id": "cloudberry_bush",
     "name": "item.cloudberry_bush.name",
     "desc": "item.cloudberry_bush.desc",
-    "category": "material",
+    "category": "sapling",
     "price": 500,
-    "stack": 5
+    "stack": 20,
+    "plant": "bush_cloudberry"
   },
   {
     "id": "heather_honey",
     "name": "item.heather_honey.name",
     "desc": "item.heather_honey.desc",
     "category": "food",
-    "price": 90,
+    "price": 300,
     "stack": 20,
     "edible": {
       "energy": 40,
       "health": 10
     },
     "tags": [
-      "sweet"
-    ]
+      "sweet",
+      "honey"
+    ],
+    "quality": true
   },
   {
     "id": "cloudberry_pie",
     "name": "item.cloudberry_pie.name",
     "desc": "item.cloudberry_pie.desc",
     "category": "food",
-    "price": 180,
+    "price": 652,
     "stack": 20,
     "edible": {
       "energy": 120,
@@ -2593,7 +2702,7 @@
     "name": "item.rhubarb_pie.name",
     "desc": "item.rhubarb_pie.desc",
     "category": "food",
-    "price": 90,
+    "price": 772,
     "stack": 20,
     "edible": {
       "energy": 80,
@@ -2608,12 +2717,14 @@
     "name": "item.salted_herring.name",
     "desc": "item.salted_herring.desc",
     "category": "food",
-    "price": 40,
+    "price": 70,
     "stack": 20,
     "edible": {
       "energy": 40,
       "health": 5
-    }
+    },
+    "quality": true,
+    "artisan": true
   },
   {
     "id": "smoked_mackerel",
@@ -2628,14 +2739,16 @@
     },
     "tags": [
       "smoked"
-    ]
+    ],
+    "quality": true,
+    "artisan": true
   },
   {
     "id": "lutefisk",
     "name": "item.lutefisk.name",
     "desc": "item.lutefisk.desc",
     "category": "food",
-    "price": 80,
+    "price": 480,
     "stack": 20,
     "edible": {
       "energy": 30,
@@ -2761,5 +2874,3140 @@
     "category": "keepsake",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "sand",
+    "name": "item.sand.name",
+    "desc": "item.sand.desc",
+    "category": "material",
+    "price": 2,
+    "stack": 999
+  },
+  {
+    "id": "abrasive",
+    "name": "item.abrasive.name",
+    "desc": "item.abrasive.desc",
+    "category": "material",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "bucket",
+    "name": "item.bucket.name",
+    "desc": "item.bucket.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "use_water": 1
+  },
+  {
+    "id": "belt_keg",
+    "name": "item.belt_keg.name",
+    "desc": "item.belt_keg.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "use_water": 5
+  },
+  {
+    "id": "seawater",
+    "name": "item.seawater.name",
+    "desc": "item.seawater.desc",
+    "category": "material",
+    "price": 0,
+    "stack": 20
+  },
+  {
+    "id": "birch_log",
+    "name": "item.birch_log.name",
+    "desc": "item.birch_log.desc",
+    "category": "material",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "birch_bark",
+    "name": "item.birch_bark.name",
+    "desc": "item.birch_bark.desc",
+    "category": "material",
+    "price": 10,
+    "stack": 99
+  },
+  {
+    "id": "birch_chips",
+    "name": "item.birch_chips.name",
+    "desc": "item.birch_chips.desc",
+    "category": "material",
+    "price": 5,
+    "stack": 99
+  },
+  {
+    "id": "flax_fiber",
+    "name": "item.flax_fiber.name",
+    "desc": "item.flax_fiber.desc",
+    "category": "material",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "dried_kelp",
+    "name": "item.dried_kelp.name",
+    "desc": "item.dried_kelp.desc",
+    "category": "material",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "shell_lime",
+    "name": "item.shell_lime.name",
+    "desc": "item.shell_lime.desc",
+    "category": "material",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "ruby_glass",
+    "name": "item.ruby_glass.name",
+    "desc": "item.ruby_glass.desc",
+    "category": "material",
+    "price": 200,
+    "stack": 99
+  },
+  {
+    "id": "prism",
+    "name": "item.prism.name",
+    "desc": "item.prism.desc",
+    "category": "material",
+    "price": 250,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "stone_block",
+    "name": "item.stone_block.name",
+    "desc": "item.stone_block.desc",
+    "category": "material",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "stone_slab",
+    "name": "item.stone_slab.name",
+    "desc": "item.stone_slab.desc",
+    "category": "marker",
+    "price": 100,
+    "stack": 99
+  },
+  {
+    "id": "nails",
+    "name": "item.nails.name",
+    "desc": "item.nails.desc",
+    "category": "material",
+    "price": 5,
+    "stack": 999
+  },
+  {
+    "id": "hooks",
+    "name": "item.hooks.name",
+    "desc": "item.hooks.desc",
+    "category": "material",
+    "price": 5,
+    "stack": 999
+  },
+  {
+    "id": "copper_wire",
+    "name": "item.copper_wire.name",
+    "desc": "item.copper_wire.desc",
+    "category": "material",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "glass_insulator",
+    "name": "item.glass_insulator.name",
+    "desc": "item.glass_insulator.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "brass_handle",
+    "name": "item.brass_handle.name",
+    "desc": "item.brass_handle.desc",
+    "category": "material",
+    "price": 160,
+    "stack": 99
+  },
+  {
+    "id": "bronze",
+    "name": "item.bronze.name",
+    "desc": "item.bronze.desc",
+    "category": "material",
+    "price": 250,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "silver_ingot",
+    "name": "item.silver_ingot.name",
+    "desc": "item.silver_ingot.desc",
+    "category": "material",
+    "price": 400,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "gold_ingot",
+    "name": "item.gold_ingot.name",
+    "desc": "item.gold_ingot.desc",
+    "category": "material",
+    "price": 1000,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "silver_ore",
+    "name": "item.silver_ore.name",
+    "desc": "item.silver_ore.desc",
+    "category": "material",
+    "price": 150,
+    "stack": 99
+  },
+  {
+    "id": "gold_ore",
+    "name": "item.gold_ore.name",
+    "desc": "item.gold_ore.desc",
+    "category": "material",
+    "price": 400,
+    "stack": 99
+  },
+  {
+    "id": "copper_sheathing",
+    "name": "item.copper_sheathing.name",
+    "desc": "item.copper_sheathing.desc",
+    "category": "material",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "moon_silver",
+    "name": "item.moon_silver.name",
+    "desc": "item.moon_silver.desc",
+    "category": "material",
+    "price": 3000,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "deep_quartz",
+    "name": "item.deep_quartz.name",
+    "desc": "item.deep_quartz.desc",
+    "category": "material",
+    "price": 800,
+    "stack": 99
+  },
+  {
+    "id": "svetla_spark",
+    "name": "item.svetla_spark.name",
+    "desc": "item.svetla_spark.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 5
+  },
+  {
+    "id": "sparking_iron",
+    "name": "item.sparking_iron.name",
+    "desc": "item.sparking_iron.desc",
+    "category": "material",
+    "price": 500,
+    "stack": 99
+  },
+  {
+    "id": "moray_skin",
+    "name": "item.moray_skin.name",
+    "desc": "item.moray_skin.desc",
+    "category": "material",
+    "price": 300,
+    "stack": 99
+  },
+  {
+    "id": "guano",
+    "name": "item.guano.name",
+    "desc": "item.guano.desc",
+    "category": "material",
+    "price": 10,
+    "stack": 99
+  },
+  {
+    "id": "raven_feather",
+    "name": "item.raven_feather.name",
+    "desc": "item.raven_feather.desc",
+    "category": "material",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "puffin_feather",
+    "name": "item.puffin_feather.name",
+    "desc": "item.puffin_feather.desc",
+    "category": "material",
+    "price": 80,
+    "stack": 99
+  },
+  {
+    "id": "jellyfish_slime",
+    "name": "item.jellyfish_slime.name",
+    "desc": "item.jellyfish_slime.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "hmar_wisp",
+    "name": "item.hmar_wisp.name",
+    "desc": "item.hmar_wisp.desc",
+    "category": "material",
+    "price": 150,
+    "stack": 99
+  },
+  {
+    "id": "hmar_mushroom",
+    "name": "item.hmar_mushroom.name",
+    "desc": "item.hmar_mushroom.desc",
+    "category": "forage",
+    "price": 90,
+    "stack": 99
+  },
+  {
+    "id": "cuttlefish_ink",
+    "name": "item.cuttlefish_ink.name",
+    "desc": "item.cuttlefish_ink.desc",
+    "category": "material",
+    "price": 80,
+    "stack": 99
+  },
+  {
+    "id": "lumpfish_roe",
+    "name": "item.lumpfish_roe.name",
+    "desc": "item.lumpfish_roe.desc",
+    "category": "ingredient",
+    "price": 120,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "beeswax",
+    "name": "item.beeswax.name",
+    "desc": "item.beeswax.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "tallow_candle",
+    "name": "item.tallow_candle.name",
+    "desc": "item.tallow_candle.desc",
+    "category": "candle",
+    "price": 15,
+    "stack": 99,
+    "tags": [
+      "candle"
+    ]
+  },
+  {
+    "id": "dried_heather",
+    "name": "item.dried_heather.name",
+    "desc": "item.dried_heather.desc",
+    "category": "gift",
+    "price": 60,
+    "stack": 99,
+    "tags": [
+      "flower"
+    ]
+  },
+  {
+    "id": "stained_glass",
+    "name": "item.stained_glass.name",
+    "desc": "item.stained_glass.desc",
+    "category": "decor",
+    "price": 900,
+    "stack": 10,
+    "place": "decor"
+  },
+  {
+    "id": "egg_large",
+    "name": "item.egg_large.name",
+    "desc": "item.egg_large.desc",
+    "category": "egg",
+    "price": 95,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 5
+    },
+    "tags": [
+      "egg"
+    ]
+  },
+  {
+    "id": "duck_egg",
+    "name": "item.duck_egg.name",
+    "desc": "item.duck_egg.desc",
+    "category": "egg",
+    "price": 95,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 5
+    },
+    "tags": [
+      "egg"
+    ]
+  },
+  {
+    "id": "duck_feather",
+    "name": "item.duck_feather.name",
+    "desc": "item.duck_feather.desc",
+    "category": "material",
+    "price": 250,
+    "stack": 99
+  },
+  {
+    "id": "eider_down",
+    "name": "item.eider_down.name",
+    "desc": "item.eider_down.desc",
+    "category": "material",
+    "price": 600,
+    "stack": 99
+  },
+  {
+    "id": "goat_milk",
+    "name": "item.goat_milk.name",
+    "desc": "item.goat_milk.desc",
+    "category": "ingredient",
+    "price": 225,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "honey",
+    "name": "item.honey.name",
+    "desc": "item.honey.desc",
+    "category": "ingredient",
+    "price": 150,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "honey"
+    ]
+  },
+  {
+    "id": "buckthorn_honey",
+    "name": "item.buckthorn_honey.name",
+    "desc": "item.buckthorn_honey.desc",
+    "category": "ingredient",
+    "price": 250,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "honey"
+    ]
+  },
+  {
+    "id": "sea_buckthorn",
+    "name": "item.sea_buckthorn.name",
+    "desc": "item.sea_buckthorn.desc",
+    "category": "forage",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "berry"
+    ],
+    "edible": {
+      "energy": 10,
+      "health": 2
+    }
+  },
+  {
+    "id": "rowan_berry",
+    "name": "item.rowan_berry.name",
+    "desc": "item.rowan_berry.desc",
+    "category": "forage",
+    "price": 40,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "berry"
+    ]
+  },
+  {
+    "id": "apple",
+    "name": "item.apple.name",
+    "desc": "item.apple.desc",
+    "category": "forage",
+    "price": 100,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 20,
+      "health": 5
+    }
+  },
+  {
+    "id": "sapling_buckthorn",
+    "name": "item.sapling_buckthorn.name",
+    "desc": "item.sapling_buckthorn.desc",
+    "category": "sapling",
+    "price": 400,
+    "stack": 20,
+    "plant": "tree_buckthorn"
+  },
+  {
+    "id": "sapling_rowan",
+    "name": "item.sapling_rowan.name",
+    "desc": "item.sapling_rowan.desc",
+    "category": "sapling",
+    "price": 600,
+    "stack": 20,
+    "plant": "tree_rowan"
+  },
+  {
+    "id": "sapling_apple",
+    "name": "item.sapling_apple.name",
+    "desc": "item.sapling_apple.desc",
+    "category": "sapling",
+    "price": 800,
+    "stack": 20,
+    "plant": "tree_apple"
+  },
+  {
+    "id": "bush_blueberry",
+    "name": "item.bush_blueberry.name",
+    "desc": "item.bush_blueberry.desc",
+    "category": "sapling",
+    "price": 300,
+    "stack": 20,
+    "plant": "bush_blueberry"
+  },
+  {
+    "id": "bush_lingonberry",
+    "name": "item.bush_lingonberry.name",
+    "desc": "item.bush_lingonberry.desc",
+    "category": "sapling",
+    "price": 300,
+    "stack": 20,
+    "plant": "bush_lingonberry"
+  },
+  {
+    "id": "seed_lightflower",
+    "name": "item.seed_lightflower.name",
+    "desc": "item.seed_lightflower.desc",
+    "category": "seed",
+    "price": 75,
+    "stack": 99
+  },
+  {
+    "id": "lightflower",
+    "name": "item.lightflower.name",
+    "desc": "item.lightflower.desc",
+    "category": "crop",
+    "price": 150,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "smoked_fish",
+    "name": "item.smoked_fish.name",
+    "desc": "item.smoked_fish.desc",
+    "category": "artisan",
+    "price": 110,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 35,
+      "health": 12
+    },
+    "tags": [
+      "smoked"
+    ]
+  },
+  {
+    "id": "smoked_eel",
+    "name": "item.smoked_eel.name",
+    "desc": "item.smoked_eel.desc",
+    "category": "artisan",
+    "price": 520,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 40,
+      "health": 15
+    },
+    "tags": [
+      "smoked"
+    ]
+  },
+  {
+    "id": "stockfish",
+    "name": "item.stockfish.name",
+    "desc": "item.stockfish.desc",
+    "category": "artisan",
+    "price": 300,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "mead",
+    "name": "item.mead.name",
+    "desc": "item.mead.desc",
+    "category": "artisan",
+    "price": 250,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 30,
+      "health": 0
+    },
+    "tags": [
+      "drink"
+    ],
+    "buff": {
+      "luck": 0.01,
+      "hours": 6
+    }
+  },
+  {
+    "id": "wine_buckthorn",
+    "name": "item.wine_buckthorn.name",
+    "desc": "item.wine_buckthorn.desc",
+    "category": "artisan",
+    "price": 180,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink",
+      "wine"
+    ],
+    "buff": {
+      "speed": -0.05,
+      "luck": 0.02,
+      "hours": 4
+    }
+  },
+  {
+    "id": "wine_cloudberry",
+    "name": "item.wine_cloudberry.name",
+    "desc": "item.wine_cloudberry.desc",
+    "category": "artisan",
+    "price": 360,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink",
+      "wine"
+    ],
+    "buff": {
+      "speed": -0.05,
+      "luck": 0.02,
+      "hours": 4
+    }
+  },
+  {
+    "id": "wine_lingonberry",
+    "name": "item.wine_lingonberry.name",
+    "desc": "item.wine_lingonberry.desc",
+    "category": "artisan",
+    "price": 150,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink",
+      "wine"
+    ],
+    "buff": {
+      "speed": -0.05,
+      "luck": 0.02,
+      "hours": 4
+    }
+  },
+  {
+    "id": "wine_cranberry",
+    "name": "item.wine_cranberry.name",
+    "desc": "item.wine_cranberry.desc",
+    "category": "artisan",
+    "price": 135,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink",
+      "wine"
+    ],
+    "buff": {
+      "speed": -0.05,
+      "luck": 0.02,
+      "hours": 4
+    }
+  },
+  {
+    "id": "wine_blueberry",
+    "name": "item.wine_blueberry.name",
+    "desc": "item.wine_blueberry.desc",
+    "category": "artisan",
+    "price": 150,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink",
+      "wine"
+    ],
+    "buff": {
+      "speed": -0.05,
+      "luck": 0.02,
+      "hours": 4
+    }
+  },
+  {
+    "id": "aquavit",
+    "name": "item.aquavit.name",
+    "desc": "item.aquavit.desc",
+    "category": "artisan",
+    "price": 400,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 15,
+      "health": 0
+    },
+    "tags": [
+      "drink"
+    ],
+    "buff": {
+      "cold": 0.4,
+      "speed": -0.1,
+      "hours": 4
+    }
+  },
+  {
+    "id": "dry_drowned_ale",
+    "name": "item.dry_drowned_ale.name",
+    "desc": "item.dry_drowned_ale.desc",
+    "category": "artisan",
+    "price": 260,
+    "stack": 20,
+    "quality": true,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink"
+    ],
+    "buff": {
+      "luck": 0.01,
+      "hours": 4
+    }
+  },
+  {
+    "id": "cheese",
+    "name": "item.cheese.name",
+    "desc": "item.cheese.desc",
+    "category": "artisan",
+    "price": 230,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 40,
+      "health": 15
+    }
+  },
+  {
+    "id": "goat_cheese",
+    "name": "item.goat_cheese.name",
+    "desc": "item.goat_cheese.desc",
+    "category": "artisan",
+    "price": 400,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 45,
+      "health": 18
+    }
+  },
+  {
+    "id": "jam",
+    "name": "item.jam.name",
+    "desc": "item.jam.desc",
+    "category": "artisan",
+    "price": 150,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 30,
+      "health": 5
+    },
+    "tags": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "pickles",
+    "name": "item.pickles.name",
+    "desc": "item.pickles.desc",
+    "category": "artisan",
+    "price": 200,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 30,
+      "health": 8
+    }
+  },
+  {
+    "id": "tower_paint",
+    "name": "item.tower_paint.name",
+    "desc": "item.tower_paint.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "parabolic_reflector",
+    "name": "item.parabolic_reflector.name",
+    "desc": "item.parabolic_reflector.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lens",
+      "parabolic"
+    ]
+  },
+  {
+    "id": "frame_small",
+    "name": "item.frame_small.name",
+    "desc": "item.frame_small.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "frame_medium",
+    "name": "item.frame_medium.name",
+    "desc": "item.frame_medium.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "frame_large",
+    "name": "item.frame_large.name",
+    "desc": "item.frame_large.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "frame_eye",
+    "name": "item.frame_eye.name",
+    "desc": "item.frame_eye.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "lens_fresnel_4",
+    "name": "item.lens_fresnel_4.name",
+    "desc": "item.lens_fresnel_4.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lens",
+      "fresnel_4"
+    ]
+  },
+  {
+    "id": "lens_fresnel_3",
+    "name": "item.lens_fresnel_3.name",
+    "desc": "item.lens_fresnel_3.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lens",
+      "fresnel_3"
+    ]
+  },
+  {
+    "id": "lens_fresnel_2",
+    "name": "item.lens_fresnel_2.name",
+    "desc": "item.lens_fresnel_2.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lens",
+      "fresnel_2"
+    ]
+  },
+  {
+    "id": "lens_great_eye",
+    "name": "item.lens_great_eye.name",
+    "desc": "item.lens_great_eye.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lens",
+      "great_eye"
+    ]
+  },
+  {
+    "id": "lamp_argand",
+    "name": "item.lamp_argand.name",
+    "desc": "item.lamp_argand.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lamp",
+      "argand"
+    ]
+  },
+  {
+    "id": "lamp_incandescent",
+    "name": "item.lamp_incandescent.name",
+    "desc": "item.lamp_incandescent.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lamp",
+      "incandescent"
+    ]
+  },
+  {
+    "id": "lamp_rann_torch",
+    "name": "item.lamp_rann_torch.name",
+    "desc": "item.lamp_rann_torch.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "lamp",
+      "rann_torch"
+    ]
+  },
+  {
+    "id": "mech_precise",
+    "name": "item.mech_precise.name",
+    "desc": "item.mech_precise.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "mechanism",
+      "precise_clock"
+    ]
+  },
+  {
+    "id": "wind_turbine",
+    "name": "item.wind_turbine.name",
+    "desc": "item.wind_turbine.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "mech_auto",
+    "name": "item.mech_auto.name",
+    "desc": "item.mech_auto.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "mechanism",
+      "auto"
+    ]
+  },
+  {
+    "id": "clock_bell",
+    "name": "item.clock_bell.name",
+    "desc": "item.clock_bell.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "signal",
+      "clock_bell"
+    ]
+  },
+  {
+    "id": "bellows_horn",
+    "name": "item.bellows_horn.name",
+    "desc": "item.bellows_horn.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "signal",
+      "bellows_horn"
+    ]
+  },
+  {
+    "id": "steam_boiler",
+    "name": "item.steam_boiler.name",
+    "desc": "item.steam_boiler.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "steam_horn",
+    "name": "item.steam_horn.name",
+    "desc": "item.steam_horn.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "signal",
+      "steam_horn"
+    ]
+  },
+  {
+    "id": "siren",
+    "name": "item.siren.name",
+    "desc": "item.siren.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "signal",
+      "siren"
+    ]
+  },
+  {
+    "id": "reservoir_3",
+    "name": "item.reservoir_3.name",
+    "desc": "item.reservoir_3.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "reservoir",
+      1
+    ]
+  },
+  {
+    "id": "reservoir_7",
+    "name": "item.reservoir_7.name",
+    "desc": "item.reservoir_7.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "reservoir",
+      2
+    ]
+  },
+  {
+    "id": "salt_shroud",
+    "name": "item.salt_shroud.name",
+    "desc": "item.salt_shroud.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "shroud",
+      true
+    ]
+  },
+  {
+    "id": "lightning_rod",
+    "name": "item.lightning_rod.name",
+    "desc": "item.lightning_rod.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "tower",
+      "rod"
+    ]
+  },
+  {
+    "id": "red_sector",
+    "name": "item.red_sector.name",
+    "desc": "item.red_sector.desc",
+    "category": "part",
+    "price": 0,
+    "stack": 1,
+    "install": [
+      "red_sector",
+      true
+    ]
+  },
+  {
+    "id": "wheelbarrow",
+    "name": "item.wheelbarrow.name",
+    "desc": "item.wheelbarrow.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "wheelbarrow_soft",
+    "name": "item.wheelbarrow_soft.name",
+    "desc": "item.wheelbarrow_soft.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "drag_sled",
+    "name": "item.drag_sled.name",
+    "desc": "item.drag_sled.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "headstone",
+    "name": "item.headstone.name",
+    "desc": "item.headstone.desc",
+    "category": "marker",
+    "price": 600,
+    "stack": 99
+  },
+  {
+    "id": "beacon_stone",
+    "name": "item.beacon_stone.name",
+    "desc": "item.beacon_stone.desc",
+    "category": "marker",
+    "price": 2000,
+    "stack": 99
+  },
+  {
+    "id": "memory_lantern",
+    "name": "item.memory_lantern.name",
+    "desc": "item.memory_lantern.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor"
+  },
+  {
+    "id": "fence_wood",
+    "name": "item.fence_wood.name",
+    "desc": "item.fence_wood.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 99,
+    "place": "decor"
+  },
+  {
+    "id": "fence_stone",
+    "name": "item.fence_stone.name",
+    "desc": "item.fence_stone.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 99,
+    "place": "decor"
+  },
+  {
+    "id": "fence_iron",
+    "name": "item.fence_iron.name",
+    "desc": "item.fence_iron.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 99,
+    "place": "decor"
+  },
+  {
+    "id": "bench",
+    "name": "item.bench.name",
+    "desc": "item.bench.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor"
+  },
+  {
+    "id": "stone_path",
+    "name": "item.stone_path.name",
+    "desc": "item.stone_path.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 999,
+    "place": "decor"
+  },
+  {
+    "id": "statue_mourning",
+    "name": "item.statue_mourning.name",
+    "desc": "item.statue_mourning.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 5,
+    "place": "decor"
+  },
+  {
+    "id": "magnifier",
+    "name": "item.magnifier.name",
+    "desc": "item.magnifier.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "stone_wall",
+    "name": "item.stone_wall.name",
+    "desc": "item.stone_wall.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 99,
+    "place": "stone_wall"
+  },
+  {
+    "id": "gull_scarer",
+    "name": "item.gull_scarer.name",
+    "desc": "item.gull_scarer.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 10,
+    "place": "gull_scarer"
+  },
+  {
+    "id": "watering_barrel",
+    "name": "item.watering_barrel.name",
+    "desc": "item.watering_barrel.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 10,
+    "place": "watering_barrel"
+  },
+  {
+    "id": "cistern",
+    "name": "item.cistern.name",
+    "desc": "item.cistern.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 10,
+    "place": "cistern"
+  },
+  {
+    "id": "wind_pump",
+    "name": "item.wind_pump.name",
+    "desc": "item.wind_pump.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 5,
+    "place": "wind_pump"
+  },
+  {
+    "id": "keeper_scarecrow",
+    "name": "item.keeper_scarecrow.name",
+    "desc": "item.keeper_scarecrow.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 5,
+    "place": "keeper_scarecrow"
+  },
+  {
+    "id": "agatha_hat",
+    "name": "item.agatha_hat.name",
+    "desc": "item.agatha_hat.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "head",
+    "effect": {
+      "xp_keeping": 0.05
+    }
+  },
+  {
+    "id": "beehive",
+    "name": "item.beehive.name",
+    "desc": "item.beehive.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place": "beehive"
+  },
+  {
+    "id": "eider_nest_box",
+    "name": "item.eider_nest_box.name",
+    "desc": "item.eider_nest_box.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place": "eider_nest"
+  },
+  {
+    "id": "glow_bait",
+    "name": "item.glow_bait.name",
+    "desc": "item.glow_bait.desc",
+    "category": "bait",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "longline",
+    "name": "item.longline.name",
+    "desc": "item.longline.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place_water": "longline"
+  },
+  {
+    "id": "ice_pick",
+    "name": "item.ice_pick.name",
+    "desc": "item.ice_pick.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "legend_lure",
+    "name": "item.legend_lure.name",
+    "desc": "item.legend_lure.desc",
+    "category": "tackle",
+    "price": 800,
+    "stack": 99
+  },
+  {
+    "id": "buoy_marker",
+    "name": "item.buoy_marker.name",
+    "desc": "item.buoy_marker.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "stern_lantern",
+    "name": "item.stern_lantern.name",
+    "desc": "item.stern_lantern.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "storm_sails",
+    "name": "item.storm_sails.name",
+    "desc": "item.storm_sails.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "icebreaker_bow",
+    "name": "item.icebreaker_bow.name",
+    "desc": "item.icebreaker_bow.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "harpoon_bolts",
+    "name": "item.harpoon_bolts.name",
+    "desc": "item.harpoon_bolts.desc",
+    "category": "weapon",
+    "price": 10,
+    "stack": 999
+  },
+  {
+    "id": "whaling_harpoon",
+    "name": "item.whaling_harpoon.name",
+    "desc": "item.whaling_harpoon.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "oiled_canvas",
+    "name": "item.oiled_canvas.name",
+    "desc": "item.oiled_canvas.desc",
+    "category": "material",
+    "price": 300,
+    "stack": 99
+  },
+  {
+    "id": "air_bag",
+    "name": "item.air_bag.name",
+    "desc": "item.air_bag.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "weighted_boots",
+    "name": "item.weighted_boots.name",
+    "desc": "item.weighted_boots.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "feet"
+  },
+  {
+    "id": "underwater_lantern",
+    "name": "item.underwater_lantern.name",
+    "desc": "item.underwater_lantern.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "kelp_line",
+    "name": "item.kelp_line.name",
+    "desc": "item.kelp_line.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "sea_garden": "kelp_line"
+  },
+  {
+    "id": "mussel_rope",
+    "name": "item.mussel_rope.name",
+    "desc": "item.mussel_rope.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "sea_garden": "mussel_rope"
+  },
+  {
+    "id": "oyster_cage",
+    "name": "item.oyster_cage.name",
+    "desc": "item.oyster_cage.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "sea_garden": "oyster_cage"
+  },
+  {
+    "id": "carved_trinket",
+    "name": "item.carved_trinket.name",
+    "desc": "item.carved_trinket.desc",
+    "category": "gift",
+    "price": 400,
+    "stack": 20
+  },
+  {
+    "id": "big_chest",
+    "name": "item.big_chest.name",
+    "desc": "item.big_chest.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place": "big_chest"
+  },
+  {
+    "id": "keeper_sweater",
+    "name": "item.keeper_sweater.name",
+    "desc": "item.keeper_sweater.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "body",
+    "effect": {
+      "warmth": 0.4
+    }
+  },
+  {
+    "id": "wool_socks",
+    "name": "item.wool_socks.name",
+    "desc": "item.wool_socks.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "feet",
+    "effect": {
+      "warmth": 0.1
+    }
+  },
+  {
+    "id": "storm_coat",
+    "name": "item.storm_coat.name",
+    "desc": "item.storm_coat.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "body",
+    "effect": {
+      "rainproof": 1
+    }
+  },
+  {
+    "id": "storm_jacket",
+    "name": "item.storm_jacket.name",
+    "desc": "item.storm_jacket.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "body",
+    "effect": {
+      "rainproof": 1,
+      "warmth": 0.3
+    }
+  },
+  {
+    "id": "eider_blanket",
+    "name": "item.eider_blanket.name",
+    "desc": "item.eider_blanket.desc",
+    "category": "gift",
+    "price": 1500,
+    "stack": 5
+  },
+  {
+    "id": "rowan_amulet",
+    "name": "item.rowan_amulet.name",
+    "desc": "item.rowan_amulet.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "hmar_damage": -0.3
+    }
+  },
+  {
+    "id": "amber_pendant",
+    "name": "item.amber_pendant.name",
+    "desc": "item.amber_pendant.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "luck": 0.02
+    }
+  },
+  {
+    "id": "sea_glass_ring",
+    "name": "item.sea_glass_ring.name",
+    "desc": "item.sea_glass_ring.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "forage_price": 0.1
+    }
+  },
+  {
+    "id": "wolffish_fang",
+    "name": "item.wolffish_fang.name",
+    "desc": "item.wolffish_fang.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "damage": 0.1
+    }
+  },
+  {
+    "id": "pearl_earring",
+    "name": "item.pearl_earring.name",
+    "desc": "item.pearl_earring.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "air": 0.1
+    }
+  },
+  {
+    "id": "whalebone_charm",
+    "name": "item.whalebone_charm.name",
+    "desc": "item.whalebone_charm.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "health": 20
+    }
+  },
+  {
+    "id": "forge_tongs",
+    "name": "item.forge_tongs.name",
+    "desc": "item.forge_tongs.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "pumice_brush",
+    "name": "item.pumice_brush.name",
+    "desc": "item.pumice_brush.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "scurvy_brew",
+    "name": "item.scurvy_brew.name",
+    "desc": "item.scurvy_brew.desc",
+    "category": "potion",
+    "price": 90,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 0
+    }
+  },
+  {
+    "id": "warm_balm",
+    "name": "item.warm_balm.name",
+    "desc": "item.warm_balm.desc",
+    "category": "potion",
+    "price": 300,
+    "stack": 20,
+    "edible": {
+      "energy": 10,
+      "health": 5
+    },
+    "buff": {
+      "cold": 0.5,
+      "warm_now": 1,
+      "hours": 4
+    }
+  },
+  {
+    "id": "rowan_tincture",
+    "name": "item.rowan_tincture.name",
+    "desc": "item.rowan_tincture.desc",
+    "category": "potion",
+    "price": 500,
+    "stack": 20,
+    "edible": {
+      "energy": 5,
+      "health": 0
+    },
+    "buff": {
+      "hmar_ward": 1,
+      "hours": 4
+    }
+  },
+  {
+    "id": "depth_elixir",
+    "name": "item.depth_elixir.name",
+    "desc": "item.depth_elixir.desc",
+    "category": "potion",
+    "price": 250,
+    "stack": 20,
+    "buff": {
+      "air_flat": 50,
+      "hours": 24
+    }
+  },
+  {
+    "id": "depth_elixir_plus",
+    "name": "item.depth_elixir_plus.name",
+    "desc": "item.depth_elixir_plus.desc",
+    "category": "potion",
+    "price": 600,
+    "stack": 20,
+    "buff": {
+      "air_flat": 100,
+      "hours": 24
+    }
+  },
+  {
+    "id": "fisher_luck_potion",
+    "name": "item.fisher_luck_potion.name",
+    "desc": "item.fisher_luck_potion.desc",
+    "category": "potion",
+    "price": 400,
+    "stack": 20,
+    "buff": {
+      "luck": 0.05,
+      "bite": -0.2,
+      "hours": 24
+    }
+  },
+  {
+    "id": "vigor_brew",
+    "name": "item.vigor_brew.name",
+    "desc": "item.vigor_brew.desc",
+    "category": "potion",
+    "price": 120,
+    "stack": 20,
+    "edible": {
+      "energy": 15,
+      "health": 0
+    },
+    "buff": {
+      "speed": 0.1,
+      "hours": 3
+    }
+  },
+  {
+    "id": "light_water",
+    "name": "item.light_water.name",
+    "desc": "item.light_water.desc",
+    "category": "potion",
+    "price": 600,
+    "stack": 20
+  },
+  {
+    "id": "calm_potion",
+    "name": "item.calm_potion.name",
+    "desc": "item.calm_potion.desc",
+    "category": "potion",
+    "price": 2000,
+    "stack": 20,
+    "use": "calm_tomorrow"
+  },
+  {
+    "id": "raven_totem",
+    "name": "item.raven_totem.name",
+    "desc": "item.raven_totem.desc",
+    "category": "potion",
+    "price": 80,
+    "stack": 20,
+    "use": "warp:cape"
+  },
+  {
+    "id": "ebb_totem",
+    "name": "item.ebb_totem.name",
+    "desc": "item.ebb_totem.desc",
+    "category": "potion",
+    "price": 150,
+    "stack": 20,
+    "use": "warp:wreck_bay"
+  },
+  {
+    "id": "bell_totem",
+    "name": "item.bell_totem.name",
+    "desc": "item.bell_totem.desc",
+    "category": "potion",
+    "price": 150,
+    "stack": 20,
+    "use": "warp:village"
+  },
+  {
+    "id": "fried_flounder",
+    "name": "item.fried_flounder.name",
+    "desc": "item.fried_flounder.desc",
+    "category": "food",
+    "price": 308,
+    "stack": 20,
+    "edible": {
+      "energy": 55,
+      "health": 20
+    },
+    "dish": 9
+  },
+  {
+    "id": "fried_smelt",
+    "name": "item.fried_smelt.name",
+    "desc": "item.fried_smelt.desc",
+    "category": "food",
+    "price": 172,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 15
+    },
+    "dish": 11
+  },
+  {
+    "id": "kalitki",
+    "name": "item.kalitki.name",
+    "desc": "item.kalitki.desc",
+    "category": "food",
+    "price": 352,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    },
+    "dish": 13
+  },
+  {
+    "id": "rutabaga_mash",
+    "name": "item.rutabaga_mash.name",
+    "desc": "item.rutabaga_mash.desc",
+    "category": "food",
+    "price": 562,
+    "stack": 20,
+    "edible": {
+      "energy": 65,
+      "health": 25
+    },
+    "dish": 14
+  },
+  {
+    "id": "smoked_mackerel_potato",
+    "name": "item.smoked_mackerel_potato.name",
+    "desc": "item.smoked_mackerel_potato.desc",
+    "category": "food",
+    "price": 225,
+    "stack": 20,
+    "edible": {
+      "energy": 80,
+      "health": 30
+    },
+    "dish": 16,
+    "buff": {
+      "skill_fishing": 1,
+      "hours": 5
+    }
+  },
+  {
+    "id": "herring_onion",
+    "name": "item.herring_onion.name",
+    "desc": "item.herring_onion.desc",
+    "category": "food",
+    "price": 195,
+    "stack": 20,
+    "edible": {
+      "energy": 45,
+      "health": 15
+    },
+    "dish": 17
+  },
+  {
+    "id": "berg_herring",
+    "name": "item.berg_herring.name",
+    "desc": "item.berg_herring.desc",
+    "category": "food",
+    "price": 435,
+    "stack": 20,
+    "edible": {
+      "energy": 100,
+      "health": 40
+    },
+    "dish": 18,
+    "buff": {
+      "luck": 0.02,
+      "hours": 24
+    }
+  },
+  {
+    "id": "stroganina",
+    "name": "item.stroganina.name",
+    "desc": "item.stroganina.desc",
+    "category": "food",
+    "price": 135,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 10
+    },
+    "dish": 19,
+    "buff": {
+      "cold": 0.5,
+      "hours": 4
+    }
+  },
+  {
+    "id": "cured_salmon",
+    "name": "item.cured_salmon.name",
+    "desc": "item.cured_salmon.desc",
+    "category": "food",
+    "price": 750,
+    "stack": 20,
+    "edible": {
+      "energy": 120,
+      "health": 50
+    },
+    "dish": 20
+  },
+  {
+    "id": "lapskaus",
+    "name": "item.lapskaus.name",
+    "desc": "item.lapskaus.desc",
+    "category": "food",
+    "price": 450,
+    "stack": 20,
+    "edible": {
+      "energy": 110,
+      "health": 45
+    },
+    "dish": 21,
+    "buff": {
+      "xp_crafting": 0.2,
+      "hours": 6
+    }
+  },
+  {
+    "id": "mussels_ale",
+    "name": "item.mussels_ale.name",
+    "desc": "item.mussels_ale.desc",
+    "category": "food",
+    "price": 495,
+    "stack": 20,
+    "edible": {
+      "energy": 70,
+      "health": 30
+    },
+    "dish": 23,
+    "buff": {
+      "air": 0.1,
+      "hours": 6
+    }
+  },
+  {
+    "id": "steamed_lobster",
+    "name": "item.steamed_lobster.name",
+    "desc": "item.steamed_lobster.desc",
+    "category": "food",
+    "price": 555,
+    "stack": 20,
+    "edible": {
+      "energy": 150,
+      "health": 60
+    },
+    "dish": 24,
+    "buff": {
+      "luck": 0.04,
+      "hours": 24
+    }
+  },
+  {
+    "id": "roe_bread",
+    "name": "item.roe_bread.name",
+    "desc": "item.roe_bread.desc",
+    "category": "food",
+    "price": 218,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    },
+    "dish": 25,
+    "buff": {
+      "speed": 0.1,
+      "hours": 4
+    }
+  },
+  {
+    "id": "red_kelp_pudding",
+    "name": "item.red_kelp_pudding.name",
+    "desc": "item.red_kelp_pudding.desc",
+    "category": "food",
+    "price": 375,
+    "stack": 20,
+    "edible": {
+      "energy": 70,
+      "health": 40
+    },
+    "dish": 26
+  },
+  {
+    "id": "samphire_salad",
+    "name": "item.samphire_salad.name",
+    "desc": "item.samphire_salad.desc",
+    "category": "food",
+    "price": 345,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 15
+    },
+    "dish": 27,
+    "buff": {
+      "speed": 0.1,
+      "hours": 3
+    }
+  },
+  {
+    "id": "squid_onion",
+    "name": "item.squid_onion.name",
+    "desc": "item.squid_onion.desc",
+    "category": "food",
+    "price": 398,
+    "stack": 20,
+    "edible": {
+      "energy": 90,
+      "health": 35
+    },
+    "dish": 28,
+    "buff": {
+      "night_sight": 2,
+      "hours": 8
+    }
+  },
+  {
+    "id": "buckthorn_tea",
+    "name": "item.buckthorn_tea.name",
+    "desc": "item.buckthorn_tea.desc",
+    "category": "food",
+    "price": 112,
+    "stack": 20,
+    "edible": {
+      "energy": 30,
+      "health": 10
+    },
+    "dish": 30,
+    "buff": {
+      "cold": 0.3,
+      "hours": 3
+    }
+  },
+  {
+    "id": "cranberry_mors",
+    "name": "item.cranberry_mors.name",
+    "desc": "item.cranberry_mors.desc",
+    "category": "food",
+    "price": 428,
+    "stack": 20,
+    "edible": {
+      "energy": 35,
+      "health": 10
+    },
+    "dish": 31,
+    "buff": {
+      "luck": 0.02,
+      "hours": 24
+    }
+  },
+  {
+    "id": "erland_grog",
+    "name": "item.erland_grog.name",
+    "desc": "item.erland_grog.desc",
+    "category": "food",
+    "price": 488,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    },
+    "dish": 33,
+    "buff": {
+      "cold": 0.8,
+      "skill_seafaring": 1,
+      "hours": 4
+    }
+  },
+  {
+    "id": "triple_ukha",
+    "name": "item.triple_ukha.name",
+    "desc": "item.triple_ukha.desc",
+    "category": "food",
+    "price": 232,
+    "stack": 20,
+    "edible": {
+      "energy": 160,
+      "health": 70
+    },
+    "dish": 34,
+    "buff": {
+      "skill_fishing": 2,
+      "hours": 8
+    }
+  },
+  {
+    "id": "cod_solvik",
+    "name": "item.cod_solvik.name",
+    "desc": "item.cod_solvik.desc",
+    "category": "food",
+    "price": 510,
+    "stack": 20,
+    "edible": {
+      "energy": 100,
+      "health": 40
+    },
+    "dish": 35
+  },
+  {
+    "id": "baked_halibut",
+    "name": "item.baked_halibut.name",
+    "desc": "item.baked_halibut.desc",
+    "category": "food",
+    "price": 990,
+    "stack": 20,
+    "edible": {
+      "energy": 170,
+      "health": 70
+    },
+    "dish": 36,
+    "buff": {
+      "skill_seafaring": 1,
+      "hours": 6
+    }
+  },
+  {
+    "id": "eel_bread",
+    "name": "item.eel_bread.name",
+    "desc": "item.eel_bread.desc",
+    "category": "food",
+    "price": 818,
+    "stack": 20,
+    "edible": {
+      "energy": 100,
+      "health": 40
+    },
+    "dish": 37,
+    "buff": {
+      "defense": 0.1,
+      "hours": 5
+    }
+  },
+  {
+    "id": "last_supper_pie",
+    "name": "item.last_supper_pie.name",
+    "desc": "item.last_supper_pie.desc",
+    "category": "food",
+    "price": 922,
+    "stack": 20,
+    "edible": {
+      "energy": 200,
+      "health": 80
+    },
+    "dish": 38,
+    "buff": {
+      "skill_all": 1,
+      "until_night": 1
+    }
+  },
+  {
+    "id": "kale_soup",
+    "name": "item.kale_soup.name",
+    "desc": "item.kale_soup.desc",
+    "category": "food",
+    "price": 472,
+    "stack": 20,
+    "edible": {
+      "energy": 80,
+      "health": 30
+    },
+    "dish": 39
+  },
+  {
+    "id": "pumpkin_soup",
+    "name": "item.pumpkin_soup.name",
+    "desc": "item.pumpkin_soup.desc",
+    "category": "food",
+    "price": 712,
+    "stack": 20,
+    "edible": {
+      "energy": 110,
+      "health": 45
+    },
+    "dish": 40,
+    "buff": {
+      "skill_farming": 1,
+      "hours": 6
+    }
+  },
+  {
+    "id": "honey_parsnip",
+    "name": "item.honey_parsnip.name",
+    "desc": "item.honey_parsnip.desc",
+    "category": "food",
+    "price": 405,
+    "stack": 20,
+    "edible": {
+      "energy": 70,
+      "health": 25
+    },
+    "dish": 41
+  },
+  {
+    "id": "sea_kale_soup",
+    "name": "item.sea_kale_soup.name",
+    "desc": "item.sea_kale_soup.desc",
+    "category": "food",
+    "price": 225,
+    "stack": 20,
+    "edible": {
+      "energy": 50,
+      "health": 20
+    },
+    "dish": 42
+  },
+  {
+    "id": "shrimp_omelette",
+    "name": "item.shrimp_omelette.name",
+    "desc": "item.shrimp_omelette.desc",
+    "category": "food",
+    "price": 330,
+    "stack": 20,
+    "edible": {
+      "energy": 90,
+      "health": 35
+    },
+    "dish": 43
+  },
+  {
+    "id": "cheese_bread",
+    "name": "item.cheese_bread.name",
+    "desc": "item.cheese_bread.desc",
+    "category": "food",
+    "price": 382,
+    "stack": 20,
+    "edible": {
+      "energy": 75,
+      "health": 30
+    },
+    "dish": 44
+  },
+  {
+    "id": "honey_cakes",
+    "name": "item.honey_cakes.name",
+    "desc": "item.honey_cakes.desc",
+    "category": "food",
+    "price": 338,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    },
+    "dish": 45
+  },
+  {
+    "id": "whelk_chowder",
+    "name": "item.whelk_chowder.name",
+    "desc": "item.whelk_chowder.desc",
+    "category": "food",
+    "price": 532,
+    "stack": 20,
+    "edible": {
+      "energy": 85,
+      "health": 35
+    },
+    "dish": 46
+  },
+  {
+    "id": "herring_sandwich",
+    "name": "item.herring_sandwich.name",
+    "desc": "item.herring_sandwich.desc",
+    "category": "food",
+    "price": 142,
+    "stack": 20,
+    "edible": {
+      "energy": 55,
+      "health": 20
+    },
+    "dish": 47
+  },
+  {
+    "id": "fried_morels",
+    "name": "item.fried_morels.name",
+    "desc": "item.fried_morels.desc",
+    "category": "food",
+    "price": 390,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    },
+    "dish": 48
+  },
+  {
+    "id": "blueberry_pie",
+    "name": "item.blueberry_pie.name",
+    "desc": "item.blueberry_pie.desc",
+    "category": "food",
+    "price": 262,
+    "stack": 20,
+    "edible": {
+      "energy": 90,
+      "health": 35
+    },
+    "dish": 49
+  },
+  {
+    "id": "fish_cakes",
+    "name": "item.fish_cakes.name",
+    "desc": "item.fish_cakes.desc",
+    "category": "food",
+    "price": 248,
+    "stack": 20,
+    "edible": {
+      "energy": 75,
+      "health": 30
+    },
+    "dish": 50
+  },
+  {
+    "id": "decor_stool",
+    "name": "item.decor_stool.name",
+    "desc": "item.decor_stool.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_driftwood_table",
+    "name": "item.decor_driftwood_table.name",
+    "desc": "item.decor_driftwood_table.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_wall_shelf",
+    "name": "item.decor_wall_shelf.name",
+    "desc": "item.decor_wall_shelf.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_rag_rug",
+    "name": "item.decor_rag_rug.name",
+    "desc": "item.decor_rag_rug.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_net_curtain",
+    "name": "item.decor_net_curtain.name",
+    "desc": "item.decor_net_curtain.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_rope_coil",
+    "name": "item.decor_rope_coil.name",
+    "desc": "item.decor_rope_coil.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_lantern_hook",
+    "name": "item.decor_lantern_hook.name",
+    "desc": "item.decor_lantern_hook.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_coat_rack",
+    "name": "item.decor_coat_rack.name",
+    "desc": "item.decor_coat_rack.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_crate_table",
+    "name": "item.decor_crate_table.name",
+    "desc": "item.decor_crate_table.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_plank_bench",
+    "name": "item.decor_plank_bench.name",
+    "desc": "item.decor_plank_bench.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_wash_tub",
+    "name": "item.decor_wash_tub.name",
+    "desc": "item.decor_wash_tub.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_water_butt",
+    "name": "item.decor_water_butt.name",
+    "desc": "item.decor_water_butt.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_oar_rack",
+    "name": "item.decor_oar_rack.name",
+    "desc": "item.decor_oar_rack.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_flower_box",
+    "name": "item.decor_flower_box.name",
+    "desc": "item.decor_flower_box.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_cork_garland",
+    "name": "item.decor_cork_garland.name",
+    "desc": "item.decor_cork_garland.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_shell_mobile",
+    "name": "item.decor_shell_mobile.name",
+    "desc": "item.decor_shell_mobile.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_driftwood_frame",
+    "name": "item.decor_driftwood_frame.name",
+    "desc": "item.decor_driftwood_frame.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_hearth_rug",
+    "name": "item.decor_hearth_rug.name",
+    "desc": "item.decor_hearth_rug.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_log_seat",
+    "name": "item.decor_log_seat.name",
+    "desc": "item.decor_log_seat.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_tide_board",
+    "name": "item.decor_tide_board.name",
+    "desc": "item.decor_tide_board.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 1
+  },
+  {
+    "id": "decor_oak_table",
+    "name": "item.decor_oak_table.name",
+    "desc": "item.decor_oak_table.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_oak_chair",
+    "name": "item.decor_oak_chair.name",
+    "desc": "item.decor_oak_chair.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_bookshelf",
+    "name": "item.decor_bookshelf.name",
+    "desc": "item.decor_bookshelf.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_wardrobe",
+    "name": "item.decor_wardrobe.name",
+    "desc": "item.decor_wardrobe.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_bed_single",
+    "name": "item.decor_bed_single.name",
+    "desc": "item.decor_bed_single.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_sea_chest_decor",
+    "name": "item.decor_sea_chest_decor.name",
+    "desc": "item.decor_sea_chest_decor.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_brass_lamp",
+    "name": "item.decor_brass_lamp.name",
+    "desc": "item.decor_brass_lamp.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_glass_lamp",
+    "name": "item.decor_glass_lamp.name",
+    "desc": "item.decor_glass_lamp.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_painting_cape",
+    "name": "item.decor_painting_cape.name",
+    "desc": "item.decor_painting_cape.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_painting_village",
+    "name": "item.decor_painting_village.name",
+    "desc": "item.decor_painting_village.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_painting_teeth",
+    "name": "item.decor_painting_teeth.name",
+    "desc": "item.decor_painting_teeth.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_model_chayka",
+    "name": "item.decor_model_chayka.name",
+    "desc": "item.decor_model_chayka.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_model_queen",
+    "name": "item.decor_model_queen.name",
+    "desc": "item.decor_model_queen.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_aquarium",
+    "name": "item.decor_aquarium.name",
+    "desc": "item.decor_aquarium.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_globe",
+    "name": "item.decor_globe.name",
+    "desc": "item.decor_globe.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_barometer_decor",
+    "name": "item.decor_barometer_decor.name",
+    "desc": "item.decor_barometer_decor.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_chart_table",
+    "name": "item.decor_chart_table.name",
+    "desc": "item.decor_chart_table.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_wool_rug",
+    "name": "item.decor_wool_rug.name",
+    "desc": "item.decor_wool_rug.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_linen_curtain",
+    "name": "item.decor_linen_curtain.name",
+    "desc": "item.decor_linen_curtain.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_wreath",
+    "name": "item.decor_wreath.name",
+    "desc": "item.decor_wreath.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "decor_carved_armchair",
+    "name": "item.decor_carved_armchair.name",
+    "desc": "item.decor_carved_armchair.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_carved_bed",
+    "name": "item.decor_carved_bed.name",
+    "desc": "item.decor_carved_bed.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_grand_clock",
+    "name": "item.decor_grand_clock.name",
+    "desc": "item.decor_grand_clock.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_lens_lamp",
+    "name": "item.decor_lens_lamp.name",
+    "desc": "item.decor_lens_lamp.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_painting_aurora",
+    "name": "item.decor_painting_aurora.name",
+    "desc": "item.decor_painting_aurora.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_painting_rann",
+    "name": "item.decor_painting_rann.name",
+    "desc": "item.decor_painting_rann.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_painting_agatha",
+    "name": "item.decor_painting_agatha.name",
+    "desc": "item.decor_painting_agatha.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_model_berta",
+    "name": "item.decor_model_berta.name",
+    "desc": "item.decor_model_berta.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_ship_in_bottle",
+    "name": "item.decor_ship_in_bottle.name",
+    "desc": "item.decor_ship_in_bottle.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_stuffed_old_codger",
+    "name": "item.decor_stuffed_old_codger.name",
+    "desc": "item.decor_stuffed_old_codger.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_stuffed_herring_king",
+    "name": "item.decor_stuffed_herring_king.name",
+    "desc": "item.decor_stuffed_herring_king.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_stuffed_golden_halibut",
+    "name": "item.decor_stuffed_golden_halibut.name",
+    "desc": "item.decor_stuffed_golden_halibut.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_stuffed_grandmother",
+    "name": "item.decor_stuffed_grandmother.name",
+    "desc": "item.decor_stuffed_grandmother.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_stuffed_lantern_fish",
+    "name": "item.decor_stuffed_lantern_fish.name",
+    "desc": "item.decor_stuffed_lantern_fish.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_brass_telescope",
+    "name": "item.decor_brass_telescope.name",
+    "desc": "item.decor_brass_telescope.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_trophy_cup",
+    "name": "item.decor_trophy_cup.name",
+    "desc": "item.decor_trophy_cup.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_seasonal_garland",
+    "name": "item.decor_seasonal_garland.name",
+    "desc": "item.decor_seasonal_garland.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_aurora_rug",
+    "name": "item.decor_aurora_rug.name",
+    "desc": "item.decor_aurora_rug.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_amber_lamp",
+    "name": "item.decor_amber_lamp.name",
+    "desc": "item.decor_amber_lamp.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "decor_memorial_plaque",
+    "name": "item.decor_memorial_plaque.name",
+    "desc": "item.decor_memorial_plaque.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
+  },
+  {
+    "id": "forge",
+    "name": "item.forge.name",
+    "desc": "item.forge.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "forge"
+  },
+  {
+    "id": "salt_pan",
+    "name": "item.salt_pan.name",
+    "desc": "item.salt_pan.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "salt_pan"
+  },
+  {
+    "id": "brine_barrel",
+    "name": "item.brine_barrel.name",
+    "desc": "item.brine_barrel.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "brine_barrel"
+  },
+  {
+    "id": "smokehouse",
+    "name": "item.smokehouse.name",
+    "desc": "item.smokehouse.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "smokehouse"
+  },
+  {
+    "id": "sawhorse",
+    "name": "item.sawhorse.name",
+    "desc": "item.sawhorse.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "sawhorse"
+  },
+  {
+    "id": "tar_kiln",
+    "name": "item.tar_kiln.name",
+    "desc": "item.tar_kiln.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "tar_kiln"
+  },
+  {
+    "id": "scutcher",
+    "name": "item.scutcher.name",
+    "desc": "item.scutcher.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "scutcher"
+  },
+  {
+    "id": "spinning_wheel",
+    "name": "item.spinning_wheel.name",
+    "desc": "item.spinning_wheel.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "spinning_wheel"
+  },
+  {
+    "id": "loom",
+    "name": "item.loom.name",
+    "desc": "item.loom.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "loom"
+  },
+  {
+    "id": "ash_kiln",
+    "name": "item.ash_kiln.name",
+    "desc": "item.ash_kiln.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "ash_kiln"
+  },
+  {
+    "id": "drying_rack",
+    "name": "item.drying_rack.name",
+    "desc": "item.drying_rack.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "drying_rack"
+  },
+  {
+    "id": "glass_furnace",
+    "name": "item.glass_furnace.name",
+    "desc": "item.glass_furnace.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "glass_furnace"
+  },
+  {
+    "id": "optical_bench",
+    "name": "item.optical_bench.name",
+    "desc": "item.optical_bench.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "optical_bench"
+  },
+  {
+    "id": "carpentry_table",
+    "name": "item.carpentry_table.name",
+    "desc": "item.carpentry_table.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "carpentry_table"
+  },
+  {
+    "id": "stonecutter_table",
+    "name": "item.stonecutter_table.name",
+    "desc": "item.stonecutter_table.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "stonecutter_table"
+  },
+  {
+    "id": "candle_mold",
+    "name": "item.candle_mold.name",
+    "desc": "item.candle_mold.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "candle_mold"
+  },
+  {
+    "id": "butter_churn",
+    "name": "item.butter_churn.name",
+    "desc": "item.butter_churn.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "butter_churn"
+  },
+  {
+    "id": "cheese_press",
+    "name": "item.cheese_press.name",
+    "desc": "item.cheese_press.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "cheese_press"
+  },
+  {
+    "id": "brewery",
+    "name": "item.brewery.name",
+    "desc": "item.brewery.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "brewery"
+  },
+  {
+    "id": "wine_vat",
+    "name": "item.wine_vat.name",
+    "desc": "item.wine_vat.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "wine_vat"
+  },
+  {
+    "id": "preserve_jars",
+    "name": "item.preserve_jars.name",
+    "desc": "item.preserve_jars.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "preserve_jars"
+  },
+  {
+    "id": "still",
+    "name": "item.still.name",
+    "desc": "item.still.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "still"
+  },
+  {
+    "id": "seed_box",
+    "name": "item.seed_box.name",
+    "desc": "item.seed_box.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "seed_box"
+  },
+  {
+    "id": "herbal_table",
+    "name": "item.herbal_table.name",
+    "desc": "item.herbal_table.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "herbal_table"
+  },
+  {
+    "id": "kitchen_stove",
+    "name": "item.kitchen_stove.name",
+    "desc": "item.kitchen_stove.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "kitchen_stove"
+  },
+  {
+    "id": "mill",
+    "name": "item.mill.name",
+    "desc": "item.mill.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "mill"
+  },
+  {
+    "id": "receiver_chest",
+    "name": "item.receiver_chest.name",
+    "desc": "item.receiver_chest.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "receiver_chest"
+  },
+  {
+    "id": "cellar_barrel",
+    "name": "item.cellar_barrel.name",
+    "desc": "item.cellar_barrel.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 5,
+    "place": "cellar_barrel"
+  },
+  {
+    "id": "decor_stained_window",
+    "name": "item.decor_stained_window.name",
+    "desc": "item.decor_stained_window.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 20,
+    "place": "decor",
+    "tier": 3
   }
 ]

@@ -1,6 +1,84 @@
 [
-  {
-    "id": "cat_wick",
-    "name": "npc.pet_cat.name"
-  }
+ {
+  "id": "chicken",
+  "name": "animal.chicken",
+  "price": 800,
+  "home": "coop",
+  "level": 1,
+  "product": "egg",
+  "big": "egg_large",
+  "every": 1,
+  "feed": "hay"
+ },
+ {
+  "id": "duck",
+  "name": "animal.duck",
+  "price": 1200,
+  "home": "coop",
+  "level": 2,
+  "product": "duck_egg",
+  "extra": "duck_feather",
+  "extra_chance": 0.25,
+  "every": 2,
+  "feed": "hay"
+ },
+ {
+  "id": "eider",
+  "name": "animal.eider",
+  "price": 2000,
+  "home": "eider_nest",
+  "level": 1,
+  "product": "eider_down",
+  "every": 0,
+  "season": "spring",
+  "feed": "",
+  "after_day": 23
+ },
+ {
+  "id": "sheep",
+  "name": "animal.sheep",
+  "price": 4000,
+  "home": "barn",
+  "level": 1,
+  "product": "wool",
+  "every": 3,
+  "feed": "hay",
+  "seaweed": true,
+  "manure": 0.5
+ },
+ {
+  "id": "goat",
+  "name": "animal.goat",
+  "price": 2000,
+  "home": "barn",
+  "level": 2,
+  "product": "goat_milk",
+  "every": 2,
+  "feed": "hay",
+  "seaweed": true,
+  "manure": 0.5
+ },
+ {
+  "id": "cow",
+  "name": "animal.cow",
+  "price": 1500,
+  "home": "barn",
+  "level": 1,
+  "product": "milk",
+  "every": 1,
+  "feed": "hay",
+  "manure": 0.5
+ },
+ {
+  "id": "pony",
+  "name": "animal.pony",
+  "price": 3000,
+  "home": "stable",
+  "level": 1,
+  "product": "",
+  "every": 0,
+  "feed": "hay",
+  "after_day": 28,
+  "speed": 1.6
+ }
 ]

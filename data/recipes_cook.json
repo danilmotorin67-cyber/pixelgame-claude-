@@ -1,139 +1,1079 @@
 [
-  {
-    "id": "cook_drowned_stew",
-    "station": "hearth",
-    "in": [
-      [
-        "kelp",
-        1
-      ],
-      [
-        "tag:fish",
-        1
-      ]
-    ],
-    "out": [
-      "drowned_stew",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cook_bread_rye",
-    "station": "hearth",
-    "in": [
-      [
-        "rye_flour",
-        1
-      ],
-      [
-        "salt",
-        1
-      ]
-    ],
-    "out": [
-      "bread_rye",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cook_barley_porridge",
-    "station": "hearth",
-    "in": [
-      [
-        "barley",
-        1
-      ],
-      [
-        "milk",
-        1
-      ]
-    ],
-    "out": [
-      "barley_porridge",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cook_eggs_onion",
-    "station": "hearth",
-    "in": [
-      [
-        "egg",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "out": [
-      "eggs_onion",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cook_keeper_rusks",
-    "station": "hearth",
-    "in": [
-      [
-        "bread_rye",
-        1
-      ],
-      [
-        "salt",
-        1
-      ]
-    ],
-    "out": [
-      "keeper_rusks",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cook_keeper_soup",
-    "station": "hearth",
-    "in": [
-      [
-        "tag:fish",
-        1
-      ],
-      [
-        "potato",
-        1
-      ],
-      [
-        "onion",
-        1
-      ]
-    ],
-    "out": [
-      "keeper_soup",
-      1
-    ],
-    "unlock": "q1_3"
-  },
-  {
-    "id": "cook_potato_flatbread",
-    "station": "hearth",
-    "in": [
-      [
-        "potato",
-        2
-      ],
-      [
-        "butter",
-        1
-      ]
-    ],
-    "out": [
-      "potato_flatbread",
-      1
-    ],
-    "unlock": "margit_3"
-  }
+ {
+  "id": "cook_keeper_soup",
+  "station": "hearth",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "keeper_soup",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_drowned_stew",
+  "station": "hearth",
+  "in": [
+   [
+    "kelp",
+    1
+   ],
+   [
+    "tag:fish",
+    1
+   ]
+  ],
+  "out": [
+   "drowned_stew",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "cook_bread_rye",
+  "station": "hearth",
+  "in": [
+   [
+    "rye_flour",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "bread_rye",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "cook_barley_porridge",
+  "station": "hearth",
+  "in": [
+   [
+    "barley",
+    1
+   ],
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "barley_porridge",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "cook_eggs_onion",
+  "station": "hearth",
+  "in": [
+   [
+    "tag:egg",
+    1
+   ],
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "eggs_onion",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "cook_rosehip_tea",
+  "station": "hearth",
+  "in": [
+   [
+    "rosehip",
+    3
+   ]
+  ],
+  "out": [
+   "rosehip_tea",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_keeper_rusks",
+  "station": "hearth",
+  "in": [
+   [
+    "bread_rye",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "keeper_rusks",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "cook_potato_flatbread",
+  "station": "hearth",
+  "in": [
+   [
+    "potato",
+    2
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "potato_flatbread",
+   1
+  ],
+  "unlock": "hearts:npc_margit:3"
+ },
+ {
+  "id": "cook_fried_flounder",
+  "station": "hearth",
+  "in": [
+   [
+    "fish_flounder",
+    1
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "fried_flounder",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_heather_tea",
+  "station": "hearth",
+  "in": [
+   [
+    "heather",
+    2
+   ]
+  ],
+  "out": [
+   "heather_tea",
+   1
+  ],
+  "unlock": "hearts:npc_helga:3"
+ },
+ {
+  "id": "cook_fried_smelt",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_smelt",
+    2
+   ],
+   [
+    "flour",
+    1
+   ]
+  ],
+  "out": [
+   "fried_smelt",
+   1
+  ],
+  "unlock": "hearts:npc_olaf:3"
+ },
+ {
+  "id": "cook_fish_pie",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_cod",
+    1
+   ],
+   [
+    "flour",
+    1
+   ],
+   [
+    "tag:egg",
+    1
+   ]
+  ],
+  "out": [
+   "fish_pie",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_kalitki",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "rye_flour",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "kalitki",
+   1
+  ],
+  "unlock": "hearts:npc_solveig:3"
+ },
+ {
+  "id": "cook_rutabaga_mash",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "rutabaga",
+    1
+   ],
+   [
+    "butter",
+    1
+   ],
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "rutabaga_mash",
+   1
+  ],
+  "unlock": "hearts:npc_solveig:5"
+ },
+ {
+  "id": "cook_rhubarb_pie",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "rhubarb",
+    2
+   ],
+   [
+    "flour",
+    1
+   ],
+   [
+    "sugar",
+    1
+   ]
+  ],
+  "out": [
+   "rhubarb_pie",
+   1
+  ],
+  "unlock": "hearts:npc_solveig:8"
+ },
+ {
+  "id": "cook_smoked_mackerel_potato",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "smoked_mackerel",
+    1
+   ],
+   [
+    "potato",
+    1
+   ]
+  ],
+  "out": [
+   "smoked_mackerel_potato",
+   1
+  ],
+  "unlock": "hearts:npc_einar:3"
+ },
+ {
+  "id": "cook_herring_onion",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "salted_herring",
+    1
+   ],
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "herring_onion",
+   1
+  ],
+  "unlock": "hearts:npc_karl:3"
+ },
+ {
+  "id": "cook_berg_herring",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "salted_herring",
+    1
+   ],
+   [
+    "beet",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "tag:egg",
+    1
+   ]
+  ],
+  "out": [
+   "berg_herring",
+   1
+  ],
+  "unlock": "hearts:npc_karl:8"
+ },
+ {
+  "id": "cook_stroganina",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "tag:winter_fish",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "stroganina",
+   1
+  ],
+  "unlock": "hearts:npc_magnus:3"
+ },
+ {
+  "id": "cook_cured_salmon",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_salmon",
+    1
+   ],
+   [
+    "salt",
+    1
+   ],
+   [
+    "dill",
+    1
+   ]
+  ],
+  "out": [
+   "cured_salmon",
+   1
+  ],
+  "unlock": "hearts:npc_hedda:5"
+ },
+ {
+  "id": "cook_lapskaus",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "tag:smoked",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "beet",
+    1
+   ],
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "lapskaus",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_lutefisk",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "stockfish",
+    1
+   ],
+   [
+    "kelp_ash",
+    1
+   ]
+  ],
+  "out": [
+   "lutefisk",
+   1
+  ],
+  "unlock": "hearts:npc_helga:5"
+ },
+ {
+  "id": "cook_mussels_ale",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "mussels",
+    5
+   ],
+   [
+    "ale",
+    1
+   ]
+  ],
+  "out": [
+   "mussels_ale",
+   1
+  ],
+  "unlock": "hearts:npc_knud:3"
+ },
+ {
+  "id": "cook_steamed_lobster",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "lobster",
+    1
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "steamed_lobster",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_roe_bread",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "lumpfish_roe",
+    1
+   ],
+   [
+    "bread_rye",
+    1
+   ]
+  ],
+  "out": [
+   "roe_bread",
+   1
+  ],
+  "unlock": "hearts:npc_halvdan:2"
+ },
+ {
+  "id": "cook_red_kelp_pudding",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "red_kelp",
+    3
+   ],
+   [
+    "milk",
+    1
+   ],
+   [
+    "sugar",
+    1
+   ]
+  ],
+  "out": [
+   "red_kelp_pudding",
+   1
+  ],
+  "unlock": "hearts:npc_liv:3"
+ },
+ {
+  "id": "cook_samphire_salad",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "samphire",
+    2
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "samphire_salad",
+   1
+  ],
+  "unlock": "hearts:npc_liv:5"
+ },
+ {
+  "id": "cook_squid_onion",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_squid",
+    1
+   ],
+   [
+    "onion",
+    1
+   ],
+   [
+    "bread_rye",
+    1
+   ]
+  ],
+  "out": [
+   "squid_onion",
+   1
+  ],
+  "unlock": "hearts:npc_liv:7"
+ },
+ {
+  "id": "cook_cloudberry_pie",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "cloudberry",
+    2
+   ],
+   [
+    "flour",
+    1
+   ],
+   [
+    "butter",
+    1
+   ],
+   [
+    "sugar",
+    1
+   ]
+  ],
+  "out": [
+   "cloudberry_pie",
+   1
+  ],
+  "unlock": "hearts:npc_ingrid:5"
+ },
+ {
+  "id": "cook_buckthorn_tea",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "sea_buckthorn",
+    1
+   ],
+   [
+    "tea",
+    1
+   ]
+  ],
+  "out": [
+   "buckthorn_tea",
+   1
+  ],
+  "unlock": "hearts:npc_helga:7"
+ },
+ {
+  "id": "cook_cranberry_mors",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "cranberry",
+    3
+   ],
+   [
+    "tag:honey",
+    1
+   ]
+  ],
+  "out": [
+   "cranberry_mors",
+   1
+  ],
+  "unlock": "hearts:npc_bjorn:3"
+ },
+ {
+  "id": "cook_grog",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "rum",
+    1
+   ],
+   [
+    "tea",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ]
+  ],
+  "out": [
+   "grog",
+   1
+  ],
+  "unlock": "hearts:npc_hedda:3"
+ },
+ {
+  "id": "cook_erland_grog",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "rum",
+    1
+   ],
+   [
+    "tea",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ],
+   [
+    "sea_buckthorn",
+    1
+   ]
+  ],
+  "out": [
+   "erland_grog",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_triple_ukha",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "tag:fish",
+    3
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "triple_ukha",
+   1
+  ],
+  "unlock": "hearts:npc_erland:5"
+ },
+ {
+  "id": "cook_cod_solvik",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_cod",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "butter",
+    1
+   ],
+   [
+    "tag:egg",
+    1
+   ]
+  ],
+  "out": [
+   "cod_solvik",
+   1
+  ],
+  "unlock": "hearts:npc_bjorn:5"
+ },
+ {
+  "id": "cook_baked_halibut",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fish_halibut",
+    1
+   ],
+   [
+    "leek",
+    1
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "baked_halibut",
+   1
+  ],
+  "unlock": "hearts:npc_erland:7"
+ },
+ {
+  "id": "cook_eel_bread",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "smoked_eel",
+    1
+   ],
+   [
+    "bread_rye",
+    1
+   ]
+  ],
+  "out": [
+   "eel_bread",
+   1
+  ],
+  "unlock": "hearts:npc_tora:3"
+ },
+ {
+  "id": "cook_last_supper_pie",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "pumpkin",
+    1
+   ],
+   [
+    "cloudberry",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ],
+   [
+    "flour",
+    1
+   ]
+  ],
+  "out": [
+   "last_supper_pie",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_kale_soup",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "kale",
+    1
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "kale_soup",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_pumpkin_soup",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "pumpkin",
+    1
+   ],
+   [
+    "milk",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "pumpkin_soup",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_honey_parsnip",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "parsnip",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ]
+  ],
+  "out": [
+   "honey_parsnip",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_sea_kale_soup",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "sea_kale",
+    1
+   ],
+   [
+    "potato",
+    1
+   ]
+  ],
+  "out": [
+   "sea_kale_soup",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_shrimp_omelette",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "tag:egg",
+    2
+   ],
+   [
+    "shrimp",
+    3
+   ]
+  ],
+  "out": [
+   "shrimp_omelette",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_cheese_bread",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "cheese",
+    1
+   ],
+   [
+    "bread_rye",
+    1
+   ]
+  ],
+  "out": [
+   "cheese_bread",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_honey_cakes",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "flour",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ],
+   [
+    "tag:egg",
+    1
+   ]
+  ],
+  "out": [
+   "honey_cakes",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_whelk_chowder",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "whelk",
+    3
+   ],
+   [
+    "potato",
+    1
+   ],
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "whelk_chowder",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_herring_sandwich",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "salted_herring",
+    1
+   ],
+   [
+    "bread_rye",
+    1
+   ]
+  ],
+  "out": [
+   "herring_sandwich",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_fried_morels",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "morel",
+    2
+   ],
+   [
+    "butter",
+    1
+   ]
+  ],
+  "out": [
+   "fried_morels",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_blueberry_pie",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "blueberry",
+    2
+   ],
+   [
+    "flour",
+    1
+   ],
+   [
+    "sugar",
+    1
+   ]
+  ],
+  "out": [
+   "blueberry_pie",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_fish_cakes",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "fillet",
+    2
+   ],
+   [
+    "tag:egg",
+    1
+   ],
+   [
+    "flour",
+    1
+   ]
+  ],
+  "out": [
+   "fish_cakes",
+   1
+  ],
+  "unlock": "gazette"
+ },
+ {
+  "id": "cook_ukha",
+  "station": "kitchen_stove",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ],
+   [
+    "potato",
+    1
+   ]
+  ],
+  "out": [
+   "ukha",
+   1
+  ],
+  "unlock": "start"
+ }
 ]

@@ -1,319 +1,1292 @@
 {
-  "nodes": [
-    {
-      "id": "M1",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 0
-      },
-      "requires": [],
-      "unlocks": [
-        "ritual",
-        "lamp:wick",
-        "lens:old_mirror",
-        "mechanism:weights",
-        "signal:hand_bell"
-      ]
-    },
-    {
-      "id": "P1",
-      "branch": "graveyard",
-      "cost": {
-        "rest": 0
-      },
-      "requires": [],
-      "unlocks": []
-    },
-    {
-      "id": "Z1",
-      "branch": "land",
-      "cost": {
-        "land": 0
-      },
-      "requires": [],
-      "unlocks": []
-    },
-    {
-      "id": "S1",
-      "branch": "sea",
-      "cost": {
-        "sea": 0
-      },
-      "requires": [],
-      "unlocks": []
-    },
-    {
-      "id": "R1",
-      "branch": "craft",
-      "cost": {
-        "land": 0
-      },
-      "requires": [],
-      "unlocks": []
-    },
-    {
-      "id": "T1",
-      "branch": "secret",
-      "cost": {
-        "rest": 0
-      },
-      "requires": [],
-      "unlocks": []
-    },
-    {
-      "id": "M2",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 3
-      },
-      "requires": [
-        "M1"
-      ],
-      "unlocks": [
-        "station:renderer"
-      ]
-    },
-    {
-      "id": "M3",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 5
-      },
-      "requires": [
-        "M2"
-      ],
-      "unlocks": [
-        "station:settling_tank"
-      ]
-    },
-    {
-      "id": "M4",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 6,
-        "land": 2
-      },
-      "requires": [
-        "M1"
-      ],
-      "unlocks": [
-        "recipe:parabolic"
-      ]
-    },
-    {
-      "id": "M5",
-      "branch": "lighthouse",
-      "cost": {},
-      "requires": [
-        "M1"
-      ],
-      "unlocks": [
-        "tower_repair"
-      ],
-      "story": "q1_8"
-    },
-    {
-      "id": "M6",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 8
-      },
-      "requires": [
-        "M5"
-      ],
-      "unlocks": [
-        "recipe:lightning_rod"
-      ]
-    },
-    {
-      "id": "M7",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 12,
-        "land": 4
-      },
-      "requires": [
-        "M4"
-      ],
-      "unlocks": [
-        "station:optical_bench",
-        "recipe:prism"
-      ]
-    },
-    {
-      "id": "M8",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 15
-      },
-      "requires": [
-        "M7"
-      ],
-      "unlocks": [
-        "recipe:fresnel_4"
-      ]
-    },
-    {
-      "id": "M9",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 10
-      },
-      "requires": [
-        "M4"
-      ],
-      "unlocks": [
-        "recipe:argand"
-      ]
-    },
-    {
-      "id": "M10",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 10,
-        "rest": 5
-      },
-      "requires": [
-        "M1"
-      ],
-      "unlocks": [
-        "recipe:clock_bell",
-        "recipe:bellows_horn"
-      ]
-    },
-    {
-      "id": "M11",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 18
-      },
-      "requires": [
-        "M9"
-      ],
-      "unlocks": [
-        "recipe:reservoir_3",
-        "recipe:precise_clock"
-      ]
-    },
-    {
-      "id": "M12",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 25,
-        "rest": 5
-      },
-      "requires": [
-        "M8"
-      ],
-      "unlocks": [
-        "recipe:fresnel_3"
-      ]
-    },
-    {
-      "id": "M13",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 25
-      },
-      "requires": [
-        "M9",
-        "M11"
-      ],
-      "unlocks": [
-        "recipe:incandescent"
-      ]
-    },
-    {
-      "id": "M14",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 30,
-        "rest": 10
-      },
-      "requires": [
-        "M12"
-      ],
-      "unlocks": [
-        "recipe:ruby_glass",
-        "red_sector"
-      ],
-      "story": "page_10"
-    },
-    {
-      "id": "M15",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 40,
-        "rest": 10
-      },
-      "requires": [
-        "M12"
-      ],
-      "unlocks": [
-        "recipe:fresnel_2"
-      ]
-    },
-    {
-      "id": "M16",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 40
-      },
-      "requires": [
-        "M10",
-        "M13"
-      ],
-      "unlocks": [
-        "recipe:steam_horn",
-        "recipe:siren"
-      ]
-    },
-    {
-      "id": "M17",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 50,
-        "land": 10
-      },
-      "requires": [
-        "M11",
-        "M15"
-      ],
-      "unlocks": [
-        "recipe:auto_mechanism",
-        "recipe:reservoir_7",
-        "recipe:salt_shroud"
-      ]
-    },
-    {
-      "id": "M18",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 70,
-        "rest": 20
-      },
-      "requires": [
-        "M15"
-      ],
-      "unlocks": [
-        "recipe:great_eye"
-      ],
-      "story": "blessing_svetla"
-    },
-    {
-      "id": "M19",
-      "branch": "lighthouse",
-      "cost": {
-        "sea": 30,
-        "rest": 50
-      },
-      "requires": [
-        "M13"
-      ],
-      "unlocks": [
-        "recipe:rann_torch"
-      ],
-      "story": "gills_of_rann"
-    }
-  ]
+ "nodes": [
+  {
+   "id": "M1",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "ritual",
+    "lamp:wick",
+    "lens:old_mirror",
+    "mechanism:weights",
+    "signal:hand_bell"
+   ]
+  },
+  {
+   "id": "M2",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 3
+   },
+   "requires": [
+    "M1"
+   ],
+   "unlocks": [
+    "station:renderer"
+   ]
+  },
+  {
+   "id": "M3",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 5
+   },
+   "requires": [
+    "M2"
+   ],
+   "unlocks": [
+    "station:settling_tank"
+   ]
+  },
+  {
+   "id": "M4",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 6,
+    "land": 2
+   },
+   "requires": [
+    "M1"
+   ],
+   "unlocks": [
+    "recipe:parabolic"
+   ]
+  },
+  {
+   "id": "M5",
+   "branch": "lighthouse",
+   "cost": {},
+   "requires": [
+    "M1"
+   ],
+   "unlocks": [
+    "tower_repair"
+   ],
+   "story": "q1_8"
+  },
+  {
+   "id": "M6",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 8
+   },
+   "requires": [
+    "M5"
+   ],
+   "unlocks": [
+    "recipe:lightning_rod"
+   ]
+  },
+  {
+   "id": "M7",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 12,
+    "land": 4
+   },
+   "requires": [
+    "M4"
+   ],
+   "unlocks": [
+    "station:optical_bench",
+    "recipe:prism"
+   ]
+  },
+  {
+   "id": "M8",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 15
+   },
+   "requires": [
+    "M7"
+   ],
+   "unlocks": [
+    "recipe:fresnel_4"
+   ]
+  },
+  {
+   "id": "M9",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 10
+   },
+   "requires": [
+    "M4"
+   ],
+   "unlocks": [
+    "recipe:argand"
+   ]
+  },
+  {
+   "id": "M10",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 10,
+    "rest": 5
+   },
+   "requires": [
+    "M1"
+   ],
+   "unlocks": [
+    "recipe:clock_bell",
+    "recipe:bellows_horn"
+   ]
+  },
+  {
+   "id": "M11",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 18
+   },
+   "requires": [
+    "M9"
+   ],
+   "unlocks": [
+    "recipe:reservoir_3",
+    "recipe:precise_clock"
+   ]
+  },
+  {
+   "id": "M12",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 25,
+    "rest": 5
+   },
+   "requires": [
+    "M8"
+   ],
+   "unlocks": [
+    "recipe:fresnel_3"
+   ]
+  },
+  {
+   "id": "M13",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 25
+   },
+   "requires": [
+    "M9",
+    "M11"
+   ],
+   "unlocks": [
+    "recipe:incandescent"
+   ]
+  },
+  {
+   "id": "M14",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 30,
+    "rest": 10
+   },
+   "requires": [
+    "M12"
+   ],
+   "unlocks": [
+    "recipe:ruby_glass",
+    "red_sector"
+   ],
+   "story": "page_10"
+  },
+  {
+   "id": "M15",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 40,
+    "rest": 10
+   },
+   "requires": [
+    "M12"
+   ],
+   "unlocks": [
+    "recipe:fresnel_2"
+   ]
+  },
+  {
+   "id": "M16",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 40
+   },
+   "requires": [
+    "M10",
+    "M13"
+   ],
+   "unlocks": [
+    "recipe:steam_horn",
+    "recipe:siren"
+   ]
+  },
+  {
+   "id": "M17",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 50,
+    "land": 10
+   },
+   "requires": [
+    "M11",
+    "M15"
+   ],
+   "unlocks": [
+    "recipe:auto_mechanism",
+    "recipe:reservoir_7",
+    "recipe:salt_shroud"
+   ]
+  },
+  {
+   "id": "M18",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 70,
+    "rest": 20
+   },
+   "requires": [
+    "M15"
+   ],
+   "unlocks": [
+    "recipe:great_eye"
+   ],
+   "story": "blessing_svetla"
+  },
+  {
+   "id": "M19",
+   "branch": "lighthouse",
+   "cost": {
+    "sea": 30,
+    "rest": 50
+   },
+   "requires": [
+    "M13"
+   ],
+   "unlocks": [
+    "recipe:rann_torch"
+   ],
+   "story": "gills_of_rann"
+  },
+  {
+   "id": "P1",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "dissection_table",
+    "mound",
+    "cross",
+    "wheelbarrow"
+   ]
+  },
+  {
+   "id": "P2",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 3
+   },
+   "requires": [
+    "P1"
+   ],
+   "unlocks": [
+    "shroud"
+   ]
+  },
+  {
+   "id": "P3",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 5,
+    "land": 3
+   },
+   "requires": [
+    "P1"
+   ],
+   "unlocks": [
+    "station:carpentry_table",
+    "recipe:coffin_simple"
+   ]
+  },
+  {
+   "id": "P4",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 4
+   },
+   "requires": [
+    "P1"
+   ],
+   "unlocks": [
+    "recipe:fences",
+    "recipe:paths"
+   ]
+  },
+  {
+   "id": "P5",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 5
+   },
+   "requires": [
+    "P1"
+   ],
+   "unlocks": [
+    "station:candle_mold"
+   ]
+  },
+  {
+   "id": "P6",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 10,
+    "land": 5
+   },
+   "requires": [
+    "P4"
+   ],
+   "unlocks": [
+    "station:stonecutter_table",
+    "recipe:stone_block",
+    "recipe:stone_slab"
+   ]
+  },
+  {
+   "id": "P7",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 6
+   },
+   "requires": [
+    "P1"
+   ],
+   "unlocks": [
+    "recipe:magnifier",
+    "recipe:relatives_box"
+   ]
+  },
+  {
+   "id": "P8",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 12
+   },
+   "requires": [
+    "P3"
+   ],
+   "unlocks": [
+    "recipe:coffin_good",
+    "recipe:carved_cross"
+   ]
+  },
+  {
+   "id": "P9",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 15
+   },
+   "requires": [
+    "P5"
+   ],
+   "unlocks": [
+    "keeper_word"
+   ]
+  },
+  {
+   "id": "P10",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 15,
+    "sea": 5
+   },
+   "requires": [
+    "P7"
+   ],
+   "unlocks": [
+    "blueprint:ice_house"
+   ]
+  },
+  {
+   "id": "P11",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 20
+   },
+   "requires": [
+    "P6"
+   ],
+   "unlocks": [
+    "recipe:headstone"
+   ]
+  },
+  {
+   "id": "P12",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 15,
+    "land": 10
+   },
+   "requires": [
+    "P6"
+   ],
+   "unlocks": [
+    "recipe:bench",
+    "recipe:memory_lantern",
+    "recipe:statue_mourning"
+   ]
+  },
+  {
+   "id": "P13",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 25
+   },
+   "requires": [
+    "P8"
+   ],
+   "unlocks": [
+    "recipe:coffin_carved"
+   ]
+  },
+  {
+   "id": "P14",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 20,
+    "land": 10
+   },
+   "requires": [
+    "P10"
+   ],
+   "unlocks": [
+    "blueprint:hearse"
+   ]
+  },
+  {
+   "id": "P15",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 25
+   },
+   "requires": [
+    "P9"
+   ],
+   "unlocks": [
+    "talking_candle"
+   ]
+  },
+  {
+   "id": "P16",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 50,
+    "sea": 20
+   },
+   "requires": [
+    "P11",
+    "P13"
+   ],
+   "unlocks": [
+    "recipe:beacon_stone"
+   ]
+  },
+  {
+   "id": "P17",
+   "branch": "graveyard",
+   "cost": {
+    "rest": 40,
+    "land": 10
+   },
+   "requires": [
+    "P12"
+   ],
+   "unlocks": [
+    "blueprint:chapel"
+   ],
+   "when": "hearts('npc_benedict') >= 6"
+  },
+  {
+   "id": "Z1",
+   "branch": "land",
+   "cost": {
+    "land": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "compost"
+   ]
+  },
+  {
+   "id": "Z2",
+   "branch": "land",
+   "cost": {
+    "land": 3
+   },
+   "requires": [
+    "Z1"
+   ],
+   "unlocks": [
+    "station:ash_kiln",
+    "station:drying_rack"
+   ]
+  },
+  {
+   "id": "Z3",
+   "branch": "land",
+   "cost": {
+    "land": 5
+   },
+   "requires": [
+    "Z1"
+   ],
+   "unlocks": [
+    "blueprint:coop"
+   ]
+  },
+  {
+   "id": "Z4",
+   "branch": "land",
+   "cost": {
+    "land": 5
+   },
+   "requires": [
+    "Z1"
+   ],
+   "unlocks": [
+    "blueprint:hayloft"
+   ]
+  },
+  {
+   "id": "Z5",
+   "branch": "land",
+   "cost": {
+    "land": 10
+   },
+   "requires": [
+    "Z3"
+   ],
+   "unlocks": [
+    "blueprint:barn"
+   ]
+  },
+  {
+   "id": "Z6",
+   "branch": "land",
+   "cost": {
+    "land": 8
+   },
+   "requires": [
+    "Z1"
+   ],
+   "unlocks": [
+    "recipe:beehive"
+   ]
+  },
+  {
+   "id": "Z7",
+   "branch": "land",
+   "cost": {
+    "land": 12
+   },
+   "requires": [
+    "Z2"
+   ],
+   "unlocks": [
+    "station:seed_box"
+   ]
+  },
+  {
+   "id": "Z8",
+   "branch": "land",
+   "cost": {
+    "land": 12
+   },
+   "requires": [
+    "Z5"
+   ],
+   "unlocks": [
+    "station:butter_churn",
+    "station:cheese_press"
+   ]
+  },
+  {
+   "id": "Z9",
+   "branch": "land",
+   "cost": {
+    "land": 10,
+    "sea": 10
+   },
+   "requires": [
+    "Z2"
+   ],
+   "unlocks": [
+    "recipe:kelp_line",
+    "recipe:mussel_rope"
+   ],
+   "when": "boat() != ''"
+  },
+  {
+   "id": "Z10",
+   "branch": "land",
+   "cost": {
+    "land": 15,
+    "sea": 10
+   },
+   "requires": [
+    "Z9"
+   ],
+   "unlocks": [
+    "recipe:oyster_cage"
+   ]
+  },
+  {
+   "id": "Z11",
+   "branch": "land",
+   "cost": {
+    "land": 15
+   },
+   "requires": [
+    "Z7"
+   ],
+   "unlocks": [
+    "blueprint:cranberry_bog"
+   ]
+  },
+  {
+   "id": "Z12",
+   "branch": "land",
+   "cost": {
+    "land": 15
+   },
+   "requires": [
+    "Z5"
+   ],
+   "unlocks": [
+    "blueprint:pasture"
+   ]
+  },
+  {
+   "id": "Z13",
+   "branch": "land",
+   "cost": {
+    "land": 30
+   },
+   "requires": [
+    "Z7"
+   ],
+   "unlocks": [
+    "blueprint:greenhouse_small"
+   ]
+  },
+  {
+   "id": "Z14",
+   "branch": "land",
+   "cost": {
+    "land": 25,
+    "sea": 10
+   },
+   "requires": [
+    "Z7"
+   ],
+   "unlocks": [
+    "recipe:wind_pump"
+   ]
+  },
+  {
+   "id": "Z15",
+   "branch": "land",
+   "cost": {
+    "land": 10
+   },
+   "requires": [
+    "Z5"
+   ],
+   "unlocks": [
+    "blueprint:stable"
+   ]
+  },
+  {
+   "id": "S1",
+   "branch": "sea",
+   "cost": {
+    "sea": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "rod",
+    "cutting_table"
+   ]
+  },
+  {
+   "id": "S2",
+   "branch": "sea",
+   "cost": {
+    "sea": 6
+   },
+   "requires": [
+    "S1"
+   ],
+   "unlocks": [
+    "winch"
+   ],
+   "story": "q2_4_started"
+  },
+  {
+   "id": "S3",
+   "branch": "sea",
+   "cost": {
+    "sea": 10
+   },
+   "requires": [
+    "S2"
+   ],
+   "unlocks": [
+    "diving_bell"
+   ],
+   "story": "q2_4_done"
+  },
+  {
+   "id": "S4",
+   "branch": "sea",
+   "cost": {
+    "sea": 10
+   },
+   "requires": [
+    "S1"
+   ],
+   "unlocks": [
+    "blueprint:sloop"
+   ],
+   "story": "q2_6_started"
+  },
+  {
+   "id": "S5",
+   "branch": "sea",
+   "cost": {
+    "sea": 12
+   },
+   "requires": [
+    "S3"
+   ],
+   "unlocks": [
+    "bell_stations"
+   ]
+  },
+  {
+   "id": "S6",
+   "branch": "sea",
+   "cost": {
+    "sea": 12
+   },
+   "requires": [
+    "S3"
+   ],
+   "unlocks": [
+    "air_bag_plus"
+   ]
+  },
+  {
+   "id": "S7",
+   "branch": "sea",
+   "cost": {
+    "sea": 8,
+    "land": 4
+   },
+   "requires": [
+    "S1"
+   ],
+   "unlocks": [
+    "recipe:storm_coat",
+    "recipe:oiled_canvas"
+   ]
+  },
+  {
+   "id": "S8",
+   "branch": "sea",
+   "cost": {
+    "sea": 10
+   },
+   "requires": [
+    "S1"
+   ],
+   "unlocks": [
+    "recipe:ice_pick"
+   ]
+  },
+  {
+   "id": "S9",
+   "branch": "sea",
+   "cost": {
+    "sea": 20
+   },
+   "requires": [
+    "S3"
+   ],
+   "unlocks": [
+    "diving_suit"
+   ],
+   "story": "q3_2_done"
+  },
+  {
+   "id": "S10",
+   "branch": "sea",
+   "cost": {
+    "sea": 30,
+    "land": 10
+   },
+   "requires": [
+    "S4"
+   ],
+   "unlocks": [
+    "blueprint:bot"
+   ]
+  },
+  {
+   "id": "S11",
+   "branch": "sea",
+   "cost": {
+    "sea": 35
+   },
+   "requires": [
+    "S9"
+   ],
+   "unlocks": [
+    "depth_60"
+   ]
+  },
+  {
+   "id": "S12",
+   "branch": "sea",
+   "cost": {
+    "sea": 20
+   },
+   "requires": [
+    "S9"
+   ],
+   "unlocks": [
+    "hose_45"
+   ]
+  },
+  {
+   "id": "S12b",
+   "branch": "sea",
+   "cost": {
+    "sea": 30
+   },
+   "requires": [
+    "S12"
+   ],
+   "unlocks": [
+    "hose_60"
+   ]
+  },
+  {
+   "id": "S13",
+   "branch": "sea",
+   "cost": {
+    "sea": 80
+   },
+   "requires": [
+    "S10"
+   ],
+   "unlocks": [
+    "blueprint:steam_launch"
+   ],
+   "story": "finale_done"
+  },
+  {
+   "id": "R1",
+   "branch": "craft",
+   "cost": {
+    "land": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "station:workbench",
+    "recipe:chest"
+   ]
+  },
+  {
+   "id": "R2",
+   "branch": "craft",
+   "cost": {
+    "land": 5,
+    "sea": 3
+   },
+   "requires": [
+    "R1"
+   ],
+   "unlocks": [
+    "station:forge",
+    "recipe:nails",
+    "recipe:hooks"
+   ]
+  },
+  {
+   "id": "R3",
+   "branch": "craft",
+   "cost": {
+    "land": 4
+   },
+   "requires": [
+    "R1"
+   ],
+   "unlocks": [
+    "station:salt_pan"
+   ]
+  },
+  {
+   "id": "R4",
+   "branch": "craft",
+   "cost": {
+    "land": 4
+   },
+   "requires": [
+    "R3"
+   ],
+   "unlocks": [
+    "station:brine_barrel"
+   ]
+  },
+  {
+   "id": "R5",
+   "branch": "craft",
+   "cost": {
+    "land": 8
+   },
+   "requires": [
+    "R3"
+   ],
+   "unlocks": [
+    "station:smokehouse"
+   ]
+  },
+  {
+   "id": "R6",
+   "branch": "craft",
+   "cost": {
+    "land": 4
+   },
+   "requires": [
+    "R1"
+   ],
+   "unlocks": [
+    "station:sawhorse"
+   ]
+  },
+  {
+   "id": "R7",
+   "branch": "craft",
+   "cost": {
+    "land": 6
+   },
+   "requires": [
+    "R6"
+   ],
+   "unlocks": [
+    "station:tar_kiln"
+   ]
+  },
+  {
+   "id": "R8",
+   "branch": "craft",
+   "cost": {
+    "land": 8
+   },
+   "requires": [
+    "R1"
+   ],
+   "unlocks": [
+    "station:scutcher",
+    "station:spinning_wheel"
+   ]
+  },
+  {
+   "id": "R9",
+   "branch": "craft",
+   "cost": {
+    "land": 12
+   },
+   "requires": [
+    "R8"
+   ],
+   "unlocks": [
+    "station:loom"
+   ]
+  },
+  {
+   "id": "R10",
+   "branch": "craft",
+   "cost": {
+    "land": 12,
+    "sea": 6
+   },
+   "requires": [
+    "R2",
+    "Z2"
+   ],
+   "unlocks": [
+    "station:glass_furnace"
+   ]
+  },
+  {
+   "id": "R11",
+   "branch": "craft",
+   "cost": {
+    "land": 8
+   },
+   "requires": [
+    "Z2"
+   ],
+   "unlocks": [
+    "recipe:stockfish"
+   ]
+  },
+  {
+   "id": "R12",
+   "branch": "craft",
+   "cost": {
+    "land": 15
+   },
+   "requires": [
+    "R1"
+   ],
+   "unlocks": [
+    "station:brewery"
+   ]
+  },
+  {
+   "id": "R13",
+   "branch": "craft",
+   "cost": {
+    "land": 15
+   },
+   "requires": [
+    "R12"
+   ],
+   "unlocks": [
+    "station:wine_vat",
+    "station:preserve_jars"
+   ]
+  },
+  {
+   "id": "R14",
+   "branch": "craft",
+   "cost": {
+    "land": 20
+   },
+   "requires": [
+    "R13"
+   ],
+   "unlocks": [
+    "station:still"
+   ]
+  },
+  {
+   "id": "R15",
+   "branch": "craft",
+   "cost": {
+    "land": 20,
+    "sea": 10
+   },
+   "requires": [
+    "R2"
+   ],
+   "unlocks": [
+    "recipe:receiver_chest"
+   ]
+  },
+  {
+   "id": "R16",
+   "branch": "craft",
+   "cost": {
+    "land": 25
+   },
+   "requires": [
+    "R6"
+   ],
+   "unlocks": [
+    "blueprint:workshop"
+   ]
+  },
+  {
+   "id": "R17",
+   "branch": "craft",
+   "cost": {
+    "sea": 12
+   },
+   "requires": [
+    "R2"
+   ],
+   "unlocks": [
+    "recipe:brass",
+    "recipe:bronze"
+   ]
+  },
+  {
+   "id": "T1",
+   "branch": "secret",
+   "cost": {
+    "rest": 0
+   },
+   "requires": [],
+   "unlocks": [
+    "rann_stone"
+   ]
+  },
+  {
+   "id": "T2",
+   "branch": "secret",
+   "cost": {
+    "rest": 5
+   },
+   "requires": [
+    "T1"
+   ],
+   "unlocks": [
+    "recipe:rowan_amulet"
+   ],
+   "story": "q2_2_done"
+  },
+  {
+   "id": "T3",
+   "branch": "secret",
+   "cost": {
+    "rest": 6
+   },
+   "requires": [
+    "T1"
+   ],
+   "unlocks": [
+    "lantern_wounds_hmar"
+   ],
+   "story": "q2_2_done"
+  },
+  {
+   "id": "T4",
+   "branch": "secret",
+   "cost": {
+    "rest": 8,
+    "land": 5
+   },
+   "requires": [
+    "T1"
+   ],
+   "unlocks": [
+    "station:herbal_table"
+   ]
+  },
+  {
+   "id": "T5",
+   "branch": "secret",
+   "cost": {
+    "land": 8,
+    "rest": 4
+   },
+   "requires": [
+    "T4"
+   ],
+   "unlocks": [
+    "recipe:brews"
+   ]
+  },
+  {
+   "id": "T6",
+   "branch": "secret",
+   "cost": {
+    "rest": 15,
+    "sea": 10
+   },
+   "requires": [
+    "T4"
+   ],
+   "unlocks": [
+    "recipe:light_water"
+   ],
+   "story": "q2_3_done"
+  },
+  {
+   "id": "T7",
+   "branch": "secret",
+   "cost": {
+    "rest": 15
+   },
+   "requires": [
+    "T4"
+   ],
+   "unlocks": [
+    "recipe:totems"
+   ]
+  },
+  {
+   "id": "T8",
+   "branch": "secret",
+   "cost": {
+    "rest": 12
+   },
+   "requires": [
+    "T5"
+   ],
+   "unlocks": [
+    "recipe:depth_potions"
+   ]
+  },
+  {
+   "id": "T9",
+   "branch": "secret",
+   "cost": {
+    "rest": 25
+   },
+   "requires": [
+    "T7"
+   ],
+   "unlocks": [
+    "tide_song"
+   ]
+  },
+  {
+   "id": "T10",
+   "branch": "secret",
+   "cost": {
+    "rest": 20
+   },
+   "requires": [
+    "T1"
+   ],
+   "unlocks": [
+    "nine_maidens"
+   ],
+   "when": "blessings() >= 3"
+  },
+  {
+   "id": "T11",
+   "branch": "secret",
+   "cost": {
+    "rest": 30
+   },
+   "requires": [
+    "T8"
+   ],
+   "unlocks": [
+    "recipe:calm_potion"
+   ]
+  },
+  {
+   "id": "T12",
+   "branch": "secret",
+   "cost": {
+    "rest": 40
+   },
+   "requires": [
+    "T10"
+   ],
+   "unlocks": [
+    "sea_speaker"
+   ]
+  }
+ ]
 }

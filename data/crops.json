@@ -389,5 +389,24 @@
     "regrow": 0,
     "salt": 1,
     "produce": "winter_cabbage"
+  },
+  {
+    "id": "crop_lightflower",
+    "seed": "seed_lightflower",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "stage_days": [
+      3,
+      3,
+      3,
+      3
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "lightflower",
+    "glows": 2
   }
 ]

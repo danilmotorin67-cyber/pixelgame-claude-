@@ -150,6 +150,7 @@ def main() -> int:
     else:
         errs.append("regions data must be an object")
     errs.extend(check_people(tables, npc_ids))
+    errs.extend(check_crafting(tables, item_ids, npc_ids))
     if errs:
         print("FAIL")
         for e in errs:
@@ -157,6 +158,75 @@ def main() -> int:
         return 1
     print("OK tables", len(tables), "npcs", len(npc_ids), "items", len(item_ids))
     return 0
+
+
+UNLOCK_KINDS = ("start", "learn", "gazette", "node", "skill", "hearts", "flag", "profession")
+SKILLS = ("farming", "fishing", "seafaring", "diving", "crafting", "foraging", "keeping")
+PROFESSIONS = ("gardener", "herder", "salt_farmer", "northern_gardener", "surf_shepherd", "down_keeper", "angler", "trapper",
+               "pier_legend", "quiet_hand", "netter", "shellman", "pilot", "skipper", "wind_son", "fog_navigator", "rescuer",
+               "smuggler", "salvager", "deep_hunter", "pearler", "rust_baron", "harpooner", "whale_lungs", "craftsman", "optician",
+               "artel", "cooper", "fresnel_pupil", "glassblower", "beachcomber", "herbalist", "raven_eye", "driftwood_master",
+               "healer", "hmar_forager", "fire_keeper", "gravedigger", "lighthouse_eye", "night_pilot", "soul_guide", "stone_carver")
+
+
+def check_crafting(tables, item_ids, npc_ids) -> list:
+    """M7: stations, recipes and their unlocks, the knowledge tree, buildings, animals and trees reference real things."""
+    errs = []
+    stations = {r["id"]: r for r in rows(tables.get("stations", []))}
+    nodes = {r["id"] for r in rows(tables.get("knowledge_tree", {}))}
+    trees = {r["id"] for r in rows(tables.get("trees", []))}
+    for sid, st in stations.items():
+        for fuel in st.get("fuel", []):
+            fid = fuel[0] if isinstance(fuel, list) else fuel
+            if fid not in item_ids:
+                errs.append(f"station {sid} burns unknown {fid}")
+        if "item" in st and st["item"] not in item_ids:
+            errs.append(f"station {sid} unknown item {st['item']}")
+    for item in rows(tables.get("items", [])):
+        if "place" in item and item["place"] not in stations:
+            errs.append(f"item {item['id']} places unknown station {item['place']}")
+        if "plant" in item and item["plant"] not in trees:
+            errs.append(f"item {item['id']} plants unknown tree {item['plant']}")
+    seen_out = set()
+    for table in ("recipes_craft", "recipes_cook"):
+        for recipe in rows(tables.get(table, [])):
+            seen_out.add(recipe["out"][0])
+            for alt in str(recipe.get("unlock", "start")).split("|"):
+                kind, _, rest = alt.partition(":")
+                if kind not in UNLOCK_KINDS:
+                    errs.append(f"{recipe['id']} unknown unlock {alt}")
+                elif kind == "node" and rest not in nodes:
+                    errs.append(f"{recipe['id']} unlocks by unknown node {rest}")
+                elif kind == "skill" and (rest.split(":")[0] not in SKILLS or not 1 <= int(rest.split(":")[1]) <= 10):
+                    errs.append(f"{recipe['id']} bad skill unlock {alt}")
+                elif kind == "hearts" and rest.split(":")[0] not in npc_ids:
+                    errs.append(f"{recipe['id']} hearts of unknown {rest}")
+                elif kind == "profession" and rest not in PROFESSIONS:
+                    errs.append(f"{recipe['id']} unknown profession {rest}")
+    for node in rows(tables.get("knowledge_tree", {})):
+        for req in node.get("requires", []):
+            if req not in nodes:
+                errs.append(f"node {node['id']} requires unknown {req}")
+        for tag in node.get("unlocks", []):
+            if tag.startswith("station:") and tag[8:] not in stations:
+                errs.append(f"node {node['id']} unlocks unknown station {tag}")
+    for b in rows(tables.get("buildings", [])):
+        for level in b.get("levels", []):
+            for need, _n in level.get("items", []) + level.get("gives", []):
+                if need not in item_ids:
+                    errs.append(f"building {b['id']} unknown item {need}")
+        req = b.get("requires", "")
+        if req.startswith("node:") and req[5:] not in nodes:
+            errs.append(f"building {b['id']} requires unknown node {req}")
+    for a in rows(tables.get("animals", [])):
+        for key in ("product", "big", "extra"):
+            if a.get(key) and a[key] not in item_ids:
+                errs.append(f"animal {a['id']} unknown {key} {a[key]}")
+    for t in rows(tables.get("trees", [])):
+        for key in ("sapling", "fruit"):
+            if t.get(key) not in item_ids:
+                errs.append(f"tree {t['id']} unknown {key}")
+    return errs
 
 
 def check_people(tables, npc_ids) -> list:

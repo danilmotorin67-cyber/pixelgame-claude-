@@ -1,52 +1,351 @@
 [
-  {
-    "id": "workbench",
-    "name": "station.workbench",
-    "kind": "instant"
-  },
-  {
-    "id": "hearth",
-    "name": "station.hearth",
-    "kind": "cook",
-    "fuel": [
-      "peat",
-      "driftwood"
-    ]
-  },
-  {
-    "id": "compost_pit",
-    "name": "station.compost_pit",
-    "kind": "process",
-    "queue": 3
-  },
-  {
-    "id": "chest",
-    "name": "station.chest",
-    "kind": "storage",
-    "slots": 24,
-    "item": "chest"
-  },
-  {
-    "id": "cutting_table",
-    "name": "station.cutting_table",
-    "kind": "instant",
-    "batch": 20
-  },
-  {
-    "id": "renderer",
-    "name": "station.renderer",
-    "kind": "process",
-    "queue": 3,
-    "fuel": [
-      "peat"
-    ],
-    "item": "renderer"
-  },
-  {
-    "id": "settling_tank",
-    "name": "station.settling_tank",
-    "kind": "process",
-    "queue": 3,
-    "item": "settling_tank"
-  }
+ {
+  "id": "workbench",
+  "name": "station.workbench",
+  "kind": "instant"
+ },
+ {
+  "id": "hearth",
+  "name": "station.hearth",
+  "kind": "cook",
+  "fuel": [
+   "peat",
+   "driftwood"
+  ]
+ },
+ {
+  "id": "compost_pit",
+  "name": "station.compost_pit",
+  "kind": "process",
+  "queue": 3
+ },
+ {
+  "id": "chest",
+  "name": "station.chest",
+  "kind": "storage",
+  "item": "chest",
+  "slots": 24
+ },
+ {
+  "id": "big_chest",
+  "name": "station.big_chest",
+  "kind": "storage",
+  "item": "big_chest",
+  "slots": 36
+ },
+ {
+  "id": "cutting_table",
+  "name": "station.cutting_table",
+  "kind": "instant",
+  "batch": 20
+ },
+ {
+  "id": "renderer",
+  "name": "station.renderer",
+  "kind": "process",
+  "item": "renderer",
+  "queue": 3,
+  "fuel": [
+   "peat"
+  ]
+ },
+ {
+  "id": "settling_tank",
+  "name": "station.settling_tank",
+  "kind": "process",
+  "item": "settling_tank",
+  "queue": 3
+ },
+ {
+  "id": "forge",
+  "name": "station.forge",
+  "kind": "process",
+  "item": "forge",
+  "queue": 3,
+  "fuel": [
+   "peat",
+   "coal"
+  ]
+ },
+ {
+  "id": "salt_pan",
+  "name": "station.salt_pan",
+  "kind": "process",
+  "item": "salt_pan",
+  "queue": 3,
+  "fuel": [
+   [
+    "peat",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "brine_barrel",
+  "name": "station.brine_barrel",
+  "kind": "process",
+  "item": "brine_barrel",
+  "queue": 3
+ },
+ {
+  "id": "smokehouse",
+  "name": "station.smokehouse",
+  "kind": "process",
+  "item": "smokehouse",
+  "queue": 3,
+  "fuel": [
+   "peat",
+   "birch_chips"
+  ]
+ },
+ {
+  "id": "sawhorse",
+  "name": "station.sawhorse",
+  "kind": "instant",
+  "item": "sawhorse",
+  "batch": 10
+ },
+ {
+  "id": "tar_kiln",
+  "name": "station.tar_kiln",
+  "kind": "process",
+  "item": "tar_kiln",
+  "queue": 3,
+  "fuel": [
+   "peat"
+  ]
+ },
+ {
+  "id": "scutcher",
+  "name": "station.scutcher",
+  "kind": "process",
+  "item": "scutcher",
+  "queue": 3
+ },
+ {
+  "id": "spinning_wheel",
+  "name": "station.spinning_wheel",
+  "kind": "process",
+  "item": "spinning_wheel",
+  "queue": 3
+ },
+ {
+  "id": "loom",
+  "name": "station.loom",
+  "kind": "process",
+  "item": "loom",
+  "queue": 3
+ },
+ {
+  "id": "ash_kiln",
+  "name": "station.ash_kiln",
+  "kind": "process",
+  "item": "ash_kiln",
+  "queue": 3,
+  "fuel": [
+   "peat"
+  ]
+ },
+ {
+  "id": "drying_rack",
+  "name": "station.drying_rack",
+  "kind": "process",
+  "item": "drying_rack",
+  "queue": 3,
+  "outdoor": true
+ },
+ {
+  "id": "glass_furnace",
+  "name": "station.glass_furnace",
+  "kind": "process",
+  "item": "glass_furnace",
+  "queue": 3,
+  "fuel": [
+   [
+    "peat",
+    2
+   ],
+   [
+    "coal",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "optical_bench",
+  "name": "station.optical_bench",
+  "kind": "process",
+  "item": "optical_bench",
+  "queue": 3
+ },
+ {
+  "id": "carpentry_table",
+  "name": "station.carpentry_table",
+  "kind": "process",
+  "item": "carpentry_table",
+  "queue": 3
+ },
+ {
+  "id": "stonecutter_table",
+  "name": "station.stonecutter_table",
+  "kind": "process",
+  "item": "stonecutter_table",
+  "queue": 3
+ },
+ {
+  "id": "candle_mold",
+  "name": "station.candle_mold",
+  "kind": "process",
+  "item": "candle_mold",
+  "queue": 3
+ },
+ {
+  "id": "butter_churn",
+  "name": "station.butter_churn",
+  "kind": "process",
+  "item": "butter_churn",
+  "queue": 3
+ },
+ {
+  "id": "cheese_press",
+  "name": "station.cheese_press",
+  "kind": "process",
+  "item": "cheese_press",
+  "queue": 3
+ },
+ {
+  "id": "brewery",
+  "name": "station.brewery",
+  "kind": "process",
+  "item": "brewery",
+  "queue": 3
+ },
+ {
+  "id": "wine_vat",
+  "name": "station.wine_vat",
+  "kind": "process",
+  "item": "wine_vat",
+  "queue": 3
+ },
+ {
+  "id": "preserve_jars",
+  "name": "station.preserve_jars",
+  "kind": "process",
+  "item": "preserve_jars",
+  "queue": 3
+ },
+ {
+  "id": "still",
+  "name": "station.still",
+  "kind": "process",
+  "item": "still",
+  "queue": 3,
+  "fuel": [
+   "peat"
+  ]
+ },
+ {
+  "id": "seed_box",
+  "name": "station.seed_box",
+  "kind": "process",
+  "item": "seed_box",
+  "queue": 3
+ },
+ {
+  "id": "herbal_table",
+  "name": "station.herbal_table",
+  "kind": "process",
+  "item": "herbal_table",
+  "queue": 3
+ },
+ {
+  "id": "kitchen_stove",
+  "name": "station.kitchen_stove",
+  "kind": "cook",
+  "item": "kitchen_stove",
+  "also": [
+   "hearth"
+  ]
+ },
+ {
+  "id": "mill",
+  "name": "station.mill",
+  "kind": "process",
+  "item": "mill",
+  "queue": 3
+ },
+ {
+  "id": "receiver_chest",
+  "name": "station.receiver_chest",
+  "kind": "storage",
+  "item": "receiver_chest",
+  "slots": 24,
+  "collects": 3
+ },
+ {
+  "id": "cellar_barrel",
+  "name": "station.cellar_barrel",
+  "kind": "cellar",
+  "item": "cellar_barrel",
+  "slots": 1,
+  "ages": [
+   "aquavit",
+   "tag:wine",
+   "cheese",
+   "goat_cheese"
+  ]
+ },
+ {
+  "id": "beehive",
+  "name": "station.beehive",
+  "kind": "hive",
+  "item": "beehive"
+ },
+ {
+  "id": "eider_nest",
+  "name": "station.eider_nest",
+  "kind": "nest",
+  "item": "eider_nest_box"
+ },
+ {
+  "id": "stone_wall",
+  "name": "station.stone_wall",
+  "kind": "fixture",
+  "item": "stone_wall"
+ },
+ {
+  "id": "gull_scarer",
+  "name": "station.gull_scarer",
+  "kind": "fixture",
+  "item": "gull_scarer"
+ },
+ {
+  "id": "watering_barrel",
+  "name": "station.watering_barrel",
+  "kind": "fixture",
+  "item": "watering_barrel"
+ },
+ {
+  "id": "cistern",
+  "name": "station.cistern",
+  "kind": "fixture",
+  "item": "cistern"
+ },
+ {
+  "id": "wind_pump",
+  "name": "station.wind_pump",
+  "kind": "fixture",
+  "item": "wind_pump"
+ },
+ {
+  "id": "keeper_scarecrow",
+  "name": "station.keeper_scarecrow",
+  "kind": "fixture",
+  "item": "keeper_scarecrow"
+ },
+ {
+  "id": "decor",
+  "name": "station.decor",
+  "kind": "decor"
+ }
 ]

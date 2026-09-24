@@ -1,1 +1,73 @@
-[]
+[
+ {
+  "id": "tree_buckthorn",
+  "sapling": "sapling_buckthorn",
+  "days": 20,
+  "fruit": "sea_buckthorn",
+  "seasons": [
+   "summer",
+   "autumn"
+  ],
+  "every": 3,
+  "salt": 2,
+  "windbreak": 5
+ },
+ {
+  "id": "tree_rowan",
+  "sapling": "sapling_rowan",
+  "days": 28,
+  "fruit": "rowan_berry",
+  "seasons": [
+   "autumn"
+  ],
+  "every": 1,
+  "salt": 1,
+  "hmar_ward": 0.05
+ },
+ {
+  "id": "tree_apple",
+  "sapling": "sapling_apple",
+  "days": 28,
+  "fruit": "apple",
+  "seasons": [
+   "autumn"
+  ],
+  "every": 1,
+  "salt": 0,
+  "storm_drop": true
+ },
+ {
+  "id": "bush_cloudberry",
+  "sapling": "cloudberry_bush",
+  "days": 28,
+  "fruit": "cloudberry",
+  "seasons": [
+   "summer"
+  ],
+  "every": 4,
+  "salt": 2,
+  "bog": true
+ },
+ {
+  "id": "bush_blueberry",
+  "sapling": "bush_blueberry",
+  "days": 14,
+  "fruit": "blueberry",
+  "seasons": [
+   "summer"
+  ],
+  "every": 3,
+  "salt": 1
+ },
+ {
+  "id": "bush_lingonberry",
+  "sapling": "bush_lingonberry",
+  "days": 14,
+  "fruit": "lingonberry",
+  "seasons": [
+   "autumn"
+  ],
+  "every": 3,
+  "salt": 1
+ }
+]

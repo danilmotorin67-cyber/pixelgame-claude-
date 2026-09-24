@@ -1,226 +1,5095 @@
 [
-  {
-    "id": "craft_chest",
-    "station": "workbench",
-    "in": [
-      [
-        "boards",
-        50
-      ]
-    ],
-    "out": [
-      "chest",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "craft_heather_bouquet",
-    "station": "workbench",
-    "in": [
-      [
-        "heather",
-        5
-      ],
-      [
-        "thread",
-        1
-      ]
-    ],
-    "out": [
-      "heather_bouquet",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "process_compost",
-    "station": "compost_pit",
-    "in": [
-      [
-        "kelp",
-        10
-      ]
-    ],
-    "out": [
-      "compost",
-      5
-    ],
-    "minutes": 4320,
-    "unlock": "start"
-  },
-  {
-    "id": "cut_fillet",
-    "station": "cutting_table",
-    "in": [
-      [
-        "tag:fish",
-        1
-      ]
-    ],
-    "out": [
-      "fillet",
-      1
-    ],
-    "extra": [
-      [
-        "fish_guts",
-        1
-      ]
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "cut_bait",
-    "station": "cutting_table",
-    "in": [
-      [
-        "tag:fish",
-        1
-      ]
-    ],
-    "out": [
-      "bait",
-      5
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "render_oil",
-    "station": "renderer",
-    "in": [
-      [
-        "fish_guts",
-        5
-      ]
-    ],
-    "out": [
-      "fish_oil",
-      1
-    ],
-    "minutes": 240,
-    "unlock": "start"
-  },
-  {
-    "id": "settle_whale_oil",
-    "station": "settling_tank",
-    "in": [
-      [
-        "fish_oil",
-        2
-      ]
-    ],
-    "out": [
-      "whale_oil",
-      1
-    ],
-    "minutes": 1440,
-    "unlock": "start"
-  },
-  {
-    "id": "craft_wooden_cross",
-    "station": "workbench",
-    "in": [
-      [
-        "boards",
-        5
-      ]
-    ],
-    "out": [
-      "wooden_cross",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "craft_carved_cross",
-    "station": "workbench",
-    "in": [
-      [
-        "boards",
-        5
-      ],
-      [
-        "bog_oak",
-        1
-      ]
-    ],
-    "out": [
-      "carved_cross",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "craft_set_net",
-    "station": "workbench",
-    "in": [
-      [
-        "thread",
-        10
-      ],
-      [
-        "cork_float",
-        5
-      ],
-      [
-        "stone",
-        2
-      ]
-    ],
-    "out": [
-      "set_net",
-      1
-    ],
-    "unlock": "skill:fishing:2"
-  },
-  {
-    "id": "craft_net_thread",
-    "station": "workbench",
-    "in": [
-      [
-        "net_scrap",
-        1
-      ]
-    ],
-    "out": [
-      "thread",
-      1
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "craft_snag_wood",
-    "station": "workbench",
-    "in": [
-      [
-        "snag",
-        1
-      ]
-    ],
-    "out": [
-      "driftwood",
-      2
-    ],
-    "unlock": "start"
-  },
-  {
-    "id": "craft_repair_kit",
-    "station": "workbench",
-    "in": [
-      [
-        "boards",
-        5
-      ],
-      [
-        "resin",
-        2
-      ]
-    ],
-    "out": [
-      "repair_kit",
-      1
-    ],
-    "unlock": "skill:seafaring:2"
-  }
+ {
+  "id": "craft_chest",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    50
+   ]
+  ],
+  "out": [
+   "chest",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_heather_bouquet",
+  "station": "workbench",
+  "in": [
+   [
+    "heather",
+    5
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "heather_bouquet",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "process_compost",
+  "station": "compost_pit",
+  "in": [
+   [
+    "tag:seaweed",
+    10
+   ]
+  ],
+  "out": [
+   "compost",
+   5
+  ],
+  "unlock": "start",
+  "minutes": 4320
+ },
+ {
+  "id": "cut_fillet",
+  "station": "cutting_table",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ]
+  ],
+  "out": [
+   "fillet",
+   1
+  ],
+  "unlock": "start",
+  "extra": [
+   [
+    "fish_guts",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "cut_lumpfish",
+  "station": "cutting_table",
+  "in": [
+   [
+    "fish_lumpfish",
+    1
+   ]
+  ],
+  "out": [
+   "fillet",
+   1
+  ],
+  "unlock": "start",
+  "extra": [
+   [
+    "fish_guts",
+    1
+   ],
+   [
+    "lumpfish_roe",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "cut_squid",
+  "station": "cutting_table",
+  "in": [
+   [
+    "fish_squid",
+    1
+   ]
+  ],
+  "out": [
+   "fillet",
+   1
+  ],
+  "unlock": "start",
+  "extra": [
+   [
+    "fish_guts",
+    1
+   ],
+   [
+    "cuttlefish_ink",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "cut_bait",
+  "station": "cutting_table",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ]
+  ],
+  "out": [
+   "bait",
+   5
+  ],
+  "unlock": "skill:fishing:1"
+ },
+ {
+  "id": "render_oil",
+  "station": "renderer",
+  "in": [
+   [
+    "fish_guts",
+    5
+   ]
+  ],
+  "out": [
+   "fish_oil",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "settle_whale_oil",
+  "station": "settling_tank",
+  "in": [
+   [
+    "fish_oil",
+    2
+   ]
+  ],
+  "out": [
+   "whale_oil",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 1440
+ },
+ {
+  "id": "craft_wooden_cross",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ]
+  ],
+  "out": [
+   "wooden_cross",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_carved_cross",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "bog_oak",
+    1
+   ]
+  ],
+  "out": [
+   "carved_cross",
+   1
+  ],
+  "unlock": "node:P8",
+  "minutes": 180
+ },
+ {
+  "id": "craft_set_net",
+  "station": "workbench",
+  "in": [
+   [
+    "thread",
+    10
+   ],
+   [
+    "cork_float",
+    5
+   ],
+   [
+    "stone",
+    2
+   ]
+  ],
+  "out": [
+   "set_net",
+   1
+  ],
+  "unlock": "skill:fishing:2"
+ },
+ {
+  "id": "craft_net_thread",
+  "station": "workbench",
+  "in": [
+   [
+    "net_scrap",
+    1
+   ]
+  ],
+  "out": [
+   "thread",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_snag_wood",
+  "station": "workbench",
+  "in": [
+   [
+    "snag",
+    1
+   ]
+  ],
+  "out": [
+   "driftwood",
+   2
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_repair_kit",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "resin",
+    2
+   ]
+  ],
+  "out": [
+   "repair_kit",
+   1
+  ],
+  "unlock": "skill:seafaring:2"
+ },
+ {
+  "id": "craft_rags",
+  "station": "workbench",
+  "in": [
+   [
+    "flax_fiber",
+    1
+   ]
+  ],
+  "out": [
+   "rag",
+   5
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_abrasive",
+  "station": "workbench",
+  "in": [
+   [
+    "sand",
+    5
+   ]
+  ],
+  "out": [
+   "abrasive",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_abrasive_pumice",
+  "station": "workbench",
+  "in": [
+   [
+    "pumice",
+    1
+   ]
+  ],
+  "out": [
+   "abrasive",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_abrasive_pumice2",
+  "station": "workbench",
+  "in": [
+   [
+    "pumice",
+    1
+   ]
+  ],
+  "out": [
+   "abrasive",
+   2
+  ],
+  "unlock": "skill:foraging:3"
+ },
+ {
+  "id": "craft_bucket",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    3
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "bucket",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_belt_keg",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    6
+   ],
+   [
+    "iron_ingot",
+    1
+   ],
+   [
+    "canvas",
+    1
+   ]
+  ],
+  "out": [
+   "belt_keg",
+   1
+  ],
+  "unlock": "skill:crafting:2"
+ },
+ {
+  "id": "craft_tower_paint",
+  "station": "workbench",
+  "in": [
+   [
+    "shell_lime",
+    5
+   ],
+   [
+    "whale_oil",
+    1
+   ]
+  ],
+  "out": [
+   "tower_paint",
+   1
+  ],
+  "unlock": "node:M5"
+ },
+ {
+  "id": "craft_parabolic",
+  "station": "workbench",
+  "in": [
+   [
+    "copper_ingot",
+    3
+   ],
+   [
+    "brass",
+    1
+   ],
+   [
+    "glass",
+    2
+   ]
+  ],
+  "out": [
+   "parabolic_reflector",
+   1
+  ],
+  "unlock": "node:M4"
+ },
+ {
+  "id": "craft_bellows_horn",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    3
+   ],
+   [
+    "moray_skin",
+    2
+   ],
+   [
+    "boards",
+    5
+   ]
+  ],
+  "out": [
+   "bellows_horn",
+   1
+  ],
+  "unlock": "node:M10"
+ },
+ {
+  "id": "craft_reservoir_3",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_ingot",
+    5
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "boards",
+    5
+   ]
+  ],
+  "out": [
+   "reservoir_3",
+   1
+  ],
+  "unlock": "node:M11"
+ },
+ {
+  "id": "craft_reservoir_7",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_ingot",
+    10
+   ],
+   [
+    "brass",
+    5
+   ],
+   [
+    "reservoir_3",
+    1
+   ]
+  ],
+  "out": [
+   "reservoir_7",
+   1
+  ],
+  "unlock": "node:M17"
+ },
+ {
+  "id": "craft_salt_shroud",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    4
+   ],
+   [
+    "brass",
+    3
+   ],
+   [
+    "oiled_canvas",
+    1
+   ]
+  ],
+  "out": [
+   "salt_shroud",
+   1
+  ],
+  "unlock": "node:M17"
+ },
+ {
+  "id": "craft_wheelbarrow",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    10
+   ],
+   [
+    "iron_ingot",
+    2
+   ]
+  ],
+  "out": [
+   "wheelbarrow",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_wheelbarrow_soft",
+  "station": "workbench",
+  "in": [
+   [
+    "wheelbarrow",
+    1
+   ],
+   [
+    "rag",
+    5
+   ],
+   [
+    "whale_oil",
+    1
+   ]
+  ],
+  "out": [
+   "wheelbarrow_soft",
+   1
+  ],
+  "unlock": "skill:keeping:2"
+ },
+ {
+  "id": "craft_drag_sled",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    8
+   ],
+   [
+    "canvas",
+    2
+   ]
+  ],
+  "out": [
+   "drag_sled",
+   1
+  ],
+  "unlock": "flag:q2_10_done"
+ },
+ {
+  "id": "craft_memory_lantern",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_ingot",
+    1
+   ],
+   [
+    "glass",
+    1
+   ],
+   [
+    "tag:candle",
+    1
+   ]
+  ],
+  "out": [
+   "memory_lantern",
+   1
+  ],
+  "unlock": "node:P12"
+ },
+ {
+  "id": "craft_fence_wood",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    2
+   ]
+  ],
+  "out": [
+   "fence_wood",
+   1
+  ],
+  "unlock": "node:P4"
+ },
+ {
+  "id": "craft_fence_stone",
+  "station": "workbench",
+  "in": [
+   [
+    "stone",
+    3
+   ]
+  ],
+  "out": [
+   "fence_stone",
+   1
+  ],
+  "unlock": "node:P4"
+ },
+ {
+  "id": "craft_stone_path",
+  "station": "workbench",
+  "in": [
+   [
+    "stone",
+    1
+   ]
+  ],
+  "out": [
+   "stone_path",
+   1
+  ],
+  "unlock": "node:P4"
+ },
+ {
+  "id": "craft_magnifier",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    1
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "magnifier",
+   1
+  ],
+  "unlock": "node:P7"
+ },
+ {
+  "id": "craft_relatives_box",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    15
+   ]
+  ],
+  "out": [
+   "relatives_box",
+   1
+  ],
+  "unlock": "node:P7"
+ },
+ {
+  "id": "craft_brass_handles",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "brass_handle",
+   2
+  ],
+  "unlock": "node:P13"
+ },
+ {
+  "id": "craft_stone_wall",
+  "station": "workbench",
+  "in": [
+   [
+    "stone",
+    2
+   ]
+  ],
+  "out": [
+   "stone_wall",
+   1
+  ],
+  "unlock": "skill:farming:1"
+ },
+ {
+  "id": "craft_gull_scarer",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "canvas",
+    1
+   ],
+   [
+    "duck_feather",
+    3
+   ]
+  ],
+  "out": [
+   "gull_scarer",
+   1
+  ],
+  "unlock": "skill:farming:2"
+ },
+ {
+  "id": "craft_guano_fertilizer",
+  "station": "workbench",
+  "in": [
+   [
+    "guano",
+    5
+   ],
+   [
+    "peat",
+    1
+   ]
+  ],
+  "out": [
+   "guano_fertilizer",
+   1
+  ],
+  "unlock": "skill:farming:3"
+ },
+ {
+  "id": "craft_watering_barrel",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    10
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "watering_barrel",
+   1
+  ],
+  "unlock": "skill:farming:4"
+ },
+ {
+  "id": "craft_cistern",
+  "station": "workbench",
+  "in": [
+   [
+    "stone",
+    20
+   ],
+   [
+    "boards",
+    5
+   ],
+   [
+    "iron_ingot",
+    2
+   ]
+  ],
+  "out": [
+   "cistern",
+   1
+  ],
+  "unlock": "skill:farming:7"
+ },
+ {
+  "id": "craft_helga_fertilizer",
+  "station": "workbench",
+  "in": [
+   [
+    "hmar_mushroom",
+    1
+   ],
+   [
+    "compost",
+    2
+   ],
+   [
+    "kelp_ash",
+    1
+   ]
+  ],
+  "out": [
+   "helga_fertilizer",
+   1
+  ],
+  "unlock": "skill:farming:8"
+ },
+ {
+  "id": "craft_keeper_scarecrow",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    10
+   ],
+   [
+    "canvas",
+    2
+   ],
+   [
+    "agatha_hat",
+    1
+   ]
+  ],
+  "out": [
+   "keeper_scarecrow",
+   1
+  ],
+  "unlock": "skill:farming:10"
+ },
+ {
+  "id": "craft_beehive",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    15
+   ],
+   [
+    "resin",
+    5
+   ]
+  ],
+  "out": [
+   "beehive",
+   1
+  ],
+  "unlock": "node:Z6"
+ },
+ {
+  "id": "craft_eider_nest_box",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    10
+   ],
+   [
+    "hay",
+    5
+   ]
+  ],
+  "out": [
+   "eider_nest_box",
+   1
+  ],
+  "unlock": "flag:bird_day_passed"
+ },
+ {
+  "id": "craft_wind_pump",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_ingot",
+    3
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "boards",
+    10
+   ],
+   [
+    "canvas",
+    1
+   ]
+  ],
+  "out": [
+   "wind_pump",
+   1
+  ],
+  "unlock": "node:Z14"
+ },
+ {
+  "id": "craft_trap",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "thread",
+    2
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "trap",
+   1
+  ],
+  "unlock": "skill:fishing:1"
+ },
+ {
+  "id": "craft_glow_bait",
+  "station": "workbench",
+  "in": [
+   [
+    "glow_plankton",
+    1
+   ],
+   [
+    "bait",
+    5
+   ]
+  ],
+  "out": [
+   "glow_bait",
+   5
+  ],
+  "unlock": "skill:fishing:3"
+ },
+ {
+  "id": "craft_longline",
+  "station": "workbench",
+  "in": [
+   [
+    "thread",
+    20
+   ],
+   [
+    "hooks",
+    20
+   ]
+  ],
+  "out": [
+   "longline",
+   1
+  ],
+  "unlock": "skill:fishing:4"
+ },
+ {
+  "id": "craft_legend_lure",
+  "station": "workbench",
+  "in": [
+   [
+    "pearl",
+    1
+   ],
+   [
+    "bait",
+    5
+   ],
+   [
+    "lightflower",
+    1
+   ]
+  ],
+  "out": [
+   "legend_lure",
+   1
+  ],
+  "unlock": "skill:fishing:9"
+ },
+ {
+  "id": "craft_buoy_marker",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "canvas",
+    1
+   ],
+   [
+    "resin",
+    1
+   ]
+  ],
+  "out": [
+   "buoy_marker",
+   1
+  ],
+  "unlock": "skill:seafaring:1"
+ },
+ {
+  "id": "craft_stern_lantern",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    1
+   ],
+   [
+    "glass",
+    1
+   ]
+  ],
+  "out": [
+   "stern_lantern",
+   1
+  ],
+  "unlock": "skill:seafaring:3"
+ },
+ {
+  "id": "craft_oiled_canvas",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "whale_oil",
+    1
+   ]
+  ],
+  "out": [
+   "oiled_canvas",
+   1
+  ],
+  "unlock": "node:S7|skill:diving:2"
+ },
+ {
+  "id": "craft_air_bag",
+  "station": "workbench",
+  "in": [
+   [
+    "oiled_canvas",
+    2
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "air_bag",
+   1
+  ],
+  "unlock": "skill:diving:2"
+ },
+ {
+  "id": "craft_underwater_lantern",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    2
+   ],
+   [
+    "glass",
+    1
+   ],
+   [
+    "lightflower",
+    1
+   ]
+  ],
+  "out": [
+   "underwater_lantern",
+   1
+  ],
+  "unlock": "skill:diving:7"
+ },
+ {
+  "id": "craft_kelp_line",
+  "station": "workbench",
+  "in": [
+   [
+    "thread",
+    10
+   ],
+   [
+    "cork_float",
+    5
+   ],
+   [
+    "stone",
+    2
+   ]
+  ],
+  "out": [
+   "kelp_line",
+   1
+  ],
+  "unlock": "node:Z9|skill:seafaring:6"
+ },
+ {
+  "id": "craft_mussel_rope",
+  "station": "workbench",
+  "in": [
+   [
+    "thread",
+    15
+   ],
+   [
+    "cork_float",
+    3
+   ]
+  ],
+  "out": [
+   "mussel_rope",
+   1
+  ],
+  "unlock": "node:Z9"
+ },
+ {
+  "id": "craft_oyster_cage",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_ingot",
+    2
+   ],
+   [
+    "boards",
+    5
+   ],
+   [
+    "thread",
+    5
+   ]
+  ],
+  "out": [
+   "oyster_cage",
+   1
+  ],
+  "unlock": "node:Z10"
+ },
+ {
+  "id": "craft_copper_wire",
+  "station": "workbench",
+  "in": [
+   [
+    "copper_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "copper_wire",
+   5
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_glass_insulator",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    1
+   ]
+  ],
+  "out": [
+   "glass_insulator",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_big_chest",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    100
+   ],
+   [
+    "iron_ingot",
+    5
+   ]
+  ],
+  "out": [
+   "big_chest",
+   1
+  ],
+  "unlock": "skill:crafting:7"
+ },
+ {
+  "id": "craft_keeper_sweater",
+  "station": "workbench",
+  "in": [
+   [
+    "yarn",
+    5
+   ]
+  ],
+  "out": [
+   "keeper_sweater",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "craft_wool_socks",
+  "station": "workbench",
+  "in": [
+   [
+    "yarn",
+    2
+   ]
+  ],
+  "out": [
+   "wool_socks",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_storm_coat",
+  "station": "workbench",
+  "in": [
+   [
+    "oiled_canvas",
+    2
+   ]
+  ],
+  "out": [
+   "storm_coat",
+   1
+  ],
+  "unlock": "node:S7"
+ },
+ {
+  "id": "craft_storm_jacket",
+  "station": "workbench",
+  "in": [
+   [
+    "oiled_canvas",
+    2
+   ],
+   [
+    "eider_down",
+    1
+   ]
+  ],
+  "out": [
+   "storm_jacket",
+   1
+  ],
+  "unlock": "node:S7"
+ },
+ {
+  "id": "craft_eider_blanket",
+  "station": "workbench",
+  "in": [
+   [
+    "eider_down",
+    3
+   ],
+   [
+    "cloth",
+    2
+   ]
+  ],
+  "out": [
+   "eider_blanket",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_rowan_amulet",
+  "station": "workbench",
+  "in": [
+   [
+    "rowan_berry",
+    3
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "rowan_amulet",
+   1
+  ],
+  "unlock": "node:T2"
+ },
+ {
+  "id": "craft_sea_glass_ring",
+  "station": "workbench",
+  "in": [
+   [
+    "sea_glass",
+    5
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "sea_glass_ring",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "craft_pearl_earring",
+  "station": "workbench",
+  "in": [
+   [
+    "pearl",
+    1
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "pearl_earring",
+   1
+  ],
+  "unlock": "skill:diving:4"
+ },
+ {
+  "id": "craft_pumice_brush",
+  "station": "workbench",
+  "in": [
+   [
+    "pumice",
+    3
+   ],
+   [
+    "boards",
+    1
+   ]
+  ],
+  "out": [
+   "pumice_brush",
+   1
+  ],
+  "unlock": "skill:foraging:8"
+ },
+ {
+  "id": "craft_receiver_chest",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    30
+   ],
+   [
+    "iron_ingot",
+    2
+   ],
+   [
+    "copper_wire",
+    2
+   ]
+  ],
+  "out": [
+   "receiver_chest",
+   1
+  ],
+  "unlock": "node:R15"
+ },
+ {
+  "id": "saw_driftwood",
+  "station": "sawhorse",
+  "in": [
+   [
+    "driftwood",
+    3
+   ]
+  ],
+  "out": [
+   "boards",
+   2
+  ],
+  "unlock": "start",
+  "energy": 3
+ },
+ {
+  "id": "saw_driftwood_plus",
+  "station": "sawhorse",
+  "in": [
+   [
+    "driftwood",
+    3
+   ]
+  ],
+  "out": [
+   "boards",
+   3
+  ],
+  "unlock": "skill:crafting:3",
+  "energy": 3
+ },
+ {
+  "id": "saw_birch",
+  "station": "sawhorse",
+  "in": [
+   [
+    "birch_log",
+    1
+   ]
+  ],
+  "out": [
+   "boards",
+   4
+  ],
+  "unlock": "start",
+  "energy": 3
+ },
+ {
+  "id": "smelt_iron",
+  "station": "forge",
+  "in": [
+   [
+    "iron_scrap",
+    2
+   ]
+  ],
+  "out": [
+   "iron_ingot",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "smelt_iron_baron",
+  "station": "forge",
+  "in": [
+   [
+    "iron_scrap",
+    1
+   ]
+  ],
+  "out": [
+   "iron_ingot",
+   1
+  ],
+  "unlock": "profession:rust_baron",
+  "minutes": 120
+ },
+ {
+  "id": "smelt_copper",
+  "station": "forge",
+  "in": [
+   [
+    "copper_sheathing",
+    2
+   ]
+  ],
+  "out": [
+   "copper_ingot",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "smelt_silver",
+  "station": "forge",
+  "in": [
+   [
+    "silver_ore",
+    2
+   ]
+  ],
+  "out": [
+   "silver_ingot",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "smelt_gold",
+  "station": "forge",
+  "in": [
+   [
+    "gold_ore",
+    2
+   ]
+  ],
+  "out": [
+   "gold_ingot",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "alloy_brass",
+  "station": "forge",
+  "in": [
+   [
+    "copper_ingot",
+    2
+   ],
+   [
+    "zinc",
+    1
+   ]
+  ],
+  "out": [
+   "brass",
+   2
+  ],
+  "unlock": "node:R17",
+  "minutes": 120
+ },
+ {
+  "id": "alloy_bronze",
+  "station": "forge",
+  "in": [
+   [
+    "copper_ingot",
+    2
+   ],
+   [
+    "tin",
+    1
+   ]
+  ],
+  "out": [
+   "bronze",
+   2
+  ],
+  "unlock": "node:R17",
+  "minutes": 120
+ },
+ {
+  "id": "forge_nails",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "nails",
+   20
+  ],
+  "unlock": "node:R2",
+  "minutes": 120
+ },
+ {
+  "id": "forge_hooks",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "hooks",
+   20
+  ],
+  "unlock": "node:R2|skill:fishing:4",
+  "minutes": 120
+ },
+ {
+  "id": "forge_harpoon_bolts",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "harpoon_bolts",
+   10
+  ],
+  "unlock": "node:R2|skill:diving:1",
+  "minutes": 120
+ },
+ {
+  "id": "forge_lightning_rod",
+  "station": "forge",
+  "in": [
+   [
+    "copper_ingot",
+    2
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "lightning_rod",
+   1
+  ],
+  "unlock": "node:M6",
+  "minutes": 120
+ },
+ {
+  "id": "forge_frame_small",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    5
+   ]
+  ],
+  "out": [
+   "frame_small",
+   1
+  ],
+  "unlock": "node:M8",
+  "minutes": 120
+ },
+ {
+  "id": "forge_frame_medium",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    10
+   ]
+  ],
+  "out": [
+   "frame_medium",
+   1
+  ],
+  "unlock": "node:M12",
+  "minutes": 120
+ },
+ {
+  "id": "forge_frame_large",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    15
+   ],
+   [
+    "silver_ingot",
+    2
+   ]
+  ],
+  "out": [
+   "frame_large",
+   1
+  ],
+  "unlock": "node:M15",
+  "minutes": 120
+ },
+ {
+  "id": "forge_frame_eye",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    20
+   ],
+   [
+    "silver_ingot",
+    5
+   ],
+   [
+    "gold_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "frame_eye",
+   1
+  ],
+  "unlock": "node:M18",
+  "minutes": 120
+ },
+ {
+  "id": "forge_clock_bell",
+  "station": "forge",
+  "in": [
+   [
+    "bronze",
+    5
+   ],
+   [
+    "clock_spring",
+    1
+   ]
+  ],
+  "out": [
+   "clock_bell",
+   1
+  ],
+  "unlock": "node:M10",
+  "minutes": 120
+ },
+ {
+  "id": "forge_steam_boiler",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    10
+   ]
+  ],
+  "out": [
+   "steam_boiler",
+   1
+  ],
+  "unlock": "node:M16",
+  "minutes": 120
+ },
+ {
+  "id": "forge_steam_horn",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    10
+   ],
+   [
+    "brass",
+    5
+   ],
+   [
+    "steam_boiler",
+    1
+   ]
+  ],
+  "out": [
+   "steam_horn",
+   1
+  ],
+  "unlock": "node:M16",
+  "minutes": 120
+ },
+ {
+  "id": "forge_siren",
+  "station": "forge",
+  "in": [
+   [
+    "steam_horn",
+    1
+   ],
+   [
+    "brass",
+    3
+   ],
+   [
+    "sparking_iron",
+    1
+   ]
+  ],
+  "out": [
+   "siren",
+   1
+  ],
+  "unlock": "node:M16",
+  "minutes": 120
+ },
+ {
+  "id": "forge_wind_turbine",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    2
+   ],
+   [
+    "sparking_iron",
+    1
+   ],
+   [
+    "canvas",
+    1
+   ]
+  ],
+  "out": [
+   "wind_turbine",
+   1
+  ],
+  "unlock": "node:M17",
+  "minutes": 120
+ },
+ {
+  "id": "forge_argand",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    2
+   ],
+   [
+    "glass",
+    1
+   ],
+   [
+    "copper_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "lamp_argand",
+   1
+  ],
+  "unlock": "node:M9",
+  "minutes": 120
+ },
+ {
+  "id": "forge_incandescent",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    3
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "gas_mantle",
+    1
+   ]
+  ],
+  "out": [
+   "lamp_incandescent",
+   1
+  ],
+  "unlock": "node:M13",
+  "minutes": 120
+ },
+ {
+  "id": "forge_rann_torch",
+  "station": "forge",
+  "in": [
+   [
+    "moon_silver",
+    1
+   ],
+   [
+    "light_water",
+    3
+   ],
+   [
+    "svetla_spark",
+    1
+   ]
+  ],
+  "out": [
+   "lamp_rann_torch",
+   1
+  ],
+  "unlock": "node:M19",
+  "minutes": 120
+ },
+ {
+  "id": "forge_precise_clock",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    5
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "clock_spring",
+    1
+   ]
+  ],
+  "out": [
+   "mech_precise",
+   1
+  ],
+  "unlock": "node:M11",
+  "minutes": 120
+ },
+ {
+  "id": "forge_auto_mechanism",
+  "station": "forge",
+  "in": [
+   [
+    "silver_ingot",
+    3
+   ],
+   [
+    "brass",
+    5
+   ],
+   [
+    "wind_turbine",
+    1
+   ]
+  ],
+  "out": [
+   "mech_auto",
+   1
+  ],
+  "unlock": "node:M17",
+  "minutes": 120
+ },
+ {
+  "id": "forge_fence_iron",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "fence_iron",
+   1
+  ],
+  "unlock": "node:P4",
+  "minutes": 120
+ },
+ {
+  "id": "forge_ice_pick",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    3
+   ]
+  ],
+  "out": [
+   "ice_pick",
+   1
+  ],
+  "unlock": "node:S8|skill:fishing:7",
+  "minutes": 120
+ },
+ {
+  "id": "forge_icebreaker_bow",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    20
+   ],
+   [
+    "brass",
+    5
+   ]
+  ],
+  "out": [
+   "icebreaker_bow",
+   1
+  ],
+  "unlock": "skill:seafaring:9",
+  "minutes": 120
+ },
+ {
+  "id": "forge_weighted_boots",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    4
+   ],
+   [
+    "moray_skin",
+    1
+   ]
+  ],
+  "out": [
+   "weighted_boots",
+   1
+  ],
+  "unlock": "skill:diving:6",
+  "minutes": 120
+ },
+ {
+  "id": "forge_whaling_harpoon",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    5
+   ],
+   [
+    "whalebone",
+    1
+   ]
+  ],
+  "out": [
+   "whaling_harpoon",
+   1
+  ],
+  "unlock": "skill:diving:8",
+  "minutes": 120
+ },
+ {
+  "id": "craft_amber_ring",
+  "station": "forge",
+  "in": [
+   [
+    "amber",
+    1
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "amber_ring",
+   1
+  ],
+  "unlock": "learn",
+  "minutes": 120
+ },
+ {
+  "id": "forge_amber_pendant",
+  "station": "forge",
+  "in": [
+   [
+    "amber",
+    1
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "amber_pendant",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "forge_whalebone_charm",
+  "station": "forge",
+  "in": [
+   [
+    "whalebone",
+    3
+   ]
+  ],
+  "out": [
+   "whalebone_charm",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "forge_wolffish_fang",
+  "station": "forge",
+  "in": [
+   [
+    "fish_wolffish",
+    1
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "wolffish_fang",
+   1
+  ],
+  "unlock": "skill:diving:3",
+  "minutes": 120
+ },
+ {
+  "id": "forge_tongs",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    3
+   ]
+  ],
+  "out": [
+   "forge_tongs",
+   1
+  ],
+  "unlock": "skill:crafting:8",
+  "minutes": 120
+ },
+ {
+  "id": "boil_salt",
+  "station": "salt_pan",
+  "in": [
+   [
+    "seawater",
+    5
+   ]
+  ],
+  "out": [
+   "salt",
+   3
+  ],
+  "unlock": "start",
+  "minutes": 1440
+ },
+ {
+  "id": "brine_herring",
+  "station": "brine_barrel",
+  "in": [
+   [
+    "tag:small",
+    5
+   ],
+   [
+    "salt",
+    2
+   ]
+  ],
+  "out": [
+   "salted_herring",
+   5
+  ],
+  "unlock": "start",
+  "minutes": 4320
+ },
+ {
+  "id": "smoke_fillet",
+  "station": "smokehouse",
+  "in": [
+   [
+    "fillet",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "smoked_fish",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 360
+ },
+ {
+  "id": "smoke_mackerel",
+  "station": "smokehouse",
+  "in": [
+   [
+    "fish_mackerel",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "smoked_mackerel",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 360
+ },
+ {
+  "id": "smoke_eel",
+  "station": "smokehouse",
+  "in": [
+   [
+    "fish_eel",
+    1
+   ],
+   [
+    "salt",
+    1
+   ]
+  ],
+  "out": [
+   "smoked_eel",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 360
+ },
+ {
+  "id": "dry_kelp",
+  "station": "drying_rack",
+  "in": [
+   [
+    "tag:seaweed",
+    1
+   ]
+  ],
+  "out": [
+   "dried_kelp",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 1440
+ },
+ {
+  "id": "dry_heather",
+  "station": "drying_rack",
+  "in": [
+   [
+    "heather",
+    5
+   ]
+  ],
+  "out": [
+   "dried_heather",
+   1
+  ],
+  "unlock": "skill:foraging:4",
+  "minutes": 1440
+ },
+ {
+  "id": "dry_cod",
+  "station": "drying_rack",
+  "in": [
+   [
+    "fish_cod",
+    1
+   ]
+  ],
+  "out": [
+   "stockfish",
+   1
+  ],
+  "unlock": "node:R11",
+  "minutes": 7200
+ },
+ {
+  "id": "dry_haddock",
+  "station": "drying_rack",
+  "in": [
+   [
+    "fish_haddock",
+    1
+   ]
+  ],
+  "out": [
+   "stockfish",
+   1
+  ],
+  "unlock": "node:R11",
+  "minutes": 7200
+ },
+ {
+  "id": "dry_saithe",
+  "station": "drying_rack",
+  "in": [
+   [
+    "fish_saithe",
+    1
+   ]
+  ],
+  "out": [
+   "stockfish",
+   1
+  ],
+  "unlock": "node:R11",
+  "minutes": 7200
+ },
+ {
+  "id": "tar_resin",
+  "station": "tar_kiln",
+  "in": [
+   [
+    "birch_bark",
+    5
+   ]
+  ],
+  "out": [
+   "resin",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 1440
+ },
+ {
+  "id": "scutch_flax",
+  "station": "scutcher",
+  "in": [
+   [
+    "flax",
+    1
+   ]
+  ],
+  "out": [
+   "flax_fiber",
+   2
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "spin_thread",
+  "station": "spinning_wheel",
+  "in": [
+   [
+    "flax_fiber",
+    2
+   ]
+  ],
+  "out": [
+   "thread",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "spin_yarn",
+  "station": "spinning_wheel",
+  "in": [
+   [
+    "wool",
+    1
+   ]
+  ],
+  "out": [
+   "yarn",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "weave_canvas",
+  "station": "loom",
+  "in": [
+   [
+    "thread",
+    3
+   ]
+  ],
+  "out": [
+   "canvas",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "weave_cloth",
+  "station": "loom",
+  "in": [
+   [
+    "yarn",
+    3
+   ]
+  ],
+  "out": [
+   "cloth",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "weave_storm_sails",
+  "station": "loom",
+  "in": [
+   [
+    "canvas",
+    6
+   ],
+   [
+    "whale_oil",
+    2
+   ]
+  ],
+  "out": [
+   "storm_sails",
+   1
+  ],
+  "unlock": "skill:seafaring:4",
+  "minutes": 240
+ },
+ {
+  "id": "burn_kelp_ash",
+  "station": "ash_kiln",
+  "in": [
+   [
+    "dried_kelp",
+    5
+   ]
+  ],
+  "out": [
+   "kelp_ash",
+   2
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "burn_shell_lime",
+  "station": "ash_kiln",
+  "in": [
+   [
+    "scallop_shell",
+    10
+   ]
+  ],
+  "out": [
+   "shell_lime",
+   3
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "melt_glass",
+  "station": "glass_furnace",
+  "in": [
+   [
+    "sand",
+    2
+   ],
+   [
+    "kelp_ash",
+    1
+   ]
+  ],
+  "out": [
+   "glass",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 240
+ },
+ {
+  "id": "melt_ruby_glass",
+  "station": "glass_furnace",
+  "in": [
+   [
+    "glass",
+    1
+   ],
+   [
+    "copper_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "ruby_glass",
+   1
+  ],
+  "unlock": "node:M14",
+  "minutes": 240
+ },
+ {
+  "id": "melt_stained_glass",
+  "station": "glass_furnace",
+  "in": [
+   [
+    "glass",
+    3
+   ],
+   [
+    "ruby_glass",
+    1
+   ]
+  ],
+  "out": [
+   "stained_glass",
+   1
+  ],
+  "unlock": "profession:glassblower",
+  "minutes": 240
+ },
+ {
+  "id": "grind_prism",
+  "station": "optical_bench",
+  "in": [
+   [
+    "glass",
+    1
+   ],
+   [
+    "abrasive",
+    1
+   ]
+  ],
+  "out": [
+   "prism",
+   1
+  ],
+  "unlock": "node:M7",
+  "minutes": 240
+ },
+ {
+  "id": "assemble_fresnel_4",
+  "station": "optical_bench",
+  "in": [
+   [
+    "prism",
+    8
+   ],
+   [
+    "frame_small",
+    1
+   ]
+  ],
+  "out": [
+   "lens_fresnel_4",
+   1
+  ],
+  "unlock": "node:M8",
+  "minutes": 1440
+ },
+ {
+  "id": "assemble_fresnel_3",
+  "station": "optical_bench",
+  "in": [
+   [
+    "prism",
+    16
+   ],
+   [
+    "frame_medium",
+    1
+   ],
+   [
+    "deep_quartz",
+    1
+   ]
+  ],
+  "out": [
+   "lens_fresnel_3",
+   1
+  ],
+  "unlock": "node:M12",
+  "minutes": 1440
+ },
+ {
+  "id": "assemble_fresnel_2",
+  "station": "optical_bench",
+  "in": [
+   [
+    "prism",
+    24
+   ],
+   [
+    "frame_large",
+    1
+   ],
+   [
+    "deep_quartz",
+    3
+   ]
+  ],
+  "out": [
+   "lens_fresnel_2",
+   1
+  ],
+  "unlock": "node:M15",
+  "minutes": 1440
+ },
+ {
+  "id": "assemble_great_eye",
+  "station": "optical_bench",
+  "in": [
+   [
+    "prism",
+    40
+   ],
+   [
+    "frame_eye",
+    1
+   ],
+   [
+    "deep_quartz",
+    5
+   ],
+   [
+    "svetla_spark",
+    1
+   ]
+  ],
+  "out": [
+   "lens_great_eye",
+   1
+  ],
+  "unlock": "node:M18",
+  "minutes": 1440
+ },
+ {
+  "id": "assemble_red_sector",
+  "station": "optical_bench",
+  "in": [
+   [
+    "ruby_glass",
+    4
+   ],
+   [
+    "brass",
+    2
+   ]
+  ],
+  "out": [
+   "red_sector",
+   1
+  ],
+  "unlock": "node:M14",
+  "minutes": 1440
+ },
+ {
+  "id": "carpentry_coffin_simple",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "boards",
+    8
+   ],
+   [
+    "nails",
+    10
+   ]
+  ],
+  "out": [
+   "coffin_simple",
+   1
+  ],
+  "unlock": "node:P3",
+  "minutes": 120
+ },
+ {
+  "id": "carpentry_coffin_good",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "boards",
+    12
+   ],
+   [
+    "nails",
+    20
+   ],
+   [
+    "resin",
+    1
+   ]
+  ],
+  "out": [
+   "coffin_good",
+   1
+  ],
+  "unlock": "node:P8",
+  "minutes": 240
+ },
+ {
+  "id": "carpentry_coffin_carved",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "bog_oak",
+    6
+   ],
+   [
+    "brass_handle",
+    2
+   ]
+  ],
+  "out": [
+   "coffin_carved",
+   1
+  ],
+  "unlock": "node:P13",
+  "minutes": 360
+ },
+ {
+  "id": "carpentry_bench",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "boards",
+    6
+   ]
+  ],
+  "out": [
+   "bench",
+   1
+  ],
+  "unlock": "node:P12",
+  "minutes": 120
+ },
+ {
+  "id": "carpentry_trinket",
+  "station": "carpentry_table",
+  "in": [
+   [
+    "bog_oak",
+    1
+   ]
+  ],
+  "out": [
+   "carved_trinket",
+   1
+  ],
+  "unlock": "learn",
+  "minutes": 120
+ },
+ {
+  "id": "cut_stone_block",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone",
+    10
+   ]
+  ],
+  "out": [
+   "stone_block",
+   1
+  ],
+  "unlock": "node:P6",
+  "minutes": 120
+ },
+ {
+  "id": "cut_stone_slab",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone_block",
+    2
+   ]
+  ],
+  "out": [
+   "stone_slab",
+   1
+  ],
+  "unlock": "node:P6",
+  "minutes": 1440
+ },
+ {
+  "id": "cut_headstone",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone_block",
+    3
+   ],
+   [
+    "cuttlefish_ink",
+    1
+   ]
+  ],
+  "out": [
+   "headstone",
+   1
+  ],
+  "unlock": "node:P11",
+  "minutes": 1440
+ },
+ {
+  "id": "blueprint_lighthouse_stone",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone_block",
+    5
+   ],
+   [
+    "brass",
+    1
+   ],
+   [
+    "light_water",
+    1
+   ]
+  ],
+  "out": [
+   "beacon_stone",
+   1
+  ],
+  "unlock": "node:P16|learn",
+  "minutes": 1440
+ },
+ {
+  "id": "cut_statue_mourning",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone_block",
+    10
+   ]
+  ],
+  "out": [
+   "statue_mourning",
+   1
+  ],
+  "unlock": "node:P12",
+  "minutes": 1440
+ },
+ {
+  "id": "cut_fence_stone_block",
+  "station": "stonecutter_table",
+  "in": [
+   [
+    "stone_block",
+    1
+   ]
+  ],
+  "out": [
+   "fence_stone",
+   3
+  ],
+  "unlock": "node:P6",
+  "minutes": 120
+ },
+ {
+  "id": "mold_wax_candles",
+  "station": "candle_mold",
+  "in": [
+   [
+    "beeswax",
+    1
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "wax_candle",
+   2
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "mold_tallow_candles",
+  "station": "candle_mold",
+  "in": [
+   [
+    "fish_oil",
+    1
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "tallow_candle",
+   2
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "churn_butter",
+  "station": "butter_churn",
+  "in": [
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "butter",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 180
+ },
+ {
+  "id": "press_cheese",
+  "station": "cheese_press",
+  "in": [
+   [
+    "milk",
+    1
+   ]
+  ],
+  "out": [
+   "cheese",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 360
+ },
+ {
+  "id": "press_goat_cheese",
+  "station": "cheese_press",
+  "in": [
+   [
+    "goat_milk",
+    1
+   ]
+  ],
+  "out": [
+   "goat_cheese",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 360
+ },
+ {
+  "id": "brew_ale",
+  "station": "brewery",
+  "in": [
+   [
+    "barley",
+    3
+   ],
+   [
+    "hops",
+    1
+   ]
+  ],
+  "out": [
+   "ale",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 2880
+ },
+ {
+  "id": "brew_dark_ale",
+  "station": "brewery",
+  "in": [
+   [
+    "rye",
+    3
+   ],
+   [
+    "hops",
+    1
+   ]
+  ],
+  "out": [
+   "dark_ale",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 2880
+ },
+ {
+  "id": "brew_mead",
+  "station": "brewery",
+  "in": [
+   [
+    "tag:honey",
+    1
+   ],
+   [
+    "fresh_water",
+    1
+   ]
+  ],
+  "out": [
+   "mead",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 2880
+ },
+ {
+  "id": "cook_dry_drowned_ale",
+  "station": "brewery",
+  "in": [
+   [
+    "barley",
+    3
+   ],
+   [
+    "hops",
+    1
+   ],
+   [
+    "kelp",
+    1
+   ]
+  ],
+  "out": [
+   "dry_drowned_ale",
+   1
+  ],
+  "unlock": "learn",
+  "minutes": 2880
+ },
+ {
+  "id": "vat_wine_buckthorn",
+  "station": "wine_vat",
+  "in": [
+   [
+    "sea_buckthorn",
+    5
+   ]
+  ],
+  "out": [
+   "wine_buckthorn",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 7200
+ },
+ {
+  "id": "vat_wine_cloudberry",
+  "station": "wine_vat",
+  "in": [
+   [
+    "cloudberry",
+    5
+   ]
+  ],
+  "out": [
+   "wine_cloudberry",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 7200
+ },
+ {
+  "id": "vat_wine_lingonberry",
+  "station": "wine_vat",
+  "in": [
+   [
+    "lingonberry",
+    5
+   ]
+  ],
+  "out": [
+   "wine_lingonberry",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 7200
+ },
+ {
+  "id": "vat_wine_cranberry",
+  "station": "wine_vat",
+  "in": [
+   [
+    "cranberry",
+    5
+   ]
+  ],
+  "out": [
+   "wine_cranberry",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 7200
+ },
+ {
+  "id": "vat_wine_blueberry",
+  "station": "wine_vat",
+  "in": [
+   [
+    "blueberry",
+    5
+   ]
+  ],
+  "out": [
+   "wine_blueberry",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 7200
+ },
+ {
+  "id": "jar_pickles",
+  "station": "preserve_jars",
+  "in": [
+   [
+    "tag:vegetable",
+    1
+   ]
+  ],
+  "out": [
+   "pickles",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 2880
+ },
+ {
+  "id": "jar_jam",
+  "station": "preserve_jars",
+  "in": [
+   [
+    "tag:berry",
+    1
+   ]
+  ],
+  "out": [
+   "jam",
+   1
+  ],
+  "unlock": "node:R13",
+  "minutes": 4320
+ },
+ {
+  "id": "distill_aquavit",
+  "station": "still",
+  "in": [
+   [
+    "potato",
+    5
+   ],
+   [
+    "dill",
+    1
+   ]
+  ],
+  "out": [
+   "aquavit",
+   1
+  ],
+  "unlock": "node:R14",
+  "minutes": 4320
+ },
+ {
+  "id": "mill_flour",
+  "station": "mill",
+  "in": [
+   [
+    "barley",
+    1
+   ]
+  ],
+  "out": [
+   "flour",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "mill_rye_flour",
+  "station": "mill",
+  "in": [
+   [
+    "rye",
+    1
+   ]
+  ],
+  "out": [
+   "rye_flour",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "brew_scurvy",
+  "station": "herbal_table",
+  "in": [
+   [
+    "scurvygrass",
+    3
+   ]
+  ],
+  "out": [
+   "scurvy_brew",
+   1
+  ],
+  "unlock": "node:T5",
+  "minutes": 120
+ },
+ {
+  "id": "brew_warm_balm",
+  "station": "herbal_table",
+  "in": [
+   [
+    "sea_buckthorn",
+    2
+   ],
+   [
+    "tag:honey",
+    1
+   ],
+   [
+    "rosehip",
+    1
+   ]
+  ],
+  "out": [
+   "warm_balm",
+   1
+  ],
+  "unlock": "node:T5",
+  "minutes": 180
+ },
+ {
+  "id": "cook_rowan_brew",
+  "station": "herbal_table",
+  "in": [
+   [
+    "rowan_berry",
+    3
+   ],
+   [
+    "aquavit",
+    1
+   ]
+  ],
+  "out": [
+   "rowan_tincture",
+   1
+  ],
+  "unlock": "node:T5|learn",
+  "minutes": 180
+ },
+ {
+  "id": "brew_vigor",
+  "station": "herbal_table",
+  "in": [
+   [
+    "heather",
+    2
+   ],
+   [
+    "blueberry",
+    1
+   ]
+  ],
+  "out": [
+   "vigor_brew",
+   1
+  ],
+  "unlock": "node:T5",
+  "minutes": 120
+ },
+ {
+  "id": "brew_depth_elixir",
+  "station": "herbal_table",
+  "in": [
+   [
+    "jellyfish_slime",
+    1
+   ],
+   [
+    "kelp",
+    2
+   ],
+   [
+    "tag:honey",
+    1
+   ]
+  ],
+  "out": [
+   "depth_elixir",
+   1
+  ],
+  "unlock": "node:T8",
+  "minutes": 180
+ },
+ {
+  "id": "brew_depth_elixir_plus",
+  "station": "herbal_table",
+  "in": [
+   [
+    "jellyfish_slime",
+    2
+   ],
+   [
+    "kelp",
+    2
+   ],
+   [
+    "heather_honey",
+    1
+   ]
+  ],
+  "out": [
+   "depth_elixir_plus",
+   1
+  ],
+  "unlock": "skill:diving:9",
+  "minutes": 240
+ },
+ {
+  "id": "brew_fisher_luck",
+  "station": "herbal_table",
+  "in": [
+   [
+    "hmar_mushroom",
+    1
+   ],
+   [
+    "sea_urchin",
+    1
+   ],
+   [
+    "tag:honey",
+    1
+   ]
+  ],
+  "out": [
+   "fisher_luck_potion",
+   1
+  ],
+  "unlock": "node:T8",
+  "minutes": 180
+ },
+ {
+  "id": "brew_light_water",
+  "station": "herbal_table",
+  "in": [
+   [
+    "lightflower",
+    2
+   ],
+   [
+    "glow_plankton",
+    1
+   ],
+   [
+    "glass",
+    1
+   ]
+  ],
+  "out": [
+   "light_water",
+   1
+  ],
+  "unlock": "node:T6",
+  "minutes": 240
+ },
+ {
+  "id": "brew_calm",
+  "station": "herbal_table",
+  "in": [
+   [
+    "hmar_wisp",
+    3
+   ],
+   [
+    "puffin_feather",
+    1
+   ],
+   [
+    "pearl",
+    1
+   ]
+  ],
+  "out": [
+   "calm_potion",
+   1
+  ],
+  "unlock": "node:T11",
+  "minutes": 240
+ },
+ {
+  "id": "totem_raven",
+  "station": "herbal_table",
+  "in": [
+   [
+    "raven_feather",
+    1
+   ],
+   [
+    "driftwood",
+    1
+   ],
+   [
+    "resin",
+    1
+   ]
+  ],
+  "out": [
+   "raven_totem",
+   1
+  ],
+  "unlock": "skill:foraging:2",
+  "minutes": 120
+ },
+ {
+  "id": "totem_ebb",
+  "station": "herbal_table",
+  "in": [
+   [
+    "scallop_shell",
+    1
+   ],
+   [
+    "hmar_wisp",
+    1
+   ],
+   [
+    "driftwood",
+    1
+   ]
+  ],
+  "out": [
+   "ebb_totem",
+   1
+  ],
+  "unlock": "node:T7",
+  "minutes": 120
+ },
+ {
+  "id": "totem_bell",
+  "station": "herbal_table",
+  "in": [
+   [
+    "bronze",
+    1
+   ],
+   [
+    "hmar_wisp",
+    1
+   ]
+  ],
+  "out": [
+   "bell_totem",
+   1
+  ],
+  "unlock": "node:T7",
+  "minutes": 120
+ },
+ {
+  "id": "seeds_turnip",
+  "station": "seed_box",
+  "in": [
+   [
+    "turnip",
+    1
+   ]
+  ],
+  "out": [
+   "seed_turnip",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_scurvygrass",
+  "station": "seed_box",
+  "in": [
+   [
+    "scurvygrass",
+    1
+   ]
+  ],
+  "out": [
+   "seed_scurvygrass",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_potato",
+  "station": "seed_box",
+  "in": [
+   [
+    "potato",
+    1
+   ]
+  ],
+  "out": [
+   "seed_potato",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_pea",
+  "station": "seed_box",
+  "in": [
+   [
+    "pea",
+    1
+   ]
+  ],
+  "out": [
+   "seed_pea",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_barley",
+  "station": "seed_box",
+  "in": [
+   [
+    "barley",
+    1
+   ]
+  ],
+  "out": [
+   "seed_barley",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_flax",
+  "station": "seed_box",
+  "in": [
+   [
+    "flax",
+    1
+   ]
+  ],
+  "out": [
+   "seed_flax",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_rhubarb",
+  "station": "seed_box",
+  "in": [
+   [
+    "rhubarb",
+    1
+   ]
+  ],
+  "out": [
+   "seed_rhubarb",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_sea_kale",
+  "station": "seed_box",
+  "in": [
+   [
+    "sea_kale",
+    1
+   ]
+  ],
+  "out": [
+   "seed_sea_kale",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_carrot",
+  "station": "seed_box",
+  "in": [
+   [
+    "carrot",
+    1
+   ]
+  ],
+  "out": [
+   "seed_carrot",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_cabbage",
+  "station": "seed_box",
+  "in": [
+   [
+    "cabbage",
+    1
+   ]
+  ],
+  "out": [
+   "seed_cabbage",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_rutabaga",
+  "station": "seed_box",
+  "in": [
+   [
+    "rutabaga",
+    1
+   ]
+  ],
+  "out": [
+   "seed_rutabaga",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_strawberry",
+  "station": "seed_box",
+  "in": [
+   [
+    "strawberry",
+    1
+   ]
+  ],
+  "out": [
+   "seed_strawberry",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_hops",
+  "station": "seed_box",
+  "in": [
+   [
+    "hops",
+    1
+   ]
+  ],
+  "out": [
+   "seed_hops",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_samphire",
+  "station": "seed_box",
+  "in": [
+   [
+    "samphire",
+    1
+   ]
+  ],
+  "out": [
+   "seed_samphire",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_beans",
+  "station": "seed_box",
+  "in": [
+   [
+    "beans",
+    1
+   ]
+  ],
+  "out": [
+   "seed_beans",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_onion",
+  "station": "seed_box",
+  "in": [
+   [
+    "onion",
+    1
+   ]
+  ],
+  "out": [
+   "seed_onion",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_dill",
+  "station": "seed_box",
+  "in": [
+   [
+    "dill",
+    1
+   ]
+  ],
+  "out": [
+   "seed_dill",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_pumpkin",
+  "station": "seed_box",
+  "in": [
+   [
+    "pumpkin",
+    1
+   ]
+  ],
+  "out": [
+   "seed_pumpkin",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_beet",
+  "station": "seed_box",
+  "in": [
+   [
+    "beet",
+    1
+   ]
+  ],
+  "out": [
+   "seed_beet",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_kale",
+  "station": "seed_box",
+  "in": [
+   [
+    "kale",
+    1
+   ]
+  ],
+  "out": [
+   "seed_kale",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_leek",
+  "station": "seed_box",
+  "in": [
+   [
+    "leek",
+    1
+   ]
+  ],
+  "out": [
+   "seed_leek",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_parsnip",
+  "station": "seed_box",
+  "in": [
+   [
+    "parsnip",
+    1
+   ]
+  ],
+  "out": [
+   "seed_parsnip",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_rye",
+  "station": "seed_box",
+  "in": [
+   [
+    "rye",
+    1
+   ]
+  ],
+  "out": [
+   "seed_rye",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_winter_cabbage",
+  "station": "seed_box",
+  "in": [
+   [
+    "winter_cabbage",
+    1
+   ]
+  ],
+  "out": [
+   "seed_winter_cabbage",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_lightflower",
+  "station": "seed_box",
+  "in": [
+   [
+    "lightflower",
+    1
+   ]
+  ],
+  "out": [
+   "seed_lightflower",
+   1
+  ],
+  "unlock": "node:Z7",
+  "minutes": 60,
+  "out_range": [
+   1,
+   3
+  ]
+ },
+ {
+  "id": "seeds_blueberry",
+  "station": "seed_box",
+  "in": [
+   [
+    "blueberry",
+    5
+   ]
+  ],
+  "out": [
+   "bush_blueberry",
+   1
+  ],
+  "unlock": "skill:foraging:6",
+  "minutes": 60
+ },
+ {
+  "id": "seeds_lingonberry",
+  "station": "seed_box",
+  "in": [
+   [
+    "lingonberry",
+    5
+   ]
+  ],
+  "out": [
+   "bush_lingonberry",
+   1
+  ],
+  "unlock": "skill:foraging:6",
+  "minutes": 60
+ },
+ {
+  "id": "seeds_rosehip",
+  "station": "seed_box",
+  "in": [
+   [
+    "rosehip",
+    5
+   ]
+  ],
+  "out": [
+   "rosehip",
+   3
+  ],
+  "unlock": "skill:foraging:6",
+  "minutes": 60
+ },
+ {
+  "id": "furn_stool",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stool",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_driftwood_table",
+  "station": "workbench",
+  "in": [
+   [
+    "driftwood",
+    6
+   ]
+  ],
+  "out": [
+   "decor_driftwood_table",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_wall_shelf",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    3
+   ],
+   [
+    "resin",
+    1
+   ]
+  ],
+  "out": [
+   "decor_wall_shelf",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_rag_rug",
+  "station": "workbench",
+  "in": [
+   [
+    "rag",
+    6
+   ]
+  ],
+  "out": [
+   "decor_rag_rug",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_net_curtain",
+  "station": "workbench",
+  "in": [
+   [
+    "net_scrap",
+    2
+   ]
+  ],
+  "out": [
+   "decor_net_curtain",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_rope_coil",
+  "station": "workbench",
+  "in": [
+   [
+    "thread",
+    5
+   ]
+  ],
+  "out": [
+   "decor_rope_coil",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_lantern_hook",
+  "station": "workbench",
+  "in": [
+   [
+    "iron_scrap",
+    2
+   ]
+  ],
+  "out": [
+   "decor_lantern_hook",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_coat_rack",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    3
+   ]
+  ],
+  "out": [
+   "decor_coat_rack",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_crate_table",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ]
+  ],
+  "out": [
+   "decor_crate_table",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_plank_bench",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    6
+   ]
+  ],
+  "out": [
+   "decor_plank_bench",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_wash_tub",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    4
+   ],
+   [
+    "iron_scrap",
+    1
+   ]
+  ],
+  "out": [
+   "decor_wash_tub",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_water_butt",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    6
+   ],
+   [
+    "iron_scrap",
+    1
+   ]
+  ],
+  "out": [
+   "decor_water_butt",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_oar_rack",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_oar_rack",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_flower_box",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    3
+   ],
+   [
+    "compost",
+    1
+   ]
+  ],
+  "out": [
+   "decor_flower_box",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_cork_garland",
+  "station": "workbench",
+  "in": [
+   [
+    "cork_float",
+    8
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "decor_cork_garland",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_shell_mobile",
+  "station": "workbench",
+  "in": [
+   [
+    "scallop_shell",
+    6
+   ],
+   [
+    "thread",
+    1
+   ]
+  ],
+  "out": [
+   "decor_shell_mobile",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_driftwood_frame",
+  "station": "workbench",
+  "in": [
+   [
+    "driftwood",
+    3
+   ]
+  ],
+  "out": [
+   "decor_driftwood_frame",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_hearth_rug",
+  "station": "workbench",
+  "in": [
+   [
+    "rag",
+    4
+   ],
+   [
+    "wool",
+    1
+   ]
+  ],
+  "out": [
+   "decor_hearth_rug",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_log_seat",
+  "station": "workbench",
+  "in": [
+   [
+    "birch_log",
+    1
+   ]
+  ],
+  "out": [
+   "decor_log_seat",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_tide_board",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    2
+   ],
+   [
+    "stone",
+    2
+   ]
+  ],
+  "out": [
+   "decor_tide_board",
+   1
+  ],
+  "unlock": "skill:crafting:4"
+ },
+ {
+  "id": "furn_oak_table",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    2
+   ]
+  ],
+  "out": [
+   "decor_oak_table",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_oak_chair",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    1
+   ]
+  ],
+  "out": [
+   "decor_oak_chair",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_bookshelf",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    20
+   ]
+  ],
+  "out": [
+   "decor_bookshelf",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_wardrobe",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    25
+   ]
+  ],
+  "out": [
+   "decor_wardrobe",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_bed_single",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    15
+   ],
+   [
+    "wool",
+    3
+   ]
+  ],
+  "out": [
+   "decor_bed_single",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_sea_chest_decor",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    10
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "decor_sea_chest_decor",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_brass_lamp",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_brass_lamp",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_glass_lamp",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    2
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "decor_glass_lamp",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_painting_cape",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "boards",
+    2
+   ]
+  ],
+  "out": [
+   "decor_painting_cape",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_painting_village",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "boards",
+    2
+   ]
+  ],
+  "out": [
+   "decor_painting_village",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_painting_teeth",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "boards",
+    2
+   ]
+  ],
+  "out": [
+   "decor_painting_teeth",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_model_chayka",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    8
+   ],
+   [
+    "canvas",
+    1
+   ]
+  ],
+  "out": [
+   "decor_model_chayka",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_model_queen",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    8
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_model_queen",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_aquarium",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    5
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_aquarium",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_globe",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    3
+   ],
+   [
+    "canvas",
+    1
+   ],
+   [
+    "copper_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "decor_globe",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_barometer_decor",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    1
+   ],
+   [
+    "glass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_barometer_decor",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_chart_table",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    2
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_chart_table",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_wool_rug",
+  "station": "workbench",
+  "in": [
+   [
+    "cloth",
+    2
+   ]
+  ],
+  "out": [
+   "decor_wool_rug",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_linen_curtain",
+  "station": "workbench",
+  "in": [
+   [
+    "flax_fiber",
+    5
+   ]
+  ],
+  "out": [
+   "decor_linen_curtain",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_wreath",
+  "station": "workbench",
+  "in": [
+   [
+    "heather",
+    5
+   ],
+   [
+    "armeria",
+    3
+   ]
+  ],
+  "out": [
+   "decor_wreath",
+   1
+  ],
+  "unlock": "skill:crafting:6"
+ },
+ {
+  "id": "furn_carved_armchair",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    4
+   ],
+   [
+    "cloth",
+    1
+   ]
+  ],
+  "out": [
+   "decor_carved_armchair",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_carved_bed",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    6
+   ],
+   [
+    "wool",
+    4
+   ]
+  ],
+  "out": [
+   "decor_carved_bed",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_grand_clock",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    3
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "clock_spring",
+    1
+   ]
+  ],
+  "out": [
+   "decor_grand_clock",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_lens_lamp",
+  "station": "workbench",
+  "in": [
+   [
+    "prism",
+    3
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_lens_lamp",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_painting_aurora",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "bog_oak",
+    1
+   ],
+   [
+    "glow_plankton",
+    1
+   ]
+  ],
+  "out": [
+   "decor_painting_aurora",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_painting_rann",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "bog_oak",
+    1
+   ],
+   [
+    "sea_glass",
+    3
+   ]
+  ],
+  "out": [
+   "decor_painting_rann",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_painting_agatha",
+  "station": "workbench",
+  "in": [
+   [
+    "canvas",
+    1
+   ],
+   [
+    "bog_oak",
+    1
+   ],
+   [
+    "amber",
+    1
+   ]
+  ],
+  "out": [
+   "decor_painting_agatha",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_model_berta",
+  "station": "workbench",
+  "in": [
+   [
+    "bog_oak",
+    3
+   ],
+   [
+    "canvas",
+    2
+   ]
+  ],
+  "out": [
+   "decor_model_berta",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_ship_in_bottle",
+  "station": "workbench",
+  "in": [
+   [
+    "glass",
+    1
+   ],
+   [
+    "boards",
+    1
+   ],
+   [
+    "thread",
+    2
+   ]
+  ],
+  "out": [
+   "decor_ship_in_bottle",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_stuffed_old_codger",
+  "station": "workbench",
+  "in": [
+   [
+    "fish_old_codger",
+    1
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stuffed_old_codger",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_stuffed_herring_king",
+  "station": "workbench",
+  "in": [
+   [
+    "fish_herring_king",
+    1
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stuffed_herring_king",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_stuffed_golden_halibut",
+  "station": "workbench",
+  "in": [
+   [
+    "fish_golden_halibut",
+    1
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stuffed_golden_halibut",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_stuffed_grandmother",
+  "station": "workbench",
+  "in": [
+   [
+    "fish_grandmother",
+    1
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stuffed_grandmother",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_stuffed_lantern_fish",
+  "station": "workbench",
+  "in": [
+   [
+    "fish_lantern_fish",
+    1
+   ],
+   [
+    "boards",
+    4
+   ]
+  ],
+  "out": [
+   "decor_stuffed_lantern_fish",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_brass_telescope",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    4
+   ],
+   [
+    "glass",
+    2
+   ]
+  ],
+  "out": [
+   "decor_brass_telescope",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_trophy_cup",
+  "station": "workbench",
+  "in": [
+   [
+    "silver_ingot",
+    1
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_trophy_cup",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_seasonal_garland",
+  "station": "workbench",
+  "in": [
+   [
+    "armeria",
+    3
+   ],
+   [
+    "heather",
+    3
+   ],
+   [
+    "thread",
+    2
+   ]
+  ],
+  "out": [
+   "decor_seasonal_garland",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_aurora_rug",
+  "station": "workbench",
+  "in": [
+   [
+    "cloth",
+    3
+   ],
+   [
+    "yarn",
+    3
+   ]
+  ],
+  "out": [
+   "decor_aurora_rug",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_amber_lamp",
+  "station": "workbench",
+  "in": [
+   [
+    "amber",
+    3
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "decor_amber_lamp",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "furn_memorial_plaque",
+  "station": "workbench",
+  "in": [
+   [
+    "brass",
+    2
+   ],
+   [
+    "bog_oak",
+    1
+   ]
+  ],
+  "out": [
+   "decor_memorial_plaque",
+   1
+  ],
+  "unlock": "skill:crafting:9"
+ },
+ {
+  "id": "craft_stained_window",
+  "station": "workbench",
+  "in": [
+   [
+    "stained_glass",
+    2
+   ],
+   [
+    "boards",
+    2
+   ]
+  ],
+  "out": [
+   "decor_stained_window",
+   1
+  ],
+  "unlock": "profession:glassblower"
+ }
 ]

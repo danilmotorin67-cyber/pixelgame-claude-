@@ -319,7 +319,7 @@ item.renderer.desc,Ставится на мысу: 5 потрохов → 1 ры
 item.settling_tank.name,Отстойник,Settling tank
 item.settling_tank.desc,"Ставится на мысу: 2 рыбьего жира → 1 ворвань за день. Терпение, очищенное до прозрачности.",Placed on the cape: 2 fish oil → 1 whale oil in a day. Patience refined to clarity.
 station.cutting_table,Разделочный стол,Cutting table
-station.renderer,Жиротопка,Renderer
+station.renderer,Жиротопка,Rendering pot
 station.settling_tank,Отстойник,Settling tank
 mail.station_delivery,"Лоцманская управа. Рюкзак переполнен, поэтому %s доставлен почтой. Распишитесь. Не там.","Pilot Directorate. Your backpack was full, so the %s came by post. Sign here. No, there."
 item.spyglass.name,Подзорная труба Агаты,Agatha's spyglass
@@ -4931,3 +4931,752 @@ npc.stern.event.villains.02,«Нептун утонул». Какой газет
 npc.stern.event.villains.03,"Вы победили, наш лучший штамп. Отличная скорость. Как в старые времена.","You've won, our best stamp. Excellent speed. Like the old days."
 npc.stern.event.villains.04,"Люди — это цифры. Вы доказали, что цифры иногда тонут. Поздравляю.",People are numbers. You've proved that numbers sometimes drown. Congratulations.
 npc.stern.event.villains.05,Я был прав в одном: вы — лучший штамп. Ваша печать оказалась на моём деле.,I was right about one thing: you're the best stamp. Your seal ended up on my case.
+item.sand.name,Песок,Sand
+item.sand.desc,Копается лопатой на пляжах.,Dug with a shovel on beaches.
+item.abrasive.name,Абразив,Abrasive
+item.abrasive.desc,Для шлифовки призм.,For grinding prisms.
+item.bucket.name,Ведро,Bucket
+item.bucket.desc,ЛКМ у воды — зачерпнуть морской воды.,LMB by the water to scoop seawater.
+item.belt_keg.name,Бочонок на ремне,Belt keg
+item.belt_keg.desc,Черпает пять вёдер морской воды разом.,Scoops five buckets of seawater at once.
+item.seawater.name,Ведро морской воды,Bucket of seawater
+item.seawater.desc,Сырьё для солеварни.,Feed for the salt pan.
+item.birch_log.name,Берёзовое бревно,Birch log
+item.birch_log.desc,Топор по берёзе в роще.,An axe on a birch in the grove.
+item.birch_bark.name,Берёзовая кора,Birch bark
+item.birch_bark.desc,Сырьё для смолокурни.,Feed for the tar kiln.
+item.birch_chips.name,Берёзовая щепа,Birch chips
+item.birch_chips.desc,Топливо коптильни.,Smokehouse fuel.
+item.flax_fiber.name,Льняное волокно,Flax fibre
+item.flax_fiber.desc,Трепальня: из льна.,From the scutcher: flax.
+item.dried_kelp.name,Сушёные водоросли,Dried kelp
+item.dried_kelp.desc,Для печи для золы.,For the ash kiln.
+item.shell_lime.name,Ракушечная известь,Shell lime
+item.shell_lime.desc,Краска для башни.,For tower paint.
+item.ruby_glass.name,Рубиновое стекло,Ruby glass
+item.ruby_glass.desc,Для красного сектора.,For the red sector.
+item.prism.name,Призма,Prism
+item.prism.desc,Гранёное стекло для линз Френеля.,Cut glass for Fresnel lenses.
+item.stone_block.name,Каменный блок,Stone block
+item.stone_block.desc,Каменотёсный стол: 10 камня.,Stonecutter's table: 10 stone.
+item.stone_slab.name,Каменная плита,Stone slab
+item.stone_slab.desc,Надгробная плита из двух блоков.,A grave slab of two blocks.
+item.nails.name,Гвозди,Nails
+item.nails.desc,Горн: 20 из слитка железа.,Forge: 20 from an iron ingot.
+item.hooks.name,Крючки,Hooks
+item.hooks.desc,Для перемёта.,For a longline.
+item.copper_wire.name,Медная проволока,Copper wire
+item.copper_wire.desc,Для телеграфа и поделок.,For the telegraph and crafts.
+item.glass_insulator.name,Стеклянный изолятор,Glass insulator
+item.glass_insulator.desc,Для телеграфа.,For the telegraph.
+item.brass_handle.name,Латунная ручка,Brass handle
+item.brass_handle.desc,Для резного гроба.,For a carved coffin.
+item.bronze.name,Бронза,Bronze
+item.bronze.desc,Сплав меди и олова.,An alloy of copper and tin.
+item.silver_ingot.name,Серебряный слиток,Silver ingot
+item.silver_ingot.desc,Для колец и рам.,For rings and frames.
+item.gold_ingot.name,Золотой слиток,Gold ingot
+item.gold_ingot.desc,Для рамы «Око».,For the Eye frame.
+item.silver_ore.name,Серебряная руда,Silver ore
+item.silver_ore.desc,Из Глуби. Горн: 2 → слиток.,From the Deep. Forge: 2 → an ingot.
+item.gold_ore.name,Золотая руда,Gold ore
+item.gold_ore.desc,Из Глуби. Горн: 2 → слиток.,From the Deep. Forge: 2 → an ingot.
+item.copper_sheathing.name,Медная обшивка,Copper sheathing
+item.copper_sheathing.desc,С обломков. Горн: 2 → слиток.,From wrecks. Forge: 2 → an ingot.
+item.moon_silver.name,Слиток лунного серебра,Moon-silver ingot
+item.moon_silver.desc,"Металл, который светится сам.",A metal that glows on its own.
+item.deep_quartz.name,Глубинный кварц,Deep quartz
+item.deep_quartz.desc,"Прозрачный, как холодная вода.",Clear as cold water.
+item.svetla_spark.name,Искра Светлы,Svetla's spark
+item.svetla_spark.desc,Дар дочери Ранн.,A gift from Rann's daughter.
+item.sparking_iron.name,Искрящая железа,Sparking gland
+item.sparking_iron.desc,Орган глубинного угря.,An organ of a deep-sea eel.
+item.moray_skin.name,Кожа мурены,Moray skin
+item.moray_skin.desc,"Прочная, как парусина.",Tough as canvas.
+item.guano.name,Гуано,Guano
+item.guano.desc,С Птичьего утёса.,From the Bird Cliffs.
+item.raven_feather.name,Перо ворона,Raven feather
+item.raven_feather.desc,Для тотема.,For a totem.
+item.puffin_feather.name,Перо тупика,Puffin feather
+item.puffin_feather.desc,"Яркое, как клюв.",Bright as a beak.
+item.jellyfish_slime.name,Слизь медузы,Jellyfish slime
+item.jellyfish_slime.desc,Для эликсира глубины.,For the depth elixir.
+item.hmar_wisp.name,Клочок Хмари,Wisp of Hmar
+item.hmar_wisp.desc,Холодный на ощупь дым.,Smoke that is cold to the touch.
+item.hmar_mushroom.name,Хмарник,Hmar-cap
+item.hmar_mushroom.desc,"Гриб, выросший после Ночи Хмари.",A mushroom that grew after a Hmar Night.
+item.cuttlefish_ink.name,Чернила каракатицы,Cuttlefish ink
+item.cuttlefish_ink.desc,Для эпитафий.,For epitaphs.
+item.lumpfish_roe.name,Икра пинагора,Lumpfish roe
+item.lumpfish_roe.desc,Из пинагора на разделочном столе.,From a lumpfish on the cutting table.
+item.beeswax.name,Воск,Beeswax
+item.beeswax.desc,Из улья.,From the hive.
+item.tallow_candle.name,Сальная свеча,Tallow candle
+item.tallow_candle.desc,"Коптит, но горит.","Smoky, but it burns."
+item.dried_heather.name,Сушёный вереск,Dried heather
+item.dried_heather.desc,Пахнет летом всю зиму.,Smells of summer all winter.
+item.stained_glass.name,Витраж,Stained glass
+item.stained_glass.desc,Свет в цвете.,Light in colour.
+item.egg_large.name,Крупное яйцо,Large egg
+item.egg_large.desc,От довольной курицы.,From a contented hen.
+item.duck_egg.name,Утиное яйцо,Duck egg
+item.duck_egg.desc,Крупнее куриного.,Bigger than a hen's.
+item.duck_feather.name,Утиное перо,Duck feather
+item.duck_feather.desc,Для чайкогона.,For a gull-scarer.
+item.eider_down.name,Гагачий пух,Eider down
+item.eider_down.desc,Самое тёплое на свете.,The warmest thing there is.
+item.goat_milk.name,Козье молоко,Goat milk
+item.goat_milk.desc,Для козьего сыра.,For goat cheese.
+item.honey.name,Мёд,Honey
+item.honey.desc,Из улья.,From the hive.
+item.buckthorn_honey.name,Облепиховый мёд,Sea-buckthorn honey
+item.buckthorn_honey.desc,Золотой и терпкий.,Golden and tart.
+item.sea_buckthorn.name,Облепиха,Sea buckthorn
+item.sea_buckthorn.desc,"Кислая, как северное лето.",Sour as a northern summer.
+item.rowan_berry.name,Ягода рябины,Rowan berry
+item.rowan_berry.desc,Для оберегов.,For charms.
+item.apple.name,Яблоко,Apple
+item.apple.desc,"Северное, крепкое.",Northern and firm.
+item.sapling_buckthorn.name,Саженец облепихи,Sea-buckthorn sapling
+item.sapling_buckthorn.desc,Куст и ветролом (радиус 5).,A bush and a windbreak (radius 5).
+item.sapling_rowan.name,Саженец рябины,Rowan sapling
+item.sapling_rowan.desc,Отгоняет Хмарь.,Keeps the Hmar away.
+item.sapling_apple.name,Саженец яблони,Apple sapling
+item.sapling_apple.desc,Любит ветролом.,Likes a windbreak.
+item.bush_blueberry.name,Куст черники,Blueberry bush
+item.bush_blueberry.desc,Плоды летом.,Fruit in summer.
+item.bush_lingonberry.name,Куст брусники,Lingonberry bush
+item.bush_lingonberry.desc,Плоды осенью.,Fruit in autumn.
+item.seed_lightflower.name,Семена светоцвета,Lightflower seeds
+item.seed_lightflower.desc,"Весна–осень, светится ночью.","Spring to autumn, glows at night."
+item.lightflower.name,Светоцвет,Lightflower
+item.lightflower.desc,Сырьё для Светлой воды.,For Light water.
+item.smoked_fish.name,Копчёная рыба,Smoked fish
+item.smoked_fish.desc,Коптильня: филе и соль.,Smokehouse: fillet and salt.
+item.smoked_eel.name,Копчёный угорь,Smoked eel
+item.smoked_eel.desc,"Жирный, золотистый.",Rich and golden.
+item.stockfish.name,Вяленая рыба-стокфиш,Stockfish
+item.stockfish.desc,Пять дней на ветру.,Five days in the wind.
+item.mead.name,Медовуха,Mead
+item.mead.desc,Удача +0.01.,Luck +0.01.
+item.wine_buckthorn.name,Вино облепиховое,Sea-buckthorn wine
+item.wine_buckthorn.desc,"Скорость −5%, удача +0.02.","Speed −5%, luck +0.02."
+item.wine_cloudberry.name,Вино морошковое,Cloudberry wine
+item.wine_cloudberry.desc,"Скорость −5%, удача +0.02.","Speed −5%, luck +0.02."
+item.wine_lingonberry.name,Вино брусничное,Lingonberry wine
+item.wine_lingonberry.desc,"Скорость −5%, удача +0.02.","Speed −5%, luck +0.02."
+item.wine_cranberry.name,Вино клюквенное,Cranberry wine
+item.wine_cranberry.desc,"Скорость −5%, удача +0.02.","Speed −5%, luck +0.02."
+item.wine_blueberry.name,Вино черничное,Blueberry wine
+item.wine_blueberry.desc,"Скорость −5%, удача +0.02.","Speed −5%, luck +0.02."
+item.aquavit.name,Аквавит,Aquavit
+item.aquavit.desc,"Холод −40%, скорость −10%.","Cold −40%, speed −10%."
+item.dry_drowned_ale.name,Эль «Сухой утопленник»,Dry Drowned ale
+item.dry_drowned_ale.desc,Рецепт Бьорна. С водорослями.,Björn's recipe. With seaweed.
+item.cheese.name,Сыр,Cheese
+item.cheese.desc,Сыроварня: молоко.,Cheese press: milk.
+item.goat_cheese.name,Козий сыр,Goat cheese
+item.goat_cheese.desc,Сыроварня: козье молоко.,Cheese press: goat milk.
+item.jam.name,Варенье,Jam
+item.jam.desc,Банки: ягоды.,Jars: berries.
+item.pickles.name,Соленья,Pickles
+item.pickles.desc,Банки: овощи.,Jars: vegetables.
+item.tower_paint.name,Краска для башни,Tower paint
+item.tower_paint.desc,Ракушечная известь на ворвани.,Shell lime in whale oil.
+item.parabolic_reflector.name,Параболический отражатель,Parabolic reflector
+item.parabolic_reflector.desc,Линза: 10 очков.,Lens: 10 points.
+item.frame_small.name,"Латунная рама, малая","Brass frame, small"
+item.frame_small.desc,Для линзы 4-го разряда.,For a 4th-order lens.
+item.frame_medium.name,"Латунная рама, средняя","Brass frame, medium"
+item.frame_medium.desc,Для линзы 3-го разряда.,For a 3rd-order lens.
+item.frame_large.name,"Латунная рама, большая","Brass frame, large"
+item.frame_large.desc,Для линзы 2-го разряда.,For a 2nd-order lens.
+item.frame_eye.name,Рама «Око»,The Eye frame
+item.frame_eye.desc,Для «Большого ока».,For the Great Eye.
+item.lens_fresnel_4.name,Линза Френеля 4-го разряда,4th-order Fresnel lens
+item.lens_fresnel_4.desc,Линза: 15 очков.,Lens: 15 points.
+item.lens_fresnel_3.name,Линза 3-го разряда,3rd-order lens
+item.lens_fresnel_3.desc,Линза: 20 очков.,Lens: 20 points.
+item.lens_fresnel_2.name,Линза 2-го разряда,2nd-order lens
+item.lens_fresnel_2.desc,Линза: 25 очков.,Lens: 25 points.
+item.lens_great_eye.name,«Большое око»,The Great Eye
+item.lens_great_eye.desc,Линза 1-го разряда: 30 очков.,1st-order lens: 30 points.
+item.lamp_argand.name,Лампа Арганда,Argand lamp
+item.lamp_argand.desc,Лампа: 10 очков.,Lamp: 10 points.
+item.lamp_incandescent.name,Керосиновая калильная лампа,Incandescent kerosene lamp
+item.lamp_incandescent.desc,Лампа: 15 очков.,Lamp: 15 points.
+item.lamp_rann_torch.name,«Светоч Ранн»,Rann's Torch
+item.lamp_rann_torch.desc,Лампа: 20 очков.,Lamp: 20 points.
+item.mech_precise.name,Точный часовой механизм,Precise clockwork
+item.mech_precise.desc,Заводка раз в 2 ночи.,Winding every 2 nights.
+item.wind_turbine.name,Ветряная турбинка,Wind turbine
+item.wind_turbine.desc,Сердце автозавода.,The heart of the automatic winder.
+item.mech_auto.name,Автозавод,Automatic winder
+item.mech_auto.desc,Заводка не нужна.,No winding needed.
+item.clock_bell.name,Колокол с механизмом,Clockwork bell
+item.clock_bell.desc,Туманный сигнал 2.,Fog signal 2.
+item.bellows_horn.name,Ревун с мехами,Bellows horn
+item.bellows_horn.desc,Туманный сигнал 3.,Fog signal 3.
+item.steam_boiler.name,Котелок-парогенератор,Steam boiler
+item.steam_boiler.desc,Для парового ревуна.,For the steam horn.
+item.steam_horn.name,Паровой ревун,Steam horn
+item.steam_horn.desc,Туманный сигнал 4.,Fog signal 4.
+item.siren.name,Сирена «Голос Вороньего Глаза»,Siren 'Voice of Raven's Eye'
+item.siren.desc,Туманный сигнал 5.,Fog signal 5.
+item.reservoir_3.name,Резервуар ×3,Reservoir ×3
+item.reservoir_3.desc,Вмещает 3 единицы топлива.,Holds 3 units of fuel.
+item.reservoir_7.name,Резервуар ×7,Reservoir ×7
+item.reservoir_7.desc,Вмещает 7 единиц топлива.,Holds 7 units of fuel.
+item.salt_shroud.name,Кожух от соли,Salt shroud
+item.salt_shroud.desc,Стёкла грязнятся вдвое медленнее.,The glass dirties half as fast.
+item.lightning_rod.name,Громоотвод,Lightning rod
+item.lightning_rod.desc,Часть башни: +2.,A tower part: +2.
+item.red_sector.name,Красный сектор,Red sector
+item.red_sector.desc,Рубиновое стекло над Зубами.,Ruby glass over the Teeth.
+item.wheelbarrow.name,Тачка,Wheelbarrow
+item.wheelbarrow.desc,Возит тело без плеч.,Carries a body without your shoulders.
+item.wheelbarrow_soft.name,Тачка на мягком ходу,Soft-running wheelbarrow
+item.wheelbarrow_soft.desc,Скорость с тачкой ×0.95.,Speed with the barrow ×0.95.
+item.drag_sled.name,Волокуша,Drag sled
+item.drag_sled.desc,Тянет двух покойников.,Drags two of the dead.
+item.headstone.name,Надгробие с эпитафией,Headstone with epitaph
+item.headstone.desc,Знак могилы.,A grave marker.
+item.beacon_stone.name,Маячный камень,Beacon stone
+item.beacon_stone.desc,Светится в ночи над могилой.,Glows at night over a grave.
+item.memory_lantern.name,Фонарь памяти,Memory lantern
+item.memory_lantern.desc,Украшение погоста.,A graveyard ornament.
+item.fence_wood.name,Ограда деревянная,Wooden fence
+item.fence_wood.desc,Секция ограды.,A fence section.
+item.fence_stone.name,Ограда каменная,Stone fence
+item.fence_stone.desc,Секция ограды.,A fence section.
+item.fence_iron.name,Ограда кованая,Wrought-iron fence
+item.fence_iron.desc,Секция ограды.,A fence section.
+item.bench.name,Скамья,Bench
+item.bench.desc,Присесть у могил.,A seat by the graves.
+item.stone_path.name,Каменная дорожка,Stone path
+item.stone_path.desc,Тайл дорожки.,A path tile.
+item.statue_mourning.name,Статуя «Скорбящая»,Statue 'The Mourner'
+item.statue_mourning.desc,Каменная фигура над погостом.,A stone figure over the graveyard.
+item.magnifier.name,Лупа,Magnifier
+item.magnifier.desc,Осмотр тела находит лишнюю примету.,The examination finds an extra sign.
+item.stone_wall.name,Каменная стена,Stone wall
+item.stone_wall.desc,"Ветролом, радиус 4.","A windbreak, radius 4."
+item.gull_scarer.name,Чайкогон,Gull-scarer
+item.gull_scarer.desc,Гоняет чаек в радиусе 8.,Chases gulls away within 8 tiles.
+item.watering_barrel.name,Бочка-поливалка,Watering barrel
+item.watering_barrel.desc,Поливает 4 соседних тайла.,Waters 4 neighbouring tiles.
+item.cistern.name,Цистерна,Cistern
+item.cistern.desc,Поливает 8 тайлов вокруг.,Waters 8 tiles around.
+item.wind_pump.name,Ветряк-насос,Wind pump
+item.wind_pump.desc,Поливает 24 тайла; в Штиль стоит.,Waters 24 tiles; stands still in a calm.
+item.keeper_scarecrow.name,Чучело смотрителя,Keeper's scarecrow
+item.keeper_scarecrow.desc,Гоняет чаек в радиусе 16.,Chases gulls away within 16 tiles.
+item.agatha_hat.name,Старая шляпа Агаты,Agatha's old hat
+item.agatha_hat.desc,+5% опыта Смотрительства.,+5% Keeping XP.
+item.beehive.name,Улей,Beehive
+item.beehive.desc,"Мёд каждые 4 дня, кроме зимы.",Honey every 4 days except winter.
+item.eider_nest_box.name,Гнездовой ящик для гаги,Eider nest box
+item.eider_nest_box.desc,Дом для гаги на берегу.,A home for an eider on the shore.
+item.glow_bait.name,Светящаяся наживка,Glowing bait
+item.glow_bait.desc,Ночью клюёт лучше.,Bites better at night.
+item.longline.name,Перемёт,Longline
+item.longline.desc,Ставится в воду у берега на ночь.,Set in the water by the shore overnight.
+item.ice_pick.name,Пешня,Ice pick
+item.ice_pick.desc,Пробить лунку во льду.,Cut a hole in the ice.
+item.legend_lure.name,Приманка легенд,Legend lure
+item.legend_lure.desc,Легендарные рыбы клюют охотнее.,Legendary fish bite more readily.
+item.buoy_marker.name,Буй-веха,Marker buoy
+item.buoy_marker.desc,Отмечает место на карте.,Marks a spot on the chart.
+item.stern_lantern.name,Кормовой фонарь,Stern lantern
+item.stern_lantern.desc,Свет на лодке ночью.,A light on the boat at night.
+item.storm_sails.name,Штормовые паруса,Storm sails
+item.storm_sails.desc,Ход под парусом в шторм.,Sailing in a storm.
+item.icebreaker_bow.name,Ледокольный форштевень,Icebreaker bow
+item.icebreaker_bow.desc,Лодка проходит тонкий лёд.,The boat passes thin ice.
+item.harpoon_bolts.name,Гарпунные стрелы,Harpoon bolts
+item.harpoon_bolts.desc,Для подводного ружья.,For the speargun.
+item.whaling_harpoon.name,Китобойный гарпун,Whaling harpoon
+item.whaling_harpoon.desc,"Тяжёлый, но верный.","Heavy, but true."
+item.oiled_canvas.name,Промасленная парусина,Oiled canvas
+item.oiled_canvas.desc,Парусина на ворвани.,Canvas in whale oil.
+item.air_bag.name,Мешок с воздухом,Air bag
+item.air_bag.desc,Запас воздуха под водой.,A store of air underwater.
+item.weighted_boots.name,Утяжелённые боты,Weighted boots
+item.weighted_boots.desc,Быстрее ко дну.,Faster to the bottom.
+item.underwater_lantern.name,Подводный фонарь,Underwater lantern
+item.underwater_lantern.desc,Свет в Глуби.,Light in the Deep.
+item.kelp_line.name,Линия ламинарии,Kelp line
+item.kelp_line.desc,Морской огород: 5–8 ламинарии.,Sea garden: 5–8 kelp.
+item.mussel_rope.name,Мидиевая верёвка,Mussel rope
+item.mussel_rope.desc,Морской огород: 1–3 мидии в день.,Sea garden: 1–3 mussels a day.
+item.oyster_cage.name,Устричный садок,Oyster cage
+item.oyster_cage.desc,"Морской огород: устрицы, иногда жемчуг.","Sea garden: oysters, sometimes a pearl."
+item.carved_trinket.name,Резная безделушка,Carved trinket
+item.carved_trinket.desc,Кнуд научил.,Knud taught you.
+item.big_chest.name,Большой сундук,Big chest
+item.big_chest.desc,36 стопок.,36 stacks.
+item.keeper_sweater.name,Свитер смотрителя,Keeper's sweater
+item.keeper_sweater.desc,Холод −40%.,Cold −40%.
+item.wool_socks.name,Шерстяные носки,Wool socks
+item.wool_socks.desc,Холод −10%.,Cold −10%.
+item.storm_coat.name,Штормовка,Oilskin
+item.storm_coat.desc,Дождь не холодит.,Rain doesn't chill.
+item.storm_jacket.name,Штормовая куртка,Storm jacket
+item.storm_jacket.desc,"Дождь не холодит, холод −30%.","Rain doesn't chill, cold −30%."
+item.eider_blanket.name,Гагачье одеяло,Eider blanket
+item.eider_blanket.desc,"Лёгкое, как облако.",Light as a cloud.
+item.rowan_amulet.name,Рябиновый оберег,Rowan charm
+item.rowan_amulet.desc,Урон от Хмари −30%.,Hmar damage −30%.
+item.amber_pendant.name,Янтарный кулон,Amber pendant
+item.amber_pendant.desc,Удача +0.02.,Luck +0.02.
+item.sea_glass_ring.name,Кольцо из морского стекла,Sea-glass ring
+item.sea_glass_ring.desc,Находки +10% к цене.,Finds +10% to price.
+item.wolffish_fang.name,Клык зубатки,Wolffish fang
+item.wolffish_fang.desc,Урон +10%.,Damage +10%.
+item.pearl_earring.name,Жемчужная серьга,Pearl earring
+item.pearl_earring.desc,Воздух +10%.,Air +10%.
+item.whalebone_charm.name,Кость кита,Whalebone charm
+item.whalebone_charm.desc,Здоровье +20.,Health +20.
+item.forge_tongs.name,Кузнечные клещи,Forge tongs
+item.forge_tongs.desc,Горн плавит двойную партию.,The forge smelts a double batch.
+item.pumice_brush.name,Пемзовая щётка,Pumice brush
+item.pumice_brush.desc,Протирка стёкол маяка на 2 ночи.,Cleans the lighthouse glass for 2 nights.
+item.scurvy_brew.name,Отвар ложечницы,Scurvy-grass brew
+item.scurvy_brew.desc,+60 энергии.,+60 energy.
+item.warm_balm.name,Тёплый бальзам,Warm balm
+item.warm_balm.desc,Холод до 0 и −50% прироста на 4 ч.,Cold to 0 and −50% gain for 4 h.
+item.rowan_tincture.name,Настой рябины,Rowan tincture
+item.rowan_tincture.desc,Хмарники не подходят 4 ч.,Hmar-things keep away for 4 h.
+item.depth_elixir.name,Эликсир глубины,Depth elixir
+item.depth_elixir.desc,Воздух +50 на один спуск.,Air +50 for one dive.
+item.depth_elixir_plus.name,Эликсир глубины+,Depth elixir+
+item.depth_elixir_plus.desc,Воздух +100 на один спуск.,Air +100 for one dive.
+item.fisher_luck_potion.name,Зелье удачи рыбака,Fisher's luck potion
+item.fisher_luck_potion.desc,"Удача +0.05, поклёвка быстрее.","Luck +0.05, faster bites."
+item.vigor_brew.name,Бодрящий сбор,Vigour brew
+item.vigor_brew.desc,Скорость +10% на 3 ч.,Speed +10% for 3 h.
+item.light_water.name,Светлая вода,Light water
+item.light_water.desc,"Топливо маяка: 4 ночи, 15 очков.","Lighthouse fuel: 4 nights, 15 points."
+item.calm_potion.name,Зелье штиля,Calm potion
+item.calm_potion.desc,Завтра Штиль.,Calm tomorrow.
+item.raven_totem.name,Тотем «Воронье перо»,Raven-feather totem
+item.raven_totem.desc,Мгновенно на мыс.,Instantly to the cape.
+item.ebb_totem.name,Тотем «Тропа Отлива»,Ebb-path totem
+item.ebb_totem.desc,Мгновенно ко входу в гроты.,Instantly to the grotto mouth.
+item.bell_totem.name,Колокольный тотем,Bell totem
+item.bell_totem.desc,"Мгновенно в деревню, к часовне.",Instantly to the village chapel.
+item.fried_flounder.name,Жареная камбала,Fried flounder
+item.fried_flounder.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.fried_smelt.name,Жареная корюшка,Fried smelt
+item.fried_smelt.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.kalitki.name,Калитки с картофелем,Potato kalitki
+item.kalitki.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.rutabaga_mash.name,Брюквенное пюре,Rutabaga mash
+item.rutabaga_mash.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.smoked_mackerel_potato.name,Копчёная скумбрия с картофелем,Smoked mackerel with potatoes
+item.smoked_mackerel_potato.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.herring_onion.name,Солёная сельдь с луком,Salted herring with onion
+item.herring_onion.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.berg_herring.name,Сельдь по-бергски,Herring à la Berg
+item.berg_herring.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.stroganina.name,Строганина,Stroganina
+item.stroganina.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.cured_salmon.name,Слабосолёный лосось,Cured salmon
+item.cured_salmon.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.lapskaus.name,Лапскаус кока,Cook's lapskaus
+item.lapskaus.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.mussels_ale.name,Мидии в эле,Mussels in ale
+item.mussels_ale.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.steamed_lobster.name,Омар на пару,Steamed lobster
+item.steamed_lobster.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.roe_bread.name,Икра пинагора на хлебе,Lumpfish roe on bread
+item.roe_bread.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.red_kelp_pudding.name,Пудинг из красных водорослей,Red-kelp pudding
+item.red_kelp_pudding.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.samphire_salad.name,Салат из солероса,Samphire salad
+item.samphire_salad.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.squid_onion.name,Кальмар с луком,Squid with onion
+item.squid_onion.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.buckthorn_tea.name,Чай с облепихой,Sea-buckthorn tea
+item.buckthorn_tea.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.cranberry_mors.name,Клюквенный морс,Cranberry mors
+item.cranberry_mors.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.erland_grog.name,Грог Эрланда,Erland's grog
+item.erland_grog.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.triple_ukha.name,Тройная уха,Triple ukha
+item.triple_ukha.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.cod_solvik.name,Треска по-сольвикски,Solvik cod
+item.cod_solvik.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.baked_halibut.name,Запечённый палтус,Baked halibut
+item.baked_halibut.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.eel_bread.name,Копчёный угорь на хлебе,Smoked eel on bread
+item.eel_bread.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.last_supper_pie.name,Пирог «Последний ужин»,'Last Supper' pie
+item.last_supper_pie.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.kale_soup.name,Суп из кале,Kale soup
+item.kale_soup.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.pumpkin_soup.name,Тыквенная похлёбка,Pumpkin chowder
+item.pumpkin_soup.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.honey_parsnip.name,Пастернак в мёде,Honeyed parsnip
+item.honey_parsnip.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.sea_kale_soup.name,Суп из морской капусты,Sea-kale soup
+item.sea_kale_soup.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.shrimp_omelette.name,Омлет с креветками,Shrimp omelette
+item.shrimp_omelette.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.cheese_bread.name,Сыр на ржаном хлебе,Cheese on rye
+item.cheese_bread.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.honey_cakes.name,Медовые лепёшки,Honey cakes
+item.honey_cakes.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.whelk_chowder.name,Похлёбка из трубачей,Whelk chowder
+item.whelk_chowder.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.herring_sandwich.name,Селёдочный бутерброд,Herring sandwich
+item.herring_sandwich.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.fried_morels.name,Жареные сморчки,Fried morels
+item.fried_morels.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.blueberry_pie.name,Черничный пирог,Blueberry pie
+item.blueberry_pie.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.fish_cakes.name,Рыбные котлеты,Fish cakes
+item.fish_cakes.desc,Блюдо из поваренной книги смотрителя.,A dish from the keeper's cookbook.
+item.decor_stool.name,Табурет,Stool
+item.decor_stool.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_driftwood_table.name,Стол из плавника,Driftwood table
+item.decor_driftwood_table.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_wall_shelf.name,Полка,Wall shelf
+item.decor_wall_shelf.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_rag_rug.name,Лоскутный коврик,Rag rug
+item.decor_rag_rug.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_net_curtain.name,Занавеска из сети,Net curtain
+item.decor_net_curtain.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_rope_coil.name,Бухта каната,Coil of rope
+item.decor_rope_coil.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_lantern_hook.name,Крюк для фонаря,Lantern hook
+item.decor_lantern_hook.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_coat_rack.name,Вешалка,Coat rack
+item.decor_coat_rack.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_crate_table.name,Стол из ящика,Crate table
+item.decor_crate_table.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_plank_bench.name,Лавка из доски,Plank bench
+item.decor_plank_bench.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_wash_tub.name,Лохань,Wash tub
+item.decor_wash_tub.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_water_butt.name,Бочка для воды,Water butt
+item.decor_water_butt.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_oar_rack.name,Стойка для вёсел,Oar rack
+item.decor_oar_rack.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_flower_box.name,Ящик для цветов,Flower box
+item.decor_flower_box.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_cork_garland.name,Гирлянда из поплавков,Float garland
+item.decor_cork_garland.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_shell_mobile.name,Подвеска из ракушек,Shell mobile
+item.decor_shell_mobile.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_driftwood_frame.name,Рамка из плавника,Driftwood frame
+item.decor_driftwood_frame.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_hearth_rug.name,Коврик у очага,Hearth rug
+item.decor_hearth_rug.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_log_seat.name,Чурбак,Log seat
+item.decor_log_seat.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_tide_board.name,Доска приливов,Tide board
+item.decor_tide_board.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_oak_table.name,Дубовый стол,Oak table
+item.decor_oak_table.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_oak_chair.name,Дубовый стул,Oak chair
+item.decor_oak_chair.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_bookshelf.name,Книжный шкаф,Bookshelf
+item.decor_bookshelf.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_wardrobe.name,Платяной шкаф,Wardrobe
+item.decor_wardrobe.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_bed_single.name,Кровать,Bed
+item.decor_bed_single.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_sea_chest_decor.name,Матросский сундук,Sailor's chest
+item.decor_sea_chest_decor.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_brass_lamp.name,Латунная лампа,Brass lamp
+item.decor_brass_lamp.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_glass_lamp.name,Стеклянная лампа,Glass lamp
+item.decor_glass_lamp.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_cape.name,Картина «Мыс»,Painting 'The Cape'
+item.decor_painting_cape.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_village.name,Картина «Сольвик»,Painting 'Solvik'
+item.decor_painting_village.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_teeth.name,Картина «Зубы»,Painting 'The Teeth'
+item.decor_painting_teeth.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_model_chayka.name,Модель «Чайки»,Model of the Chayka
+item.decor_model_chayka.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_model_queen.name,Модель «Королевы»,Model of the Queen
+item.decor_model_queen.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_aquarium.name,Аквариум,Aquarium
+item.decor_aquarium.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_globe.name,Глобус,Globe
+item.decor_globe.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_barometer_decor.name,Настенный барометр,Wall barometer
+item.decor_barometer_decor.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_chart_table.name,Штурманский стол,Chart table
+item.decor_chart_table.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_wool_rug.name,Шерстяной ковёр,Wool rug
+item.decor_wool_rug.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_linen_curtain.name,Льняная занавеска,Linen curtain
+item.decor_linen_curtain.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_wreath.name,Венок,Wreath
+item.decor_wreath.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_carved_armchair.name,Резное кресло,Carved armchair
+item.decor_carved_armchair.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_carved_bed.name,Резная кровать,Carved bed
+item.decor_carved_bed.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_grand_clock.name,Напольные часы,Grandfather clock
+item.decor_grand_clock.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_lens_lamp.name,Лампа из призм,Prism lamp
+item.decor_lens_lamp.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_aurora.name,Картина «Сияние»,Painting 'Aurora'
+item.decor_painting_aurora.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_rann.name,Картина «Ранн»,Painting 'Rann'
+item.decor_painting_rann.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_painting_agatha.name,Портрет Агаты,Portrait of Agatha
+item.decor_painting_agatha.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_model_berta.name,Модель «Святой Берты»,Model of the Saint Bertha
+item.decor_model_berta.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_ship_in_bottle.name,Корабль в бутылке,Ship in a bottle
+item.decor_ship_in_bottle.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_stuffed_old_codger.name,Чучело Старого Ворчуна,Mounted Old Codger
+item.decor_stuffed_old_codger.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_stuffed_herring_king.name,Чучело Селёдочного короля,Mounted Herring King
+item.decor_stuffed_herring_king.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_stuffed_golden_halibut.name,Чучело Золотого палтуса,Mounted Golden Halibut
+item.decor_stuffed_golden_halibut.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_stuffed_grandmother.name,Чучело Бабушки,Mounted Grandmother
+item.decor_stuffed_grandmother.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_stuffed_lantern_fish.name,Чучело Фонарщика,Mounted Lanternfish
+item.decor_stuffed_lantern_fish.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_brass_telescope.name,Латунный телескоп,Brass telescope
+item.decor_brass_telescope.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_trophy_cup.name,Призовой кубок,Trophy cup
+item.decor_trophy_cup.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_seasonal_garland.name,Сезонная гирлянда,Seasonal garland
+item.decor_seasonal_garland.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_aurora_rug.name,Ковёр «Сияние»,Aurora rug
+item.decor_aurora_rug.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_amber_lamp.name,Янтарный светильник,Amber lamp
+item.decor_amber_lamp.desc,Предмет обстановки.,A piece of furnishing.
+item.decor_memorial_plaque.name,Памятная доска,Memorial plaque
+item.decor_memorial_plaque.desc,Предмет обстановки.,A piece of furnishing.
+item.forge.name,Горн,Forge
+item.forge.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.salt_pan.name,Солеварня,Salt pan
+item.salt_pan.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.brine_barrel.name,Бочка для засолки,Brining barrel
+item.brine_barrel.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.smokehouse.name,Коптильня,Smokehouse
+item.smokehouse.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.sawhorse.name,Козлы для пилки,Sawhorse
+item.sawhorse.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.tar_kiln.name,Смолокурня,Tar kiln
+item.tar_kiln.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.scutcher.name,Трепальня,Scutcher
+item.scutcher.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.spinning_wheel.name,Прялка,Spinning wheel
+item.spinning_wheel.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.loom.name,Ткацкий станок,Loom
+item.loom.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.ash_kiln.name,Печь для золы,Ash kiln
+item.ash_kiln.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.drying_rack.name,Сушильные вешала,Drying racks
+item.drying_rack.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.glass_furnace.name,Стекловарня,Glass furnace
+item.glass_furnace.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.optical_bench.name,Оптический станок,Optical bench
+item.optical_bench.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.carpentry_table.name,Столярный стол,Carpentry table
+item.carpentry_table.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.stonecutter_table.name,Каменотёсный стол,Stonecutter's table
+item.stonecutter_table.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.candle_mold.name,Свечная форма,Candle mould
+item.candle_mold.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.butter_churn.name,Маслобойка,Butter churn
+item.butter_churn.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.cheese_press.name,Сыроварня,Cheese press
+item.cheese_press.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.brewery.name,Пивоварня,Brewery
+item.brewery.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.wine_vat.name,Винный чан,Wine vat
+item.wine_vat.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.preserve_jars.name,Банки для заготовок,Preserving jars
+item.preserve_jars.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.still.name,Перегонный куб,Still
+item.still.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.seed_box.name,Семенной ларь,Seed box
+item.seed_box.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.herbal_table.name,Стол травницы,Herbalist's table
+item.herbal_table.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.kitchen_stove.name,Кухонная плита,Kitchen stove
+item.kitchen_stove.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.mill.name,Мельница,Mill
+item.mill.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.receiver_chest.name,Сундук-приёмник,Receiver chest
+item.receiver_chest.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.cellar_barrel.name,Бочка погреба,Cellar barrel
+item.cellar_barrel.desc,Станок. Ставится ЛКМ на мысу или в мастерской.,A station. Placed with LMB on the cape or in the workshop.
+item.decor_stained_window.name,Витражное окно,Stained-glass window
+item.decor_stained_window.desc,Свет в цвете.,Light in colour.
+station.big_chest,Большой сундук,Big chest
+station.forge,Горн,Forge
+station.salt_pan,Солеварня,Salt pan
+station.brine_barrel,Бочка для засолки,Brining barrel
+station.smokehouse,Коптильня,Smokehouse
+station.sawhorse,Козлы для пилки,Sawhorse
+station.tar_kiln,Смолокурня,Tar kiln
+station.scutcher,Трепальня,Scutcher
+station.spinning_wheel,Прялка,Spinning wheel
+station.loom,Ткацкий станок,Loom
+station.ash_kiln,Печь для золы,Ash kiln
+station.drying_rack,Сушильные вешала,Drying racks
+station.glass_furnace,Стекловарня,Glass furnace
+station.optical_bench,Оптический станок,Optical bench
+station.carpentry_table,Столярный стол,Carpentry table
+station.stonecutter_table,Каменотёсный стол,Stonecutter's table
+station.candle_mold,Свечная форма,Candle mould
+station.butter_churn,Маслобойка,Butter churn
+station.cheese_press,Сыроварня,Cheese press
+station.brewery,Пивоварня,Brewery
+station.wine_vat,Винный чан,Wine vat
+station.preserve_jars,Банки для заготовок,Preserving jars
+station.still,Перегонный куб,Still
+station.seed_box,Семенной ларь,Seed box
+station.herbal_table,Стол травницы,Herbalist's table
+station.kitchen_stove,Кухонная плита,Kitchen stove
+station.mill,Мельница,Mill
+station.receiver_chest,Сундук-приёмник,Receiver chest
+station.cellar_barrel,Бочка погреба,Cellar barrel
+station.beehive,Улей,Beehive
+station.eider_nest,Гнездовой ящик,Nest box
+station.stone_wall,Каменная стена,Stone wall
+station.gull_scarer,Чайкогон,Gull-scarer
+station.watering_barrel,Бочка-поливалка,Watering barrel
+station.cistern,Цистерна,Cistern
+station.wind_pump,Ветряк-насос,Wind pump
+station.keeper_scarecrow,Чучело смотрителя,Keeper's scarecrow
+station.decor,Украшение,Decoration
+node.M1.name,Устав смотрителя,Keeper's regulations
+node.M2.name,Жиротопка,Rendering pot
+node.M3.name,Отстойник,Settling tank
+node.M4.name,Параболический отражатель,Parabolic reflector
+node.M5.name,Ремонт башни,Tower repair
+node.M6.name,Громоотвод,Lightning rod
+node.M7.name,Оптика,Optics
+node.M8.name,Линза Френеля 4-го разряда,4th-order Fresnel lens
+node.M9.name,Лампа Арганда,Argand lamp
+node.M10.name,Туманные сигналы I,Fog signals I
+node.M11.name,"Резервуар ×3, точный механизм","Reservoir ×3, precise clockwork"
+node.M12.name,Линза 3-го разряда,3rd-order lens
+node.M13.name,Калильная лампа,Incandescent lamp
+node.M14.name,Красный сектор,Red sector
+node.M15.name,Линза 2-го разряда,2nd-order lens
+node.M16.name,Туманные сигналы II,Fog signals II
+node.M17.name,Автоматика,Automation
+node.M18.name,«Большое око»,The Great Eye
+node.M19.name,«Светоч Ранн»,Rann's Torch
+node.P1.name,Устав смотрителя,Keeper's regulations
+node.P2.name,Саван и игла,Shroud and needle
+node.P3.name,Столярное дело,Joinery
+node.P4.name,Ограды и дорожки,Fences and paths
+node.P5.name,Свечная форма,Candle mould
+node.P6.name,Каменотёсное дело,Stonecutting
+node.P7.name,Лупа и ящик для родных,Magnifier and relatives' box
+node.P8.name,"Добрый гроб, резной крест","Good coffin, carved cross"
+node.P9.name,Слово смотрителя,The keeper's word
+node.P10.name,Ледник,Ice house
+node.P11.name,Надгробие с эпитафией,Headstone with epitaph
+node.P12.name,Убранство погоста,Graveyard furnishings
+node.P13.name,Резной гроб,Carved coffin
+node.P14.name,Похоронные дроги,Funeral cart
+node.P15.name,Свеча-говорун,Talking candle
+node.P16.name,Маячный камень,Beacon stone
+node.P17.name,Малая часовня,Small chapel
+node.Z1.name,Компостная яма,Compost pit
+node.Z2.name,Зола и вешала,Ash and drying racks
+node.Z3.name,Курятник,Chicken coop
+node.Z4.name,Сенник,Hayloft
+node.Z5.name,Хлев,Barn
+node.Z6.name,Пасека,Apiary
+node.Z7.name,Семенной ларь,Seed box
+node.Z8.name,Маслобойка и сыроварня,Churn and cheese press
+node.Z9.name,Морской огород I,Sea garden I
+node.Z10.name,Морской огород II,Sea garden II
+node.Z11.name,Клюквенное болотце,Cranberry bog
+node.Z12.name,Выгон на берег,Shore pasture
+node.Z13.name,Малая теплица,Small greenhouse
+node.Z14.name,Ветряк-насос,Wind pump
+node.Z15.name,Конюшня,Stable
+node.S1.name,Удочка и разделка,Rod and cutting table
+node.S2.name,Лебёдка,Winch
+node.S3.name,Водолазный колокол,Diving bell
+node.S4.name,Парусная шлюпка,Sailing dinghy
+node.S5.name,Колокольные станции,Bell stations
+node.S6.name,Усиленный мешок с воздухом,Reinforced air bag
+node.S7.name,Промасленные ткани,Oiled cloth
+node.S8.name,Подлёдный лов,Ice fishing
+node.S9.name,Скафандр,Diving suit
+node.S10.name,Бот «Вороний Глаз»,The boat 'Raven's Eye'
+node.S11.name,Паровой насос,Steam pump
+node.S12.name,Длинный шланг,Long hose
+node.S12b.name,Длинный шланг II,Long hose II
+node.S13.name,Паровой катер,Steam launch
+node.R1.name,Верстак и сундук,Workbench and chest
+node.R2.name,Горн,Forge
+node.R3.name,Солеварня,Salt pan
+node.R4.name,Засолка,Brining
+node.R5.name,Коптильня,Smokehouse
+node.R6.name,Козлы для пилки,Sawhorse
+node.R7.name,Смолокурня,Tar kiln
+node.R8.name,Трепальня и прялка,Scutcher and spinning wheel
+node.R9.name,Ткацкий станок,Loom
+node.R10.name,Стекловарня,Glass furnace
+node.R11.name,Вяление рыбы,Drying fish
+node.R12.name,Пивоварня,Brewery
+node.R13.name,Вино и заготовки,Wine and preserves
+node.R14.name,Перегонный куб,Still
+node.R15.name,Сундук-приёмник,Receiver chest
+node.R16.name,Мастерская,Workshop
+node.R17.name,Сплавы,Alloys
+node.T1.name,Камень Ранн,Rann's Stone
+node.T2.name,Рябиновый оберег,Rowan charm
+node.T3.name,Фонарь смотрителя,Keeper's lantern
+node.T4.name,Стол травницы,Herbalist's table
+node.T5.name,Отвары,Brews
+node.T6.name,Светлая вода,Light water
+node.T7.name,Тотемы,Totems
+node.T8.name,Глубинные снадобья,Deep draughts
+node.T9.name,Песня прилива,Song of the tide
+node.T10.name,Знак Девяти Дев,Sign of the Nine Maidens
+node.T11.name,Зелье штиля,Calm potion
+node.T12.name,Говорящий с морем,Sea-speaker
+building.house,Дом смотрителя,Keeper's house
+building.coop,Курятник,Chicken coop
+building.barn,Хлев,Barn
+building.stable,Конюшня,Stable
+building.hayloft,Сенник,Hayloft
+building.workshop,Мастерская,Workshop
+building.well,Колодец,Well
+building.boathouse,Лодочный сарай,Boathouse
+building.ice_house,Ледник,Ice house
+building.graveyard_ext,Расширение погоста,Graveyard extension
+building.chapel,Малая часовня на погосте,Small graveyard chapel
+building.hearse,Похоронные дроги,Funeral cart
+building.greenhouse_small,Малая теплица 6×6,Small greenhouse 6×6
+building.cranberry_bog,Клюквенное болотце,Cranberry bog
+building.pasture,Выгон на берег,Shore pasture
+building.bot,Бот «Вороний Глаз»,The boat 'Raven's Eye'
+animal.chicken,Курица,Chicken
+animal.duck,Утка,Duck
+animal.eider,Гага,Eider
+animal.sheep,Островная овца,Island sheep
+animal.goat,Коза,Goat
+animal.cow,Северная корова,Northern cow
+animal.pony,Пони,Pony
+tag.honey,любой мёд,any honey
+tag.egg,любое яйцо,any egg
+tag.winter_fish,навага или налим,navaga or burbot
+tag.small,мелкая рыба,small fish
+tag.vegetable,любой овощ,any vegetable
+tag.berry,любые ягоды,any berries
+tag.candle,любая свеча,any candle
+tag.seaweed,водоросли,seaweed
+tag.smoked,копчёная рыба,smoked fish
+tag.wine,вино,wine

@@ -31,7 +31,8 @@ func _grow(cell: Vector2i, nights: int) -> void:
 func _check_crop_table() -> void:
 	var expected_days := {"crop_turnip": 4, "crop_rhubarb": 13, "crop_sea_kale": 9, "crop_pumpkin": 13,
 		"crop_winter_cabbage": 14, "crop_dill": 4}
-	_check(Data.all("crops").size() == 24, "every seasonal crop of 13.4 must exist")
+	_check(Data.all("crops").filter(func(c: Dictionary) -> bool: return str(c["id"]) != "crop_lightflower").size() == 24,
+		"every seasonal crop of 13.4 must exist")
 	for crop in Data.all("crops"):
 		_check(Data.exists("items", str(crop["seed"])) and Data.exists("items", str(crop["produce"])),
 			"crop %s has no seed or produce item" % crop["id"])

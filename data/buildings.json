@@ -1,6 +1,468 @@
 [
-  {
-    "id": "house_keeper",
-    "levels": 3
-  }
+ {
+  "id": "house",
+  "name": "building.house",
+  "levels": [
+   {
+    "price": 10000,
+    "items": [
+     [
+      "boards",
+      450
+     ]
+    ],
+    "days": 3,
+    "gives": [
+     [
+      "kitchen_stove",
+      1
+     ]
+    ],
+    "slots": 36
+   },
+   {
+    "price": 50000,
+    "items": [
+     [
+      "bog_oak",
+      150
+     ]
+    ],
+    "days": 3
+   },
+   {
+    "price": 100000,
+    "items": [],
+    "days": 3,
+    "gives": [
+     [
+      "cellar_barrel",
+      4
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "id": "coop",
+  "name": "building.coop",
+  "levels": [
+   {
+    "price": 4000,
+    "items": [
+     [
+      "boards",
+      300
+     ],
+     [
+      "stone",
+      100
+     ]
+    ],
+    "days": 3,
+    "capacity": 4
+   },
+   {
+    "price": 10000,
+    "items": [
+     [
+      "boards",
+      400
+     ],
+     [
+      "stone",
+      150
+     ]
+    ],
+    "days": 3,
+    "capacity": 8
+   },
+   {
+    "price": 20000,
+    "items": [
+     [
+      "boards",
+      500
+     ],
+     [
+      "stone",
+      200
+     ],
+     [
+      "brass",
+      10
+     ]
+    ],
+    "days": 3,
+    "capacity": 12
+   }
+  ],
+  "requires": "node:Z3"
+ },
+ {
+  "id": "barn",
+  "name": "building.barn",
+  "levels": [
+   {
+    "price": 6000,
+    "items": [
+     [
+      "boards",
+      350
+     ],
+     [
+      "stone",
+      150
+     ]
+    ],
+    "days": 3,
+    "capacity": 4
+   },
+   {
+    "price": 12000,
+    "items": [
+     [
+      "boards",
+      450
+     ],
+     [
+      "stone",
+      200
+     ]
+    ],
+    "days": 3,
+    "capacity": 8
+   },
+   {
+    "price": 25000,
+    "items": [
+     [
+      "boards",
+      550
+     ],
+     [
+      "stone",
+      300
+     ]
+    ],
+    "days": 3,
+    "capacity": 12
+   }
+  ],
+  "requires": "node:Z5"
+ },
+ {
+  "id": "stable",
+  "name": "building.stable",
+  "levels": [
+   {
+    "price": 5000,
+    "items": [
+     [
+      "boards",
+      150
+     ]
+    ],
+    "days": 2,
+    "capacity": 1
+   }
+  ],
+  "requires": "node:Z15"
+ },
+ {
+  "id": "hayloft",
+  "name": "building.hayloft",
+  "levels": [
+   {
+    "price": 2500,
+    "items": [
+     [
+      "boards",
+      150
+     ]
+    ],
+    "days": 2,
+    "capacity": 240
+   },
+   {
+    "price": 2000,
+    "items": [
+     [
+      "boards",
+      100
+     ]
+    ],
+    "days": 2,
+    "capacity": 480
+   }
+  ],
+  "requires": "node:Z4"
+ },
+ {
+  "id": "workshop",
+  "name": "building.workshop",
+  "levels": [
+   {
+    "price": 8000,
+    "items": [
+     [
+      "boards",
+      300
+     ],
+     [
+      "stone",
+      100
+     ]
+    ],
+    "days": 3,
+    "gives": [
+     [
+      "mill",
+      1
+     ]
+    ]
+   }
+  ],
+  "requires": "node:R16"
+ },
+ {
+  "id": "well",
+  "name": "building.well",
+  "levels": [
+   {
+    "price": 1000,
+    "items": [
+     [
+      "stone",
+      75
+     ]
+    ],
+    "days": 1
+   }
+  ]
+ },
+ {
+  "id": "boathouse",
+  "name": "building.boathouse",
+  "levels": [
+   {
+    "price": 3000,
+    "items": [
+     [
+      "boards",
+      200
+     ]
+    ],
+    "days": 2
+   },
+   {
+    "price": 15000,
+    "items": [
+     [
+      "boards",
+      400
+     ],
+     [
+      "iron_ingot",
+      20
+     ]
+    ],
+    "days": 3
+   }
+  ]
+ },
+ {
+  "id": "ice_house",
+  "name": "building.ice_house",
+  "levels": [
+   {
+    "price": 12000,
+    "items": [
+     [
+      "stone",
+      200
+     ],
+     [
+      "iron_ingot",
+      20
+     ]
+    ],
+    "days": 3
+   }
+  ],
+  "requires": "node:P10"
+ },
+ {
+  "id": "graveyard_ext",
+  "name": "building.graveyard_ext",
+  "levels": [
+   {
+    "price": 5000,
+    "items": [
+     [
+      "stone",
+      100
+     ]
+    ],
+    "days": 2,
+    "plots": 24
+   },
+   {
+    "price": 12000,
+    "items": [
+     [
+      "stone",
+      250
+     ]
+    ],
+    "days": 2,
+    "plots": 40
+   },
+   {
+    "price": 25000,
+    "items": [
+     [
+      "stone",
+      500
+     ]
+    ],
+    "days": 2,
+    "plots": 60
+   }
+  ]
+ },
+ {
+  "id": "chapel",
+  "name": "building.chapel",
+  "levels": [
+   {
+    "price": 30000,
+    "items": [
+     [
+      "stone",
+      300
+     ],
+     [
+      "boards",
+      100
+     ],
+     [
+      "brass",
+      5
+     ]
+    ],
+    "days": 4
+   }
+  ],
+  "requires": "node:P17"
+ },
+ {
+  "id": "hearse",
+  "name": "building.hearse",
+  "levels": [
+   {
+    "price": 5000,
+    "items": [
+     [
+      "boards",
+      100
+     ],
+     [
+      "iron_ingot",
+      10
+     ]
+    ],
+    "days": 1
+   }
+  ],
+  "requires": "node:P14"
+ },
+ {
+  "id": "greenhouse_small",
+  "name": "building.greenhouse_small",
+  "levels": [
+   {
+    "price": 15000,
+    "items": [
+     [
+      "boards",
+      100
+     ],
+     [
+      "glass",
+      30
+     ]
+    ],
+    "days": 3
+   }
+  ],
+  "requires": "node:Z13"
+ },
+ {
+  "id": "cranberry_bog",
+  "name": "building.cranberry_bog",
+  "levels": [
+   {
+    "price": 2000,
+    "items": [
+     [
+      "stone",
+      50
+     ],
+     [
+      "peat",
+      20
+     ]
+    ],
+    "days": 1
+   }
+  ],
+  "requires": "node:Z11"
+ },
+ {
+  "id": "pasture",
+  "name": "building.pasture",
+  "levels": [
+   {
+    "price": 3000,
+    "items": [
+     [
+      "boards",
+      60
+     ]
+    ],
+    "days": 1
+   }
+  ],
+  "requires": "node:Z12"
+ },
+ {
+  "id": "bot",
+  "name": "building.bot",
+  "levels": [
+   {
+    "price": 15000,
+    "items": [
+     [
+      "boards",
+      200
+     ],
+     [
+      "canvas",
+      10
+     ],
+     [
+      "iron_ingot",
+      20
+     ],
+     [
+      "brass",
+      10
+     ]
+    ],
+    "days": 4
+   }
+  ],
+  "requires": "node:S10"
+ }
 ]

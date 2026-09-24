@@ -441,6 +441,8 @@ func _check_fuel_chain() -> void:
 	_check(Crafting.make("cut_fillet", 30) == "ok" and Inventory.count_of("fillet") == 20
 		and Inventory.count_of("fish_guts") == 20 and Inventory.count_of("fish_cod") == 7,
 		"the cutting table works in batches of up to 20: fish -> fillet + guts")
+	_check(Crafting.make("cut_bait") == "unknown", "fish bait comes with Fishing 1 (19.4)")
+	Skills.levels["fishing"] = 1
 	_check(Crafting.make("cut_bait") == "ok" and Inventory.count_of("bait") == 5, "one fish -> 5 bait")
 
 	_check(Knowledge.blocked_reason("M2") == "points", "the renderer needs sea notes")
