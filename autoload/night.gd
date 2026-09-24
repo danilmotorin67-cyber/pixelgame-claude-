@@ -40,6 +40,9 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["stations_ready"] = Crafting.finished_overnight())
 	_step(report, "sea", func() -> void:
 		Sea.generate_gifts(Clock.day_index, storm_today))
+	_step(report, "mail", func() -> void:
+		Lighthouse.night_mail(night_index)
+		report["mail"] = Mail.unread())
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
 	_step(report, "luck", func() -> void:

@@ -1167,5 +1167,13 @@
     "category": "material",
     "price": 120,
     "stack": 99
+  },
+  {
+    "id": "medal_directorate",
+    "name": "item.medal_directorate.name",
+    "desc": "item.medal_directorate.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1
   }
 ]

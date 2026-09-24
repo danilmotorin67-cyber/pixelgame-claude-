@@ -27,6 +27,13 @@ var week_dark: bool = false
 var week_wrecked: bool = false
 var wrecks: Array = []
 var pending_shore: Array = []
+var season_powers: Array = []
+var year_powers: Array = []
+var inspections: int = 0
+var retake_day: int = -1
+var inspected_day: int = -1
+var log_day: int = -1
+var blueprints_given: int = 0
 
 
 func cfg(key: String) -> Variant:
@@ -60,10 +67,18 @@ func reset() -> void:
 	week_wrecked = false
 	wrecks.clear()
 	pending_shore.clear()
+	season_powers.clear()
+	year_powers.clear()
+	inspections = 0
+	retake_day = -1
+	inspected_day = -1
+	log_day = -1
+	blueprints_given = 0
 
 
 func _ready() -> void:
 	reset()
+	Events.hour_changed.connect(_on_hour_changed)
 
 
 func glass_cap() -> float:
@@ -303,6 +318,8 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 	var ships := _resolve_ships(needed, burning, power)
 	if needed:
 		week_powers.append(power)
+		season_powers.append(power)
+		year_powers.append(power)
 		week_dark = week_dark or not burning
 		nightly_powers.append(power)
 		if nightly_powers.size() > 7:
@@ -370,6 +387,102 @@ func _wreck(entry: Dictionary, info: Dictionary, rng: RandomNumberGenerator) -> 
 	Game.counters["crates_allowed"] = int(Game.counters.get("crates_allowed", 0)) + ceili(float(crates) / 3.0)
 
 
+const INSPECTION := [[80, "exemplary", 5000, 15, 150], [60, "excellent", 3000, 10, 100],
+	[40, "good", 1500, 5, 50], [20, "satisfactory", 500, 0, 0]]
+const BLUEPRINTS := ["lightning_rod", "reservoir_3", "steam_horn", "auto_mechanism"]
+
+
+func _average(values: Array) -> float:
+	if values.is_empty():
+		return 0.0
+	var total := 0.0
+	for value in values:
+		total += float(value)
+	return total / float(values.size())
+
+
+# Night step 9 (Monday): 150 kr + 5 kr × the week's average + bad-weather bonuses unless a ship was lost.
+func weekly_salary() -> int:
+	if week_powers.is_empty():
+		return 0
+	var average := _average(week_powers)
+	var bonus := 0 if week_wrecked else week_bonus
+	var salary := 150 + int(round(5.0 * average)) + bonus
+	if str(Skills.professions.get("keeping", "")) == "night_pilot":
+		salary = int(round(float(salary) * 1.5))
+	Mail.send("mail.salary_wreck" if week_wrecked else "mail.salary", [salary, int(round(average)), bonus], salary)
+	if week_powers.size() >= 7 and not week_dark:
+		Sea.add_mercy(float(cfg("full_week_mercy")))
+	week_powers.clear()
+	week_bonus = 0
+	week_dark = false
+	week_wrecked = false
+	return salary
+
+
+func night_mail(night_index: int) -> void:
+	for wreck in wrecks:
+		if int(wreck["day"]) == night_index:
+			Mail.send("mail.wreck", [Loc.t(str(wreck["ship"]))])
+	if Clock.weekday == "mon":
+		weekly_salary()
+
+
+func _on_hour_changed(hour: int) -> void:
+	if hour == 10 and (Clock.day == 28 or Clock.day_index == retake_day) and inspected_day != Clock.day_index:
+		inspect()
+
+
+# Inspection on the 28th at 10:00 by the season's average; the very first one by the last seven nights.
+func inspect() -> Dictionary:
+	inspected_day = Clock.day_index
+	var first := inspections == 0
+	var average := fire_power if first else _average(season_powers)
+	var threshold := 25.0 if first and Clock.year == 1 and Clock.season == "spring" else 20.0
+	var result := {"grade": "unsatisfactory", "average": average, "money": 0, "notes": 0}
+	if average >= threshold:
+		for row in INSPECTION:
+			if average >= float(row[0]) or row[1] == "satisfactory":
+				result = {"grade": row[1], "average": average, "money": row[2], "notes": row[3]}
+				Skills.add_xp("keeping", int(row[4]))
+				break
+		inspections += 1
+		retake_day = -1
+		Knowledge.add_points("sea", int(result["notes"]))
+		var items: Array = []
+		if result["grade"] == "excellent" and blueprints_given < BLUEPRINTS.size():
+			Game.set_flag("blueprint_" + BLUEPRINTS[blueprints_given])
+			result["blueprint"] = BLUEPRINTS[blueprints_given]
+			blueprints_given += 1
+		if result["grade"] == "exemplary":
+			items.append(["medal_directorate", 1])
+		Mail.send("mail.inspection_" + str(result["grade"]), [int(round(average))], int(result["money"]), items)
+	else:
+		retake_day = Clock.DAYS_PER_YEAR * (Clock.year - 1) + Clock.DAYS_PER_SEASON + 6 if threshold == 25.0 \
+			else Clock.day_index + 7
+		result["retake_day"] = retake_day
+		Mail.send("mail.inspection_unsatisfactory", [int(round(average))])
+	if Clock.season == "winter" and Clock.day == 28:
+		if _average(year_powers) >= 70.0:
+			Game.set_flag("keeper_of_the_year_%d" % Clock.year)
+			Mail.send("mail.keeper_of_the_year", [Clock.year])
+		year_powers.clear()
+	if Clock.day == 28:
+		season_powers.clear()
+	Game.add_stat("inspections")
+	return result
+
+
+# Ritual step 6: once a day, +5 keeping XP and a sea note; the Sunday summary adds two more.
+func write_log() -> bool:
+	if log_day == Clock.day_index:
+		return false
+	log_day = Clock.day_index
+	Skills.add_xp("keeping", 5)
+	Knowledge.add_points("sea", 3 if Clock.weekday == "sun" else 1)
+	return true
+
+
 func roll_loot(table_id: String, rng: RandomNumberGenerator) -> Array:
 	var table: Dictionary = Data.tables.get("loot_tables", {}).get(table_id, {})
 	var entries: Array = table.get("table", [])
@@ -426,7 +539,10 @@ func serialize() -> Dictionary:
 		"lamp_on": lamp_on, "lit_at_minutes": lit_at_minutes, "wound_until": wound_until,
 		"bell_hours": bell_hours, "fire_power": fire_power, "nightly_powers": nightly_powers,
 		"last_report": last_report, "week_powers": week_powers, "week_bonus": week_bonus,
-		"week_dark": week_dark, "week_wrecked": week_wrecked, "wrecks": wrecks, "pending_shore": pending_shore}
+		"week_dark": week_dark, "week_wrecked": week_wrecked, "wrecks": wrecks, "pending_shore": pending_shore,
+		"season_powers": season_powers, "year_powers": year_powers, "inspections": inspections,
+		"retake_day": retake_day, "inspected_day": inspected_day, "log_day": log_day,
+		"blueprints_given": blueprints_given}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -470,5 +586,14 @@ func deserialize(d: Dictionary) -> void:
 	for wreck in d.get("wrecks", []):
 		wrecks.append({"day": int(wreck["day"]), "ship": str(wreck["ship"]), "type": str(wreck["type"]),
 			"bodies": int(wreck["bodies"])})
+	for value in d.get("season_powers", []):
+		season_powers.append(float(value))
+	for value in d.get("year_powers", []):
+		year_powers.append(float(value))
+	inspections = int(d.get("inspections", 0))
+	retake_day = int(d.get("retake_day", -1))
+	inspected_day = int(d.get("inspected_day", -1))
+	log_day = int(d.get("log_day", -1))
+	blueprints_given = int(d.get("blueprints_given", 0))
 	for entry in d.get("pending_shore", []):
 		pending_shore.append({"item": str(entry["item"]), "beach": str(entry["beach"])})

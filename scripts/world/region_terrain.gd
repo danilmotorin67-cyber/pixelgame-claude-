@@ -129,6 +129,13 @@ func _build_landmarks() -> void:
 			sign.add_theme_font_size_override("font_size", 8)
 			counter.add_child(sign)
 			add_child(counter)
+		if str(item["title"]) == "Лоцманская управа":
+			var size_hall: Array = item["size"]
+			var desk := DirectorateDesk.new()
+			desk.name = "Directorate"
+			desk.position = Vector2((float(pos[0]) + float(size_hall[0]) / 2.0) * TILE,
+				(float(pos[1]) + float(size_hall[1])) * TILE + 8.0)
+			add_child(desk)
 	if biome == "village" and coast_row > 0:
 		var box := ShippingBox.new()
 		box.name = "ShippingBox"

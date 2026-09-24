@@ -85,6 +85,7 @@ func save_game(slot: int = -1) -> bool:
 		"farm": Farm.serialize(),
 		"animals": Animals.serialize(),
 		"crafting": Crafting.serialize(),
+		"mail": Mail.serialize(),
 		"settings": Settings.serialize(),
 	}
 	if DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(save_root)) != OK:
@@ -143,6 +144,7 @@ func load_game(slot: int) -> bool:
 	Farm.deserialize(payload.get("farm", {}))
 	Animals.deserialize(payload.get("animals", {}))
 	Crafting.deserialize(payload.get("crafting", {}))
+	Mail.deserialize(payload.get("mail", {}))
 	Settings.deserialize(payload.get("settings", {}))
 	current_slot = slot
 	Events.tide_changed.emit(Clock.tide_height())

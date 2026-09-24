@@ -7,7 +7,13 @@
         "sea": 0
       },
       "requires": [],
-      "unlocks": []
+      "unlocks": [
+        "ritual",
+        "lamp:wick",
+        "lens:old_mirror",
+        "mechanism:weights",
+        "signal:hand_bell"
+      ]
     },
     {
       "id": "P1",
@@ -53,6 +59,261 @@
       },
       "requires": [],
       "unlocks": []
+    },
+    {
+      "id": "M2",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 3
+      },
+      "requires": [
+        "M1"
+      ],
+      "unlocks": [
+        "station:renderer"
+      ]
+    },
+    {
+      "id": "M3",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 5
+      },
+      "requires": [
+        "M2"
+      ],
+      "unlocks": [
+        "station:settling_tank"
+      ]
+    },
+    {
+      "id": "M4",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 6,
+        "land": 2
+      },
+      "requires": [
+        "M1"
+      ],
+      "unlocks": [
+        "recipe:parabolic"
+      ]
+    },
+    {
+      "id": "M5",
+      "branch": "lighthouse",
+      "cost": {},
+      "requires": [
+        "M1"
+      ],
+      "unlocks": [
+        "tower_repair"
+      ],
+      "story": "q1_8"
+    },
+    {
+      "id": "M6",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 8
+      },
+      "requires": [
+        "M5"
+      ],
+      "unlocks": [
+        "recipe:lightning_rod"
+      ]
+    },
+    {
+      "id": "M7",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 12,
+        "land": 4
+      },
+      "requires": [
+        "M4"
+      ],
+      "unlocks": [
+        "station:optical_bench",
+        "recipe:prism"
+      ]
+    },
+    {
+      "id": "M8",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 15
+      },
+      "requires": [
+        "M7"
+      ],
+      "unlocks": [
+        "recipe:fresnel_4"
+      ]
+    },
+    {
+      "id": "M9",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 10
+      },
+      "requires": [
+        "M4"
+      ],
+      "unlocks": [
+        "recipe:argand"
+      ]
+    },
+    {
+      "id": "M10",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 10,
+        "rest": 5
+      },
+      "requires": [
+        "M1"
+      ],
+      "unlocks": [
+        "recipe:clock_bell",
+        "recipe:bellows_horn"
+      ]
+    },
+    {
+      "id": "M11",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 18
+      },
+      "requires": [
+        "M9"
+      ],
+      "unlocks": [
+        "recipe:reservoir_3",
+        "recipe:precise_clock"
+      ]
+    },
+    {
+      "id": "M12",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 25,
+        "rest": 5
+      },
+      "requires": [
+        "M8"
+      ],
+      "unlocks": [
+        "recipe:fresnel_3"
+      ]
+    },
+    {
+      "id": "M13",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 25
+      },
+      "requires": [
+        "M9",
+        "M11"
+      ],
+      "unlocks": [
+        "recipe:incandescent"
+      ]
+    },
+    {
+      "id": "M14",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 30,
+        "rest": 10
+      },
+      "requires": [
+        "M12"
+      ],
+      "unlocks": [
+        "recipe:ruby_glass",
+        "red_sector"
+      ],
+      "story": "page_10"
+    },
+    {
+      "id": "M15",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 40,
+        "rest": 10
+      },
+      "requires": [
+        "M12"
+      ],
+      "unlocks": [
+        "recipe:fresnel_2"
+      ]
+    },
+    {
+      "id": "M16",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 40
+      },
+      "requires": [
+        "M10",
+        "M13"
+      ],
+      "unlocks": [
+        "recipe:steam_horn",
+        "recipe:siren"
+      ]
+    },
+    {
+      "id": "M17",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 50,
+        "land": 10
+      },
+      "requires": [
+        "M11",
+        "M15"
+      ],
+      "unlocks": [
+        "recipe:auto_mechanism",
+        "recipe:reservoir_7",
+        "recipe:salt_shroud"
+      ]
+    },
+    {
+      "id": "M18",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 70,
+        "rest": 20
+      },
+      "requires": [
+        "M15"
+      ],
+      "unlocks": [
+        "recipe:great_eye"
+      ],
+      "story": "blessing_svetla"
+    },
+    {
+      "id": "M19",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 30,
+        "rest": 50
+      },
+      "requires": [
+        "M13"
+      ],
+      "unlocks": [
+        "recipe:rann_torch"
+      ],
+      "story": "gills_of_rann"
     }
   ]
 }

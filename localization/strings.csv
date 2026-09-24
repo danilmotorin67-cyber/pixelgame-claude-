@@ -291,3 +291,18 @@ item.iron_scrap.name,Ржавое железо,Rusty iron
 item.iron_scrap.desc,На слитки в горне. Раньше было кораблём.,For ingots at the forge. Used to be a ship.
 item.whalebone.name,Китовый ус,Whalebone
 item.whalebone.desc,"Для корсетов и поделок. Кит не спрашивал, на что пойдёт.",For corsets and carvings. Nobody asked the whale.
+item.medal_directorate.name,Медаль управы,Directorate medal
+item.medal_directorate.desc,Награда за образцовую вахту; вешается на стену. Олаф полировал её сам.,For an exemplary watch; hangs on the wall. Olaf polished it himself.
+mail.salary,"Лоцманская управа. Жалованье за неделю: %d кр. Средняя Сила Огня — %d, надбавка за проходы в непогоду — %d кр. Подпись неразборчива, как всегда.","Pilot Directorate. Weekly salary: %d kr. Average fire power %d, bad-weather passage bonus %d kr. Signature illegible, as ever."
+mail.salary_wreck,Лоцманская управа. Жалованье за неделю: %d кр. Средняя Сила Огня — %d. Надбавка (%d кр) не начислена: у мыса погибло судно. Сожалеем. В графе «сожалеем».,Pilot Directorate. Weekly salary: %d kr. Average fire power %d. Bonus (%d kr) withheld: a ship was lost off the cape. We regret. In the 'regret' column.
+mail.wreck,"Лоцманская управа. Доводим до сведения: минувшей ночью у Вороньего мыса погибло судно — %s. Если море вернёт экипаж, примите его по уставу.","Pilot Directorate. Please be advised: last night a ship was lost off Raven Cape — %s. Should the sea return the crew, receive them as the charter demands."
+mail.inspection_unsatisfactory,Инспектор Пальм. Средняя Сила Огня — %d. Неудовлетворительно. Пересдача назначена. Маяк — не свеча на именинах.,Inspector Palm. Average fire power %d. Unsatisfactory. A retake is scheduled. A lighthouse is not a birthday candle.
+mail.inspection_satisfactory,Инспектор Пальм. Средняя Сила Огня — %d. Удовлетворительно. Премия прилагается. Не радуйтесь заметно.,Inspector Palm. Average fire power %d. Satisfactory. Bonus enclosed. Do not rejoice visibly.
+mail.inspection_good,Инспектор Пальм. Средняя Сила Огня — %d. Хорошо. Премия прилагается. Я почти улыбнулся.,Inspector Palm. Average fire power %d. Good. Bonus enclosed. I nearly smiled.
+mail.inspection_excellent,Инспектор Пальм. Средняя Сила Огня — %d. Отлично. Премия и чертёж прилагаются. Не зазнавайтесь до следующего 28-го.,Inspector Palm. Average fire power %d. Excellent. Bonus and a blueprint enclosed. Stay humble until the next 28th.
+mail.inspection_exemplary,Инспектор Пальм. Средняя Сила Огня — %d. Образцово. Медаль управы прилагается. Я занёс вас в список. Хороший список.,Inspector Palm. Average fire power %d. Exemplary. The directorate medal is enclosed. I have put you on a list. A good list.
+mail.keeper_of_the_year,Лоцманская управа. По итогам года %d вам присвоено звание «Смотритель года». Табличка на двери маяка — за счёт управы. Гвозди — за ваш.,Pilot Directorate. For year %d you are named Keeper of the Year. The plaque for the lighthouse door is on us. The nails are on you.
+season.spring,Весна,Spring
+season.summer,Лето,Summer
+season.autumn,Осень,Autumn
+season.winter,Зима,Winter
