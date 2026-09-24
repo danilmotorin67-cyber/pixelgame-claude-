@@ -9,6 +9,8 @@ const STORM_STAGE_LOSS := 0.15
 const HARVEST_FERTILITY_LOSS := 0.25
 var tiles: Dictionary = {}
 var last_harvest: Dictionary = {}
+# Seasonal wild finds per map: [{item, x, y}] in tiles.
+var wild: Dictionary = {}
 
 
 func _key(cell: Vector2i) -> String:
@@ -36,6 +38,7 @@ func get_tile(cell: Vector2i) -> Dictionary:
 
 func reset() -> void:
 	tiles.clear()
+	wild.clear()
 	Events.farm_changed.emit()
 
 
@@ -213,12 +216,52 @@ func advance_day(storm_night: bool = false) -> void:
 	Events.farm_changed.emit()
 
 
+# Seasonal foraging spots of 18.1 appear each morning inside the open zones of each region.
+func spawn_wild(index: int) -> void:
+	var config: Dictionary = Data.tables.get("forage", {})
+	var season_name: String = Clock.SEASONS[(index % Clock.DAYS_PER_YEAR) / Clock.DAYS_PER_SEASON]
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 48271 + index * 6007 + 11, 2147483647)
+	var bounds: Array = config.get("spots_per_zone", [2, 4])
+	wild.clear()
+	for map_id in config.get("zones", {}):
+		var table: Array = []
+		for spot in config.get("seasonal", {}).get(season_name, []):
+			if str(spot[1]) == map_id:
+				table.append([spot[0], spot[2]])
+		if table.is_empty():
+			continue
+		var list: Array = []
+		for zone in config["zones"][map_id]:
+			for n in rng.randi_range(int(bounds[0]), int(bounds[1])):
+				list.append({"item": Sea._pick(rng, table),
+					"x": int(zone[0]) + rng.randi_range(0, int(zone[2]) - 1),
+					"y": int(zone[1]) + rng.randi_range(0, int(zone[3]) - 1)})
+		wild[map_id] = list
+
+
+func collect_wild(map_id: String, spot: Dictionary) -> bool:
+	var list: Array = wild.get(map_id, [])
+	var index := list.find(spot)
+	if index < 0 or not Inventory.forage(str(spot["item"]), 7):
+		return false
+	list.remove_at(index)
+	return true
+
+
 func serialize() -> Dictionary:
-	return {"tiles": tiles}
+	return {"tiles": tiles, "wild": wild}
 
 
 func deserialize(d: Dictionary) -> void:
 	tiles = d.get("tiles", {}).duplicate(true)
+	wild.clear()
+	var saved_wild: Dictionary = d.get("wild", {})
+	for map_id in saved_wild:
+		var list: Array = []
+		for spot in saved_wild[map_id]:
+			list.append({"item": str(spot["item"]), "x": int(spot["x"]), "y": int(spot["y"])})
+		wild[map_id] = list
 	for key in tiles:
 		var tile: Dictionary = tiles[key]
 		tile["salt"] = clampi(int(tile.get("salt", 0)), 0, MAX_SALT)

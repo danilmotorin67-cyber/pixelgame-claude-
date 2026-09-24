@@ -30,6 +30,7 @@ func _ready() -> void:
 	if map_id == "":
 		map_id = Router.current_map
 	Router.current_map = map_id
+	add_child(Pickups.new())
 	Clock.paused = not Night.pending_report.is_empty()
 	Events.map_entered.emit(map_id)
 	Events.time_tick.connect(_on_world_changed)

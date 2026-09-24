@@ -78,6 +78,20 @@ func upgrade_capacity(new_capacity: int) -> bool:
 	return true
 
 
+# Picking up a find: foraging XP and +2% per foraging level for a double find (25.2).
+func forage(id: String, xp: int) -> bool:
+	if not can_fit(id, 1):
+		return false
+	var amount := 1
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 613 + Clock.day_index * 977 + Clock.minutes * 31 + count_of(id), 2147483647)
+	if rng.randf() < 0.02 * float(Skills.level("foraging")) and can_fit(id, 2):
+		amount = 2
+	add(id, amount)
+	Skills.add_xp("foraging", xp)
+	return true
+
+
 func count_of(id: String) -> int:
 	var n := 0
 	for s in slots:

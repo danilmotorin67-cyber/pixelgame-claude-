@@ -12,7 +12,7 @@ REQUIRED = [
     "npcs", "gifts", "quests", "bodies", "registry", "ghosts", "the_twenty", "evidence",
     "weather", "tides", "festivals", "bundles", "neptune", "regions",
     "skills", "knowledge_tree", "achievements", "collections",
-    "bottles", "pages", "tales", "shops", "buildings", "balance",
+    "bottles", "pages", "tales", "shops", "buildings", "balance", "forage",
 ]
 
 
@@ -70,6 +70,15 @@ def main() -> int:
         for entry in shop.get("stock", []):
             if "upgrade" not in entry and entry.get("item") not in item_ids:
                 errs.append(f"shop {shop.get('id')} sells unknown item {entry.get('item')}")
+    forage = tables.get("forage", {})
+    for band in ("near", "far", "storm"):
+        for item, _weight in forage.get(band, []):
+            if item not in item_ids:
+                errs.append(f"forage {band} unknown item {item}")
+    for season, spots in forage.get("seasonal", {}).items():
+        for item, where, _weight in spots:
+            if item not in item_ids or where not in forage.get("zones", {}):
+                errs.append(f"forage {season} bad spot {item}@{where}")
     regions = tables.get("regions", {})
     if isinstance(regions, dict):
         sizes = {name: entry.get("size", []) for name, entry in regions.items()}

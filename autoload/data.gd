@@ -11,7 +11,7 @@ const DATA_FILES: PackedStringArray = [
 	"npcs", "gifts", "quests", "bodies", "registry", "ghosts", "the_twenty", "evidence",
 	"weather", "tides", "festivals", "bundles", "neptune", "regions",
 	"skills", "knowledge_tree", "achievements", "collections",
-	"bottles", "pages", "tales", "shops", "buildings", "balance"
+	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage"
 ]
 
 func _ready() -> void:

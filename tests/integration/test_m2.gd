@@ -282,6 +282,117 @@ func _check_shops() -> void:
 	Economy.reset()
 
 
+func _check_forage() -> void:
+	Sea.reset()
+	Inventory.reset()
+	Skills.reset()
+	_check(Sea.mercy == 30.0, "Rann's mercy starts at 30 (12.1)")
+	Sea.generate_gifts(10, false)
+	var calm_total := 0
+	for map_id in ["cape", "seal_shore", "wreck_bay", "village"]:
+		var count: int = Sea.gifts.get(map_id, []).size()
+		_check(count >= 6 and count <= 15, "%s must get 6-15 gifts (got %d)" % [map_id, count])
+		calm_total += count
+		for gift in Sea.gifts[map_id]:
+			_check(Data.exists("items", str(gift["item"])), "unknown gift " + str(gift["item"]))
+			if int(gift["row"]) >= Sea.FAR_ROW:
+				_check(str(gift["item"]) not in ["trash", "cork_float"], "far strips hold the better finds")
+	var again := JSON.stringify(Sea.gifts)
+	Sea.generate_gifts(10, false)
+	_check(JSON.stringify(Sea.gifts) == again, "gifts are deterministic for a world and day")
+	Sea.generate_gifts(10, true)
+	var storm_total := 0
+	var storm_only := 0
+	for map_id in Sea.gifts:
+		storm_total += Sea.gifts[map_id].size()
+		for gift in Sea.gifts[map_id]:
+			if str(gift["item"]) in ["amber", "pumice"]:
+				storm_only += 1
+	_check(storm_total >= calm_total * 2 and storm_only > 0, "storms triple the gifts and bring amber and pumice")
+	Sea.mercy = 10.0
+	Sea.generate_gifts(10, false)
+	var hostile := 0
+	for map_id in Sea.gifts:
+		hostile += Sea.gifts[map_id].size()
+	_check(hostile * 2 <= calm_total + 4, "a hostile sea gives half the gifts")
+	Sea.mercy = 45.0
+	Sea.generate_gifts(10, false)
+	for map_id in Sea.gifts:
+		var rare := false
+		for gift in Sea.gifts[map_id]:
+			if str(gift["item"]) in ["sea_glass", "amber"]:
+				rare = true
+		_check(rare, "mercy 40+ guarantees a rare gift on " + map_id)
+	Sea.mercy = 30.0
+
+	Sea.gifts = {"cape": [{"item": "kelp", "x": 10, "row": 5}, {"item": "trash", "x": 11, "row": 0},
+		{"item": "trash", "x": 12, "row": 0}]}
+	var far: Dictionary = Sea.gifts["cape"][0]
+	Clock.day_index = 0
+	Clock.set_time(0, 0)
+	var low_minute := 0
+	var high_minute := 0
+	for minute in range(0, 1440, 10):
+		if Clock.tide_height_at(0, minute) < Clock.tide_height_at(0, low_minute):
+			low_minute = minute
+		if Clock.tide_height_at(0, minute) > Clock.tide_height_at(0, high_minute):
+			high_minute = minute
+	Clock.set_time(high_minute / 60, high_minute % 60)
+	_check(not Sea.is_dry(far) and not Sea.collect_gift("cape", far), "the far strip is under water at high tide")
+	Clock.set_time(low_minute / 60, low_minute % 60)
+	_check(Sea.collect_gift("cape", far) and Inventory.count_of("kelp") >= 1, "low tide opens the far strip")
+	_check(int(Skills.xp["foraging"]) == 3, "a sea gift gives 3 foraging XP")
+	Sea.collect_gift("cape", Sea.gifts["cape"][0])
+	_check(is_equal_approx(Sea.mercy, 30.2), "rubbish lifts mercy by 0.2")
+	Sea.trash_mercy_today = 1.9
+	Sea.collect_gift("cape", Sea.gifts["cape"][0])
+	_check(is_equal_approx(Sea.mercy, 30.3), "rubbish lifts mercy by at most 2 a day")
+
+	Farm.spawn_wild(3)
+	var spring_items := ["morel", "wild_garlic", "sorrel", "cottongrass", "armeria", "scurvygrass"]
+	var zones: Dictionary = Data.tables["forage"]["zones"]
+	for map_id in Farm.wild:
+		for spot in Farm.wild[map_id]:
+			_check(str(spot["item"]) in spring_items, "spring forage only in spring: " + str(spot["item"]))
+			var inside := false
+			for zone in zones[map_id]:
+				inside = inside or (int(spot["x"]) >= int(zone[0]) and int(spot["x"]) < int(zone[0]) + int(zone[2])
+					and int(spot["y"]) >= int(zone[1]) and int(spot["y"]) < int(zone[1]) + int(zone[3]))
+			_check(inside, "forage must spawn inside its open zone")
+	Farm.spawn_wild(3 * 28 + 3)
+	_check(str(Farm.wild["birch"][0]["item"]) == "oyster_mushroom", "winter birches give oyster mushrooms")
+	var spot: Dictionary = Farm.wild["birch"][0]
+	var xp_before := int(Skills.xp["foraging"])
+	_check(Farm.collect_wild("birch", spot) and int(Skills.xp["foraging"]) == xp_before + 7
+		and not Farm.wild["birch"].has(spot), "a seasonal find gives 7 foraging XP and disappears")
+	var restored: Dictionary = JSON.parse_string(JSON.stringify(Sea.serialize()))
+	var sea_before := JSON.stringify(Sea.serialize())
+	Sea.deserialize(restored)
+	_check(JSON.stringify(Sea.serialize()) == sea_before, "sea gifts survive a save")
+	Clock.day_index = 0
+	Farm.reset()
+	Sea.reset()
+	Inventory.reset()
+	Skills.reset()
+
+
+func _check_eating(player: Player) -> void:
+	Inventory.reset()
+	Inventory.add("bread_rye", 2)
+	Inventory.add("fly_agaric", 1)
+	Inventory.select_hotbar(0)
+	player.energy = 100.0
+	player.health = 50.0
+	_check(player.eat_selected() == "bread_rye" and player.energy == 140.0 and player.health == 58.0,
+		"rye bread restores 40 energy and 8 health")
+	player.energy = Game.max_energy() - 5.0
+	player.eat_selected()
+	_check(player.energy == Game.max_energy(), "food never overfills energy")
+	Inventory.select_hotbar(1)
+	_check(player.eat_selected() == "" and Inventory.count_of("fly_agaric") == 1, "fly agaric is not food")
+	Inventory.reset()
+
+
 func _run() -> void:
 	Game.reset()
 	Game.world_seed = 42
@@ -294,6 +405,20 @@ func _run() -> void:
 	_check_storm()
 	_check_quality()
 	_check_shops()
+	_check_forage()
+	Router.current_map = "cape"
+	Router.spawn = Vector2(600, 360)
+	Game.player_state = {}
+	Sea.generate_gifts(0, false)
+	var cape: Node2D = load("res://scenes/world/cape.tscn").instantiate()
+	get_tree().root.add_child(cape)
+	get_tree().current_scene = cape
+	await get_tree().process_frame
+	var pickups: Pickups = cape.get_node_or_null("Pickups")
+	_check(pickups != null and pickups.get_child_count() == Sea.gifts["cape"].size(),
+		"the cape shows every gift of the morning")
+	_check_eating(cape.get_node("Player"))
+	cape.queue_free()
 	Farm.reset()
 	Inventory.reset()
 	print("M2 integration: %d failure(s)" % failures.size())

@@ -676,5 +676,266 @@
     "soil": {
       "flawless": 0.05
     }
+  },
+  {
+    "id": "red_kelp",
+    "name": "item.red_kelp.name",
+    "desc": "item.red_kelp.desc",
+    "category": "forage",
+    "price": 25,
+    "stack": 99
+  },
+  {
+    "id": "scallop_shell",
+    "name": "item.scallop_shell.name",
+    "desc": "item.scallop_shell.desc",
+    "category": "forage",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "sea_glass",
+    "name": "item.sea_glass.name",
+    "desc": "item.sea_glass.desc",
+    "category": "forage",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "cork_float",
+    "name": "item.cork_float.name",
+    "desc": "item.cork_float.desc",
+    "category": "forage",
+    "price": 10,
+    "stack": 99
+  },
+  {
+    "id": "pumice",
+    "name": "item.pumice.name",
+    "desc": "item.pumice.desc",
+    "category": "forage",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "trash",
+    "name": "item.trash.name",
+    "desc": "item.trash.desc",
+    "category": "trash",
+    "price": 0,
+    "stack": 99
+  },
+  {
+    "id": "amber",
+    "name": "item.amber.name",
+    "desc": "item.amber.desc",
+    "category": "forage",
+    "price": 150,
+    "stack": 99
+  },
+  {
+    "id": "morel",
+    "name": "item.morel.name",
+    "desc": "item.morel.desc",
+    "category": "forage",
+    "price": 70,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 12,
+      "health": 4
+    }
+  },
+  {
+    "id": "wild_garlic",
+    "name": "item.wild_garlic.name",
+    "desc": "item.wild_garlic.desc",
+    "category": "forage",
+    "price": 40,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 8,
+      "health": 2
+    }
+  },
+  {
+    "id": "sorrel",
+    "name": "item.sorrel.name",
+    "desc": "item.sorrel.desc",
+    "category": "forage",
+    "price": 30,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 6,
+      "health": 2
+    }
+  },
+  {
+    "id": "armeria",
+    "name": "item.armeria.name",
+    "desc": "item.armeria.desc",
+    "category": "forage",
+    "price": 30,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "cottongrass",
+    "name": "item.cottongrass.name",
+    "desc": "item.cottongrass.desc",
+    "category": "forage",
+    "price": 25,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "blueberry",
+    "name": "item.blueberry.name",
+    "desc": "item.blueberry.desc",
+    "category": "forage",
+    "price": 50,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 10,
+      "health": 3
+    }
+  },
+  {
+    "id": "cloudberry",
+    "name": "item.cloudberry.name",
+    "desc": "item.cloudberry.desc",
+    "category": "forage",
+    "price": 120,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 16,
+      "health": 5
+    }
+  },
+  {
+    "id": "heather",
+    "name": "item.heather.name",
+    "desc": "item.heather.desc",
+    "category": "forage",
+    "price": 25,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "birch_bolete",
+    "name": "item.birch_bolete.name",
+    "desc": "item.birch_bolete.desc",
+    "category": "forage",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 12,
+      "health": 4
+    }
+  },
+  {
+    "id": "beach_pea",
+    "name": "item.beach_pea.name",
+    "desc": "item.beach_pea.desc",
+    "category": "forage",
+    "price": 25,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 5,
+      "health": 1
+    }
+  },
+  {
+    "id": "lingonberry",
+    "name": "item.lingonberry.name",
+    "desc": "item.lingonberry.desc",
+    "category": "forage",
+    "price": 50,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 10,
+      "health": 3
+    }
+  },
+  {
+    "id": "cranberry",
+    "name": "item.cranberry.name",
+    "desc": "item.cranberry.desc",
+    "category": "forage",
+    "price": 45,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 8,
+      "health": 3
+    }
+  },
+  {
+    "id": "rosehip",
+    "name": "item.rosehip.name",
+    "desc": "item.rosehip.desc",
+    "category": "forage",
+    "price": 30,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "chanterelle",
+    "name": "item.chanterelle.name",
+    "desc": "item.chanterelle.desc",
+    "category": "forage",
+    "price": 80,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 14,
+      "health": 5
+    }
+  },
+  {
+    "id": "fly_agaric",
+    "name": "item.fly_agaric.name",
+    "desc": "item.fly_agaric.desc",
+    "category": "forage",
+    "price": 40,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "reindeer_moss",
+    "name": "item.reindeer_moss.name",
+    "desc": "item.reindeer_moss.desc",
+    "category": "forage",
+    "price": 20,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "oyster_mushroom",
+    "name": "item.oyster_mushroom.name",
+    "desc": "item.oyster_mushroom.desc",
+    "category": "forage",
+    "price": 60,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 12,
+      "health": 4
+    }
+  },
+  {
+    "id": "ice_crystal",
+    "name": "item.ice_crystal.name",
+    "desc": "item.ice_crystal.desc",
+    "category": "forage",
+    "price": 50,
+    "stack": 99
   }
 ]

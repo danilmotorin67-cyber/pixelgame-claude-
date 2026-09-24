@@ -173,3 +173,53 @@ quality.0,обычное,regular
 quality.1,хорошее,good
 quality.2,отличное,excellent
 quality.3,безупречное,flawless
+item.red_kelp.name,Красные водоросли,Red seaweed
+item.red_kelp.desc,Для пудинга Лив; собирается на отливе. Море красит их в цвет заката.,For Liv's pudding; gathered at low tide. The sea dyes it the colour of sunset.
+item.scallop_shell.name,Раковина гребешка,Scallop shell
+item.scallop_shell.desc,На известь и на продажу. Хозяин съехал без предупреждения.,For lime or for sale. The tenant moved out without notice.
+item.sea_glass.name,Морское стекло,Sea glass
+item.sea_glass.desc,"Для украшений и колец. Бутылка, которую море полировало сто лет.",For jewellery and rings. A bottle the sea polished for a century.
+item.cork_float.name,Пробковый поплавок,Cork float
+item.cork_float.desc,Для сетей и ламинарии. Чья-то сеть осталась без него.,For nets and kelp lines. Somebody's net is one float short.
+item.pumice.name,Пемза,Pumice
+item.pumice.desc,"Абразив для линз; приносят штормы. Камень, который умеет плавать.",Abrasive for lenses; storms bring it. A stone that learned to swim.
+item.trash.name,Мусор,Rubbish
+item.trash.desc,"Сдайте его морю обратно? Нет, лучше в ведро. Ранн оценит.","Give it back to the sea? No, the bin. Rann will notice."
+item.amber.name,Янтарь,Amber
+item.amber.desc,"Редкий дар после шторма. Смола, которая дождалась своего часа.",A rare gift after storms. Resin that waited for its moment.
+item.morel.name,Сморчок,Morel
+item.morel.desc,"Весенний гриб для жарки. Морщинистый, как старый лоцман.",A spring mushroom for frying. Wrinkled as an old pilot.
+item.wild_garlic.name,Черемша,Wild garlic
+item.wild_garlic.desc,Для похлёбок весной. Отгоняет вампиров и собеседников.,For spring stews. Repels vampires and conversation.
+item.sorrel.name,Щавель,Sorrel
+item.sorrel.desc,Кислый лист для супа. Пустошь тоже умеет быть щедрой.,A sour leaf for soup. Even the moor can be generous.
+item.armeria.name,Армерия,Sea thrift
+item.armeria.desc,"Розовый береговой цветок для букетов. Растёт там, где остальным солоно.",A pink shore flower for bouquets. Grows where others find it too salty.
+item.cottongrass.name,Пушица,Cottongrass
+item.cottongrass.desc,Болотный пух для букетов. Похожа на маленький туман на ножке.,Bog fluff for bouquets. A little fog on a stalk.
+item.blueberry.name,Черника,Blueberry
+item.blueberry.desc,"Для пирогов и вина. Язык синий, совесть чиста.","For pies and wine. Blue tongue, clear conscience."
+item.cloudberry.name,Морошка,Cloudberry
+item.cloudberry.desc,"Редкая болотная ягода для пирога. Золото, которое растёт в грязи.",A rare bog berry for pie. Gold that grows in mud.
+item.heather.name,Вереск,Heather
+item.heather.desc,Для чая и букетов. Пустошь в одном пучке.,For tea and bouquets. The whole moor in one bunch.
+item.birch_bolete.name,Подберёзовик,Birch bolete
+item.birch_bolete.desc,Летний гриб для похлёбки. Живёт под берёзой и не жалуется.,A summer mushroom for stew. Lives under a birch and never complains.
+item.beach_pea.name,Морской горошек,Beach pea
+item.beach_pea.desc,Дюнный горошек на гарнир. Дикий родственник огородного.,Dune peas for a side dish. The garden pea's wild cousin.
+item.lingonberry.name,Брусника,Lingonberry
+item.lingonberry.desc,"Для вина и варенья. Кислая, как осень.",For wine and jam. Sour as autumn.
+item.cranberry.name,Клюква,Cranberry
+item.cranberry.desc,Для морса. Болото тоже угощает.,For cordial. Even the bog treats its guests.
+item.rosehip.name,Шиповник,Rosehip
+item.rosehip.desc,"Для чая, что греет. Колется, но по-доброму.","For warming tea. Prickly, but kindly so."
+item.chanterelle.name,Лисичка,Chanterelle
+item.chanterelle.desc,"Осенний гриб для жарки. Рыжая, как лиса, и хитрее.",An autumn mushroom for frying. Orange as a fox and twice as clever.
+item.fly_agaric.name,Мухомор,Fly agaric
+item.fly_agaric.desc,Для зелий Хельги. Не ешьте. Даже на спор.,For Helga's potions. Do not eat it. Not even on a bet.
+item.reindeer_moss.name,Ягель,Reindeer moss
+item.reindeer_moss.desc,Зимний мох для зелий и корма. Олени бы одобрили.,Winter moss for potions and fodder. The reindeer would approve.
+item.oyster_mushroom.name,Вешенка,Oyster mushroom
+item.oyster_mushroom.desc,"Зимний гриб с берёз. Растёт, когда остальные спят.",A winter mushroom off the birches. Grows while the rest sleep.
+item.ice_crystal.name,Ледяной кристалл,Ice crystal
+item.ice_crystal.desc,Зимняя диковина со льда. Тает только в чужих руках.,A winter curiosity from the ice. Melts only in other hands.

@@ -82,6 +82,22 @@ func play_tool(kind: String, target: Vector2) -> void:
 	tool_art.queue_redraw()
 
 
+func max_health() -> float:
+	return float(Game.balance("health_max", 100)) + 5.0 * float(Skills.level("diving"))
+
+
+# Food restores energy and health (8.6); returns the eaten item id or "".
+func eat_selected() -> String:
+	var index := Inventory.selected_hotbar
+	var id := str(Inventory.slots[index]["id"])
+	var edible: Dictionary = Data.by_id("items", id).get("edible", {})
+	if edible.is_empty() or not Inventory.take_slot(index, 1):
+		return ""
+	energy = minf(energy + float(edible.get("energy", 0)), Game.max_energy())
+	health = minf(health + float(edible.get("health", 0)), max_health())
+	return id
+
+
 func is_tired() -> bool:
 	return energy <= Game.max_energy() * float(Game.balance("fatigue_share", 0.15))
 
@@ -120,6 +136,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:
 		_dodge_t = 0.18
 		velocity = facing * dodge_speed
+	if event.is_action_pressed("quick_eat"):
+		var eaten := eat_selected()
+		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+		if hint:
+			hint.text = ("Съедено: %s" % Loc.t(str(Data.by_id("items", eaten)["name"]))) if eaten != "" \
+				else "Это не едят. Даже на спор."
 	if event.is_action_pressed("lantern"):
 		lantern_on = not lantern_on
 	if event.is_action_pressed("interact"):
