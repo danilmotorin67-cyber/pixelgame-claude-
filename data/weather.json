@@ -1,0 +1,20 @@
+[
+  {
+    "id": "clear"
+  },
+  {
+    "id": "cloud"
+  },
+  {
+    "id": "rain"
+  },
+  {
+    "id": "storm"
+  },
+  {
+    "id": "fog"
+  },
+  {
+    "id": "snow"
+  }
+]

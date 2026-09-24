@@ -1,0 +1,14 @@
+[
+  {
+    "id": "zone1",
+    "boat": "skiff"
+  },
+  {
+    "id": "zone2",
+    "boat": "sailboat"
+  },
+  {
+    "id": "zone3",
+    "boat": "boat"
+  }
+]

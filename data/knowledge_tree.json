@@ -1,0 +1,58 @@
+{
+  "nodes": [
+    {
+      "id": "M1",
+      "branch": "lighthouse",
+      "cost": {
+        "sea": 0
+      },
+      "requires": [],
+      "unlocks": []
+    },
+    {
+      "id": "P1",
+      "branch": "graveyard",
+      "cost": {
+        "rest": 0
+      },
+      "requires": [],
+      "unlocks": []
+    },
+    {
+      "id": "Z1",
+      "branch": "land",
+      "cost": {
+        "land": 0
+      },
+      "requires": [],
+      "unlocks": []
+    },
+    {
+      "id": "S1",
+      "branch": "sea",
+      "cost": {
+        "sea": 0
+      },
+      "requires": [],
+      "unlocks": []
+    },
+    {
+      "id": "R1",
+      "branch": "craft",
+      "cost": {
+        "land": 0
+      },
+      "requires": [],
+      "unlocks": []
+    },
+    {
+      "id": "T1",
+      "branch": "secret",
+      "cost": {
+        "rest": 0
+      },
+      "requires": [],
+      "unlocks": []
+    }
+  ]
+}

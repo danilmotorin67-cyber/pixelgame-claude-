@@ -1,0 +1,19 @@
+# Godot import cache and editor state
+.godot/
+.import/
+
+# Local editor and operating system files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Python helper cache
+__pycache__/
+*.py[cod]
+.venv/
+
+# Exported builds
+/build/
+/dist/
+/saltlight-cape.png

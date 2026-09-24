@@ -1,0 +1,229 @@
+[
+  {
+    "id": "npc_fortuna",
+    "romance": false,
+    "home": {
+      "map": "cape",
+      "tile": [
+        44,
+        20
+      ]
+    }
+  },
+  {
+    "id": "npc_sigrid",
+    "romance": true,
+    "birthday": {
+      "season": "winter",
+      "day": 3
+    },
+    "home": {
+      "map": "village",
+      "tile": [
+        20,
+        22
+      ]
+    },
+    "gifts": {
+      "love": [
+        "black_pearl",
+        "ink_squid",
+        "dark_ale",
+        "coffee",
+        "bouquet_heather"
+      ]
+    }
+  },
+  {
+    "id": "npc_liv",
+    "romance": true,
+    "birthday": {
+      "season": "summer",
+      "day": 5
+    }
+  },
+  {
+    "id": "npc_hedda",
+    "romance": true,
+    "birthday": {
+      "season": "autumn",
+      "day": 21
+    }
+  },
+  {
+    "id": "npc_ingrid",
+    "romance": true,
+    "birthday": {
+      "season": "spring",
+      "day": 18
+    }
+  },
+  {
+    "id": "npc_einar",
+    "romance": true,
+    "birthday": {
+      "season": "summer",
+      "day": 20
+    }
+  },
+  {
+    "id": "npc_knud",
+    "romance": true,
+    "birthday": {
+      "season": "spring",
+      "day": 7
+    }
+  },
+  {
+    "id": "npc_magnus",
+    "romance": true,
+    "birthday": {
+      "season": "winter",
+      "day": 16
+    }
+  },
+  {
+    "id": "npc_olaf",
+    "romance": true,
+    "birthday": {
+      "season": "spring",
+      "day": 26
+    }
+  },
+  {
+    "id": "npc_tuve",
+    "romance": true,
+    "birthday": {
+      "season": "winter",
+      "day": 15
+    }
+  },
+  {
+    "id": "npc_halvdan",
+    "romance": false,
+    "birthday": {
+      "season": "autumn",
+      "day": 9
+    }
+  },
+  {
+    "id": "npc_stern",
+    "romance": false
+  },
+  {
+    "id": "npc_tora",
+    "romance": false,
+    "birthday": {
+      "season": "summer",
+      "day": 14
+    }
+  },
+  {
+    "id": "npc_ilm",
+    "romance": false,
+    "birthday": {
+      "season": "autumn",
+      "day": 3
+    }
+  },
+  {
+    "id": "npc_karl",
+    "romance": false,
+    "birthday": {
+      "season": "winter",
+      "day": 20
+    }
+  },
+  {
+    "id": "npc_solveig",
+    "romance": false,
+    "birthday": {
+      "season": "spring",
+      "day": 11
+    }
+  },
+  {
+    "id": "npc_bjorn",
+    "romance": false,
+    "birthday": {
+      "season": "summer",
+      "day": 27
+    }
+  },
+  {
+    "id": "npc_margit",
+    "romance": false,
+    "birthday": {
+      "season": "spring",
+      "day": 3
+    }
+  },
+  {
+    "id": "npc_benedict",
+    "romance": false,
+    "birthday": {
+      "season": "autumn",
+      "day": 13
+    }
+  },
+  {
+    "id": "npc_helga",
+    "romance": false,
+    "birthday": {
+      "season": "autumn",
+      "day": 1
+    }
+  },
+  {
+    "id": "npc_erland",
+    "romance": false,
+    "birthday": {
+      "season": "summer",
+      "day": 2
+    }
+  },
+  {
+    "id": "npc_kai",
+    "romance": false,
+    "birthday": {
+      "season": "winter",
+      "day": 5
+    }
+  },
+  {
+    "id": "npc_nils",
+    "romance": false,
+    "birthday": {
+      "season": "summer",
+      "day": 17
+    }
+  },
+  {
+    "id": "npc_freya",
+    "romance": false,
+    "birthday": {
+      "season": "summer",
+      "day": 17
+    }
+  },
+  {
+    "id": "npc_palm",
+    "romance": false
+  },
+  {
+    "id": "npc_nut",
+    "romance": false
+  },
+  {
+    "id": "npc_rud",
+    "romance": false
+  },
+  {
+    "id": "npc_sandro",
+    "romance": false
+  },
+  {
+    "id": "npc_grump",
+    "romance": false
+  }
+]

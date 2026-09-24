@@ -1,0 +1,25 @@
+[
+  {
+    "id": "body_lars_ek",
+    "story": true,
+    "arrive": {
+      "date": "y1.spring.2",
+      "beach": "cape"
+    },
+    "clues_visible": [
+      "tattoo_anchor_LE",
+      "belt_whaling_co"
+    ],
+    "clues_hidden": [
+      "scar_left_hand"
+    ],
+    "whisper": {
+      "text": "body.lars.whisper",
+      "false": false
+    },
+    "items": [
+      "knife_initials_LE"
+    ],
+    "registry": "reg_lars_ek"
+  }
+]

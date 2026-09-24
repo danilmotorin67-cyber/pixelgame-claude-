@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/cape.gd" id="1_world"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/world/region_terrain.gd" id="3_terrain"]
+[ext_resource type="Script" path="res://scripts/world/daylight.gd" id="4_daylight"]
+[ext_resource type="Script" path="res://scripts/world/weather_fx.gd" id="5_weather"]
+[ext_resource type="PackedScene" path="res://scenes/ui/world_hud.tscn" id="6_hud"]
+
+[node name="IslandRegion" type="Node2D"]
+script = ExtResource("1_world")
+map_id = ""
+y_sort_enabled = true
+
+[node name="Terrain" type="Node2D" parent="."]
+script = ExtResource("3_terrain")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(600, 360)
+
+[node name="Daylight" type="CanvasModulate" parent="."]
+script = ExtResource("4_daylight")
+
+[node name="WeatherFX" type="Node2D" parent="."]
+script = ExtResource("5_weather")
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[connection signal="text_submitted" from="HUD/Console" to="." method="_on_console_submitted"]
+[connection signal="pressed" from="HUD/MorningPanel/MorningOk" to="." method="_on_morning_ok"]

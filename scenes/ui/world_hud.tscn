@@ -1,0 +1,209 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/world_hud.gd" id="1_hud"]
+[ext_resource type="Script" path="res://scripts/ui/compass_hud.gd" id="2_compass"]
+[ext_resource type="Script" path="res://scripts/ui/hotbar_hud.gd" id="3_hotbar"]
+[ext_resource type="Script" path="res://scripts/ui/energy_hud.gd" id="4_energy"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0.105882, 0.168627, 0.235294, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.690196, 0.560784, 0.423529, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hint"]
+bg_color = Color(0.0745098, 0.109804, 0.152941, 0.88)
+border_width_bottom = 1
+border_color = Color(0.435294, 0.690196, 0.701961, 1)
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_hud")
+
+[node name="TimePanel" type="Panel" parent="."]
+offset_left = 314.0
+offset_top = 4.0
+offset_right = 476.0
+offset_bottom = 26.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="TimeLabel" type="Label" parent="TimePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 10
+theme_override_colors/font_color = Color(1, 0.913725, 0.658824, 1)
+text = "Пн, Весна 1  17:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TidePanel" type="Panel" parent="."]
+offset_left = 314.0
+offset_top = 28.0
+offset_right = 476.0
+offset_bottom = 49.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="TideLabel" type="Label" parent="TidePanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(0.811765, 0.901961, 0.886275, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WeatherLabel" type="Label" parent="."]
+offset_left = 318.0
+offset_top = 50.0
+offset_right = 476.0
+offset_bottom = 63.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.811765, 0.901961, 0.886275, 1)
+horizontal_alignment = 1
+theme_override_styles/normal = SubResource("StyleBoxFlat_hint")
+
+[node name="Compass" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 219.0
+offset_bottom = 38.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+script = ExtResource("2_compass")
+
+[node name="CompassLabel" type="Label" parent="Compass"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(0.913725, 0.862745, 0.737255, 1)
+text = "Свет 0  Покой 0  Море 20"
+vertical_alignment = 1
+
+[node name="MoneyLabel" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 40.0
+offset_right = 100.0
+offset_bottom = 58.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 9
+theme_override_colors/font_color = Color(1, 0.784314, 0.352941, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hint")
+text = "  500 кр"
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 4.0
+offset_top = 62.0
+offset_right = 224.0
+offset_bottom = 92.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(0.87451, 0.913725, 0.917647, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hint")
+text = "WASD · E · ЛКМ · Tab"
+autowrap_mode = 2
+vertical_alignment = 1
+
+[node name="HotbarLabel" type="Label" parent="."]
+offset_left = 92.0
+offset_top = 217.0
+offset_right = 388.0
+offset_bottom = 232.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 8
+theme_override_colors/font_color = Color(1, 0.913725, 0.658824, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_hint")
+text = "1 · Пусто"
+horizontal_alignment = 1
+
+[node name="Hotbar" type="Control" parent="."]
+offset_left = 90.0
+offset_top = 235.0
+offset_right = 390.0
+offset_bottom = 263.0
+script = ExtResource("3_hotbar")
+
+[node name="EnergyBar" type="Control" parent="."]
+offset_left = 453.0
+offset_top = 199.0
+offset_right = 475.0
+offset_bottom = 264.0
+mouse_filter = 2
+script = ExtResource("4_energy")
+
+[node name="InventoryPanel" type="Panel" parent="."]
+visible = false
+offset_left = 55.0
+offset_top = 40.0
+offset_right = 425.0
+offset_bottom = 215.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="InventoryTitle" type="Label" parent="InventoryPanel"]
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 356.0
+offset_bottom = 27.0
+theme_override_font_sizes/font_size = 13
+text = "Рюкзак · Tab закрыть · 1–0 выбрать предмет"
+
+[node name="InventoryScroll" type="ScrollContainer" parent="InventoryPanel"]
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 358.0
+offset_bottom = 162.0
+
+[node name="InventoryList" type="Label" parent="InventoryPanel/InventoryScroll"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Рюкзак пуст."
+
+[node name="MorningPanel" type="Panel" parent="."]
+visible = false
+offset_left = 80.0
+offset_top = 65.0
+offset_right = 400.0
+offset_bottom = 185.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="MorningText" type="Label" parent="MorningPanel"]
+offset_left = 14.0
+offset_top = 14.0
+offset_right = 306.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 12
+text = "Ночной отчёт смотрителя"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MorningOk" type="Button" parent="MorningPanel"]
+offset_left = 114.0
+offset_top = 83.0
+offset_right = 206.0
+offset_bottom = 109.0
+text = "Начать день"
+
+[node name="Console" type="LineEdit" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 220.0
+offset_right = 320.0
+offset_bottom = 244.0
+placeholder_text = "time 19:30"
+
+[node name="ConsoleOut" type="Label" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 200.0
+offset_right = 320.0
+offset_bottom = 218.0
+theme_override_font_sizes/font_size = 10
+text = ""

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "fish_cod",
+    "where": [
+      "coast",
+      "pier",
+      "sea_z1",
+      "sea_z2"
+    ],
+    "seasons": [
+      "spring",
+      "autumn",
+      "winter"
+    ],
+    "hours": [
+      6,
+      20
+    ],
+    "weather": "any",
+    "tide": "any",
+    "difficulty": 35,
+    "behavior": "calm",
+    "size_cm": [
+      30,
+      90
+    ]
+  }
+]

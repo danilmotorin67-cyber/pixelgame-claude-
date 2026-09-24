@@ -1,0 +1,172 @@
+[
+  {
+    "id": "seed_turnip",
+    "name": "item.seed_turnip.name",
+    "desc": "item.seed_turnip.desc",
+    "category": "seed",
+    "price": 5,
+    "stack": 99
+  },
+  {
+    "id": "turnip",
+    "name": "item.turnip.name",
+    "desc": "item.turnip.desc",
+    "category": "crop",
+    "price": 20,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 16,
+      "health": 4
+    }
+  },
+  {
+    "id": "bread_rye",
+    "name": "item.bread_rye.name",
+    "desc": "item.bread_rye.desc",
+    "category": "food",
+    "price": 25,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 8
+    }
+  },
+  {
+    "id": "tea",
+    "name": "item.tea.name",
+    "desc": "item.tea.desc",
+    "category": "food",
+    "price": 15,
+    "stack": 20,
+    "edible": {
+      "energy": 12,
+      "health": 2
+    }
+  },
+  {
+    "id": "tool_hoe",
+    "name": "item.tool_hoe.name",
+    "desc": "item.tool_hoe.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tool_can",
+    "name": "item.tool_can.name",
+    "desc": "item.tool_can.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tool_pick",
+    "name": "item.tool_pick.name",
+    "desc": "item.tool_pick.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tool_axe",
+    "name": "item.tool_axe.name",
+    "desc": "item.tool_axe.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tool_shovel",
+    "name": "item.tool_shovel.name",
+    "desc": "item.tool_shovel.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "lantern_tin",
+    "name": "item.lantern_tin.name",
+    "desc": "item.lantern_tin.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "oar",
+    "name": "item.oar.name",
+    "desc": "item.oar.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fish_oil",
+    "name": "item.fish_oil.name",
+    "desc": "item.fish_oil.desc",
+    "category": "fuel",
+    "price": 40,
+    "stack": 20
+  },
+  {
+    "id": "kelp",
+    "name": "item.kelp.name",
+    "desc": "item.kelp.desc",
+    "category": "forage",
+    "price": 8,
+    "stack": 99,
+    "tags": [
+      "seaweed"
+    ]
+  },
+  {
+    "id": "driftwood",
+    "name": "item.driftwood.name",
+    "desc": "item.driftwood.desc",
+    "category": "material",
+    "price": 6,
+    "stack": 99
+  },
+  {
+    "id": "resin",
+    "name": "item.resin.name",
+    "desc": "item.resin.desc",
+    "category": "material",
+    "price": 40,
+    "stack": 50
+  },
+  {
+    "id": "canvas",
+    "name": "item.canvas.name",
+    "desc": "item.canvas.desc",
+    "category": "material",
+    "price": 30,
+    "stack": 50
+  },
+  {
+    "id": "thread",
+    "name": "item.thread.name",
+    "desc": "item.thread.desc",
+    "category": "material",
+    "price": 8,
+    "stack": 99
+  },
+  {
+    "id": "fish_cod",
+    "name": "item.fish_cod.name",
+    "desc": "item.fish_cod.desc",
+    "category": "fish",
+    "price": 90,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 30,
+      "health": 10
+    },
+    "tags": [
+      "fish",
+      "sea",
+      "coastal"
+    ]
+  }
+]

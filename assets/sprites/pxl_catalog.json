@@ -1,0 +1,14 @@
+[
+  {
+    "name": "hero_walk",
+    "file": "assets/sprites/hero_walk.png",
+    "meta": {
+      "name": "hero_walk",
+      "size": "16x32",
+      "frames": "16",
+      "fps": "8",
+      "origin": "8,31",
+      "palette": "saltlight48"
+    }
+  }
+]

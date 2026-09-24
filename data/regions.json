@@ -1,0 +1,108 @@
+{
+  "village": {
+    "title": "Сольвик",
+    "size": [80, 60],
+    "biome": "village",
+    "coast_row": 48,
+    "landmarks": [
+      {"title": "Лоцманская управа", "at": [29, 14], "size": [9, 5], "kind": "hall"},
+      {"title": "Лавка Бергов", "at": [12, 23], "size": [7, 5], "kind": "house"},
+      {"title": "Кузня Торы", "at": [52, 16], "size": [7, 5], "kind": "smith"},
+      {"title": "Сухой Утопленник", "at": [45, 33], "size": [10, 5], "kind": "tavern"},
+      {"title": "Часовня Эльма", "at": [14, 35], "size": [7, 7], "kind": "chapel"},
+      {"title": "Торговый дом Грима", "at": [61, 35], "size": [9, 5], "kind": "hall"},
+      {"title": "Гильдейский дом", "at": [8, 8], "size": [8, 5], "kind": "ruin"},
+      {"title": "Доктор Фальк", "at": [60, 8], "size": [7, 5], "kind": "house"},
+      {"title": "Лавка Эрланда", "at": [9, 43], "size": [7, 4], "kind": "house"},
+      {"title": "Гробы и колыбели", "at": [22, 34], "size": [7, 4], "kind": "house"}
+    ],
+    "exits": [
+      {"at": [77, 30], "to": "cape", "spawn": [3, 30], "label": "Вороний мыс"},
+      {"at": [35, 3], "to": "moor", "spawn": [35, 56], "label": "Вересковая пустошь"},
+      {"at": [40, 44], "to": "lagoon", "spawn": [25, 3], "label": "Тихая заводь"}
+    ]
+  },
+  "moor": {
+    "title": "Вересковая пустошь",
+    "size": [70, 60],
+    "biome": "moor",
+    "landmarks": [
+      {"title": "Хижина Хельги", "at": [10, 11], "size": [7, 5], "kind": "house"},
+      {"title": "Девять Дев", "at": [26, 17], "size": [9, 9], "kind": "stones"},
+      {"title": "Вересковое озеро", "at": [44, 28], "size": [15, 10], "kind": "lake"},
+      {"title": "Старая мельница", "at": [51, 44], "size": [7, 6], "kind": "ruin"},
+      {"title": "Торфяник", "at": [12, 43], "size": [12, 7], "kind": "bog"}
+    ],
+    "exits": [
+      {"at": [35, 56], "to": "village", "spawn": [35, 3], "label": "Сольвик"},
+      {"at": [3, 30], "to": "birch", "spawn": [46, 20], "label": "Берёзовая лощина"},
+      {"at": [35, 3], "to": "bird_cliffs", "spawn": [20, 46], "label": "Птичий утёс", "bridge": true}
+    ]
+  },
+  "birch": {
+    "title": "Берёзовая лощина",
+    "size": [50, 40],
+    "biome": "birch",
+    "landmarks": [
+      {"title": "Мельничный ручей", "at": [12, 3], "size": [5, 33], "kind": "stream"},
+      {"title": "Берёзовая поляна", "at": [29, 12], "size": [9, 7], "kind": "clearing"}
+    ],
+    "exits": [
+      {"at": [46, 20], "to": "moor", "spawn": [3, 30], "label": "Вересковая пустошь"},
+      {"at": [25, 36], "to": "seal_shore", "spawn": [30, 3], "label": "Тюлений берег"}
+    ]
+  },
+  "seal_shore": {
+    "title": "Тюлений берег",
+    "size": [70, 40],
+    "biome": "beach",
+    "coast_row": 28,
+    "landmarks": [
+      {"title": "Вход в Гроты Отлива", "at": [48, 8], "size": [8, 5], "kind": "cave"},
+      {"title": "Тюлений камень", "at": [55, 33], "size": [5, 3], "kind": "stones"}
+    ],
+    "exits": [
+      {"at": [30, 3], "to": "birch", "spawn": [25, 36], "label": "Берёзовая лощина"},
+      {"at": [3, 18], "to": "wreck_bay", "spawn": [56, 18], "label": "Бухта Разбитых Кораблей", "day": 4}
+    ]
+  },
+  "wreck_bay": {
+    "title": "Бухта Разбитых Кораблей",
+    "size": [60, 40],
+    "biome": "beach",
+    "coast_row": 28,
+    "landmarks": [
+      {"title": "Остовы кораблей", "at": [11, 26], "size": [13, 7], "kind": "wreck"},
+      {"title": "Площадка у бухты", "at": [33, 11], "size": [12, 8], "kind": "clearing"}
+    ],
+    "exits": [
+      {"at": [56, 18], "to": "seal_shore", "spawn": [3, 18], "label": "Тюлений берег"}
+    ]
+  },
+  "bird_cliffs": {
+    "title": "Птичий утёс",
+    "size": [40, 50],
+    "biome": "cliffs",
+    "landmarks": [
+      {"title": "Гнёзда гаг", "at": [8, 10], "size": [10, 7], "kind": "nests"},
+      {"title": "Спуск у скал", "at": [24, 19], "size": [8, 12], "kind": "cliff"},
+      {"title": "Птичья площадка", "at": [9, 33], "size": [12, 7], "kind": "clearing"}
+    ],
+    "exits": [
+      {"at": [20, 46], "to": "moor", "spawn": [35, 3], "label": "Вересковая пустошь"}
+    ]
+  },
+  "lagoon": {
+    "title": "Тихая заводь",
+    "size": [50, 40],
+    "biome": "lagoon",
+    "coast_row": 28,
+    "landmarks": [
+      {"title": "Тростниковый берег", "at": [8, 20], "size": [9, 7], "kind": "reeds"},
+      {"title": "Старая пристань", "at": [31, 25], "size": [10, 5], "kind": "pier"}
+    ],
+    "exits": [
+      {"at": [25, 3], "to": "village", "spawn": [40, 44], "label": "Сольвик"}
+    ]
+  }
+}

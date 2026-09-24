@@ -1,0 +1,37 @@
+name: Godot checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate game data
+        run: python3 tools/validate_data.py
+      - name: Download Godot 4.4.1
+        run: |
+          curl -fL --retry 3 -o godot.zip \
+            https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip
+          unzip -q godot.zip
+          mv Godot_v4.4.1-stable_linux.x86_64 godot
+          chmod +x godot
+      - name: Import and parse project
+        run: |
+          ./godot --headless --editor --path . --import --quit 2>&1 | tee godot-import.log
+          if grep -E 'SCRIPT ERROR:|ERROR:' godot-import.log; then
+            exit 1
+          fi
+      - name: Test game systems and regions
+        run: |
+          ./godot --headless --path . res://tests/integration/test_m1.tscn 2>&1 | tee godot-test.log
+          if grep -E 'SCRIPT ERROR:|ERROR:' godot-test.log; then
+            exit 1
+          fi

@@ -1,0 +1,19 @@
+[
+  {
+    "id": "crop_turnip",
+    "seed": "seed_turnip",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "turnip",
+    "giant": true
+  }
+]

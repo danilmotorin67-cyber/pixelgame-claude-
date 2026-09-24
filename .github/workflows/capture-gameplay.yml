@@ -1,0 +1,65 @@
+name: Capture gameplay screenshot
+
+on:
+  push:
+    paths:
+      - tests/screenshots/**
+      - scenes/world/cape.tscn
+      - autoload/lighthouse.gd
+      - scripts/objects/lighthouse_station.gd
+      - scenes/actors/player.tscn
+      - scripts/actors/**
+      - assets/sprites/**
+      - assets_src/sprites/**
+      - scripts/world/cape_ground_art.gd
+      - scripts/world/lighthouse_art.gd
+      - scripts/world/house_art.gd
+      - scripts/world/garden.gd
+      - scenes/ui/world_hud.tscn
+      - scripts/ui/**
+      - scripts/world/cape.gd
+      - scripts/world/tide_shore.gd
+      - .github/workflows/capture-gameplay.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download Godot 4.4.1
+        run: |
+          curl -fL --retry 3 -o godot.zip \
+            https://github.com/godotengine/godot/releases/download/4.4.1-stable/Godot_v4.4.1-stable_linux.x86_64.zip
+          unzip -q godot.zip
+          mv Godot_v4.4.1-stable_linux.x86_64 godot
+          chmod +x godot
+      - name: Import project
+        run: ./godot --headless --editor --path . --import --quit
+      - name: Render cape
+        run: |
+          if ! command -v xvfb-run; then
+            sudo apt-get update -qq
+            sudo apt-get install -y xvfb
+          fi
+          LIBGL_ALWAYS_SOFTWARE=1 xvfb-run -a -s '-screen 0 1920x1080x24' \
+            ./godot --path . res://tests/screenshots/cape_capture.tscn
+          test -s saltlight-cape.png
+          test -s saltlight-action.png
+          test -s saltlight-shore-low.png
+          test -s saltlight-shore-high.png
+          test -s saltlight-lighthouse.png
+          file saltlight-cape.png
+      - uses: actions/upload-artifact@v4
+        with:
+          name: saltlight-cape
+          path: |
+            saltlight-cape.png
+            saltlight-action.png
+            saltlight-shore-low.png
+            saltlight-shore-high.png
+            saltlight-lighthouse.png

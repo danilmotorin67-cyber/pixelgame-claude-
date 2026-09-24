@@ -1,0 +1,55 @@
+keys,ru,en
+game.title,Солёный свет,Saltlight
+game.subtitle,Хроники смотрителя маяка,Chronicles of the lighthouse keeper
+game.slogan,Свет — живым. Покой — мёртвым. Море своё возьмёт.,Light for the living. Rest for the dead. The sea takes its due.
+ui.new_game,Новая игра,New Game
+ui.quit,Выход,Quit
+ui.pause,Пауза,Pause
+item.seed_turnip.name,Семена репы,Turnip seeds
+item.seed_turnip.desc,Первые семена с корзины Грима.,First seeds from Grim's basket.
+item.turnip.name,Репа,Turnip
+item.turnip.desc,Растёт даже в соли. Жалуется на это.,Grows even in salt. Complains about it.
+item.bread_rye.name,Ржаной хлеб,Rye bread
+item.bread_rye.desc,Сухой. Честный. Не утонет.,Dry. Honest. Will not drown.
+item.tea.name,Чай,Tea
+item.tea.desc,Тёплый. Как будто кто-то дома.,Warm. As if someone is home.
+item.tool_hoe.name,Мотыга,Hoe
+item.tool_hoe.desc,Ржавая. Копает.,Rusty. Digs.
+item.tool_can.name,Лейка,Watering can
+item.tool_can.desc,Дырявить не рекомендуется.,Do not puncture.
+item.tool_pick.name,Кирка,Pickaxe
+item.tool_pick.desc,Для камня и упрямства.,For stone and stubbornness.
+item.tool_axe.name,Топор,Axe
+item.tool_axe.desc,Плавник тоже дерево. Почти.,Driftwood is wood. Almost.
+item.tool_shovel.name,Лопата,Shovel
+item.tool_shovel.desc,Копает в обе стороны.,Digs both ways.
+item.lantern_tin.name,Жестяной фонарь,Tin lantern
+item.lantern_tin.desc,Светит ровно настолько.,Shines just enough.
+item.oar.name,Весло,Oar
+item.oar.desc,И ход. И аргумент.,Propulsion. And an argument.
+item.fish_oil.name,Рыбий жир,Fish oil
+item.fish_oil.desc,Горит ярко. Пахнет честно.,Burns bright. Smells honest.
+item.kelp.name,Водоросли,Kelp
+item.kelp.desc,"Море отдаёт то, что выросло на нём.","The sea returns what grew on it."
+item.driftwood.name,Плавник,Driftwood
+item.driftwood.desc,Дерево с биографией.,Wood with a biography.
+item.resin.name,Смола,Resin
+item.resin.desc,Держит лодки и обещания.,Holds boats and promises.
+item.canvas.name,Парусина,Canvas
+item.canvas.desc,Для парусов и саванов.,For sails and shrouds.
+item.thread.name,Нитки,Thread
+item.thread.desc,Последний стежок — через нос.,Last stitch through the nose.
+item.fish_cod.name,Треска,Cod
+item.fish_cod.desc,Остров стоит на ней.,The island stands on it.
+q.p2.title,Первый огонь,First fire
+q.p2.s1,Зажечь лампу маяка,Light the lighthouse lamp
+q.q1_1.title,Море возвращает,The sea returns
+q.q1_1.s1,Отнести тело в покойницкую,Carry the body to the morgue
+q.q1_1.s2,Осмотреть тело,Examine the body
+q.q1_1.s3,Похоронить,Bury
+body.lars.whisper,Якорь на руке. Буквы Л.Э.,Anchor on the arm. Letters L.E.
+npc.fortuna.greet.generic,Ну наконец-то.,At last.
+npc.hedda.greet.generic,Я не боюсь моря. Это море меня побаивается.,I am not afraid of the sea. The sea is wary of me.
+npc.pet_cat.name,Фитиль,Wick
+ship.gull.name,Чайка,Seagull
+ship.queen.name,Королева Кронвальда,Queen of Kronwald

@@ -1,0 +1,173 @@
+[gd_scene load_steps=20 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/cape.gd" id="1_cape"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/world/tide_shore.gd" id="3_shore"]
+[ext_resource type="Script" path="res://scripts/world/daylight.gd" id="4_daylight"]
+[ext_resource type="Script" path="res://scripts/world/weather_fx.gd" id="5_weather"]
+[ext_resource type="Script" path="res://scripts/objects/bed.gd" id="6_bed"]
+
+[ext_resource type="PackedScene" path="res://scenes/ui/world_hud.tscn" id="7_hud"]
+[ext_resource type="Script" path="res://scripts/world/region_exit.gd" id="8_exit"]
+[ext_resource type="Script" path="res://scripts/world/garden.gd" id="9_garden"]
+[ext_resource type="Script" path="res://scripts/world/cape_ground_art.gd" id="10_ground_art"]
+[ext_resource type="Script" path="res://scripts/world/lighthouse_art.gd" id="11_lighthouse_art"]
+[ext_resource type="Script" path="res://scripts/world/house_art.gd" id="12_house_art"]
+[ext_resource type="Script" path="res://scripts/objects/lighthouse_station.gd" id="13_station"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wall"]
+size = Vector2(1440, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deep"]
+size = Vector2(1440, 160)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bed"]
+size = Vector2(28, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lighthouse"]
+size = Vector2(26, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_side"]
+size = Vector2(16, 1120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_exit"]
+size = Vector2(36, 36)
+
+[node name="Cape" type="Node2D"]
+script = ExtResource("1_cape")
+y_sort_enabled = true
+
+[node name="Ground" type="ColorRect" parent="."]
+visible = false
+offset_right = 1440.0
+offset_bottom = 1120.0
+color = Color(0.419608, 0.431373, 0.462745, 1)
+
+[node name="Grass" type="ColorRect" parent="."]
+visible = false
+offset_left = 80.0
+offset_top = 80.0
+offset_right = 1280.0
+offset_bottom = 880.0
+color = Color(0.305882, 0.431373, 0.227451, 1)
+
+[node name="GroundArt" type="Node2D" parent="."]
+z_index = -2
+script = ExtResource("10_ground_art")
+
+[node name="Sea" type="ColorRect" parent="."]
+offset_left = 0.0
+offset_top = 960.0
+offset_right = 1440.0
+offset_bottom = 1120.0
+color = Color(0.141176, 0.25098, 0.352941, 1)
+
+[node name="TideShore" type="Node2D" parent="."]
+script = ExtResource("3_shore")
+
+[node name="Lighthouse" type="Node2D" parent="."]
+position = Vector2(724, 264)
+script = ExtResource("11_lighthouse_art")
+
+[node name="LighthouseStation" type="Area2D" parent="."]
+position = Vector2(724, 255)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("13_station")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LighthouseStation"]
+shape = SubResource("RectangleShape2D_lighthouse")
+
+[node name="LighthouseStripe" type="ColorRect" parent="."]
+visible = false
+offset_left = 700.0
+offset_top = 160.0
+offset_right = 748.0
+offset_bottom = 176.0
+color = Color(0.607843, 0.184314, 0.164706, 1)
+
+[node name="House" type="Node2D" parent="."]
+position = Vector2(600, 336)
+script = ExtResource("12_house_art")
+
+[node name="Bed" type="Area2D" parent="."]
+position = Vector2(600, 313)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("6_bed")
+
+[node name="Blanket" type="ColorRect" parent="Bed"]
+visible = false
+offset_left = -14.0
+offset_top = -9.0
+offset_right = 14.0
+offset_bottom = 9.0
+color = Color(0.509804, 0.639216, 0.611765, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bed"]
+shape = SubResource("RectangleShape2D_bed")
+
+[node name="WorldBounds" type="StaticBody2D" parent="."]
+collision_layer = 1
+
+[node name="Top" type="CollisionShape2D" parent="WorldBounds"]
+position = Vector2(720, 8)
+shape = SubResource("RectangleShape2D_wall")
+
+[node name="DeepSea" type="CollisionShape2D" parent="WorldBounds"]
+position = Vector2(720, 1040)
+shape = SubResource("RectangleShape2D_deep")
+
+[node name="Left" type="CollisionShape2D" parent="WorldBounds"]
+position = Vector2(8, 560)
+shape = SubResource("RectangleShape2D_side")
+
+[node name="Right" type="CollisionShape2D" parent="WorldBounds"]
+position = Vector2(1432, 560)
+shape = SubResource("RectangleShape2D_side")
+
+[node name="ToVillage" type="Area2D" parent="."]
+position = Vector2(48, 488)
+collision_layer = 8
+collision_mask = 0
+script = ExtResource("8_exit")
+destination = "village"
+arrival = Vector2(1224, 488)
+display_name = "Сольвик"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ToVillage"]
+shape = SubResource("RectangleShape2D_exit")
+
+[node name="Sign" type="ColorRect" parent="ToVillage"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(0.85098, 0.721569, 0.458824, 1)
+mouse_filter = 2
+
+[node name="Name" type="Label" parent="ToVillage"]
+offset_left = -16.0
+offset_top = -30.0
+offset_right = 70.0
+offset_bottom = -10.0
+theme_override_font_sizes/font_size = 9
+text = "Сольвик"
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(600, 360)
+
+[node name="Garden" type="Node2D" parent="."]
+position = Vector2(672, 304)
+script = ExtResource("9_garden")
+
+[node name="Daylight" type="CanvasModulate" parent="."]
+script = ExtResource("4_daylight")
+
+[node name="WeatherFX" type="Node2D" parent="."]
+script = ExtResource("5_weather")
+
+[node name="HUD" parent="." instance=ExtResource("7_hud")]
+
+[connection signal="text_submitted" from="HUD/Console" to="." method="_on_console_submitted"]
+[connection signal="pressed" from="HUD/MorningPanel/MorningOk" to="." method="_on_morning_ok"]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "kelp",
+    "levels": [
+      1,
+      20
+    ]
+  },
+  {
+    "id": "old_solvick",
+    "levels": [
+      21,
+      40
+    ]
+  },
+  {
+    "id": "bone_abyss",
+    "levels": [
+      41,
+      60
+    ]
+  }
+]

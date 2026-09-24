@@ -1,0 +1,8 @@
+[
+  {
+    "id": "ach_first_fire",
+    "hidden": false,
+    "condition": "stat('lamp_lit') >= 1",
+    "icon": "ach_first_fire"
+  }
+]

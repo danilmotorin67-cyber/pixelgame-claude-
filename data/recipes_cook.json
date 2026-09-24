@@ -1,0 +1,17 @@
+[
+  {
+    "id": "cook_keeper_soup",
+    "name": "recipe.keeper_soup.name",
+    "in": [
+      [
+        "fish_cod",
+        1
+      ],
+      [
+        "turnip",
+        1
+      ]
+    ],
+    "out": "soup_keeper"
+  }
+]

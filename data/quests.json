@@ -1,0 +1,69 @@
+[
+  {
+    "id": "p2_first_fire",
+    "type": "main",
+    "title": "q.p2.title",
+    "start": "day_index == 0 and hour >= 19",
+    "steps": [
+      {
+        "id": "light",
+        "text": "q.p2.s1",
+        "on": "lamp_lit"
+      }
+    ],
+    "rewards": [
+      [
+        "xp",
+        "keeping",
+        10
+      ],
+      [
+        "points",
+        "sea",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "q1_1_sea_returns",
+    "type": "main",
+    "title": "q.q1_1.title",
+    "start": "day_index == 1 and hour >= 6",
+    "steps": [
+      {
+        "id": "carry",
+        "text": "q.q1_1.s1",
+        "on": "body_moved",
+        "arg": "body_lars_ek"
+      },
+      {
+        "id": "examine",
+        "text": "q.q1_1.s2",
+        "on": "body_examined",
+        "arg": "body_lars_ek"
+      },
+      {
+        "id": "bury",
+        "text": "q.q1_1.s3",
+        "on": "body_buried",
+        "arg": "body_lars_ek"
+      }
+    ],
+    "rewards": [
+      [
+        "mail",
+        "letter_directorate_burial_pay"
+      ],
+      [
+        "points",
+        "rest",
+        3
+      ],
+      [
+        "xp",
+        "keeping",
+        25
+      ]
+    ]
+  }
+]

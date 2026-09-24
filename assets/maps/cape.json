@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "w": 90,
+    "h": 70,
+    "tileset": "island"
+  },
+  "layers": {
+    "ground": [],
+    "water": [],
+    "detail": [],
+    "overhead": [],
+    "collision": [],
+    "tide_z": []
+  },
+  "objects": [
+    {
+      "raw": "spawn 37 22"
+    },
+    {
+      "raw": "door lighthouse 44 12"
+    },
+    {
+      "raw": "door house 35 20"
+    },
+    {
+      "raw": "transition village 2 30"
+    }
+  ]
+}
