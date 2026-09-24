@@ -3737,3 +3737,151 @@ ev.erland8.c02,Хедда нас утопит.,Hedda will sink us.
 ev.erland8.l03,"Ха! Значит, договорились. Готовь руки, юнга. Грести будешь ты. Командовать — я. Как на флоте.","Ha! Then it's agreed. Get your arms ready, {boy|lass}. You row. I command. Like in the navy."
 ev.erland10.l01,Садись на край причала. Ноги свесь. Смотри на огонь. Твой огонь.,Sit on the edge of the jetty. Let your legs hang. Look at the light. Your light.
 ev.erland10.l02,Пятьдесят лет я смотрел на этот огонь и думал о ней. Теперь смотрю — и думаю: хорошие руки держат. Спокойно.,Fifty years I looked at that light and thought of her. Now I look — and think: good hands are holding it. I'm at peace.
+npc.kai.spring.01,"Уходи! Огни не для тебя! …Ты с керосином? Тогда стой. Нет, уходи. Керосин оставь.","Go away! The fires aren't for you! …You've brought kerosene? Then stay. No, go. Leave the kerosene."
+npc.kai.spring.02,Весна. Чайки вьют гнёзда в моём фонаре. Фонарь не горит тридцать лет. Чайкам тепло.,Spring. Gulls nest in my lantern. The lantern's been dark thirty years. The gulls are warm.
+npc.kai.spring.03,Море говорит: весной — считай. Я считаю. Корабли. Огни. Мёртвых. Всё сходится. Всё не сходится.,The sea says: in spring — count. I count. Ships. Lights. The dead. It all adds up. It doesn't add up.
+npc.kai.spring.04,Ты зажигаешь её огонь. Она просила. Я слышал. Двадцать лет назад. Или вчера. Время — вода.,You light her fire. She asked. I heard. Twenty years ago. Or yesterday. Time is water.
+npc.kai.spring.05,"Не подходи к колоколу! Он звонит, когда кто-то тонет. Он молчит — значит, пока никто.",Don't touch the bell! It rings when someone's drowning. It's silent — so no one is. Yet.
+npc.kai.spring.06,Мёртвый Огонь — не мёртвый. Он спит. Как я. Мы оба ждём.,The Dead Fire isn't dead. It's sleeping. Like me. We're both waiting.
+npc.kai.spring.07,Ракеты у меня сигнальные. Двенадцать. Одна — для последней ночи. Какой — не скажу.,I've signal flares. Twelve. One's for the last night. Which night — I won't say.
+npc.kai.spring.08,Ветер весной врёт. Говорит — тепло. Тепла нет. Есть только ветер.,The spring wind lies. Says it's warm. There's no warmth. Only wind.
+npc.kai.spring.09,"Я ем рыбу, которую выносит море. Море кормит меня. Я не благодарю. Оно знает почему.",I eat the fish the sea throws up. The sea feeds me. I don't thank it. It knows why.
+npc.kai.spring.10,Уходи до темноты. В темноте здесь другие гости. Не ко мне. К огню.,Leave before dark. After dark there are other guests here. Not for me. For the fire.
+npc.kai.summer.01,Лето. Солнце не садится. Ложным огням нечего делать. Хорошее время. Короткое.,Summer. The sun won't set. False fires have nothing to do. A good season. A short one.
+npc.kai.summer.02,"Тюлени приплывают погреться на мои камни. Они знают то же, что я. Молчат лучше.",Seals come to warm themselves on my rocks. They know what I know. They keep quiet better.
+npc.kai.summer.03,Грог? Ты привёз грог? Садись. На камень. Не на тот — тот помнит.,Grog? You brought grog? Sit down. On the rock. Not that one — that one remembers.
+npc.kai.summer.04,Лив приплывала. Спрашивала про туман. Я сказал: спроси туман. Она спросила. Он не ответил. Мне понравилась Лив.,Liv came by boat. Asked about the fog. I said: ask the fog. She asked. It didn't answer. I liked Liv.
+npc.kai.summer.05,Летом Зубы видны целиком. Зубы. Рот. Чей рот? Не спрашивай.,In summer the Teeth show whole. Teeth. A mouth. Whose mouth? Don't ask.
+npc.kai.summer.06,Я пишу на стенах. Даты. Огни. Корабли. Стены помнят лучше людей.,I write on the walls. Dates. Fires. Ships. Walls remember better than people.
+npc.kai.summer.07,Ты {загорел|загорела}. Солнце любит смотрителей. Недолго.,You've tanned. The sun loves keepers. Not for long.
+npc.kai.summer.08,Летом я почти нормальный. Почти. Спроси зимой.,In summer I'm almost normal. Almost. Ask me in winter.
+npc.kai.summer.09,Чайки кричат: «Кай! Кай!» Нет. Это просто чайки. Они не знают моего имени. Никто не знает.,The gulls cry: 'Kai! Kai!' No. They're just gulls. They don't know my name. Nobody does.
+npc.kai.summer.10,Плыви обратно до тумана. Туман летом редкий. Злой.,Row back before the fog. Summer fog is rare. And vicious.
+npc.kai.autumn.01,Осень. Ясные ночи. Я не сплю. Смотрю на Зубы. Жду.,Autumn. Clear nights. I don't sleep. I watch the Teeth. I wait.
+npc.kai.autumn.02,"Сорок лет назад, осенью, «Фортуна». Двадцать лет назад, осенью, — она. Осень — время долгов.","Forty years ago, in autumn, the Fortuna. Twenty years ago, in autumn — her. Autumn is the season of debts."
+npc.kai.autumn.03,Шторм — это хорошо. В шторм никто не зажигает ложных огней. Шторм честный.,A storm is good. In a storm no one lights false fires. A storm is honest.
+npc.kai.autumn.04,"Керосин. Мне нужен керосин. Не для огня! Для… для памяти. Горит — значит, помню.","Kerosene. I need kerosene. Not for the fire! For… for memory. While it burns, I remember."
+npc.kai.autumn.05,Листьев здесь нет. Деревьев нет. Есть камни. Камни не опадают. Я тоже.,No leaves here. No trees. There are stones. Stones don't fall. Neither do I.
+npc.kai.autumn.06,Ночь Утопленников. Я зажигаю одну свечу. За неё. На маяке не видно. Она видит.,Drowned Night. I light one candle. For her. It can't be seen from the lighthouse. She can see it.
+npc.kai.autumn.07,Ты {смелый|смелая}. Или {глупый|глупая}. На Мёртвый Огонь приплывают только эти двое.,You're brave. Or foolish. Only those two ever come to the Dead Fire.
+npc.kai.autumn.08,Сельдь идёт мимо. Не ко мне. Ко мне ничего не идёт. Кроме тебя. Странно.,The herring go past. Not to me. Nothing comes to me. Except you. Strange.
+npc.kai.autumn.09,Я видел лодку ночью. Двое. Большие. С фонарём. Я выстрелил ракетой. Они ушли. Вернутся.,I saw a boat at night. Two men. Big ones. With a lantern. I fired a flare. They left. They'll be back.
+npc.kai.autumn.10,Осенью море пахнет железом. Как кровь. Не бойся. Это просто море.,In autumn the sea smells of iron. Like blood. Don't be afraid. It's just the sea.
+npc.kai.winter.01,Зима. Лёд вокруг острова. Ко мне не доплыть. Хорошо. Одиночество зимой — честное.,Winter. Ice round the island. No one can reach me. Good. Loneliness in winter is honest.
+npc.kai.winter.02,"Мой день рождения — зимой. Я не праздную. Праздновать — значит помнить, сколько прожил. Слишком много.",My birthday's in winter. I don't celebrate. Celebrating means remembering how long you've lived. Too long.
+npc.kai.winter.03,Сияние. Оно отражается в разбитой линзе. Мёртвый Огонь светится. Зелёным. Раз в год.,The aurora. It's reflected in the broken lens. The Dead Fire glows. Green. Once a year.
+npc.kai.winter.04,Холодно. Я жгу плавник. Мало. Керосин кончился. Ты привёз? Нет? Зачем приплыл?,Cold. I burn driftwood. Not enough. The kerosene's run out. You brought some? No? Then why did you come?
+npc.kai.winter.05,Долгая ночь. Самая длинная. Ложные огни любят длинные ночи. Держи свой.,The long night. The longest. False fires love long nights. Keep yours burning.
+npc.kai.winter.06,Зимой я разговариваю с ней. Она не отвечает. Раньше тоже не отвечала. Только приказывала.,In winter I talk to her. She doesn't answer. She didn't before either. Only gave orders.
+npc.kai.winter.07,Снег на фонаре. Как седина. Мы оба седые. Я и огонь.,Snow on the lantern. Like grey hair. We're both grey. The fire and I.
+npc.kai.winter.08,Ты {замёрз|замёрзла}. Садись к огню. Маленькому. Большой — не зажигаю. Не могу. Боюсь.,You're frozen. Sit by the fire. The small one. The big one I don't light. Can't. I'm afraid.
+npc.kai.winter.09,Метель. Слышишь? Колокол. Нет. Это ветер. Нет. Колокол.,Blizzard. Hear that? The bell. No. It's the wind. No. The bell.
+npc.kai.winter.10,Весна придёт — ты приплывёшь? Приплыви. С керосином. Без — тоже можно. Но с керосином лучше.,When spring comes — will you row out? Do. With kerosene. Without's all right too. But with is better.
+npc.kai.weather.rain.01,Дождь. Стены плачут. Пусть. Кто-то должен.,Rain. The walls are weeping. Let them. Someone has to.
+npc.kai.weather.rain.02,Дождь смывает мои записи со стен. Я пишу заново. Каждый раз. Помню всё.,Rain washes my writing off the walls. I write it again. Every time. I remember everything.
+npc.kai.weather.storm.01,Шторм! Хорошо! В шторм они не зажигают! Шторм — мой друг!,Storm! Good! They don't light in a storm! The storm's my friend!
+npc.kai.weather.storm.02,"Держи огонь, смотритель. Держи. Я не удержал. Ты — держи.","Keep the light, keeper. Keep it. I didn't. You — keep it."
+npc.kai.weather.fog.01,Туман. Девочка плачет у моих камней. Каждый туман. Я даю ей сухарь. Она не берёт.,Fog. A girl weeps by my rocks. Every fog. I give her a biscuit. She doesn't take it.
+npc.kai.weather.fog.02,В тумане не плыви ко мне. Не найдёшь. Или найдёшь не меня.,Don't row to me in fog. You won't find me. Or you'll find someone who isn't me.
+npc.kai.weather.snow.01,"Снег. Белый. Как страницы, которые я не написал.",Snow. White. Like the pages I never wrote.
+npc.kai.weather.cloud.01,Облака низкие. Небо думает. Не мешай ему.,Low clouds. The sky's thinking. Don't disturb it.
+npc.kai.festival.drowned_night.01,Ночь Утопленников. Одна свеча. За неё. За всех остальных — море свечей не хватит.,Drowned Night. One candle. For her. For all the rest — the sea hasn't enough candles.
+npc.kai.festival.drowned_night.02,"В эту ночь они приходят к Мёртвому Огню. Спрашивают, почему он не горит. Я отвечаю. Они не верят.",On this night they come to the Dead Fire. Ask why it doesn't burn. I answer. They don't believe me.
+npc.kai.festival.long_night.01,Долгая ночь. Я не сплю. Никогда не сплю в эту ночь. Считаю огни. На Зубах — ни одного. Хорошо.,The Long Night. I don't sleep. Never sleep this night. Counting lights. Not one on the Teeth. Good.
+npc.kai.festival.regatta.01,Регата. Я видел с камней паруса. Много. Красиво. Все вернулись? Сосчитай.,The regatta. I saw the sails from my rocks. Many. Beautiful. Did they all come back? Count them.
+npc.kai.festival.01,Праздник? У вас там. Здесь — нет. Здесь всегда будни.,A holiday? Over there. Not here. Here it's always an ordinary day.
+npc.kai.festival.02,Люди поют. Я слышу через воду. Плохо поют. Но живые.,People are singing. I hear it across the water. They sing badly. But they're alive.
+npc.kai.gift.love.01,Керосин! Настоящий! Ты… ты понимаешь. Никто не понимал. Ты понимаешь.,Kerosene! The real thing! You… you understand. Nobody ever understood. You understand.
+npc.kai.gift.love.02,Грог. Тёплый. Она тоже приносила грог. По пятницам. Спасибо.,Grog. Warm. She used to bring grog too. On Fridays. Thank you.
+npc.kai.gift.like.01,Рыба. Хорошо. Я съем. Или отдам тюленям. Решу потом.,Fish. Good. I'll eat it. Or give it to the seals. I'll decide later.
+npc.kai.gift.like.02,Спасибо. Ром. Для храбрости. Мне нужна храбрость. Много.,Thanks. Rum. For courage. I need courage. Lots.
+npc.kai.gift.neutral.01,Что это? Зачем? Ладно. Положу к остальному. У меня много «зачем».,What's this? Why? All right. I'll put it with the rest. I have lots of 'why'.
+npc.kai.gift.neutral.02,Хм. Спасибо. Наверное.,Hm. Thank you. I suppose.
+npc.kai.gift.dislike.01,Цветы? Здесь? Они умрут. Всё здесь умирает. Кроме меня.,Flowers? Here? They'll die. Everything here dies. Except me.
+npc.kai.gift.dislike.02,Не надо. Мне ничего не надо. Кроме керосина.,Don't. I need nothing. Except kerosene.
+npc.kai.gift.hate.01,Уходи! С этим — уходи!,Go away! With that — go away!
+npc.kai.gift.hate.02,Нет. Нет-нет-нет. Убери. Сейчас.,No. No no no. Take it away. Now.
+npc.kai.birthday.01,Мне пятьдесят один. Я помню каждый год. Двадцать из них — здесь. Один.,I'm fifty-one. I remember every year. Twenty of them — here. Alone.
+npc.kai.birthday.02,День рождения? Кто сказал? Олаф. Олаф всё знает. Даже про меня. Страшный человек.,Birthday? Who told you? Olaf. Olaf knows everything. Even about me. A frightening man.
+npc.kai.birthday_gift.01,Подарок. Мне. В день… Ты помнишь? Она помнила. Больше никто.,A present. For me. On the day… You remember? She did. Nobody else.
+npc.kai.birthday_gift.02,Спасибо. Я… не умею благодарить. Разучился. Спасибо.,Thank you. I… don't know how to thank people. Forgot how. Thank you.
+npc.kai.act1.01,Новый огонь на мысу. Я видел. Первую ночь горел криво. Потом — ровно. Ты учишься. Она тоже училась.,A new light on the cape. I saw it. The first night it burned crooked. Then — straight. You're learning. She learned too.
+npc.kai.act1.02,Двадцать восьмое весны. Смотри на Зубы. Я буду смотреть тоже. Мы оба ничего не сможем. Но увидим.,The twenty-eighth of spring. Watch the Teeth. I'll watch too. Neither of us can do anything. But we'll see.
+npc.kai.act1.03,"Ты — её кровь. Я вижу по тому, как ты держишь весло. Она держала так же.",You're her blood. I can tell by how you hold an oar. She held it the same way.
+npc.kai.act1.04,"Не верь тому, что говорят утопленники в первую ночь. Не верь мне тоже. Верь огню.",Don't trust what the drowned say on the first night. Don't trust me either. Trust the fire.
+npc.kai.act1.05,Грим? Не произноси это имя здесь. Камни слышат. Камни рассказывают морю.,Grim? Don't say that name here. The stones hear. The stones tell the sea.
+npc.kai.act1.06,Весна кончается. Корабли пойдут. Огни зажгутся. Не все — твои.,Spring's ending. Ships will come. Lights will be lit. Not all of them yours.
+npc.kai.act2.01,"Ты {приплыл|приплыла} на шлюпке. Значит, Эрланд тебе доверяет. Эрланд — трус. Как я. Но честный трус.",You came in a sloop. So Erland trusts you. Erland's a coward. Like me. But an honest coward.
+npc.kai.act2.02,"Я видел, как её лодку разбили. Я видел, кто. Нет. Я не видел. Уходи. …Возьми страницу. Её страницу.",I saw her boat wrecked. I saw who did it. No. I didn't see. Go away. …Take the page. Her page.
+npc.kai.act2.03,Белая Хмарь. Девочка сидела у меня на камне всю ночь. Плакала. Я плакал с ней. Нас было двое.,The White Fog. The girl sat on my rock all night. Weeping. I wept with her. There were two of us.
+npc.kai.act2.04,Двадцать в гротах. «Фортуна». Её огонь тоже был ложный. Сорок лет назад. Тот же фонарь. Тот же род.,Twenty in the grottoes. The Fortuna. Her light was false too. Forty years ago. The same lantern. The same family.
+npc.kai.act2.05,Хельга рассказывает сказы. В них правда. Без имён. Имена знаю я. Не скажу. Пока.,Helga tells tales. There's truth in them. Without names. I know the names. I won't say. Not yet.
+npc.kai.act2.06,Большая Хмарь придёт на деревню. Не на меня. Меня она знает. Я — её.,The Great Fog will come to the village. Not to me. It knows me. I know it.
+npc.kai.act3.01,Крипта под Мёртвым Огнём. Там кусок камня. Уговора. Я охраняю его двадцать лет. От себя в основном.,The crypt under the Dead Fire. There's a piece of stone there. Of the Pact. I've guarded it twenty years. Mostly from myself.
+npc.kai.act3.02,Ты хочешь вниз? В Глубь? Она там. Держит дверь. Не открывай раньше времени. Она устанет.,You want to go down? Into the Deep? She's there. Holding the door. Don't open it too soon. She'll tire.
+npc.kai.act3.03,Нут и Руд. Большие. Руд — плакал однажды на камнях. После. Нут — никогда.,"Nut and Rud. The big ones. Rud cried once, on the rocks. Afterwards. Nut — never."
+npc.kai.act3.04,Я был её помощником. Я носил керосин. В ту ночь я не пришёл. Я боялся. Она ушла одна.,I was her assistant. I carried the kerosene. That night I didn't come. I was afraid. She went alone.
+npc.kai.act3.05,"Если пойдёшь на Зубы — возьми меня. Я знаю, где они прячут фонарь. Я знаю двадцать лет.",If you go to the Teeth — take me. I know where they hide the lantern. I've known for twenty years.
+npc.kai.act3.06,"Улики? Мои стены — улики. Даты, огни, корабли. Перепиши. Я разрешаю.","Evidence? My walls are evidence. Dates, fires, ships. Copy them. I give you leave."
+npc.kai.act4.01,В ночь Прилива я погашу огонь на Зубах. Сам. Если не вернусь — это правильно. Я опоздал на двадцать лет.,On Tide Night I'll put out the fire on the Teeth. Myself. If I don't come back — that's right. I'm twenty years late.
+npc.kai.act4.02,"Двенадцатая ракета — для этой ночи. Когда увидишь зелёный огонь над Зубами — значит, я там.",The twelfth flare is for this night. When you see a green light over the Teeth — that means I'm there.
+npc.kai.act4.03,Она ждёт тебя внизу. Не меня. Тебя. Я это давно понял. Не обидно. Почти.,She's waiting for you down below. Not me. You. I understood that long ago. It doesn't hurt. Almost.
+npc.kai.act4.04,Я опоздал на сорок лет. На двадцать. На одну ночь. Сегодня — не опоздаю.,I was forty years late. Twenty. One night. Tonight — I won't be.
+npc.kai.act4.05,"Держи огонь, смотритель. Я держу свой. Маленький. Внутри.","Keep the light, keeper. I'll keep mine. A small one. Inside."
+npc.kai.act4.06,После — зажгу Мёртвый Огонь. По-настоящему. Для кораблей. Для неё.,Afterwards — I'll light the Dead Fire. For real. For the ships. For her.
+npc.kai.married_other.01,Ты {женился|вышла замуж}. Неважно. Важно — не одна душа. Две. Две сильнее.,You married. It doesn't matter how. What matters — not one soul. Two. Two are stronger.
+npc.kai.married_other.02,Я видел свадьбу с камней. Огни в деревне. Хорошие огни. Правильные.,I saw the wedding from my rocks. Lights in the village. Good lights. The right kind.
+npc.kai.married_other.03,Она бы порадовалась. Агата. Она всегда говорила: «Огонь держат двое».,She'd have been glad. Agatha. She always said: 'It takes two to keep a fire.'
+npc.kai.married_other.04,Приплывайте вдвоём. С керосином. Я расскажу про неё. Вам обоим.,Row out together. With kerosene. I'll tell you about her. Both of you.
+npc.kai.married_other.05,Не расставайтесь. Я расстался. С огнём. С ней. С собой. Не надо.,Don't part. I parted. With the fire. With her. With myself. Don't.
+npc.kai.event.wreck.01,Опять. Я видел огонь на Зубах. Выстрелил ракетой. Корабль не увидел. Или увидел поздно.,Again. I saw the fire on the Teeth. Fired a flare. The ship didn't see. Or saw too late.
+npc.kai.event.wreck.02,Одиннадцать ракет осталось. Одиннадцать. Я считаю каждую.,Eleven flares left. Eleven. I count every one.
+npc.kai.event.wreck.03,Лодка ушла от Зубов на рассвете. Двое. Большие. Запиши. Запиши!,A boat left the Teeth at dawn. Two men. Big ones. Write it down. Write it down!
+npc.kai.event.wreck.04,Похорони их. Я не могу. Я только считаю.,Bury them. I can't. I only count.
+npc.kai.event.wreck.05,Море плачет. Не оно виновато. Скажи ему. Меня оно не слушает.,The sea weeps. It's not to blame. Tell it that. It won't listen to me.
+npc.kai.event.funeral.01,"{Похоронил|Похоронила}? Хорошо. Земля — это там, куда море не дотянется. Почти.",Buried? Good. Earth is where the sea can't reach. Almost.
+npc.kai.event.funeral.02,Я видел свечу на твоём погосте. С камней. Одна свеча — один человек. Правильно.,I saw a candle in your graveyard. From my rocks. One candle — one person. Right.
+npc.kai.event.funeral.03,"Её не похоронили. Море не отдало. Может, и хорошо. Она там нужнее.",She wasn't buried. The sea didn't give her back. Perhaps that's for the best. She's needed more down there.
+npc.kai.event.funeral.04,Ты хоронишь чужих. Она хоронила. Я — нет. Я только смотрел.,You bury strangers. She did too. I didn't. I only watched.
+npc.kai.event.funeral.05,Ещё один не ходит в тумане. Хорошо. Туман редеет.,One less walking in the fog. Good. The fog's thinning.
+npc.kai.event.hmar.01,Ночь Хмари. Девочка сидела у меня. Спросила: «Где мама?» Я не знал. Я никогда не знаю.,Fog Night. The girl sat with me. Asked: 'Where's Mummy?' I didn't know. I never know.
+npc.kai.event.hmar.02,Утопцы поднялись на мои камни. Спрашивали про огонь. Я показал на твой. Они пошли туда.,The drowned climbed onto my rocks. Asked about the fire. I pointed to yours. They went that way.
+npc.kai.event.hmar.03,Твой луч дотянулся до Мёртвого Огня. В первый раз. Линза засветилась. Я плакал.,Your beam reached the Dead Fire. For the first time. The lens lit up. I wept.
+npc.kai.event.hmar.04,Туман шептал её имя. Агата. Агата. Я закрыл уши. Не помогло. Никогда не помогает.,The fog whispered her name. Agatha. Agatha. I covered my ears. It didn't help. It never helps.
+npc.kai.event.hmar.05,Хмарь — это ребёнок. Грустный. Брошенный. Как я. Только я — старый.,The Fog is a child. Sad. Abandoned. Like me. Only I'm old.
+npc.kai.event.inspection.01,"Пальм. Он приплывал ко мне однажды. Спросил, почему не горит огонь. Я спросил, почему горят чужие. Он записал.",Palm. He rowed out to me once. Asked why the fire doesn't burn. I asked why other people's do. He wrote it down.
+npc.kai.event.inspection.02,{Сдал|Сдала}? Хорошо. Она всегда сдавала. Её огонь был самый ровный. Твой — почти.,Passed? Good. She always passed. Her light was the steadiest. Yours — nearly.
+npc.kai.event.inspection.03,Бумаги не спасают кораблей. Огонь спасает. Помни.,Papers don't save ships. Fire does. Remember.
+npc.kai.event.inspection.04,Инспекция… Когда-то проверяли и Мёртвый Огонь. Тридцать лет назад. Потом перестали. Забыли. Как меня.,Inspections… Once they inspected the Dead Fire too. Thirty years ago. Then stopped. Forgot. Like me.
+npc.kai.event.inspection.05,Инспектор боится моих камней. Правильно. Камни помнят.,The inspector is afraid of my rocks. Rightly. The rocks remember.
+npc.kai.event.wedding.01,Свадьба. Я видел огни. Много. Весёлые. Я не был. Меня не звали. Правильно не звали.,A wedding. I saw the lights. Many. Merry ones. I wasn't there. Wasn't invited. Rightly so.
+npc.kai.event.wedding.02,Две души — один огонь. Держите. Не гасите. Я погасил свой.,Two souls — one fire. Keep it. Don't let it go out. I let mine go out.
+npc.kai.event.wedding.03,Я выпил грог. Один. За вас. Здесь. Тюлени смотрели. Тоже рады.,I drank grog. Alone. To you both. Here. The seals watched. They're glad too.
+npc.kai.event.wedding.04,Она бы пришла на свадьбу. Стояла бы у двери. Не улыбалась бы. Но пришла.,She'd have come to the wedding. Stood by the door. Wouldn't smile. But she'd come.
+npc.kai.event.wedding.05,Живите. Долго. Честно. Остальное неважно.,Live. Long. Honestly. Nothing else matters.
+npc.kai.event.villains.01,"Грим… Кончено? Кончено. Я двадцать лет ждал. Я не знаю, что делать без ожидания.",Grim… It's over? It's over. I waited twenty years. I don't know what to do without waiting.
+npc.kai.event.villains.02,Двенадцатая ракета. Я выпущу её сегодня. Просто так. На радость.,The twelfth flare. I'll fire it today. Just because. For joy.
+npc.kai.event.villains.03,"Я расскажу Пальму всё. Всё, что видел. Всё, что боялся сказать. Двадцать лет. Выдержит ли бумага?",I'll tell Palm everything. Everything I saw. Everything I was afraid to say. Twenty years. Will the paper hold?
+npc.kai.event.villains.04,Мёртвый Огонь зажгу. Настоящий. Пусть корабли видят два огня. Твой и мой.,I'll light the Dead Fire. A real one. Let the ships see two lights. Yours and mine.
+npc.kai.event.villains.05,Спасибо. Я не умею… Спасибо. Она бы сказала лучше. Она всегда говорила лучше.,Thank you. I don't know how to… Thank you. She'd have said it better. She always did.
+ev.kai2.l01,Ты опять {приплыл|приплыла}. С керосином. Третий раз. Я считаю.,You've come again. With kerosene. The third time. I'm counting.
+ev.kai2.l02,"Я видел, как её лодку разбили. Я видел, кто. Нет. Я не видел. Уходи.",I saw her boat wrecked. I saw who did it. No. I didn't see. Go away.
+ev.kai2.l03,…Возьми. Страница. Её почерк. Она оставила мне. Я не читал. Читал. Уходи.,…Take this. A page. Her handwriting. She left it with me. I didn't read it. I did. Go away.
+ev.kai4.l01,Загадка. Слушай. Море даёт рыбу — что берёт? Огонь даёт свет — что берёт? Человек даёт слово — что берёт?,A riddle. Listen. The sea gives fish — what does it take? The fire gives light — what does it take? A man gives his word — what does he take?
+ev.kai4.c01,Честность.,Honesty.
+ev.kai4.c02,Жизнь.,Life.
+ev.kai4.c03,Не знаю.,I don't know.
+ev.kai4.l02,Честность. Да. Это Уговор. Три слова из двенадцати. Остальные — у Хельги. И на камне.,Honesty. Yes. That's the Pact. Three words of twelve. The rest are with Helga. And on the stone.
+ev.kai4.l03,"Жизнь — это цена, если обманешь. Почти правильно. Думай ещё.",Life is the price if you cheat. Nearly right. Think again.
+ev.kai4.l04,Никто не знает. Я знал. Забыл. Вспоминаю по ночам.,Nobody knows. I knew. I forgot. I remember at night.
+ev.kai6.l01,Пойдём. Вниз. В крипту. Я не открывал её двадцать лет. Ключ — у меня на шее. Всегда был.,Come. Down. Into the crypt. I haven't opened it in twenty years. The key's round my neck. Always has been.
+ev.kai6.l02,(Под руинами — низкий каменный зал. На алтаре лежит обломок чёрного камня с резными знаками. Он тёплый.),(Beneath the ruins — a low stone hall. On the altar lies a fragment of black stone carved with signs. It's warm.)
+ev.kai6.l03,"Первый кусок Камня Уговора. Она велела: «Отдай тому, кто зажжёт огонь». Ты {зажёг|зажгла}. Бери.",The first piece of the Stone of the Pact. She said: 'Give it to whoever lights the fire.' You lit it. Take it.
+ev.kai8.l01,Садись. Я скажу. Один раз. В ту ночь я не пришёл. Я должен был везти керосин. Я испугался тумана.,Sit down. I'll say it. Once. That night I didn't come. I was supposed to bring the kerosene. I was afraid of the fog.
+ev.kai8.l02,"Я видел с камней: лодка Скау, фонарь, её ялик идёт на огонь. Потом — треск. Потом — тишина. Потом Нут засмеялся.","I saw from the rocks: the Skaus' boat, the lantern, her dinghy heading for the light. Then — a crack. Then — silence. Then Nut laughed."
+ev.kai8.l03,Двадцать лет я слышу этот смех. Теперь ты тоже слышишь. Прости.,Twenty years I've heard that laugh. Now you hear it too. Forgive me.
+ev.kai8.c01,"Ты не виноват, Кай. Виноваты они.","It's not your fault, Kai. It's theirs."
+ev.kai8.c02,Ты расскажешь это Пальму?,Will you tell Palm this?
+ev.kai10.l01,Смотри.,Look.
+ev.kai10.l02,"(Кай подносит лампу к старой линзе Мёртвого Огня. На миг над морем встаёт второй луч — ровный, честный, зелёный от патины.)","(Kai raises a lamp to the old lens of the Dead Fire. For a moment a second beam rises over the sea — steady, honest, green with patina.)"
+ev.kai10.l03,Для неё. Одну минуту. Больше — не могу. Пока. Но одну — могу.,For her. One minute. More — I can't. Yet. But one — I can.

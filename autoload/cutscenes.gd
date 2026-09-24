@@ -43,8 +43,8 @@ func find(id: String) -> Dictionary:
 	return {}
 
 
-# Whether a scene may start here and now.
-func ready_to_play(e: Dictionary, map_id: String) -> bool:
+# Whether a scene may start here and now ("near": [spot, tiles] needs the hero close by, when known).
+func ready_to_play(e: Dictionary, map_id: String, hero: Vector2 = Vector2(-1, -1)) -> bool:
 	if seen.has(str(e["id"])):
 		return false
 	var trigger: Dictionary = e.get("trigger", {})
@@ -57,14 +57,19 @@ func ready_to_play(e: Dictionary, map_id: String) -> bool:
 			return false
 	if trigger.has("present") and not NPCs.on_map(map_id).has(str(trigger["present"])):
 		return false
+	if trigger.has("near") and hero.x >= 0.0:
+		var near: Array = trigger["near"]
+		var at: Vector2i = MapInfo.spot(map_id, str(near[0])) if not (near[0] is Array) else Vector2i(int(near[0][0]), int(near[0][1]))
+		if hero.distance_to(Vector2(at.x * 16 + 8, at.y * 16 + 8)) > float(near[1]) * 16.0:
+			return false
 	return ConditionContext.check(str(trigger.get("when", "")))
 
 
-func pending(map_id: String) -> String:
+func pending(map_id: String, hero: Vector2 = Vector2(-1, -1)) -> String:
 	var ordered := all()
 	ordered.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return int(a.get("hearts", 0)) < int(b.get("hearts", 0)))
 	for e in ordered:
-		if not bool(e.get("manual", false)) and ready_to_play(e, map_id):
+		if not bool(e.get("manual", false)) and ready_to_play(e, map_id, hero):
 			return str(e["id"])
 	return ""
 
@@ -77,7 +82,7 @@ func check() -> void:
 		return
 	if DialogueBox.is_open(scene.get_node("HUD")):
 		return
-	var id := pending(Router.current_map)
+	var id := pending(Router.current_map, (scene.get_node("Player") as Node2D).global_position)
 	if id != "":
 		play(id)
 

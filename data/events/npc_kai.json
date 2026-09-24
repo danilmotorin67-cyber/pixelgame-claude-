@@ -1,0 +1,369 @@
+{
+ "events": [
+  {
+   "id": "ev_kai_2",
+   "npc": "npc_kai",
+   "hearts": 2,
+   "trigger": {
+    "map": "sea",
+    "hours": [
+     8,
+     20
+    ],
+    "when": "hearts('npc_kai') >= 2",
+    "near": [
+     [
+      24,
+      76
+     ],
+     10
+    ]
+   },
+   "script": [
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai2.l01"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "sad",
+     "ev.kai2.l02"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai2.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "page_7"
+      ],
+      [
+       "flag",
+       "kai_trusts"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_kai_4",
+   "npc": "npc_kai",
+   "hearts": 4,
+   "trigger": {
+    "map": "sea",
+    "hours": [
+     8,
+     20
+    ],
+    "when": "hearts('npc_kai') >= 4",
+    "near": [
+     [
+      24,
+      76
+     ],
+     10
+    ]
+   },
+   "script": [
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai4.l01"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.kai4.c01",
+       [
+        [
+         "friendship",
+         "npc_kai",
+         100
+        ]
+       ],
+       "right"
+      ],
+      [
+       "ev.kai4.c02",
+       [
+        [
+         "friendship",
+         "npc_kai",
+         60
+        ]
+       ],
+       "near"
+      ],
+      [
+       "ev.kai4.c03",
+       [
+        [
+         "friendship",
+         "npc_kai",
+         40
+        ]
+       ],
+       "none"
+      ]
+     ]
+    ],
+    [
+     "label",
+     "right"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "happy",
+     "ev.kai4.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "kai_riddle"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "near"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai4.l03"
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "none"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai4.l04"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_kai_6",
+   "npc": "npc_kai",
+   "hearts": 6,
+   "trigger": {
+    "map": "sea",
+    "hours": [
+     8,
+     20
+    ],
+    "when": "hearts('npc_kai') >= 6",
+    "near": [
+     [
+      24,
+      76
+     ],
+     10
+    ]
+   },
+   "script": [
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai6.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.kai6.l02"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "sad",
+     "ev.kai6.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "crypt_open"
+      ],
+      [
+       "flag",
+       "fragment_1_found"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_kai_8",
+   "npc": "npc_kai",
+   "hearts": 8,
+   "trigger": {
+    "map": "sea",
+    "hours": [
+     16,
+     22
+    ],
+    "when": "hearts('npc_kai') >= 8",
+    "near": [
+     [
+      24,
+      76
+     ],
+     10
+    ]
+   },
+   "script": [
+    [
+     "say",
+     "npc_kai",
+     "sad",
+     "ev.kai8.l01"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "sad",
+     "ev.kai8.l02"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "sad",
+     "ev.kai8.l03"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.kai8.c01",
+       [
+        [
+         "friendship",
+         "npc_kai",
+         120
+        ]
+       ],
+       ""
+      ],
+      [
+       "ev.kai8.c02",
+       [
+        [
+         "friendship",
+         "npc_kai",
+         80
+        ],
+        [
+         "flag",
+         "kai_witness"
+        ]
+       ],
+       ""
+      ]
+     ]
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "kai_confession"
+      ],
+      [
+       "flag",
+       "evidence_kai_witness"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_kai_10",
+   "npc": "npc_kai",
+   "hearts": 10,
+   "trigger": {
+    "map": "sea",
+    "hours": [
+     19,
+     24
+    ],
+    "when": "hearts('npc_kai') >= 10",
+    "near": [
+     [
+      24,
+      76
+     ],
+     10
+    ]
+   },
+   "script": [
+    [
+     "say",
+     "npc_kai",
+     "neutral",
+     "ev.kai10.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.kai10.l02"
+    ],
+    [
+     "say",
+     "npc_kai",
+     "happy",
+     "ev.kai10.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "kai_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}
