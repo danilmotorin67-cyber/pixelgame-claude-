@@ -28,7 +28,7 @@ item.lantern_tin.desc,Светит ровно настолько.,Shines just en
 item.oar.name,Весло,Oar
 item.oar.desc,И ход. И аргумент.,Propulsion. And an argument.
 item.fish_oil.name,Рыбий жир,Fish oil
-item.fish_oil.desc,Горит ярко. Пахнет честно.,Burns bright. Smells honest.
+item.fish_oil.desc,"Сырое топливо маяка: одна ночь, 3 очка огня. Горит ярко, пахнет честно.","Raw lighthouse fuel: one night, 3 fire points. Burns bright, smells honest."
 item.kelp.name,Водоросли,Kelp
 item.kelp.desc,"Море отдаёт то, что выросло на нём.",The sea returns what grew on it.
 item.driftwood.name,Плавник,Driftwood
@@ -246,3 +246,11 @@ station.hearth,Очаг с котелком,Hearth and pot
 station.compost_pit,Компостная яма,Compost pit
 station.chest,Сундук,Chest
 tag.fish,любая рыба,any fish
+item.whale_oil.name,Ворвань,Whale oil
+item.whale_oil.desc,"Очищенный жир: одна ночь, 6 очков огня. Коптит меньше, чем совесть Грима.","Refined oil: one night, 6 fire points. Smokes less than Grim's conscience."
+item.kerosene.name,Керосин,Kerosene
+item.kerosene.desc,"Банка на две ночи, 10 очков огня. Привозной, как и все беды.","A can for two nights, 10 fire points. Imported, like every other trouble."
+item.rag.name,Ветошь,Rag
+item.rag.desc,Протереть стёкла фонарной. Бывшая рубашка бывшего смотрителя.,For wiping the lantern glass. A former shirt of a former keeper.
+item.glass.name,Стекло,Glass
+item.glass.desc,"Для стёкол фонарной и призм. Прозрачное, в отличие от местных дел.","For lantern panes and prisms. Transparent, unlike local business."

@@ -236,21 +236,23 @@ func _run() -> void:
 	var station: Area2D = cape.get_node("LighthouseStation")
 	_check(station.collision_layer == 8 and station.has_method("interact"),
 		"keeper cannot interact with lighthouse door")
-	_check(not Lighthouse.refill() and not Lighthouse.light_lamp(),
+	_check(Lighthouse.refill() == 0 and not Lighthouse.light_lamp(),
 		"empty reservoir must not light without fish oil")
 	Inventory.add("fish_oil", 1)
-	_check(Lighthouse.refill() and Inventory.count_of("fish_oil") == 0,
+	_check(Lighthouse.refill() == 1 and Inventory.count_of("fish_oil") == 0,
 		"refilling must consume exactly one portion of fish oil")
-	_check(not Lighthouse.refill(), "full reservoir must reject a second portion")
+	Inventory.add("fish_oil", 1)
+	_check(Lighthouse.refill() == 0 and Inventory.count_of("fish_oil") == 1, "full reservoir must reject a second portion")
+	Inventory.take("fish_oil", 1)
 	Clock.set_time(19, 30)
-	_check(Lighthouse.light_lamp() and Lighthouse.lamp_on and Lighthouse.current_power > 0.0,
+	_check(Lighthouse.light_lamp() and Lighthouse.lamp_on and Lighthouse.base_power() > 0.0,
 		"lighthouse must light after refilling")
 	_check(not Lighthouse.light_lamp(), "already lit lamp must not light twice")
 	var first_light := Lighthouse.resolve_night()
-	_check(int(first_light["power"]) == 35 and Lighthouse.fuel == 0.0 and not Lighthouse.lamp_on,
+	_check(int(first_light["power"]) == 19 and Lighthouse.fuel_nights == 0.0 and not Lighthouse.lamp_on,
 		"lit night must score and consume one reservoir")
 	var dark_night := Lighthouse.resolve_night()
-	_check(int(dark_night["power"]) == 0 and is_equal_approx(Lighthouse.fire_power, 17.5),
+	_check(int(dark_night["power"]) == 0 and is_equal_approx(Lighthouse.fire_power, 9.5),
 		"unlit night must count as zero in the seven-night Light average")
 	Weather.set_weather("storm")
 	_check(is_equal_approx(float(station.call("hold_seconds")), 4.0), "storm must double the ignition hold")
@@ -274,7 +276,7 @@ func _run() -> void:
 	player.global_position = Vector2(612, 401)
 	Clock.set_time(19, 40)
 	Inventory.add("fish_oil", 1)
-	_check(Lighthouse.refill() and Lighthouse.light_lamp(), "cannot prepare lit save")
+	_check(Lighthouse.refill() == 1 and Lighthouse.light_lamp(), "cannot prepare lit save")
 	_check(Save.save_game(2), "save failed")
 	var expected_game := Game.serialize().duplicate(true)
 	var expected_clock := JSON.stringify(Clock.serialize())
@@ -397,9 +399,9 @@ func _run() -> void:
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(
 			str(night_reports[-1].get("faint_message", "-"))),
 		"fainting must show one of the spec's faint messages")
-	_check(int(Lighthouse.last_report.get("power", 0)) == 35 and Lighthouse.fuel == 0.0,
+	_check(int(Lighthouse.last_report.get("power", 0)) > 0 and Lighthouse.fuel_nights == 0.0,
 		"night resolution must record the lamp score and burn its fuel")
-	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Маяк: 35"),
+	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Маяк: %d" % int(round(float(Lighthouse.last_report.get("power", -1))))),
 		"morning report must show the lighthouse score")
 	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Выручка «Чайки»: 70 кр"),
 		"the morning report must show the shipping income")

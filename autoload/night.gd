@@ -12,7 +12,7 @@ var pending_report: Dictionary = {}
 
 
 # Steps run in the strict order of spec 6.4; systems of later milestones slot in by number.
-func end_day(fainted: bool = false) -> void:
+func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	if resolving:
 		return
 	resolving = true
@@ -29,7 +29,7 @@ func end_day(fainted: bool = false) -> void:
 	var aurora_tonight := Weather.aurora
 	var storm_today := Weather.current in ["storm", "blizzard"]
 	_step(report, "lighthouse", func() -> void:
-		report["lighthouse"] = Lighthouse.resolve_night())
+		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted))
 	_step(report, "weather_tides", func() -> void:
 		Clock.start_next_day()
 		report["hmar_night"] = Weather.hmar_night)
@@ -44,7 +44,7 @@ func end_day(fainted: bool = false) -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))
-	_wake_hero(report, bedtime, fainted, night_index, player)
+	_wake_hero(report, bedtime, fainted, night_index, player, watch_sleep)
 	_step(report, "skills", func() -> void:
 		report["levels"] = Skills.apply_levels())
 	_step(report, "autosave", func() -> void:
@@ -79,7 +79,7 @@ func energy_fraction(bedtime: int, fainted: bool) -> float:
 
 
 func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: int,
-		player: Player) -> void:
+		player: Player, watch_sleep: bool) -> void:
 	var lost_money := 0
 	if fainted:
 		lost_money = mini(int(floor(float(Economy.money) * 0.1)), 1000)
@@ -87,7 +87,9 @@ func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: in
 		report["faint_message"] = FAINT_MESSAGES[posmod(Game.world_seed + night_index, FAINT_MESSAGES.size())]
 	report["money_lost"] = lost_money
 	var state := Game.player_state.duplicate(true)
-	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted)
+	var bunk := 1.0 if Game.flag("comfy_bunk") or not watch_sleep or fainted \
+		else float(Lighthouse.cfg("watch_sleep_energy"))
+	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted) * bunk
 	state["cold"] = 0.0
 	state["x"] = HOME_SPAWN.x
 	state["y"] = HOME_SPAWN.y

@@ -1034,5 +1034,37 @@
       "energy": 55,
       "health": 20
     }
+  },
+  {
+    "id": "whale_oil",
+    "name": "item.whale_oil.name",
+    "desc": "item.whale_oil.desc",
+    "category": "fuel",
+    "price": 110,
+    "stack": 20
+  },
+  {
+    "id": "kerosene",
+    "name": "item.kerosene.name",
+    "desc": "item.kerosene.desc",
+    "category": "fuel",
+    "price": 60,
+    "stack": 20
+  },
+  {
+    "id": "rag",
+    "name": "item.rag.name",
+    "desc": "item.rag.desc",
+    "category": "material",
+    "price": 5,
+    "stack": 99
+  },
+  {
+    "id": "glass",
+    "name": "item.glass.name",
+    "desc": "item.glass.desc",
+    "category": "material",
+    "price": 50,
+    "stack": 99
   }
 ]

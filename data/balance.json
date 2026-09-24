@@ -7,20 +7,135 @@
   "cold_energy_threshold": 50,
   "cold_energy_mult": 1.25,
   "energy_actions": {
-    "hoe": {"cost": 2, "skill": "farming", "per_level": 0.1},
-    "can": {"cost": 2, "skill": "farming", "per_level": 0.1},
-    "pick": {"cost": 2, "skill": "foraging", "per_level": 0.1},
-    "axe": {"cost": 2, "skill": "foraging", "per_level": 0.1},
-    "shovel": {"cost": 2},
-    "scythe": {"cost": 1},
-    "cast": {"cost": 6, "skill": "fishing", "per_level": 0.4},
-    "clean_glass": {"cost": 5},
-    "wind_mechanism": {"cost": 3},
-    "examine_body": {"cost": 5},
-    "funeral_self": {"cost": 20}
+    "hoe": {
+      "cost": 2,
+      "skill": "farming",
+      "per_level": 0.1
+    },
+    "can": {
+      "cost": 2,
+      "skill": "farming",
+      "per_level": 0.1
+    },
+    "pick": {
+      "cost": 2,
+      "skill": "foraging",
+      "per_level": 0.1
+    },
+    "axe": {
+      "cost": 2,
+      "skill": "foraging",
+      "per_level": 0.1
+    },
+    "shovel": {
+      "cost": 2
+    },
+    "scythe": {
+      "cost": 1
+    },
+    "cast": {
+      "cost": 6,
+      "skill": "fishing",
+      "per_level": 0.4
+    },
+    "clean_glass": {
+      "cost": 5
+    },
+    "wind_mechanism": {
+      "cost": 3
+    },
+    "examine_body": {
+      "cost": 5
+    },
+    "funeral_self": {
+      "cost": 20
+    }
   },
   "health_max": 100,
   "lamp_ritual_seconds": 60,
   "salary_week": 200,
-  "inspect_ok": 25
+  "inspect_ok": 25,
+  "lighthouse": {
+    "lenses": {
+      "old_mirror": 5,
+      "parabolic": 10,
+      "fresnel_4": 15,
+      "fresnel_3": 20,
+      "fresnel_2": 25,
+      "great_eye": 30
+    },
+    "lamps": {
+      "wick": 5,
+      "argand": 10,
+      "incandescent": 15,
+      "rann_torch": 20
+    },
+    "mechanisms": {
+      "weights": {
+        "points": 5,
+        "wind_every": 1
+      },
+      "precise_clock": {
+        "points": 8,
+        "wind_every": 2
+      },
+      "auto": {
+        "points": 10,
+        "wind_every": 0
+      }
+    },
+    "signals": {
+      "hand_bell": 1,
+      "clock_bell": 2,
+      "bellows_horn": 3,
+      "steam_horn": 4,
+      "siren": 5
+    },
+    "fuels": {
+      "fish_oil": {
+        "nights": 1,
+        "points": 3
+      },
+      "whale_oil": {
+        "nights": 1,
+        "points": 6
+      },
+      "kerosene": {
+        "nights": 2,
+        "points": 10
+      },
+      "bright_water": {
+        "nights": 4,
+        "points": 15
+      }
+    },
+    "reservoir_levels": [
+      1,
+      3,
+      7
+    ],
+    "tower_parts": [
+      "stairs",
+      "masonry",
+      "paint",
+      "rod",
+      "gallery"
+    ],
+    "tower_start": {
+      "gallery": 1
+    },
+    "broken_glass_cap": 4,
+    "watch_sleep_bonus": 5,
+    "watch_sleep_energy": 0.9,
+    "clean_energy": 5,
+    "dirt_per_night": 1,
+    "dirt_storm": 4,
+    "dirt_hmar": 2,
+    "mechanism_stop": 0.08,
+    "storm_crack": 0.05,
+    "storm_crack_dirt": 3,
+    "lightning": 0.1,
+    "no_fire_mercy": -2,
+    "full_week_mercy": 1
+  }
 }

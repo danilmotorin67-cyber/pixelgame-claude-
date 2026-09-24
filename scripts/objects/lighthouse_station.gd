@@ -13,13 +13,13 @@ func interact(player: Player) -> void:
 		return
 	var hint: Label = get_parent().get_node("HUD/Hint")
 	if Lighthouse.lamp_on:
-		hint.text = "Маяк горит · сила огня %d · топливо до утра" % int(Lighthouse.current_power)
+		hint.text = "Маяк горит · сила огня %d" % int(Lighthouse.base_power())
 		return
-	if Lighthouse.fuel <= 0.0:
-		if Lighthouse.refill():
-			hint.text = "Резервуар заправлен на 1 ночь · удерживайте E, чтобы зажечь"
+	if Lighthouse.fuel_nights <= 0.0:
+		if Lighthouse.refill() > 0:
+			hint.text = "Резервуар заправлен: ночей — %d · удерживайте E, чтобы зажечь" % int(Lighthouse.fuel_nights)
 		else:
-			hint.text = "Маяку нужен рыбий жир · положите его в рюкзак"
+			hint.text = "Маяку нужно топливо · рыбий жир, ворвань или керосин"
 		return
 	_keeper = player
 	_held = 0.0
@@ -36,7 +36,7 @@ func _process(delta: float) -> void:
 	_held += delta
 	if _held >= hold_seconds():
 		if Lighthouse.light_lamp():
-			get_parent().get_node("HUD/Hint").text = "Огонь зажжён · сила %d · до утра хватит топлива" % int(Lighthouse.current_power)
+			get_parent().get_node("HUD/Hint").text = "Огонь зажжён · сила %d" % int(Lighthouse.base_power())
 		_keeper = null
 		_held = 0.0
 	else:
@@ -44,7 +44,7 @@ func _process(delta: float) -> void:
 
 
 func hold_seconds() -> float:
-	return STORM_SECONDS if Weather.current == "storm" else LIGHT_SECONDS
+	return STORM_SECONDS if Weather.current in ["storm", "blizzard"] else LIGHT_SECONDS
 
 
 func _show_progress() -> void:
