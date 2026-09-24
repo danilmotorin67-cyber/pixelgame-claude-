@@ -33,7 +33,12 @@ func max_level(id: String) -> int:
 func next_level_info(id: String) -> Dictionary:
 	var lv := level(id)
 	var list: Array = info(id).get("levels", [])
-	return list[lv] if lv < list.size() else {}
+	if lv >= list.size():
+		return {}
+	var next: Dictionary = (list[lv] as Dictionary).duplicate(true)
+	if Relationships.hearts_of("npc_ilm") >= 6:
+		next["price"] = int(round(float(next["price"]) * 0.9))
+	return next
 
 
 # "" when Ilm can take the order now, otherwise why not.

@@ -233,6 +233,9 @@ func eat_selected() -> String:
 	health = minf(health + float(edible.get("health", 0)), max_health())
 	var buff: Dictionary = Data.by_id("items", id).get("buff", {})
 	if not buff.is_empty():
+		if str(Data.by_id("items", id).get("category", "")) == "potion" and Skills.has_profession("healer"):
+			buff = buff.duplicate()
+			buff["hours"] = float(buff.get("hours", 0)) * 1.5
 		Game.add_buff(buff)
 		if bool(buff.get("warm_now", false)):
 			cold = 0.0
@@ -343,7 +346,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				var pickups := get_tree().current_scene.get_node_or_null("Pickups") as Pickups
 				if pickups:
 					pickups.rebuild()
-				_say("Поставлено." if gear_kind == "trap" else "Сеть поставлена. Снимать — на следующем отливе.")
+				_say("Поставлено." if gear_kind in ["trap", "longline"] else "Сеть поставлена. Снимать — на следующем отливе.")
 			else:
 				_say("Ловушку — в воду у берега; сеть — на приливную полосу в отлив.")
 		get_viewport().set_input_as_handled()

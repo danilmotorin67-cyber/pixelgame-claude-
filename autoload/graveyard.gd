@@ -634,6 +634,8 @@ func place_marker(plot: int, marker: String) -> bool:
 	if marker == "mound":
 		if not Inventory.take("stone", int(table["mound"]["stone"])):
 			return false
+	elif marker == "headstone" and str(body(str(g["body"])).get("identified_as", "")) == "":
+		return false
 	elif marker_points(marker) <= 0 or not Inventory.take(marker, 1):
 		return false
 	g["marker"] = marker
@@ -653,7 +655,8 @@ func update_quality(plot: int) -> void:
 		g["quality"] = 0
 		return
 	var named := str(b["identified_as"]) != "" and str(b["identified_as"]) == str(b["registry"])
-	g["quality"] = clampi(preparation(b) + marker_points(str(g["marker"])) + (int(cfg("name_points")) if named else 0), 0, 100)
+	var craft := (10 if Skills.has_profession("gravedigger") else 0) + (5 if Skills.has_profession("stone_carver") and str(g["marker"]) != "" else 0)
+	g["quality"] = clampi(preparation(b) + marker_points(str(g["marker"])) + (int(cfg("name_points")) if named else 0) + craft, 0, 100)
 
 
 func repair_old(plot: int) -> bool:

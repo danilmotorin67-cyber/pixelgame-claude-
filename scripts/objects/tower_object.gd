@@ -215,20 +215,6 @@ func _open_repairs() -> void:
 	InfoPanel.open(_hud(), "Ремонт башни", body, [["Починить выбранное", fix]], func() -> Array: return repair_lines())
 
 
-static func node_lines() -> Array:
-	var out: Array = []
-	for info in Data.all("knowledge_tree"):
-		if str(info.get("branch", "")) != "lighthouse":
-			continue
-		var cost: Array[String] = []
-		for kind_id in info.get("cost", {}):
-			cost.append("%d%s" % [int(info["cost"][kind_id]), {"sea": "⚓", "land": "🌿", "rest": "🕯"}.get(kind_id, "")])
-		var state := Knowledge.blocked_reason(str(info["id"]))
-		var mark: String = {"unlocked": "✓", "": "○", "points": "·", "requires": "·", "story": "·"}.get(state, "·")
-		out.append("%s %s  %s" % [mark, info["id"], " ".join(cost) if not cost.is_empty() else "бесплатно"])
-	return out
-
-
 func _open_desk() -> void:
 	var body := func() -> String:
 		return "Записи: ⚓ %d · 🌿 %d · 🕯 %d. Журнал: %s." % [Knowledge.sea_pts, Knowledge.land_pts,
@@ -238,22 +224,11 @@ func _open_desk() -> void:
 	var study := func(_panel: InfoPanel) -> String:
 		var gain := Knowledge.study(Inventory.selected_id())
 		return "Изучено: +%d." % gain if gain > 0 else "Нечего изучать: выберите на панели новый предмет."
-	var unlock := func(panel: InfoPanel) -> String:
-		var ids: Array = []
-		for info in Data.all("knowledge_tree"):
-			if str(info.get("branch", "")) == "lighthouse":
-				ids.append(str(info["id"]))
-		var index := panel.selected_index()
-		if index < 0:
-			return "Выберите узел."
-		var reason := Knowledge.blocked_reason(ids[index])
-		if Knowledge.unlock_node(ids[index]):
-			return "Узел %s открыт." % ids[index]
-		return {"unlocked": "Уже открыт.", "requires": "Сначала предыдущие узлы.", "story": "Ждёт событий сюжета.",
-			"points": "Не хватает записей."}.get(reason, "Нельзя.")
+	var tree := func(_panel: InfoPanel) -> String:
+		(func() -> void: KnowledgeBook.open(_hud())).call_deferred()
+		return ""
 	InfoPanel.open(_hud(), "Стол смотрителя", body,
-		[["Записать в журнал", write], ["Изучить выбранное", study], ["Открыть узел", unlock]],
-		func() -> Array: return node_lines())
+		[["Записать в журнал", write], ["Изучить выбранное", study], ["Древо знаний (K)", tree]])
 
 
 func _use_lamp(player: Player) -> void:

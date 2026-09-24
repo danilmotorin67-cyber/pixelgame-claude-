@@ -87,8 +87,17 @@ func forage(id: String, xp: int) -> bool:
 	rng.seed = posmod(Game.world_seed * 613 + Clock.day_index * 977 + Clock.minutes * 31 + count_of(id), 2147483647)
 	if rng.randf() < 0.02 * float(Skills.level("foraging")) and can_fit(id, 2):
 		amount = 2
-	add(id, amount)
+	var quality := 0
+	var item := Data.by_id("items", id)
+	if Skills.has_profession("herbalist") and str(item.get("category", "")) == "forage" and "seaweed" not in item.get("tags", []) \
+			and rng.randf() < 0.3:
+		quality = 1
+	add(id, amount, quality)
 	Skills.add_xp("foraging", xp)
+	# 26.1: every new kind of find is a land note.
+	if not Game.flag("foraged_" + id):
+		Game.set_flag("foraged_" + id)
+		Knowledge.add_points("land", 1)
 	return true
 
 

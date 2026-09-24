@@ -320,7 +320,16 @@ func base_power(bedtime: int = -1) -> float:
 	var parts := components(bedtime)
 	for key in parts:
 		total += int(parts[key])
-	return float(total)
+	return minf(100.0, float(total + keeper_bonus()))
+
+
+# 25.2: +1 per Keeping level (up to 10), Fire keeper +5, Lighthouse eye +10, Fresnel's pupil +5 to any lens.
+func keeper_bonus() -> int:
+	var bonus := mini(10, Skills.base_level("keeping"))
+	bonus += 5 if Skills.has_profession("fire_keeper") else 0
+	bonus += 10 if Skills.has_profession("lighthouse_eye") else 0
+	bonus += 5 if Skills.has_profession("fresnel_pupil") and lens != "old_mirror" else 0
+	return bonus
 
 
 func sunset_minutes() -> int:
@@ -401,7 +410,7 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 		events.append("mechanism_stopped")
 	var power := effective_power(bedtime, watch_sleep, parts) if burning else 0.0
 	if burning:
-		fuel_nights = maxf(0.0, fuel_nights - 1.0)
+		fuel_nights = maxf(0.0, fuel_nights - (0.75 if Skills.has_profession("fire_keeper") else 1.0))
 		if fuel_nights <= 0.0:
 			fuel_type = ""
 	var on_time := burning and lit_on_time()
@@ -523,7 +532,7 @@ func weekly_salary() -> int:
 	var average := _average(week_powers)
 	var bonus := 0 if week_wrecked else week_bonus
 	var salary := 150 + int(round(5.0 * average)) + bonus
-	if str(Skills.professions.get("keeping", "")) == "night_pilot":
+	if Skills.has_profession("night_pilot"):
 		salary = int(round(float(salary) * 1.5))
 	Mail.send("mail.salary_wreck" if week_wrecked else "mail.salary", [salary, int(round(average)), bonus], salary)
 	if week_powers.size() >= 7 and not week_dark:

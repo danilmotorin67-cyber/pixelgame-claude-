@@ -286,6 +286,79 @@ func _check_world_stations() -> void:
 	_check(Game.equip("amber_pendant") == "off" and Inventory.count_of("amber_pendant") == 1, "taken off again")
 
 
+# 25: professions at 5 and 10, their effects; 26.1: where notes come from; the tree opens node by node.
+func _check_skills() -> void:
+	_fresh()
+	Skills.add_xp("fishing", 2150)
+	var gained := Skills.apply_levels()
+	_check(Skills.base_level("fishing") == 5 and gained.size() == 5, "2150 XP: Fishing 5 after sleep")
+	_check(Skills.pending.size() == 1 and Skills.options("fishing", 5) == ["angler", "trapper"], "level 5 offers Angler or Trapper")
+	var cod_before := Economy.sell_price("fish_cod")
+	_check(Skills.choose("fishing", "angler") and Skills.has_profession("angler"), "the keeper becomes an Angler")
+	_check(Economy.sell_price("fish_cod") == int(round(cod_before * 1.25)), "Angler: fish +25%")
+	_check(not Skills.choose("fishing", "trapper"), "only one profession per level")
+	Skills.add_xp("fishing", 15000)
+	Skills.apply_levels()
+	_check(Skills.options("fishing", 10) == ["pier_legend", "quiet_hand"], "level 10 offers the Angler's branches")
+	Skills.choose("fishing", "pier_legend")
+	_check(Economy.sell_price("fish_cod") == int(round(cod_before * 1.5)), "Pier legend: fish +50% instead of +25%")
+	var saved := JSON.stringify(Skills.serialize())
+	Skills.reset()
+	Skills.deserialize(JSON.parse_string(saved))
+	_check(Skills.has_profession("pier_legend") and Skills.base_level("fishing") == 10, "professions survive a save")
+	# prices
+	Skills.professions = {"crafting": ["craftsman", "cooper"], "farming": ["herder", "down_keeper"]}
+	_check(Economy.sell_price("cheese") == int(round(230 * 1.4)), "Cooper: artisan goods +40%")
+	_check(Economy.sell_price("egg") == int(round(50 * 1.6)), "Herder and Down-keeper: eggs +60%")
+	Inventory.add("sea_glass_ring", 1)
+	Game.equip("sea_glass_ring")
+	_check(Economy.sell_price("amber") == int(round(150 * 1.1)), "the sea-glass ring: finds +10%")
+	# the light
+	Skills.levels["keeping"] = 7
+	Skills.professions = {"keeping": ["fire_keeper", "lighthouse_eye"]}
+	_check(Lighthouse.keeper_bonus() == 22, "Keeping 7 + Fire keeper 5 + Lighthouse eye 10")
+	# notes of 26.1
+	_fresh()
+	Farm.till(Vector2i(0, 0))
+	Inventory.add("seed_turnip", 1)
+	Farm.plant(Vector2i(0, 0), "seed_turnip")
+	var tile := Farm.get_tile(Vector2i(0, 0))
+	tile["ready"] = true
+	var land := Knowledge.land_pts
+	Farm.harvest(Vector2i(0, 0))
+	_check(Knowledge.land_pts == land + 2, "a new crop is two land notes")
+	land = Knowledge.land_pts
+	Inventory.forage("heather", 7)
+	Inventory.forage("heather", 7)
+	_check(Knowledge.land_pts == land + 1, "a new kind of find is one land note, once")
+	land = Knowledge.land_pts
+	Inventory.add("milk", 1)
+	Knowledge.unlock("Z5")
+	Knowledge.unlock("Z8")
+	var churn := Crafting._add("cape", "butter_churn", 20, 20)
+	Crafting.start(churn, "churn_butter")
+	Clock.day_index += 1
+	Crafting.collect(churn)
+	_check(Knowledge.land_pts == land + 2, "a new artisan good is two land notes")
+	Clock.day_index = 12
+	land = Knowledge.land_pts
+	Knowledge._on_map_entered("village")
+	Knowledge._on_map_entered("village")
+	_check(Knowledge.land_pts == land + 2, "the Boat Launch visited: two land notes, once")
+	# the tree
+	Knowledge.sea_pts = 100
+	Knowledge.land_pts = 100
+	Knowledge.rest_pts = 100
+	for id in ["R2", "R17", "Z2", "R10", "T4", "T5"]:
+		_check(Knowledge.unlock_node(id), "node %s opens with enough notes" % id)
+	_check(Knowledge.blocked_reason("S2") == "story", "S2 waits for the story")
+	_check(Knowledge.blocked_reason("Z9") == "story", "the sea garden needs a boat")
+	Sea.set_boat("yalik")
+	_check(Knowledge.blocked_reason("Z9") == "", "with the skiff the sea garden can open")
+	_check(Inventory.count_of("forge") == 1 and Inventory.count_of("glass_furnace") == 1, "station nodes hand over the station")
+	_check(Data.all("knowledge_tree").size() >= 90, "the whole tree of 26.2 is in the data")
+
+
 func _quality_of(id: String) -> int:
 	for slot in Inventory.slots:
 		if str(slot["id"]) == id:
@@ -298,5 +371,6 @@ func _run() -> void:
 	_check_unlocks()
 	_check_engine()
 	_check_world_stations()
+	_check_skills()
 	print("M7 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

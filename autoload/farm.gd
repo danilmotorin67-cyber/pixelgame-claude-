@@ -213,6 +213,13 @@ func harvest(cell: Vector2i, plot: String = "beds") -> bool:
 	last_harvest = {"id": produce, "amount": amount, "quality": quality}
 	var price := int(Data.by_id("items", produce).get("price", 0))
 	Skills.add_xp("farming", 3 + price / 20)
+	# 26.1: a new crop +2 land notes, every 20 harvests +1.
+	if not Game.flag("harvested_" + produce):
+		Game.set_flag("harvested_" + produce)
+		Knowledge.add_points("land", 2)
+	Game.add_stat("harvests")
+	if Game.stat("harvests") % 20 == 0:
+		Knowledge.add_points("land", 1)
 	Events.crop_harvested.emit(produce, quality)
 	Events.farm_changed.emit()
 	return true
@@ -315,7 +322,7 @@ func advance_day(storm_night: bool = false) -> void:
 					tile["growth"] = boundary
 				if bool(tile["watered"]) and not bool(tile["ready"]):
 					var fert := fertility(tile)
-					var speed := 1.10 if fert >= 3 else (1.05 if fert == 2 else 1.0)
+					var speed := (1.10 if fert >= 3 else (1.05 if fert == 2 else 1.0)) * (1.1 if Skills.has_profession("northern_gardener") else 1.0)
 					tile["days"] = int(tile["days"]) + 1
 					tile["growth"] = float(tile["growth"]) + speed
 					tile["ready"] = float(tile["growth"]) >= float(total_days(crop)) - 0.001
@@ -349,7 +356,7 @@ func spawn_wild(index: int) -> void:
 	# 13.4: hmar-caps come up by themselves on the cape and the graveyard after a Hmar Night.
 	if Weather.last_hmar_day == index - 1:
 		var caps: Array = wild.get("cape", [])
-		for n in rng.randi_range(3, 6):
+		for n in rng.randi_range(3, 6) * (3 if Skills.has_profession("hmar_forager") else 1):
 			caps.append({"item": "hmar_mushroom", "x": rng.randi_range(20, 60), "y": rng.randi_range(14, 40)})
 		wild["cape"] = caps
 

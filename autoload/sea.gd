@@ -158,6 +158,8 @@ func collect_gift(map_id: String, gift: Dictionary) -> bool:
 		return false
 	if not Inventory.forage(str(gift["item"]), 3):
 		return false
+	if Skills.has_profession("beachcomber") and randf() < 0.2:
+		Inventory.add(str(gift["item"]), 1)
 	list.remove_at(index)
 	if str(gift["item"]) == "trash":
 		var config: Dictionary = Data.tables.get("forage", {})
@@ -255,7 +257,7 @@ func place_gear(kind: String, map_id: String, at: Vector2) -> bool:
 	for g in gear:
 		if str(g["map"]) == map_id and Vector2(float(g["x"]), float(g["y"])).distance_to(at) < 16.0:
 			return false
-	var item := "trap" if kind == "trap" else "set_net"
+	var item := {"trap": "trap", "net": "set_net", "longline": "longline"}.get(kind, "set_net") as String
 	if not Inventory.take(item, 1):
 		return false
 	gear.append({"kind": kind, "map": map_id, "x": floorf(at.x / 16.0) * 16.0 + 8.0, "y": floorf(at.y / 16.0) * 16.0 + 8.0,
@@ -307,6 +309,18 @@ func lift_gear(g: Dictionary) -> Array:
 	return got
 
 
+# A longline comes back to the backpack when lifted empty (its catch is taken first).
+func take_up_gear(g: Dictionary) -> bool:
+	if not gear.has(g) or not g["catch"].is_empty() or str(g["kind"]) == "net":
+		return false
+	var item := {"trap": "trap", "longline": "longline"}.get(str(g["kind"]), "") as String
+	if item == "" or not Inventory.can_fit(item, 1):
+		return false
+	gear.erase(g)
+	Inventory.add(item, 1)
+	return true
+
+
 func _net_catch(g: Dictionary) -> Array:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = posmod(Game.world_seed * 97 + Clock.day_index * 7 + int(g["x"]), 2147483647)
@@ -322,7 +336,8 @@ func _net_catch(g: Dictionary) -> Array:
 				pool.append(fish)
 				break
 	var out: Array = []
-	for n in rng.randi_range(3, 6):
+	var catches := rng.randi_range(3, 6) if str(g["kind"]) == "net" else rng.randi_range(2, 4)
+	for n in catches * (2 if Skills.has_profession("netter") else 1):
 		if not pool.is_empty():
 			out.append([str(pool[rng.randi_range(0, pool.size() - 1)]["id"]), 1])
 	out.append(["kelp", rng.randi_range(1, 3)])
@@ -339,10 +354,16 @@ func night_gear() -> void:
 		rng.seed = posmod(Game.world_seed * 41 + Clock.day_index * 17 + int(g["x"]) * 3 + int(g["y"]), 2147483647)
 		if mercy < 20.0 and rng.randf() < 0.1:
 			continue
-		if str(g["kind"]) == "trap" and bool(g["baited"]) and g["catch"].is_empty():
+		if str(g["kind"]) == "trap" and (bool(g["baited"]) or Skills.has_profession("trapper")) and g["catch"].is_empty():
 			var table: Array = Data.tables["forage"]["traps"][trap_table(g)]
 			g["catch"] = [[_pick(rng, table), 1]]
+			if Skills.has_profession("trapper") and rng.randf() < 0.25:
+				g["catch"].append([_pick(rng, table), 1])
 			g["baited"] = false
+		elif str(g["kind"]) == "longline" and g["catch"].is_empty():
+			var hooked := _net_catch(g)
+			hooked.pop_back()
+			g["catch"] = hooked
 		keep.append(g)
 	gear = keep
 	pools_fished.clear()
@@ -353,7 +374,7 @@ func night_gear() -> void:
 
 func set_boat(id: String) -> void:
 	boat = id
-	var size := int(SeaChart.boat_info(id).get("hold", 12))
+	var size := int(SeaChart.boat_info(id).get("hold", 12)) + (12 if Skills.has_profession("skipper") else 0)
 	while hold.size() < size:
 		hold.append({"id": "", "count": 0, "quality": 0})
 
@@ -371,6 +392,7 @@ func can_sail(zone: int = 1) -> String:
 func damage_hull(amount: float) -> bool:
 	if int(Game.counters.get("boat_blessed_until", -1)) >= Clock.day_index:
 		amount *= 0.9
+	amount *= maxf(0.0, 1.0 - 0.05 * float(Skills.base_level("seafaring"))) * (0.5 if Skills.has_profession("skipper") else 1.0)
 	hull = maxf(0.0, hull - amount)
 	return hull <= 0.0
 

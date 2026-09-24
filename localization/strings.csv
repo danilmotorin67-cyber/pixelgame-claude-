@@ -5684,3 +5684,94 @@ mail.recipe_letter,"Смотрителю. %s пишет: «Держи рецеп
 mail.gazette_recipe,"«Сольвикский вестник», кулинарная колонка: «%s». Рецепт вырезан и вложен в книгу.","The Solvik Gazette, cookery column: '%s'. The recipe is cut out and put in your book."
 station.tree,Дерево,Tree
 mail.building_done,"Ильм: «%s готово. Принимай работу — и вот, возьми, прилагается».","Ilm: '%s is done. Come and see — and here, this comes with it.'"
+profession.gardener.name,Огородник,Gardener
+profession.gardener.desc,Урожай +10% к цене.,Crops +10% to price.
+profession.herder.name,Скотник,Herder
+profession.herder.desc,"Продукты животных +20%, дружба с животными вдвое быстрее.","Animal products +20%, animal friendship twice as fast."
+profession.salt_farmer.name,Солевод,Salt farmer
+profession.salt_farmer.desc,Культуры S2 и морской огород +25% к цене.,S2 crops and the sea garden +25% to price.
+profession.northern_gardener.name,Садовник Севера,Northern gardener
+profession.northern_gardener.desc,"Всё растёт на 10% быстрее, ягоды и фрукты +25%.","Everything grows 10% faster, berries and fruit +25%."
+profession.surf_shepherd.name,Пастух прибоя,Surf shepherd
+profession.surf_shepherd.desc,"Водоросли вместо сена, +25% к отличной шерсти и молоку.","Seaweed instead of hay, +25% to excellent wool and milk."
+profession.down_keeper.name,Пухоправ,Down-keeper
+profession.down_keeper.desc,"Продукты курятника +40%, гаги дают по 2 пуха.","Coop products +40%, eiders give 2 down."
+profession.angler.name,Удильщик,Angler
+profession.angler.desc,Рыба +25% к цене.,Fish +25% to price.
+profession.trapper.name,Ловец,Trapper
+profession.trapper.desc,"Ловушки без наживки, 25% второго улова.","Traps without bait, 25% second catch."
+profession.pier_legend.name,Легенда пирса,Pier legend
+profession.pier_legend.desc,Рыба +50% к цене.,Fish +50% to price.
+profession.quiet_hand.name,Тихая рука,Quiet hand
+profession.quiet_hand.desc,"Леска не рвётся, зелёная зона +10.","The line never breaks, green zone +10."
+profession.netter.name,Сетевик,Netter
+profession.netter.desc,Сети и перемёт ловят вдвое больше.,Nets and longlines catch twice as much.
+profession.shellman.name,Ракушечник,Shellman
+profession.shellman.desc,"Ракообразные, моллюски и морской огород ×2 к цене.","Crustaceans, shellfish and the sea garden ×2 to price."
+profession.pilot.name,Лоцман,Pilot
+profession.pilot.desc,"Под парусом +20%, рифы видны заранее.","+20% under sail, reefs shown in advance."
+profession.skipper.name,Шкипер,Skipper
+profession.skipper.desc,"Трюм +12, урон корпусу −50%.","Hold +12, hull damage −50%."
+profession.wind_son.name,Сын ветра,Son of the wind
+profession.wind_son.desc,Против ветра 80% скорости.,80% speed against the wind.
+profession.fog_navigator.name,Штурман тумана,Fog navigator
+profession.fog_navigator.desc,Туман не сужает обзор в море.,Fog doesn't narrow the view at sea.
+profession.rescuer.name,Спасатель,Rescuer
+profession.rescuer.desc,"Спасение: +2 выживших, Честь ×2.","Rescues: +2 survivors, Honour ×2."
+profession.smuggler.name,Контрабандист,Smuggler
+profession.smuggler.desc,"Грузы и морские находки +50%, на «Пёстрой» −20%.","Cargo and sea finds +50%, 20% off at the Pyostraya."
+profession.salvager.name,Добытчик,Salvager
+profession.salvager.desc,Из обломков 30% лишнего предмета.,30% extra item from wrecks.
+profession.deep_hunter.name,Охотник глубин,Deep hunter
+profession.deep_hunter.desc,Урон +15%.,Damage +15%.
+profession.pearler.name,Жемчужник,Pearler
+profession.pearler.desc,"Жемчуг ×2, в сундуках +1 предмет.","Pearls ×2, +1 item in chests."
+profession.rust_baron.name,Ржавый барон,Rust baron
+profession.rust_baron.desc,Лом плавится 1 → 1 слиток.,Scrap smelts 1 → 1 ingot.
+profession.harpooner.name,Гарпунёр,Harpooner
+profession.harpooner.desc,"Гарпуны пронзают, крит +10%.","Harpoons pierce, crit +10%."
+profession.whale_lungs.name,Лёгкие кита,Whale lungs
+profession.whale_lungs.desc,"Воздух +50%, холод под водой не копится.","Air +50%, no cold underwater."
+profession.craftsman.name,Мастеровой,Craftsman
+profession.craftsman.desc,Станки +25% к скорости.,Stations +25% speed.
+profession.optician.name,Оптик,Optician
+profession.optician.desc,"Стекло и призмы не ниже хорошего, 25% двух призм.","Glass and prisms at least good, 25% two prisms."
+profession.artel.name,Артельщик,Artel man
+profession.artel.desc,Горн плавит двойную партию.,The forge smelts double batches.
+profession.cooper.name,Бочар,Cooper
+profession.cooper.desc,Артизанские товары +40% к цене.,Artisan goods +40% to price.
+profession.fresnel_pupil.name,Ученик Френеля,Fresnel's pupil
+profession.fresnel_pupil.desc,Любая линза +5 к Силе Огня.,Any lens +5 to the Light.
+profession.glassblower.name,Стеклодув,Glassblower
+profession.glassblower.desc,"Стекло и морское стекло +50%, рецепт «Витраж».","Glass and sea glass +50%, the stained-glass recipe."
+profession.beachcomber.name,Берегочёс,Beachcomber
+profession.beachcomber.desc,Дары прибоя: 20% шанс ×2.,Shore gifts: 20% chance ×2.
+profession.herbalist.name,Травница,Herbalist
+profession.herbalist.desc,"Ягоды, травы, грибы: 30% шанс на ступень качества выше.","Berries, herbs, mushrooms: 30% chance of better quality."
+profession.raven_eye.name,Вороний глаз,Raven's eye
+profession.raven_eye.desc,Вороньи метки и бутылки видны на карте.,Raven marks and bottles show on the map.
+profession.driftwood_master.name,Плавниковый мастер,Driftwood master
+profession.driftwood_master.desc,"Плавник даёт +1 доску, торф ×2.","Driftwood gives +1 board, peat ×2."
+profession.healer.name,Знахарь,Healer
+profession.healer.desc,Зелья действуют на 50% дольше.,Potions last 50% longer.
+profession.hmar_forager.name,Грибник Хмари,Hmar forager
+profession.hmar_forager.desc,После Ночей Хмари хмарников ×3.,"After Hmar Nights, hmar-caps ×3."
+profession.fire_keeper.name,Хранитель огня,Fire keeper
+profession.fire_keeper.desc,"Топливо −25%, +5 к Силе Огня.","Fuel −25%, +5 to the Light."
+profession.gravedigger.name,Могильщик,Gravedigger
+profession.gravedigger.desc,"Копка вдвое дешевле, могилы +10 качества.","Digging costs half, graves +10 quality."
+profession.lighthouse_eye.name,Око маяка,Lighthouse eye
+profession.lighthouse_eye.desc,+10 к Силе Огня.,+10 to the Light.
+profession.night_pilot.name,Лоцман ночи,Night pilot
+profession.night_pilot.desc,Жалованье ×1.5.,Salary ×1.5.
+profession.soul_guide.name,Проводник душ,Soul guide
+profession.soul_guide.desc,Призраки дарят вдвое больше.,Ghosts give twice as much.
+profession.stone_carver.name,Резчик камня,Stone carver
+profession.stone_carver.desc,Знаки могил +5.,Grave markers +5.
+skill.farming,Земледелие,Farming
+skill.fishing,Рыболовство,Fishing
+skill.seafaring,Мореходство,Seafaring
+skill.diving,Ныряние,Diving
+skill.crafting,Ремесло,Crafting
+skill.foraging,Собирательство,Foraging
+skill.keeping,Смотрительство,Keeping

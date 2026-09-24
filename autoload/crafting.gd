@@ -304,7 +304,10 @@ func _make_once(recipe: Dictionary, sid: String, info: Dictionary) -> String:
 	var quality := _product_quality(str(out[0]), _take_ingredients(recipe, 1))
 	if not fuel.is_empty():
 		Inventory.take(str(fuel[0]), int(fuel[1]))
-	Inventory.add(str(out[0]), int(out[1]), quality)
+	var count := int(out[1])
+	if str(recipe["id"]).begins_with("saw_driftwood") and Skills.has_profession("driftwood_master"):
+		count += 1
+	Inventory.add(str(out[0]), count, quality)
 	for extra in recipe.get("extra", []):
 		Inventory.add(str(extra[0]), int(extra[1]))
 	last_energy += float(recipe.get("energy", 0))

@@ -140,6 +140,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		SeaChartPanel.toggle(hud)
 		get_viewport().set_input_as_handled()
 		return
+	if event.is_action_pressed("open_knowledge") and not console.visible:
+		KnowledgeBook.open(hud)
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("open_calendar") and not console.visible:
 		CalendarPanel.toggle(hud)
 		get_viewport().set_input_as_handled()
@@ -174,6 +178,7 @@ func _on_morning_ok() -> void:
 	morning_panel.visible = false
 	Clock.paused = false
 	$HUD/MorningPanel/MorningOk.release_focus()
+	KnowledgeBook.offer_profession(hud)
 
 
 func _refresh_hud() -> void:

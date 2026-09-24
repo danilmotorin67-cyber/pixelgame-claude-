@@ -35,7 +35,7 @@ func sell_price(id: String, quality: int = 0) -> int:
 	var item := Data.by_id("items", id)
 	if item.is_empty() or str(item.get("category", "")) in UNSELLABLE:
 		return 0
-	return int(round(float(item.get("price", 0)) * QUALITY_MULT[clampi(quality, 0, 3)]))
+	return int(round(float(item.get("price", 0)) * QUALITY_MULT[clampi(quality, 0, 3)] * Skills.price_mult(item)))
 
 
 func ship_slot(index: int) -> bool:

@@ -2996,7 +2996,8 @@
     "desc": "item.stone_slab.desc",
     "category": "marker",
     "price": 100,
-    "stack": 99
+    "stack": 99,
+    "marker": 30
   },
   {
     "id": "nails",
@@ -4007,7 +4008,8 @@
     "desc": "item.headstone.desc",
     "category": "marker",
     "price": 600,
-    "stack": 99
+    "stack": 99,
+    "marker": 40
   },
   {
     "id": "beacon_stone",
@@ -4015,7 +4017,8 @@
     "desc": "item.beacon_stone.desc",
     "category": "marker",
     "price": 2000,
-    "stack": 99
+    "stack": 99,
+    "marker": 45
   },
   {
     "id": "memory_lantern",

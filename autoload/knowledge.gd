@@ -12,6 +12,19 @@ var unlocked: Dictionary = ROOTS.duplicate()
 var studied: Dictionary = {}
 
 
+func _ready() -> void:
+	Events.map_entered.connect(_on_map_entered)
+
+
+# 26.1: a festival visited is two land notes (once per festival day).
+func _on_map_entered(map_id: String) -> void:
+	var festival := Clock.festival_on()
+	if map_id != "village" or festival.is_empty() or Game.flag("festival_seen_%d" % Clock.day_index):
+		return
+	Game.set_flag("festival_seen_%d" % Clock.day_index)
+	add_points("land", 2)
+
+
 func reset() -> void:
 	sea_pts = 0
 	land_pts = 0

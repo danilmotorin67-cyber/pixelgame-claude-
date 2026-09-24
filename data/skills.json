@@ -1,9 +1,146 @@
 [
-  {"id": "farming", "name": "Земледелие", "energy_tools": ["tool_hoe", "tool_can"]},
-  {"id": "fishing", "name": "Рыболовство"},
-  {"id": "seafaring", "name": "Мореходство"},
-  {"id": "diving", "name": "Ныряние"},
-  {"id": "crafting", "name": "Ремесло"},
-  {"id": "foraging", "name": "Собирательство"},
-  {"id": "keeping", "name": "Смотрительство"}
+ {
+  "id": "farming",
+  "name": "Земледелие",
+  "energy_tools": [
+   "tool_hoe",
+   "tool_can"
+  ],
+  "professions": {
+   "5": [
+    "gardener",
+    "herder"
+   ],
+   "10": {
+    "gardener": [
+     "salt_farmer",
+     "northern_gardener"
+    ],
+    "herder": [
+     "surf_shepherd",
+     "down_keeper"
+    ]
+   }
+  }
+ },
+ {
+  "id": "fishing",
+  "name": "Рыболовство",
+  "professions": {
+   "5": [
+    "angler",
+    "trapper"
+   ],
+   "10": {
+    "angler": [
+     "pier_legend",
+     "quiet_hand"
+    ],
+    "trapper": [
+     "netter",
+     "shellman"
+    ]
+   }
+  }
+ },
+ {
+  "id": "seafaring",
+  "name": "Мореходство",
+  "professions": {
+   "5": [
+    "pilot",
+    "skipper"
+   ],
+   "10": {
+    "pilot": [
+     "wind_son",
+     "fog_navigator"
+    ],
+    "skipper": [
+     "rescuer",
+     "smuggler"
+    ]
+   }
+  }
+ },
+ {
+  "id": "diving",
+  "name": "Ныряние",
+  "professions": {
+   "5": [
+    "salvager",
+    "deep_hunter"
+   ],
+   "10": {
+    "salvager": [
+     "pearler",
+     "rust_baron"
+    ],
+    "deep_hunter": [
+     "harpooner",
+     "whale_lungs"
+    ]
+   }
+  }
+ },
+ {
+  "id": "crafting",
+  "name": "Ремесло",
+  "professions": {
+   "5": [
+    "craftsman",
+    "optician"
+   ],
+   "10": {
+    "craftsman": [
+     "artel",
+     "cooper"
+    ],
+    "optician": [
+     "fresnel_pupil",
+     "glassblower"
+    ]
+   }
+  }
+ },
+ {
+  "id": "foraging",
+  "name": "Собирательство",
+  "professions": {
+   "5": [
+    "beachcomber",
+    "herbalist"
+   ],
+   "10": {
+    "beachcomber": [
+     "raven_eye",
+     "driftwood_master"
+    ],
+    "herbalist": [
+     "healer",
+     "hmar_forager"
+    ]
+   }
+  }
+ },
+ {
+  "id": "keeping",
+  "name": "Смотрительство",
+  "professions": {
+   "5": [
+    "fire_keeper",
+    "gravedigger"
+   ],
+   "10": {
+    "fire_keeper": [
+     "lighthouse_eye",
+     "night_pilot"
+    ],
+    "gravedigger": [
+     "soul_guide",
+     "stone_carver"
+    ]
+   }
+  }
+ }
 ]

@@ -77,7 +77,7 @@ static func strength_multiplier() -> float:
 
 static func sail_speed(heading: Vector2) -> float:
 	return float(boat_info().get("sail", 0.0)) * angle_multiplier(heading) * strength_multiplier() \
-		* (1.0 + 0.02 * float(Skills.level("seafaring")))
+		* (1.0 + 0.02 * float(Skills.level("seafaring"))) * (1.2 if Skills.has_profession("pilot") else 1.0)
 
 
 static func chunk_key(at: Vector2) -> String:

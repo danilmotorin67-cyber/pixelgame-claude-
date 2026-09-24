@@ -43,6 +43,11 @@ func _draw() -> void:
 			draw_rect(Rect2(-4, -3, 8, 5), Color("#2a2a30"))
 			if not entry.get("catch", []).is_empty():
 				draw_rect(Rect2(-2, -9, 4, 3), Color("#c2412d"))
+		"longline":
+			draw_circle(Vector2(0, -3), 3, Color("#e9643a"))
+			draw_rect(Rect2(-7, 0, 14, 1), Color("#c9b89a"))
+			if not entry.get("catch", []).is_empty():
+				draw_rect(Rect2(-2, -9, 4, 3), Color("#c2412d"))
 		"net":
 			for x in range(-7, 8, 3):
 				draw_rect(Rect2(x, -6, 1, 12), Color("#c9b89a"))
@@ -78,7 +83,12 @@ func interact(_player: Player) -> void:
 			hint.text = _net()
 		"clam":
 			hint.text = "Пузырьки на песке. Копать — лопатой (ЛКМ)."
-		"trap", "net":
+		"trap", "net", "longline":
+			if entry.get("catch", []).is_empty() and kind in ["trap", "longline"] and Input.is_key_pressed(KEY_SHIFT):
+				if Sea.take_up_gear(entry):
+					hint.text = "Снасть убрана в рюкзак."
+					queue_free()
+					return
 			var got := Sea.lift_gear(entry)
 			if not got.is_empty():
 				var names: Array[String] = []
@@ -87,6 +97,8 @@ func interact(_player: Player) -> void:
 				hint.text = "Улов: " + ", ".join(names)
 				if kind == "net":
 					queue_free()
+			elif kind == "longline":
+				hint.text = "Перемёт стоит до утра. Shift+E — снять пустой."
 			elif kind == "trap":
 				hint.text = "Наживка на месте. Утром проверим." if Sea.bait_trap(entry) \
 					else ("Ловушка ждёт утра." if bool(entry.get("baited", false)) else "Нужна наживка: рыбная, черви или мойва.")
