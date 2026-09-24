@@ -1,0 +1,406 @@
+{
+ "events": [
+  {
+   "id": "ev_margit_2",
+   "npc": "npc_margit",
+   "hearts": 2,
+   "trigger": {
+    "map": "village_margit",
+    "hours": [
+     9,
+     16
+    ],
+    "when": "hearts('npc_margit') >= 2"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_margit",
+     "counter",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit2.l01"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.margit2.c01",
+       [
+        [
+         "friendship",
+         "npc_margit",
+         80
+        ]
+       ],
+       "first"
+      ],
+      [
+       "ev.margit2.c02",
+       [
+        [
+         "friendship",
+         "npc_margit",
+         80
+        ]
+       ],
+       "second"
+      ],
+      [
+       "ev.margit2.c03",
+       [
+        [
+         "friendship",
+         "npc_margit",
+         80
+        ]
+       ],
+       "third"
+      ]
+     ]
+    ],
+    [
+     "label",
+     "first"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit2.l02"
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "second"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit2.l03"
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "third"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "sad",
+     "ev.margit2.l04"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "margit_third_husband"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_margit_4",
+   "npc": "npc_margit",
+   "hearts": 4,
+   "trigger": {
+    "map": "village_margit",
+    "hours": [
+     9,
+     16
+    ],
+    "when": "hearts('npc_margit') >= 4"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_margit",
+     "counter",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "branch",
+     "flag('pet_dog')",
+     "has_dog"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit4.l01"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "neutral",
+     "ev.margit4.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "pet_dog"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "has_dog"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit4.l03"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_margit_6",
+   "npc": "npc_margit",
+   "hearts": 6,
+   "trigger": {
+    "map": "village_margit",
+    "hours": [
+     9,
+     16
+    ],
+    "when": "hearts('npc_margit') >= 6"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_margit",
+     "loom",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      7,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit6.l01"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "neutral",
+     "ev.margit6.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "recipe",
+       "craft_keeper_sweater"
+      ],
+      [
+       "flag",
+       "margit_sweater"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_margit_8",
+   "npc": "npc_margit",
+   "hearts": 8,
+   "trigger": {
+    "map": "village_margit",
+    "hours": [
+     9,
+     16
+    ],
+    "when": "hearts('npc_margit') >= 8"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_margit",
+     "loom",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      7,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_margit",
+     "neutral",
+     "ev.margit8.l01"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit8.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "give",
+       "sailor_shawl",
+       1
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_margit_10",
+   "npc": "npc_margit",
+   "hearts": 10,
+   "trigger": {
+    "map": "village",
+    "hours": [
+     16,
+     19
+    ],
+    "when": "hearts('npc_margit') >= 10"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_margit",
+     "chapel_yard",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      20,
+      45
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_margit",
+     "neutral",
+     "ev.margit10.l01"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit10.l02"
+    ],
+    [
+     "say",
+     "npc_margit",
+     "happy",
+     "ev.margit10.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "margit_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

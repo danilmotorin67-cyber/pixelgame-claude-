@@ -1,0 +1,385 @@
+{
+ "events": [
+  {
+   "id": "ev_benedict_2",
+   "npc": "npc_benedict",
+   "hearts": 2,
+   "trigger": {
+    "map": "village_chapel",
+    "hours": [
+     9,
+     17
+    ],
+    "when": "hearts('npc_benedict') >= 2"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_benedict",
+     "pulpit",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      5
+     ]
+    ],
+    [
+     "face",
+     "hero",
+     "up"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict2.l01"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict2.l02"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "happy",
+     "ev.benedict2.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "benedict_chapel_story"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_benedict_4",
+   "npc": "npc_benedict",
+   "hearts": 4,
+   "trigger": {
+    "map": "village_chapel",
+    "hours": [
+     17,
+     20
+    ],
+    "when": "hearts('npc_benedict') >= 4"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_benedict",
+     "pew_3",
+     "up"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      5
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "sad",
+     "ev.benedict4.l01"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "sad",
+     "ev.benedict4.l02"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict4.l03"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.benedict4.c01",
+       [
+        [
+         "friendship",
+         "npc_benedict",
+         120
+        ]
+       ],
+       "pray"
+      ],
+      [
+       "ev.benedict4.c02",
+       [
+        [
+         "friendship",
+         "npc_benedict",
+         80
+        ]
+       ],
+       "fear"
+      ]
+     ]
+    ],
+    [
+     "label",
+     "pray"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "happy",
+     "ev.benedict4.l04"
+    ],
+    [
+     "end"
+    ],
+    [
+     "label",
+     "fear"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict4.l05"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_benedict_6",
+   "npc": "npc_benedict",
+   "hearts": 6,
+   "trigger": {
+    "map": "village_chapel",
+    "hours": [
+     9,
+     17
+    ],
+    "when": "hearts('npc_benedict') >= 6"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_benedict",
+     "pulpit",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      3
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict6.l01"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict6.l02"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "happy",
+     "ev.benedict6.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "keeper_word"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_benedict_8",
+   "npc": "npc_benedict",
+   "hearts": 8,
+   "trigger": {
+    "map": "cape",
+    "hours": [
+     10,
+     16
+    ],
+    "when": "hearts('npc_benedict') >= 8 and boat() != '' and weather == 'clear'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_benedict",
+     "landing",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      55,
+      50
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "sad",
+     "ev.benedict8.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.benedict8.l02"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict8.l03"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "happy",
+     "ev.benedict8.l04"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "benedict_boat"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_benedict_10",
+   "npc": "npc_benedict",
+   "hearts": 10,
+   "trigger": {
+    "map": "village_chapel",
+    "hours": [
+     20,
+     23
+    ],
+    "when": "hearts('npc_benedict') >= 10"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_benedict",
+     "candles",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      3,
+      3
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "happy",
+     "ev.benedict10.l01"
+    ],
+    [
+     "say",
+     "npc_benedict",
+     "neutral",
+     "ev.benedict10.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "benedict_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

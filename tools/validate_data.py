@@ -206,6 +206,22 @@ def check_people(tables, npc_ids) -> list:
                 if map_id not in maps or not spot_ok(map_id, spot):
                     errs.append(f"schedule {path.name} unknown place {map_id}:{spot}")
     errs.extend(check_scenes(tables, npc_ids, maps))
+    errs.extend(check_tags())
+    return errs
+
+
+def check_tags() -> list:
+    """Localization tags (2.4): only {name} and {male|female} forms, balanced in every string."""
+    import csv, re
+    errs = []
+    with open(ROOT / "localization" / "strings.csv", encoding="utf-8") as f:
+        for row in csv.reader(f):
+            for text in row[1:]:
+                if text.count("{") != text.count("}"):
+                    errs.append(f"string {row[0]} has unbalanced braces")
+                for tag in re.findall(r"\{([^{}]*)\}", text):
+                    if tag != "name" and tag.count("|") != 1:
+                        errs.append(f"string {row[0]} has an unknown tag {{{tag}}}")
     return errs
 
 

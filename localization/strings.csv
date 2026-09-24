@@ -3157,3 +3157,295 @@ ev.bjorn8.l02,"Первый хозяин утонул в бочке с этим 
 ev.bjorn10.l01,"Закрыто! Все по домам! …Кроме тебя. Садись. Сегодня я пью с тобой, а не наливаю.",Closing time! Everyone home! …Except you. Sit. Tonight I drink with you instead of pouring.
 ev.bjorn10.l02,"Тридцать лет за стойкой. Я знаю всех на острове. А меня, кажется, знаешь только ты.",Thirty years behind the bar. I know everyone on the island. And it seems only you know me.
 ev.bjorn10.l03,"За тебя, друг. Лучший клиент — это друг. Хоть и не платит.","To you, friend. The best customer is a friend. Even one who doesn't pay."
+item.sailor_shawl.name,Моряцкая шаль,Sailor's shawl
+item.sailor_shawl.desc,Тепло +15. Маргит вязала её для третьего мужа. Он не успел. Вы — успеете.,Warmth +15. Margit knitted it for her third husband. He never got the chance. You will.
+npc.margit.spring.01,"Весна, {милок|милая}! Овцы ягнятся, куры несутся, я — живу. Всё по плану.","Spring, dearie! Ewes lambing, hens laying, me — living. All according to plan."
+npc.margit.spring.02,"Невеста моря — это я. Море, правда, всё время бросает меня первым.",I'm the bride of the sea. Only the sea always leaves me first.
+npc.margit.spring.03,"Сено кончилось, а трава ещё не выросла. Весна — это когда всё уже кончилось, а ничего ещё не началось.",The hay's run out and the grass isn't up yet. Spring is when everything's finished and nothing's begun.
+npc.margit.spring.04,Нильс опять полез на крышу курятника. Фрейя опять его столкнула. Любят друг друга. По-своему.,Nils climbed on the henhouse roof again. Freya pushed him off again. They love each other. In their way.
+npc.margit.spring.05,Первый муж говорил: «Весной море доброе». Утонул весной. Второй не говорил ничего. Утонул осенью.,My first husband said: 'In spring the sea is kind.' Drowned in spring. The second said nothing. Drowned in autumn.
+npc.margit.spring.06,"Пряжа новая! Мягкая, как облако. Если облако — овца. А оно овца, {милок|милая}, ты посмотри.","New yarn! Soft as a cloud. If the cloud's a sheep. And it is a sheep, dearie, look."
+npc.margit.spring.07,"Собаку хочешь? У меня есть пёс. Якорь. Лохматый, как я. Бери, пока он тебя не выбрал сам.",Want a dog? I've got a dog. Anchor. Shaggy like me. Take him before he chooses you himself.
+npc.margit.spring.08,Утро. Кофе. Куры. Внуки. В таком порядке. Если перепутать — день пропал.,Morning. Coffee. Hens. Grandchildren. In that order. Mix them up and the day's lost.
+npc.margit.spring.09,"Весной я хожу на погост к мужьям. Говорю с ними. Они молчат. Как при жизни, только честнее.","In spring I visit my husbands at the graveyard. I talk to them. They say nothing. Like in life, only more honest."
+npc.margit.spring.10,"Не хмурься, {милок|милая}. Жизнь короткая. Особенно здесь. Улыбайся, пока зубы есть.","Don't frown, dearie. Life's short. Especially here. Smile while you've got teeth."
+npc.margit.summer.01,Лето! Стрижка! Овцы голые и злые. Я — довольная.,Summer! Shearing! The sheep are naked and cross. I'm pleased.
+npc.margit.summer.02,Внуки на лагуне весь день. Возвращаются мокрые и счастливые. Как их деды. Только живые.,The grandchildren are at the lagoon all day. They come back wet and happy. Like their grandfathers. Only alive.
+npc.margit.summer.03,Жара. Шерсть сохнет быстро. Я — медленно. Возраст.,Heat. Wool dries fast. I dry slow. Age.
+npc.margit.summer.04,Лив попросила перо тупика. Я дала гусиное. Она заметила. Умная девочка.,Liv asked for a puffin feather. I gave her a goose one. She noticed. Clever girl.
+npc.margit.summer.05,Третий муж утонул летом. Я надела чёрное. Потом сняла — жарко. Он бы понял.,My third husband drowned in summer. I wore black. Then took it off — too hot. He'd have understood.
+npc.margit.summer.06,Регата. Ставлю на Хедду. Мужья всегда ставили на себя. Проигрывали. И тонули. Хедда не тонет.,The regatta. My money's on Hedda. My husbands always bet on themselves. Lost. And drowned. Hedda doesn't drown.
+npc.margit.summer.07,"Ты {загорел|загорела}, {милок|милая}. Хорошо. Бледный смотритель — к покойнику. Примета.","You've a tan, dearie. Good. A pale keeper means a death coming. That's a sign."
+npc.margit.summer.08,Куры несутся плохо в жару. Как и я. Шучу. Я не несусь.,Hens lay badly in the heat. Same as me. Joking. I don't lay.
+npc.margit.summer.09,Ночь Белого Солнца! Я танцевала с тремя мужьями в разные годы. В этом году — с Бьорном. Он тяжелее.,White Sun Night! I've danced with three husbands in different years. This year — with Bjorn. He's heavier.
+npc.margit.summer.10,"Летом море красивое. Коварное, но красивое. Как второй муж.","The sea's beautiful in summer. Treacherous, but beautiful. Like my second husband."
+npc.margit.autumn.01,Осень! Шерсть в цене! Пряжа в цене! Я в цене! Все хотят тепла.,Autumn! Wool's dear! Yarn's dear! I'm dear! Everyone wants warmth.
+npc.margit.autumn.02,Второй муж утонул осенью. Я связала ему свитер. Он не успел надеть. Свитер ношу я. Тёплый.,My second husband drowned in autumn. I'd knitted him a jumper. He never got to wear it. I wear it. It's warm.
+npc.margit.autumn.03,Ярмарка! Продаю носки. Хедда покупает три пары. Всегда три. Не спрашиваю.,The fair! Selling socks. Hedda buys three pairs. Always three. I don't ask.
+npc.margit.autumn.04,"Шторма. Куры в курятнике, внуки в доме, я — у окна. Считаю лодки. Все вернулись. Хорошо.","Storms. Hens in the henhouse, grandchildren indoors, me at the window. Counting boats. They're all back. Good."
+npc.margit.autumn.05,Ночь Утопленников — мой праздник. Три фонаря. Три мужа. Я не грущу. Я вспоминаю.,Drowned Night — my holiday. Three lanterns. Three husbands. I'm not sad. I'm remembering.
+npc.margit.autumn.06,"Ты {устал|устала}, {милок|милая}. Сядь. Вот чай. Вот пирог. Вот я. Всё, что нужно.","You're tired, dearie. Sit. Here's tea. Here's pie. Here's me. All you need."
+npc.margit.autumn.07,Нильс и Фрейя основали клуб охотников за привидениями. Охотятся на моих мужей. Пока не поймали.,Nils and Freya have founded a ghost hunters' club. They're hunting my husbands. Haven't caught any yet.
+npc.margit.autumn.08,"Листья летят. Как письма, которые никто не прочтёт. Первый муж писал мне письма. Неграмотно, но с душой.","Leaves flying. Like letters nobody will read. My first husband wrote me letters. Badly spelled, but with heart."
+npc.margit.autumn.09,"Сено заготовила. Теперь зима не страшна. Ну, страшна. Но овцы сытые.","Hay's put up. Now winter's nothing to fear. Well, it is. But the sheep are fed."
+npc.margit.autumn.10,Осенью я вяжу. Много. Всем. Кто замёрзнет — ко мне. Кто уже замёрз — к тебе.,In autumn I knit. A lot. For everyone. Whoever's cold — come to me. Whoever's already frozen — to you.
+npc.margit.winter.01,"Зима! Овцы в хлеву, пряжа в корзине, я у печки. Счастье — это тёплый хлев.","Winter! Sheep in the barn, yarn in the basket, me by the stove. Happiness is a warm barn."
+npc.margit.winter.02,Долгая ночь. Рассказываю внукам про мужей. Приукрашиваю. Они верят. Пусть.,The long night. I tell the grandchildren about my husbands. I embellish. They believe it. Let them.
+npc.margit.winter.03,"Холодно, {милок|милая}? Держи варежки. Вязала для первого мужа. У него руки были как у тебя.","Cold, dearie? Take these mittens. Knitted them for my first husband. He had hands like yours."
+npc.margit.winter.04,"Лёд на лагуне. Внуки катаются. Я смотрю и считаю: раз, два. Оба. Хорошо.","Ice on the lagoon. The grandchildren are skating. I watch and count: one, two. Both. Good."
+npc.margit.winter.05,Метель. Куры не несутся. Я не выхожу. Все отдыхают.,Blizzard. Hens won't lay. I won't go out. Everyone's resting.
+npc.margit.winter.06,"Зимой мужья снятся чаще. Все трое. Спорят, кто лучше. Я говорю — я.",In winter my husbands come in dreams more often. All three. Arguing who was best. I say — me.
+npc.margit.winter.07,"Сияние! Первый муж говорил — это души утопленников танцуют. Может, он там. Танцует. Плохо, как всегда.","The aurora! My first husband said it's the souls of the drowned dancing. Maybe he's there. Dancing. Badly, as always."
+npc.margit.winter.08,Шарф Ингрид связала близнецам. Кривой. Я перевязала. Ингрид не заметила. Нильс сказал ей. Нильс — предатель.,Ingrid knitted the twins scarves. Crooked. I re-knitted them. Ingrid didn't notice. Nils told her. Nils is a traitor.
+npc.margit.winter.09,Зимой шерсть дорожает. Я не жадная. Я — сезонная.,Wool gets dearer in winter. I'm not greedy. I'm seasonal.
+npc.margit.winter.10,"Твой огонь из моего окна виден. Я говорю мужьям — не бойтесь, там смотритель. Они и не боятся. Им уже всё равно. А мне приятно.","Your light shows from my window. I tell my husbands — don't be afraid, the keeper's there. They're not afraid. It's all the same to them now. But it's nice for me."
+npc.margit.weather.rain.01,Дождь. Шерсть на овцах мокрая. Пахнет как третий муж после рыбалки.,Rain. The wool on the sheep's wet. Smells like my third husband after fishing.
+npc.margit.weather.rain.02,"{Промок|Промокла}, {милок|милая}? Иди, высушу у печки. И тебя, и носки.","Soaked, dearie? Come, I'll dry you by the stove. You and your socks."
+npc.margit.weather.storm.01,Шторм. Пересчитываю лодки у причала. Привычка вдовы. Три раза вдовы.,Storm. Counting the boats at the jetty. A widow's habit. Three times a widow.
+npc.margit.weather.storm.02,"В шторм я вяжу быстрее. Спицы стучат, как зубы. Держи огонь, милый.","In a storm I knit faster. The needles clatter like teeth. Keep the light going, love."
+npc.margit.weather.fog.01,Туман. Внуков — домой. Меня — к окну. Слушаю. Мужья зовут. Не иду.,Fog. Grandchildren — indoors. Me — to the window. Listening. The husbands are calling. I'm not going.
+npc.margit.weather.fog.02,В тумане я слышу голос второго мужа. Он зовёт меня «Маргариткой». Никто больше так не зовёт.,In fog I hear my second husband's voice. He calls me 'Daisy'. Nobody else calls me that.
+npc.margit.weather.snow.01,Снег! Внуки лепят снеговиков. Трёх. Называют их именами дедов. Смешно. И грустно.,Snow! The grandchildren are building snowmen. Three. Naming them after their grandfathers. Funny. And sad.
+npc.margit.weather.cloud.01,"Облачно. Хорошая погода, чтобы стричь. Овцы не потеют.",Cloudy. Good weather for shearing. The sheep don't sweat.
+npc.margit.festival.drowned_night.01,"Ночь Утопленников! Три фонаря. Иду к воде. Говорю: «Здравствуйте, мальчики». Они машут. Наверное.","Drowned Night! Three lanterns. I go down to the water. I say: 'Hello, boys.' They wave. Probably."
+npc.margit.festival.white_sun.01,Белое Солнце! Танцую! Три мужа — три танца. Сегодня — все с Бьорном.,White Sun! I'm dancing! Three husbands — three dances. Today — all with Bjorn.
+npc.margit.festival.herring_fair.01,"Ярмарка! Продаю носки, шарфы, варежки. Покупайте! Зима ближе, чем кажется.","The fair! Socks, scarves, mittens for sale. Buy! Winter's closer than you think."
+npc.margit.festival.long_night.01,Долгая ночь. Внуки не спят. Я рассказываю сказки. Страшные. Они смеются. Мои внуки.,The Long Night. The grandchildren won't sleep. I tell stories. Scary ones. They laugh. That's my grandchildren.
+npc.margit.festival.01,Праздник! Выпью за мужей. За каждого — по одной. Итого три. Не больше.,A holiday! I'll drink to my husbands. One for each. Three in all. No more.
+npc.margit.festival.02,"Танцуем! Мне шестьдесят три, а ноги помнят двадцать.","Let's dance! I'm sixty-three, but my feet remember twenty."
+npc.margit.gift.love.01,"Шерсть! Отличная! Ох, {милок|милая}, ты знаешь, как порадовать старуху!","Wool! Excellent wool! Oh, dearie, you know how to please an old woman!"
+npc.margit.gift.love.02,"Пирог с морошкой! Мой любимый! Первый муж пёк такой. Лучше, чем Сольвейг. Не говори ей.",Cloudberry pie! My favourite! My first husband baked one like this. Better than Solveig's. Don't tell her.
+npc.margit.gift.like.01,"Спасибо, {милок|милая}. Хорошее. Как ты.","Thank you, dearie. Good stuff. Like you."
+npc.margit.gift.like.02,"Ой, спасибо! Положу в сундук. К приданому. Для Фрейи.","Oh, thank you! I'll put it in the chest. For Freya's dowry."
+npc.margit.gift.neutral.01,Спасибо! Сгодится. В хозяйстве всё сгодится. Даже мужья. Были.,Thanks! It'll do. Everything's useful on a farm. Even husbands. Were.
+npc.margit.gift.neutral.02,"Хм, спасибо, {милок|милая}. Интересная вещь.","Hm, thanks, dearie. An interesting thing."
+npc.margit.gift.dislike.01,Ой. Ну… спасибо. Курам отдам. Они всё едят.,Oh. Well… thank you. I'll give it to the hens. They eat anything.
+npc.margit.gift.dislike.02,"Это не моё, милый. Но спасибо, что {подумал|подумала}.","It's not my sort of thing, love. But thanks for thinking of me."
+npc.margit.gift.hate.01,Нет-нет-нет. Это в дом не заноси. Мужья перевернутся.,"No, no, no. Don't bring that in the house. My husbands would turn in their graves."
+npc.margit.gift.hate.02,"Убери это, милый. Старуха не заслужила.","Put that away, love. An old woman doesn't deserve it."
+npc.margit.birthday.01,День рождения! Шестьдесят три! Пережила трёх мужей и четыре шторма. Праздную!,My birthday! Sixty-three! Outlived three husbands and four storms. Celebrating!
+npc.margit.birthday.02,Внуки подарили мне рисунок. Три мужа и я. Я самая большая. Правильно нарисовали.,The grandchildren gave me a drawing. Three husbands and me. I'm the biggest. They got it right.
+npc.margit.birthday_gift.01,"Подарок! Мне! Ох, {милок|милая}! Мужья так не баловали!","A present! For me! Oh, dearie! My husbands never spoiled me like this!"
+npc.margit.birthday_gift.02,"Помнишь мой день! Надо же. Садись, чаю налью. С вареньем.","You remember my day! Well I never. Sit down, I'll pour you tea. With jam."
+npc.margit.act1.01,Агата покупала у меня шерсть на носки. Вязала сама. Плохо. Я перевязывала. Она не знала.,Agatha bought wool from me for socks. Knitted them herself. Badly. I re-knitted them. She never knew.
+npc.margit.act1.02,"Новый смотритель! Добро пожаловать. Если что — у меня есть пёс, куры и мудрость. Бери любое, {милок|милая}.","A new keeper! Welcome. If you need anything — I've got a dog, hens and wisdom. Take any, dearie."
+npc.margit.act1.03,"Первый огонь видела. Сказала мужьям: «Смотрите, мальчики, снова светло». Им понравилось. Я так думаю.","Saw the first light. Told my husbands: 'Look, boys, it's light again.' They liked it. So I think."
+npc.margit.act1.04,{Похоронил|Похоронила} первого? Молодец. Первый всегда тяжелее. Потом — тоже тяжело. Но привычно.,Buried your first? Well done. The first is always hardest. After that — still hard. But familiar.
+npc.margit.act1.05,Пёс Якорь ждёт тебя с двадцатого. Бесплатно. Ест много. Любит сильно.,Anchor the dog's waiting for you from the twentieth. Free. Eats a lot. Loves a lot.
+npc.margit.act1.06,Конец весны. Первый муж ушёл в море в конце весны. Не люблю конец весны.,End of spring. My first husband went to sea at the end of spring. I don't like the end of spring.
+npc.margit.act2.01,«Святая Берта». Третий муж ушёл так же. Ясная ночь. Огонь на Зубах. Я думала — совпадение. Двадцать лет думала.,The Saint Bertha. My third husband went the same way. A clear night. A fire on the Teeth. I thought it was coincidence. Twenty years I thought so.
+npc.margit.act2.02,Белая Хмарь. Держала внуков. Пела им. Они уснули. Я — нет.,The White Fog. Held the grandchildren. Sang to them. They slept. I didn't.
+npc.margit.act2.03,"Двадцать в гротах… Есть старая песня: «Двадцать ушли за огнём, двадцать не видят дня». Бабушка пела.","Twenty in the grottoes… There's an old song: 'Twenty went after the fire, twenty will not see the day.' My granny sang it."
+npc.margit.act2.04,Внуки охотятся на призраков. Я волнуюсь. Призраки — не игрушка. Внуки — тоже.,The grandchildren are hunting ghosts. I worry. Ghosts aren't toys. Neither are grandchildren.
+npc.margit.act2.05,Лив хочет изучать туман. Я сказала — изучай. Только внуков не бери.,Liv wants to study the fog. I said — go ahead. Just don't take the grandchildren.
+npc.margit.act2.06,Большая Хмарь. Я закрою хлев и возьму внуков к себе. И пса. И кур. Все в одну кровать.,The Great Fog. I'll shut the barn and take the grandchildren in with me. And the dog. And the hens. All in one bed.
+npc.margit.act3.01,Третий муж утонул у Зубов. В ясную ночь. Теперь я знаю почему. Мне не легче. Мне злее.,My third husband drowned at the Teeth. On a clear night. Now I know why. It doesn't make it easier. It makes me angrier.
+npc.margit.act3.02,Ты ныряешь в Глубь. Мужья там. Передай: Маргарита помнит. И злится. На них — нет. На Грима — да.,You dive in the Deep. My husbands are there. Tell them: Margarita remembers. And is angry. Not at them. At Grim.
+npc.margit.act3.03,Внуки нашли в Гильдейском доме записку. «Ф». Одна буква. Я сожгла. Потом пожалела.,The grandchildren found a note in the Guild House. 'F'. One letter. I burned it. Then regretted it.
+npc.margit.act3.04,Зимой я вяжу быстрее. Руки заняты — голова не думает. Сейчас голова думает. Громко.,In winter I knit faster. Busy hands — no thinking. Right now my head is thinking. Loudly.
+npc.margit.act3.05,Улики? Мои мужья — улики. Три. В ясные ночи. Запиши.,Evidence? My husbands are evidence. Three. On clear nights. Write that down.
+npc.margit.act3.06,"Береги себя, {милок|милая}. Четвёртого покойника в семье я не переживу. Ты — почти семья.","Look after yourself, dearie. I couldn't survive a fourth death in the family. You're almost family."
+npc.margit.act4.01,"Великий Прилив. Раз в полвека. Бабушка видела последний. Говорила — море ушло так далеко, что видно было дно. И мёртвых.",The Great Tide. Once in fifty years. My granny saw the last one. Said the sea went out so far you could see the bottom. And the dead.
+npc.margit.act4.02,Если пойдёшь по дну — найди третьего мужа. Скажи: «Маргарита не вышла замуж в четвёртый раз». Он обрадуется.,If you walk the sea floor — find my third husband. Tell him: 'Margarita didn't marry a fourth time.' He'll be pleased.
+npc.margit.act4.03,Внуки со мной. Пёс со мной. Куры со мной. Все боятся. Я — нет. Я вдова. Мне нечего терять.,The grandchildren are with me. The dog's with me. The hens are with me. Everyone's scared. Not me. I'm a widow. I've nothing to lose.
+npc.margit.act4.04,Держи огонь. Мои мальчики ушли на чужой огонь. Пусть хоть кто-нибудь придёт на твой.,Keep the light. My boys went to a stranger's fire. Let someone at least come to yours.
+npc.margit.act4.05,Шаль тебе связала. Тёплую. Надень в ту ночь. Не спорь с бабушкой.,I knitted you a shawl. A warm one. Wear it that night. Don't argue with Granny.
+npc.margit.act4.06,После всего — приходи. Будем пить чай. Много чая. Живые пьют чай.,Afterwards — come by. We'll drink tea. Lots of tea. The living drink tea.
+npc.margit.married_other.01,"Поздравляю, {милок|милая}! Первый брак — самый сладкий. Я знаю, у меня их было три.","Congratulations, dearie! The first marriage is the sweetest. I should know, I had three."
+npc.margit.married_other.02,Свадьба красивая была. Я плакала. Вспомнила все три свои. Все три — красивые.,It was a beautiful wedding. I cried. Remembered all three of mine. All three were beautiful.
+npc.margit.married_other.03,Совет: не ходите в море в ясную ночь. Больше советов нет. Этого хватит.,My advice: don't go to sea on a clear night. That's all the advice. It's enough.
+npc.margit.married_other.04,Связала вам носки. Две пары. Одинаковые. Чтобы не спорили.,Knitted you socks. Two pairs. Matching. So you don't argue.
+npc.margit.married_other.05,"Живите долго. Дольше, чем мои мальчики. Это нетрудно. Но постарайтесь.",Live long. Longer than my boys. That's not hard. But do try.
+npc.margit.event.wreck.01,"Крушение. Ох. Опять чья-то жена будет вдовой. Я знаю, каково это. Три раза знаю.",A wreck. Oh. Some wife will be a widow again. I know how that is. Three times I know.
+npc.margit.event.wreck.02,Свяжу шарфы для выживших. Если будут. Если нет — для похорон.,I'll knit scarves for the survivors. If there are any. If not — for the funerals.
+npc.margit.event.wreck.03,Ясная ночь. Как с третьим. Кто-то зажигает огни. Я знаю. Все знают. Никто не говорит.,A clear night. Like with my third. Someone lights those fires. I know. Everyone knows. Nobody says.
+npc.margit.event.wreck.04,"Внуки спрашивают, почему корабли тонут. Я говорю — море сердится. Врать детям тоже надо уметь.",The grandchildren ask why ships sink. I say the sea's angry. Lying to children is a skill too.
+npc.margit.event.wreck.05,"Похорони их хорошо, {милок|милая}. Моих не хоронил никто. Море не отдало.","Bury them well, dearie. Nobody buried mine. The sea didn't give them back."
+npc.margit.event.funeral.01,{Похоронил|Похоронила}? Хорошо. Я поставлю свечу. За него. И за своих. Свечей много — мне не жалко.,Buried him? Good. I'll light a candle. For him. And for mine. I've plenty of candles — I don't mind.
+npc.margit.event.funeral.02,Мои мальчики лежат в море. Твои — в земле. Твоим лучше. Земля не качается.,My boys lie in the sea. Yours in the earth. Yours are better off. The earth doesn't rock.
+npc.margit.event.funeral.03,"Приду на погост с вязанием. Посижу. Им приятно, когда рядом кто-то живой.",I'll come to the graveyard with my knitting. Sit a while. They like it when someone living's nearby.
+npc.margit.event.funeral.04,"Каждая могила — чья-то любовь. Береги их, милый.","Every grave is someone's love. Look after them, love."
+npc.margit.event.funeral.05,Ещё один нашёл дом. Хорошо. Мои — всё ищут.,One more has found a home. Good. Mine are still looking.
+npc.margit.event.hmar.01,"Ночь Хмари. Мужья звали. Все трое. Хором. Я крикнула: «Спите, мальчики!» Замолчали.","Fog Night. My husbands called. All three. In chorus. I shouted: 'Go to sleep, boys!' They went quiet."
+npc.margit.event.hmar.02,Внуки спали у меня под одеялом. С псом. С курами. Утром всё было в перьях. Все живы.,The grandchildren slept under my blanket. With the dog. With the hens. In the morning everything was covered in feathers. Everyone's alive.
+npc.margit.event.hmar.03,"Твой свет ходил по дому. Я каждый раз говорила: «Вот, смотритель проверяет». Внуки успокаивались.","Your light went round the house. Each time I said: 'There, the keeper's checking.' The grandchildren calmed down."
+npc.margit.event.hmar.04,Утром у двери три мокрых следа. Большие. Мужские. Я их не стёрла. Пусть сохнут.,In the morning three wet footprints by the door. Big ones. A man's. I didn't wipe them. Let them dry.
+npc.margit.event.hmar.05,"Хмарь — это горе, говорит Хельга. Я вдова. Я знаю горе. Это не просто горе. Это брошенное горе.","The Fog is grief, Helga says. I'm a widow. I know grief. This isn't just grief. It's abandoned grief."
+npc.margit.event.inspection.01,"Инспектор Пальм купил у меня носки. Сказал — пункт тридцатый, тёплые ноги. Шутник.","Inspector Palm bought socks from me. Said — clause thirty, warm feet. A joker."
+npc.margit.event.inspection.02,"{Сдал|Сдала}? Молодец, {милок|милая}. Мои мальчики гордились бы. Они любили огонь.","Passed? Well done, dearie. My boys would be proud. They loved the light."
+npc.margit.event.inspection.03,Пальм спросил про овец. Я сказала — живые. Он записал. Всё записывает.,Palm asked about the sheep. I said — alive. He wrote it down. Writes everything down.
+npc.margit.event.inspection.04,Инспекции — как свекровь. Была у меня одна. Три свекрови. Все проверяли.,Inspections are like mothers-in-law. I had one. Three mothers-in-law. They all inspected.
+npc.margit.event.inspection.05,Огонь горит — корабли идут — мужья возвращаются. Хоть чьи-то.,"The fire burns — ships come — husbands come home. Somebody's, at least."
+npc.margit.event.wedding.01,Свадьба! Я танцевала! Бьорн уронил меня. Я уронила Бьорна. Весело!,The wedding! I danced! Bjorn dropped me. I dropped Bjorn. Such fun!
+npc.margit.event.wedding.02,Молодые — красивые. Я была такой же. Три раза.,The couple are beautiful. I was like that. Three times.
+npc.margit.event.wedding.03,Совет да любовь. И не ходите в море в ясную ночь. Это мой свадебный подарок.,Love and harmony. And don't go to sea on a clear night. That's my wedding present.
+npc.margit.event.wedding.04,Внуки бросали рис. И сельдь. И друг друга. Хорошие внуки.,The grandchildren threw rice. And herring. And each other. Good grandchildren.
+npc.margit.event.wedding.05,Связала вам плед. Большой. На двоих. На всю жизнь.,I knitted you a blanket. A big one. For two. For life.
+npc.margit.event.villains.01,Грим! Мой третий муж… из-за него. Двадцать лет. Я плюнула ему под ноги. Легче стало. Немного.,Grim! My third husband… because of him. Twenty years. I spat at his feet. It helped. A bit.
+npc.margit.event.villains.02,"Мальчики мои, слышите? Всё. Кончилось. Спите.","My boys, do you hear? It's over. Done. Sleep."
+npc.margit.event.villains.03,"Внуки спрашивают, почему бабушка плачет и смеётся. Я говорю — старость.",The grandchildren ask why Granny's crying and laughing. I say — old age.
+npc.margit.event.villains.04,Ингрид — хорошая девочка. Не виновата. Я связала ей шаль. Пусть греется.,Ingrid's a good girl. Not to blame. I knitted her a shawl. Let her keep warm.
+npc.margit.event.villains.05,"Спасибо, {милок|милая}. Теперь я — просто вдова. Не жертва. Это большая разница.","Thank you, dearie. Now I'm just a widow. Not a victim. That's a big difference."
+ev.margit2.l01,Хочешь про мужей? Все хотят. Выбирай: смешное или грустное. Смешных два. Грустное одно.,Want to hear about my husbands? Everyone does. Pick: funny or sad. There are two funny ones. One sad.
+ev.margit2.c01,Про первого.,The first.
+ev.margit2.c02,Про второго.,The second.
+ev.margit2.c03,Про третьего.,The third.
+ev.margit2.l02,"Первый ловил треску и пел. Пел так плохо, что треска сама прыгала в лодку — лишь бы не слушать. Утонул, когда петь перестал. Совпадение? Не думаю.",My first caught cod and sang. Sang so badly the cod jumped into the boat just to get away from it. Drowned when he stopped singing. Coincidence? I think not.
+ev.margit2.l03,"Второй был толстый и важный. Сказал, что море его не возьмёт — не поднимет. Взяло. Со второй попытки.",My second was fat and important. Said the sea couldn't take him — couldn't lift him. It did. At the second attempt.
+ev.margit2.l04,"Третий был тихий. Любил меня молча. Ушёл в ясную ночь на огонь у Зубов. Сказал: «Маяк, значит, дойду». Не дошёл. Я до сих пор держу его кружку.","My third was quiet. Loved me without words. Went out on a clear night to the light at the Teeth. Said: 'That's the lighthouse, I'll make it.' He didn't. I still keep his mug."
+ev.margit4.l01,"Якорь! Иди сюда, лохматый. Вот твой новый человек. Не спорь. Я вижу, вы подходите.","Anchor! Come here, you shaggy thing. Here's your new person. Don't argue. I can see you're a match."
+ev.margit4.l02,Кормить дважды в день. Гладить — сколько влезет. Он раз в несколько дней будет приносить находки. Не все пригодятся.,Feed him twice a day. Stroke him as much as you like. Every few days he'll bring you finds. Not all of them useful.
+ev.margit4.l03,"Как там Якорь? Толстеет? Хорошо. Значит, любишь.",How's Anchor? Getting fat? Good. That means you love him.
+ev.margit6.l01,Садись. Научу вязать свитер смотрителя. С оленями. Олени — к удаче. Первый муж носил. Без удачи.,Sit. I'll teach you the keeper's jumper. With reindeer. Reindeer bring luck. My first husband wore one. Without the luck.
+ev.margit6.l02,"Две лицевые, одна изнаночная, и думай о тёплом. Если думать о холодном — свитер не греет. Проверено.","Two knit, one purl, and think of something warm. Think of something cold and the jumper won't warm you. Tested."
+ev.margit8.l01,Вот. Моряцкая шаль. Вязала третьему. Он не успел. Двадцать лет лежала в сундуке.,Here. A sailor's shawl. I knitted it for my third. He never got the chance. Twenty years in the chest.
+ev.margit8.l02,Бери. Тебе нужнее. Он бы не обиделся. Он никогда не обижался. Тихий был.,Take it. You need it more. He wouldn't mind. He never minded anything. A quiet one.
+ev.margit10.l01,Пойдём со мной к морю. Я хочу познакомить тебя с мальчиками.,Come down to the sea with me. I want you to meet my boys.
+ev.margit10.l02,"Мальчики, это смотритель. Хороший. Честный. Огонь держит. Ваш бы тоже держал, если бы был.","Boys, this is the keeper. A good one. Honest. Keeps the light. Would have kept yours too, if there'd been one."
+ev.margit10.l03,Всё. Познакомились. Теперь ты — семья. Приходи на чай. Каждый день. Это приказ бабушки.,There. You've met. Now you're family. Come for tea. Every day. Granny's orders.
+npc.benedict.spring.01,"Господь создал море, чтобы мы ценили сушу. Весной я ценю её особенно.",The Lord made the sea so that we would value dry land. In spring I value it especially.
+npc.benedict.spring.02,"Мир вам, {сын мой|дочь моя}. Свечи подорожали. Господь простит торговцев. Я пока думаю.","Peace be with you, my child. Candles have gone up. The Lord will forgive the merchants. I'm still deciding."
+npc.benedict.spring.03,Весной я благословляю лодки. С шестом в три метра. Кисть длинная — вера крепкая.,In spring I bless the boats. With a ten-foot pole. A long brush — a strong faith.
+npc.benedict.spring.04,Цветы у часовни поливаю из кружки. Лейка слишком похожа на маленькое море.,I water the flowers by the chapel from a mug. A watering can looks too much like a small sea.
+npc.benedict.spring.05,"Первые ласточки. Птицы, которые не боятся ни неба, ни моря. Я завидую им в молитвах.",The first swallows. Birds that fear neither sky nor sea. I envy them in my prayers.
+npc.benedict.spring.06,"Вы хороните утопленников, {сын мой|дочь моя}. Это богоугодно. И мокро. Я бы не смог.","You bury the drowned, my child. It's pleasing to God. And wet. I couldn't."
+npc.benedict.spring.07,Святой Эльм — покровитель моряков. Я — его служитель. Ирония небес.,Saint Elmo — patron of sailors. I'm his servant. Heaven's irony.
+npc.benedict.spring.08,Ветер несёт брызги до часовни. Я закрываю окно. Господь видит сквозь стекло.,The wind carries spray up to the chapel. I shut the window. The Lord sees through glass.
+npc.benedict.spring.09,Приходите в воскресенье. Служба с девяти. Проповедь — про сушу. Как всегда.,Come on Sunday. Service from nine. The sermon's about dry land. As always.
+npc.benedict.spring.10,Весна — время надежды. На острове надежда пахнет солью. Я привык. Почти.,Spring is a time of hope. On this island hope smells of salt. I've got used to it. Almost.
+npc.benedict.summer.01,Лето. Все купаются. Я читаю молитву за купающихся. С берега. С высокого берега.,Summer. Everyone's bathing. I pray for the bathers. From the shore. From the high shore.
+npc.benedict.summer.02,Жара. В часовне прохладно. Приходите. Здесь нет воды. Совсем.,Heat. It's cool in the chapel. Do come. There's no water here. None at all.
+npc.benedict.summer.03,"Лив спросила, верю ли я в науку. Я сказал — верю, что Господь её тоже создал. Она задумалась.",Liv asked if I believe in science. I said — I believe the Lord made that too. She fell to thinking.
+npc.benedict.summer.04,Регата. Я благословляю участников. Издалека. Очень издалека.,The regatta. I bless the entrants. From afar. From very far.
+npc.benedict.summer.05,Ночь Белого Солнца. Солнце не садится. Бог не спит. Я — тоже.,White Sun Night. The sun won't set. God doesn't sleep. Neither do I.
+npc.benedict.summer.06,"Вы загорели, {сын мой|дочь моя}. Господь любит трудящихся. И солнце их любит. Слишком.","You've got brown, my child. The Lord loves those who toil. And so does the sun. Too much."
+npc.benedict.summer.07,Мёд вересковый — дар Божий. Хельга говорит — дар пчёл. Мы оба правы.,Heather honey — a gift of God. Helga says — a gift of bees. We're both right.
+npc.benedict.summer.08,Летом свадьбы. Я венчаю. Стою подальше от окна. Из окна видно море.,Summer means weddings. I marry them. I stand well away from the window. You can see the sea from it.
+npc.benedict.summer.09,Сухари смотрителя! Агата приносила их мне. Сухие. Святые. Как я люблю.,Keeper's rusks! Agatha used to bring me those. Dry. Holy. Just as I like.
+npc.benedict.summer.10,Лето коротко. Как жизнь моряка. Молюсь за длинное лето.,Summer is short. Like a sailor's life. I pray for a long summer.
+npc.benedict.autumn.01,"Осень. Шторма. Я много молюсь. Господь, наверное, устал от моего голоса.",Autumn. Storms. I pray a lot. The Lord must be tired of my voice.
+npc.benedict.autumn.02,Отпевания по воскресеньям. Пятьдесят крон. Деньги — на свечи. Свечи — за них.,Funeral rites on Sundays. Fifty crowns. The money goes on candles. The candles go for them.
+npc.benedict.autumn.03,Ночь Утопленников — языческий праздник. Я прихожу. С молитвой. И с фонарём. Одно другому не мешает.,Drowned Night is a pagan feast. I come. With a prayer. And a lantern. The one doesn't hinder the other.
+npc.benedict.autumn.04,Сельдь идёт. Рыбаки уходят. Я стою на колокольне и считаю паруса. Все ли вернутся.,The herring run. The fishermen go out. I stand in the belfry counting sails. Will they all come back.
+npc.benedict.autumn.05,"Вы устали, {сын мой|дочь моя}. Садитесь на скамью. Отдохните. Здесь сухо.","You're tired, my child. Sit on the pew. Rest. It's dry here."
+npc.benedict.autumn.06,"Листопад. Каждый лист — чья-то душа, говорят старухи. Я не спорю. Я подметаю.","Leaf-fall. Every leaf is someone's soul, the old women say. I don't argue. I sweep."
+npc.benedict.autumn.07,Ярмарка. Грех чревоугодия. Я борюсь. Сельдь побеждает.,The fair. The sin of gluttony. I struggle. The herring wins.
+npc.benedict.autumn.08,Осенью я читаю жития святых мореплавателей. Они все утонули. Святость — мокрое дело.,In autumn I read the lives of sailor saints. They all drowned. Holiness is a wet business.
+npc.benedict.autumn.09,Ветер воет в колокольне. Похоже на хор. Плохой хор. Но искренний.,The wind howls in the belfry. Like a choir. A bad choir. But sincere.
+npc.benedict.autumn.10,Осень учит смирению. Всё уходит. Остаётся вера. И свечи. Свечи я закупил.,Autumn teaches humility. Everything passes. Faith remains. And candles. I've stocked up on candles.
+npc.benedict.winter.01,Зима. Море замёрзло у берега. Я впервые за год подхожу ближе. На шаг.,Winter. The sea's frozen along the shore. For the first time this year I go closer. One step.
+npc.benedict.winter.02,Долгая ночь. Служба до рассвета. Свечи горят. Люди поют. Бог слушает. Я надеюсь.,The long night. A service till dawn. Candles burning. People singing. God listening. I hope.
+npc.benedict.winter.03,"Зимой хоронить трудно. Земля мёрзлая. Молюсь за ваш лом, дитя.","Burying is hard in winter. The ground's frozen. I pray for your crowbar, child."
+npc.benedict.winter.04,"Лёд на лагуне. Дети катаются. Я смотрю с берега и молюсь. Лёд — это море, которое передумало. Может передумать снова.",Ice on the lagoon. Children skating. I watch from the bank and pray. Ice is the sea that changed its mind. It might change it back.
+npc.benedict.winter.05,"Сияние — это Божий свет. Или заряженные частицы, говорит Лив. Божьи частицы.","The aurora is God's light. Or charged particles, Liv says. God's particles."
+npc.benedict.winter.06,Метель. Никто не придёт на службу. Я служу для пустых скамей. Бог их тоже слышит.,Blizzard. Nobody will come to service. I preach to empty pews. God hears them too.
+npc.benedict.winter.07,Горячий чай. Сухари. Тишина. Зимний рай для боязливого священника.,Hot tea. Rusks. Silence. A winter paradise for a timid priest.
+npc.benedict.winter.08,"Ваш огонь зимой — как свеча в окне Господа. Не гасите его, {сын мой|дочь моя}.","Your light in winter is like a candle in God's window. Don't let it go out, my child."
+npc.benedict.winter.09,"Снег чистый. Как исповедь. Жаль, что тает.",Snow is clean. Like a confession. Pity it melts.
+npc.benedict.winter.10,Весна придёт. Лёд растает. Море вернётся. Я — опять на высокий берег.,Spring will come. The ice will melt. The sea will come back. And me — back up the high shore.
+npc.benedict.weather.rain.01,"Дождь. Вода с неба — это ещё терпимо. Она хотя бы падает, а не наступает.",Rain. Water from the sky is bearable. At least it falls rather than advances.
+npc.benedict.weather.rain.02,В дождь в часовню приходят больше людей. Сухо. Бог и крыша — хорошая пара.,More people come to chapel in the rain. It's dry. God and a roof — a good pair.
+npc.benedict.weather.storm.01,Шторм. Я звоню в колокол каждый час. Чтобы в море знали: на берегу молятся.,Storm. I ring the bell every hour. So those at sea know: people are praying ashore.
+npc.benedict.weather.storm.02,"Держите огонь, дитя. А я подержу молитву. Вдвоём дотянем до утра.","Keep the light, child. And I'll keep the prayer. Together we'll last till morning."
+npc.benedict.weather.fog.01,"Туман. Мне кажется, море пришло на сушу. Я закрыл двери. Молюсь громче.",Fog. It feels as if the sea has come ashore. I've shut the doors. I'm praying louder.
+npc.benedict.weather.fog.02,В тумане голоса. Я читаю заупокойную. На всякий случай. Им нравится.,Voices in the fog. I read the prayers for the dead. Just in case. They like it.
+npc.benedict.weather.snow.01,Снег. Благодать. Вода в твёрдом виде — моя любимая вода.,Snow. A blessing. Water in solid form — my favourite kind of water.
+npc.benedict.weather.cloud.01,Пасмурно. Господь задумался. Не будем его торопить.,Overcast. The Lord is thinking. Let's not rush Him.
+npc.benedict.festival.boat_blessing.01,Спуск лодок! Мой день! Кисть на шесте! Три метра веры и ни сантиметра ближе!,The Boat Launch! My day! The brush on its pole! Ten feet of faith and not an inch closer!
+npc.benedict.festival.drowned_night.01,Ночь Утопленников. Я читаю молитву у воды. Первый раз в году стою так близко. Раз в год можно.,Drowned Night. I say a prayer by the water. The one time a year I stand so close. Once a year is allowed.
+npc.benedict.festival.long_night.01,Долгая ночь. Всенощная. Свечи до потолка. Самая тёплая ночь в году.,The Long Night. An all-night vigil. Candles to the ceiling. The warmest night of the year.
+npc.benedict.festival.ice_festival.01,Ледовый праздник. Я благословляю скульптуры. Они растают. Благословение останется.,The Ice Festival. I bless the sculptures. They'll melt. The blessing will stay.
+npc.benedict.festival.01,Праздник. Радость — тоже молитва. Громкая.,A holiday. Joy is a prayer too. A loud one.
+npc.benedict.festival.02,Я не танцую. Сан не позволяет. Ногами. Душой — пляшу.,I don't dance. My office forbids it. With my feet. With my soul — I'm dancing.
+npc.benedict.gift.love.01,"Свечи! Восковые! Благослови вас Господь, дитя. Буквально — сейчас благословлю.","Candles! Beeswax! God bless you, child. Literally — I'll bless you right now."
+npc.benedict.gift.love.02,"Сухари смотрителя… Как у Агаты. Я… простите, я растрогался. Благодарю.","Keeper's rusks… Like Agatha's. I… forgive me, I'm moved. Thank you."
+npc.benedict.gift.like.01,Благодарю. Дар от сердца угоден Богу. И мне.,Thank you. A gift from the heart is pleasing to God. And to me.
+npc.benedict.gift.like.02,"Какая радость. Поставлю у алтаря. Нет, у себя. Грешен.","What a joy. I'll put it by the altar. No, in my room. I'm a sinner."
+npc.benedict.gift.neutral.01,"Спасибо, дитя. Всё пригодится в хозяйстве часовни.","Thank you, child. Everything's of use in the chapel's household."
+npc.benedict.gift.neutral.02,Благодарю. Господь найдёт этому применение. Я — пока нет.,Thank you. The Lord will find a use for it. I haven't yet.
+npc.benedict.gift.dislike.01,Это… из моря? Благодарю. Положу подальше. Очень подальше.,Is this… from the sea? Thank you. I'll put it away. Far away.
+npc.benedict.gift.dislike.02,Спасибо. Отдам бедным. У нас их много. Все рыбаки.,Thank you. I'll give it to the poor. We have many. All fishermen.
+npc.benedict.gift.hate.01,"Рыба! Мокрая! В часовне! Господи, помилуй. Уберите, дитя, прошу.","Fish! Wet! In the chapel! Lord have mercy. Take it away, child, I beg you."
+npc.benedict.gift.hate.02,"Нет-нет, рыбу — нет. Простите. Это не грех. Это страх. Грех — тоже, наверное.","No, no, not fish. Forgive me. It's not a sin. It's fear. That's probably a sin too."
+npc.benedict.birthday.01,День рождения. Сорок пять. Господь дал мне ещё год на суше. Благодарю.,My birthday. Forty-five. The Lord has given me another year on dry land. I'm grateful.
+npc.benedict.birthday.02,Прихожане подарили мне сапоги. Непромокаемые. Намёк понял. Не надену.,The parishioners gave me boots. Waterproof. I took the hint. I won't wear them.
+npc.benedict.birthday_gift.01,Подарок? Мне? Благослови вас Бог. Дважды.,A present? For me? God bless you. Twice.
+npc.benedict.birthday_gift.02,Вы вспомнили. Люди редко помнят священников. Только когда нужны похороны.,You remembered. People rarely remember priests. Only when a funeral's needed.
+npc.benedict.act1.01,Агата приходила на службу раз в год. На Ночь Утопленников. Стояла у двери. Молилась по-своему.,Agatha came to service once a year. On Drowned Night. Stood by the door. Prayed in her own way.
+npc.benedict.act1.02,"Добро пожаловать, {сын мой|дочь моя}. Часовня открыта. Для живых. Для мёртвых — тоже, по воскресеньям.","Welcome, my child. The chapel's open. For the living. For the dead too — on Sundays."
+npc.benedict.act1.03,Первого утопленника отпевать ко мне. В воскресенье. Пятьдесят крон и две свечи.,Bring your first drowned man to me for the rites. On Sunday. Fifty crowns and two candles.
+npc.benedict.act1.04,Первый огонь видел с колокольни. Перекрестился. Трижды. Потом ещё раз — за Агату.,Saw the first light from the belfry. Crossed myself. Three times. Then once more — for Agatha.
+npc.benedict.act1.05,"Спуск лодок скоро. Я уже тренирую руку. Шест тяжёлый, море близко.","The Boat Launch is soon. I'm already training my arm. The pole's heavy, the sea's close."
+npc.benedict.act1.06,"Конец весны. Звоню в колокол каждую ночь. Кто-то должен звонить, если огонь погаснет.",End of spring. I ring the bell every night. Someone has to ring if the light goes out.
+npc.benedict.act2.01,"«Святая Берта». Я отпел их всех. Троих. Пеннингтон, Мартин, Вера. Имена — главное.","The Saint Bertha. I gave rites to them all. Three. Pennington, Martin, Vera. Names are what matter."
+npc.benedict.act2.02,Белая Хмарь. Я звонил в колокол до утра. Руки в крови. Туман не вошёл в часовню.,The White Fog. I rang the bell till dawn. My hands bled. The fog didn't enter the chapel.
+npc.benedict.act2.03,Двадцать в гротах. Двадцать отпеваний. Бесплатно. Не спорьте. Это мой долг.,Twenty in the grottoes. Twenty funeral rites. Free. Don't argue. It's my duty.
+npc.benedict.act2.04,Хельга говорит — Уговор с морем. Церковь против уговоров с морем. Я — не уверен.,Helga speaks of a Pact with the sea. The Church is against pacts with the sea. I'm — not sure.
+npc.benedict.act2.05,"Лив спросила, как Бог относится к туману. Я сказал — с терпением. Как и я.",Liv asked how God regards the fog. I said — with patience. Like me.
+npc.benedict.act2.06,"Большая Хмарь. Колокол, свечи, молитва. И ваш огонь. Вместе должно хватить.","The Great Fog. Bell, candles, prayer. And your light. Together it should be enough."
+npc.benedict.act3.01,Вы спускаетесь в Глубь. Под воду. Я молюсь за вас каждую ночь. Это самая трудная молитва — про воду.,You go down into the Deep. Under the water. I pray for you every night. It's the hardest prayer — about water.
+npc.benedict.act3.02,В затонувшем Сольвике есть церковь. С колокольней. Там кто-то звонит? Не отвечайте.,There's a church in sunken Solvik. With a belfry. Does someone ring the bell down there? Don't answer.
+npc.benedict.act3.03,Хальвдан сидит в первом ряду каждое воскресенье. Я смотрю на него и молюсь. Не за него. Против.,Halvdan sits in the front row every Sunday. I look at him and pray. Not for him. Against.
+npc.benedict.act3.04,Исповедь — тайна. Но если бы я мог сказать… Не могу. Ищите сами.,Confession is sacred. But if I could say… I can't. Search for yourself.
+npc.benedict.act3.05,"Пастор Нильсен из затонувшей церкви — мой предшественник. Говорят, он там звонит. Если найдёте — скажите: служба продолжается.",Pastor Nilsen of the sunken church — my predecessor. They say he rings down there. If you find him — tell him: the service continues.
+npc.benedict.act3.06,Страшно ли мне? Всегда. Но вера — это когда страшно и всё равно идёшь.,Am I afraid? Always. But faith is when you're afraid and go anyway.
+npc.benedict.act4.01,"В ночь Прилива я благословлю ваш фонарь. Свет, благословлённый дважды, жжёт вдвойне.",On Tide Night I'll bless your lantern. Light blessed twice burns twice as hot.
+npc.benedict.act4.02,"Море уйдёт. Впервые в жизни я увижу дно. Может, тогда перестану бояться. Или начну по-настоящему.",The sea will go out. For the first time in my life I'll see the bottom. Perhaps then I'll stop being afraid. Or start in earnest.
+npc.benedict.act4.03,Колокол будет звонить всю ночь. Сигрид — у колокола. Я — у алтаря. Вы — у огня.,The bell will ring all night. Sigrid at the bell. Me at the altar. You at the fire.
+npc.benedict.act4.04,Если пойдёте по дну — я пойду с вами до кромки. Дальше — не смогу. Простите.,If you walk the sea floor — I'll go with you to the edge. No further. Forgive me.
+npc.benedict.act4.05,"Господь создал море. И Ранн — тоже, наверное. Значит, и с ней можно договориться.","The Lord made the sea. And Rann too, probably. So even she can be reasoned with."
+npc.benedict.act4.06,Возвращайтесь. Я приготовлю благодарственную службу. Мне так хочется её отслужить.,Come back. I'll prepare a service of thanksgiving. I so want to hold it.
+npc.benedict.married_other.01,"Я венчал вас, {сын мой|дочь моя}. Стоял подальше от окна. Но сердцем был рядом.","I married you, my child. Stood well away from the window. But my heart was close."
+npc.benedict.married_other.02,Брак — таинство. На острове — ещё и подвиг. Благослови вас Бог.,Marriage is a sacrament. On this island it's also a feat. God bless you.
+npc.benedict.married_other.03,"Молюсь за вашу семью. Каждое утро. Коротко, но искренне.","I pray for your family. Every morning. Briefly, but sincerely."
+npc.benedict.married_other.04,Если понадобится крестить — приходите. Купель у меня маленькая. Мне так спокойнее.,If you need a christening — come. My font's a small one. I'm easier that way.
+npc.benedict.married_other.05,Любите друг друга. Больше заповедей нет. Остальное — толкования.,Love one another. There are no other commandments. The rest is commentary.
+npc.benedict.event.wreck.01,Крушение. Я звонил в колокол всю ночь. Никто не пришёл. Никто не мог.,A wreck. I rang the bell all night. Nobody came. Nobody could.
+npc.benedict.event.wreck.02,Отпою всех. Бесплатно. Список имён — у Олафа. Я прочту каждое.,I'll give rites to them all. Free. Olaf has the list of names. I'll read out every one.
+npc.benedict.event.wreck.03,"Господь, почему в ясную ночь? Я спрашиваю каждый раз. Он молчит. Люди — тоже.","Lord, why on a clear night? I ask every time. He's silent. So are people."
+npc.benedict.event.wreck.04,Свечи горят за них. Все свечи часовни. Пусть видят дорогу.,The candles are burning for them. Every candle in the chapel. Let them see the way.
+npc.benedict.event.wreck.05,Принесите их ко мне. Я… я подойду к носилкам. Даже мокрым. Ради них — подойду.,Bring them to me. I'll… I'll come up to the stretchers. Even wet ones. For them — I will.
+npc.benedict.event.funeral.01,"Вы похоронили. Я отпел. Хорошая работа, дитя. Божья работа.","You buried him. I gave the rites. Good work, child. God's work."
+npc.benedict.event.funeral.02,"Каждый, кого вы кладёте в землю, спасён от моря. Это спасение. Настоящее.",Everyone you lay in the earth is saved from the sea. That's salvation. The real kind.
+npc.benedict.event.funeral.03,Я помолился над могилой. Коротко. Вода рядом. Но помолился.,I prayed over the grave. Briefly. The water's near. But I prayed.
+npc.benedict.event.funeral.04,Знак хороший. Крест ровный. Имя верное. Так и надо.,A good marker. The cross straight. The name right. That's how it should be.
+npc.benedict.event.funeral.05,"Упокой, Господи, душу раба Твоего. И дай сил тому, кто копал.","Rest, O Lord, the soul of Thy servant. And give strength to the one who dug."
+npc.benedict.event.hmar.01,Ночь Хмари. Колокол звонил до рассвета. Туман не вошёл. Колокол — лучшая молитва.,Fog Night. The bell rang till dawn. The fog didn't come in. A bell's the best prayer.
+npc.benedict.event.hmar.02,Люди прибежали в часовню. Сорок человек. Я читал псалмы. Все пели. Даже Хедда. Шёпотом.,People ran to the chapel. Forty of them. I read psalms. Everyone sang. Even Hedda. In a whisper.
+npc.benedict.event.hmar.03,Туман пел за окнами. Колыбельную. Детскую. Мне стало жаль его. Это грех? Не знаю.,The fog sang outside the windows. A lullaby. A child's. I felt sorry for it. Is that a sin? I don't know.
+npc.benedict.event.hmar.04,Ваш свет проходил сквозь витраж. Святой Эльм светился. Я плакал. От красоты. И от страха.,Your light shone through the stained glass. Saint Elmo glowed. I wept. From beauty. And fear.
+npc.benedict.event.hmar.05,Утром на ступенях часовни — лужа. Солёная. Будто кто-то плакал всю ночь у дверей.,In the morning — a puddle on the chapel steps. Salty. As if someone had wept all night at the door.
+npc.benedict.event.inspection.01,Инспектор Пальм пришёл на службу. Сел в последний ряд. Записывал проповедь. Пункт какой-то.,Inspector Palm came to service. Sat in the back row. Took notes on the sermon. Some clause.
+npc.benedict.event.inspection.02,Сдали? Слава Богу. Я молился. Пальм — неверующий. Но справедливый. Это почти одно и то же.,Passed? Thank God. I prayed. Palm's no believer. But he's fair. That's almost the same thing.
+npc.benedict.event.inspection.03,Инспекция — это как Страшный суд. Только с бумагами. И чаще.,An inspection is like the Last Judgement. Only with paperwork. And more often.
+npc.benedict.event.inspection.04,"Пальм спросил, почему часовня так далеко от моря. Я сказал: «Пункт личный».",Palm asked why the chapel's so far from the sea. I said: 'A personal clause.'
+npc.benedict.event.inspection.05,Огонь горит — корабли видят — люди живы. Вот и вся инспекция. Небесная.,The fire burns — ships see it — people live. That's the whole inspection. The heavenly one.
+npc.benedict.event.wedding.01,Свадьба. Я венчал. Хедда бросила в меня сельдь. На счастье. Я упал. Тоже на счастье.,The wedding. I officiated. Hedda threw a herring at me. For luck. I fell over. Also for luck.
+npc.benedict.event.wedding.02,Самая красивая служба года. Никто не утонул. Даже в эле.,The most beautiful service of the year. Nobody drowned. Not even in ale.
+npc.benedict.event.wedding.03,"Бьорн налил мне. Я выпил. Первый раз за год. Господь простит. Бьорн — нет, будет рассказывать.",Bjorn poured me one. I drank it. First time this year. The Lord will forgive. Bjorn won't — he'll tell everyone.
+npc.benedict.event.wedding.04,"Два человека стали одним. Это чудо. Малое, но настоящее.","Two people became one. That's a miracle. A small one, but real."
+npc.benedict.event.wedding.05,Совет да любовь. И пусть ваш дом стоит на высоком берегу. Это мой личный совет.,Love and harmony. And may your house stand on a high shore. That's my personal advice.
+npc.benedict.event.villains.01,Хальвдан исповедался. Публично. На причале. Я стоял рядом. У воды. Не заметил.,Halvdan confessed. Publicly. On the jetty. I stood beside him. By the water. Didn't even notice.
+npc.benedict.event.villains.02,Прощение — дело Бога. Суд — дело людей. Я молюсь за обоих.,Forgiveness is God's business. Judgement is people's. I pray for both.
+npc.benedict.event.villains.03,Двадцать безымянных отпеты. Сорок лет ложных огней отмолены. Я устал. Я счастлив.,The twenty nameless have had their rites. Forty years of false fires prayed over. I'm tired. I'm happy.
+npc.benedict.event.villains.04,Ингрид пришла в часовню. Мы сидели молча. Это тоже молитва. Лучшая.,Ingrid came to the chapel. We sat in silence. That's a prayer too. The best kind.
+npc.benedict.event.villains.05,"Благодарю вас, дитя. Вы сделали то, что должна была сделать церковь. Сорок лет назад.","Thank you, child. You did what the Church should have done. Forty years ago."
+ev.benedict2.l01,Часовню построили триста лет назад. Моряки. На самом высоком месте деревни. Подальше от моря. Мудрые люди.,The chapel was built three hundred years ago. By sailors. On the highest spot in the village. Well away from the sea. Wise men.
+ev.benedict2.l02,Витраж — святой Эльм. Огонь на мачте. Моряки верили: если он горит — корабль спасён.,The stained glass — Saint Elmo. Fire on a mast. Sailors believed: if it burns — the ship is saved.
+ev.benedict2.l03,Ваш маяк — тот же огонь святого Эльма. Только на берегу. Я молюсь за него. Как за часовню.,Your lighthouse is the same Saint Elmo's fire. Only on land. I pray for it. As for the chapel.
+ev.benedict4.l01,"Вы спрашивали, почему я боюсь воды. Никто не спрашивал. Все смеются. Вы — спросили.",You asked why I'm afraid of water. Nobody's asked. Everyone laughs. You asked.
+ev.benedict4.l02,Мне было семь. Я упал с причала. Меня вытащили через минуту. Минута под водой — это очень долго. Я там… слышал голоса.,I was seven. Fell off the jetty. They pulled me out after a minute. A minute underwater is a very long time. I… heard voices down there.
+ev.benedict4.l03,"Они звали. Я пошёл в священники, чтобы понять, кто зовёт. Так и не понял. Но молюсь за них.",They were calling. I became a priest to understand who was calling. I never understood. But I pray for them.
+ev.benedict4.c01,"Может, они звали, чтобы вы за них молились.",Maybe they called so you'd pray for them.
+ev.benedict4.c02,"Страх — не слабость, отец.","Fear isn't weakness, Father."
+ev.benedict4.l04,"Чтобы молился… Сорок лет не приходило в голову. Спасибо, дитя.","So I would pray… In forty years it never occurred to me. Thank you, child."
+ev.benedict4.l05,"Не слабость. Да. Это — память. Тяжёлая, но моя.","Not weakness. No. It's memory. Heavy, but mine."
+ev.benedict6.l01,"Я научу вас «Слову смотрителя». Старая молитва. Её читали смотрители, когда священник не мог прийти.",I'll teach you the Keeper's Word. An old prayer. Keepers read it when no priest could come.
+ev.benedict6.l02,"«Море взяло, земля приняла, огонь проводил. Спи». Четыре строки. Больше не нужно.","'The sea took, the earth received, the fire saw you off. Sleep.' Four lines. No more is needed."
+ev.benedict6.l03,Теперь вы можете отпевать сами. Без меня. И без воскресенья. Господь не против. Я спрашивал.,Now you can give the rites yourself. Without me. And without Sunday. The Lord doesn't mind. I asked.
+ev.benedict8.l01,Я пришёл. Я… хочу сесть в вашу лодку. Один раз. На минуту. Минута — это много. Я знаю.,I've come. I… want to sit in your boat. Once. For a minute. A minute is a lot. I know.
+ev.benedict8.l02,"(Бенедикт садится в лодку, закрыв глаза и вцепившись в борт. Вы отталкиваетесь от причала. Вода тихая.)","(Benedict sits in the boat with his eyes shut, gripping the gunwale. You push off from the jetty. The water is calm.)"
+ev.benedict8.l03,Я слышу их. Голоса. Они не зовут. Они… благодарят? За молитвы. Сорок лет молитв.,I hear them. The voices. They're not calling. They're… thanking me? For the prayers. Forty years of prayers.
+ev.benedict8.l04,Можно на берег. Пожалуйста. Но — спасибо. Это было чудо. Маленькое. Моё.,Back to shore now. Please. But — thank you. That was a miracle. A small one. Mine.
+ev.benedict10.l01,Садитесь. Сегодня не служба. Сегодня — чай. Со священником. Редкое таинство.,Sit. Tonight's no service. Tonight's tea. With the priest. A rare sacrament.
+ev.benedict10.l02,"Вы знаете, я много лет думал, что Бог живёт в тишине. Теперь думаю — он живёт в тех, кто держит огонь.","You know, for many years I thought God lives in silence. Now I think — He lives in those who keep a fire burning."

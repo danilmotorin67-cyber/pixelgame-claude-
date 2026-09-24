@@ -2720,5 +2720,14 @@
     "category": "keepsake",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "sailor_shawl",
+    "name": "item.sailor_shawl.name",
+    "desc": "item.sailor_shawl.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "warmth": 15
   }
 ]
