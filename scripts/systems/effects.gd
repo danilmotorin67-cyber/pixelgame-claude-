@@ -44,5 +44,7 @@ static func apply_one(e: Array) -> void:
 			Game.add_stat(str(e[1]), int(e[2]) if e.size() > 2 else 1)
 		"mercy":
 			Sea.add_mercy(float(e[1]))
+		"shore_gift":
+			Sea.schedule_gift(str(e[1]), str(e[2]), Clock.day_index + int(e[3]))
 		_:
 			push_warning("Unknown effect: %s" % str(e))

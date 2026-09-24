@@ -213,7 +213,8 @@ SCENE_COMMANDS = {"fade_out", "fade_in", "place", "move", "face", "wait", "emote
                   "camera_pan", "camera_follow", "shake", "sound", "music", "spawn", "despawn", "anim", "set_time",
                   "set_weather", "effects", "end", "branch"}
 EFFECTS = {"friendship", "flag", "give", "item", "take", "money", "honor", "points", "xp", "start_quest", "step_quest",
-           "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy"}
+           "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy",
+           "shore_gift"}
 
 
 def loc_keys():

@@ -1789,3 +1789,484 @@ ev.knud14.l02,Якорь и свеча. Якорь — чтобы держать
 ev.knud14.c01,Лучшая дверь на острове.,The best door on the island.
 ev.knud14.c02,Теперь это точно наш дом.,Now it's truly our home.
 ev.knud14.l03,"Метр семьдесят восемь и метр… в общем, два человека. Под одной дверью. Идеально.","One seventy-eight and one… well, two people. Under one door. Perfect."
+npc.magnus.spring.01,"Весна. Время простуд, переломов и оптимизма. От последнего лекарства нет.","Spring. Season of colds, fractures and optimism. There's no cure for the last."
+npc.magnus.spring.02,"Причина смерти — море. Как и у всех здесь, рано или поздно. Подпишите вот тут. Шучу. Пока.","Cause of death — the sea. Same as everyone here, sooner or later. Sign here. Joking. For now."
+npc.magnus.spring.03,Вы выглядите {здоровым|здоровой}. Это временно. Всё временно. Кофе хотите?,You look healthy. That's temporary. Everything is. Coffee?
+npc.magnus.spring.04,"Сегодня трое пришли с кашлем, один с занозой и одна — поговорить. Самая тяжёлая — последняя.","Three came in today with coughs, one with a splinter and one to talk. The last was the worst case."
+npc.magnus.spring.05,"Весной лёд уходит, а утопленники приходят. У меня на столе, у вас на погосте. Разделение труда.","In spring the ice leaves and the drowned arrive. On my table, in your graveyard. Division of labour."
+npc.magnus.spring.06,Солнце. Отвратительно бодрит. Пойду задёрну шторы.,Sunshine. Revoltingly invigorating. I'll go draw the curtains.
+npc.magnus.spring.07,Ваша бабушка лечилась у меня однажды. От усталости. Я прописал сон. Она не приняла.,Your grandmother came to me once. For exhaustion. I prescribed sleep. She didn't take it.
+npc.magnus.spring.08,Мойте руки после тел. И до. Особенно до еды. Особенно если еда — лютефиск.,Wash your hands after the bodies. And before. Especially before eating. Especially if it's lutefisk.
+npc.magnus.spring.09,"Сегодня я никого не зашивал. Кроме рукава. Весна, видимо, добрая.",I didn't stitch anyone today. Except a sleeve. Spring must be kind.
+npc.magnus.spring.10,Если заболит спина от копания — приходите. Выпишу отдых. Вы его тоже не примете.,If your back hurts from digging — come by. I'll prescribe rest. You won't take it either.
+npc.magnus.summer.01,"Лето. Солнечные ожоги у людей, которые не видели солнца девять месяцев. Каждый год.",Summer. Sunburn on people who haven't seen the sun for nine months. Every year.
+npc.magnus.summer.02,Приём до трёх. Потом я занят. Таверной.,Surgery until three. Then I'm busy. With the tavern.
+npc.magnus.summer.03,"Лив принесла мне медузу. Спросила, ядовитая ли. Я спросил, зачем она её трогала. Мы оба не ответили.",Liv brought me a jellyfish. Asked if it was poisonous. I asked why she'd touched it. Neither of us answered.
+npc.magnus.summer.04,"Белые ночи — плохо для сна, хорошо для бессонницы. Выбирайте сторону.","White nights — bad for sleep, good for insomnia. Pick a side."
+npc.magnus.summer.05,"Регата — это когда здоровые люди соревнуются, кто быстрее окажется у меня на столе.",A regatta is when healthy people race to see who reaches my table first.
+npc.magnus.summer.06,Летом тела портятся быстрее. Простите за подробность. Работа такая.,In summer bodies spoil faster. Forgive the detail. It's the job.
+npc.magnus.summer.07,"Сегодня Нильс проглотил пуговицу. Фрейя сказала, что это эксперимент. Эксперимент завершится естественным путём.",Today Nils swallowed a button. Freya said it was an experiment. The experiment will conclude naturally.
+npc.magnus.summer.08,Кофе на жаре — моё единственное лекарство от людей.,Coffee in the heat — my only remedy for people.
+npc.magnus.summer.09,Строганина летом — преступление. Зимой — медицина.,Stroganina in summer is a crime. In winter — medicine.
+npc.magnus.summer.10,Вы {бледный|бледная} для лета. Больше солнца. Меньше покойников.,You're pale for summer. More sun. Fewer corpses.
+npc.magnus.autumn.01,"Осень. Моё время года. Все вокруг тоскуют, а я — профессионально.","Autumn. My season. Everyone else is gloomy, and I'm gloomy professionally."
+npc.magnus.autumn.02,Сельдь и шторма. Порезы от ножей и переломы от палуб. Сезон.,Herring and storms. Knife cuts and deck fractures. Season.
+npc.magnus.autumn.03,Два года назад в это время я подписывал шесть свидетельств за один день. Не спрашивайте.,Two years ago at this time I signed six certificates in one day. Don't ask.
+npc.magnus.autumn.04,"Осенние вечера длинные. Аквавит — тоже. Это единственное, что длиннее осени.",Autumn evenings are long. So is aquavit. The only thing longer than autumn.
+npc.magnus.autumn.05,Ярмарка. Люди едят сырую сельдь на спор. Я жду их завтра.,The fair. People eat raw herring on a bet. I'll see them tomorrow.
+npc.magnus.autumn.06,Вы спите? Не отвечайте. По глазам вижу. Три часа. Максимум.,Do you sleep? Don't answer. I can tell by your eyes. Three hours. At most.
+npc.magnus.autumn.07,Осенью я перечитываю свой медицинский трактат. Автор — я. Спорю с собой. Проигрываю.,In autumn I reread my medical treatise. Author — me. I argue with myself. I lose.
+npc.magnus.autumn.08,"Если услышите, как я кашляю, — это не болезнь. Это мнение о погоде.",If you hear me cough — it's not illness. It's my opinion of the weather.
+npc.magnus.autumn.09,"Ночь Утопленников скоро. Единственная ночь, когда мои пациенты приходят сами.",Drowned Night soon. The one night my patients come on their own.
+npc.magnus.autumn.10,Листопад. Деревья сбрасывают лишнее. Мне бы так.,Leaf-fall. Trees shed what they don't need. I wish I could.
+npc.magnus.winter.01,"Зима. Отморожения, лёд, падения. Строганина — единственное хорошее, что приходит с холодом.","Winter. Frostbite, ice, falls. Stroganina is the only good thing the cold brings."
+npc.magnus.winter.02,"Долгая ночь. Я читаю при свече и жалею, что не стал бухгалтером. Шучу. Бухгалтерам хуже.",The long night. I read by candle and regret not becoming an accountant. Joking. Accountants have it worse.
+npc.magnus.winter.03,"Мой день рождения зимой. Я его не праздную. Возраст — это диагноз, а не повод.","My birthday's in winter. I don't celebrate. Age is a diagnosis, not an occasion."
+npc.magnus.winter.04,Зимой хоронят медленнее. Мёрзлая земля. Тела ждут. Они терпеливые.,In winter burials are slower. Frozen ground. The bodies wait. They're patient.
+npc.magnus.winter.05,Если провалитесь под лёд — не паникуйте. Паника расходует воздух. Я расходую бинты.,If you go through the ice — don't panic. Panic uses air. I use bandages.
+npc.magnus.winter.06,Метель. Никто не придёт на приём. Идеальный день для медицины: полная тишина.,Blizzard. No one will come to surgery. The ideal day for medicine: total silence.
+npc.magnus.winter.07,Сияние — это красиво. С медицинской точки зрения бесполезно. С человеческой — нет.,The aurora is beautiful. Medically useless. Humanly — not at all.
+npc.magnus.winter.08,"Шарф. Носите шарф. Лёгкие у вас одни, а маяк высокий.",A scarf. Wear a scarf. You've one pair of lungs and a tall lighthouse.
+npc.magnus.winter.09,Зимой я пью меньше. Просто потому что до таверны далеко по сугробам.,In winter I drink less. Only because the tavern's a long way through the drifts.
+npc.magnus.winter.10,"Ваш огонь зимой видно из окна кабинета. Я смотрю на него, когда не могу уснуть. Часто.",I can see your light from my study window in winter. I watch it when I can't sleep. Often.
+npc.magnus.weather.rain.01,Дождь. Ревматизм у всего острова. У меня — полная приёмная и пустая душа.,Rain. The whole island's rheumatism. For me — a full waiting room and an empty soul.
+npc.magnus.weather.rain.02,"Дождь идёт, я пью кофе. Логичный обмен жидкостями.","It's raining, I'm drinking coffee. A logical exchange of fluids."
+npc.magnus.weather.storm.01,"Шторм. Сегодня кто-то утонет. Надеюсь, ошибаюсь. Я редко ошибаюсь.",Storm. Someone will drown today. I hope I'm wrong. I'm rarely wrong.
+npc.magnus.weather.storm.02,В шторм я держу саквояж у двери. На всякий случай. Случай обычно приходит.,In a storm I keep my bag by the door. Just in case. The case usually comes.
+npc.magnus.weather.fog.01,Туман. Люди в тумане падают со скал. Не ходите по краю. Я серьёзно.,Fog. People fall off cliffs in fog. Don't walk the edge. I mean it.
+npc.magnus.weather.fog.02,В тумане плохо видно. Мне это даже нравится. Меньше видно — меньше знаешь.,Poor visibility in fog. I rather like it. See less — know less.
+npc.magnus.weather.snow.01,Снег. Скоро понесут сломанные запястья. Каждый год одно и то же.,Snow. Soon they'll bring in broken wrists. Same thing every year.
+npc.magnus.weather.cloud.01,Пасмурно. Нормальная погода для нормального настроения. У меня такого нет.,Overcast. Normal weather for a normal mood. I don't have one.
+npc.magnus.festival.boat_blessing.01,"Спуск лодок. Бенедикт с шестом, Хедда с грогом, я — с бинтами. Каждому своё.","The Boat Launch. Benedict with his pole, Hedda with grog, me with bandages. To each their own."
+npc.magnus.festival.drowned_night.01,"Ночь Утопленников. Я ношу фонарь за каждого, кого подписал. Мне нужно много рук.",Drowned Night. I carry a lantern for everyone I signed off. I need a lot of hands.
+npc.magnus.festival.herring_fair.01,Ярмарка — массовое поедание сырой рыбы. Медицина молчит. Медицина потом разгребает.,The fair — mass consumption of raw fish. Medicine stays silent. Medicine cleans up afterwards.
+npc.magnus.festival.long_night.01,Долгая ночь. Отличный повод не спать официально.,The Long Night. A fine excuse not to sleep officially.
+npc.magnus.festival.01,Праздник. Я здесь как дежурный врач. И как дежурный циник.,A holiday. I'm here as the doctor on duty. And the cynic on duty.
+npc.magnus.festival.02,Люди веселятся. Это полезно для сердца. До определённой дозы.,People are having fun. Good for the heart. Up to a certain dose.
+npc.magnus.gift.love.01,Хм. Это… хорошо. Вы разбираетесь в людях. Опасное качество. Спасибо.,Hm. This is… good. You understand people. A dangerous quality. Thank you.
+npc.magnus.gift.love.02,"Лучший подарок за годы. Не говорите никому, что у меня есть чувства.",The best gift in years. Don't tell anyone I have feelings.
+npc.magnus.gift.like.01,Благодарю. Полезно для здоровья. Моего.,Much obliged. Good for health. Mine.
+npc.magnus.gift.like.02,Неплохо. Пропишу себе это как лекарство.,Not bad. I'll prescribe it to myself as medicine.
+npc.magnus.gift.neutral.01,Спасибо. Поставлю на полку рядом с черепом.,Thanks. I'll put it on the shelf next to the skull.
+npc.magnus.gift.neutral.02,"Интересный выбор. Не диагноз, но интересный.","An interesting choice. Not a diagnosis, but interesting."
+npc.magnus.gift.dislike.01,"Сладкое? Вы хотите, чтобы я лечил себя от вас?",Sweets? Do you want me to treat myself for you?
+npc.magnus.gift.dislike.02,Цветы. Прекрасно. Поставлю в утку. Другой вазы нет.,Flowers. Lovely. I'll put them in a bedpan. No other vase.
+npc.magnus.gift.hate.01,"Лютефиск. Вы понимаете, что это медицинское преступление?",Lutefisk. Do you realise this is a medical crime?
+npc.magnus.gift.hate.02,"Консервы «Нептун». Я видел, что эта компания делает с людьми. И с рыбой. Уберите.",Neptune tins. I've seen what that company does to people. And to fish. Take it away.
+npc.magnus.birthday.01,Мне тридцать восемь. Или девяносто. По ощущениям — второе.,I'm thirty-eight. Or ninety. Going by how I feel — the latter.
+npc.magnus.birthday.02,"День рождения. Ещё один год, когда я не смог себя вылечить. Ни от чего.",My birthday. One more year I failed to cure myself. Of anything.
+npc.magnus.birthday_gift.01,"Вы помните. Я не помню. Спасибо за то, что помните за меня.",You remember. I don't. Thank you for remembering for me.
+npc.magnus.birthday_gift.02,Подарок… Я растроган. Это симптом. Пройдёт.,A gift… I'm touched. It's a symptom. It'll pass.
+npc.magnus.act1.01,"Ваш первый утопленник? Пойдёмте, покажу, что искать. Приметы — это письма, которые тело пишет семье.","Your first drowned man? Come, I'll show you what to look for. Marks are letters the body writes to the family."
+npc.magnus.act1.02,"Ларс Эк. Утонул. Причина смерти — море. Подпишите вот тут. Нет, серьёзно, подпишите.","Lars Ek. Drowned. Cause of death — the sea. Sign here. No, seriously, sign."
+npc.magnus.act1.03,Агата приносила мне тела на тачке. Молча. Мы понимали друг друга.,Agatha brought me bodies in a wheelbarrow. Silently. We understood each other.
+npc.magnus.act1.04,Олаф выдал вам реестр? Там есть мои подписи. Много. Не все я горжусь.,Olaf gave you the register? My signatures are in it. Many. Not all of them I'm proud of.
+npc.magnus.act1.05,Конец весны. Я уже приготовил бланки. Три. Это не цинизм. Это опыт.,End of spring. I've already got the forms ready. Three. It's not cynicism. It's experience.
+npc.magnus.act1.06,Как здоровье? Спите? Едите? Разговариваете с кем-то живым? Последнее важнее всего.,How's your health? Sleeping? Eating? Talking to anyone living? The last matters most.
+npc.magnus.act2.01,"«Святая Берта». Я написал «несчастный случай» быстрее, чем следовало. Меня попросили. Вежливо.",The Saint Bertha. I wrote 'accident' faster than I should have. I was asked to. Politely.
+npc.magnus.act2.02,Пеннингтон. Страховщик. Он всегда говорил: в море надо ездить лично. Съездил.,Pennington. The insurance man. He always said you should go to sea in person. He went.
+npc.magnus.act2.03,Белая Хмарь. У меня были пациенты с обморожением в июле. Этого не бывает. Было.,The White Fog. I had frostbite patients in July. That doesn't happen. It did.
+npc.magnus.act2.04,"Кости из гротов… Двадцать. Старые. Я могу определить возраст, пол, причину смерти. Причина — море. Или люди.","The bones from the grottoes… Twenty. Old. I can tell age, sex, cause of death. Cause — the sea. Or people."
+npc.magnus.act2.05,Хмарь — это горе. Хельга права. Горе я лечить не умею. Никто не умеет.,The Fog is grief. Helga's right. I don't know how to treat grief. Nobody does.
+npc.magnus.act2.06,"В Большую Хмарь я буду в таверне. С бинтами, а не с аквавитом. Обещаю. Себе.","During the Great Fog I'll be in the tavern. With bandages, not aquavit. I promise. Myself."
+npc.magnus.act3.01,Вы собираете улики. Моя подпись — одна из них. Я знаю. Я ждал этого два года.,You're gathering evidence. My signature is one of them. I know. I've waited two years for this.
+npc.magnus.act3.02,Грим платил не деньгами. Он платил тишиной. Моей.,Grim didn't pay in money. He paid in silence. Mine.
+npc.magnus.act3.03,Скафандр? Проверьте клапаны трижды. Я не хочу подписывать ваше свидетельство. Никогда.,A diving suit? Check the valves three times. I don't want to sign your certificate. Ever.
+npc.magnus.act3.04,На глубине давление ломает людей. Не только тела. Возвращайтесь.,At depth the pressure breaks people. Not only bodies. Come back.
+npc.magnus.act3.05,Я бросил пить. Три дня. Руки дрожат. Мысли — нет. Это новое ощущение.,I've stopped drinking. Three days. My hands shake. My thoughts don't. That's a new sensation.
+npc.magnus.act3.06,Если понадобится свидетель в суде — я буду. Даже если это конец моей практики.,If you need a witness in court — I'll be there. Even if it ends my practice.
+npc.magnus.act4.01,"В ночь Прилива я буду на маяке. С саквояжем. Лечить буду вас, не себя.","On Tide Night I'll be at the lighthouse. With my bag. I'll be treating you, not myself."
+npc.magnus.act4.02,"Холод, раны, усталость — всё пропишу. Кроме смерти. Её не выписываю.","Cold, wounds, exhaustion — I'll prescribe for all of it. Except death. That I don't prescribe."
+npc.magnus.act4.03,Я всю жизнь подписывал «море». Сегодня хочу подписать «жив». Хотя бы раз.,All my life I've signed 'the sea'. Tonight I want to sign 'alive'. Just once.
+npc.magnus.act4.04,Если пойдёте по дну — дышите медленно. И думайте о чём-то хорошем. Помогает. Проверено.,If you walk the sea floor — breathe slowly. And think of something good. It helps. Tested.
+npc.magnus.act4.05,"Трезв уже месяц. Идеальный момент, чтобы начать бояться по-настоящему.",Sober a month now. Perfect moment to start being really afraid.
+npc.magnus.act4.06,После всего я выпью. Одну. Чай. Шучу. Две.,After it's all over I'll have a drink. One. Tea. Joking. Two.
+npc.magnus.married_other.01,Поздравляю с браком. Медицински полезно. Статистически — тоже.,Congratulations on your marriage. Medically beneficial. Statistically as well.
+npc.magnus.married_other.02,Свадьба прошла без травм. Для острова — рекорд.,The wedding went off without injuries. A record for the island.
+npc.magnus.married_other.03,Желаю вам долгой жизни. Как врач — прописываю.,I wish you a long life. As a doctor — I prescribe it.
+npc.magnus.married_other.04,Я немного завидую. Это неврачебная реакция. Пройдёт.,I'm a little envious. A non-medical reaction. It'll pass.
+npc.magnus.married_other.05,Берегите друг друга. Лечить разбитые сердца я так и не научился.,Look after each other. I never learned to treat broken hearts.
+npc.magnus.event.wreck.01,Крушение. У меня уже лежат бланки. Причина смерти — море. Я ненавижу эту фразу.,A wreck. The forms are already on my desk. Cause of death — the sea. I hate that phrase.
+npc.magnus.event.wreck.02,Ясная ночь. Опытный капитан. Крушение. Медицина не объясняет. Совесть — объясняет.,A clear night. An experienced captain. A wreck. Medicine doesn't explain it. Conscience does.
+npc.magnus.event.wreck.03,Приносите их ко мне. Я осмотрю. Честно. На этот раз — честно.,Bring them to me. I'll examine them. Honestly. This time — honestly.
+npc.magnus.event.wreck.04,"Выживших не было? Жаль. Я бы хотел хоть раз лечить, а не подписывать.",No survivors? A pity. Just once I'd like to heal rather than sign.
+npc.magnus.event.wreck.05,Если кого-то вынесет живым — будите меня. В любое время. Даже пьяного.,If anyone washes up alive — wake me. Any hour. Even drunk.
+npc.magnus.event.funeral.01,"Вы похоронили вчера. Хорошо. Мёртвые должны лежать там, где их найдут живые.",You held a burial yesterday. Good. The dead should lie where the living can find them.
+npc.magnus.event.funeral.02,Зашили нос? Традиция. Бессмысленная с медицинской точки зрения. Правильная — с человеческой.,Stitched the nose? Tradition. Pointless medically. Right humanly.
+npc.magnus.event.funeral.03,Похороны — это лечение для живых. Мёртвым уже всё равно. Живым — нет.,A funeral is treatment for the living. The dead don't care any more. The living do.
+npc.magnus.event.funeral.04,"Вы хороните тех, кого я подписываю. Мы — конвейер. Грустный, но честный. Теперь — честный.","You bury the ones I sign off. We're a production line. A sad one, but honest. Now — honest."
+npc.magnus.event.funeral.05,Каждый камень на вашем погосте — строчка в моём архиве. Я помню все.,Every stone in your graveyard is a line in my archive. I remember them all.
+npc.magnus.event.hmar.01,Ночь Хмари. Трое пришли с обморожением. В июле. Я перестал удивляться. Начал бояться.,Fog Night. Three came in with frostbite. In July. I've stopped being surprised. I've started being afraid.
+npc.magnus.event.hmar.02,Я сидел у окна с аквавитом и смотрел на туман. Туман смотрел в ответ. Кто моргнул первым — не помню.,I sat by the window with aquavit watching the fog. The fog watched back. Who blinked first — I don't remember.
+npc.magnus.event.hmar.03,"Ваш луч — единственное лекарство, которое работает против Хмари. Не прекращайте приём.",Your beam is the only medicine that works against the Fog. Don't stop the course.
+npc.magnus.event.hmar.04,Люди шептались в бреду. Одно и то же имя. Я его не расслышал. Или не хотел.,People were whispering in delirium. The same name. I didn't catch it. Or didn't want to.
+npc.magnus.event.hmar.05,После Ночи Хмари у всех одинаковая бледность. Как у утопленников. Не нравится мне это.,After a Fog Night everyone has the same pallor. Like the drowned. I don't like it.
+npc.magnus.event.inspection.01,Инспекция. Пальм спросил меня о смертности на острове. Я сказал цифру. Он побледнел. Правильная реакция.,Inspection. Palm asked me about mortality on the island. I gave him the figure. He went pale. The correct reaction.
+npc.magnus.event.inspection.02,"Прошли? Поздравляю. Пальм строг, но справедлив. Как хороший диагноз.",Passed? Congratulations. Palm is strict but fair. Like a good diagnosis.
+npc.magnus.event.inspection.03,"Пальм — единственный человек на острове, которого я не могу вывести из себя. Даже пытался.",Palm is the one person on the island I can't provoke. I've even tried.
+npc.magnus.event.inspection.04,Инспекция — это осмотр для маяка. У вас пульс ровный. Поздравляю.,An inspection is a check-up for the lighthouse. Your pulse is steady. Congratulations.
+npc.magnus.event.inspection.05,Пальм пьёт только чай. Я ему однажды налил аквавит. Он записал это как нарушение. Пункт сорок.,Palm drinks only tea. I poured him aquavit once. He logged it as a violation. Clause forty.
+npc.magnus.event.wedding.01,Свадьба. Никто не упал со стола. Хедда пыталась. Я её поймал. Профессионально.,The wedding. Nobody fell off a table. Hedda tried. I caught her. Professionally.
+npc.magnus.event.wedding.02,Я пил только кофе. Все были в шоке. Особенно я.,I drank only coffee. Everyone was shocked. Especially me.
+npc.magnus.event.wedding.03,"Любовь — это химия. Свадьба — бюрократия. Вы справились и с тем, и с другим.",Love is chemistry. A wedding is bureaucracy. You managed both.
+npc.magnus.event.wedding.04,"Хорошая свадьба. Надеюсь, единственная, на которой я был трезв и не жалею.",A good wedding. I hope it's the only one where I was sober and don't regret it.
+npc.magnus.event.wedding.05,Желаю вам никогда не приходить ко мне на приём. Вдвоём.,I wish that neither of you ever needs my surgery. Together or apart.
+npc.magnus.event.villains.01,Суд. Я дал показания. Всё. Двадцать лет подписей. Теперь я свободен. И почти честен.,The trial. I testified. Everything. Twenty years of signatures. Now I'm free. And nearly honest.
+npc.magnus.event.villains.02,"Грим смотрел на меня так, будто я предал его. Я предал. Его. Наконец-то.",Grim looked at me as if I'd betrayed him. I did. Him. At last.
+npc.magnus.event.villains.03,"Меня не лишили практики. Пальм сказал: «Пункт восемьдесят: раскаяние учитывается». Я не знал, что такой есть.",They didn't strike me off. Palm said: 'Clause eighty: repentance is taken into account.' I didn't know it existed.
+npc.magnus.event.villains.04,Теперь я буду писать правду в свидетельствах. Это страшно. Как новый язык.,From now on I'll write the truth on certificates. It's frightening. Like a new language.
+npc.magnus.event.villains.05,"Спасибо. Вы вылечили меня. Не знаю, как. Медицина не знает.",Thank you. You cured me. I don't know how. Medicine doesn't know.
+npc.magnus.bouquet_yes.01,"Армерия. Вы понимаете, что я — циник, пьяница и соучастник? …Да. Хорошо. Да.","Armeria. Do you realise I'm a cynic, a drunk and an accomplice? …Yes. All right. Yes."
+npc.magnus.ring_yes.01,Кольцо. Диагноз ясен. Прогноз — благоприятный. Да.,A ring. The diagnosis is clear. The prognosis — favourable. Yes.
+ev.magnus2.l01,"Садитесь. Урок. Как осматривать тело, если вы не хотите, чтобы оно врало.",Sit down. A lesson. How to examine a body if you don't want it to lie.
+ev.magnus2.l02,Руки — ремесло. Шрамы — прошлое. Татуировки — любовь или долги. Карманы — последние мысли.,Hands — the trade. Scars — the past. Tattoos — love or debts. Pockets — the last thoughts.
+ev.magnus2.l03,"И главное: смотрите на ногти. Под ногтями — то, за что человек цеплялся. Иногда — чья-то куртка.",And most important: look at the fingernails. Under them is what the person clung to. Sometimes — someone's jacket.
+ev.magnus2.c01,Можно попробовать {самому|самой}?,May I try myself?
+ev.magnus2.c02,Откуда вы это знаете?,How do you know all this?
+ev.magnus2.l04,Можно. Вот манекен. Его зовут Карл. Не наш Карл. Хотя похож.,You may. Here's the dummy. His name's Karl. Not our Karl. Though he looks like him.
+ev.magnus2.l05,"Флот. Двенадцать лет. Там тела рассказывают больше, чем живые.",The navy. Twelve years. There the bodies tell you more than the living.
+ev.magnus4.l01,Хотите историю? Флотскую. Не весёлую. Весёлых на флоте не бывает.,Want a story? A navy one. Not a funny one. There are no funny ones in the navy.
+ev.magnus4.l02,"Первый «плавучий гроб» я увидел в двадцать три. Корабль, застрахованный вчетверо выше цены. Его отправили на дно. С людьми.",I saw my first 'floating coffin' at twenty-three. A ship insured at four times its value. They sent it to the bottom. With men aboard.
+ev.magnus4.l03,"Я лечил единственного выжившего. Он умер через неделю. От того, что выжил.",I treated the one survivor. He died a week later. From having survived.
+ev.magnus4.c01,Вы поэтому уехали с флота?,Is that why you left the navy?
+ev.magnus4.c02,"Вы пьёте, чтобы забыть?",Do you drink to forget?
+ev.magnus4.l04,"Я уехал туда, где корабли не топят нарочно. Думал так. Ошибся.",I went where ships aren't sunk on purpose. So I thought. I was wrong.
+ev.magnus4.l05,Чтобы помнить без боли. Не работает. Но я упрямый.,To remember without the pain. Doesn't work. But I'm stubborn.
+ev.magnus6.l01,Я должен вам сказать. Нет. Я должен сказать кому-то. Вы — ближе всех.,I have to tell you. No. I have to tell someone. You're the nearest.
+ev.magnus6.l02,Свидетельства о смерти с крушений. «Несчастный случай». Я подписывал не глядя. Грим просил. Вежливо. С конвертом.,The death certificates from the wrecks. 'Accident'. I signed without looking. Grim asked. Politely. With an envelope.
+ev.magnus6.l03,У меня сохранились черновики. С настоящими записями. Я не сжёг. Не смог.,I kept the drafts. With the real findings. I didn't burn them. Couldn't.
+ev.magnus6.c01,Отдайте их мне. Это начало правды.,Give them to me. This is where the truth begins.
+ev.magnus6.c02,Почему вы молчали?,Why did you keep quiet?
+ev.magnus6.c03,"Вы соучастник, доктор.","You're an accomplice, doctor."
+ev.magnus6.l04,Берите. Моя подпись под ними — настоящая. В первый раз за два года.,Take them. My signature on these is real. For the first time in two years.
+ev.magnus6.l05,Потому что трус. Медицина называет это «инстинкт самосохранения». Я называю — трус.,Because I'm a coward. Medicine calls it 'self-preservation instinct'. I call it cowardice.
+ev.magnus6.l06,Соучастник. Да. Точный диагноз. Уходите. Мне нужно выпить.,Accomplice. Yes. Accurate diagnosis. Leave. I need a drink.
+ev.magnus8.l01,Трезвый вечер. Первый за год. Помогите мне. Двадцать лет архива смертей острова.,A sober evening. First in a year. Help me. Twenty years of the island's death archive.
+ev.magnus8.l02,(Вы раскладываете карточки по годам. Ясные ночи. Крушения. Подписи. Картина складывается сама.),(You lay the cards out by year. Clear nights. Wrecks. Signatures. The picture assembles itself.)
+ev.magnus8.l03,Сорок три человека за двадцать лет в ясную погоду. Море не топит в ясную погоду. Люди топят.,"Forty-three people in twenty years, in clear weather. The sea doesn't drown people in clear weather. People do."
+ev.magnus8.c01,Мы доведём это до суда.,We'll take this to court.
+ev.magnus8.c02,"Спасибо, что остались {трезвым|трезвой} ради этого.",Thank you for staying sober for this.
+ev.magnus8.l04,"Трезвость — отвратительная штука. Всё видно. Спасибо, что были рядом.",Sobriety is a revolting thing. You see everything. Thank you for being here.
+ev.magnus10.l01,Шторм. Я подумал — вам нужен чай. Не аквавит. Чай. Я теперь такой.,A storm. I thought — you'd need tea. Not aquavit. Tea. That's who I am now.
+ev.magnus10.l02,Я бросил. Совсем. Руки не дрожат. Сердце — дрожит. Но это другой диагноз.,I've quit. Completely. My hands don't shake. My heart does. But that's a different diagnosis.
+ev.magnus10.c01,Какой диагноз?,What diagnosis?
+ev.magnus10.c02,Проходите. Чай на двоих.,Come in. Tea for two.
+ev.magnus10.l03,"Хронический. Неизлечимый. Вы. Пейте чай, пока горячий.",Chronic. Incurable. You. Drink your tea while it's hot.
+ev.magnus14.l01,"Лазарет при маяке. Четыре койки, шкаф с бинтами и я. Для спасённых моряков.","An infirmary at the lighthouse. Four cots, a bandage cabinet and me. For rescued sailors."
+ev.magnus14.l02,Всю жизнь я подписывал «море». Теперь буду писать «спасён». Вы научили меня этому слову.,All my life I signed 'the sea'. Now I'll write 'rescued'. You taught me that word.
+item.sealed_bottle_letter.name,Письмо в бутылке,Letter in a bottle
+item.sealed_bottle_letter.desc,"Нераспечатанное письмо из моря. Олаф отдаст за такое всё, кроме реестра.",An unopened letter from the sea. Olaf would give anything for one except his register.
+item.olaf_bottle.name,Бутылка Олафа,Olaf's bottle
+item.olaf_bottle.desc,"Письмо внутри адресовано вам. Почерк дрожит, но слова — нет.",The letter inside is addressed to you. The handwriting shakes; the words don't.
+npc.olaf.spring.01,"Весна! Пароход ходит чаще, почты больше, сплетен… то есть сведений — вдвое.","Spring! The steamer comes more often, more post, more gossip… I mean information — twice as much."
+npc.olaf.spring.02,Я не сплетничаю. Я веду неофициальный реестр. Вы в нём на странице сорок. Очень хорошая страница.,I don't gossip. I keep an unofficial register. You're on page forty. A very nice page.
+npc.olaf.spring.03,Сольвейг поссорилась с Сигрид из-за пирога. Опять. Записал в раздел «ежедневное».,Solveig quarrelled with Sigrid over pie. Again. Filed under 'daily'.
+npc.olaf.spring.04,Весной в Бухте Разбитых Кораблей бутылки идут косяком. Как сельдь. Только читаемые.,In spring bottles come into Wreck Bay in shoals. Like herring. Only readable.
+npc.olaf.spring.05,"Письмо вам? Нет. Показалось. Я волнуюсь, когда приношу письма. Вдруг там плохое.",A letter for you? No. My mistake. I get nervous delivering letters. What if it's bad news.
+npc.olaf.spring.06,"Сегодня семнадцать писем, две посылки и одна жалоба. Жалобу написал Карл. На погоду.","Today seventeen letters, two parcels and one complaint. Karl wrote the complaint. About the weather."
+npc.olaf.spring.07,Устав смотрителя читали? Пункт третий особенно хорош. Там про кота.,Have you read the Keeper's Regulations? Clause three is especially good. It's about the cat.
+npc.olaf.spring.08,Весенний туман испортил мне три конверта. Клей отклеился. Пришлось запечатывать сургучом. Сургуч — это красиво.,The spring fog ruined three envelopes. The glue came off. Had to seal them with wax. Wax is beautiful.
+npc.olaf.spring.09,"Ой, извините! Я вас не заметил. Нет, заметил. Просто сделал вид. От волнения.","Oh, sorry! I didn't see you. No, I did. I just pretended. Out of nerves."
+npc.olaf.spring.10,Если услышите о чём-то интересном — скажите мне. Для реестра. Строго конфиденциально. Почти.,If you hear anything interesting — tell me. For the register. Strictly confidential. Nearly.
+npc.olaf.summer.01,Лето — сезон открыток! Туристы пишут: «Здесь красиво и страшно». Я согласен с обоими.,Summer is postcard season! Tourists write: 'It's beautiful and frightening here.' I agree with both.
+npc.olaf.summer.02,Лив получает письма из университета каждую неделю. Не отвечает. Я волнуюсь за неё. И за университет.,Liv gets letters from the university every week. Doesn't reply. I worry about her. And the university.
+npc.olaf.summer.03,Жарко. Сургуч плавится. Конверты липнут. Почтальон страдает.,Hot. The sealing wax melts. The envelopes stick. The postman suffers.
+npc.olaf.summer.04,В воскресенье нашёл бутылку с письмом 1847 года! Там список покупок. Всё равно красиво.,On Sunday I found a bottle with a letter from 1847! It's a shopping list. Still beautiful.
+npc.olaf.summer.05,"Пароход опоздал на час. Кэп Ворчун сказал, что море виновато. Я записал: «Море — опоздание, один час».","The steamer was an hour late. Cap'n Grump blamed the sea. I noted: 'Sea — delay, one hour.'"
+npc.olaf.summer.06,Регата! Я веду таблицу ставок. Неофициально. Совсем неофициально. Не говорите Пальму.,The regatta! I keep the betting table. Unofficially. Very unofficially. Don't tell Palm.
+npc.olaf.summer.07,"Лето. Все бегают, а я сижу в управе. Зато знаю, кто куда бегает.",Summer. Everyone's running around and I sit in the office. But I know who's running where.
+npc.olaf.summer.08,"У вас сегодня такое лицо, как будто вы получили хорошее письмо. Не получили? Жаль. Скоро получите.",You look like you've had a good letter today. You haven't? Pity. You will soon.
+npc.olaf.summer.09,Телеграф на материк молчит пятый год. Я каждое утро проверяю. Вдруг заговорит сам.,The telegraph to the mainland has been silent for five years. I check every morning. In case it starts talking by itself.
+npc.olaf.summer.10,Белые ночи. Я перечитываю бутылочную почту. Самые грустные письма пишут в белые ночи.,White nights. I reread my bottle post. The saddest letters are written on white nights.
+npc.olaf.autumn.01,"Осень. Много писем семьям. Много. Я ношу их осторожно, как хрупкое.","Autumn. Lots of letters to families. Lots. I carry them carefully, like something fragile."
+npc.olaf.autumn.02,Шторма! Бутылки летят к берегу как письма с того света. Иногда — буквально.,Storms! Bottles fly ashore like letters from the other side. Sometimes literally.
+npc.olaf.autumn.03,Ярмарка — лучший день для реестра. Все пьяные и откровенные.,The fair is the best day for the register. Everyone's drunk and candid.
+npc.olaf.autumn.04,Листья набиваются в почтовый ящик. Приходится разбирать. Одна берёза прислала мне три жёлтых листа. Без обратного адреса.,Leaves get stuffed into the letterbox. I have to sort them. One birch sent me three yellow leaves. No return address.
+npc.olaf.autumn.05,"Я боюсь темноты. Немного. Осенью её слишком много. Хорошо, что есть ваш огонь.",I'm afraid of the dark. A little. In autumn there's too much of it. Good thing there's your light.
+npc.olaf.autumn.06,Сегодня пришла телеграмма «Нептуна» Гриму. Я не читал. Прочитал. Молчу. Трудно молчать.,Today a Neptune telegram came for Grim. I didn't read it. I did. I'm keeping quiet. It's hard to keep quiet.
+npc.olaf.autumn.07,Кай с Мёртвого Огня прислал письмо! Одна строка: «Не присылай мне писем». Отвечу — вежливо.,Kai at the Dead Fire sent a letter! One line: 'Don't send me letters.' I'll reply — politely.
+npc.olaf.autumn.08,Осенний туман пахнет бумагой. Или это я пахну бумагой. Уже не различаю.,Autumn fog smells of paper. Or I smell of paper. I can't tell any more.
+npc.olaf.autumn.09,"Спасибо, что пишете семьям утопленников. Я вижу эти конверты. Они тяжелее других.",Thank you for writing to the families of the drowned. I see those envelopes. They're heavier than the others.
+npc.olaf.autumn.10,Если вам понадобится копия чего-нибудь — я умею переписывать очень быстро. Почти незаметно.,If you ever need a copy of anything — I can copy very quickly. Almost invisibly.
+npc.olaf.winter.01,"Зима. Пароход ходит раз в неделю. Писем меньше, но каждое — событие.","Winter. The steamer comes once a week. Fewer letters, but each is an event."
+npc.olaf.winter.02,Я разношу почту на лыжах. Падаю в среднем четыре раза. Письма — ни разу. Профессионализм.,I deliver the post on skis. I fall four times on average. The letters — never. Professionalism.
+npc.olaf.winter.03,Зимой я перечитываю реестр. Весь. Очень познавательно. Очень тревожно.,In winter I reread the register. All of it. Very informative. Very unsettling.
+npc.olaf.winter.04,Метель. Чернила замёрзли. Пишу карандашом. Карандаш — это чернила для трусов. Это я про себя.,Blizzard. The ink froze. Writing in pencil. Pencil is ink for cowards. I mean me.
+npc.olaf.winter.05,"Долгая ночь. Я сижу у телеграфа и слушаю тишину. Иногда мне кажется, что кто-то стучит.",The long night. I sit by the telegraph listening to the silence. Sometimes I think someone's tapping.
+npc.olaf.winter.06,"Вы получили газету? Там про вас. Мелко, на третьей странице. Но про вас!","Did you get the paper? You're in it. Small print, page three. But it's you!"
+npc.olaf.winter.07,"Зимой писем семьям больше. Я не знаю почему. Может, зимой люди тоньше чувствуют.",In winter there are more letters to families. I don't know why. Maybe people feel things more keenly in winter.
+npc.olaf.winter.08,"Снег на крыше управы. Пальм написал бы: «Пункт двенадцать, очистить». Я чищу. На всякий случай.","Snow on the office roof. Palm would write: 'Clause twelve, clear it.' I'm clearing it. Just in case."
+npc.olaf.winter.09,Хотите горячего чаю? У меня есть. Я всегда держу чайник для гостей. Гости редкие. Чайник терпеливый.,Want some hot tea? I've got some. I always keep a kettle for guests. Guests are rare. The kettle is patient.
+npc.olaf.winter.10,"Весна скоро. Я уже подготовил новые конверты. Сто штук. Я оптимист. Нервный, но оптимист.","Spring's coming. I've already prepared new envelopes. A hundred. I'm an optimist. A nervous one, but an optimist."
+npc.olaf.weather.rain.01,"Дождь! Сумка промокла, письма — нет. Я их завернул в клеёнку. Три раза.","Rain! My bag's soaked, the letters aren't. I wrapped them in oilcloth. Three times."
+npc.olaf.weather.rain.02,В дождь все сидят дома и пишут письма. Завтра мне будет много работы. Ура. Кажется.,In rain everyone stays in and writes letters. Tomorrow I'll have lots of work. Hooray. I think.
+npc.olaf.weather.storm.01,Шторм! Телеграф трещит. Или это мои нервы. Скорее нервы.,Storm! The telegraph's crackling. Or it's my nerves. Probably my nerves.
+npc.olaf.weather.storm.02,"В шторм я не разношу почту. Устав управы, пункт двадцать два. Я его сам предложил.","In a storm I don't deliver. Office regulations, clause twenty-two. I proposed it myself."
+npc.olaf.weather.fog.01,Туман. Я заблудился между управой и таверной. Там сто шагов. Страшно.,Fog. I got lost between the office and the tavern. It's a hundred paces. Frightening.
+npc.olaf.weather.fog.02,В тумане почтовый ящик на мысу — как чёрная дыра. Кладу письма и убегаю.,In fog the cape letterbox is like a black hole. I drop the letters and run.
+npc.olaf.weather.snow.01,"Снег! Следы на снегу — лучший реестр. Я вижу, кто к кому ходил ночью. Не скажу.",Snow! Footprints in the snow are the best register. I can see who visited whom last night. I won't tell.
+npc.olaf.weather.cloud.01,Облачно. Идеально для чтения. И для сургуча — не плавится.,Cloudy. Perfect for reading. And for sealing wax — it doesn't melt.
+npc.olaf.festival.bird_day.01,День птиц. Я вырезаю из газет всё о птицах для Лив. Она не просит. Но я вырезаю.,Bird Day. I cut out everything about birds from the papers for Liv. She doesn't ask. But I cut them out.
+npc.olaf.festival.drowned_night.01,"Ночь Утопленников. Я бросаю в море письма тем, кому не смог доставить. Их много.",Drowned Night. I throw into the sea the letters I couldn't deliver. There are many.
+npc.olaf.festival.herring_fair.01,Ярмарка! Реестр пополнится на двадцать страниц. Я взял запасной карандаш.,The fair! The register will grow by twenty pages. I brought a spare pencil.
+npc.olaf.festival.regatta.01,Регата. Ставки два к одному на Хедду. Я ставлю на неё тоже. Я не азартный. Я логичный.,The regatta. Two to one on Hedda. I'm betting on her too. I'm not a gambler. I'm logical.
+npc.olaf.festival.01,Праздник! Весь остров в одном месте — идеальная перепись.,A holiday! The whole island in one place — a perfect census.
+npc.olaf.festival.02,"Я танцую, только когда никто не смотрит. Сегодня все смотрят. Не танцую.",I only dance when nobody's watching. Today everyone's watching. Not dancing.
+npc.olaf.gift.love.01,Это… это же письмо в бутылке! Нераспечатанное! Я… я сейчас упаду. Не держите. Держите!,This… this is a letter in a bottle! Unopened! I… I'm going to faint. Don't catch me. Catch me!
+npc.olaf.gift.love.02,Вы лучший человек в реестре. Я перепишу вашу страницу золотыми чернилами. У меня нет золотых. Куплю.,You're the best person in the register. I'll rewrite your page in gold ink. I don't have gold ink. I'll buy some.
+npc.olaf.gift.like.01,"О, спасибо! Это очень… очень кстати. Как хорошая новость.","Oh, thank you! That's very… very timely. Like good news."
+npc.olaf.gift.like.02,Спасибо! Запишу в реестр: «Смотритель — щедрый». С пометкой «проверено».,Thanks! I'll note in the register: 'Keeper — generous.' Marked 'verified'.
+npc.olaf.gift.neutral.01,Спасибо. Это… подарок. Спасибо. Я уже сказал спасибо? Спасибо.,Thank you. It's… a gift. Thank you. Did I already say thank you? Thank you.
+npc.olaf.gift.neutral.02,Интересно. Положу в ящик стола. Там много интересного.,Interesting. I'll put it in my desk drawer. There's a lot of interesting stuff in there.
+npc.olaf.gift.dislike.01,"Торф? Ой. Спасибо. Он будет… гореть? Я не знаю, что с ним делать.",Peat? Oh. Thanks. It'll… burn? I don't know what to do with it.
+npc.olaf.gift.dislike.02,Это пахнет. Не хорошо. Но спасибо за внимание!,This smells. Not nicely. But thanks for the thought!
+npc.olaf.gift.hate.01,"Ворвань! Нет-нет, я же почтальон, от меня будет пахнуть на весь остров!","Fish oil! No no, I'm the postman, I'll smell of it across the whole island!"
+npc.olaf.gift.hate.02,"Мусор? Вы… это шутка? Скажите, что шутка. Я запишу это как шутку.",Rubbish? You… is this a joke? Tell me it's a joke. I'll record it as a joke.
+npc.olaf.birthday.01,Сегодня мой день рождения! Я разослал себе три поздравления. Проверял работу почты. Работает!,It's my birthday today! I sent myself three greetings. Testing the post. It works!
+npc.olaf.birthday.02,Двадцать четыре года. В реестре пометка: «Олаф — стареет». Я сам написал.,Twenty-four. A note in the register: 'Olaf — getting older.' I wrote it myself.
+npc.olaf.birthday_gift.01,Подарок! На день рождения! Мне обычно дарят конверты. Это лучше конверта!,A present! For my birthday! People usually give me envelopes. This is better than an envelope!
+npc.olaf.birthday_gift.02,Вы помните мой день рождения… Это надо записать. Нет — это надо запомнить.,You remember my birthday… That must be written down. No — it must be remembered.
+npc.olaf.act1.01,Добро пожаловать! Вот «Устав смотрителя». Двести пунктов. Я читал его восемь раз. Восхитительно скучно.,Welcome! Here are the Keeper's Regulations. Two hundred clauses. I've read them eight times. Deliciously dull.
+npc.olaf.act1.02,"Реестр пропавших — вот. Двенадцать человек. Каждого кто-то ждёт. Может, вы поможете их найти.",The register of the missing — here. Twelve people. Someone's waiting for each. Perhaps you'll help find them.
+npc.olaf.act1.03,Ваше письмо семье Ларса ушло! Ответ будет через несколько дней. Я волнуюсь больше вас.,Your letter to Lars's family has gone! The reply will take a few days. I'm more nervous than you are.
+npc.olaf.act1.04,"Инспектор Пальм прислал уведомление: двадцать восьмое, десять ноль-ноль. Он никогда не опаздывает. Это пугает.","Inspector Palm sent notice: the twenty-eighth, ten sharp. He's never late. That's frightening."
+npc.olaf.act1.05,Штерн из «Нептуна» приезжает двадцатого. Я видел его телеграмму. Не читал. Читал. Не понравилась.,Stern from Neptune arrives on the twentieth. I saw his telegram. Didn't read it. Did. Didn't like it.
+npc.olaf.act1.06,Вы знакомитесь со всеми? Отлично! Я могу рассказать про каждого. Двадцать минут на человека. Минимум.,Meeting everyone? Excellent! I can tell you about each one. Twenty minutes per person. Minimum.
+npc.olaf.act2.01,"«Святая Берта»… Я записал время, когда погас ложный огонь. Для реестра. Теперь это для чего-то большего.",The Saint Bertha… I noted the time the false fire went out. For the register. Now it's for something bigger.
+npc.olaf.act2.02,Телеграф! Если его починить — я смогу связаться с материком. И прогноз будет точнее! Нужны медная проволока и изоляторы.,The telegraph! If it's fixed I can reach the mainland. And the forecast will be better! We need copper wire and insulators.
+npc.olaf.act2.03,Вера Сольм. Учительница. Она есть в реестре. Я отправлю письмо её сестре. Вы похоронили её хорошо?,Vera Solm. A teacher. She's in the register. I'll write to her sister. Did you bury her well?
+npc.olaf.act2.04,Пеннингтон из «Нептуна» писал в управу за неделю до крушения. Спрашивал о Зубах. Я ответил — опасно. Он приехал.,Pennington from Neptune wrote to the office a week before the wreck. Asked about the Teeth. I replied — dangerous. He came.
+npc.olaf.act2.05,Двадцать скелетов. Я нашёл в архиве судовую роль «Фортуны». Копию. Выцветшую. Сорок лет в шкафу.,Twenty skeletons. I found a copy of the Fortuna's crew list in the archive. Faded. Forty years in a cupboard.
+npc.olaf.act2.06,В Большую Хмарь я буду у телеграфа. Если он заработает — позову помощь. Если нет — буду стучать для храбрости.,During the Great Fog I'll be at the telegraph. If it works — I'll call for help. If not — I'll tap for courage.
+npc.olaf.act3.01,Я перехватываю телеграммы «Нептуна». Это незаконно. Пункт шестьдесят. Я нарушаю его каждый день. Мне страшно и гордо.,I'm intercepting Neptune's telegrams. It's illegal. Clause sixty. I break it every day. I'm terrified and proud.
+npc.olaf.act3.02,Архив смертей… Я могу сделать копии свидетельств. Незаметно. Я быстро переписываю.,The death archive… I can make copies of the certificates. Quietly. I copy fast.
+npc.olaf.act3.03,Штерн ужинал у Грима. Я разносил почту и слышал через окно. «Двадцать восьмое». Опять двадцать восьмое.,Stern dined at Grim's. I was delivering and heard through the window. 'The twenty-eighth.' The twenty-eighth again.
+npc.olaf.act3.04,На доске улик — моя телеграмма? Правда? Я… я могу умереть счастливым. Нет! Не надо умирать.,Is my telegram on the evidence board? Really? I… I could die happy. No! No dying.
+npc.olaf.act3.05,"Если меня поймают — скажите Лив, что её письма из университета я складывал в отдельную папку. Она захочет знать.",If they catch me — tell Liv I kept her university letters in a separate folder. She'll want to know.
+npc.olaf.act3.06,Зимой я сплю у телеграфа. Вдруг что-то придёт ночью. Всё важное приходит ночью.,In winter I sleep by the telegraph. In case something comes at night. Everything important comes at night.
+npc.olaf.act4.01,В ночь Прилива я на телеграфе. Буду предупреждать «Королеву». Каждую минуту. Пока пальцы работают.,On Tide Night I'll be on the telegraph. Warning the Queen. Every minute. As long as my fingers work.
+npc.olaf.act4.02,Если огонь погаснет — я выиграю вам время. Шесть минут вместо трёх. Я посчитал. Трижды.,If the light goes out — I'll buy you time. Six minutes instead of three. I calculated. Three times.
+npc.olaf.act4.03,"Я написал всем письма. На всякий случай. Не отправил. Надеюсь, не придётся.",I've written everyone letters. Just in case. Haven't sent them. I hope I won't have to.
+npc.olaf.act4.04,Мне страшно. Очень. Но я буду на месте. Почтальон всегда на месте. Даже в конце света.,I'm scared. Very. But I'll be at my post. The postman is always at his post. Even at the end of the world.
+npc.olaf.act4.05,"Реестр я спрятал в сейф управы. Если что — там всё. Все имена. Все, кого мы помним.",I've hidden the register in the office safe. If anything happens — it's all there. Every name. Everyone we remember.
+npc.olaf.act4.06,"Возвращайтесь. У меня для вас письмо. Я не скажу, от кого. Узнаете, когда вернётесь.",Come back. I have a letter for you. I won't say who from. You'll find out when you're back.
+npc.olaf.married_other.01,Поздравляю! Я доставил вам сорок три поздравления. Сорок четвёртое — моё. Вот.,Congratulations! I delivered forty-three congratulations to you. The forty-fourth is mine. Here.
+npc.olaf.married_other.02,Вы поженились! В реестре новый раздел: «Семейные». Вы — первые в нём за три года.,You're married! A new section in the register: 'Families'. You're the first in it in three years.
+npc.olaf.married_other.03,"Свадьба была прекрасной. Я записал всё. Даже то, что Хедда бросила сельдь в Бенедикта.",The wedding was wonderful. I recorded everything. Even Hedda throwing a herring at Benedict.
+npc.olaf.married_other.04,"Я немного грущу. Но это хорошая грусть. Как письмо, которое пришло не тебе, но хорошее.","I'm a little sad. But it's a good sadness. Like a letter that came for someone else, but a good one."
+npc.olaf.married_other.05,Будьте счастливы! Если нужно отправить приглашения на годовщину — я бесплатно.,Be happy! If you need anniversary invitations sent — no charge.
+npc.olaf.event.wreck.01,Крушение… Я уже готовлю бланки писем семьям. Руки дрожат. Всегда дрожат.,A wreck… I'm already preparing the letters to families. My hands shake. They always do.
+npc.olaf.event.wreck.02,Судовая роль придёт через неделю. Я перепишу её в реестр. Каждое имя. Медленно.,The crew list will come in a week. I'll copy it into the register. Every name. Slowly.
+npc.olaf.event.wreck.03,"Я слышал колокол ночью. Я знал, что это значит. Я не спал.",I heard the bell last night. I knew what it meant. I didn't sleep.
+npc.olaf.event.wreck.04,Если будут тела — я помогу с опознанием. У меня есть все приметы из реестра. Все.,If there are bodies — I'll help identify them. I have every description from the register. Every one.
+npc.olaf.event.wreck.05,Ясная ночь. Опять. Я записал время. Я всегда записываю время.,A clear night. Again. I noted the time. I always note the time.
+npc.olaf.event.funeral.01,Вы похоронили. Я запишу в реестр: «Найден. Похоронен». Лучшие два слова в моей работе.,You held a burial. I'll write in the register: 'Found. Buried.' The best two words in my work.
+npc.olaf.event.funeral.02,Письмо семье отправлю сегодня же. Приоритетной почтой. За свой счёт.,I'll send the letter to the family today. Priority post. At my own expense.
+npc.olaf.event.funeral.03,На похоронах я не плачу. Я пишу. Потом плачу. Над написанным.,I don't cry at funerals. I write. Then I cry. Over what I've written.
+npc.olaf.event.funeral.04,"Ещё одна строчка в реестре закрыта. Это как письмо, которое наконец дошло.",One more line in the register closed. Like a letter that finally arrived.
+npc.olaf.event.funeral.05,"Спасибо, что пишете имена на знаках. Я потом сверяю. Вы ни разу не ошиблись.",Thank you for writing the names on the markers. I check them afterwards. You've never made a mistake.
+npc.olaf.event.hmar.01,Ночь Хмари. Телеграф стучал сам. Я не трогал. Записал. Точки и тире. Ничего не значат. Или значат.,Fog Night. The telegraph tapped by itself. I didn't touch it. I wrote it down. Dots and dashes. Meaningless. Or not.
+npc.olaf.event.hmar.02,"Я спрятался под стол. С реестром. Реестр — это самое ценное. После меня. Нет, до.","I hid under the desk. With the register. The register is the most precious thing. After me. No, before."
+npc.olaf.event.hmar.03,"Туман оставил на окне буквы. «Ф». Одна буква. Я её сфотографировал бы, если бы умел.",The fog left letters on the window. 'F'. One letter. I'd have photographed it if I knew how.
+npc.olaf.event.hmar.04,Ваш луч проходил через управу. Каждый раз я выдыхал. Потом снова задерживал дыхание.,Your beam swept through the office. Each time I breathed out. Then held my breath again.
+npc.olaf.event.hmar.05,"После Ночи Хмари всегда приходит много писем. Люди пишут тем, кого давно не видели. Я понимаю почему.",After a Fog Night there are always lots of letters. People write to those they haven't seen in a long time. I understand why.
+npc.olaf.event.inspection.01,"Инспектор Пальм! Я подал ему все отчёты. В трёх экземплярах. Он сказал «пункт сто». Я не знаю, что это.",Inspector Palm! I handed him all the reports. In triplicate. He said 'clause one hundred'. I don't know what that is.
+npc.olaf.event.inspection.02,"Вы сдали! Я уже отправил телеграмму в управу на материке. Ой, телеграф не работает. Отправлю письмом.","You passed! I've already sent a telegram to the mainland office. Oh, the telegraph doesn't work. I'll send a letter."
+npc.olaf.event.inspection.03,"Пальм и я — родственные души. Мы оба любим пункты. Он — исполнять, я — нумеровать.","Palm and I are kindred spirits. We both love clauses. He enforces them, I number them."
+npc.olaf.event.inspection.04,После инспекции Пальм пьёт чай в управе. Молча. Я тоже молчу. Лучшие двадцать минут месяца.,After an inspection Palm drinks tea at the office. Silently. I'm silent too. Best twenty minutes of the month.
+npc.olaf.event.inspection.05,Отчёт об инспекции подшит в папку «Смотритель». Папка толстеет. Это хорошо.,The inspection report is filed in the 'Keeper' folder. The folder's getting fat. That's good.
+npc.olaf.event.wedding.01,Свадьба! Я разнёс приглашения за один день. Рекорд! Упал только дважды.,The wedding! I delivered the invitations in one day. A record! Only fell twice.
+npc.olaf.event.wedding.02,"Бенедикт венчал, стоя подальше от окна. Я засёк — два метра сорок. Для реестра.",Benedict officiated standing well away from the window. I measured — two metres forty. For the register.
+npc.olaf.event.wedding.03,Я плакал. Это от радости. И от свечей. Воск щиплет глаза.,I cried. From joy. And the candles. Wax stings the eyes.
+npc.olaf.event.wedding.04,Свадебная телеграмма от меня: «ПОЗДРАВЛЯЮ ТЧК СЧАСТЬЯ ТЧК РЕЕСТР ОБНОВЛЁН ТЧК».,My wedding telegram: 'CONGRATULATIONS STOP HAPPINESS STOP REGISTER UPDATED STOP'.
+npc.olaf.event.wedding.05,"Живите долго! Я буду носить вам письма, пока не состарюсь. Это обещание.",Live long! I'll bring you letters until I'm old. That's a promise.
+npc.olaf.event.villains.01,Суд! Моя телеграмма была на столе у Пальма. Моя! Я подшил копию в реестр. Под золотой обложкой.,The trial! My telegram was on Palm's desk. Mine! I filed a copy in the register. Under a gold cover.
+npc.olaf.event.villains.02,«Нептун утонул» — такой заголовок в газете. Я доставил сто экземпляров. Лично.,'Neptune Sinks' — that's the headline. I delivered a hundred copies. Personally.
+npc.olaf.event.villains.03,Теперь я могу читать телеграммы Грима открыто. Их больше нет. Странно скучаю.,Now I can read Grim's telegrams openly. There aren't any. Oddly I miss them.
+npc.olaf.event.villains.04,Я написал письма всем семьям с ложных крушений. Двадцать лет писем. Это правильно.,I've written to every family from the false wrecks. Twenty years of letters. It's right.
+npc.olaf.event.villains.05,Спасибо вам. Реестр наконец правдивый. Весь.,Thank you. The register is finally true. All of it.
+npc.olaf.bouquet_yes.01,Армерия? Мне? Я… я запишу эту дату. Нет — я её запомню. Да! Да!,Armeria? For me? I… I'll write down the date. No — I'll remember it. Yes! Yes!
+npc.olaf.ring_yes.01,Кольцо! Я сейчас упаду в обморок. Держите меня. Да! Я держусь. Да!,A ring! I'm going to faint. Hold me. Yes! I'm holding on. Yes!
+ev.olaf2.l01,"Хотите посмотреть мою коллекцию? Бутылочная почта. Сорок два письма. Из всех морей. Ну, из двух.","Want to see my collection? Bottle post. Forty-two letters. From every sea. Well, two."
+ev.olaf2.l02,Вот это — моряк пишет жене: «Если найдёшь — я жив». Бутылка плавала шесть лет. Он жив? Не знаю.,This one — a sailor writing to his wife: 'If you find this — I'm alive.' The bottle drifted six years. Is he alive? I don't know.
+ev.olaf2.l03,"А это — ребёнок: «Кто найдёт — напишите, какого цвета море у вас». Я написал. Серого.",And this — a child: 'Whoever finds this — write what colour the sea is where you are.' I wrote back. Grey.
+ev.olaf2.c01,Прекрасная коллекция. Можно я буду приносить находки?,A lovely collection. May I bring you what I find?
+ev.olaf2.c02,Вы пытались найти адресатов?,Did you try to find the addressees?
+ev.olaf2.l04,Можно? Конечно можно! Я заведу для ваших отдельную полку. С табличкой!,May you? Of course! I'll make you a shelf of your own. With a label!
+ev.olaf2.l05,"Троих нашёл. Один ответил: «Спасибо, я уже развёлся». Остальные — нет.","I found three. One replied: 'Thanks, I'm divorced now.' The others didn't."
+ev.olaf4.l01,"Вечер чтения. Из бутылок. Я выбираю два письма: смешное и грустное. Вы решаете, какое читаем.",A reading evening. From the bottles. I've picked two letters: a funny one and a sad one. You choose which we read.
+ev.olaf4.c01,Смешное.,The funny one.
+ev.olaf4.c02,Грустное.,The sad one.
+ev.olaf4.l02,"«Дорогая тёща, я уплыл. Навсегда. Кота забираю. Не ищите». Ха! Бутылке сорок лет. Кот, наверное, счастлив.","'Dear mother-in-law, I've sailed away. For good. I'm taking the cat. Don't look for us.' Ha! The bottle's forty years old. The cat's probably happy."
+ev.olaf4.l03,"«Мы идём на огонь у Зубов. Капитан говорит — маяк. Я не уверен. Если не вернусь — скажите маме, что я не боялся». Подпись: юнга. Сорок лет назад.",'We're steering for the light at the Teeth. The captain says it's the lighthouse. I'm not sure. If I don't come back — tell Mum I wasn't afraid.' Signed: cabin boy. Forty years ago.
+ev.olaf6.l01,Вы пришли! В шторм! Телеграф искрит. Провод на крыше оборвало. Я боюсь высоты. И электричества. И шторма.,You came! In a storm! The telegraph's sparking. The wire on the roof snapped. I'm afraid of heights. And electricity. And storms.
+ev.olaf6.l02,"(Вы держите лестницу, пока Олаф, зажмурившись, скручивает провод. Молния бьёт в море совсем рядом.)","(You hold the ladder while Olaf, eyes shut, twists the wire together. Lightning strikes the sea close by.)"
+ev.olaf6.l03,Работает! Слышите? Стучит! Материк! Мы с материком! Я сейчас заплачу. Уже.,It works! Hear that? Tapping! The mainland! We're connected! I'm going to cry. Already am.
+ev.olaf8.l01,Закройте дверь. Пожалуйста. Я перехватил телеграмму. «Нептун» — Гриму.,Close the door. Please. I intercepted a telegram. Neptune — to Grim.
+ev.olaf8.l02,"«ОГОНЬ 28 ТЧК ТРЮМ ГОТОВ ТЧК». Двадцать восьмое. Трюм готов. Вы понимаете, что это значит?",'FIRE 28 STOP HOLD READY STOP'. The twenty-eighth. Hold ready. Do you understand what that means?
+ev.olaf8.c01,Это улика. Спрячь копию.,It's evidence. Hide a copy.
+ev.olaf8.c02,Ты {рисковал|рисковала} ради этого. Спасибо.,You took a risk for this. Thank you.
+ev.olaf8.l03,Три копии. В трёх местах. Одна — в реестре. Там никто не ищет. Там никто не читает.,Three copies. Three places. One in the register. Nobody looks there. Nobody reads it.
+ev.olaf8.l04,Рисковал? Я? Да. Я рисковал! Запишу это. В раздел «подвиги». Он был пустой.,A risk? Me? Yes. I took a risk! I'll write it down. Under 'feats'. It was empty.
+ev.olaf10.l01,Я написал письмо. Вам. И сейчас брошу его в море.,I've written a letter. To you. And now I'm going to throw it into the sea.
+ev.olaf10.l02,Не спрашивайте зачем. Некоторые письма нужно доставлять не почтой. А морем. Оно само решит когда.,Don't ask why. Some letters shouldn't go by post. They should go by sea. It'll decide when.
+ev.olaf10.l03,(Бутылка с сургучной печатью уходит в волну и уплывает к мысу.),(A bottle with a wax seal goes into the wave and drifts toward the cape.)
+ev.olaf14.l01,"Музей почты! Открыт! Бутылки, марки, реестр и мой первый конверт. И ваша бутылка — в центре.","The Post Museum! Open! Bottles, stamps, the register and my first envelope. And your bottle — in the middle."
+ev.olaf14.l02,"Табличка: «Письма, которые дошли». Все, какие дошли. Даже спустя сорок лет.",The plaque: 'Letters That Arrived'. Every one that did. Even forty years late.
+item.pearl.name,Жемчужина,Pearl
+item.pearl.desc,"Её обожают все. Ранн — тоже. Растёт в устрице годами, теряется за минуту.","Everyone adores it. So does Rann. Grows in an oyster for years, lost in a minute."
+npc.tuve.spring.01,"Весной вода пахнет льдом, который передумал.",In spring the water smells of ice that changed its mind.
+npc.tuve.spring.02,Сельдь ещё сонная. Мы её не будим. Пусть досмотрит.,The herring are still sleepy. We don't wake them. Let them finish dreaming.
+npc.tuve.spring.03,Люди весной сажают в землю маленькие камни. Потом ждут. Мы так ждём штиль.,In spring people put small stones into the earth. Then they wait. We wait for calm like that.
+npc.tuve.spring.04,Ты пахнешь солью и дымом. Как маяк. Мне нравится.,You smell of salt and smoke. Like the lighthouse. I like it.
+npc.tuve.spring.05,"Чайки кричат, потому что им не дали голоса поменьше.",Gulls scream because nobody gave them a smaller voice.
+npc.tuve.spring.06,Лёд ушёл. Под ним было много тишины. Теперь её разнесло течение.,The ice has gone. There was a lot of silence under it. The current has carried it away.
+npc.tuve.spring.07,Ваши дома стоят спиной к морю. Мы бы так не смогли. Мы бы всё время оглядывались.,Your houses stand with their backs to the sea. We couldn't. We'd always be looking over our shoulders.
+npc.tuve.spring.08,Весной у тюленей рождаются дети. Они сразу умеют плавать. Люди — нет. Это грустно.,In spring the seals have pups. They can swim at once. People can't. It's sad.
+npc.tuve.spring.09,"Ты зажигаешь огонь каждую ночь. Мы видим его из-под воды. Он дрожит, как рыба.",You light the fire every night. We see it from under the water. It trembles like a fish.
+npc.tuve.spring.10,"Весна — это когда море вспоминает, что оно тёплое. Потом снова забывает.",Spring is when the sea remembers it's warm. Then forgets again.
+npc.tuve.summer.01,Летом ночью вода светится. Это мы разговариваем. Шучу. Это планктон. Он тоже разговаривает.,In summer the water glows at night. That's us talking. Joking. It's plankton. It talks too.
+npc.tuve.summer.02,Солнце не заходит. Мы не спим. Люди не спят. Все устают вместе. Это почти дружба.,The sun doesn't set. We don't sleep. People don't sleep. Everyone gets tired together. That's almost friendship.
+npc.tuve.summer.03,"Лив смотрит на меня так, будто хочет записать. Я не даюсь. Я не число.",Liv looks at me as if she wants to write me down. I won't let her. I'm not a number.
+npc.tuve.summer.04,Летом вода сладкая у берега. От ваших ручьёв. Мы пьём и морщимся.,In summer the water's sweet by the shore. From your streams. We drink and wince.
+npc.tuve.summer.05,Ты {загорел|загорела}. У нас так бывает с камнями. Они теплеют и становятся добрее.,You've tanned. That happens to stones with us. They get warm and kinder.
+npc.tuve.summer.06,"Люди купаются и визжат. Холодно им. Море смеётся. Тихо, чтобы не обидеть.","People bathe and shriek. They're cold. The sea laughs. Quietly, so as not to offend."
+npc.tuve.summer.07,Скумбрия идёт быстро. Как новость. Мы её догоняем. Иногда догоняем.,The mackerel run fast. Like news. We chase them. Sometimes we catch up.
+npc.tuve.summer.08,"Мне нравится ваша регата. Лодки бегут, как тюлени от касатки. Только весело.",I like your regatta. Boats running like seals from an orca. Only cheerful.
+npc.tuve.summer.09,Летом Хмарь спит глубже. Но видит сны. Плохие.,In summer the Fog sleeps deeper. But it dreams. Bad dreams.
+npc.tuve.summer.10,"Дай руку. Нет, просто так. Люди тёплые. Я забываю.","Give me your hand. No, just because. People are warm. I forget."
+npc.tuve.autumn.01,Осенью море старше. Оно устало и злится по пустякам.,In autumn the sea is older. It's tired and angry about little things.
+npc.tuve.autumn.02,"Сельдь уходит стеной. Серебряной. Люди ставят сети. Мы — ждём, что останется.",The herring leave in a wall. A silver one. People set nets. We wait for what's left.
+npc.tuve.autumn.03,"Ночь Утопленников — я стою на камне и считаю фонари. Их меньше, чем тех, кто внизу.",Drowned Night — I stand on the rock counting lanterns. Fewer than those below.
+npc.tuve.autumn.04,"Шторма приносят к берегу чужие вещи. Ботинки, письма, игрушки. Море возвращает, что не может носить.","Storms bring strangers' things ashore. Boots, letters, toys. The sea returns what it can't carry."
+npc.tuve.autumn.05,Ты пахнешь землёй. Ты {копал|копала}? Для кого-то? Хорошо. Им теперь спокойно.,You smell of earth. Were you digging? For someone? Good. They're at peace now.
+npc.tuve.autumn.06,"Осенью я мёрзну на берегу. В воде — нет. Странно быть и тем, и тем.",In autumn I'm cold on the shore. Not in the water. Strange to be both.
+npc.tuve.autumn.07,Ветер рвёт пену с волн. Будто стрижёт овец. Маргит бы оценила.,The wind tears foam off the waves. As if shearing sheep. Margit would approve.
+npc.tuve.autumn.08,Люди осенью грустят. Мы — нет. Мы ждём зиму. Зимой тихо.,People are sad in autumn. We aren't. We wait for winter. It's quiet in winter.
+npc.tuve.autumn.09,Листья падают в море. Мы собираем их. Красные. Ненадолго они — рыбы.,Leaves fall into the sea. We gather them. Red ones. For a little while they're fish.
+npc.tuve.autumn.10,Твой огонь осенью ярче. Или ночь темнее. Мне всё равно. Я смотрю.,Your light is brighter in autumn. Or the night is darker. I don't mind which. I watch.
+npc.tuve.winter.01,Зимой подо льдом тихо. Как в раковине. Слышно своё сердце.,In winter it's quiet under the ice. Like inside a shell. You can hear your own heart.
+npc.tuve.winter.02,Сияние отражается в воде. Мы плаваем в цветном. Это наш праздник.,The aurora is reflected in the water. We swim in colour. That's our festival.
+npc.tuve.winter.03,Люди носят чужую шерсть. Мы — свою. Я — сейчас — нет. Мне холодно.,People wear other creatures' wool. We wear our own. I — right now — don't. I'm cold.
+npc.tuve.winter.04,Зимой тюлени толстые и счастливые. Люди — худые и злые. Почему так?,In winter seals are fat and happy. People are thin and cross. Why is that?
+npc.tuve.winter.05,Долгая ночь. Мы поём. Вы слышите это как ветер. Это не ветер.,The long night. We sing. You hear it as wind. It isn't wind.
+npc.tuve.winter.06,"Мой день рождения зимой. Я не знаю, что это. Лив сказала — день, когда тебе рады. Тогда каждый день.",My birthday is in winter. I don't know what that is. Liv said — the day people are glad of you. Then every day.
+npc.tuve.winter.07,Лёд на лагуне. Люди ходят по воде. Мы смотрим снизу и завидуем.,Ice on the lagoon. People walk on water. We watch from below and envy.
+npc.tuve.winter.08,"Снег падает в море и исчезает. Как люди, которые пришли к нам.",Snow falls into the sea and vanishes. Like the people who came to us.
+npc.tuve.winter.09,"Зимой твой огонь — единственная звезда, которая не двигается.",In winter your light is the only star that doesn't move.
+npc.tuve.winter.10,"Дай мне горячее. Нет, не рыбу. Кружку. Я держу. Просто держу.","Give me something hot. No, not fish. A mug. I'm holding it. Just holding it."
+npc.tuve.weather.rain.01,"Дождь — это море, которое пришло в гости к земле. Вежливое.",Rain is the sea come to visit the land. A polite one.
+npc.tuve.weather.rain.02,В дождь все мокрые. Как мы. Все равны.,In rain everyone's wet. Like us. All equal.
+npc.tuve.weather.storm.01,Шторм. Море кричит. Не на тебя. На всех сразу.,Storm. The sea is shouting. Not at you. At everyone at once.
+npc.tuve.weather.storm.02,В шторм мы уходим вглубь. Там тихо. Вам — нельзя. Держи огонь.,In a storm we go deep. It's quiet there. You can't. Keep the fire.
+npc.tuve.weather.fog.01,"Туман — это она. Девочка. Она плачет. Мы не можем её утешить. У нас нет рук, когда мы тюлени.",The fog is her. The girl. She's crying. We can't comfort her. We have no hands when we're seals.
+npc.tuve.weather.fog.02,"В тумане я слышу, как Хмарь зовёт маму. Я ей отвечаю. Она не слышит.",In fog I hear the Fog calling for her mother. I answer. She doesn't hear.
+npc.tuve.weather.snow.01,"Снег на воде — как соль, которая передумала.",Snow on water is like salt that changed its mind.
+npc.tuve.weather.cloud.01,"Облака — это море, которое поднялось посмотреть сверху.",Clouds are the sea gone up to look down.
+npc.tuve.festival.drowned_night.01,Ночь Утопленников. Они выходят к камням послушать. Вы не видите. Я вижу.,Drowned Night. They come up to the rocks to listen. You don't see them. I do.
+npc.tuve.festival.drowned_night.02,"Ваши фонари на воде — как рыбы, которые решили светиться. Им это идёт.",Your lanterns on the water are like fish that decided to glow. It suits them.
+npc.tuve.festival.white_sun.01,Белое Солнце. Мы плаваем у берега всю ночь. Люди поют. Мы слушаем.,White Sun. We swim by the shore all night. People sing. We listen.
+npc.tuve.festival.regatta.01,"Регата — лодки бегут, а мы плывём рядом. Никто не замечает, что мы быстрее.","The regatta — boats race, and we swim alongside. Nobody notices we're faster."
+npc.tuve.festival.01,Праздник — это когда люди громче моря. Редкость.,A festival is when people are louder than the sea. A rarity.
+npc.tuve.festival.02,Мне нравятся ваши праздники. Все стоят близко. Как стая.,I like your festivals. Everyone stands close. Like a pod.
+npc.tuve.gift.love.01,Сельдь! Свежая! Ты понимаешь меня. Это редкость на суше.,Herring! Fresh! You understand me. That's rare on land.
+npc.tuve.gift.love.02,"Ты {принёс|принесла} то, что поёт. Спасибо. Море запомнит. Я — тоже.",You brought something that sings. Thank you. The sea will remember. So will I.
+npc.tuve.gift.like.01,Красиво. Я положу на камень. Пусть смотрит на луну.,Beautiful. I'll put it on the rock. Let it look at the moon.
+npc.tuve.gift.like.02,"Спасибо. Это пахнет морем. Значит, хорошее.",Thank you. It smells of the sea. So it's good.
+npc.tuve.gift.neutral.01,"Что это? Ты объяснишь? Нет, не надо. Я просто подержу.","What is it? Will you explain? No, don't. I'll just hold it."
+npc.tuve.gift.neutral.02,Спасибо. Люди дарят странное. Но от сердца. Это видно.,Thank you. People give strange things. But from the heart. That shows.
+npc.tuve.gift.dislike.01,Копчёная… Ты коптишь моих знакомых. Не надо.,Smoked… You're smoking my acquaintances. Don't.
+npc.tuve.gift.dislike.02,"Нет. Это не для меня. Отдай тому, кто не плавает.",No. That's not for me. Give it to someone who doesn't swim.
+npc.tuve.gift.hate.01,Гарпун?! Зачем ты {принёс|принесла} мне смерть? Уходи. Сегодня — уходи.,A harpoon?! Why would you bring me death? Go. Today — go.
+npc.tuve.gift.hate.02,"Банка. Железная. С рыбой внутри, которая не видела моря. Это тюрьма. Убери.",A tin. Iron. With a fish inside that never saw the sea. It's a prison. Take it away.
+npc.tuve.birthday.01,"Сегодня день, когда меня нашли на льдине. Люди называют это рождением. Пусть.",Today is the day I was found on an ice floe. People call that a birth. All right.
+npc.tuve.birthday.02,"Мне сказали, что сегодня мой праздник. Я не знаю, что делать. Можно я просто посижу рядом?",They told me today is my celebration. I don't know what to do. May I just sit beside you?
+npc.tuve.birthday_gift.01,Подарок в мой день. Люди странные. Хорошие. Спасибо.,A gift on my day. People are strange. Good. Thank you.
+npc.tuve.birthday_gift.02,Ты помнишь день льдины. Я запомню день твоего подарка.,You remember the day of the ice floe. I'll remember the day of your gift.
+npc.tuve.act1.01,Весной я смотрела из воды на новый огонь. Он горел неуверенно. Потом — уверенно.,In spring I watched the new light from the water. It burned unsteadily. Then — steadily.
+npc.tuve.act1.02,"Первая ночь, когда ты {зажёг|зажгла} огонь, — мы подплыли близко. Проверить. Ты не {заметил|заметила}.","The first night you lit the fire, we swam close. To check. You didn't notice."
+npc.tuve.act1.03,Агата кормила тюленей. Каждую весну. Мы помним.,Agatha fed the seals. Every spring. We remember.
+npc.tuve.act1.04,Когда на Зубах горел чужой огонь — мы кричали. Люди не слышат наш крик.,When a stranger's fire burned on the Teeth — we cried out. People don't hear our cry.
+npc.tuve.act1.05,Первые утопленники весной — они плыли мимо нас. Мы проводили их до берега. К тебе.,The first drowned in spring — they floated past us. We guided them to the shore. To you.
+npc.tuve.act1.06,Весна — рано. Меня ещё нет для тебя. Но я уже есть.,Spring is early. I don't exist for you yet. But I already do.
+npc.tuve.act2.01,Белая Хмарь — это её плач. Громкий. Мы ушли глубоко. Ты — {остался|осталась}. {Смелый|Смелая}.,The White Fog is her weeping. Loud. We went deep. You stayed. Brave.
+npc.tuve.act2.02,Люди Грима украли мою шкуру. Без неё я не могу вернуться. Я слабею каждую луну.,Grim's men stole my skin. Without it I can't go back. I grow weaker every moon.
+npc.tuve.act2.03,Двадцать в гротах… Мы знали. Мы пели им. Сорок лет. Теперь ты им поёшь.,The twenty in the grottoes… We knew. We sang to them. Forty years. Now you sing to them.
+npc.tuve.act2.04,"Кай на Мёртвом Огне — он кормил нас, когда был молодым. Потом перестал. Потом испугался.",Kai at the Dead Fire — he fed us when he was young. Then he stopped. Then he got scared.
+npc.tuve.act2.05,"Сельдь, которую ты даёшь тюленям, — я её ем. Спасибо. Не говори никому.",The herring you give the seals — I eat it. Thank you. Don't tell anyone.
+npc.tuve.act2.06,Большая Хмарь придёт в деревню. Я успокою воду у причала. Немного. Сколько смогу.,The Great Fog will come to the village. I'll calm the water by the jetty. A little. As much as I can.
+npc.tuve.act3.01,"Моя шкура — в сейфе. Рядом с камнем. Я чувствую её, как холод в плече.",My skin is in the safe. Beside the stone. I feel it like a cold in my shoulder.
+npc.tuve.act3.02,"Глубь меняется. Там, внизу, стало больше света. Твоего? Или её?","The Deep is changing. Down there, there's more light. Yours? Or hers?"
+npc.tuve.act3.03,Я видела Агату. Внизу. Она держит дверь. Она устала. Она спросила о тебе.,I saw Agatha. Below. She's holding the door. She's tired. She asked about you.
+npc.tuve.act3.04,"Затонувший Сольвик — мы живём там. Между домов. Мы помним, кто жил в каждом.",Sunken Solvik — we live there. Between the houses. We remember who lived in each.
+npc.tuve.act3.05,На Зубах люди с фонарём. Двое. Большие. Я перевернула им лодку однажды. Они думают — волна.,People with a lantern on the Teeth. Two. Big ones. I turned their boat over once. They think it was a wave.
+npc.tuve.act3.06,Если вернёшь мне шкуру — я смогу выбрать. Остаться или уйти. Выбор — это самое дорогое.,If you give me back my skin — I'll be able to choose. To stay or to go. Choice is the most precious thing.
+npc.tuve.act4.01,В ночь Прилива я успокою море. На одну ступень. Больше не смогу. Прости.,On Tide Night I'll calm the sea. By one step. I can't do more. Forgive me.
+npc.tuve.act4.02,"Когда вода уйдёт, дно будет пустым и страшным. Иди по моему следу. Я проведу.","When the water goes out, the floor will be bare and frightening. Follow my trail. I'll guide you."
+npc.tuve.act4.03,Ранн знает тебя. Она говорит «мы». Не бойся её «мы». Бойся её молчания.,Rann knows you. She says 'we'. Don't fear her 'we'. Fear her silence.
+npc.tuve.act4.04,"Хмарь — дочь. Ей больно. Если ты сможешь — утешь её. Это важнее, чем победить.",The Fog is a daughter. She's in pain. If you can — comfort her. That matters more than winning.
+npc.tuve.act4.05,Я боюсь. У тюленей нет слова для страха. Я учусь вашему.,I'm afraid. Seals have no word for fear. I'm learning yours.
+npc.tuve.act4.06,Вернись на берег. Я буду ждать на камне. Мы умеем ждать дольше всех.,Come back to the shore. I'll wait on the rock. We can wait longer than anyone.
+npc.tuve.married_other.01,Ты {выбрал|выбрала} не меня. Хорошо. Выбор — самое дорогое. Я знаю цену.,You chose someone else. Good. Choice is the most precious thing. I know its price.
+npc.tuve.married_other.02,Люди называют это свадьбой. Мы называем — одна стая. Будь в хорошей стае.,People call it a wedding. We call it — one pod. Be in a good pod.
+npc.tuve.married_other.03,Я буду петь вам в полнолуние. Вы услышите ветер. Это не ветер.,I'll sing to you both at full moon. You'll hear wind. It isn't wind.
+npc.tuve.married_other.04,Не грусти обо мне. Море большое. Оно утешает.,Don't be sad about me. The sea is big. It comforts.
+npc.tuve.married_other.05,"Приводи её к камню. Или его. Я хочу посмотреть, кто держит твою руку.",Bring them to the rock. I want to see who's holding your hand.
+npc.tuve.event.wreck.01,Корабль ушёл вниз. Мы подплыли. Никого не спасли. Мы не успеваем. Никогда.,A ship went down. We swam up. Saved no one. We're never in time. Never.
+npc.tuve.event.wreck.02,"Они идут на дно медленно, как листья. Мы провожаем. Потом отдаём тебе.","They sink slowly, like leaves. We see them down. Then we give them to you."
+npc.tuve.event.wreck.03,Там был чужой огонь. Опять. Море плачет от него. Не от шторма — от огня.,There was a stranger's fire. Again. The sea weeps from it. Not from storms — from fire.
+npc.tuve.event.wreck.04,Мы нашли девочку в каюте. Её несёт к мысу. Встреть её.,We found a girl in a cabin. She's being carried to the cape. Meet her.
+npc.tuve.event.wreck.05,Похорони их. Они хотят землю. Не все хотят море.,Bury them. They want earth. Not everyone wants the sea.
+npc.tuve.event.funeral.01,Ты {положил|положила} их в землю. Земля тёплая изнутри. Там не страшно.,You laid them in the earth. The earth is warm inside. It's not frightening there.
+npc.tuve.event.funeral.02,"Мы слышим, как ты копаешь. Из воды. Это звучит как забота.",We hear you dig. From the water. It sounds like care.
+npc.tuve.event.funeral.03,Камень на могиле — чтобы море не пришло за ним обратно. Правильно.,A stone on the grave — so the sea doesn't come back for him. Right.
+npc.tuve.event.funeral.04,Он был из наших вод. Мы пели ему. Теперь ты ему споёшь. По-своему.,He was from our waters. We sang to him. Now you'll sing to him. In your way.
+npc.tuve.event.funeral.05,"Спасибо, что забираешь их у холода.",Thank you for taking them from the cold.
+npc.tuve.event.hmar.01,Ночь Хмари. Она плакала громко. Я держала её — водой. Она проходила насквозь.,Fog Night. She wept loudly. I held her — with water. She passed right through.
+npc.tuve.event.hmar.02,"Утопцы вышли на берег. Они не злые. Они просто не знают, куда идти.",The drowned came up on the shore. They're not wicked. They just don't know where to go.
+npc.tuve.event.hmar.03,"Твой огонь резал туман. Ей было больно. Но она отступала. Может, она ищет свет.",Your fire cut the fog. It hurt her. But she drew back. Maybe she's looking for light.
+npc.tuve.event.hmar.04,"Мы пели всю ночь, чтобы она уснула. Не уснула.",We sang all night so she'd sleep. She didn't.
+npc.tuve.event.hmar.05,После Хмари вода солёнее. Это её слёзы. Попробуй.,After the Fog the water's saltier. Those are her tears. Taste it.
+npc.tuve.event.inspection.01,"Приходил человек с бумагами. Он смотрел на огонь и писал. Огонь не любит, когда о нём пишут.",A man with papers came. He looked at the fire and wrote. Fire doesn't like being written about.
+npc.tuve.event.inspection.02,Люди проверяют огонь. Мы проверяем море. Все что-то проверяют.,People check the fire. We check the sea. Everyone checks something.
+npc.tuve.event.inspection.03,Инспектор боится воды. Я видела. Он держится от неё на три шага. Как Бенедикт.,The inspector is afraid of water. I saw. He keeps three paces from it. Like Benedict.
+npc.tuve.event.inspection.04,Тебя похвалили? Хорошо. Я бы похвалила тоже. Но не умею писать.,Did they praise you? Good. I'd praise you too. But I can't write.
+npc.tuve.event.inspection.05,Бумага — странная вода. Она держит слова и не отпускает.,Paper is strange water. It holds words and won't let go.
+npc.tuve.event.wedding.01,Свадьба. Люди стояли близко-близко. Как тюлени на камне в холод.,"A wedding. People stood close, close. Like seals on a rock in the cold."
+npc.tuve.event.wedding.02,Я смотрела из воды. Все улыбались. Даже море.,I watched from the water. Everyone was smiling. Even the sea.
+npc.tuve.event.wedding.03,Они бросали сельдь. Хорошую. Я поймала одну. Не говори.,They threw herring. Good ones. I caught one. Don't tell.
+npc.tuve.event.wedding.04,Вы связали руки лентой. У нас связывают течением. Тоже крепко.,You tied hands with a ribbon. We tie with a current. Just as strong.
+npc.tuve.event.wedding.05,Будьте стаей. Долго.,Be a pod. For a long time.
+npc.tuve.event.villains.01,Большой человек с фонарём больше не приходит на Зубы. Вода там стала чище.,The big man with the lantern doesn't come to the Teeth any more. The water there is cleaner.
+npc.tuve.event.villains.02,Грим украл мою шкуру. Теперь украли у него — всё. Море любит равновесие.,Grim stole my skin. Now everything's been taken from him. The sea loves balance.
+npc.tuve.event.villains.03,"Ингрид пришла к камню и плакала. Я пела ей. Она не знает, что это я.",Ingrid came to the rock and cried. I sang to her. She doesn't know it was me.
+npc.tuve.event.villains.04,Теперь ложных огней нет. Мы можем спать спокойно. Впервые за сорок лет.,Now there are no false fires. We can sleep in peace. For the first time in forty years.
+npc.tuve.event.villains.05,Спасибо. У нас нет слова «спасибо». Я говорю твоё.,Thank you. We have no word for thanks. I'm using yours.
+npc.tuve.bouquet_yes.01,"Цветок со скалы. Над морем. Ты выбираешь меня — и сушу, и воду. Да.",A flower from the cliff. Above the sea. You choose me — both land and water. Yes.
+npc.tuve.ring_yes.01,Круг. Как течение вокруг острова. Да. Я останусь. Но в полнолуние — море.,A circle. Like the current round the island. Yes. I'll stay. But at full moon — the sea.
+ev.tuve0_meet.l01,"(На Тюленьем камне сидит девушка в сером. Мокрые волосы, босые ноги. Тюлени лежат вокруг, как собаки у очага.)","(A girl in grey sits on Seal Rock. Wet hair, bare feet. The seals lie round her like dogs by a hearth.)"
+ev.tuve0_meet.l02,Ты {кормил|кормила} их сельдью. Семь раз. Семь разных дней. Мы считали.,You fed them herring. Seven times. Seven different days. We counted.
+ev.tuve0_meet.l03,"Меня зовут Туве. Не говори людям. Они приходят с сетями, когда узнают.",My name is Tuve. Don't tell people. They come with nets when they find out.
+ev.tuve2.l01,Плыви. Рядом с ними. Не хватай. Просто плыви.,Swim. Beside them. Don't grab. Just swim.
+ev.tuve2.l02,"(Тюлени кружат вокруг вас в тёмной воде, касаются усами ладоней. Туве сидит на камне и не сводит с вас глаз.)","(The seals circle you in the dark water, brushing your palms with their whiskers. Tuve sits on the rock and never takes her eyes off you.)"
+ev.tuve2.c01,"Плыть медленно, не мешая им.","Swim slowly, not getting in their way."
+ev.tuve2.c02,Попробовать нырнуть с ними.,Try diving with them.
+ev.tuve2.l03,"Ты плаваешь как человек, который слушает. Таких мало.",You swim like a person who listens. There aren't many.
+ev.tuve2.l04,Слишком глубоко для тебя. Но смело. Они запомнили тебя.,Too deep for you. But brave. They'll remember you.
+ev.tuve4.l01,Сегодня нырнём вместе. Дай руку. Я буду дышать за двоих. Немного.,Today we dive together. Give me your hand. I'll breathe for two. A little.
+ev.tuve4.l02,(Под водой её пальцы тёплые. Воздуха в груди хватает вдвое дольше обычного.),(Underwater her fingers are warm. The air in your chest lasts twice as long as usual.)
+ev.tuve4.l03,Видишь? Море не хочет тебя забрать. Оно хочет тебя показать.,See? The sea doesn't want to take you. It wants to show you.
+ev.tuve6.l01,"Я должна сказать. Я — не человек. Не совсем. Я — из тех, кто носит шкуру.",I must tell you. I'm not human. Not quite. I'm one of those who wear a skin.
+ev.tuve6.l02,Люди Грима украли мою. Без неё я не могу вернуться. И не могу остаться. Я между.,Grim's men stole mine. Without it I can't go back. And I can't stay. I'm in between.
+ev.tuve6.c01,Я верну твою шкуру.,I'll bring your skin back.
+ev.tuve6.c02,"Это многое объясняет. Спасибо, что сказала.",That explains a lot. Thank you for telling me.
+ev.tuve6.c03,"Я… не знаю, что сказать.",I… don't know what to say.
+ev.tuve6.l03,Люди много обещают. Ты — делаешь. Я подожду.,People promise a lot. You do things. I'll wait.
+ev.tuve6.l04,Не бойся меня. Я боюсь тебя больше.,Don't be afraid of me. I'm more afraid of you.
+ev.tuve6.l05,Молчать — тоже ответ. Мы так разговариваем.,Silence is an answer too. That's how we talk.
+ev.tuve8.l01,"Шкура в сейфе Грима. Рядом с камнем, который пахнет Уговором. Я чувствую её каждую ночь.",The skin is in Grim's safe. Beside a stone that smells of the Pact. I feel it every night.
+ev.tuve8.l02,"Если принесёшь — я смогу выбирать. Это всё, чего я прошу. Выбор.",If you bring it — I'll be able to choose. That's all I ask. A choice.
+ev.tuve10.l01,"Я видела Агату. В Глуби. У двери, которую держат. Она светится, как твой огонь.",I saw Agatha. In the Deep. At the door that's being held. She glows like your fire.
+ev.tuve10.l02,Она сказала: «Скажи {внуку|внучке} — пусть не спешит ко мне». Я говорю.,She said: 'Tell my {grandson|granddaughter} — don't hurry to me.' I'm telling you.
+ev.tuve14.l01,"Сегодня поплывём к Острову Без Имени. Там бухта, которую не видят люди. Кроме тебя.",Today we'll swim to the Island Without a Name. There's a cove there people can't see. Except you.
+ev.tuve14.l02,"(Бухта полна перламутра и тишины. На камнях лежат две жемчужины, как будто их оставили для вас.)",(The cove is full of mother-of-pearl and silence. Two pearls lie on the stones as if left for you.)

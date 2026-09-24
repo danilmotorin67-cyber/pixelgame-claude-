@@ -2677,5 +2677,32 @@
     "category": "decor",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "sealed_bottle_letter",
+    "name": "item.sealed_bottle_letter.name",
+    "desc": "item.sealed_bottle_letter.desc",
+    "category": "gift",
+    "price": 60,
+    "stack": 10
+  },
+  {
+    "id": "olaf_bottle",
+    "name": "item.olaf_bottle.name",
+    "desc": "item.olaf_bottle.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "pearl",
+    "name": "item.pearl.name",
+    "desc": "item.pearl.desc",
+    "category": "gift",
+    "price": 500,
+    "stack": 20,
+    "tags": [
+      "expensive"
+    ]
   }
 ]
