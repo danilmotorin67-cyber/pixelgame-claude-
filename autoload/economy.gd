@@ -92,6 +92,72 @@ func collect_shipping(night_index: int, storm: bool) -> Dictionary:
 	return {"income": income, "sold": sold, "storm": storm, "waiting": waiting.size()}
 
 
+func shop(shop_id: String) -> Dictionary:
+	return Data.by_id("shops", shop_id)
+
+
+# "" when open, otherwise "day" (weekly day off), "hours" or "unknown".
+func shop_closed_reason(shop_id: String) -> String:
+	var info := shop(shop_id)
+	if info.is_empty():
+		return "unknown"
+	if Clock.weekday in info.get("closed", []):
+		return "day"
+	if Clock.hour < int(info.get("open", 0)) or Clock.hour >= int(info.get("close", 24)):
+		return "hours"
+	return ""
+
+
+func shop_stock(shop_id: String) -> Array:
+	var offer: Array = []
+	for entry in shop(shop_id).get("stock", []):
+		if entry.has("seasons") and Clock.season not in entry["seasons"]:
+			continue
+		if Clock.day < int(entry.get("from_day", 1)):
+			continue
+		if str(entry.get("upgrade", "")) == "backpack":
+			if int(entry["slots"]) != Inventory.capacity + Inventory.HOTBAR:
+				continue
+		offer.append(entry)
+	return offer
+
+
+func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
+	if shop_closed_reason(shop_id) != "":
+		return "closed"
+	if not shop_stock(shop_id).has(entry) or count <= 0:
+		return "unknown"
+	var total := int(entry["price"]) * count
+	if not can_pay(total):
+		return "money"
+	if str(entry.get("upgrade", "")) == "backpack":
+		pay(total)
+		Inventory.upgrade_capacity(int(entry["slots"]))
+		return "ok"
+	var id := str(entry["item"])
+	if not Inventory.can_fit(id, count):
+		return "space"
+	pay(total)
+	Inventory.add(id, count)
+	return "ok"
+
+
+# Direct sale at a shop's own profile pays the base price at once (21.2).
+func sell_to_shop(shop_id: String, index: int) -> int:
+	if shop_closed_reason(shop_id) != "" or index < 0 or index >= Inventory.slots.size():
+		return 0
+	var slot: Dictionary = Inventory.slots[index]
+	var id := str(slot["id"])
+	var category := str(Data.by_id("items", id).get("category", ""))
+	if id == "" or category not in shop(shop_id).get("buys", []):
+		return 0
+	var income := sell_price(id, int(slot["quality"])) * int(slot["count"])
+	if income <= 0 or not Inventory.take_slot(index, int(slot["count"])):
+		return 0
+	add(income)
+	return income
+
+
 func serialize() -> Dictionary:
 	return {"money": money, "shipping": shipping}
 

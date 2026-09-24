@@ -213,6 +213,75 @@ func _check_quality() -> void:
 	_check(stored_quality == int(got["quality"]), "harvest keeps its quality in the backpack")
 
 
+func _entry(shop_id: String, item_id: String) -> Dictionary:
+	for entry in Economy.shop_stock(shop_id):
+		if str(entry.get("item", "")) == item_id:
+			return entry
+	return {}
+
+
+func _check_shops() -> void:
+	Inventory.reset()
+	Economy.reset()
+	Clock.day_index = 0
+	Clock.set_time(10, 0)
+	_check(Economy.shop_closed_reason("shop_berg") == "", "the Bergs open at 10:00 on Monday")
+	_check(not _entry("shop_berg", "seed_turnip").is_empty() and _entry("shop_berg", "seed_carrot").is_empty(),
+		"the Bergs sell seeds of the current season only")
+	_check(_entry("shop_berg", "seed_rhubarb").is_empty(), "rhubarb seeds appear only from Spring 8")
+	Clock.day_index = 7
+	_check(not _entry("shop_berg", "seed_rhubarb").is_empty(), "rhubarb seeds on sale from Spring 8")
+	_check(Economy.buy("shop_berg", _entry("shop_berg", "seed_turnip"), 3) == "ok"
+		and Inventory.count_of("seed_turnip") == 3 and Economy.money == 440, "seeds cost 20 each")
+	_check(Economy.buy("shop_berg", _entry("shop_berg", "seed_rhubarb"), 5) == "money",
+		"a purchase needs enough crowns")
+	Clock.set_time(17, 0)
+	_check(Economy.shop_closed_reason("shop_berg") == "hours", "the Bergs close at 17:00")
+	Clock.set_time(10, 0)
+	Clock.day_index = 2
+	_check(Economy.shop_closed_reason("shop_berg") == "day", "the Bergs close on Wednesdays")
+	Clock.day_index = 0
+
+	Economy.money = 20000
+	Inventory.reset()
+	for index in Inventory.HOTBAR:
+		Inventory.add("tool_hoe", 1)
+	_check(not Inventory.can_fit("seed_turnip", 1) and Inventory.add("seed_turnip", 1) == 0,
+		"the starter backpack holds 12 stacks")
+	var backpack: Dictionary = {}
+	for entry in Economy.shop_stock("shop_berg"):
+		if str(entry.get("upgrade", "")) == "backpack":
+			backpack = entry
+	_check(int(backpack.get("slots", 0)) == 24 and int(backpack["price"]) == 2000, "first backpack: 24 slots, 2000")
+	_check(Economy.buy("shop_berg", backpack) == "ok" and Inventory.capacity == 24, "backpack upgrade to 24")
+	backpack = {}
+	for entry in Economy.shop_stock("shop_berg"):
+		if str(entry.get("upgrade", "")) == "backpack":
+			backpack = entry
+	_check(int(backpack.get("slots", 0)) == 36 and int(backpack["price"]) == 10000, "second backpack: 36, 10000")
+	Economy.buy("shop_berg", backpack)
+	var last_offer := true
+	for entry in Economy.shop_stock("shop_berg"):
+		if str(entry.get("upgrade", "")) == "backpack":
+			last_offer = false
+	_check(Inventory.capacity == 36 and last_offer and Economy.money == 8000, "no backpack beyond 36 slots")
+	var saved := Inventory.serialize().duplicate(true)
+	Inventory.deserialize(JSON.parse_string(JSON.stringify(saved)))
+	_check(Inventory.capacity == 36, "backpack size survives a save")
+
+	Inventory.reset()
+	Economy.reset()
+	Inventory.add("turnip", 2, 1)
+	Inventory.add("fish_cod", 1)
+	_check(Economy.sell_to_shop("shop_berg", 1) == 0 and Inventory.count_of("fish_cod") == 1,
+		"the Bergs do not buy fish")
+	_check(Economy.sell_to_shop("shop_erland", 1) == 90 and Economy.money == 590, "Erland buys fish")
+	_check(Economy.sell_to_shop("shop_berg", 0) == 88 and Inventory.count_of("turnip") == 0,
+		"the Bergs pay the base price with the quality bonus")
+	Inventory.reset()
+	Economy.reset()
+
+
 func _run() -> void:
 	Game.reset()
 	Game.world_seed = 42
@@ -224,6 +293,7 @@ func _run() -> void:
 	_check_growth()
 	_check_storm()
 	_check_quality()
+	_check_shops()
 	Farm.reset()
 	Inventory.reset()
 	print("M2 integration: %d failure(s)" % failures.size())

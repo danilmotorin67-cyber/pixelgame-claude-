@@ -191,6 +191,16 @@
       {
         "item": "fish_oil",
         "price": 40
+      },
+      {
+        "upgrade": "backpack",
+        "slots": 24,
+        "price": 2000
+      },
+      {
+        "upgrade": "backpack",
+        "slots": 36,
+        "price": 10000
       }
     ]
   },

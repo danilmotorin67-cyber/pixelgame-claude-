@@ -318,17 +318,33 @@ func _run() -> void:
 		"village return portal is missing")
 	_check(tree.current_scene.get_node("Player").global_position == Vector2(1224, 488),
 		"player arrived at wrong village entrance")
-	var fuel_shop: Area2D = tree.current_scene.get_node("Terrain/FuelShop")
-	_check(fuel_shop.collision_layer == 8, "the village oil counter cannot be reached")
+	var berg_shop: ShopCounter = tree.current_scene.get_node("Terrain/Shop_shop_berg")
+	_check(berg_shop.collision_layer == 8, "the Bergs' counter cannot be reached")
+	var saved_minutes := Clock.minutes
+	var was_paused := Clock.paused
+	Clock.set_time(10, 0)
 	var oil_before := Inventory.count_of("fish_oil")
 	var money_before := Economy.money
-	fuel_shop.call("interact", tree.current_scene.get_node("Player"))
+	berg_shop.interact(tree.current_scene.get_node("Player"))
+	var panel: ShopPanel = tree.current_scene.get_node_or_null("HUD/ShopPanel")
+	_check(panel != null and Clock.paused, "the shop opens a panel and stops time")
+	if panel:
+		var oil_index := -1
+		for index in panel._entries.size():
+			if str(panel._entries[index].get("item", "")) == "fish_oil":
+				oil_index = index
+		panel._list.select(oil_index)
+		_check(panel.buy_selected(1) == "ok", "buying oil at the Bergs failed")
+		panel.close()
+		await tree.process_frame
 	_check(Inventory.count_of("fish_oil") == oil_before + 1 and Economy.money == money_before - 40,
 		"buying oil must add one nightly portion and charge 40 crowns")
+	_check(Clock.paused == was_paused, "closing the shop restores the clock")
 	Clock.day_index = 2
-	fuel_shop.call("interact", tree.current_scene.get_node("Player"))
-	_check(Inventory.count_of("fish_oil") == oil_before + 1 and Economy.money == money_before - 40,
+	berg_shop.interact(tree.current_scene.get_node("Player"))
+	_check(tree.current_scene.get_node_or_null("HUD/ShopPanel") == null,
 		"the Bergs' shop must be closed on Wednesdays")
+	Clock.minutes = saved_minutes
 	Clock.day_index = 0
 	var village_box: ShippingBox = tree.current_scene.get_node_or_null("Terrain/ShippingBox")
 	_check(village_box != null and village_box.collision_layer == 8, "the village harbor needs a shipping box")

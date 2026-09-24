@@ -3,6 +3,8 @@ extends Node
 var slots: Array = []
 const MAX_SLOTS := 36
 const HOTBAR := 12
+const START_CAPACITY := 12
+var capacity: int = START_CAPACITY
 var selected_hotbar: int = 0
 
 func _ready() -> void:
@@ -12,6 +14,7 @@ func _ready() -> void:
 func reset() -> void:
 	slots.clear()
 	selected_hotbar = 0
+	capacity = START_CAPACITY
 	for i in MAX_SLOTS:
 		slots.append({"id": "", "count": 0, "quality": 0, "meta": {}})
 	Events.inventory_changed.emit()
@@ -30,7 +33,8 @@ func add(id: String, count: int = 1, quality: int = 0) -> int:
 		return 0
 	var stack := int(Data.by_id("items", id).get("stack", 99))
 	var left := count
-	for s in slots:
+	var open_slots := slots.slice(0, capacity)
+	for s in open_slots:
 		if s["id"] == id and int(s["quality"]) == quality:
 			var can := maxi(stack - int(s["count"]), 0)
 			var n := mini(can, left)
@@ -39,7 +43,7 @@ func add(id: String, count: int = 1, quality: int = 0) -> int:
 			if left <= 0:
 				break
 	if left > 0:
-		for s in slots:
+		for s in open_slots:
 			if s["id"] == "":
 				var n := mini(stack, left)
 				s["id"] = id
@@ -53,6 +57,26 @@ func add(id: String, count: int = 1, quality: int = 0) -> int:
 		Events.item_added.emit(id, added)
 		Events.inventory_changed.emit()
 	return added
+
+func can_fit(id: String, count: int, quality: int = 0) -> bool:
+	var stack := int(Data.by_id("items", id).get("stack", 99))
+	var room := 0
+	for index in capacity:
+		var s: Dictionary = slots[index]
+		if s["id"] == "":
+			room += stack
+		elif s["id"] == id and int(s["quality"]) == quality:
+			room += maxi(stack - int(s["count"]), 0)
+	return room >= count
+
+
+func upgrade_capacity(new_capacity: int) -> bool:
+	if new_capacity <= capacity or new_capacity > MAX_SLOTS:
+		return false
+	capacity = new_capacity
+	Events.inventory_changed.emit()
+	return true
+
 
 func count_of(id: String) -> int:
 	var n := 0
@@ -94,7 +118,7 @@ func take_slot(index: int, count: int) -> bool:
 	return true
 
 func serialize() -> Dictionary:
-	return {"slots": slots, "selected_hotbar": selected_hotbar}
+	return {"slots": slots, "selected_hotbar": selected_hotbar, "capacity": capacity}
 
 func deserialize(d: Dictionary) -> void:
 	var loaded = d.get("slots", [])
@@ -103,5 +127,10 @@ func deserialize(d: Dictionary) -> void:
 		for slot in slots:
 			slot["count"] = int(slot.get("count", 0))
 			slot["quality"] = int(slot.get("quality", 0))
+	var used := 0
+	for index in slots.size():
+		if str(slots[index].get("id", "")) != "":
+			used = index + 1
+	capacity = clampi(maxi(int(d.get("capacity", START_CAPACITY)), used), START_CAPACITY, MAX_SLOTS)
 	selected_hotbar = clampi(int(d.get("selected_hotbar", 0)), 0, HOTBAR - 1)
 	Events.inventory_changed.emit()

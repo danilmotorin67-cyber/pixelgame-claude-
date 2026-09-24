@@ -61,7 +61,7 @@ item.seed_potato.name,Семена картофеля,Potato seeds
 item.seed_potato.desc,Весна; 6 дн.; терпит слабую соль. Земля решит остальное.,Spring; 6 days; tolerates light salt. The soil decides the rest.
 item.potato.name,Картофель,Potato
 item.potato.desc,"Основа ухи, лепёшек и северной кухни. Прячется в земле, как налоговая декларация.",The base of soups and northern cooking. Hides underground like a tax return.
-item.seed_pea.name,Семена гороха,Peas seeds
+item.seed_pea.name,Семена гороха,Pea seeds
 item.seed_pea.desc,Весна; 8 дн.; только несолёная земля. Земля решит остальное.,Spring; 8 days; salt-free soil only. The soil decides the rest.
 item.pea.name,Горох,Peas
 item.pea.desc,"Растёт на шпалере, по шпалере не пройти. Упрям, как старый смотритель.",Grows on a trellis you cannot walk through. Stubborn as an old keeper.
@@ -97,7 +97,7 @@ item.seed_strawberry.name,Семена клубники,Strawberry seeds
 item.seed_strawberry.desc,Лето; 8 дн.; только несолёная земля. Земля решит остальное.,Summer; 8 days; salt-free soil only. The soil decides the rest.
 item.strawberry.name,Клубника,Strawberry
 item.strawberry.desc,"Сладкая, пока лето. Самое короткое счастье острова.",Sweet while summer lasts. The island's shortest happiness.
-item.seed_hops.name,Семена хмеля,Hops seeds
+item.seed_hops.name,Семена хмеля,Hop seeds
 item.seed_hops.desc,Лето; 11 дн.; только несолёная земля. Земля решит остальное.,Summer; 11 days; salt-free soil only. The soil decides the rest.
 item.hops.name,Хмель,Hops
 item.hops.desc,"Для пива Бьорна. Шпалера высокая, намерения — ещё выше.",For Bjorn's beer. The trellis is tall; the intentions taller.
@@ -105,7 +105,7 @@ item.seed_samphire.name,Семена солероса,Samphire seeds
 item.seed_samphire.desc,Лето; 6 дн.; растёт на солончаке. Земля решит остальное.,Summer; 6 days; grows on salt flats. The soil decides the rest.
 item.samphire.name,Солерос,Samphire
 item.samphire.desc,"«Морская спаржа». Любит соль больше, чем повар.",Sea asparagus. Loves salt more than the cook does.
-item.seed_beans.name,Семена фасоли,Beans seeds
+item.seed_beans.name,Семена фасоли,Bean seeds
 item.seed_beans.desc,Лето; 7 дн.; только несолёная земля. Земля решит остальное.,Summer; 7 days; salt-free soil only. The soil decides the rest.
 item.beans.name,Фасоль,Beans
 item.beans.desc,Вьётся по шпалере и в похлёбку. Сытно и без претензий.,Climbs the trellis and into the stew. Filling and unpretentious.
