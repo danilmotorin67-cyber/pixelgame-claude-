@@ -211,7 +211,7 @@ def check_people(tables, npc_ids) -> list:
 
 SCENE_COMMANDS = {"fade_out", "fade_in", "place", "move", "face", "wait", "emote", "say", "choice", "label", "goto",
                   "camera_pan", "camera_follow", "shake", "sound", "music", "spawn", "despawn", "anim", "set_time",
-                  "set_weather", "effects", "end"}
+                  "set_weather", "effects", "end", "branch"}
 EFFECTS = {"friendship", "flag", "give", "item", "take", "money", "honor", "points", "xp", "start_quest", "step_quest",
            "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy"}
 
@@ -248,10 +248,12 @@ def check_scenes(tables, npc_ids, maps) -> list:
                 if op not in SCENE_COMMANDS:
                     errs.append(f"scene {sid} unknown command {op}")
                 if op == "say":
-                    if c[1] not in npc_ids and c[1] != "hero":
+                    if c[1] not in npc_ids and c[1] not in ("hero", "narrator"):
                         errs.append(f"scene {sid} unknown speaker {c[1]}")
                     if c[3] not in keys:
                         errs.append(f"scene {sid} missing text {c[3]}")
+                if op == "branch" and c[2] not in labels:
+                    errs.append(f"scene {sid} branch to missing label {c[2]}")
                 if op == "goto" and c[1] not in labels:
                     errs.append(f"scene {sid} goto missing label {c[1]}")
                 if op == "choice":

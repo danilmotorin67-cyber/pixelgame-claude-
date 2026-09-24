@@ -61,7 +61,9 @@ func ready_to_play(e: Dictionary, map_id: String) -> bool:
 
 
 func pending(map_id: String) -> String:
-	for e in all():
+	var ordered := all()
+	ordered.sort_custom(func(a: Dictionary, b: Dictionary) -> bool: return int(a.get("hearts", 0)) < int(b.get("hearts", 0)))
+	for e in ordered:
 		if not bool(e.get("manual", false)) and ready_to_play(e, map_id):
 			return str(e["id"])
 	return ""
@@ -118,6 +120,9 @@ func simulate(id: String, choices: Array = []) -> Array:
 					pc = int(labels.get(str(options[pick][2]), script.size()))
 			"goto":
 				pc = int(labels.get(str(cmd[1]), script.size()))
+			"branch":
+				if ConditionContext.check(str(cmd[1])):
+					pc = int(labels.get(str(cmd[2]), script.size()))
 			"effects":
 				Effects.apply(cmd[1])
 			"set_time":
@@ -151,6 +156,10 @@ func play(id: String) -> void:
 			break
 		if op == "goto":
 			pc = int(labels.get(str(cmd[1]), script.size()))
+			continue
+		if op == "branch":
+			if ConditionContext.check(str(cmd[1])):
+				pc = int(labels.get(str(cmd[2]), script.size()))
 			continue
 		if op == "say":
 			var choices: Array = []

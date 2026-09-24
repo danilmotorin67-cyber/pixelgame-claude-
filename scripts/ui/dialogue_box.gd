@@ -52,6 +52,12 @@ const REFUSALS := {"not_giftable": "gift.refuse.not_giftable", "today": "gift.re
 static func gift(hud: CanvasLayer, npc: String, index: int) -> DialogueBox:
 	var result := Relationships.give(npc, index)
 	var box := of(hud)
+	if result.has("line"):
+		var key := Dialogue.pick(npc, str(result["line"]))
+		if key == "":
+			key = "npc.generic.%s" % result["line"]
+		box.say(npc, "happy" if bool(result["ok"]) else "neutral", Loc.t(key))
+		return box
 	if not bool(result["ok"]):
 		box.say(npc, "neutral", Loc.t(str(REFUSALS.get(str(result["reason"]), "gift.refuse.today"))))
 		return box
@@ -116,7 +122,8 @@ func _show() -> void:
 	_npc = str(line["npc"])
 	_emotion = str(line["emo"])
 	var info := Data.by_id("npcs", _npc)
-	_name.text = Loc.t(str(info.get("name", ""))) if not info.is_empty() else (Game.hero.get("name", "") if _npc == "hero" else "")
+	_name.text = Loc.t(str(info.get("name", ""))) if not info.is_empty() else (str(Game.hero.get("name", "")) if _npc == "hero" else "")
+	_portrait.visible = _npc != "narrator"
 	var hearts := Relationships.hearts_of(_npc)
 	_hearts.text = ("♥".repeat(hearts) + "♡".repeat(maxi(0, Relationships.cap(_npc) - hearts))) if not info.is_empty() and not bool(info.get("visitor", false)) else ""
 	_text.text = str(line["text"])

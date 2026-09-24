@@ -112,10 +112,22 @@ func situation(npc: String) -> Array:
 	if rng.randf() < 0.3:
 		out.append("h%d" % mini(10, Relationships.hearts_of(npc) / 2 * 2))
 	if rng.randf() < 0.35:
-		out.append("act%d" % maxi(1, Game.act))
+		out.append("act%d" % story_act())
 	out.append(Clock.weekday)
 	out.append(Clock.season)
 	return out
+
+
+# The act for talk (5.0): by date until the story moves it (Spring y1, Summer-Autumn y1, Winter y1 - Summer y2, Autumn y2).
+func story_act() -> int:
+	var by_date := 1
+	if Clock.day_index >= 28:
+		by_date = 2
+	if Clock.day_index >= 84:
+		by_date = 3
+	if Clock.day_index >= 168:
+		by_date = 4
+	return clampi(maxi(Game.act, by_date), 1, 4)
 
 
 # The line for today's first talk; later talks the same day repeat it or say an "again" line.

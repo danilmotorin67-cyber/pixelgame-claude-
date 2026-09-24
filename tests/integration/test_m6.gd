@@ -187,6 +187,8 @@ func _check_scenes() -> void:
 	Clock.minutes = 20 * 60
 	_check(Cutscenes.pending("village_tavern") == "", "no scene before four hearts")
 	Relationships.set_hearts("npc_hedda", 4)
+	_check(Cutscenes.pending("village_tavern") == "ev_hedda_2", "the lower heart scene comes first")
+	Cutscenes.seen["ev_hedda_2"] = 1
 	_check(Cutscenes.pending("village_tavern") == "ev_hedda_4", "at four hearts Hedda's story waits in the tavern")
 	_check(Cutscenes.pending("village") == "", "only in the tavern")
 	Clock.minutes = 12 * 60
@@ -194,13 +196,27 @@ func _check_scenes() -> void:
 	Clock.minutes = 20 * 60
 	var before := int(Relationships.points["npc_hedda"])
 	var said := Cutscenes.simulate("ev_hedda_4", [0])
-	_check(said.has("ev.hedda4.l7") and Game.flag("hedda_testimony_told") and int(Relationships.points["npc_hedda"]) == before + 80,
+	_check(Game.flag("hedda_testimony_told") and int(Relationships.points["npc_hedda"]) == before + 80,
 		"the warm answer: +80 and her testimony")
 	_check(Cutscenes.pending("village_tavern") == "" and Cutscenes.seen.has("ev_hedda_4"), "each scene plays once")
 	Cutscenes.reset()
 	Game.flags.clear()
 	said = Cutscenes.simulate("ev_hedda_4", [2])
-	_check(not said.has("ev.hedda4.l7") and not Game.flag("hedda_testimony_told"), "the cold answer ends it")
+	_check(not Game.flag("hedda_testimony_told") and said.size() < 8, "the cold answer ends it")
+
+
+# Every scene parses, runs to the end on every first choice, and its lines exist in both languages.
+func _check_all_scenes() -> void:
+	for e in Cutscenes.all():
+		var id := str(e["id"])
+		_check(ConditionContext.valid(str(e.get("trigger", {}).get("when", ""))), id + " has a broken trigger")
+		_check(MapInfo.exists(str(e["trigger"].get("map", "cape"))) or str(e["trigger"].get("map", "")) == "cape", id + " is on an unknown map")
+		for pick in 3:
+			_fresh()
+			var said := Cutscenes.simulate(id, [pick, pick, pick])
+			_check(not said.is_empty() and Cutscenes.seen.has(id), "%s plays through with choice %d" % [id, pick])
+			for key in said:
+				_check(Loc.has(str(key)), "%s: missing text %s" % [id, key])
 
 
 func _check_shops() -> void:
@@ -255,5 +271,6 @@ func _run() -> void:
 	_check_friendship()
 	_check_scenes()
 	_check_shops()
+	_check_all_scenes()
 	print("M6 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

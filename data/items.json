@@ -2641,5 +2641,21 @@
       "energy": 30,
       "health": 0
     }
+  },
+  {
+    "id": "epitaph_book",
+    "name": "item.epitaph_book.name",
+    "desc": "item.epitaph_book.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "glow_plankton",
+    "name": "item.glow_plankton.name",
+    "desc": "item.glow_plankton.desc",
+    "category": "forage",
+    "price": 120,
+    "stack": 20
   }
 ]

@@ -650,7 +650,7 @@ npc.sandro.name,Сандро,Sandro
 npc.grump.name,Кэп Ворчун,Cap'n Grump
 npc.generic.hello.01,"А, смотритель. Огонь вчера был виден. Спасибо.","Ah, the keeper. We saw the light last night. Thank you."
 npc.generic.hello.02,"Ветер опять с севера. Он всегда с севера, когда у меня стирка.",Wind's from the north again. It always is when I've got washing out.
-npc.generic.hello.03,"Вы тот, кто у Агаты теперь вместо Агаты? Держитесь.",You're the one standing in for Agatha now? Hold on tight.
+npc.generic.hello.03,"Вы {тот|та}, кто у Агаты теперь вместо Агаты? Держитесь.",You're the one standing in for Agatha now? Hold on tight.
 npc.generic.gift.love.01,"Это… мне? Вы что, подслушивали мои мысли?",This… for me? Have you been reading my mind?
 npc.generic.gift.like.01,"Хороший подарок. Спасибо, правда.","A good gift. Thank you, really."
 npc.generic.gift.neutral.01,"Спасибо. Найду, куда это деть.",Thanks. I'll find a place for it.
@@ -660,16 +660,6 @@ gift.refuse.not_giftable,Это не дарят. Это носят с собой
 gift.refuse.today,На сегодня подарков хватит. Спасибо.,That's enough gifts for today. Thank you.
 gift.refuse.week,Два подарка за неделю — вы меня разбалуете.,Two gifts in one week — you'll spoil me.
 gift.refuse.empty,Руки пусты. Жест оценён.,Your hands are empty. The gesture is noted.
-ev.hedda4.l1,"Садись. Не туда — там Нут сидел, стул до сих пор злой.","Sit. Not there — Nut sat there, the chair's still angry."
-ev.hedda4.l2,"Два года назад у меня была команда. Шестеро. Лучшие руки на острове, хоть и дураки через одного.","Two years ago I had a crew. Six of them. Best hands on the island, every other one a fool."
-ev.hedda4.l3,"Ясная ночь. Ни ветерка. А на Зубах горел огонь, которого там быть не должно. Мы пошли на него. Я одна доплыла.",Clear night. Not a breath of wind. And on the Teeth there was a fire that had no business being there. We steered for it. I was the only one who swam back.
-ev.hedda4.c1,Ты не виновата. Кто-то зажёг этот огонь нарочно.,It wasn't your fault. Someone lit that fire on purpose.
-ev.hedda4.c2,"Шестеро дураков через одного — значит, трое умных. Жаль всех.",Every other one a fool — so three were clever. I'm sorry for all of them.
-ev.hedda4.c3,"Может, просто перепутала огни? Бывает.",Maybe you just mixed up the lights? It happens.
-ev.hedda4.l4,Нарочно. Вот и я так думаю. Только вслух это говорить на острове не принято.,On purpose. That's what I think too. Only nobody on this island says it out loud.
-ev.hedda4.l5,"Ха. Трое умных… Ларс бы с тобой поспорил. Ладно. Спасибо, что не утешаешь.",Ha. Three clever ones… Lars would argue with you. Fine. Thanks for not trying to comfort me.
-ev.hedda4.l6,"Перепутала?! Я тридцать лет хожу по этим водам. Иди проверь свою лампу, смотритель.","Mixed up?! I've sailed these waters for thirty years. Go check your lamp, keeper."
-ev.hedda4.l7,"Если захочешь знать, как всё было, — рундук с того бота у меня. Там записи. Только никому, ясно?","If you want to know how it went — I kept the sea chest from that boat. There are notes. Tell no one, understood?"
 item.bouquet_armeria.name,Букет армерии,Armeria bouquet
 item.bouquet_armeria.desc,Подаришь — начнёте встречаться. Армерия растёт на скалах и не боится ветра.,Give it to start courting. Armeria grows on cliffs and fears no wind.
 item.wood_lacquer.name,Лак для дерева,Wood lacquer
@@ -761,3 +751,544 @@ rumor.light.02,"Бьорн: «Инспектор Пальм, говорят, в 
 rumor.dishonor.01,"Бьорн: «Люди шепчутся, что смотритель берёт с разбитых судов больше своей трети. Я не верю. Пока.»","Bjorn: ""People whisper that the keeper takes more than a third from the wrecks. I don't believe it. Yet."""
 rumor.hearts.01,"Бьорн: «Говорят, у смотрителя сердце на несколько причалов сразу. Осторожнее: на острове все друг другу родня.»","Bjorn: ""They say the keeper's heart has more than one mooring. Careful: everyone on this island is somebody's cousin."""
 mail.gazette,"«Вестник Сольвика», воскресный выпуск. Погода на три дня: %s. На острове говорят: %s","The Solvik Herald, Sunday issue. Weather for three days: %s. The island is saying: %s"
+npc.generic.bouquet_yes,"Армерия. Значит, всерьёз. Хорошо. Я тоже.",Armeria. So you mean it. Good. So do I.
+npc.generic.bouquet_no,Это… рано. Давай сначала узнаем друг друга получше.,This is… too soon. Let's get to know each other better first.
+npc.generic.bouquet_again,Ещё один букет? Первый ещё стоит. Мы и так вместе.,Another bouquet? The first one's still in water. We're together already.
+npc.generic.ring_yes,Да. Да! Через три дня в часовне. Бенедикт встанет подальше от окна.,Yes. Yes! In three days at the chapel. Benedict will stand well away from the window.
+npc.generic.ring_no,Кольцо? Мы ещё не настолько… Подожди.,A ring? We're not quite… Wait.
+npc.generic.ring_house,"А жить где будем? В фонарной? Сначала дом, смотритель.","And where would we live? In the lamp room? A house first, keeper."
+npc.generic.ring_taken,Ты уже {обещан|обещана} другому человеку. Остров всё помнит.,You're already promised to someone. The island remembers everything.
+item.epitaph_book.name,Сборник эпитафий,Book of Epitaphs
+item.epitaph_book.desc,"Даёт ещё 2 эпитафии и «шедевр» (+5 Покоя один раз на могилу). Почерк Сигрид, поля в чернилах каракатицы.","Adds 2 more epitaphs and a masterpiece (+5 Peace once per grave). Sigrid's hand, margins in squid ink."
+npc.sigrid.spring.01,"Весна. Всё оживает. Даже то, что лучше бы лежало.",Spring. Everything comes back to life. Even what should stay down.
+npc.sigrid.spring.02,Мама испекла пирог с ревенем. Опять. Я считаю дни. Сегодня девять тысяч какой-то.,Mum baked rhubarb pie. Again. I'm counting the days. Today is nine thousand and something.
+npc.sigrid.spring.03,"Семена репы по двадцать. Надежды не продаём. Спросите папу, он объяснит.","Turnip seeds, twenty each. We don't sell hope. Ask Dad, he'll explain."
+npc.sigrid.spring.04,"Чайки вернулись. Кричат так, будто их кто-то обидел лично.",The gulls are back. Screaming as if someone insulted them personally.
+npc.sigrid.spring.05,Первый туман сезона. Похож на черновик.,First fog of the season. Looks like a rough draft.
+npc.sigrid.spring.06,"Вы сажаете репу? Смело. Земля тут солёная, как слёзы. Только слёзы не родят.","You're planting turnips? Brave. The soil here is salty as tears. Tears don't grow anything, though."
+npc.sigrid.spring.07,"Армерия зацвела на скалах. Цветок, который растёт там, где нельзя. Уважаю.",The armeria's blooming on the cliffs. A flower that grows where it shouldn't. I respect that.
+npc.sigrid.spring.08,Весной покупают больше семян и больше лопат. Люди в целом надеются копать.,"In spring people buy more seeds and more spades. On the whole, people hope to dig."
+npc.sigrid.spring.09,"Олаф рассказывает всем, что вы говорите с носовой фигурой. Я ему завидую. Вам, не ему.","Olaf tells everyone you talk to a figurehead. I envy you. You, not him."
+npc.sigrid.spring.10,Сегодня тихо. В лавке тихо — это хорошо. Для тишины.,It's quiet today. A quiet shop is good. For the quiet.
+npc.sigrid.summer.01,"Лето. Солнце не садится, и спать нечестно.","Summer. The sun won't set, so sleeping feels like cheating."
+npc.sigrid.summer.02,Белые ночи хороши для стихов. Темнота только отвлекает от темноты.,White nights are good for poems. Darkness only distracts from darkness.
+npc.sigrid.summer.03,"Пришёл пароход. Привёз муку, соль и одного туриста. Турист уже жалеет.","The steamer came. Brought flour, salt and one tourist. The tourist already regrets it."
+npc.sigrid.summer.04,"Лив опять спрашивала, как по-латыни «чайка». Я сказала — «крик».",Liv asked again what gull is in Latin. I said: scream.
+npc.sigrid.summer.05,Клубника в этом году кислая. Как всё хорошее.,The strawberries are sour this year. Like all good things.
+npc.sigrid.summer.06,Летом на погосте цветёт иван-чай. Покойникам к лицу.,In summer fireweed blooms in the graveyard. Suits the dead.
+npc.sigrid.summer.07,"Кофе кончился. Жизнь продолжается, но без энтузиазма.","We're out of coffee. Life goes on, without enthusiasm."
+npc.sigrid.summer.08,Вы загорели. Или обветрились. Здесь это одно и то же.,You've got a tan. Or windburn. Here that's the same thing.
+npc.sigrid.summer.09,"Мама хочет, чтобы я вышла замуж за рыбака. Рыбаки пахнут будущим вдовством.",Mum wants me to marry a fisherman. Fishermen smell of future widowhood.
+npc.sigrid.summer.10,Летний вечер. Самое время пройтись до погоста и обратно. Обратно — обязательно.,A summer evening. Just right for a walk to the graveyard and back. The back part is important.
+npc.sigrid.autumn.01,Осень. Моё время года. Всё красиво умирает и не жалуется.,Autumn. My season. Everything dies beautifully and doesn't complain.
+npc.sigrid.autumn.02,Сельдь идёт. Папа улыбнулся. Я записала дату.,The herring's running. Dad smiled. I wrote down the date.
+npc.sigrid.autumn.03,"Ветер рвёт листья с берёз, как черновики. Хорошие строчки всегда улетают первыми.",The wind tears leaves off the birches like drafts. The good lines always fly off first.
+npc.sigrid.autumn.04,"Тыквы продаются плохо. Люди боятся всего, что круглое и оранжевое.",Pumpkins sell badly. People fear anything round and orange.
+npc.sigrid.autumn.05,Длинные вечера. В лавке горит одна свеча. Экономия и настроение.,Long evenings. One candle burning in the shop. Thrift and atmosphere.
+npc.sigrid.autumn.06,"Если услышите, как кто-то читает стихи на погосте, — это не призрак. Это я. Не пугайтесь. Или пугайтесь, мне приятно.","If you hear someone reciting at the graveyard, it's not a ghost. It's me. Don't be scared. Or do, I'd be flattered."
+npc.sigrid.autumn.07,"Осенью море серое, как чернила. Я пробовала им писать. Бумага раскисла.",In autumn the sea is grey as ink. I tried writing with it. The paper went soggy.
+npc.sigrid.autumn.08,Вы сегодня рано. Или я поздно. Время осенью течёт как хочет.,You're early today. Or I'm late. Time in autumn flows where it likes.
+npc.sigrid.autumn.09,"Мама спросила, почему у меня пальцы в чернилах. Сказала — бухгалтерия. Она поверила. Это грустнее всего.",Mum asked why my fingers are inky. I said: bookkeeping. She believed me. That's the saddest part.
+npc.sigrid.autumn.10,"Опадают листья. Хоть кто-то здесь знает, когда уйти.",The leaves are falling. At least somebody here knows when to leave.
+npc.sigrid.winter.01,Зима. Снег всё прячет. Как хороший редактор.,Winter. The snow hides everything. Like a good editor.
+npc.sigrid.winter.02,"Темнеет в три. У меня больше времени на мрачные мысли. Спасибо, зима.","Dark by three. More time for gloomy thoughts. Thank you, winter."
+npc.sigrid.winter.03,"Ваш маяк зимой — единственное, что светит. Кроме папиной лысины.",Your lighthouse in winter is the only thing that shines. Besides Dad's bald spot.
+npc.sigrid.winter.04,"Снег хрустит, как старые письма.",The snow crunches like old letters.
+npc.sigrid.winter.05,"Люди зимой покупают свечи и сахар. Первое — чтобы видеть, второе — чтобы не видеть.","In winter people buy candles and sugar. The first to see, the second not to."
+npc.sigrid.winter.06,Лёд на лагуне. Нильс и Фрейя пробуют его ногами. Я пробую его взглядом.,Ice on the lagoon. Nils and Freya test it with their feet. I test it with a look.
+npc.sigrid.winter.07,Мама вяжет мне шарф третью зиму. Он длиннее меня. Скоро обернёт весь остров.,Mum's been knitting me a scarf for three winters. It's longer than me. Soon it'll wrap the whole island.
+npc.sigrid.winter.08,В метель у нас кончается соль. И терпение. Соль привозят.,In a blizzard we run out of salt. And patience. They ship in salt.
+npc.sigrid.winter.09,Зимой мертвецы лежат дольше. Земля мёрзлая. Никто никуда не торопится.,In winter the dead wait longer. The ground is frozen. Nobody's in a hurry.
+npc.sigrid.winter.10,Сегодня мой день — короткий и тёмный. Шучу. Или нет.,Today's my kind of day — short and dark. Joking. Or not.
+npc.sigrid.weather.rain.01,"Дождь. Сижу и пишу. Бумага мокнет только от слёз. Шучу, от чая.",Rain. I sit and write. The paper only gets wet from tears. Joking — from tea.
+npc.sigrid.weather.rain.02,"Дождь стучит по крыше лавки. Ритм как у траурного марша, только бодрее.","Rain drums on the shop roof. Rhythm of a funeral march, only perkier."
+npc.sigrid.weather.storm.01,"Шторм. В такие ночи море ищет, кого забрать. Держите огонь.",A storm. On nights like this the sea looks for someone to take. Keep the light burning.
+npc.sigrid.weather.storm.02,Папа закрыл ставни и считает убытки заранее. Я считаю волны.,Dad shut the shutters and is counting losses in advance. I'm counting waves.
+npc.sigrid.weather.fog.01,"Туман. Идеальная погода, чтобы исчезнуть. Не пользуйтесь.",Fog. Perfect weather for disappearing. Don't take advantage.
+npc.sigrid.weather.fog.02,В тумане все голоса звучат как чужие. Даже мой. Особенно мой.,In fog every voice sounds like a stranger's. Even mine. Especially mine.
+npc.sigrid.weather.snow.01,Снег на крышах. Остров как незаписанная страница.,Snow on the roofs. The island like an unwritten page.
+npc.sigrid.weather.cloud.01,"Облачно. Небо не решило, плакать или нет. Мне знакомо.",Cloudy. The sky can't decide whether to cry. I know the feeling.
+npc.sigrid.festival.boat_blessing.01,"Бенедикт благословляет лодки с шестом в три метра. Боится воды, любит людей. Сложный человек.","Benedict blesses the boats with a ten-foot pole. Fears the water, loves the people. A complicated man."
+npc.sigrid.festival.herring_fair.01,"Сельдяная ярмарка. Всё пахнет рыбой, даже музыка.","Herring Fair. Everything smells of fish, even the music."
+npc.sigrid.festival.drowned_night.01,"Ночь Утопленников. Единственный праздник, где я не выгляжу мрачно. Все такие.",Drowned Night. The one holiday where I don't look gloomy. Everyone does.
+npc.sigrid.festival.long_night.01,"Долгая ночь. Самая длинная в году. Мне нравится, когда ночь не торопится.",The Long Night. Longest of the year. I like it when night takes its time.
+npc.sigrid.festival.01,Праздник. Люди смеются громче обычного. Боятся тишины.,A holiday. People laugh louder than usual. Afraid of the silence.
+npc.sigrid.festival.02,"Я пришла. Не потому, что весело. Потому что мама сказала.",I came. Not because it's fun. Because Mum said so.
+npc.sigrid.gift.love.01,"Это… Вы запомнили. Люди обычно не запоминают, что я люблю. Я тоже.",This… You remembered. People don't usually remember what I like. Neither do I.
+npc.sigrid.gift.love.02,Лучший подарок за год. Не говорите маме — она дарила пирог.,Best gift of the year. Don't tell Mum — she gave me pie.
+npc.sigrid.gift.like.01,"Спасибо. Мне нравится. Не выражаю лицом, но нравится.","Thank you. I like it. My face doesn't show it, but I do."
+npc.sigrid.gift.like.02,Приятно. Положу рядом с чернильницей.,Nice. I'll put it by the inkwell.
+npc.sigrid.gift.neutral.01,Спасибо. Это предмет. Он теперь мой.,Thank you. It is an object. It is mine now.
+npc.sigrid.gift.neutral.02,Хм. Буду хранить. Где-нибудь.,Hm. I'll keep it. Somewhere.
+npc.sigrid.gift.dislike.01,Сладкое? Я не маленькая. И не мама.,Something sweet? I'm not a child. Or my mother.
+npc.sigrid.gift.dislike.02,Спасибо. Я это передарю. Не вам.,Thanks. I'll pass it on. Not to you.
+npc.sigrid.gift.hate.01,"Пирог с ревенем. Вы же знаете, где я живу. Это жестоко.",Rhubarb pie. You know where I live. That's cruel.
+npc.sigrid.gift.hate.02,"Нет. Просто нет. Уберите, пока я не написала об этом стихотворение.",No. Just no. Take it away before I write a poem about it.
+npc.sigrid.birthday.01,У меня сегодня день рождения. Ещё год ближе к интересному.,It's my birthday today. One more year closer to the interesting part.
+npc.sigrid.birthday.02,Мама испекла пирог с ревенем на день рождения. Традиция. Трагедия.,Mum baked rhubarb pie for my birthday. Tradition. Tragedy.
+npc.sigrid.birthday_gift.01,Подарок в день рождения… Я сейчас улыбнусь. Не смотрите.,A birthday gift… I'm about to smile. Don't look.
+npc.sigrid.birthday_gift.02,Вы помните мой день рождения. Запишу вас в тетрадь. В хорошую.,You remembered my birthday. I'll put you in my notebook. The nice one.
+npc.sigrid.act1.01,"Агата брала у нас ворвань и чай. Всегда с одинаковым лицом. Я думала, это счастье.",Agatha bought oil and tea from us. Always with the same face. I thought that was happiness.
+npc.sigrid.act1.02,Вы зажгли огонь в первую ночь. Я видела из окна. Красиво. Не делайте из этого выводов.,You lit the fire the first night. I saw it from my window. Beautiful. Don't read into it.
+npc.sigrid.act1.03,"Первого утопленника хоронили вы? Хорошо. Я бы написала ему эпитафию, если позволите.","You buried the first drowned man? Good. I'd write him an epitaph, if you'll allow it."
+npc.sigrid.act1.04,"Хальвдан говорит, остров держится на его щедрости. Я думаю — на соли.",Halvdan says the island rests on his generosity. I think it rests on salt.
+npc.sigrid.act1.05,Скоро инспекция. Пальм приходит к нам за мятными леденцами. Покупает один.,Inspection's soon. Palm comes to us for mint drops. Buys one.
+npc.sigrid.act1.06,"В конце весны всегда кто-то тонет. Держите огонь, пожалуйста. Мне ещё писать и писать.","Someone always drowns at the end of spring. Keep the light, please. I have so much left to write."
+npc.sigrid.act2.01,"«Святая Берта»… Я видела ложный огонь из окна. Думала, мне снится стихотворение.",The Saint Bertha… I saw the false fire from my window. I thought I was dreaming a poem.
+npc.sigrid.act2.02,Туман стал другим. Раньше он приходил. Теперь он ищет.,The fog has changed. It used to come. Now it searches.
+npc.sigrid.act2.03,"В Ночь Хмари я сижу у окна со свечой. Если все погасят свет, кто-то должен смотреть.","On Fog Nights I sit by the window with a candle. If everyone puts out their light, someone has to watch."
+npc.sigrid.act2.04,"Лив считает туман. Я его описываю. Кажется, мы обе проигрываем.",Liv measures the fog. I describe it. I think we're both losing.
+npc.sigrid.act2.05,"Говорят, вы нашли в гротах кости. Двадцать. Я могу написать двадцать эпитафий. Мне не трудно. Мне страшно.",They say you found bones in the grottoes. Twenty. I can write twenty epitaphs. It's not hard. It's frightening.
+npc.sigrid.act2.06,Осенью придёт Большая Хмарь. Если понадобится звонить в колокол — я умею.,The Great Fog comes in autumn. If someone's needed to ring the bell — I know how.
+npc.sigrid.act3.01,"Зима. Вы ходите в Глубь. Я пишу вам некролог. На всякий случай. Он хороший, не волнуйтесь.","Winter. You go down into the Deep. I'm writing your obituary. Just in case. It's a good one, don't worry."
+npc.sigrid.act3.02,Затонувший Сольвик… Там есть наш дом? С табличкой? Какая фамилия?,Sunken Solvik… Is our house down there? With a plate? Whose name?
+npc.sigrid.act3.03,"Ингрид ходит бледная. Грим — её отец. Это как жить в стихотворении, которое не можешь дочитать.",Ingrid looks pale. Grim is her father. Like living inside a poem you can't finish.
+npc.sigrid.act3.04,"Вы собираете улики. Я собираю слова. Надеюсь, ваших хватит.",You're gathering evidence. I'm gathering words. I hope you have enough.
+npc.sigrid.act3.05,"Олаф перехватил телеграмму. Он дрожал так, что буквы сыпались на пол.",Olaf intercepted a telegram. He was shaking so hard the letters fell on the floor.
+npc.sigrid.act3.06,Если что-то случится с вами на дне — я узнаю по огню. Он погаснет. Не гасните.,If something happens to you down there — I'll know by the light. It'll go out. Don't go out.
+npc.sigrid.act4.01,Скоро Великий Прилив. Раз в полвека. Хорошая дата для стихотворения. Плохая для всего остального.,The Great Tide is coming. Once in fifty years. A good date for a poem. A bad one for everything else.
+npc.sigrid.act4.02,Я буду в часовне у колокола. Если враги пойдут к маяку — вы услышите.,I'll be at the chapel bell. If enemies head for the lighthouse — you'll hear.
+npc.sigrid.act4.03,«Королева Кронвальда» пройдёт мимо Зубов. Если ваш огонь выстоит — я напишу об этом. Если нет — тоже.,"The Queen of Kronvald will pass the Teeth. If your light holds, I'll write about it. If not — I'll write that too."
+npc.sigrid.act4.04,Все говорят шёпотом. Даже чайки. Такого не было никогда.,Everyone's whispering. Even the gulls. That's never happened.
+npc.sigrid.act4.05,"Если вы пойдёте по дну — возвращайтесь. У меня нет эпитафии, которая бы вам подошла. Я проверяла.",If you walk the sea floor — come back. I don't have an epitaph that fits you. I checked.
+npc.sigrid.act4.06,"После всего этого я хочу тишины. Настоящей. Не той, что перед бедой.",After all this I want quiet. Real quiet. Not the kind before disaster.
+npc.sigrid.married_other.01,Поздравляю со свадьбой. Я написала стихотворение. Оно короткое. Слишком короткое.,Congratulations on the wedding. I wrote a poem. It's short. Too short.
+npc.sigrid.married_other.02,"Вы женились. Или вышли замуж. В общем, вы теперь чей-то. Это хорошо. Для кого-то.",You got married. So now you belong to someone. That's good. For someone.
+npc.sigrid.married_other.03,Мама плакала на свадьбе. Я нет. У меня аллергия на счастье.,Mum cried at the wedding. I didn't. I'm allergic to happiness.
+npc.sigrid.married_other.04,"Желаю вам долгой жизни вдвоём. Я знаю, как это редко здесь бывает.",I wish you a long life together. I know how rare that is here.
+npc.sigrid.married_other.05,Я убрала вашу страницу из тетради. Не ту — другую. Не спрашивайте.,I took your page out of my notebook. Not that one — the other one. Don't ask.
+npc.sigrid.event.wreck.01,Крушение. Я слышала колокол ночью. Теперь их будут приносить к вам.,A wreck. I heard the bell last night. Now they'll be brought to you.
+npc.sigrid.event.wreck.02,Море опять взяло своё. Хотя это никогда не было его.,The sea took its share again. Though it was never its to take.
+npc.sigrid.event.wreck.03,"Папа уже считает, сколько соли и досок купят на гробы. Я считаю имена.",Dad's already counting how much salt and board will go on coffins. I'm counting names.
+npc.sigrid.event.wreck.04,После крушения в лавке покупают свечи. Много. И молчат.,After a wreck people buy candles. Many. And say nothing.
+npc.sigrid.event.wreck.05,Если нужна эпитафия для кого-то с того корабля — скажите. Бесплатно.,If you need an epitaph for anyone off that ship — tell me. No charge.
+npc.sigrid.event.funeral.01,"Вы вчера хоронили. Я видела свечу на погосте. Спасибо, что не оставляете их одних.",You held a burial yesterday. I saw the candle at the graveyard. Thank you for not leaving them alone.
+npc.sigrid.event.funeral.02,Хорошие похороны — это когда никто не торопится. Вы не торопились.,A good funeral is one where nobody hurries. You didn't hurry.
+npc.sigrid.event.funeral.03,Ещё один в земле. Земля благодарна. Люди — не всегда.,One more in the ground. The ground is grateful. People aren't always.
+npc.sigrid.event.funeral.04,Какой знак вы поставили? Я бы выбрала крест с короткой надписью. Короткое больнее.,What marker did you put up? I'd choose a cross with a short line. Short hurts more.
+npc.sigrid.event.funeral.05,"Похороны у вас выходят лучше, чем свадьбы у нас. Это комплимент.",Your funerals turn out better than our weddings. That's a compliment.
+npc.sigrid.event.hmar.01,"Ночь Хмари. Я не спала. Туман стучал в окно, как забытый гость.",Fog Night. I didn't sleep. The fog knocked at the window like a forgotten guest.
+npc.sigrid.event.hmar.02,Утром на стекле был отпечаток ладони. Снаружи. Маленький.,In the morning there was a handprint on the glass. Outside. A small one.
+npc.sigrid.event.hmar.03,Ваш луч проходил по улице каждые несколько секунд. Я считала. Это помогало.,Your beam crossed the street every few seconds. I counted. It helped.
+npc.sigrid.event.hmar.04,"Хельга говорит, туман — это горе. Тогда понятно, почему он так тянется ко мне.",Helga says the fog is grief. Then it's clear why it's drawn to me.
+npc.sigrid.event.hmar.05,"После Ночи Хмари все проверяют, все ли живы. Я проверила. Вы — живы. Хорошо.",After a Fog Night everyone checks who's alive. I checked. You are. Good.
+npc.sigrid.event.inspection.01,"Инспекция. Пальм купил один леденец. Значит, настроение хорошее.",Inspection. Palm bought one mint drop. So he's in a good mood.
+npc.sigrid.event.inspection.02,Как прошла инспекция? По вашему лицу — выжили.,How was the inspection? Judging by your face — you survived.
+npc.sigrid.event.inspection.03,Пальм цитирует пункты устава даже в лавке. Пункт такой-то: сдачу пересчитать.,Palm quotes regulations even in the shop. Clause so-and-so: count your change.
+npc.sigrid.event.inspection.04,"Инспекция — это когда чужой человек решает, светите ли вы. Я бы сказала — да.",An inspection is when a stranger decides whether you shine. I'd say yes.
+npc.sigrid.event.inspection.05,Если Пальм вас похвалил — запомните дату. Такое случается реже крушений.,If Palm praised you — note the date. It happens less often than wrecks.
+npc.sigrid.event.wedding.01,"Свадьба… В часовне пахло воском и морем. Как на похоронах, только громче.","The wedding… The chapel smelled of wax and sea. Like a funeral, only louder."
+npc.sigrid.event.wedding.02,"Я подарила бы вам стихотворение, но оно о другом. Поэтому дарю тишину.","I'd have given you a poem, but it's about something else. So I give you silence."
+npc.sigrid.event.wedding.03,Бенедикт стоял подальше от окна. Традиция соблюдена.,Benedict stood well away from the window. Tradition observed.
+npc.sigrid.event.wedding.04,"Весь остров пришёл. Даже те, кто не любит людей. То есть я.",The whole island came. Even the ones who don't like people. Meaning me.
+npc.sigrid.event.wedding.05,"Будьте счастливы. Это приказ, не пожелание.","Be happy. That's an order, not a wish."
+npc.sigrid.event.villains.01,"Грим… Я продавала ему соль. Он говорил «дорогая». Я не знала, сколько стоит это слово.",Grim… I sold him salt. He called me 'dear'. I didn't know what that word cost.
+npc.sigrid.event.villains.02,Ингрид сидит в часовне. Я сижу рядом. Молчать вдвоём легче.,Ingrid's sitting in the chapel. I sit beside her. Silence is easier for two.
+npc.sigrid.event.villains.03,Теперь Торговый дом — Артель. Папа впервые не жалуется на цены. Мир изменился.,Now the Trading House is the Artel. Dad isn't complaining about prices for once. The world has changed.
+npc.sigrid.event.villains.04,Я напишу про ложные огни. Честно. Чтобы через полвека никто не повторил.,I'll write about the false fires. Honestly. So nobody repeats it in fifty years.
+npc.sigrid.event.villains.05,Ночью было тихо. Никаких чужих огней на Зубах. Только ваш.,It was quiet last night. No strange fires on the Teeth. Only yours.
+npc.sigrid.bouquet_yes.01,"Армерия. Цветок, который растёт на обрыве. Как вы узнали? Да. Я согласна.",Armeria. The flower that grows on the edge. How did you know? Yes. I accept.
+npc.sigrid.ring_yes.01,Кольцо. Хорошо. Я перестану писать эпитафию для нас. Напишу продолжение.,A ring. Very well. I'll stop writing our epitaph. I'll write a sequel.
+ev.sigrid2.l01,"А. Это вы. Садитесь. Нет, я не жду никого. Я жду, пока высохнут чернила.","Oh. It's you. Sit down. No, I'm not waiting for anyone. I'm waiting for the ink to dry."
+ev.sigrid2.l02,Я написала стихотворение. Про чаек. Хотите — прочту. Не хотите — тоже прочту.,"I wrote a poem. About gulls. If you want, I'll read it. If you don't — I'll read it anyway."
+ev.sigrid2.l03,"«Они кричат над морем так, как будто утонувших можно дозваться. Мы стоим на берегу и молчим — потому что знаем, что нельзя».","""They scream over the sea as if the drowned could be called back. We stand on the shore and say nothing — because we know they can't."""
+ev.sigrid2.l04,Ну?,Well?
+ev.sigrid2.c01,Это красиво. И очень грустно.,It's beautiful. And very sad.
+ev.sigrid2.c02,Чайки просто хотят рыбы. Но стихи хорошие.,Gulls just want fish. But the poem's good.
+ev.sigrid2.c03,"Может, что-нибудь повеселее?",Maybe something more cheerful?
+ev.sigrid2.l05,"Грустно — это правильно. Спасибо. Вы {первый|первая}, кто не спросил, всё ли у меня хорошо.",Sad is right. Thank you. You're the first who didn't ask if I'm all right.
+ev.sigrid2.l06,"Хотят рыбы. Да. Все мы кричим о рыбе, если честно. Можно я украду эту мысль?","They want fish. Yes. We all scream about fish, honestly. May I steal that thought?"
+ev.sigrid2.l07,Весёлые стихи пишет мама. На открытках. Идите к ней.,Mum writes cheerful poems. On postcards. Go and see her.
+ev.sigrid2.l08,Никому не говорите. Для острова я считаю соль.,"Don't tell anyone. As far as the island knows, I count salt."
+ev.sigrid4.l01,Мне нужна ваша помощь. На погосте лежит человек без имени. Ему нужна эпитафия.,I need your help. There's a man without a name in the graveyard. He needs an epitaph.
+ev.sigrid4.l02,"Я не знаю, кем он был. Поэтому пишу, кем он мог быть. Это честнее, чем «неизвестный».",I don't know who he was. So I write who he might have been. That's more honest than 'unknown'.
+ev.sigrid4.l03,Вот тетрадь. «Эпитафии для живых». Я пишу их заранее. Чтобы потом не торопиться.,Here's my notebook. 'Epitaphs for the Living'. I write them in advance. So I won't have to rush later.
+ev.sigrid4.l04,"Там есть одна и для вас. Не читайте. Ладно, читайте: «Зажигал огонь для тех, кто его не видел».","There's one for you in there. Don't read it. Fine, read it: 'Lit the fire for those who never saw it.'"
+ev.sigrid4.c01,Хорошая эпитафия. Только не торопи события.,A good epitaph. Just don't rush things.
+ev.sigrid4.c02,А для незнакомца что напишем?,And what do we write for the stranger?
+ev.sigrid4.c03,"Это жутковато, Сигрид.","That's a bit creepy, Sigrid."
+ev.sigrid4.l05,"Не буду. Хотя торопить — моё хобби. Спасибо, что не отобрали тетрадь.",I won't. Though rushing is my hobby. Thank you for not taking the notebook away.
+ev.sigrid4.l06,Деловой подход. Мне нравится. Слушайте.,A businesslike approach. I like it. Listen.
+ev.sigrid4.l07,Жутковато — это когда никто не пишет. Ладно. Я сама.,Creepy is when nobody writes anything. Fine. I'll do it myself.
+ev.sigrid4.l08,«Его искали. Просто не здесь». Годится?,'Someone looked for him. Just not here.' Will that do?
+ev.sigrid6.l01,Можно я скажу глупость? В Кронвальде есть поэтическая школа. Туда берут по конкурсу.,May I say something foolish? There's a school of poetry in Kronvald. Admission by competition.
+ev.sigrid6.l02,"Я никогда никуда не отправляла свои стихи. Папа говорит, бумага дорогая. Мама говорит — зачем.",I've never sent my poems anywhere. Dad says paper is expensive. Mum says: what for.
+ev.sigrid6.c01,Отправь. Я сам отнесу их Олафу.,Send them. I'll take them to Olaf myself.
+ev.sigrid6.c02,Здесь тоже можно писать. Но попробовать стоит.,You can write here too. But it's worth a try.
+ev.sigrid6.c03,"Может, не стоит — вдруг откажут?",Maybe don't — what if they say no?
+ev.sigrid6.l03,Хорошо. Тринадцать стихотворений. Счастливое число для утопленников.,All right. Thirteen poems. A lucky number for the drowned.
+ev.sigrid6.l04,Возьмите это. Мой сборник эпитафий. Копия. Оригинал я оставлю себе — на всякий случай.,Take this. My book of epitaphs. A copy. I'll keep the original — just in case.
+ev.sigrid6.l05,Откажут. Да. Лучше не знать. Вы правы. Мне от этого не легче.,They'll say no. Yes. Better not to know. You're right. It doesn't help.
+mail.sigrid_olaf_parcel,Олаф: «Посылка Сигрид Берг в редакцию «Кронвальдского вестника» принята. Тринадцать листов. Я не читал. Прочитал. Молчу.»,"Olaf: ""Sigrid Berg's parcel to the Kronvald Herald editors received. Thirteen sheets. I didn't read them. I read them. My lips are sealed."""
+ev.sigrid8.l01,Тишина! Сегодня у нас вечер поэзии. Впервые. Кто будет кричать «рыбу!» — вылетит.,Quiet! Tonight is a poetry evening. First ever. Anyone shouting 'fish!' gets thrown out.
+ev.sigrid8.l02,Мои стихи напечатали. В столице. Редактор написал: «Мрачно. Берём».,My poems were printed. In the capital. The editor wrote: 'Gloomy. Accepted.'
+ev.sigrid8.l03,"Это новое. Про маяк. «Он светит не кораблям — он светит тем, кто ждёт корабли. И тем, кто уже не дождётся. И одному человеку, который ждёт, когда погаснет свеча в моём окне».",This one is new. About the lighthouse. 'It doesn't shine for ships — it shines for those who wait for ships. For those who won't live to see them. And for one person who waits for the candle in my window to go out.'
+ev.sigrid8.c01,Это про меня?,Is that about me?
+ev.sigrid8.c02,"Лучшее, что я {слышал|слышала} на этом острове.",The best thing I've heard on this island.
+ev.sigrid8.l04,Не льстите себе. Да. Про вас.,Don't flatter yourself. Yes. About you.
+ev.sigrid8.l05,"На этом острове лучшее обычно — рыба. Спасибо, что я обошла треску.",On this island the best is usually fish. Thank you — I beat the cod.
+ev.sigrid8.l06,"Кто-нибудь, дайте поэту эля! За счёт заведения. Один раз.",Someone give the poet an ale! On the house. Once.
+ev.sigrid10.l01,Меня приняли. В школу. Письмо пришло вчера.,I've been accepted. At the school. The letter came yesterday.
+ev.sigrid10.l02,Я долго думала. Прошлась по всем кладбищам Кронвальда — мысленно. Ни одного приличного.,I thought about it for a long time. Went through every cemetery in Kronvald — in my head. Not a single decent one.
+ev.sigrid10.l03,"А здесь есть. И есть человек, который за ним ухаживает. Я остаюсь.",Here there is one. And there's a person who looks after it. I'm staying.
+ev.sigrid10.c01,"Я {рад|рада}, что ты остаёшься. Очень.",I'm glad you're staying. Very.
+ev.sigrid10.c02,Ты уверена? Это же мечта.,Are you sure? It's your dream.
+ev.sigrid10.l04,Не радуйтесь так. Мне придётся улыбаться в ответ. Уже приходится.,Don't look so glad. I'll have to smile back. I already am.
+ev.sigrid10.l05,"Мечта — это место, где тебя понимают. Я нашла его раньше, чем думала.",A dream is a place where you're understood. I found it sooner than I thought.
+ev.sigrid10.l06,Солнце садится. Самое честное время дня. Посидите со мной.,The sun is setting. The most honest time of day. Sit with me a while.
+ev.sigrid14.l01,Я написала эпитафию. Для нас двоих. Не пугайтесь — на будущее. На далёкое.,I wrote an epitaph. For the two of us. Don't be scared — it's for the future. The distant one.
+ev.sigrid14.l02,«Они так и не договорили».,'They never finished talking.'
+ev.sigrid14.l03,"Потому что не договорим. Мне всегда будет что вам сказать. Это и есть счастье, наверное.","Because we won't. I'll always have something left to tell you. That's what happiness is, I think."
+ev.sigrid14.c01,Тогда продолжим разговор. Долго.,Then let's keep talking. For a long time.
+ev.sigrid14.c02,Хорошая эпитафия. Пусть ждёт лет сто.,A good epitaph. Let it wait a hundred years.
+ev.sigrid14.l04,Договорились. То есть — не договорились. Вы поняли.,Agreed. I mean — never finished. You understand.
+npc.liv.spring.01,"Весна! Fratercula arctica возвращаются на утёс! Тупики, то есть. Смешные, как пожилые профессора.","Spring! Fratercula arctica are back on the cliff! Puffins, I mean. Funny as elderly professors."
+npc.liv.spring.02,Я насчитала сорок семь гаг у лагуны. Somateria mollissima. Сорок восьмая оказалась уткой-приманкой Кнуда.,I counted forty-seven eiders at the lagoon. Somateria mollissima. The forty-eighth was Knud's decoy.
+npc.liv.spring.03,"Почва у вас солёная — это же прекрасно! В смысле, для учёного. Для репы — трагедия.","Your soil's salty — that's wonderful! For a scientist, I mean. For turnips it's a tragedy."
+npc.liv.spring.04,Весенний туман на тридцать процентов плотнее летнего. Я измерила. Туман обиделся.,Spring fog is thirty percent denser than summer fog. I measured. The fog took offence.
+npc.liv.spring.05,"Можно я возьму пробу воды у вашего причала? Честно, я аккуратно. Почти всегда.","May I take a water sample at your jetty? Honestly, I'll be careful. Nearly always."
+npc.liv.spring.06,"Видели морошку? Rubus chamaemorus. Цветёт белым, а ягоды как маленькие фонари.","Seen the cloudberries? Rubus chamaemorus. White flowers, and the berries look like tiny lanterns."
+npc.liv.spring.07,Мои блокноты промокли. Опять. Этот остров против науки. Мне это нравится.,My notebooks got soaked. Again. This island is against science. I love it.
+npc.liv.spring.08,"На мысу гнездятся кулики. Не наступайте на них, пожалуйста! Они маленькие и очень гордые.",Waders nest on the cape. Please don't step on them! They're small and very proud.
+npc.liv.spring.09,Весна — сезон спаривания. Я про птиц. Исключительно про птиц.,Spring is mating season. For birds. Strictly birds.
+npc.liv.spring.10,"Ваш кот — Felis catus, подвид «маячный». Вид неописанный. Опишу.","Your cat is Felis catus, subspecies 'lighthouse'. Undescribed. I'll describe it."
+npc.liv.summer.01,"Лето — время планктона! Ночью вода светится. Noctiluca scintillans. Звучит как заклинание, правда?","Summer is plankton time! The water glows at night. Noctiluca scintillans. Sounds like a spell, doesn't it?"
+npc.liv.summer.02,"Я сплю по четыре часа. Белые ночи. Мозг не понимает, что пора выключаться.",I sleep four hours a night. White nights. My brain doesn't know when to switch off.
+npc.liv.summer.03,Тупики носят в клювах по десять рыбок сразу. Я не могу удержать две ложки.,Puffins carry ten fish in their beaks at once. I can't hold two spoons.
+npc.liv.summer.04,Можно я понаблюдаю с галереи? Высота — это данные. Данные — это счастье.,May I observe from the gallery? Height is data. Data is happiness.
+npc.liv.summer.05,Сегодня тюлень смотрел на меня двадцать минут. Phoca vitulina. Я смотрела в ответ. Ничья.,A seal stared at me for twenty minutes today. Phoca vitulina. I stared back. A draw.
+npc.liv.summer.06,"Здешняя вода на два градуса холоднее, чем пишут в учебниках. Учебники врут! Я в восторге.",The water here is two degrees colder than the textbooks say. The textbooks lie! I'm thrilled.
+npc.liv.summer.07,"Я забыла пообедать. Опять. Это не рассеянность, это научный метод.","I forgot lunch. Again. It's not absent-mindedness, it's scientific method."
+npc.liv.summer.08,"Олаф принёс мне письмо из университета. Спрашивают, когда вернусь. Отвечу. Когда-нибудь.",Olaf brought a letter from the university. They're asking when I'll be back. I'll answer. Someday.
+npc.liv.summer.09,Летние туманы ведут себя подозрительно. Ненаучно подозрительно.,Summer fogs behave suspiciously. Unscientifically suspiciously.
+npc.liv.summer.10,"Вы видели, как светится медуза в полночь? Нет? Значит, вы ещё не жили.",Ever seen a jellyfish glow at midnight? No? Then you haven't lived yet.
+npc.liv.autumn.01,Осенью птицы улетают на юг. Я остаюсь. Птицы считают меня странной.,In autumn the birds fly south. I stay. The birds think I'm odd.
+npc.liv.autumn.02,"Сельдь! Clupea harengus! Косяки такие плотные, что их видно с утёса. Красота и сельдь.",Herring! Clupea harengus! Shoals so thick you can see them from the cliff. Beauty and herring.
+npc.liv.autumn.03,"Грибы на лощине: подберёзовики, лисички и один мухомор, который мне не нравится.","Mushrooms in the grove: birch boletes, chanterelles and one fly agaric I don't like."
+npc.liv.autumn.04,Осенние штормы выносят на берег удивительные вещи. Вчера — морского ежа и сапог. Сапог изучать не стала.,Autumn storms wash up amazing things. Yesterday a sea urchin and a boot. I didn't study the boot.
+npc.liv.autumn.05,Ветер сменился на северо-западный. Я записала. Он сменился обратно. Я зачеркнула.,The wind turned north-west. I wrote it down. It turned back. I crossed it out.
+npc.liv.autumn.06,"Туман осенью идёт против ветра. Против! Это нарушает всё, что я знаю. Мне нужен кофе.",In autumn the fog moves against the wind. Against! That breaks everything I know. I need coffee.
+npc.liv.autumn.07,Можно вопрос? Почему у вас на погосте все знаки повёрнуты к морю? Это традиция или ветер?,A question? Why do all the markers in your graveyard face the sea? Tradition or wind?
+npc.liv.autumn.08,Я разложила перья по оттенкам серого. Сорок два оттенка. Остров очень серый.,I sorted the feathers by shades of grey. Forty-two shades. The island is very grey.
+npc.liv.autumn.09,"Хельга говорит, туман — это горе. Я не могу это измерить. Пока.",Helga says the fog is grief. I can't measure that. Yet.
+npc.liv.autumn.10,Длинные вечера — хорошо для отчётов. Плохо для глаз. Я выбираю отчёты.,Long evenings — good for reports. Bad for the eyes. I choose reports.
+npc.liv.winter.01,"Зимой на острове тихо, как в пробирке. Можно услышать, как лёд думает.",In winter the island is quiet as a test tube. You can hear the ice thinking.
+npc.liv.winter.02,Северное сияние — это просто заряженные частицы. Просто. Ха. Я плакала.,The aurora is just charged particles. Just. Ha. I cried.
+npc.liv.winter.03,Снежинки под лупой — шестиугольные. Все. Даже самые злые.,Snowflakes under a magnifying glass are hexagonal. All of them. Even the nasty ones.
+npc.liv.winter.04,"Я ношу три свитера. Маргит сказала, что четвёртый — это уже диагноз.",I'm wearing three jumpers. Margit said a fourth would be a diagnosis.
+npc.liv.winter.05,Лагуна замёрзла. Под льдом что-то светится. Я хочу знать что. Все отговаривают.,The lagoon froze. Something's glowing under the ice. I want to know what. Everyone's trying to talk me out of it.
+npc.liv.winter.06,Зимние птицы толстые и спокойные. Идеальные объекты. Не убегают от наблюдателя.,Winter birds are fat and calm. Perfect subjects. They don't run from the observer.
+npc.liv.winter.07,Мои чернила замёрзли. Пишу карандашом. Карандаш тоже недоволен.,My ink froze. I'm writing in pencil. The pencil isn't happy either.
+npc.liv.winter.08,Ваш маяк зимой светит дальше. Холодный воздух плотнее. Физика любит смотрителей.,Your lighthouse shines farther in winter. Cold air is denser. Physics loves keepers.
+npc.liv.winter.09,Я пробовала лютефиск ради науки. Результат: наука требует жертв.,I tried lutefisk for science. Conclusion: science demands sacrifices.
+npc.liv.winter.10,"Тёмные месяцы… Хорошо, что вы здесь. Люди — тоже источник света. Фигурально.",The dark months… Good that you're here. People are a light source too. Figuratively.
+npc.liv.weather.rain.01,Дождь! Отлично! Считаю капли на квадратный сантиметр. Их много.,Rain! Excellent! I'm counting drops per square centimetre. There are many.
+npc.liv.weather.rain.02,В дождь я разбираю записи. Записи в дождь разбирают меня.,When it rains I sort my notes. When it rains my notes sort me.
+npc.liv.weather.storm.01,Шторм — это же лаборатория под открытым небом! Но я туда не пойду. Я не дура.,A storm is an open-air laboratory! But I'm not going out there. I'm not a fool.
+npc.liv.weather.storm.02,"Барометр упал так, что я проверила, не упала ли я. Держите огонь!",The barometer dropped so hard I checked whether I had too. Keep the light going!
+npc.liv.weather.fog.01,"Туман! Сейчас возьму пробу. Не держите меня. Держите, если я не вернусь через час.",Fog! I'm off to take a sample. Don't stop me. Do stop me if I'm not back in an hour.
+npc.liv.weather.fog.02,"Этот туман движется против ветра. Опять. Он делает это нарочно, я уверена.","This fog is moving against the wind. Again. It does it on purpose, I'm sure."
+npc.liv.weather.snow.01,Снег! У каждой снежинки своя форма. Как у людей. Только снежинки не спорят.,Snow! Every flake has its own shape. Like people. Only snowflakes don't argue.
+npc.liv.weather.cloud.01,Облака слоисто-кучевые. Stratocumulus. Дождя не будет. Наверное. Не цитируйте меня.,Stratocumulus clouds. No rain. Probably. Don't quote me.
+npc.liv.festival.bird_day.01,День птиц! Лучший праздник! Все смотрят на птиц — и никто не называет меня странной!,Bird Day! The best holiday! Everyone watches birds — and nobody calls me odd!
+npc.liv.festival.white_sun.01,"Ночь Белого Солнца. Солнце не садится. Я записываю, как ведут себя люди. Странно ведут.",White Sun Night. The sun doesn't set. I'm recording how people behave. Oddly.
+npc.liv.festival.regatta.01,Регата! Я ставлю на Хедду. Статистически разумно.,The regatta! I'm betting on Hedda. Statistically sound.
+npc.liv.festival.ice_festival.01,Ледовый праздник. Можно я возьму пробу льда из скульптуры? Маленькую. Никто не заметит.,Ice Festival. May I sample the ice from the sculpture? A tiny bit. No one will notice.
+npc.liv.festival.01,"Праздник! Вечно я забываю, какой. Наливайте, расскажете.","A festival! I always forget which. Pour me something, you'll tell me."
+npc.liv.festival.02,Люди поют. Я фиксирую. Народная песня — тоже данные.,People are singing. I'm recording. A folk song is data too.
+npc.liv.gift.love.01,"Не может быть! Это же… Вы понимаете, что вы мне дали? Это открытие! Ну, для меня!","No way! This is… Do you realise what you've given me? It's a discovery! Well, for me!"
+npc.liv.gift.love.02,"Я… беру свои слова обратно. Все. Вы лучше, чем университет.",I… take it all back. Everything. You're better than the university.
+npc.liv.gift.like.01,"О! В коллекцию! Подпишу: «Дар смотрителя, образец номер…» Какой у нас номер?","Oh! For the collection! I'll label it: 'Keeper's gift, specimen number…' What number are we on?"
+npc.liv.gift.like.02,Спасибо! Полезно и красиво. Как правильный опыт.,Thank you! Useful and pretty. Like a proper experiment.
+npc.liv.gift.neutral.01,Интересно. Не очень. Но спасибо!,Interesting. Not very. But thank you!
+npc.liv.gift.neutral.02,Хм. Задокументирую. Всё документирую.,Hm. I'll document it. I document everything.
+npc.liv.gift.dislike.01,Торф? Я изучаю торф. Но не люблю. Как и налоги.,Peat? I study peat. But I don't like it. Like taxes.
+npc.liv.gift.dislike.02,Спасибо… Положу в коробку «Разное». Она большая.,Thanks… I'll put it in the 'Miscellaneous' box. It's a big box.
+npc.liv.gift.hate.01,"Консервы «Нептун»?! Вы знаете, что они кладут туда? Я знаю. Не хочу знать.",Neptune tins?! Do you know what they put in them? I do. I wish I didn't.
+npc.liv.gift.hate.02,Мухомор. Amanita muscaria. Красивый. Ядовитый. Как ваш подарок.,Fly agaric. Amanita muscaria. Pretty. Poisonous. Like your gift.
+npc.liv.birthday.01,Сегодня мне двадцать семь! Или двадцать шесть. Я перепроверю в дневнике.,I'm twenty-seven today! Or twenty-six. I'll check my diary.
+npc.liv.birthday.02,День рождения. Университет прислал телеграмму: «Вернитесь». Прекрасный подарок — я его проигнорирую.,My birthday. The university sent a telegram: 'Come back.' Lovely present — I'll ignore it.
+npc.liv.birthday_gift.01,Вы помните мой день рождения?! Я сама его не помню!,You remembered my birthday?! I don't remember it myself!
+npc.liv.birthday_gift.02,Подарок в день рождения! Это теперь научный факт: вы хороший человек.,A birthday gift! It's now a scientific fact: you're a good person.
+npc.liv.act1.01,Меня предупредили: на острове странный туман. Я привезла три барометра. Мало.,They warned me: strange fog on the island. I brought three barometers. Not enough.
+npc.liv.act1.02,Ваша бабушка переписывалась с моим профессором. О светящейся воде. Он сказал — шарлатанство. Я сказала — посмотрим.,Your grandmother corresponded with my professor. About glowing water. He said charlatanism. I said we'll see.
+npc.liv.act1.03,Ложный огонь на Зубах — это не свечение фосфора. Я проверила. Это фонарь. Человеческий.,The false fire on the Teeth isn't phosphorescence. I checked. It's a lantern. A human one.
+npc.liv.act1.04,Весной здесь тонут чаще. Так в статистике Олафа. Я не люблю такую статистику.,People drown more often here in spring. It's in Olaf's statistics. I don't like those statistics.
+npc.liv.act1.05,Кто первым пришёл ко мне поздороваться? Вы. Записала в полевой дневник.,Who came to greet me first? You. It's in my field diary.
+npc.liv.act1.06,Я буду проситься на вашу галерею. Предупреждаю заранее. Я настойчивая.,I'll be asking to use your gallery. I'm warning you now. I'm persistent.
+npc.liv.act2.01,"Белая Хмарь! Я замерила — видимость три метра, влажность сто процентов, температура падает, а ветра нет. Это невозможно.","The White Fog! I measured — visibility three metres, humidity a hundred percent, temperature falling, no wind. That's impossible."
+npc.liv.act2.02,Для «Светлой воды» нужен планктон с новолуния. Поможете собрать? Мне нужен кто-то с лодкой и терпением.,For Bright Water I need new-moon plankton. Will you help collect it? I need someone with a boat and patience.
+npc.liv.act2.03,Колокол Эрланда — чудесная машина. Стекло для иллюминатора я отдам. Моё лучшее. Не разбейте.,Erland's bell is a marvellous machine. I'll give my glass for the porthole. My best one. Don't break it.
+npc.liv.act2.04,"Хельга говорит «горе», я говорю «аномалия». Возможно, мы говорим об одном.","Helga says grief, I say anomaly. Maybe we mean the same thing."
+npc.liv.act2.05,"В гротах тихо, как в библиотеке. Слишком тихо. Даже для библиотеки.",The grottoes are quiet as a library. Too quiet. Even for a library.
+npc.liv.act2.06,"К Большой Хмари я сделаю светящиеся склянки. Наука против тумана. Посмотрим, кто кого.",For the Great Fog I'll make glowing flasks. Science versus fog. Let's see who wins.
+npc.liv.act3.01,"Скафандр! Мы с Торой нарисовали чертёж. Тора ругается, но гордится.","The diving suit! Tora and I drew the plans. Tora swears, but she's proud."
+npc.liv.act3.02,"Затонувшая деревня — это же археология! Под водой! Я умру от восторга. Фигурально, надеюсь.","A sunken village — that's archaeology! Underwater! I'll die of excitement. Figuratively, I hope."
+npc.liv.act3.03,"Глубь меняется быстрее, чем я успеваю записывать. Не ходите туда без меня. И со мной тоже не очень.","The Deep changes faster than I can write it down. Don't go without me. Or with me, really."
+npc.liv.act3.04,"Кай бредит о Уговоре. Я слушаю и записываю. Бред — тоже источник, если его много.","Kai raves about the Pact. I listen and take notes. Raving is a source too, if there's enough of it."
+npc.liv.act3.05,Улики на доске соединены нитками. Как граф. Я могу посчитать связи. Их слишком много для случайности.,The evidence on the board is joined with threads. Like a graph. I can count the links. Too many for chance.
+npc.liv.act3.06,"Если Великий Прилив откроет дно — я хочу это увидеть. Даже если это последнее, что я увижу. Нет, стойте, хочу увидеть ещё много.","If the Great Tide opens the sea floor — I want to see it. Even if it's the last thing I see. No, wait, I want to see a lot more."
+npc.liv.act4.01,Я приготовила три склянки «Светлой воды». Держите на поясе. Не пейте!,I've made three flasks of Bright Water. Keep them on your belt. Don't drink them!
+npc.liv.act4.02,Отлив в ночь Прилива будет рекордный. Я рассчитала. Три раза. Цифры страшные.,The ebb on Tide Night will set a record. I calculated. Three times. The numbers are frightening.
+npc.liv.act4.03,Если наука здесь бессильна — пусть хоть свет будет не бессилен.,If science is powerless here — at least let the light not be.
+npc.liv.act4.04,"Мой отчёт для университета называется «Остров, который отказывается быть понятым». Нравится?",My report for the university is called 'The Island That Refuses to Be Understood'. Like it?
+npc.liv.act4.05,Я боюсь. Это не научно. Но честно.,I'm scared. It's not scientific. But it's honest.
+npc.liv.act4.06,"Когда всё закончится, я опишу новый вид тумана. Если он останется. Если мы останемся.",When it's over I'll describe a new species of fog. If it stays. If we do.
+npc.liv.married_other.01,Вы поженились! Поздравляю! Это очень… социально значимое событие.,You got married! Congratulations! It's a very… socially significant event.
+npc.liv.married_other.02,"Я знала, что это случится. Статистически. Но всё равно неожиданно.",I knew it would happen. Statistically. Still unexpected.
+npc.liv.married_other.03,Теперь у меня меньше поводов подниматься на галерею. Хотя птицы остались.,Now I have fewer reasons to go up to the gallery. Though the birds are still there.
+npc.liv.married_other.04,"Будьте счастливы! Счастье — это химия. Надеюсь, у вас хорошая.",Be happy! Happiness is chemistry. I hope yours is good.
+npc.liv.married_other.05,Я подарю вам образец светящегося планктона. Для спальни. Романтично и научно.,I'll give you a glowing plankton sample. For the bedroom. Romantic and scientific.
+npc.liv.event.wreck.01,Крушение… Я видела обломки с утёса. Птицы кружили над ними. Я ушла.,A wreck… I saw the wreckage from the cliff. Birds were circling it. I left.
+npc.liv.event.wreck.02,Снова ясная ночь и снова крушение. Корреляция. Мне не нравится эта корреляция.,A clear night again and a wreck again. Correlation. I don't like this correlation.
+npc.liv.event.wreck.03,"Течение принесёт тела к мысу через день-два. Я рассчитала. Простите, что знаю это.",The current will bring the bodies to the cape in a day or two. I calculated. I'm sorry I know that.
+npc.liv.event.wreck.04,"Я составляю карту течений. Чтобы вы знали, где искать. Это единственное, чем я могу помочь.",I'm charting the currents. So you'll know where to look. It's the only way I can help.
+npc.liv.event.wreck.05,"Море в эту ночь было спокойным. Это меня пугает больше, чем шторм.",The sea was calm that night. That scares me more than a storm.
+npc.liv.event.funeral.01,Вы хоронили вчера. Я видела с галереи. Вы очень бережно несли.,You held a burial yesterday. I saw from the gallery. You carried them so gently.
+npc.liv.event.funeral.02,Можно спросить? Здесь всегда кладут камень на могилу? Интересная традиция. Грустная.,May I ask? Do they always put a stone on the grave here? An interesting custom. A sad one.
+npc.liv.event.funeral.03,На похоронах не принято брать пробы. Я знаю. Я просто смотрела.,You're not supposed to take samples at funerals. I know. I just watched.
+npc.liv.event.funeral.04,"Погост у вас ухоженный. Лучший, что я видела. А я видела университетский.",Your graveyard is well kept. The best I've seen. And I've seen the university's.
+npc.liv.event.funeral.05,Смерть — естественный процесс. Мне всё равно не нравится.,Death is a natural process. I still don't like it.
+npc.liv.event.hmar.01,Ночь Хмари! Я всю ночь замеряла. Результаты: ничего не сходится. Я счастлива и в ужасе.,Fog Night! I measured all night. Results: nothing adds up. I'm delighted and horrified.
+npc.liv.event.hmar.02,Туман шептал. Акустически это невозможно. Я записала шёпот. Запись пуста.,The fog whispered. Acoustically impossible. I recorded the whisper. The recording is blank.
+npc.liv.event.hmar.03,"Ваш луч рассекал туман, как скальпель. Туман отступал. Свет его ранит. Интересно, почему.",Your beam cut the fog like a scalpel. The fog drew back. Light wounds it. I wonder why.
+npc.liv.event.hmar.04,Я больше не смеюсь над Хельгой. После этой ночи — нет.,I don't laugh at Helga any more. Not after last night.
+npc.liv.event.hmar.05,Утром в пробирке с туманом был конденсат. Солёный. Как слёзы. Совпадение? Я не верю в совпадения.,In the morning the fog sample had condensed. Salty. Like tears. Coincidence? I don't believe in coincidence.
+npc.liv.event.inspection.01,"Инспектор Пальм попросил мои таблицы. Сказал: пункт двадцать один, приложить. Приятно, когда наука нужна бюрократии.","Inspector Palm asked for my tables. Said: clause twenty-one, attach. Nice when bureaucracy needs science."
+npc.liv.event.inspection.02,"Как инспекция? Если нужно, я засвидетельствую: огонь горел. Я видела каждую ночь.","How was the inspection? If needed, I'll testify: the light burned. I saw it every night."
+npc.liv.event.inspection.03,Пальм мерил яркость прибором. Прибор старый. Мой лучше. Не сказала — неудобно.,Palm measured brightness with an instrument. An old one. Mine's better. Didn't say — it'd be rude.
+npc.liv.event.inspection.04,Инспекция каждый сезон — хороший ритм. Для отчётов. Для нервов — нет.,An inspection every season is a good rhythm. For reports. Not for nerves.
+npc.liv.event.inspection.05,Поздравляю! Или соболезную? По лицу пока не определить.,Congratulations! Or condolences? I can't tell from your face yet.
+npc.liv.event.wedding.01,Свадьба! Я впервые была на островной свадьбе. Столько обычаев! Я записала двенадцать.,A wedding! My first island wedding. So many customs! I noted twelve.
+npc.liv.event.wedding.02,"Бросание сельди через плечо — это правда традиция? Мне кажется, Бьорн её придумал.",Throwing a herring over your shoulder — is that really a tradition? I think Bjorn made it up.
+npc.liv.event.wedding.03,Вы выглядели {счастливым|счастливой}. Это видно без приборов.,You looked happy. You can see it without instruments.
+npc.liv.event.wedding.04,"Я танцевала! Плохо, но искренне. Эйнар наступил мне на ногу. Дважды. Научно.","I danced! Badly, but sincerely. Einar stepped on my foot. Twice. Scientifically."
+npc.liv.event.wedding.05,Счастливой жизни! И хорошего барометра в доме.,A happy life! And a good barometer in the house.
+npc.liv.event.villains.01,Грима разоблачили. Логика победила. Мне хочется танцевать. Не буду — помню свадьбу.,Grim's been exposed. Logic won. I want to dance. I won't — I remember the wedding.
+npc.liv.event.villains.02,Ложные огни были в статистике с самого начала. Надо было просто посчитать.,The false fires were in the statistics from the start. Someone just had to count.
+npc.liv.event.villains.03,"Ингрид держится. Она сильнее, чем кажется. Ingrid fortis. Новый вид.",Ingrid is holding up. She's stronger than she looks. Ingrid fortis. A new species.
+npc.liv.event.villains.04,"Теперь, когда Зубы тёмные, птицы там гнездятся спокойно. Даже птицы знали.","Now the Teeth are dark, the birds nest there in peace. Even the birds knew."
+npc.liv.event.villains.05,"Я отправила в университет отчёт о «Нептуне». Пусть знают, что наука бывает и такой.",I sent the university a report on Neptune. Let them know science can look like this too.
+npc.liv.bouquet_yes.01,Армерия! Armeria maritima! Это… признание? Научно — да. Лично — тоже да.,"Armeria! Armeria maritima! Is this… a confession? Scientifically, yes. Personally, also yes."
+npc.liv.ring_yes.01,"Кольцо! Я говорю «да» быстрее, чем успеваю посчитать. Впервые в жизни.",A ring! I'm saying yes faster than I can calculate. First time in my life.
+ev.liv2.l01,"Вы как раз вовремя! Держите сачок. И вот это кольцо. Нет, это не предложение. Это для тупика.","Just in time! Hold the net. And this ring. No, it's not a proposal. It's for a puffin."
+ev.liv2.l02,"Тупики гнездятся в норах на утёсе. Я аккуратно достаю, вы держите, я кольцую. Три секунды. Ничего страшного.","Puffins nest in burrows on the cliff. I pull one out carefully, you hold it, I ring it. Three seconds. Nothing to it."
+ev.liv2.l03,"Ой. Он вас укусил. Это значит, вы ему понравились. Нет, не значит. Но звучит лучше.","Oops. It bit you. That means it likes you. No, it doesn't. But it sounds nicer."
+ev.liv2.c01,Он просто защищался. Держу крепче.,It was just defending itself. I'll hold tighter.
+ev.liv2.c02,Сколько их ещё?,How many more?
+ev.liv2.c03,Я не {нанимался|нанималась} кормить собой птиц.,I didn't sign up to feed myself to birds.
+ev.liv2.l04,"Правильно! Вы прирождённый полевой ассистент. Записываю: «ассистент 1, укусов 1, жалоб 0».","Exactly! You're a born field assistant. Noting: 'assistant 1, bites 1, complaints 0'."
+ev.liv2.l05,Сорок два. Шучу! Двенадцать. Не шучу.,Forty-two. Joking! Twelve. Not joking.
+ev.liv2.l06,Ладно. Сама справлюсь. Тупики тоже не нанимались.,Fine. I'll manage. The puffins didn't sign up either.
+ev.liv4.l01,"Сегодня новолуние. Идеально для планктона. Поплыли? Я возьму банки, вы — вёсла.","New moon tonight. Perfect for plankton. Shall we row out? I'll take the jars, you take the oars."
+ev.liv4.l02,(Вода вокруг ялика вспыхивает от каждого взмаха весла. Голубые искры стекают с лопастей.),(The water flares at every stroke of the oar. Blue sparks run off the blades.)
+ev.liv4.l03,…,…
+ev.liv4.l04,Я… забыла все латинские названия. Впервые в жизни. Просто смотрю.,I… forgot every Latin name. First time in my life. I'm just looking.
+ev.liv4.c01,Иногда лучше просто смотреть.,Sometimes it's better just to look.
+ev.liv4.c02,"Noctiluca scintillans, если что.","Noctiluca scintillans, in case you forgot."
+ev.liv4.l05,"Да. Спасибо, что молчите вместе со мной.",Yes. Thank you for being quiet with me.
+ev.liv4.l06,Вы запомнили! Я пропала. В научном смысле.,You remembered! I'm done for. In the scientific sense.
+ev.liv6.l01,Смотрите. Направление ветра — синие стрелки. Движение тумана — красные. Видите?,Look. Wind direction — blue arrows. Fog movement — red. See?
+ev.liv6.l02,Они противоположны. Всегда. Туман идёт против ветра. Как будто кто-то его ведёт.,They're opposite. Always. The fog goes against the wind. As if someone were leading it.
+ev.liv6.l03,"Хельга говорит — это горе девочки из тумана. Я говорю — должно быть объяснение. Кто прав, по-вашему?","Helga says it's the grief of a girl made of fog. I say there must be an explanation. Who's right, in your view?"
+ev.liv6.c01,Наука найдёт объяснение. Просто не сразу.,Science will find an explanation. Just not at once.
+ev.liv6.c02,"Может, правы обе. Горе тоже можно измерить.",Maybe you're both right. Grief can be measured too.
+ev.liv6.c03,Здесь миф сильнее науки.,Here myth is stronger than science.
+ev.liv6.l04,"Вот! Спасибо. Мне нужен был кто-то, кто в меня верит. В науку. И в меня.",There! Thank you. I needed someone who believes in me. In science. And in me.
+ev.liv6.l05,Горе можно измерить… Слёзы солёные. Туман солёный. О. О! Мне нужно записать.,Grief can be measured… Tears are salty. The fog is salty. Oh. Oh! I need to write this down.
+ev.liv6.l06,"Может быть. Но тогда я буду изучать миф. Уж простите, иначе не умею.","Maybe. But then I'll study the myth. Sorry, I don't know any other way."
+ev.liv8.l01,"Прототип скафандра! Тора собрала шлем, я — клапаны. Испытание на мелководье. Пять минут.","A diving-suit prototype! Tora built the helmet, I did the valves. A shallow-water test. Five minutes."
+ev.liv8.l02,(Пузыри из шлема Лив идут всё реже. Потом перестают. Клапан заело.),(The bubbles from Liv's helmet come slower and slower. Then stop. The valve has jammed.)
+ev.liv8.l03,"(Вы прыгаете в воду и тащите её к берегу за шланг, как упрямого тюленя.)",(You jump in and haul her ashore by the hose like a stubborn seal.)
+ev.liv8.l04,"Кха… Клапан. Клапан заело. Я рассчитала всё, кроме того, что я его сама собирала.",Khh… The valve. It jammed. I calculated everything except that I assembled it myself.
+ev.liv8.l05,(Ваш клапан заедает на глубине. Мир становится тесным и тихим. Кто-то хватает вас за пояс.),(Your valve jams at depth. The world grows narrow and quiet. Someone grabs your belt.)
+ev.liv8.l06,"Вы что?! Вы должны были… Вы хорошо ныряете, я знаю, но я не рассчитала… Я не рассчитала, что испугаюсь за вас.","What were you — ?! You were supposed to… You dive well, I know, but I didn't account for… I didn't account for being frightened for you."
+ev.liv8.c01,Главное — все живы. Остальное починим.,What matters is we're alive. We'll fix the rest.
+ev.liv8.c02,В следующий раз проверяем дважды.,Next time we check twice.
+ev.liv8.l07,Да. Дважды. Нет — трижды. И вы рядом. Это не обсуждается.,Yes. Twice. No — three times. And you're there. That's not up for discussion.
+ev.liv10.l01,"Мне предложили кафедру. В Кронвальде. Своя лаборатория, студенты, отопление.","They've offered me a chair. In Kronvald. My own laboratory, students, heating."
+ev.liv10.l02,"Я отказалась. Здесь больше загадок на квадратную милю, чем во всём университете.",I turned it down. There are more mysteries per square mile here than in the whole university.
+ev.liv10.l03,"И одна из загадок — почему я не могу спокойно работать, когда вы рядом. Это я тоже хочу изучить.",And one of the mysteries is why I can't work calmly when you're around. I want to study that too.
+ev.liv10.c01,Я {готов|готова} быть твоим объектом наблюдения.,I'm happy to be your subject of observation.
+ev.liv10.c02,Остров повезло с тобой. И мне.,The island's lucky to have you. So am I.
+ev.liv10.l04,Отлично. Наблюдения начинаются немедленно. И продлятся долго.,Excellent. Observations begin immediately. And will last a long time.
+ev.liv14.l01,Мою статью приняли. Про новый вид планктона. Который светится только в здешних водах.,My paper was accepted. About a new plankton species. One that glows only in these waters.
+ev.liv14.l02,Я назвала его в вашу честь. Научно. Навсегда. Теперь вы светитесь в каждом новолунии.,I named it after you. Scientifically. Forever. Now you glow every new moon.
+ev.liv14.c01,Лучший подарок в моей жизни.,The best gift of my life.
+ev.liv14.c02,"Надеюсь, он не кусается, как тупики.",I hope it doesn't bite like the puffins.
+ev.liv14.l03,"Не кусается. Только светится. Как вы. Ладно, вы иногда кусаетесь.","It doesn't bite. It only glows. Like you. All right, you bite sometimes."
+item.glow_plankton.name,Светящийся планктон,Glowing plankton
+item.glow_plankton.desc,Сырьё для «Светлой воды». Лив обожает. В банке светится ещё три ночи.,Stock for Bright Water. Liv adores it. Glows in the jar for three more nights.
+npc.hedda.spring.01,Весна. Треска пошла. Нытики остались на берегу. Всё как надо.,Spring. The cod are running. The whiners stayed ashore. As it should be.
+npc.hedda.spring.02,Лёд сошёл — и слава морю. Я за зиму чуть не спилась от скуки.,"The ice is gone, thank the sea. I nearly drank myself stupid from boredom this winter."
+npc.hedda.spring.03,"Ты {новый|новая} смотритель? Хорошо. Старый был лучше. Посмотрим, как ты.",You're the new keeper? Good. The old one was better. We'll see about you.
+npc.hedda.spring.04,"Сети рвутся весной, как нервы у Карла. Чиню каждый день.",Nets tear in spring like Karl's nerves. I mend them every day.
+npc.hedda.spring.05,Весенние туманы — дрянь. Хуже только весенние поэты.,Spring fogs are rubbish. Only spring poets are worse.
+npc.hedda.spring.06,"Кто-то опять поставил сети у моих. Найду — утоплю. Сети, не человека. Пока.","Someone set nets next to mine again. When I find them I'll sink them. The nets, not the person. For now."
+npc.hedda.spring.07,«Треска» скрипит. Старая шлюха. Лучшая лодка на свете.,The Cod creaks. Old tart. Best boat in the world.
+npc.hedda.spring.08,"Если увидишь, как я ругаюсь на чаек, — не лезь. Это личное.",If you see me swearing at gulls — stay out of it. It's personal.
+npc.hedda.spring.09,Ветер сегодня с юга. Южный ветер — предатель. Всё обещает и ничего не приносит.,"Wind from the south today. The south wind's a traitor. Promises everything, brings nothing."
+npc.hedda.spring.10,"На берегу котёнок в сетях запутался. Я вытащила. Кому скажешь — утоплю тебя. Тебя, не котёнка.","A kitten got tangled in the nets on the beach. I pulled it out. Tell anyone and I'll drown you. You, not the kitten."
+npc.hedda.summer.01,"Лето. Ночи светлые, рыба глупая, я довольная. Три редкости разом.","Summer. Bright nights, stupid fish, me happy. Three rarities at once."
+npc.hedda.summer.02,"Скумбрия идёт! Если сегодня не наловлю бочку — значит, я умерла.","The mackerel's running! If I don't fill a barrel today, it means I'm dead."
+npc.hedda.summer.03,Ходила до Тюленьего камня. Тюлени смотрели на меня как на дуру. Они правы.,Went out to Seal Rock. The seals looked at me like I'm an idiot. They're right.
+npc.hedda.summer.04,"Лив попросила меня возить её к утёсу. За рыбу не платит, платит вопросами. Хуже денег.","Liv asked me to ferry her to the cliff. Pays in questions, not fish. Worse than money."
+npc.hedda.summer.05,"Жара. Грог тёплый, море холодное. Всё не так, но жить можно.","Heat. The grog's warm, the sea's cold. Everything's wrong, but it'll do."
+npc.hedda.summer.06,"Регата скоро. Я выиграю. Это не хвастовство, это прогноз.","Regatta soon. I'll win. That's not bragging, it's a forecast."
+npc.hedda.summer.07,"Летом приезжают туристы. Спрашивают, где тут романтика. Показываю на сети.",In summer tourists come. They ask where the romance is. I point at the nets.
+npc.hedda.summer.08,"Солнце не садится, а я всё равно устала. Море — оно без выходных.","The sun won't set, and I'm tired anyway. The sea has no days off."
+npc.hedda.summer.09,Нут и Руд опять вернулись без рыбы и с деньгами. Интересный у них промысел.,Nut and Rud came back again with no fish and plenty of money. Interesting line of work they're in.
+npc.hedda.summer.10,"Искупаться? Я? Я в море работаю, а не плаваю. Плавают утопленники.","A swim? Me? I work in the sea, I don't swim in it. Swimming's for the drowned."
+npc.hedda.autumn.01,"Осень. Сельдь. Шторма. Лучшее время года для тех, у кого есть голова. У остальных — худшее.",Autumn. Herring. Storms. Best season for those with a head on their shoulders. Worst for the rest.
+npc.hedda.autumn.02,Ярмарка скоро. Буду продавать сельдь и ругаться с покупателями. Праздник!,The fair's soon. I'll sell herring and argue with customers. A holiday!
+npc.hedda.autumn.03,Ветра осенью честные. Если бьют — то сразу в лицо.,"Autumn winds are honest. If they hit you, it's straight in the face."
+npc.hedda.autumn.04,"Два года назад, осенью… Неважно. Налей.","Two years ago, in autumn… Never mind. Pour me one."
+npc.hedda.autumn.05,Сети тяжёлые от сельди. Руки отваливаются. Хорошая боль.,Nets heavy with herring. My arms are falling off. The good kind of pain.
+npc.hedda.autumn.06,Грим поднял цену на соль для засолки. Грим может засолить себя сам.,Grim raised the price of curing salt. Grim can salt himself.
+npc.hedda.autumn.07,Если увидишь огонь на Зубах — не иди на него. Слышишь? Никогда.,If you see a light on the Teeth — don't steer for it. You hear me? Never.
+npc.hedda.autumn.08,Осенью я сплю по четыре часа. Остальное время — море или грог.,In autumn I sleep four hours. The rest is sea or grog.
+npc.hedda.autumn.09,"Опять тебя видели на погосте ночью. Ты либо {святой|святая}, либо {псих|ненормальная}. Мне нравятся оба.",They saw you at the graveyard at night again. You're either a saint or a lunatic. I like both.
+npc.hedda.autumn.10,Листья летят в море. Даже деревья сдаются осенью. Я — нет.,Leaves blowing out to sea. Even the trees give up in autumn. Not me.
+npc.hedda.winter.01,"Зима. Лёд у берега. «Треска» стоит, я злюсь. Всё по плану.","Winter. Ice along the shore. The Cod's laid up, I'm angry. All according to plan."
+npc.hedda.winter.02,"Зимой я чиню сети, пью грог и ненавижу снег. Хобби.","In winter I mend nets, drink grog and hate snow. Hobbies."
+npc.hedda.winter.03,Подлёдный лов — для слабаков. Но я хожу. Слабакам тоже нужна рыба.,Ice fishing's for weaklings. But I go. Weaklings need fish too.
+npc.hedda.winter.04,Метель. Бьорн не выгоняет. Сижу до утра. Лучший зимний план.,Blizzard. Bjorn doesn't throw anyone out. I sit till morning. Best winter plan there is.
+npc.hedda.winter.05,Снег на палубе как соль. Только не солёный. Бесполезный.,Snow on the deck like salt. Only not salty. Useless.
+npc.hedda.winter.06,Северное сияние? Видала. Красиво. Рыбы не прибавляет.,Northern lights? Seen them. Pretty. Doesn't add any fish.
+npc.hedda.winter.07,Зимой люди злые. Я — как обычно. Я всегда зимняя.,In winter people are grumpy. Me — same as ever. I'm always winter.
+npc.hedda.winter.08,Мёрзлая земля. Как ты хоронишь зимой? Ломом? Уважаю.,Frozen ground. How do you bury in winter? With a crowbar? Respect.
+npc.hedda.winter.09,Зимние ночи длинные. Смотрю на твой огонь из окна. Не придумывай.,Winter nights are long. I watch your light from the window. Don't get ideas.
+npc.hedda.winter.10,Весна придёт. Всегда приходит. Даже когда её не ждёшь. Особенно тогда.,Spring will come. It always does. Even when you don't expect it. Especially then.
+npc.hedda.weather.rain.01,"Дождь. Рыбе всё равно, мне тоже. Иду в море.","Rain. The fish don't care, neither do I. Heading out."
+npc.hedda.weather.rain.02,Мокро. Холодно. Сети тяжёлые. Нормальный рабочий день.,Wet. Cold. Heavy nets. A normal working day.
+npc.hedda.weather.storm.01,"Шторм. Сижу в таверне и злюсь. Не подходи. Ладно, подходи, налей.","Storm. I'm sitting in the tavern, furious. Don't come near. Fine, come near, pour me one."
+npc.hedda.weather.storm.02,Шторм держит «Треску» у причала. Как пса на цепи. Меня тоже.,The storm's holding the Cod at the jetty. Like a dog on a chain. Me too.
+npc.hedda.weather.fog.01,Туман. В такой я не выхожу. Не потому что боюсь. Потому что помню.,Fog. I don't go out in this. Not because I'm scared. Because I remember.
+npc.hedda.weather.fog.02,В тумане все огни врут. Кроме твоего. Держи его.,In fog every light lies. Except yours. Keep it going.
+npc.hedda.weather.snow.01,"Снег. Ненавижу снег. Он лезет за воротник, как налоговик.",Snow. I hate snow. It gets down your collar like a tax man.
+npc.hedda.weather.cloud.01,Облачно. Хорошая погода для рыбы. Плохая для настроения. Мне сойдёт.,Cloudy. Good weather for fish. Bad for moods. Suits me.
+npc.hedda.festival.regatta.01,Регата! Кто придёт вторым — угощает. Я не угощаю никогда.,The regatta! Whoever comes second buys the drinks. I never buy.
+npc.hedda.festival.regatta.02,На регате меня не обгоняли восемь лет. Попробуй. Смешно будет.,Nobody's beaten me at the regatta in eight years. Try it. It'll be funny.
+npc.hedda.festival.herring_fair.01,"Сельдяная ярмарка — единственный праздник, где я не притворяюсь, что мне весело. Мне весело.",The Herring Fair's the only holiday where I don't pretend to have fun. I have fun.
+npc.hedda.festival.drowned_night.01,Ночь Утопленников. Я несу шесть фонарей. Для своих. Не спрашивай.,Drowned Night. I carry six lanterns. For my lads. Don't ask.
+npc.hedda.festival.01,Праздник. Выпивка бесплатная. Остальное можно пережить.,A holiday. Free drinks. The rest can be survived.
+npc.hedda.festival.02,Танцевать не буду. Даже не проси. Разве что если очень попросишь.,I won't dance. Don't even ask. Unless you ask really nicely.
+npc.hedda.gift.love.01,"Вот это я понимаю! Не цветочки. Спасибо, смотритель. По-настоящему.","Now that's what I call a gift! Not flowers. Thanks, keeper. Really."
+npc.hedda.gift.love.02,"Ха! Знаешь, как угодить морской ведьме. Опасный ты человек.",Ha! You know how to please a sea witch. You're a dangerous one.
+npc.hedda.gift.like.01,Неплохо. Сгодится. Это я так благодарю.,Not bad. It'll do. That's me saying thanks.
+npc.hedda.gift.like.02,Хорошая вещь. Не выброшу. Это высшая оценка.,Good stuff. I won't throw it away. That's top marks.
+npc.hedda.gift.neutral.01,Хм. Ладно. В хозяйстве сгодится.,Hm. Fine. It'll come in handy.
+npc.hedda.gift.neutral.02,"Спасибо, что ли. Я не знаю, что с этим делать. Но спасибо.","Thanks, I suppose. No idea what to do with it. But thanks."
+npc.hedda.gift.dislike.01,Цветы? Мне? Я похожа на вазу?,Flowers? For me? Do I look like a vase?
+npc.hedda.gift.dislike.02,Сладкое. Ешь сам. Я от сладкого добрая становлюсь — никому не надо.,Sweets. Eat them yourself. Sweets make me nice — nobody wants that.
+npc.hedda.gift.hate.01,Вересковый чай?! Ты меня хоронить собрался? Отдай Хельге.,Heather tea?! Planning my funeral? Give it to Helga.
+npc.hedda.gift.hate.02,"Нет. Забери это. И уходи, пока я добрая.","No. Take it back. And go, while I'm still in a good mood."
+npc.hedda.birthday.01,У меня день рождения. Кто споёт — утоплю. Кто нальёт — прощу.,It's my birthday. Anyone who sings gets drowned. Anyone who pours gets forgiven.
+npc.hedda.birthday.02,Тридцать два. Или тридцать три. Море считает возраст по шрамам — у меня их больше.,Thirty-two. Or thirty-three. The sea counts age in scars — I've got more.
+npc.hedda.birthday_gift.01,Ты помнишь? Надо же. Команда помнила. Теперь ты.,You remembered? Well I never. My crew remembered. Now you.
+npc.hedda.birthday_gift.02,Подарок на день рождения… Ладно. Я тронута. Никому.,A birthday present… Fine. I'm touched. Tell no one.
+npc.hedda.act1.01,"Агата была единственной, кто не жалел меня после Зубов. Я это ценила.",Agatha was the only one who didn't pity me after the Teeth. I valued that.
+npc.hedda.act1.02,"Первая ночь, а огонь горит. Может, из тебя и будет толк.",First night and the light's burning. Maybe you'll be worth something.
+npc.hedda.act1.03,"Весной у Зубов опасно. Всегда. Скажи бабушке… а, ну да.",The Teeth are dangerous in spring. Always. Tell your grandmother… ah. Right.
+npc.hedda.act1.04,Ты {видел|видела} ложный огонь? Я — видела. Два года назад. Теперь видишь и ты.,You saw the false fire? I saw it. Two years ago. Now you've seen it too.
+npc.hedda.act1.05,"Стёкла у Грима покупаешь? Для своего огня? Смешно. Страшно, но смешно.","Buying glass from Grim? For your own light? Funny. Scary, but funny."
+npc.hedda.act1.06,"Инспекция скоро. Пальм мне однажды сделал замечание за то, что я плюнула в воду. В воду!",Inspection's soon. Palm once reprimanded me for spitting in the water. In the water!
+npc.hedda.act2.01,"«Святая Берта»… Тот же огонь, та же ясная ночь. Кто-то делает это нарочно. Я знала.","The Saint Bertha… Same fire, same clear night. Someone does it on purpose. I knew it."
+npc.hedda.act2.02,Белая Хмарь. Я сидела с гарпуном у окна. Что-то ходило по улице. Не человек.,The White Fog. I sat by the window with a harpoon. Something was walking the street. Not a man.
+npc.hedda.act2.03,Шлюпка? Эрланд наконец-то отдал тебе парус. Теперь хоть догонишь меня. Не догонишь.,A sloop? Erland finally gave you a sail. Now you might catch me. You won't.
+npc.hedda.act2.04,Кай на Мёртвом Огне стреляет ракетами в каждого. В меня — дважды. Я в него — однажды. Словами.,Kai at the Dead Fire shoots flares at everyone. At me — twice. I shot back once. With words.
+npc.hedda.act2.05,Двадцать скелетов в гротах. Двадцать. И никто на острове не знал? Кто-то знал.,Twenty skeletons in the grottoes. Twenty. And nobody on the island knew? Somebody knew.
+npc.hedda.act2.06,Большая Хмарь придёт на деревню. Я буду у причала. Пусть сунется.,The Great Fog is coming for the village. I'll be at the jetty. Let it try.
+npc.hedda.act3.01,"Ты ходишь в Глубь, как я в море. Только я возвращаюсь с рыбой, а ты — {бледный|бледная}.","You go down into the Deep like I go to sea. Only I come back with fish, and you come back pale."
+npc.hedda.act3.02,Улики собираешь? Мои показания — твои. Я скажу это Пальму в лицо.,Gathering evidence? My testimony is yours. I'll say it to Palm's face.
+npc.hedda.act3.03,"Нут и Руд ночью выходят к Зубам. Без сетей. С фонарём. Всё, сказала.",Nut and Rud go out to the Teeth at night. No nets. With a lantern. There. I said it.
+npc.hedda.act3.04,Когда пойдём на Зубы — я с тобой. Не спорь. Это моя команда там лежит.,When we go to the Teeth — I'm coming. Don't argue. It's my crew lying out there.
+npc.hedda.act3.05,Ингрид ни в чём не виновата. Я её не трогаю. Её отца — трону.,Ingrid's not to blame for anything. I leave her be. Her father — I won't.
+npc.hedda.act3.06,Зимой море спит. А Грим — нет. Смотри за ним.,In winter the sea sleeps. Grim doesn't. Watch him.
+npc.hedda.act4.01,В ночь Прилива я на «Треске» у твоего причала. Ни одна лодка не пристанет. Слово.,On Tide Night I'll be on the Cod at your jetty. Not one boat will land. My word.
+npc.hedda.act4.02,«Королева Кронвальда» пойдёт мимо Зубов. Если хоть одна свинья зажжёт там огонь…,The Queen of Kronvald will pass the Teeth. If a single swine lights a fire out there…
+npc.hedda.act4.03,Я два года ждала этой ночи. Не подведи. Я тоже не подведу.,I've waited two years for this night. Don't let me down. I won't let you down either.
+npc.hedda.act4.04,Если пойдёшь по дну — возьми нож. И вернись. Второе важнее.,If you walk the sea floor — take a knife. And come back. The second part matters more.
+npc.hedda.act4.05,"Шторм и туман сразу. Такого не было при мне. Будет весело. Ненавижу, когда весело.",Storm and fog at once. Never seen that in my time. It'll be fun. I hate fun.
+npc.hedda.act4.06,После всего напьёмся. Все. Даже Бенедикт. Я прослежу.,After it's over we'll all get drunk. Everyone. Even Benedict. I'll see to it.
+npc.hedda.married_other.01,"{Женился|Вышла замуж}, значит. Ну и правильно. Со мной бы ты не {выжил|выжила}.","Got married, then. Good for you. You wouldn't have survived me."
+npc.hedda.married_other.02,Поздравляю. Выпьем. Я — за двоих.,Congratulations. Let's drink. I'll drink for two.
+npc.hedda.married_other.03,Свадьба была хорошая. Я никого не утопила. Цени.,Nice wedding. I didn't drown anyone. Appreciate it.
+npc.hedda.married_other.04,"Будь {счастлив|счастлива}. Если обидит — скажи мне. Я знаю, где глубоко.","Be happy. If they hurt you, tell me. I know where the water's deep."
+npc.hedda.married_other.05,"Ладно. Проехали. Море большое, рыбы много.","Fine. Water under the keel. The sea's big, plenty of fish."
+npc.hedda.event.wreck.01,Ещё один корабль. Ещё одна ясная ночь. Я их всех запомню.,Another ship. Another clear night. I'll remember every one of them.
+npc.hedda.event.wreck.02,Я вышла на «Треске» утром — искала выживших. Нашла ящики. Только ящики.,I went out on the Cod at dawn — looking for survivors. Found crates. Only crates.
+npc.hedda.event.wreck.03,Не смотри на меня так. Я не плачу. Это ветер.,Don't look at me like that. I'm not crying. It's the wind.
+npc.hedda.event.wreck.04,Кто бы ни зажёг тот огонь — он будет гореть сам. Обещаю.,Whoever lit that fire — he'll burn himself. I promise.
+npc.hedda.event.wreck.05,"Похорони их по-человечески. Я знаю, ты похоронишь.",Bury them properly. I know you will.
+npc.hedda.event.funeral.01,{Похоронил|Похоронила}. Хорошо. Мои шестеро так и не легли в землю. Им бы понравился твой погост.,Buried them. Good. My six never got a grave. They'd have liked your graveyard.
+npc.hedda.event.funeral.02,На похоронах я не плачу. Я пью потом. Каждый по-своему.,I don't cry at funerals. I drink afterwards. Everyone has their way.
+npc.hedda.event.funeral.03,Камень {положил|положила}? Правильно. Чтобы не встали. Шучу. Наполовину.,Put a stone on it? Right. So they don't get up. Joking. Half.
+npc.hedda.event.funeral.04,Ты хорошо копаешь. Для {сухопутного|сухопутной}.,You dig well. For a landlubber.
+npc.hedda.event.funeral.05,"Ещё один в земле, а не в море. Море может и позавидовать.",One more in the ground and not in the sea. The sea might get jealous.
+npc.hedda.event.hmar.01,Ночь Хмари. Я просидела с гарпуном до утра. Гарпун не понадобился. Жаль.,Fog Night. I sat up with a harpoon till morning. Didn't need it. Pity.
+npc.hedda.event.hmar.02,Туман шептал имена. Моих ребят. Я заткнула уши. Не помогло.,The fog whispered names. My lads'. I covered my ears. Didn't help.
+npc.hedda.event.hmar.03,Твой луч ходил по улице как патруль. Спасибо. Не повторю.,Your beam went up and down the street like a patrol. Thanks. I won't say it twice.
+npc.hedda.event.hmar.04,Утром на причале следы. Мокрые. Босые. Детские. Я не пила. Честно.,In the morning there were footprints on the jetty. Wet. Bare. A child's. I wasn't drinking. Honest.
+npc.hedda.event.hmar.05,"Если Хмарь — это горе, то моё у неё тоже есть. Я чувствую.","If the Fog is grief, then it's got mine too. I can feel it."
+npc.hedda.event.inspection.01,"Пальм приезжал. Надеюсь, ты ему не {нагрубил|нагрубила}. Я — нагрубила. Традиция.",Palm came. Hope you weren't rude to him. I was. Tradition.
+npc.hedda.event.inspection.02,{Сдал|Сдала}? Молодец. Агата сдавала всегда. С первого раза.,Passed? Well done. Agatha always passed. First time.
+npc.hedda.event.inspection.03,Инспектор спросил меня про огонь. Я сказала: «Горит». Он записал: «Свидетель подтверждает».,The inspector asked me about the light. I said: 'It burns.' He wrote: 'Witness confirms.'
+npc.hedda.event.inspection.04,Бумажки — ерунда. Главное — чтобы корабли видели. Они видят.,Paperwork's nonsense. What matters is the ships can see. They can.
+npc.hedda.event.inspection.05,"Пальм пил чай у Бьорна и морщился. Значит, всё хорошо.",Palm drank tea at Bjorn's and made a face. So all's well.
+npc.hedda.event.wedding.01,Свадьба! Я пришла. Трезвая. Почти. Для тебя — почти.,A wedding! I came. Sober. Nearly. For you — nearly.
+npc.hedda.event.wedding.02,"Бросала сельдь через плечо. Попала в Бенедикта. На счастье, говорят.","I threw the herring over my shoulder. Hit Benedict. Good luck, they say."
+npc.hedda.event.wedding.03,"Хорошая пара. Держитесь друг за друга, как за снасти в шторм.",A good match. Hold on to each other like rigging in a storm.
+npc.hedda.event.wedding.04,Я не плакала. Это брызги. От шампанского.,I didn't cry. That's spray. From the champagne.
+npc.hedda.event.wedding.05,Живите долго. На острове это подвиг.,Live long. On this island that's a feat.
+npc.hedda.event.villains.01,Грим… Два года. Два года я знала — и молчала. Больше не молчу.,Grim… Two years. Two years I knew — and kept quiet. Not any more.
+npc.hedda.event.villains.02,"Мои шестеро могут спать. Скажи им там, у Ранн. Ты же умеешь.","My six can sleep now. Tell them, down there with Rann. You know how."
+npc.hedda.event.villains.03,Нут в кандалах. Руд плакал. Руда мне даже жаль. Нута — нет.,Nut's in irons. Rud cried. I even feel sorry for Rud. Not for Nut.
+npc.hedda.event.villains.04,Теперь на Зубах тихо. Я выйду туда на «Треске». Одна. Не ходи за мной.,It's quiet on the Teeth now. I'll take the Cod out there. Alone. Don't follow me.
+npc.hedda.event.villains.05,"Спасибо. Одно слово, сказала бы Агата. Я скажу два: спасибо, смотритель.","Thanks. One word, Agatha would say. I'll say two: thanks, keeper."
+npc.hedda.bouquet_yes.01,Армерия. Я ненавижу букеты. Все. Кроме этого. Только в этот раз. Ладно. Да.,Armeria. I hate bouquets. All of them. Except this one. Just this once. Fine. Yes.
+npc.hedda.bouquet_no.01,Цветы? Ты меня с кем-то путаешь. Иди проспись.,Flowers? You've got me mixed up with someone. Go sleep it off.
+npc.hedda.ring_yes.01,Кольцо? Ты серьёзно? …Да. Только свадьба без стихов. И с грогом.,A ring? You serious? …Yes. Just no poems at the wedding. And plenty of grog.
+ev.hedda2.l01,Смотритель! Садись. Руку на стол. Армрестлинг. Проиграешь — платишь за грог.,Keeper! Sit down. Elbow on the table. Arm-wrestling. Lose — you pay for the grog.
+ev.hedda2.l02,"Ставлю на Хедду. Не обижайся, смотритель. Я видел, как она гнёт якорные цепи.","My money's on Hedda. No offence, keeper. I've seen her bend anchor chains."
+ev.hedda2.l03,"Три, два…","Three, two…"
+ev.hedda2.c01,"Давить сразу, изо всех сил.","Push at once, with everything I've got."
+ev.hedda2.c02,"Выждать и поймать момент, когда она выдохнет.",Wait and catch the moment she breathes out.
+ev.hedda2.l04,"(Хедда ждёт, пока вы выдохнетесь, и укладывает вашу руку на стол, как сеть на палубу.)",(Hedda waits for you to tire and lays your arm on the table like a net on a deck.)
+ev.hedda2.l05,Ха! Но {держался|держалась} долго. Для {сухопутного|сухопутной}. Грог за тобой. Приходи ещё проигрывать.,Ha! But you held out a while. For a landlubber. Grog's on you. Come back and lose again.
+ev.hedda2.l06,Ты… {поймал|поймала} выдох. Кто тебя научил? Никто меня не… Ещё раз! Сейчас же!,You… caught my breath. Who taught you that? Nobody ever… Again! Right now!
+ev.hedda2.l07,Ладно. Честно {выиграл|выиграла}. Грог за мной. Первый раз за восемь лет.,Fine. Fair win. Grog's on me. First time in eight years.
+ev.hedda4.l01,"Садись. Не туда — там Нут сидел, стул до сих пор злой.","Sit. Not there — Nut sat there, the chair's still angry."
+ev.hedda4.l02,"Два года назад у меня была команда. Шестеро. Лучшие руки на острове, хоть и дураки через одного.","Two years ago I had a crew. Six of them. Best hands on the island, every other one a fool."
+ev.hedda4.l03,"Ясная ночь. Ни ветерка. А на Зубах горел огонь, которого там быть не должно. Мы пошли на него. Я одна доплыла.",Clear night. Not a breath of wind. And on the Teeth there was a fire that had no business being there. We steered for it. I was the only one who swam back.
+ev.hedda4.c01,Ты не виновата. Кто-то зажёг этот огонь нарочно.,It wasn't your fault. Someone lit that fire on purpose.
+ev.hedda4.c02,"Шестеро дураков через одного — значит, трое умных. Жаль всех.",Every other one a fool — so three were clever. I'm sorry for all of them.
+ev.hedda4.c03,"Может, просто перепутала огни? Бывает.",Maybe you just mixed up the lights? It happens.
+ev.hedda4.l04,Нарочно. Вот и я так думаю. Только вслух это говорить на острове не принято.,On purpose. That's what I think too. Only nobody on this island says it out loud.
+ev.hedda4.l05,"Ха. Трое умных… Ларс бы с тобой поспорил. Ладно. Спасибо, что не утешаешь.",Ha. Three clever ones… Lars would argue with you. Fine. Thanks for not trying to comfort me.
+ev.hedda4.l06,"Перепутала?! Я тридцать лет хожу по этим водам. Иди проверь свою лампу, смотритель.","Mixed up?! I've sailed these waters for thirty years. Go check your lamp, keeper."
+ev.hedda4.l07,"Если захочешь знать, как всё было, — рундук с того бота у меня. Там записи. Только никому, ясно?","If you want to know how it went — I kept the sea chest from that boat. There are notes. Tell no one, understood?"
+ev.hedda6.l01,Состязание. Час у Тюленьего камня. Кто больше вытащит — тот прав во всём до конца лета.,A contest. One hour at Seal Rock. Whoever lands more is right about everything until the end of summer.
+ev.hedda6.l02,"Тюлени — судьи. Они честные. Им всё равно, кто победит, лишь бы рыба осталась.",The seals are the judges. They're honest. They don't care who wins so long as there's fish left.
+ev.hedda6.c01,Ловить на свою удачу и дерзость.,Fish on luck and nerve.
+ev.hedda6.c02,"Смотреть, куда забрасывает Хедда, и учиться.",Watch where Hedda casts and learn.
+ev.hedda6.l03,"Семь против девяти. Ты {проиграл|проиграла}, но нагло. Мне нравится наглость. В меру.","Seven against nine. You lost, but boldly. I like boldness. In moderation."
+ev.hedda6.l04,"{Подсматривал|Подсматривала}. Правильно. Так я училась у отца. Теперь ты знаешь, где стоит треска у камня.",You were copying me. Good. That's how I learned from my father. Now you know where the cod sit by the rock.
+ev.hedda8.l01,"Тихо. Сегодня на Зубах опять огонь. Я иду смотреть, кто его зажигает. Ты со мной или спишь?",Quiet. There's a fire on the Teeth again tonight. I'm going to see who lights it. With me or asleep?
+ev.hedda8.l02,(У Зубов вас замечают. Выстрел. Хедда падает за борт. Вы прыгаете следом в чёрную ледяную воду.),(At the Teeth you're spotted. A shot. Hedda goes over the side. You dive after her into the black freezing water.)
+ev.hedda8.l03,Кха… Плечо. Ерунда. Ты… ты {вытащил|вытащила} меня. Как я вытаскиваю котят. Не смешно.,Khh… Shoulder. Nothing. You… you pulled me out. Like I pull out kittens. Not funny.
+ev.hedda8.c01,"Держись. Магнус зашьёт, и будешь как новая.",Hold on. Magnus will stitch you up and you'll be good as new.
+ev.hedda8.c02,Второй раз я тебя морю не отдам.,I won't give you to the sea a second time.
+ev.hedda8.l04,"Я видела лодку. Две фигуры. Одна большая, другая ещё больше. Скау. Запомни.","I saw the boat. Two figures. One big, one bigger. The Skaus. Remember that."
+ev.hedda10.l01,"«Треску» я продаю. Старая, течёт. Эйнар и Ильм строят мне новый бот. Хороший.","I'm selling the Cod. Old, she leaks. Einar and Ilm are building me a new boat. A good one."
+ev.hedda10.l02,"Назови его. Ты. Я не умею называть. Первую лодку назвал отец, вторую — ребята.","Name her. You. I'm no good at names. My father named the first boat, the lads the second."
+ev.hedda10.c01,«Шестеро».,'The Six'.
+ev.hedda10.c02,«Упрямая».,'Stubborn'.
+ev.hedda10.c03,«Хедда».,'Hedda'.
+ev.hedda10.l03,«Шестеро»… Да. Они будут со мной в каждом рейсе. Спасибо. Не смотри на меня.,'The Six'… Yes. They'll sail with me every time. Thank you. Don't look at me.
+ev.hedda10.l04,Ха! «Упрямая». В точку. Лодка в хозяйку.,Ha! 'Stubborn'. Spot on. The boat takes after her skipper.
+ev.hedda10.l05,Лодку в мою честь? Наглец. Ладно. Пусть. Две Хедды на одном причале — Олаф сойдёт с ума.,A boat named after me? Cheeky. Fine. Two Heddas on one jetty — Olaf will lose his mind.
+ev.hedda14.l01,"Вставай. Рассвет. Идём в море. Я научу тебя тому, чему меня учил отец.",Up. Dawn. We're going to sea. I'll teach you what my father taught me.
+ev.hedda14.l02,"Закрой глаза. Слушай воду. Не ветер, не чаек — воду. Она говорит, где рыба.","Close your eyes. Listen to the water. Not the wind, not the gulls — the water. It tells you where the fish are."
+ev.hedda14.l03,"(Сначала только плеск. Потом — тонкий, едва слышный перестук под днищем. Как будто кто-то стучит изнутри.)",(At first only lapping. Then a faint patter under the hull. As if someone were knocking from inside.)
+ev.hedda14.l04,"Слышишь? Это она. Теперь ты {рыбак|рыбачка}. Не {такой|такая}, как я. Но {рыбак|рыбачка}.",Hear that? That's them. Now you're a fisherman. Not like me. But a fisherman.

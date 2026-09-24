@@ -14,6 +14,8 @@ var gifts_week: Dictionary = {}
 var birthday_gift: Dictionary = {}
 var dating: Array = []
 var married_to: String = ""
+var engaged_to: String = ""
+var wedding_day: int = -1
 var hearts: Dictionary: # read-only view kept for old callers
 	get:
 		var out := {}
@@ -30,6 +32,8 @@ func reset() -> void:
 	birthday_gift.clear()
 	dating.clear()
 	married_to = ""
+	engaged_to = ""
+	wedding_day = -1
 
 
 func hearts_of(npc: String) -> int:
@@ -140,6 +144,9 @@ func give(npc: String, index: int) -> Dictionary:
 	var id := str(slot["id"])
 	if id == "":
 		return {"ok": false, "reason": "empty"}
+	var romance := bool(Data.by_id("npcs", npc).get("romance", false))
+	if romance and id in ["bouquet_armeria", "amber_ring"]:
+		return _courtship(npc, index, id)
 	var block := gift_block(npc, id)
 	if block != "":
 		return {"ok": false, "reason": block}
@@ -161,6 +168,43 @@ func give(npc: String, index: int) -> Dictionary:
 	return {"ok": true, "reaction": reaction, "points": gained, "item": id, "birthday": birthday}
 
 
+# 22.3: the armeria bouquet at 8 hearts means courting; the amber ring at 10 hearts (courting, a house of
+# level 1) means a wedding in the chapel three days later.
+func _courtship(npc: String, index: int, id: String) -> Dictionary:
+	if id == "bouquet_armeria":
+		if dating.has(npc) or married_to == npc:
+			return {"ok": false, "reason": "already", "line": "bouquet_again"}
+		if hearts_of(npc) < 8:
+			return {"ok": false, "reason": "too_soon", "line": "bouquet_no"}
+		Inventory.take_slot(index, 1)
+		dating.append(npc)
+		Events.quest_event.emit("dating", npc)
+		return {"ok": true, "reaction": "love", "points": 0, "item": id, "birthday": false, "line": "bouquet_yes"}
+	if married_to != "" or engaged_to != "":
+		return {"ok": false, "reason": "taken", "line": "ring_taken"}
+	if not dating.has(npc) or hearts_of(npc) < 10:
+		return {"ok": false, "reason": "too_soon", "line": "ring_no"}
+	if int(Game.counters.get("house_level", 0)) < 1:
+		return {"ok": false, "reason": "house", "line": "ring_house"}
+	Inventory.take_slot(index, 1)
+	engaged_to = npc
+	wedding_day = Clock.day_index + 3
+	Events.quest_event.emit("engaged", npc)
+	return {"ok": true, "reaction": "love", "points": 0, "item": id, "birthday": false, "line": "ring_yes"}
+
+
+func wedding_today() -> bool:
+	if engaged_to == "" or Clock.day_index < wedding_day:
+		return false
+	married_to = engaged_to
+	dating.erase(married_to)
+	engaged_to = ""
+	wedding_day = -1
+	Game.counters["event_wedding"] = Clock.day_index
+	Events.quest_event.emit("married", married_to)
+	return true
+
+
 # Night step 11 (after the date changed): decay without talk (from two hearts; the spouse -20 but not below 10 hearts), new day, new week.
 func night() -> void:
 	for npc in points.keys():
@@ -172,6 +216,7 @@ func night() -> void:
 			points[npc] = int(points[npc]) - 2
 	talked_today.clear()
 	gifted_today.clear()
+	wedding_today()
 	if Clock.weekday == "mon":
 		gifts_week.clear()
 
@@ -197,7 +242,8 @@ func night_letters() -> int:
 
 func serialize() -> Dictionary:
 	return {"points": points, "talked_today": talked_today, "gifted_today": gifted_today, "gifts_week": gifts_week,
-		"birthday_gift": birthday_gift, "dating": dating, "married_to": married_to}
+		"birthday_gift": birthday_gift, "dating": dating, "married_to": married_to, "engaged_to": engaged_to,
+		"wedding_day": wedding_day}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -214,3 +260,5 @@ func deserialize(d: Dictionary) -> void:
 		birthday_gift[npc] = int(d["birthday_gift"][npc])
 	dating = d.get("dating", []).duplicate()
 	married_to = str(d.get("married_to", ""))
+	engaged_to = str(d.get("engaged_to", ""))
+	wedding_day = int(d.get("wedding_day", -1))
