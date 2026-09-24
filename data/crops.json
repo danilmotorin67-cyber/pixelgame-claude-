@@ -15,5 +15,379 @@
     "salt": 1,
     "produce": "turnip",
     "giant": true
+  },
+  {
+    "id": "crop_scurvygrass",
+    "seed": "seed_scurvygrass",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "regrow": 3,
+    "salt": 2,
+    "produce": "scurvygrass"
+  },
+  {
+    "id": "crop_potato",
+    "seed": "seed_potato",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "potato",
+    "extra_chance": 0.2
+  },
+  {
+    "id": "crop_pea",
+    "seed": "seed_pea",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "regrow": 3,
+    "salt": 0,
+    "produce": "pea",
+    "trellis": true
+  },
+  {
+    "id": "crop_barley",
+    "seed": "seed_barley",
+    "seasons": [
+      "spring",
+      "summer",
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "barley"
+  },
+  {
+    "id": "crop_flax",
+    "seed": "seed_flax",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "regrow": 0,
+    "salt": 0,
+    "produce": "flax"
+  },
+  {
+    "id": "crop_rhubarb",
+    "seed": "seed_rhubarb",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      4,
+      3,
+      3,
+      3
+    ],
+    "regrow": 0,
+    "salt": 0,
+    "produce": "rhubarb"
+  },
+  {
+    "id": "crop_sea_kale",
+    "seed": "seed_sea_kale",
+    "seasons": [
+      "spring"
+    ],
+    "stage_days": [
+      3,
+      2,
+      2,
+      2
+    ],
+    "regrow": 4,
+    "salt": 2,
+    "produce": "sea_kale"
+  },
+  {
+    "id": "crop_carrot",
+    "seed": "seed_carrot",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "carrot"
+  },
+  {
+    "id": "crop_cabbage",
+    "seed": "seed_cabbage",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      3,
+      3,
+      2,
+      2
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "cabbage"
+  },
+  {
+    "id": "crop_rutabaga",
+    "seed": "seed_rutabaga",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      3,
+      2,
+      2,
+      2
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "rutabaga"
+  },
+  {
+    "id": "crop_strawberry",
+    "seed": "seed_strawberry",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "regrow": 4,
+    "salt": 0,
+    "produce": "strawberry"
+  },
+  {
+    "id": "crop_hops",
+    "seed": "seed_hops",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      3,
+      3,
+      3,
+      2
+    ],
+    "regrow": 1,
+    "salt": 0,
+    "produce": "hops",
+    "trellis": true
+  },
+  {
+    "id": "crop_samphire",
+    "seed": "seed_samphire",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "regrow": 3,
+    "salt": 2,
+    "produce": "samphire"
+  },
+  {
+    "id": "crop_beans",
+    "seed": "seed_beans",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "regrow": 3,
+    "salt": 0,
+    "produce": "beans",
+    "trellis": true
+  },
+  {
+    "id": "crop_onion",
+    "seed": "seed_onion",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "onion"
+  },
+  {
+    "id": "crop_dill",
+    "seed": "seed_dill",
+    "seasons": [
+      "summer"
+    ],
+    "stage_days": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "regrow": 2,
+    "salt": 1,
+    "produce": "dill"
+  },
+  {
+    "id": "crop_pumpkin",
+    "seed": "seed_pumpkin",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      4,
+      3,
+      3,
+      3
+    ],
+    "regrow": 0,
+    "salt": 0,
+    "produce": "pumpkin"
+  },
+  {
+    "id": "crop_beet",
+    "seed": "seed_beet",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 2,
+    "produce": "beet"
+  },
+  {
+    "id": "crop_kale",
+    "seed": "seed_kale",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      2,
+      1,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "kale"
+  },
+  {
+    "id": "crop_leek",
+    "seed": "seed_leek",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "leek"
+  },
+  {
+    "id": "crop_parsnip",
+    "seed": "seed_parsnip",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "parsnip"
+  },
+  {
+    "id": "crop_rye",
+    "seed": "seed_rye",
+    "seasons": [
+      "autumn"
+    ],
+    "stage_days": [
+      2,
+      2,
+      2,
+      1
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "rye"
+  },
+  {
+    "id": "crop_winter_cabbage",
+    "seed": "seed_winter_cabbage",
+    "seasons": [
+      "winter"
+    ],
+    "stage_days": [
+      4,
+      4,
+      3,
+      3
+    ],
+    "regrow": 0,
+    "salt": 1,
+    "produce": "winter_cabbage"
   }
 ]

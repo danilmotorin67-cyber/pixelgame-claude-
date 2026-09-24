@@ -4,7 +4,7 @@
     "name": "item.seed_turnip.name",
     "desc": "item.seed_turnip.desc",
     "category": "seed",
-    "price": 5,
+    "price": 10,
     "stack": 99
   },
   {
@@ -12,7 +12,7 @@
     "name": "item.turnip.name",
     "desc": "item.turnip.desc",
     "category": "crop",
-    "price": 20,
+    "price": 35,
     "stack": 99,
     "quality": true,
     "edible": {
@@ -168,5 +168,513 @@
       "sea",
       "coastal"
     ]
+  },
+  {
+    "id": "seed_scurvygrass",
+    "name": "item.seed_scurvygrass.name",
+    "desc": "item.seed_scurvygrass.desc",
+    "category": "seed",
+    "price": 12,
+    "stack": 99
+  },
+  {
+    "id": "scurvygrass",
+    "name": "item.scurvygrass.name",
+    "desc": "item.scurvygrass.desc",
+    "category": "crop",
+    "price": 30,
+    "stack": 99,
+    "quality": true,
+    "edible": {
+      "energy": 15,
+      "health": 3
+    }
+  },
+  {
+    "id": "seed_potato",
+    "name": "item.seed_potato.name",
+    "desc": "item.seed_potato.desc",
+    "category": "seed",
+    "price": 25,
+    "stack": 99
+  },
+  {
+    "id": "potato",
+    "name": "item.potato.name",
+    "desc": "item.potato.desc",
+    "category": "crop",
+    "price": 80,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_pea",
+    "name": "item.seed_pea.name",
+    "desc": "item.seed_pea.desc",
+    "category": "seed",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "pea",
+    "name": "item.pea.name",
+    "desc": "item.pea.desc",
+    "category": "crop",
+    "price": 30,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_barley",
+    "name": "item.seed_barley.name",
+    "desc": "item.seed_barley.desc",
+    "category": "seed",
+    "price": 5,
+    "stack": 99
+  },
+  {
+    "id": "barley",
+    "name": "item.barley.name",
+    "desc": "item.barley.desc",
+    "category": "crop",
+    "price": 25,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_flax",
+    "name": "item.seed_flax.name",
+    "desc": "item.seed_flax.desc",
+    "category": "seed",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "flax",
+    "name": "item.flax.name",
+    "desc": "item.flax.desc",
+    "category": "crop",
+    "price": 50,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_rhubarb",
+    "name": "item.seed_rhubarb.name",
+    "desc": "item.seed_rhubarb.desc",
+    "category": "seed",
+    "price": 50,
+    "stack": 99
+  },
+  {
+    "id": "rhubarb",
+    "name": "item.rhubarb.name",
+    "desc": "item.rhubarb.desc",
+    "category": "crop",
+    "price": 220,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_sea_kale",
+    "name": "item.seed_sea_kale.name",
+    "desc": "item.seed_sea_kale.desc",
+    "category": "seed",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "sea_kale",
+    "name": "item.sea_kale.name",
+    "desc": "item.sea_kale.desc",
+    "category": "crop",
+    "price": 70,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_carrot",
+    "name": "item.seed_carrot.name",
+    "desc": "item.seed_carrot.desc",
+    "category": "seed",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "carrot",
+    "name": "item.carrot.name",
+    "desc": "item.carrot.desc",
+    "category": "crop",
+    "price": 70,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_cabbage",
+    "name": "item.seed_cabbage.name",
+    "desc": "item.seed_cabbage.desc",
+    "category": "seed",
+    "price": 35,
+    "stack": 99
+  },
+  {
+    "id": "cabbage",
+    "name": "item.cabbage.name",
+    "desc": "item.cabbage.desc",
+    "category": "crop",
+    "price": 170,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_rutabaga",
+    "name": "item.seed_rutabaga.name",
+    "desc": "item.seed_rutabaga.desc",
+    "category": "seed",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "rutabaga",
+    "name": "item.rutabaga.name",
+    "desc": "item.rutabaga.desc",
+    "category": "crop",
+    "price": 130,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_strawberry",
+    "name": "item.seed_strawberry.name",
+    "desc": "item.seed_strawberry.desc",
+    "category": "seed",
+    "price": 50,
+    "stack": 99
+  },
+  {
+    "id": "strawberry",
+    "name": "item.strawberry.name",
+    "desc": "item.strawberry.desc",
+    "category": "crop",
+    "price": 60,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_hops",
+    "name": "item.seed_hops.name",
+    "desc": "item.seed_hops.desc",
+    "category": "seed",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "hops",
+    "name": "item.hops.name",
+    "desc": "item.hops.desc",
+    "category": "crop",
+    "price": 25,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_samphire",
+    "name": "item.seed_samphire.name",
+    "desc": "item.seed_samphire.desc",
+    "category": "seed",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "samphire",
+    "name": "item.samphire.name",
+    "desc": "item.samphire.desc",
+    "category": "crop",
+    "price": 55,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_beans",
+    "name": "item.seed_beans.name",
+    "desc": "item.seed_beans.desc",
+    "category": "seed",
+    "price": 25,
+    "stack": 99
+  },
+  {
+    "id": "beans",
+    "name": "item.beans.name",
+    "desc": "item.beans.desc",
+    "category": "crop",
+    "price": 40,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_onion",
+    "name": "item.seed_onion.name",
+    "desc": "item.seed_onion.desc",
+    "category": "seed",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "onion",
+    "name": "item.onion.name",
+    "desc": "item.onion.desc",
+    "category": "crop",
+    "price": 60,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_dill",
+    "name": "item.seed_dill.name",
+    "desc": "item.seed_dill.desc",
+    "category": "seed",
+    "price": 10,
+    "stack": 99
+  },
+  {
+    "id": "dill",
+    "name": "item.dill.name",
+    "desc": "item.dill.desc",
+    "category": "crop",
+    "price": 20,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_pumpkin",
+    "name": "item.seed_pumpkin.name",
+    "desc": "item.seed_pumpkin.desc",
+    "category": "seed",
+    "price": 50,
+    "stack": 99
+  },
+  {
+    "id": "pumpkin",
+    "name": "item.pumpkin.name",
+    "desc": "item.pumpkin.desc",
+    "category": "crop",
+    "price": 320,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_beet",
+    "name": "item.seed_beet.name",
+    "desc": "item.seed_beet.desc",
+    "category": "seed",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "beet",
+    "name": "item.beet.name",
+    "desc": "item.beet.desc",
+    "category": "crop",
+    "price": 90,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_kale",
+    "name": "item.seed_kale.name",
+    "desc": "item.seed_kale.desc",
+    "category": "seed",
+    "price": 35,
+    "stack": 99
+  },
+  {
+    "id": "kale",
+    "name": "item.kale.name",
+    "desc": "item.kale.desc",
+    "category": "crop",
+    "price": 110,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_leek",
+    "name": "item.seed_leek.name",
+    "desc": "item.seed_leek.desc",
+    "category": "seed",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "leek",
+    "name": "item.leek.name",
+    "desc": "item.leek.desc",
+    "category": "crop",
+    "price": 140,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_parsnip",
+    "name": "item.seed_parsnip.name",
+    "desc": "item.seed_parsnip.desc",
+    "category": "seed",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "parsnip",
+    "name": "item.parsnip.name",
+    "desc": "item.parsnip.desc",
+    "category": "crop",
+    "price": 120,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_rye",
+    "name": "item.seed_rye.name",
+    "desc": "item.seed_rye.desc",
+    "category": "seed",
+    "price": 7,
+    "stack": 99
+  },
+  {
+    "id": "rye",
+    "name": "item.rye.name",
+    "desc": "item.rye.desc",
+    "category": "crop",
+    "price": 30,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "seed_winter_cabbage",
+    "name": "item.seed_winter_cabbage.name",
+    "desc": "item.seed_winter_cabbage.desc",
+    "category": "seed",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "winter_cabbage",
+    "name": "item.winter_cabbage.name",
+    "desc": "item.winter_cabbage.desc",
+    "category": "crop",
+    "price": 200,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "flour",
+    "name": "item.flour.name",
+    "desc": "item.flour.desc",
+    "category": "ingredient",
+    "price": 25,
+    "stack": 99
+  },
+  {
+    "id": "rye_flour",
+    "name": "item.rye_flour.name",
+    "desc": "item.rye_flour.desc",
+    "category": "ingredient",
+    "price": 30,
+    "stack": 99
+  },
+  {
+    "id": "sugar",
+    "name": "item.sugar.name",
+    "desc": "item.sugar.desc",
+    "category": "ingredient",
+    "price": 50,
+    "stack": 99
+  },
+  {
+    "id": "salt",
+    "name": "item.salt.name",
+    "desc": "item.salt.desc",
+    "category": "ingredient",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "butter",
+    "name": "item.butter.name",
+    "desc": "item.butter.desc",
+    "category": "ingredient",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "milk",
+    "name": "item.milk.name",
+    "desc": "item.milk.desc",
+    "category": "ingredient",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "egg",
+    "name": "item.egg.name",
+    "desc": "item.egg.desc",
+    "category": "egg",
+    "price": 30,
+    "stack": 99,
+    "quality": true
+  },
+  {
+    "id": "compost",
+    "name": "item.compost.name",
+    "desc": "item.compost.desc",
+    "category": "fertilizer",
+    "price": 15,
+    "stack": 99,
+    "soil": {
+      "salt": -1,
+      "fertility": 1
+    }
+  },
+  {
+    "id": "kelp_ash",
+    "name": "item.kelp_ash.name",
+    "desc": "item.kelp_ash.desc",
+    "category": "fertilizer",
+    "price": 20,
+    "stack": 99,
+    "soil": {
+      "fertility": 1
+    }
+  },
+  {
+    "id": "manure",
+    "name": "item.manure.name",
+    "desc": "item.manure.desc",
+    "category": "fertilizer",
+    "price": 5,
+    "stack": 99,
+    "soil": {
+      "fertility": 1
+    }
+  },
+  {
+    "id": "guano_fertilizer",
+    "name": "item.guano_fertilizer.name",
+    "desc": "item.guano_fertilizer.desc",
+    "category": "fertilizer",
+    "price": 60,
+    "stack": 99,
+    "soil": {
+      "fertility_season": 2
+    }
+  },
+  {
+    "id": "helga_fertilizer",
+    "name": "item.helga_fertilizer.name",
+    "desc": "item.helga_fertilizer.desc",
+    "category": "fertilizer",
+    "price": 75,
+    "stack": 99,
+    "soil": {
+      "flawless": 0.05
+    }
   }
 ]

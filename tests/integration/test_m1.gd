@@ -104,10 +104,10 @@ func _check_shipping() -> void:
 	Clock.set_time(10, 0)
 	Inventory.add("turnip", 3, 2)
 	Inventory.add("tool_hoe", 1)
-	_check(Economy.sell_price("turnip", 2) == 30 and Economy.sell_price("tool_hoe") == 0,
+	_check(Economy.sell_price("turnip", 2) == 53 and Economy.sell_price("tool_hoe") == 0,
 		"sell price must apply the quality multiplier and refuse tools")
 	_check(not Economy.ship_slot(1) and Inventory.count_of("tool_hoe") == 1, "tools cannot be shipped")
-	_check(Economy.ship_slot(0) and Inventory.count_of("turnip") == 0 and Economy.shipping_value() == 90,
+	_check(Economy.ship_slot(0) and Inventory.count_of("turnip") == 0 and Economy.shipping_value() == 159,
 		"shipping must move the whole stack into the box")
 	_check(Economy.take_back_last() and Inventory.count_of("turnip") == 3, "the last stack can be taken back")
 	Economy.ship_slot(0)
@@ -120,7 +120,7 @@ func _check_shipping() -> void:
 	_check(int(stormy["income"]) == 0 and Economy.shipping.size() == 2 and Economy.money == 500,
 		"no «Чайка» in a storm")
 	var paid := Economy.collect_shipping(6, false)
-	_check(int(paid["income"]) == 180 and Economy.money == 680 and Economy.shipping.is_empty(),
+	_check(int(paid["income"]) == 249 and Economy.money == 749 and Economy.shipping.is_empty(),
 		"the storm-delayed box must be paid the next night")
 	Economy.reset()
 	Inventory.reset()
@@ -385,9 +385,9 @@ func _run() -> void:
 		"night resolution must record the lamp score and burn its fuel")
 	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Маяк: 35"),
 		"morning report must show the lighthouse score")
-	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Выручка «Чайки»: 40 кр"),
+	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Выручка «Чайки»: 70 кр"),
 		"the morning report must show the shipping income")
-	_check(Economy.money == money_before_night + 40 - mini(int(floor(float(money_before_night + 40) * 0.1)), 1000),
+	_check(Economy.money == money_before_night + 70 - mini(int(floor(float(money_before_night + 70) * 0.1)), 1000),
 		"shipping income is paid before the faint penalty")
 	_check(morning_scene.get_node_or_null("ShippingBox") is ShippingBox, "the cape pier needs a shipping box")
 	_check(int(Farm.get_tile(garden_cell)["days"]) == 1, "watered crop did not grow overnight")

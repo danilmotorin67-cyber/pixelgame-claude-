@@ -6,7 +6,7 @@ ui.new_game,Новая игра,New Game
 ui.quit,Выход,Quit
 ui.pause,Пауза,Pause
 item.seed_turnip.name,Семена репы,Turnip seeds
-item.seed_turnip.desc,Первые семена с корзины Грима.,First seeds from Grim's basket.
+item.seed_turnip.desc,Весна; 4 дн.; терпит слабую соль. Первые семена из корзины Грима.,Spring; 4 days; tolerates light salt. First seeds from Grim's basket.
 item.turnip.name,Репа,Turnip
 item.turnip.desc,Растёт даже в соли. Жалуется на это.,Grows even in salt. Complains about it.
 item.bread_rye.name,Ржаной хлеб,Rye bread
@@ -30,7 +30,7 @@ item.oar.desc,И ход. И аргумент.,Propulsion. And an argument.
 item.fish_oil.name,Рыбий жир,Fish oil
 item.fish_oil.desc,Горит ярко. Пахнет честно.,Burns bright. Smells honest.
 item.kelp.name,Водоросли,Kelp
-item.kelp.desc,"Море отдаёт то, что выросло на нём.","The sea returns what grew on it."
+item.kelp.desc,"Море отдаёт то, что выросло на нём.",The sea returns what grew on it.
 item.driftwood.name,Плавник,Driftwood
 item.driftwood.desc,Дерево с биографией.,Wood with a biography.
 item.resin.name,Смола,Resin
@@ -53,3 +53,123 @@ npc.hedda.greet.generic,Я не боюсь моря. Это море меня п
 npc.pet_cat.name,Фитиль,Wick
 ship.gull.name,Чайка,Seagull
 ship.queen.name,Королева Кронвальда,Queen of Kronwald
+item.seed_scurvygrass.name,Семена ложечницы,Scurvygrass seeds
+item.seed_scurvygrass.desc,Весна; 5 дн.; растёт на солончаке. Земля решит остальное.,Spring; 5 days; grows on salt flats. The soil decides the rest.
+item.scurvygrass.name,Ложечница,Scurvygrass
+item.scurvygrass.desc,"Сырая бодрит, в отваре лечит. Моряки жевали её вместо надежды.","Raw it wakes you, brewed it heals. Sailors chewed it instead of hope."
+item.seed_potato.name,Семена картофеля,Potato seeds
+item.seed_potato.desc,Весна; 6 дн.; терпит слабую соль. Земля решит остальное.,Spring; 6 days; tolerates light salt. The soil decides the rest.
+item.potato.name,Картофель,Potato
+item.potato.desc,"Основа ухи, лепёшек и северной кухни. Прячется в земле, как налоговая декларация.",The base of soups and northern cooking. Hides underground like a tax return.
+item.seed_pea.name,Семена гороха,Peas seeds
+item.seed_pea.desc,Весна; 8 дн.; только несолёная земля. Земля решит остальное.,Spring; 8 days; salt-free soil only. The soil decides the rest.
+item.pea.name,Горох,Peas
+item.pea.desc,"Растёт на шпалере, по шпалере не пройти. Упрям, как старый смотритель.",Grows on a trellis you cannot walk through. Stubborn as an old keeper.
+item.seed_barley.name,Семена ячменя,Barley seeds
+item.seed_barley.desc,"Весна, лето, осень; 5 дн.; терпит слабую соль. Земля решит остальное.","Spring, summer, autumn; 5 days; tolerates light salt. The soil decides the rest."
+item.barley.name,Ячмень,Barley
+item.barley.desc,"Пиво, мука и корм. Переживает три сезона и ни одного не хвалит.","Beer, flour and fodder. Lives through three seasons and praises none."
+item.seed_flax.name,Семена льна,Flax seeds
+item.seed_flax.desc,Весна; 8 дн.; только несолёная земля. Земля решит остальное.,Spring; 8 days; salt-free soil only. The soil decides the rest.
+item.flax.name,Лён,Flax
+item.flax.desc,"Волокно для ниток, парусины и ветоши. Из него шьют и паруса, и саваны.","Fibre for thread, canvas and rags. Sails and shrouds start here."
+item.seed_rhubarb.name,Семена ревеня,Rhubarb seeds
+item.seed_rhubarb.desc,Весна; 13 дн.; только несолёная земля. Земля решит остальное.,Spring; 13 days; salt-free soil only. The soil decides the rest.
+item.rhubarb.name,Ревень,Rhubarb
+item.rhubarb.desc,"Кислый, дорогой, для пирогов. Сольвейг ради него простит многое.","Sour, pricey, made for pies. Solveig forgives a lot for it."
+item.seed_sea_kale.name,Семена морской капусты,Sea kale seeds
+item.seed_sea_kale.desc,Весна; 9 дн.; растёт на солончаке. Земля решит остальное.,Spring; 9 days; grows on salt flats. The soil decides the rest.
+item.sea_kale.name,Морская капуста,Sea kale
+item.sea_kale.desc,"Катран, что растёт прямо на солончаке. Соль ему не враг, а соседка.","Crambe that thrives on salt flats. Salt is its neighbour, not its enemy."
+item.seed_carrot.name,Семена моркови,Carrot seeds
+item.seed_carrot.desc,Лето; 6 дн.; терпит слабую соль. Земля решит остальное.,Summer; 6 days; tolerates light salt. The soil decides the rest.
+item.carrot.name,Морковь,Carrot
+item.carrot.desc,"Хрустит, варится, дарится. Кролики на острове перевелись, так что вся ваша.","Crunches, boils, gifts well. The island ran out of rabbits, so it is all yours."
+item.seed_cabbage.name,Семена капусты,Cabbage seeds
+item.seed_cabbage.desc,Лето; 10 дн.; терпит слабую соль. Земля решит остальное.,Summer; 10 days; tolerates light salt. The soil decides the rest.
+item.cabbage.name,Капуста,Cabbage
+item.cabbage.desc,"Большая и надёжная. Кочан, который пережил бы и шторм, если бы его спросили.","Big and dependable. A head that would outlast a storm, if asked."
+item.seed_rutabaga.name,Семена брюквы,Rutabaga seeds
+item.seed_rutabaga.desc,Лето; 9 дн.; терпит слабую соль. Земля решит остальное.,Summer; 9 days; tolerates light salt. The soil decides the rest.
+item.rutabaga.name,Брюква,Rutabaga
+item.rutabaga.desc,"Для пюре и терпения. Северяне зовут её «зимним картофелем», чтобы её не обидеть.",For mash and patience. Northerners call it winter potato to spare its feelings.
+item.seed_strawberry.name,Семена клубники,Strawberry seeds
+item.seed_strawberry.desc,Лето; 8 дн.; только несолёная земля. Земля решит остальное.,Summer; 8 days; salt-free soil only. The soil decides the rest.
+item.strawberry.name,Клубника,Strawberry
+item.strawberry.desc,"Сладкая, пока лето. Самое короткое счастье острова.",Sweet while summer lasts. The island's shortest happiness.
+item.seed_hops.name,Семена хмеля,Hops seeds
+item.seed_hops.desc,Лето; 11 дн.; только несолёная земля. Земля решит остальное.,Summer; 11 days; salt-free soil only. The soil decides the rest.
+item.hops.name,Хмель,Hops
+item.hops.desc,"Для пива Бьорна. Шпалера высокая, намерения — ещё выше.",For Bjorn's beer. The trellis is tall; the intentions taller.
+item.seed_samphire.name,Семена солероса,Samphire seeds
+item.seed_samphire.desc,Лето; 6 дн.; растёт на солончаке. Земля решит остальное.,Summer; 6 days; grows on salt flats. The soil decides the rest.
+item.samphire.name,Солерос,Samphire
+item.samphire.desc,"«Морская спаржа». Любит соль больше, чем повар.",Sea asparagus. Loves salt more than the cook does.
+item.seed_beans.name,Семена фасоли,Beans seeds
+item.seed_beans.desc,Лето; 7 дн.; только несолёная земля. Земля решит остальное.,Summer; 7 days; salt-free soil only. The soil decides the rest.
+item.beans.name,Фасоль,Beans
+item.beans.desc,Вьётся по шпалере и в похлёбку. Сытно и без претензий.,Climbs the trellis and into the stew. Filling and unpretentious.
+item.seed_onion.name,Семена лука,Onion seeds
+item.seed_onion.desc,Лето; 7 дн.; терпит слабую соль. Земля решит остальное.,Summer; 7 days; tolerates light salt. The soil decides the rest.
+item.onion.name,Лук,Onion
+item.onion.desc,"Для ухи и сельди. Единственный, кто плачет на кухне честно.",For fish soup and herring. The only one in the kitchen who cries honestly.
+item.seed_dill.name,Семена укропа,Dill seeds
+item.seed_dill.desc,Лето; 4 дн.; терпит слабую соль. Земля решит остальное.,Summer; 4 days; tolerates light salt. The soil decides the rest.
+item.dill.name,Укроп,Dill
+item.dill.desc,Для засолки сельди. Без него рыба просто рыба.,For pickling herring. Without it a fish is only a fish.
+item.seed_pumpkin.name,Семена тыквы,Pumpkin seeds
+item.seed_pumpkin.desc,Осень; 13 дн.; только несолёная земля. Земля решит остальное.,Autumn; 13 days; salt-free soil only. The soil decides the rest.
+item.pumpkin.name,Тыква,Pumpkin
+item.pumpkin.desc,"Огромная, оранжевая, дорогая. На сером острове её видно с моря.","Huge, orange, expensive. On a grey island you can see it from the sea."
+item.seed_beet.name,Семена свёклы,Beet seeds
+item.seed_beet.desc,Осень; 6 дн.; растёт на солончаке. Земля решит остальное.,Autumn; 6 days; grows on salt flats. The soil decides the rest.
+item.beet.name,Свёкла,Beet
+item.beet.desc,Дикая свёкла родом с этого берега. Вернулась домой и ничему не удивляется.,Wild beet native to this shore. Came home and is surprised by nothing.
+item.seed_kale.name,Семена кале,Kale seeds
+item.seed_kale.desc,Осень; 6 дн.; терпит слабую соль. Земля решит остальное.,Autumn; 6 days; tolerates light salt. The soil decides the rest.
+item.kale.name,Кале,Kale
+item.kale.desc,"Для супа, который греет. Листья жёсткие, характер тоже.","For soup that warms. Tough leaves, tough temper."
+item.seed_leek.name,Семена лука-порея,Leek seeds
+item.seed_leek.desc,Осень; 8 дн.; терпит слабую соль. Земля решит остальное.,Autumn; 8 days; tolerates light salt. The soil decides the rest.
+item.leek.name,Лук-порей,Leek
+item.leek.desc,"Для палтуса и похлёбок. Стоит в грядке прямо, как часовой.",For halibut and stews. Stands in the bed like a sentry.
+item.seed_parsnip.name,Семена пастернака,Parsnip seeds
+item.seed_parsnip.desc,Осень; 8 дн.; терпит слабую соль. Земля решит остальное.,Autumn; 8 days; tolerates light salt. The soil decides the rest.
+item.parsnip.name,Пастернак,Parsnip
+item.parsnip.desc,"Сладкий корень для мёда и жаркого. Похож на морковь, которая видела привидение.",Sweet root for honey and roasts. A carrot that has seen a ghost.
+item.seed_rye.name,Семена ржи,Rye seeds
+item.seed_rye.desc,Осень; 7 дн.; терпит слабую соль. Земля решит остальное.,Autumn; 7 days; tolerates light salt. The soil decides the rest.
+item.rye.name,Рожь,Rye
+item.rye.desc,"Для ржаной муки и хлеба. Хлеб, который не тонет, начинается здесь.",For rye flour and bread. Bread that does not drown starts here.
+item.seed_winter_cabbage.name,Семена зимней капусты,Winter cabbage seeds
+item.seed_winter_cabbage.desc,Зима; 14 дн.; терпит слабую соль. Земля решит остальное.,Winter; 14 days; tolerates light salt. The soil decides the rest.
+item.winter_cabbage.name,Зимняя капуста,Winter cabbage
+item.winter_cabbage.desc,"Единственное, что растёт под снегом. Хельга говорит, что они похожи.",The only thing that grows under snow. Helga says they have a lot in common.
+item.flour.name,Мука,Flour
+item.flour.desc,"Для пирогов и котлет. Белая, как туман над заливом.",For pies and cakes. White as fog over the bay.
+item.rye_flour.name,Ржаная мука,Rye flour
+item.rye_flour.desc,"Для хлеба и калиток. Тёмная, как северная зима.",For bread and pasties. Dark as a northern winter.
+item.sugar.name,Сахар,Sugar
+item.sugar.desc,"Для пирогов и морса. Привозной, поэтому бережёный.","For pies and cordial. Imported, so rationed."
+item.salt.name,Соль,Salt
+item.salt.desc,"Для засолки и строганины. Единственная соль, которую здесь покупают.",For curing and frozen fish. The only salt anyone here pays for.
+item.butter.name,Сливочное масло,Butter
+item.butter.desc,Для лепёшек и жарки. Главный довод в пользу коров.,For flatbread and frying. The best argument for cows.
+item.milk.name,Молоко,Milk
+item.milk.desc,"Для каши и пюре. Из деревни, пока своего нет.",For porridge and mash. From the village until you keep your own.
+item.egg.name,Яйцо,Egg
+item.egg.desc,Для яичницы и рыбника. Курица за него уже расписалась.,For fried eggs and fish pie. The hen has already signed for it.
+item.compost.name,Водорослевый компост,Seaweed compost
+item.compost.desc,"Соль −1, плодородие +1; раз в сезон на грядку. Море забирает соль обратно.","Salt −1, fertility +1, once a season per bed. The sea takes its salt back."
+item.kelp_ash.name,Зола водорослей,Kelp ash
+item.kelp_ash.desc,Плодородие +1; раз в сезон на грядку. Пахнет костром на берегу.,"Fertility +1, once a season per bed. Smells of a beach fire."
+item.manure.name,Навоз,Manure
+item.manure.desc,Плодородие +1; раз в сезон на грядку. Благодарность хлева.,"Fertility +1, once a season per bed. The barn's gratitude."
+item.guano_fertilizer.name,Удобрение-гуано,Guano fertilizer
+item.guano_fertilizer.desc,Плодородие +2 до конца сезона. Птицы с утёса наконец принесли пользу.,Fertility +2 until the season ends. The cliff birds finally did something useful.
+item.helga_fertilizer.name,Удобрение Хельги,Helga's fertilizer
+item.helga_fertilizer.desc,+5% к безупречному урожаю до сбора. Состав Хельга унесёт в могилу. Не скоро.,+5% flawless harvest until picked. Helga will take the recipe to her grave. Not soon.
+quality.0,обычное,regular
+quality.1,хорошее,good
+quality.2,отличное,excellent
+quality.3,безупречное,flawless

@@ -60,6 +60,16 @@ def main() -> int:
     for need in ("seed_turnip", "tool_hoe", "fish_cod"):
         if need not in item_ids:
             errs.append(f"item {need} missing")
+    for crop in rows(tables.get("crops", [])):
+        for key in ("seed", "produce"):
+            if crop.get(key) not in item_ids:
+                errs.append(f"crop {crop.get('id')} unknown {key} {crop.get(key)}")
+        if sum(crop.get("stage_days", [])) <= 0:
+            errs.append(f"crop {crop.get('id')} has no growth days")
+    for shop in rows(tables.get("shops", [])):
+        for entry in shop.get("stock", []):
+            if entry.get("item") not in item_ids:
+                errs.append(f"shop {shop.get('id')} sells unknown item {entry.get('item')}")
     regions = tables.get("regions", {})
     if isinstance(regions, dict):
         sizes = {name: entry.get("size", []) for name, entry in regions.items()}

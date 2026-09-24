@@ -19,9 +19,21 @@ func use_at(world_position: Vector2, player: Player) -> bool:
 		return true
 	var plot := Farm.get_tile(cell)
 	if not plot.is_empty() and bool(plot["ready"]):
-		_hint("Репа собрана." if Farm.harvest(cell) else "Нет места для урожая.")
+		if Farm.harvest(cell):
+			var got := Farm.last_harvest
+			_hint("Собрано: %s ×%d · %s" % [_item_name(str(got["id"])), int(got["amount"]),
+				Loc.t("quality.%d" % int(got["quality"]))])
+		else:
+			_hint("Нет места для урожая.")
 		return true
 	var selected := Inventory.selected_id()
+	if not plot.is_empty() and Data.by_id("items", selected).has("soil"):
+		match Farm.amend(cell, selected):
+			"ok":
+				_hint("Грядка удобрена: соль %d, плодородие %d." % [int(plot["salt"]), Farm.fertility(plot)])
+			"season":
+				_hint("Эту грядку уже подкармливали этим в этом сезоне.")
+		return true
 	if selected in ["tool_hoe", "tool_can"] and player.energy <= 0.0:
 		_hint("Нужен отдых, сил на работу нет.")
 		return true
@@ -40,10 +52,16 @@ func use_at(world_position: Vector2, player: Player) -> bool:
 		else:
 			_hint("Сначала взрыхли землю или дождись следующего дня.")
 	elif Farm.plant(cell, selected):
-		_hint("Посажено. Для роста нужен полив.")
+		_hint("Посажено: %s. Для роста нужен полив." % _item_name(selected))
+	elif str(Data.by_id("items", selected).get("category", "")) == "seed" and not plot.is_empty():
+		_hint("Не посадить: не сезон, грядка занята или земля слишком солёная.")
 	else:
-		_hint("Выбери мотыгу, лейку или семена репы.")
+		_hint("Выбери мотыгу, лейку, семена или удобрение.")
 	return true
+
+
+func _item_name(id: String) -> String:
+	return Loc.t(str(Data.by_id("items", id).get("name", id)))
 
 
 func _hint(message: String) -> void:
@@ -72,7 +90,7 @@ func _draw() -> void:
 			if plot.is_empty():
 				continue
 			if str(plot["crop"]) != "":
-				var stage := mini(int(plot["days"]), 3)
+				var stage := Farm.stage(plot)
 				if bool(plot["ready"]):
 					paint(at, 5, 8, 6, 5, Color("#eadcb8"))
 					paint(at, 6, 8, 3, 3, Color("#fff8e1"))

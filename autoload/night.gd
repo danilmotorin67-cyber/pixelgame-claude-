@@ -34,7 +34,7 @@ func end_day(fainted: bool = false) -> void:
 		Clock.start_next_day()
 		report["hmar_night"] = Weather.hmar_night)
 	_step(report, "farm", func() -> void:
-		Farm.advance_day())
+		Farm.advance_day(storm_today))
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
 	_step(report, "luck", func() -> void:

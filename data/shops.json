@@ -1,5 +1,278 @@
 [
   {
-    "id": "shop_berg"
+    "id": "shop_berg",
+    "name": "Лавка Бергов",
+    "open": 9,
+    "close": 17,
+    "closed": [
+      "wed"
+    ],
+    "region": "village",
+    "buys": [
+      "crop",
+      "forage",
+      "egg",
+      "dairy"
+    ],
+    "stock": [
+      {
+        "item": "seed_turnip",
+        "price": 20,
+        "seasons": [
+          "spring"
+        ]
+      },
+      {
+        "item": "seed_potato",
+        "price": 50,
+        "seasons": [
+          "spring"
+        ]
+      },
+      {
+        "item": "seed_pea",
+        "price": 40,
+        "seasons": [
+          "spring"
+        ]
+      },
+      {
+        "item": "seed_barley",
+        "price": 10,
+        "seasons": [
+          "spring",
+          "summer",
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_rhubarb",
+        "price": 100,
+        "seasons": [
+          "spring"
+        ],
+        "from_day": 8
+      },
+      {
+        "item": "seed_carrot",
+        "price": 40,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_cabbage",
+        "price": 70,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_rutabaga",
+        "price": 60,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_strawberry",
+        "price": 100,
+        "seasons": [
+          "summer"
+        ],
+        "from_day": 11
+      },
+      {
+        "item": "seed_hops",
+        "price": 60,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_beans",
+        "price": 50,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_onion",
+        "price": 30,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_dill",
+        "price": 20,
+        "seasons": [
+          "summer"
+        ]
+      },
+      {
+        "item": "seed_pumpkin",
+        "price": 100,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_beet",
+        "price": 30,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_kale",
+        "price": 70,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_leek",
+        "price": 60,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_parsnip",
+        "price": 40,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "seed_rye",
+        "price": 15,
+        "seasons": [
+          "autumn"
+        ]
+      },
+      {
+        "item": "flour",
+        "price": 50
+      },
+      {
+        "item": "rye_flour",
+        "price": 60
+      },
+      {
+        "item": "sugar",
+        "price": 100
+      },
+      {
+        "item": "tea",
+        "price": 60
+      },
+      {
+        "item": "salt",
+        "price": 30
+      },
+      {
+        "item": "butter",
+        "price": 120
+      },
+      {
+        "item": "milk",
+        "price": 80
+      },
+      {
+        "item": "egg",
+        "price": 60
+      },
+      {
+        "item": "bread_rye",
+        "price": 80
+      },
+      {
+        "item": "fish_oil",
+        "price": 40
+      }
+    ]
+  },
+  {
+    "id": "shop_helga",
+    "name": "Хижина Хельги",
+    "open": 10,
+    "close": 15,
+    "closed": [
+      "sun"
+    ],
+    "region": "moor",
+    "buys": [],
+    "stock": [
+      {
+        "item": "seed_scurvygrass",
+        "price": 25,
+        "seasons": [
+          "spring"
+        ]
+      },
+      {
+        "item": "seed_winter_cabbage",
+        "price": 80,
+        "seasons": [
+          "winter"
+        ]
+      },
+      {
+        "item": "helga_fertilizer",
+        "price": 150
+      }
+    ]
+  },
+  {
+    "id": "shop_margit",
+    "name": "Шерсть и кости",
+    "open": 9,
+    "close": 16,
+    "closed": [
+      "mon",
+      "tue"
+    ],
+    "region": "village",
+    "buys": [],
+    "stock": [
+      {
+        "item": "seed_flax",
+        "price": 30,
+        "seasons": [
+          "spring"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "shop_erland",
+    "name": "Лодочная лавка",
+    "open": 8,
+    "close": 16,
+    "closed": [
+      "sat"
+    ],
+    "region": "village",
+    "buys": [
+      "fish"
+    ],
+    "stock": [
+      {
+        "item": "seed_sea_kale",
+        "price": 60,
+        "seasons": [
+          "spring"
+        ]
+      },
+      {
+        "item": "seed_samphire",
+        "price": 40,
+        "seasons": [
+          "summer"
+        ]
+      }
+    ]
   }
 ]
