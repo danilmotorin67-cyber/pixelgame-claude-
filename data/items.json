@@ -28,8 +28,8 @@
     "price": 25,
     "stack": 20,
     "edible": {
-      "energy": 40,
-      "health": 8
+      "energy": 50,
+      "health": 20
     }
   },
   {
@@ -937,5 +937,102 @@
     "category": "forage",
     "price": 50,
     "stack": 99
+  },
+  {
+    "id": "boards",
+    "name": "item.boards.name",
+    "desc": "item.boards.desc",
+    "category": "material",
+    "price": 25,
+    "stack": 999
+  },
+  {
+    "id": "chest",
+    "name": "item.chest.name",
+    "desc": "item.chest.desc",
+    "category": "furniture",
+    "price": 0,
+    "stack": 10,
+    "place": "chest"
+  },
+  {
+    "id": "heather_bouquet",
+    "name": "item.heather_bouquet.name",
+    "desc": "item.heather_bouquet.desc",
+    "category": "gift",
+    "price": 150,
+    "stack": 20
+  },
+  {
+    "id": "keeper_soup",
+    "name": "item.keeper_soup.name",
+    "desc": "item.keeper_soup.desc",
+    "category": "food",
+    "price": 250,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 25
+    }
+  },
+  {
+    "id": "drowned_stew",
+    "name": "item.drowned_stew.name",
+    "desc": "item.drowned_stew.desc",
+    "category": "food",
+    "price": 150,
+    "stack": 20,
+    "edible": {
+      "energy": 35,
+      "health": 10
+    }
+  },
+  {
+    "id": "barley_porridge",
+    "name": "item.barley_porridge.name",
+    "desc": "item.barley_porridge.desc",
+    "category": "food",
+    "price": 100,
+    "stack": 20,
+    "edible": {
+      "energy": 45,
+      "health": 15
+    }
+  },
+  {
+    "id": "eggs_onion",
+    "name": "item.eggs_onion.name",
+    "desc": "item.eggs_onion.desc",
+    "category": "food",
+    "price": 135,
+    "stack": 20,
+    "edible": {
+      "energy": 45,
+      "health": 15
+    }
+  },
+  {
+    "id": "keeper_rusks",
+    "name": "item.keeper_rusks.name",
+    "desc": "item.keeper_rusks.desc",
+    "category": "food",
+    "price": 130,
+    "stack": 20,
+    "edible": {
+      "energy": 30,
+      "health": 10
+    }
+  },
+  {
+    "id": "potato_flatbread",
+    "name": "item.potato_flatbread.name",
+    "desc": "item.potato_flatbread.desc",
+    "category": "food",
+    "price": 330,
+    "stack": 20,
+    "edible": {
+      "energy": 55,
+      "health": 20
+    }
   }
 ]

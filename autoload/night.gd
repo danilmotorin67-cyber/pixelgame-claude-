@@ -36,6 +36,8 @@ func end_day(fainted: bool = false) -> void:
 	_step(report, "farm", func() -> void:
 		Farm.advance_day(storm_today)
 		Farm.spawn_wild(Clock.day_index))
+	_step(report, "stations", func() -> void:
+		report["stations_ready"] = Crafting.finished_overnight())
 	_step(report, "sea", func() -> void:
 		Sea.generate_gifts(Clock.day_index, storm_today))
 	_step(report, "sales", func() -> void:

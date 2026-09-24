@@ -383,14 +383,104 @@ func _check_eating(player: Player) -> void:
 	Inventory.select_hotbar(0)
 	player.energy = 100.0
 	player.health = 50.0
-	_check(player.eat_selected() == "bread_rye" and player.energy == 140.0 and player.health == 58.0,
-		"rye bread restores 40 energy and 8 health")
+	_check(player.eat_selected() == "bread_rye" and player.energy == 150.0 and player.health == 70.0,
+		"rye bread restores 50 energy and 20 health (20)")
 	player.energy = Game.max_energy() - 5.0
 	player.eat_selected()
 	_check(player.energy == Game.max_energy(), "food never overfills energy")
 	Inventory.select_hotbar(1)
 	_check(player.eat_selected() == "" and Inventory.count_of("fly_agaric") == 1, "fly agaric is not food")
 	Inventory.reset()
+
+
+func _station(id: String) -> Dictionary:
+	for obj in Crafting.placed.get("cape", []):
+		if str(obj["id"]) == id:
+			return obj
+	return {}
+
+
+func _check_crafting() -> void:
+	Crafting.reset()
+	Inventory.reset()
+	Economy.reset()
+	Skills.reset()
+	Clock.day_index = 0
+	Clock.set_time(10, 0)
+	for id in ["workbench", "hearth", "compost_pit"]:
+		_check(not _station(id).is_empty(), "the cape starts with a " + id)
+	var boards := {}
+	for entry in Economy.shop_stock("shop_ilm"):
+		if str(entry.get("item", "")) == "boards":
+			boards = entry
+	Economy.money = 3000
+	_check(Economy.buy("shop_ilm", boards, 50) == "ok" and Inventory.count_of("boards") == 50,
+		"Ilm sells boards at 50")
+	Clock.day_index = 1
+	_check(Economy.shop_closed_reason("shop_ilm") == "day", "Ilm's shop is closed on Tuesdays")
+	Clock.day_index = 0
+	_check(Crafting.make("craft_chest") == "ok" and Inventory.count_of("chest") == 1
+		and Inventory.count_of("boards") == 0 and int(Skills.xp["crafting"]) == 3,
+		"a chest takes 50 boards and gives 2 + 1 crafting XP")
+	_check(Crafting.make("craft_chest") == "ingredients", "no boards, no chest")
+
+	for index in Inventory.HOTBAR:
+		if Inventory.slots[index]["id"] == "chest":
+			Inventory.select_hotbar(index)
+	_check(not Crafting.place_selected("cape", Vector2(560, 372)), "a chest cannot stand on the workbench")
+	_check(Crafting.place_selected("cape", Vector2(700, 460)) and Inventory.count_of("chest") == 0,
+		"a chest can be placed on open ground")
+	var chest := _station("chest")
+	_check(chest.get("slots", []).size() == 24, "a chest holds 24 stacks")
+	_check(int(chest["x"]) == 696 and int(chest["y"]) == 456, "placed objects snap to the 16 px grid")
+	Inventory.add("kelp", 30)
+	var kelp_slot := -1
+	for index in Inventory.capacity:
+		if Inventory.slots[index]["id"] == "kelp":
+			kelp_slot = index
+	_check(Crafting.store(chest, kelp_slot) and Inventory.count_of("kelp") == 0, "storing moves the stack")
+	_check(not Crafting.pick_up("cape", chest), "a full chest cannot be picked up")
+	_check(Crafting.retrieve(chest, 0) and Inventory.count_of("kelp") == 30, "retrieving returns the stack")
+	_check(Crafting.pick_up("cape", chest) and Inventory.count_of("chest") == 1 and _station("chest").is_empty(),
+		"an empty chest goes back into the backpack")
+
+	var hearth := Crafting.recipes_for("hearth")
+	var ids: Array = []
+	for recipe in hearth:
+		ids.append(recipe["id"])
+	_check(ids.size() == 5 and not ids.has("cook_keeper_soup"), "five pot dishes are known from the start")
+	Inventory.add("fish_cod", 1)
+	_check(Crafting.make("cook_drowned_stew") == "fuel", "the hearth needs driftwood")
+	Inventory.add("driftwood", 1)
+	_check(Crafting.make("cook_drowned_stew") == "ok" and Inventory.count_of("drowned_stew") == 1
+		and Inventory.count_of("fish_cod") == 0 and Inventory.count_of("driftwood") == 0,
+		"any fish + kelp + firewood make the drowned man's stew")
+	Crafting.learn("cook_keeper_soup")
+	_check(Crafting.recipes_for("hearth").size() == 6, "learned recipes join the pot list")
+
+	var pit := _station("compost_pit")
+	Inventory.add("kelp", 1)
+	_check(Crafting.start(pit, "process_compost") == "ok" and Inventory.count_of("kelp") == 20,
+		"the compost pit takes 10 kelp")
+	Crafting.start(pit, "process_compost")
+	Crafting.start(pit, "process_compost")
+	Inventory.add("kelp", 10)
+	_check(Crafting.start(pit, "process_compost") == "full", "a station queues at most three jobs")
+	Clock.day_index = 2
+	_check(Crafting.ready_jobs(pit) == 0 and Crafting.collect(pit) == 0, "compost takes three days")
+	Clock.day_index = 3
+	_check(Crafting.finished_overnight() == 1, "the night report counts finished jobs")
+	_check(Crafting.collect(pit) == 1 and Inventory.count_of("compost") == 5, "10 kelp make 5 compost")
+	Clock.day_index = 6
+	_check(Crafting.ready_jobs(pit) == 1, "queued jobs run one after another")
+	var saved := JSON.stringify(Crafting.serialize())
+	Crafting.deserialize(JSON.parse_string(saved))
+	_check(JSON.stringify(Crafting.serialize()) == saved, "stations survive a save")
+	Clock.day_index = 0
+	Crafting.reset()
+	Inventory.reset()
+	Economy.reset()
+	Skills.reset()
 
 
 func _run() -> void:
@@ -406,6 +496,7 @@ func _run() -> void:
 	_check_quality()
 	_check_shops()
 	_check_forage()
+	_check_crafting()
 	Router.current_map = "cape"
 	Router.spawn = Vector2(600, 360)
 	Game.player_state = {}
@@ -418,6 +509,23 @@ func _run() -> void:
 	_check(pickups != null and pickups.get_child_count() == Sea.gifts["cape"].size(),
 		"the cape shows every gift of the morning")
 	_check_eating(cape.get_node("Player"))
+	var stations: Stations = cape.get_node_or_null("Stations")
+	_check(stations != null and stations.get_child_count() == 3, "the cape shows its three stations")
+	var hearth_node: StationObject = null
+	for child in stations.get_children():
+		if child.station_id == "hearth":
+			hearth_node = child
+	Inventory.add("rye_flour", 1)
+	Inventory.add("salt", 1)
+	Inventory.add("driftwood", 1)
+	hearth_node.interact(cape.get_node("Player"))
+	var panel: StationPanel = cape.get_node_or_null("HUD/StationPanel")
+	_check(panel != null and Clock.paused, "the hearth opens its recipe panel")
+	if panel:
+		panel._list.select(1)
+		_check(panel.act() == "ok" and Inventory.count_of("bread_rye") == 1, "baking rye bread from the panel")
+		panel.close()
+	Inventory.reset()
 	cape.queue_free()
 	Farm.reset()
 	Inventory.reset()

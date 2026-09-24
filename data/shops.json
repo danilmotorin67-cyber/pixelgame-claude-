@@ -284,5 +284,24 @@
         ]
       }
     ]
+  },
+  {
+    "id": "shop_ilm",
+    "name": "Гробы и колыбели",
+    "open": 8,
+    "close": 17,
+    "closed": [
+      "tue"
+    ],
+    "region": "village",
+    "buys": [
+      "material"
+    ],
+    "stock": [
+      {
+        "item": "boards",
+        "price": 50
+      }
+    ]
   }
 ]

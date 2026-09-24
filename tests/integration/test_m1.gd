@@ -391,7 +391,7 @@ func _run() -> void:
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
 	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
-		"lighthouse", "weather_tides", "farm", "sea", "sales", "luck", "skills", "autosave", "report"],
+		"lighthouse", "weather_tides", "farm", "stations", "sea", "sales", "luck", "skills", "autosave", "report"],
 		"night resolution must follow the order of spec 6.4")
 	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(

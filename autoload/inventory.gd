@@ -92,6 +92,37 @@ func forage(id: String, xp: int) -> bool:
 	return true
 
 
+# `need` is an item id or `tag:<tag>` (33.4).
+func matches(id: String, need: String) -> bool:
+	if id == "":
+		return false
+	if need.begins_with("tag:"):
+		return need.substr(4) in Data.by_id("items", id).get("tags", [])
+	return id == need
+
+
+func count_matching(need: String) -> int:
+	var n := 0
+	for index in capacity:
+		if matches(str(slots[index]["id"]), need):
+			n += int(slots[index]["count"])
+	return n
+
+
+func take_matching(need: String, count: int) -> bool:
+	if count_matching(need) < count:
+		return false
+	var left := count
+	for index in capacity:
+		if left <= 0:
+			break
+		if matches(str(slots[index]["id"]), need):
+			var n := mini(int(slots[index]["count"]), left)
+			take_slot(index, n)
+			left -= n
+	return true
+
+
 func count_of(id: String) -> int:
 	var n := 0
 	for s in slots:

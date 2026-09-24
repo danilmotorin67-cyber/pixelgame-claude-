@@ -98,6 +98,18 @@ func eat_selected() -> String:
 	return id
 
 
+func _place_selected(at: Vector2) -> bool:
+	if str(Data.by_id("items", Inventory.selected_id()).get("place", "")) == "":
+		return false
+	if global_position.distance_to(at) > Crafting.PLACE_REACH:
+		return false
+	if Crafting.place_selected(Router.current_map, at):
+		var stations := get_tree().current_scene.get_node_or_null("Stations") as Stations
+		if stations:
+			stations.rebuild()
+	return true
+
+
 func is_tired() -> bool:
 	return energy <= Game.max_energy() * float(Game.balance("fatigue_share", 0.15))
 
@@ -131,6 +143,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("use_tool") and Router.current_map == "cape":
 		var garden := get_tree().current_scene.get_node_or_null("Garden")
 		if garden and garden.use_at(get_global_mouse_position(), self):
+			get_viewport().set_input_as_handled()
+			return
+		if _place_selected(get_global_mouse_position()):
 			get_viewport().set_input_as_handled()
 			return
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:

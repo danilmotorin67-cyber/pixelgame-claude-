@@ -1,1 +1,52 @@
-[]
+[
+  {
+    "id": "craft_chest",
+    "station": "workbench",
+    "in": [
+      [
+        "boards",
+        50
+      ]
+    ],
+    "out": [
+      "chest",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "craft_heather_bouquet",
+    "station": "workbench",
+    "in": [
+      [
+        "heather",
+        5
+      ],
+      [
+        "thread",
+        1
+      ]
+    ],
+    "out": [
+      "heather_bouquet",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "process_compost",
+    "station": "compost_pit",
+    "in": [
+      [
+        "kelp",
+        10
+      ]
+    ],
+    "out": [
+      "compost",
+      5
+    ],
+    "minutes": 4320,
+    "unlock": "start"
+  }
+]

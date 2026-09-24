@@ -31,6 +31,7 @@ func _ready() -> void:
 		map_id = Router.current_map
 	Router.current_map = map_id
 	add_child(Pickups.new())
+	add_child(Stations.new())
 	Clock.paused = not Night.pending_report.is_empty()
 	Events.map_entered.emit(map_id)
 	Events.time_tick.connect(_on_world_changed)
@@ -114,6 +115,8 @@ func _on_night_resolved(report: Dictionary) -> void:
 		int(round(float(light.get("power", 0.0)))), int(round(float(light.get("light", 0.0))))]
 	if bool(light.get("no_fire", false)):
 		light_line = "\nМаяк: огонь не требовался · Свет: %d" % int(round(float(light.get("light", 0.0))))
+	if int(report.get("stations_ready", 0)) > 0:
+		light_line += "\nСтанки: готово заданий — %d" % int(report["stations_ready"])
 	var sales: Dictionary = report.get("sales", {})
 	if int(sales.get("income", 0)) > 0:
 		light_line += "\nВыручка «Чайки»: %d кр" % int(sales["income"])

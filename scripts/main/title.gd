@@ -20,6 +20,7 @@ func _on_new_game() -> void:
 	Lighthouse.reset()
 	Sea.reset()
 	Skills.reset()
+	Crafting.reset()
 	Farm.spawn_wild(0)
 	Sea.generate_gifts(0, false)
 	Inventory.add("fish_oil", 1)

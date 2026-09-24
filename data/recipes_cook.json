@@ -1,17 +1,139 @@
 [
   {
-    "id": "cook_keeper_soup",
-    "name": "recipe.keeper_soup.name",
+    "id": "cook_drowned_stew",
+    "station": "hearth",
     "in": [
       [
-        "fish_cod",
+        "kelp",
         1
       ],
       [
-        "turnip",
+        "tag:fish",
         1
       ]
     ],
-    "out": "soup_keeper"
+    "out": [
+      "drowned_stew",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cook_bread_rye",
+    "station": "hearth",
+    "in": [
+      [
+        "rye_flour",
+        1
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "out": [
+      "bread_rye",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cook_barley_porridge",
+    "station": "hearth",
+    "in": [
+      [
+        "barley",
+        1
+      ],
+      [
+        "milk",
+        1
+      ]
+    ],
+    "out": [
+      "barley_porridge",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cook_eggs_onion",
+    "station": "hearth",
+    "in": [
+      [
+        "egg",
+        1
+      ],
+      [
+        "onion",
+        1
+      ]
+    ],
+    "out": [
+      "eggs_onion",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cook_keeper_rusks",
+    "station": "hearth",
+    "in": [
+      [
+        "bread_rye",
+        1
+      ],
+      [
+        "salt",
+        1
+      ]
+    ],
+    "out": [
+      "keeper_rusks",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "cook_keeper_soup",
+    "station": "hearth",
+    "in": [
+      [
+        "tag:fish",
+        1
+      ],
+      [
+        "potato",
+        1
+      ],
+      [
+        "onion",
+        1
+      ]
+    ],
+    "out": [
+      "keeper_soup",
+      1
+    ],
+    "unlock": "q1_3"
+  },
+  {
+    "id": "cook_potato_flatbread",
+    "station": "hearth",
+    "in": [
+      [
+        "potato",
+        2
+      ],
+      [
+        "butter",
+        1
+      ]
+    ],
+    "out": [
+      "potato_flatbread",
+      1
+    ],
+    "unlock": "margit_3"
   }
 ]

@@ -14,7 +14,7 @@
       {"title": "Гильдейский дом", "at": [8, 8], "size": [8, 5], "kind": "ruin"},
       {"title": "Доктор Фальк", "at": [60, 8], "size": [7, 5], "kind": "house"},
       {"title": "Лавка Эрланда", "at": [9, 43], "size": [7, 4], "kind": "house", "shop": "shop_erland"},
-      {"title": "Гробы и колыбели", "at": [22, 34], "size": [7, 4], "kind": "house"}
+      {"title": "Гробы и колыбели", "at": [22, 34], "size": [7, 4], "kind": "house", "shop": "shop_ilm"}
     ],
     "exits": [
       {"at": [77, 30], "to": "cape", "spawn": [3, 30], "label": "Вороний мыс"},

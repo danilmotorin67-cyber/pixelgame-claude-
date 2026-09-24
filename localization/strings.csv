@@ -223,3 +223,26 @@ item.oyster_mushroom.name,Вешенка,Oyster mushroom
 item.oyster_mushroom.desc,"Зимний гриб с берёз. Растёт, когда остальные спят.",A winter mushroom off the birches. Grows while the rest sleep.
 item.ice_crystal.name,Ледяной кристалл,Ice crystal
 item.ice_crystal.desc,Зимняя диковина со льда. Тает только в чужих руках.,A winter curiosity from the ice. Melts only in other hands.
+item.boards.name,Доски,Boards
+item.boards.desc,"Для сундуков, построек и гробов. Дерево, которое наконец-то выпрямилось.","For chests, buildings and coffins. Wood that finally straightened up."
+item.chest.name,Сундук,Chest
+item.chest.desc,"Ставится на мысу, хранит 24 стопки. Всё лишнее — сюда, всё нужное — тоже сюда.","Placed on the cape, holds 24 stacks. Everything spare goes here. So does everything needed."
+item.heather_bouquet.name,Букет вереска,Heather bouquet
+item.heather_bouquet.desc,"Скромный подарок с пустоши. Пахнет ветром, а не лавкой.","A modest gift from the moor. Smells of wind, not of a shop."
+item.keeper_soup.name,Уха смотрителя,Keeper's fish soup
+item.keeper_soup.desc,"Сытная уха с картофелем и луком. Её варили все смотрители, и все — по-разному.","Hearty soup with potato and onion. Every keeper made it, each one differently."
+item.drowned_stew.name,Похлёбка утопленника,Drowned man's stew
+item.drowned_stew.desc,Рыба и водоросли в одном котелке. Все ингредиенты когда-то утонули.,Fish and seaweed in one pot. All the ingredients drowned at some point.
+item.barley_porridge.name,Ячменная каша,Barley porridge
+item.barley_porridge.desc,"Каша на молоке для долгого утра. Скучная, зато честная.","Milk porridge for a long morning. Dull, but honest."
+item.eggs_onion.name,Яичница с луком,Fried eggs with onion
+item.eggs_onion.desc,Быстрый завтрак смотрителя. Лук плачет за вас.,The keeper's quick breakfast. The onion cries so you don't have to.
+item.keeper_rusks.name,Сухари смотрителя,Keeper's rusks
+item.keeper_rusks.desc,"Хлеб, что переживёт шторм в кармане. И вас, если что.","Bread that survives a storm in your pocket. And you, if it comes to that."
+item.potato_flatbread.name,Картофельные лепёшки,Potato flatbread
+item.potato_flatbread.desc,"Лепёшки по рецепту Маргит. Она говорит, что первый муж их ел и был счастлив. Недолго.",Flatbread by Margit's recipe. She says her first husband ate them and was happy. Briefly.
+station.workbench,Верстак,Workbench
+station.hearth,Очаг с котелком,Hearth and pot
+station.compost_pit,Компостная яма,Compost pit
+station.chest,Сундук,Chest
+tag.fish,любая рыба,any fish

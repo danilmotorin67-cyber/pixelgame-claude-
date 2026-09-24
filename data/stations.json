@@ -1,8 +1,28 @@
 [
   {
-    "id": "workbench"
+    "id": "workbench",
+    "name": "station.workbench",
+    "kind": "instant"
   },
   {
-    "id": "pot"
+    "id": "hearth",
+    "name": "station.hearth",
+    "kind": "cook",
+    "fuel": [
+      "driftwood"
+    ]
+  },
+  {
+    "id": "compost_pit",
+    "name": "station.compost_pit",
+    "kind": "process",
+    "queue": 3
+  },
+  {
+    "id": "chest",
+    "name": "station.chest",
+    "kind": "storage",
+    "slots": 24,
+    "item": "chest"
   }
 ]

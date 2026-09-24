@@ -70,6 +70,20 @@ def main() -> int:
         for entry in shop.get("stock", []):
             if "upgrade" not in entry and entry.get("item") not in item_ids:
                 errs.append(f"shop {shop.get('id')} sells unknown item {entry.get('item')}")
+    tag_ids = set()
+    for r in rows(tables.get("items", [])):
+        tag_ids.update(r.get("tags", []))
+    station_ids = {r["id"] for r in rows(tables.get("stations", []))}
+    for table in ("recipes_craft", "recipes_cook"):
+        for recipe in rows(tables.get(table, [])):
+            if recipe.get("station") not in station_ids:
+                errs.append(f"{recipe.get('id')} unknown station {recipe.get('station')}")
+            for need, _count in recipe.get("in", []):
+                known = need[4:] in tag_ids if need.startswith("tag:") else need in item_ids
+                if not known:
+                    errs.append(f"{recipe.get('id')} unknown ingredient {need}")
+            if recipe.get("out", [None])[0] not in item_ids:
+                errs.append(f"{recipe.get('id')} unknown product")
     forage = tables.get("forage", {})
     for band in ("near", "far", "storm"):
         for item, _weight in forage.get(band, []):
