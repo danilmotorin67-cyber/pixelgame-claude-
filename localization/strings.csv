@@ -2270,3 +2270,442 @@ ev.tuve10.l01,"Я видела Агату. В Глуби. У двери, кот�
 ev.tuve10.l02,Она сказала: «Скажи {внуку|внучке} — пусть не спешит ко мне». Я говорю.,She said: 'Tell my {grandson|granddaughter} — don't hurry to me.' I'm telling you.
 ev.tuve14.l01,"Сегодня поплывём к Острову Без Имени. Там бухта, которую не видят люди. Кроме тебя.",Today we'll swim to the Island Without a Name. There's a cove there people can't see. Except you.
 ev.tuve14.l02,"(Бухта полна перламутра и тишины. На камнях лежат две жемчужины, как будто их оставили для вас.)",(The cove is full of mother-of-pearl and silence. Two pearls lie on the stones as if left for you.)
+item.grim_watch.name,Фамильные часы Гримов,The Grims' family watch
+item.grim_watch.desc,Золотые часы с гравировкой «Время — это груз». Идут точно. Слишком точно.,A gold watch engraved 'Time is cargo'. Keeps perfect time. Too perfect.
+npc.halvdan.spring.01,"Весна, {дорогой|дорогая}! Море даёт, море берёт. Весной — больше даёт. Пользуйтесь.","Spring, dear! The sea gives, the sea takes. In spring it gives more. Make the most of it."
+npc.halvdan.spring.02,"Семена хорошо взошли? Я рад. Корзину помните? Мелочь, {дорогой|дорогая}. Мелочь. Между соседями.","Did the seeds come up? I'm glad. Remember the basket? A trifle, dear. A trifle. Between neighbours."
+npc.halvdan.spring.03,Скупаю треску по восемь крон. Честная цена. Я лично её придумал.,Buying cod at eight crowns. An honest price. I devised it personally.
+npc.halvdan.spring.04,"Как огонь, {дорогой|дорогая}? Горит? Прекрасно. Острову нужен огонь. Иногда даже слишком.","How's the fire, dear? Burning? Splendid. The island needs a fire. Sometimes even too much."
+npc.halvdan.spring.05,"Весенние туманы плохи для торговли. Хороши для… впрочем, неважно.","Spring fogs are bad for trade. Good for… well, never mind."
+npc.halvdan.spring.06,Пословица моего деда: «Кто считает волны — тот не утонет». Я считаю. Всё считаю.,My grandfather's proverb: 'Who counts the waves won't drown.' I count. I count everything.
+npc.halvdan.spring.07,"Ингрид опять учит близнецов на крыльце. Упрямая. Вся в мать. Скажите ей, {дорогой|дорогая}, что школа — невыгодна.","Ingrid's teaching the twins on the porch again. Stubborn. Just like her mother. Tell her, dear, that a school doesn't pay."
+npc.halvdan.spring.08,Гильдейский дом нечист. Туман там живёт. Снести — и склад поставить. Всем польза.,"The Guild House is unclean. The fog lives there. Pull it down, put up a warehouse. Good for everyone."
+npc.halvdan.spring.09,"Стекло для фонарной? Сто крон. Для вас — сто. Для других — тоже сто. Честность — моё второе имя, {дорогой|дорогая}.","Glass for the lamp room? A hundred crowns. For you — a hundred. For others — also a hundred. Honesty is my middle name, dear."
+npc.halvdan.spring.10,Весной приходит «Чайка» с товаром. Я встречаю её лично. Как старого друга. Который должен.,In spring the Chayka brings goods. I meet her personally. Like an old friend. Who owes me.
+npc.halvdan.summer.01,"Лето, {дорогой|дорогая}! Скумбрия идёт, туристы едут. Всё идёт ко мне. Как и должно.","Summer, dear! The mackerel run, the tourists come. Everything comes to me. As it should."
+npc.halvdan.summer.02,Жара. В Торговом доме прохладно. Заходите. Я всегда рад клиентам. И соседям. В таком порядке.,Heat. It's cool in the Trading House. Come in. Always glad of customers. And neighbours. In that order.
+npc.halvdan.summer.03,Регата — прекрасная традиция. Я учредил приз. Пятьдесят крон. Хедда всегда выигрывает. Приходится платить.,The regatta — a fine tradition. I put up the prize. Fifty crowns. Hedda always wins. I have to pay.
+npc.halvdan.summer.04,"Лив задаёт слишком много вопросов, {дорогой|дорогая}. Наука — это прекрасно. В меру.","Liv asks too many questions, dear. Science is wonderful. In moderation."
+npc.halvdan.summer.05,"По четвергам угощаю всех в таверне. Люди любят того, кто наливает. Я их понимаю.",On Thursdays I stand everyone a round at the tavern. People love the one who pours. I understand them.
+npc.halvdan.summer.06,Пословица: «Сеть без дыр — пустая сеть». Задумайтесь.,Proverb: 'A net without holes is an empty net.' Think about it.
+npc.halvdan.summer.07,Белые ночи. Не люблю. Всё видно. Слишком всё.,White nights. I don't care for them. Everything's visible. Far too much.
+npc.halvdan.summer.08,"Вы много работаете, {дорогой|дорогая}. Похвально. Агата тоже много работала. Помните, чем кончила?","You work hard, dear. Commendable. Agatha worked hard too. Remember how she ended up?"
+npc.halvdan.summer.09,"Штерн пишет, что «Нептун» доволен островом. Прекрасная новость для всех. Особенно для меня.",Stern writes that Neptune is pleased with the island. Wonderful news for everyone. Especially me.
+npc.halvdan.summer.10,Лето коротко. Деньги — вечны. Моя семья знает это триста лет.,Summer is short. Money is eternal. My family has known that for three hundred years.
+npc.halvdan.autumn.01,"Осень, {дорогой|дорогая}! Сельдь, ярмарка, шторма. Урожайное время. Для всех. Для меня — особенно.","Autumn, dear! Herring, the fair, storms. A harvest season. For everyone. For me — especially."
+npc.halvdan.autumn.02,Сельдяная ярмарка — моя любимая. Весь остров покупает у меня соль. Круговорот щедрости.,The Herring Fair is my favourite. The whole island buys salt from me. A cycle of generosity.
+npc.halvdan.autumn.03,Осенние шторма топят корабли. Печально. Груз потом продаётся с аукциона. Жизнь продолжается.,Autumn storms sink ships. Sad. The cargo's auctioned afterwards. Life goes on.
+npc.halvdan.autumn.04,"Я поднял цену на соль. Инфляция, {дорогой|дорогая}. Море дорожает.","I've raised the price of salt. Inflation, dear. The sea's getting dearer."
+npc.halvdan.autumn.05,Мой дед говорил: «Осенью волк не ест волка — он ест овец». Мудрый был человек.,My grandfather said: 'In autumn the wolf doesn't eat wolves — he eats sheep.' A wise man.
+npc.halvdan.autumn.06,Ночь Утопленников — суеверие. Но я ставлю свечу. На всякий случай. Деловой подход.,Drowned Night is superstition. But I light a candle. Just in case. A businesslike approach.
+npc.halvdan.autumn.07,"Вы хороните утопленников, {дорогой|дорогая}. Благородно. Хорошо бы поменьше вопросов о том, откуда они.","You bury the drowned, dear. Noble. Better with fewer questions about where they came from."
+npc.halvdan.autumn.08,"Ветер с Зубов. Холодный. Люблю этот ветер. Он честный — берёт, не спрашивая.",Wind off the Teeth. Cold. I like that wind. It's honest — takes without asking.
+npc.halvdan.autumn.09,Кнуд просит досок. В долг. Я даю в долг. Всем. Долг — это дружба с процентами.,Knud wants boards. On credit. I give credit. To everyone. Debt is friendship with interest.
+npc.halvdan.autumn.10,Осень учит терпению. Рыба сама идёт в сеть. Надо только сеть держать.,Autumn teaches patience. The fish walk into the net on their own. You only have to hold the net.
+npc.halvdan.winter.01,"Зима, {дорогой|дорогая}. Время подводить итоги. У меня они всегда в плюсе.","Winter, dear. Time to tally up. Mine are always in the black."
+npc.halvdan.winter.02,Уголь дорог зимой. Я знаю — я его продаю. Сочувствую покупателям. Искренне.,Coal is dear in winter. I know — I sell it. I sympathise with the buyers. Sincerely.
+npc.halvdan.winter.03,Долгая ночь. Я считаю. Люблю долгие ночи — длинный столбец.,The long night. I'm counting. I love long nights — a long column.
+npc.halvdan.winter.04,"Ваш огонь зимой светит далеко, {дорогой|дорогая}. Очень далеко. Иногда я думаю — зачем так далеко?","Your light shines far in winter, dear. Very far. Sometimes I wonder — why so far?"
+npc.halvdan.winter.05,Лёд сковал гавань. Корабли стоят. Убытки. Но и крушений нет. Всё уравновешивается.,Ice has locked the harbour. Ships idle. Losses. But no wrecks either. Everything balances out.
+npc.halvdan.winter.06,"Ингрид вяжет шарфы близнецам Маргит. Бесплатно. Я не понимаю, в кого она такая.",Ingrid knits scarves for Margit's twins. For free. I don't understand who she takes after.
+npc.halvdan.winter.07,Зимой люди беднеют и сговорчивее становятся. Это не цинизм. Это экономика.,In winter people grow poorer and more agreeable. That's not cynicism. It's economics.
+npc.halvdan.winter.08,"Выпьем, {дорогой|дорогая}? Аквавит. Выдержанный. Как мои отношения с морем.","A drink, dear? Aquavit. Aged. Like my relations with the sea."
+npc.halvdan.winter.09,Снег ложится ровно. На всё. На честное и нечестное. Снег не разбирает. Уважаю снег.,Snow falls evenly. On everything. On the honest and the dishonest. Snow doesn't discriminate. I respect snow.
+npc.halvdan.winter.10,Весной будет новый сезон. Новые корабли. Новые возможности. Я их жду.,In spring there'll be a new season. New ships. New opportunities. I'm waiting for them.
+npc.halvdan.weather.rain.01,"Дождь, {дорогой|дорогая}. Прекрасно для урожая. У вас он вырастет — а продадите вы мне.","Rain, dear. Splendid for the crops. They'll grow at your place — and you'll sell them to me."
+npc.halvdan.weather.rain.02,Дождь смывает следы. Полезная погода.,Rain washes away footprints. Useful weather.
+npc.halvdan.weather.storm.01,Шторм. Все сидят по домам. Я — у окна. Смотрю на море. Жду новостей.,A storm. Everyone's indoors. I'm at the window. Watching the sea. Waiting for news.
+npc.halvdan.weather.storm.02,"Держите огонь, {дорогой|дорогая}. Шторм — не время для ошибок. Для чужих — тем более.","Keep the fire going, dear. A storm is no time for mistakes. Other people's least of all."
+npc.halvdan.weather.fog.01,"Туман. Плохая погода. Для всех, кроме тех, кто знает дорогу.",Fog. Bad weather. For everyone except those who know the way.
+npc.halvdan.weather.fog.02,В туман я не выхожу в море. Никогда. Скажем так — у меня договорённость с туманом.,I never go to sea in fog. Never. Let's say I have an arrangement with the fog.
+npc.halvdan.weather.snow.01,"Снег. Цены на уголь растут. Я не виноват, это снег.","Snow. Coal prices are rising. Not my fault, it's the snow."
+npc.halvdan.weather.cloud.01,Пасмурно. Нейтральная погода. Моя любимая. Никто ничего не видит ясно.,Overcast. Neutral weather. My favourite. Nobody sees anything clearly.
+npc.halvdan.festival.boat_blessing.01,"Спуск лодок! Я, как староста, открываю праздник. Речь та же, что в прошлом году. Хорошая речь.",The Boat Launch! As headman I open the festival. Same speech as last year. A good speech.
+npc.halvdan.festival.herring_fair.01,"Ярмарка! Лучший день в году, {дорогой|дорогая}. Все деньги острова в одном месте. Как удобно.","The fair! Best day of the year, dear. All the island's money in one place. How convenient."
+npc.halvdan.festival.drowned_night.01,Ночь Утопленников. Я ставлю свечи. Много. Я могу себе позволить.,Drowned Night. I light candles. Many. I can afford them.
+npc.halvdan.festival.ice_festival.01,Ледовый праздник. Я спонсирую скульптуры. На каждой — табличка «Дар Торгового дома». Скромно.,The Ice Festival. I sponsor the sculptures. Each has a plate: 'A gift from the Trading House.' Modest.
+npc.halvdan.festival.01,"Праздник, {дорогой|дорогая}! Угощение за мой счёт. Помните это, когда будете голосовать за старосту.","A holiday, dear! Treats on me. Remember that when you vote for headman."
+npc.halvdan.festival.02,Люди веселятся. Прекрасно. Весёлые люди не задают вопросов.,People are having fun. Wonderful. Cheerful people don't ask questions.
+npc.halvdan.gift.love.01,"О, {дорогой|дорогая}! Вы знаете толк в ценностях. Мы поймём друг друга. Я уверен.","Oh, dear! You know the value of things. We'll understand each other. I'm sure of it."
+npc.halvdan.gift.love.02,"Прекрасно! Это стоит дорого. Люблю людей, которые понимают, что стоит дорого.",Splendid! This is worth a lot. I love people who understand what's worth a lot.
+npc.halvdan.gift.like.01,"Благодарю, {дорогой|дорогая}. Неплохой вкус. Для смотрителя.","Thank you, dear. Not bad taste. For a keeper."
+npc.halvdan.gift.like.02,Приятно. Я запомню. Я всё запоминаю.,Nice. I'll remember. I remember everything.
+npc.halvdan.gift.neutral.01,"Спасибо. Мелочь, но приятно. Мелочи складываются.","Thanks. A trifle, but pleasant. Trifles add up."
+npc.halvdan.gift.neutral.02,"Хм. Благодарю, {дорогой|дорогая}. Положу на склад.","Hm. Thank you, dear. I'll put it in the warehouse."
+npc.halvdan.gift.dislike.01,"Дешёвка. Простите, но я привык к лучшему.","Cheap stuff. Forgive me, but I'm used to better."
+npc.halvdan.gift.dislike.02,"Это… мило, {дорогой|дорогая}. Отдам кому-нибудь. Бедным.","That's… sweet, dear. I'll give it to someone. The poor."
+npc.halvdan.gift.hate.01,Ворвань. Пахнет бедностью. Уберите это из моего дома.,Fish oil. It smells of poverty. Get it out of my house.
+npc.halvdan.gift.hate.02,"Ракушки? Вы смеётесь, {дорогой|дорогая}? Ракушками платят дети.","Shells? Are you laughing at me, dear? Children pay in shells."
+npc.halvdan.birthday.01,Сегодня мой день рождения. Пятьдесят восемь. Весь остров придёт поздравлять. Все мне должны.,It's my birthday today. Fifty-eight. The whole island will come to congratulate me. They all owe me.
+npc.halvdan.birthday.02,"День рождения, {дорогой|дорогая}. Я дарю себе новую бухгалтерскую книгу. Чёрную. Классика.","My birthday, dear. I'm giving myself a new account book. Black. A classic."
+npc.halvdan.birthday_gift.01,"Подарок! Как мило, {дорогой|дорогая}. Я никогда не забываю тех, кто помнит обо мне.","A present! How sweet, dear. I never forget those who remember me."
+npc.halvdan.birthday_gift.02,Вы помните мой день рождения. Это ценно. Я запишу.,You remember my birthday. That's valuable. I'll make a note.
+npc.halvdan.act1.01,"Добро пожаловать, {дорогой|дорогая}! Здесь всё решается за чашкой чая и по-соседски. Почти всё.","Welcome, dear! Here everything's settled over a cup of tea, neighbourly. Almost everything."
+npc.halvdan.act1.02,"Корзина — от чистого сердца. Семена, хлеб, чай. Мы на острове помогаем друг другу. С процентами.","The basket — from a pure heart. Seeds, bread, tea. On the island we help each other. With interest."
+npc.halvdan.act1.03,"Первую ночь ваш огонь горел ярко. Очень ярко. Я даже задёрнул штору. Слепит, {дорогой|дорогая}.","Your light burned bright the first night. Very bright. I even drew the curtain. Dazzling, dear."
+npc.halvdan.act1.04,"Гильдейский дом снесём. Туман там. Я, как староста, забочусь о безопасности.",We'll pull the Guild House down. The fog lives there. As headman I care about safety.
+npc.halvdan.act1.05,"Штерн из «Нептуна» — мой давний партнёр. Милейший человек. Вы его знаете, {дорогой|дорогая}? Ах да, вы у него работали.","Stern from Neptune is an old partner of mine. A delightful man. Do you know him, dear? Ah yes, you worked for him."
+npc.halvdan.act1.06,Конец весны. Я уплываю по делам. Не ждите меня к ужину. Никто не ждёт.,End of spring. I'm away on business. Don't wait dinner for me. Nobody does.
+npc.halvdan.act2.01,"«Святая Берта». Трагедия. Я куплю груз с аукциона — чтобы он не пропал. Кто-то должен, {дорогой|дорогая}.","The Saint Bertha. A tragedy. I'll buy the cargo at auction — so it doesn't go to waste. Someone has to, dear."
+npc.halvdan.act2.02,Белая Хмарь — суеверие. Я запер ставни исключительно из-за сквозняка.,The White Fog is superstition. I locked the shutters purely because of the draught.
+npc.halvdan.act2.03,"Кости в гротах? Старые. Очень старые. Не стоит тревожить прошлое, {дорогой|дорогая}. Прошлое кусается.","Bones in the grottoes? Old. Very old. It doesn't do to disturb the past, dear. The past bites."
+npc.halvdan.act2.04,Кай с Мёртвого Огня — сумасшедший. Не слушайте его. Он пугает рыбаков ракетами.,Kai at the Dead Fire is mad. Don't listen to him. He scares fishermen with flares.
+npc.halvdan.act2.05,"Телеграф? Зачем острову телеграф, {дорогой|дорогая}? Новости хороши, когда приходят медленно.","The telegraph? What does the island need a telegraph for, dear? News is best when it arrives slowly."
+npc.halvdan.act2.06,Большая Хмарь? Сказки Хельги. Я буду дома. Считать. Как всегда.,The Great Fog? Helga's tales. I'll be at home. Counting. As always.
+npc.halvdan.act3.01,"Вы много ныряете, {дорогой|дорогая}. Глубь опасна. Мои предки это знали. Они там и остались. Некоторые.","You dive a lot, dear. The Deep is dangerous. My ancestors knew that. Some of them stayed down there."
+npc.halvdan.act3.02,"Говорят, вы собираете какие-то бумажки. Улики? Какое красивое слово. Бумага горит, {дорогой|дорогая}.","They say you're collecting some papers. Evidence? What a pretty word. Paper burns, dear."
+npc.halvdan.act3.03,"Штерн будет весной. Он помнит, что вы ему сказали при увольнении. Он всё помнит. Как и я.",Stern comes in spring. He remembers what you said to him when you quit. He remembers everything. As do I.
+npc.halvdan.act3.04,"Ингрид странно себя ведёт. Если вы имеете к этому отношение, {дорогой|дорогая}… будьте осторожны.","Ingrid's behaving strangely. If you have anything to do with it, dear… be careful."
+npc.halvdan.act3.05,Сейф Гримов не открывался триста лет без хозяина. И не откроется.,The Grim safe hasn't been opened without its master in three hundred years. And it won't be.
+npc.halvdan.act3.06,"Море даёт, море берёт. Я лишь веду учёт, {дорогой|дорогая}. Запомните это.","The sea gives, the sea takes. I only keep the accounts, dear. Remember that."
+npc.halvdan.act4.01,"Великий Прилив. Раз в полвека. Мой прадед видел последний. Он вернулся богатым, {дорогой|дорогая}.","The Great Tide. Once in fifty years. My great-grandfather saw the last one. He came back rich, dear."
+npc.halvdan.act4.02,«Королева Кронвальда» — прекрасный корабль. Застрахован. Очень хорошо застрахован.,The Queen of Kronvald — a fine ship. Insured. Very well insured.
+npc.halvdan.act4.03,"В ночь Прилива я буду у Врат. По делам. Семейным. Не мешайте мне, {дорогой|дорогая}.","On Tide Night I'll be at the Gate. On business. Family business. Don't get in my way, dear."
+npc.halvdan.act4.04,Уговор — это договор. Мой род его соблюдал. По-своему.,The Pact is a contract. My family honoured it. In its own way.
+npc.halvdan.act4.05,"Вы могли бы быть на моей стороне, {дорогой|дорогая}. Ещё не поздно. Почти.","You could have been on my side, dear. It's not too late. Almost."
+npc.halvdan.act4.06,Если огонь погаснет в ту ночь — никто не удивится. Огни гаснут. Особенно в шторм.,If the light goes out that night — nobody will be surprised. Lights go out. Especially in storms.
+npc.halvdan.married_other.01,"Поздравляю, {дорогой|дорогая}! Свадебный подарок от Торгового дома. Скидка три процента. На месяц.","Congratulations, dear! A wedding present from the Trading House. Three percent off. For a month."
+npc.halvdan.married_other.02,"Брак — выгодный союз. Надеюсь, вы всё посчитали.",Marriage is a profitable union. I hope you've done the sums.
+npc.halvdan.married_other.03,"Прекрасная пара. Я произнёс тост. Лучший на свадьбе, не правда ли, {дорогой|дорогая}?","A lovely couple. I gave a toast. The best at the wedding, wasn't it, dear?"
+npc.halvdan.married_other.04,Семья — это надёжно. Семью можно… учитывать.,A family is dependable. A family can be… taken into account.
+npc.halvdan.married_other.05,Желаю вам долгих лет. И благоразумия. Особенно благоразумия.,I wish you long years. And prudence. Especially prudence.
+npc.halvdan.event.wreck.01,"Какая трагедия, {дорогой|дорогая}. Какая трагедия. Груз, наверное, пропал. Наверное.","What a tragedy, dear. What a tragedy. The cargo's probably lost. Probably."
+npc.halvdan.event.wreck.02,"Я уже распорядился выделить средства на похороны. Из фонда старосты. Скромно, но достойно.","I've already ordered funds for the funerals. From the headman's fund. Modest, but dignified."
+npc.halvdan.event.wreck.03,Море берёт своё. Мы бессильны. Мы можем только вести учёт.,The sea takes its own. We're powerless. We can only keep the accounts.
+npc.halvdan.event.wreck.04,"Ясная ночь? Бывает, {дорогой|дорогая}. Капитаны тоже ошибаются. Особенно усталые.","A clear night? It happens, dear. Captains make mistakes too. Especially tired ones."
+npc.halvdan.event.wreck.05,Если найдёте груз — сдавайте в управу. Или мне. Я заплачу лучше управы.,If you find cargo — hand it in to the office. Or to me. I pay better than the office.
+npc.halvdan.event.funeral.01,"Вы опять хоронили, {дорогой|дорогая}. Как вы это выносите? Я бы нанял кого-нибудь.","You've been burying again, dear. How do you bear it? I'd hire someone."
+npc.halvdan.event.funeral.02,Похороны — это расходы. Но расходы достойные. Я ценю достойные расходы.,Funerals are an expense. But a dignified one. I appreciate dignified expenses.
+npc.halvdan.event.funeral.03,"На вашем погосте становится тесно. Может, стоит расширить? Могу продать землю.",Your graveyard's getting crowded. Perhaps it should be enlarged? I could sell you land.
+npc.halvdan.event.funeral.04,"Покойники молчат, {дорогой|дорогая}. Это их лучшее качество.","The dead keep quiet, dear. That's their finest quality."
+npc.halvdan.event.funeral.05,Вы задаёте им вопросы? Опознаёте? Зря. Некоторые ответы лучше оставить в земле.,Do you question them? Identify them? A waste. Some answers are best left in the ground.
+npc.halvdan.event.hmar.01,Ночь Хмари… Я не спал. Считал. Цифры успокаивают. Туман — нет.,Fog Night… I didn't sleep. I counted. Numbers soothe. Fog doesn't.
+npc.halvdan.event.hmar.02,"Туман шептал у моего окна, {дорогой|дорогая}. Моё имя. Нелепость. Я задёрнул штору.","The fog was whispering at my window, dear. My name. Absurd. I drew the curtain."
+npc.halvdan.event.hmar.03,Ваш луч проходил по моему дому каждые полминуты. Раздражает. Спать мешает.,Your beam swept my house every half minute. Irritating. Keeps me awake.
+npc.halvdan.event.hmar.04,"Хельга говорит, Хмарь — это горе. Чьё — не говорит. Старуха болтлива, но осторожна.","Helga says the Fog is grief. Whose — she doesn't say. The old woman talks a lot, but she's careful."
+npc.halvdan.event.hmar.05,"Утопцы на берегу? Выдумки, {дорогой|дорогая}. Хотя… я запер погреб. Просто так.","The drowned walking on the shore? Nonsense, dear. Although… I locked the cellar. Just because."
+npc.halvdan.event.inspection.01,"Инспектор Пальм ужинал у меня. Прекрасный человек. Неподкупный. Жаль, {дорогой|дорогая}.","Inspector Palm dined with me. A fine man. Incorruptible. A pity, dear."
+npc.halvdan.event.inspection.02,Инспекция прошла? Поздравляю. Агата тоже всегда сдавала. До поры.,Passed the inspection? Congratulations. Agatha always passed too. For a while.
+npc.halvdan.event.inspection.03,"Пальм спрашивал меня о вас. Я сказал — старательный смотритель. Слишком старательный, {дорогой|дорогая}.","Palm asked me about you. I said — a diligent keeper. Too diligent, dear."
+npc.halvdan.event.inspection.04,"Инспекции — полезная вещь. Показывают, кто на что способен.",Inspections are useful things. They show what people are capable of.
+npc.halvdan.event.inspection.05,Пункт четырнадцатый: огонь должен гореть. Какой скучный пункт.,Clause fourteen: the fire must burn. Such a dull clause.
+npc.halvdan.event.wedding.01,"Свадьба удалась! Столы — от Кнуда, эль — от Бьорна, речь — от меня. Лучшая часть, {дорогой|дорогая}.","The wedding was a success! Tables by Knud, ale by Bjorn, speech by me. The best part, dear."
+npc.halvdan.event.wedding.02,"Я подарил серебряный поднос. Он стоит больше, чем вся остальная свадьба.",I gave a silver tray. It's worth more than the rest of the wedding together.
+npc.halvdan.event.wedding.03,Молодые — это будущее острова. А будущее надо… планировать.,The young are the island's future. And the future must be… planned.
+npc.halvdan.event.wedding.04,"Прекрасный вечер. Ингрид танцевала. Я давно не видел её счастливой, {дорогой|дорогая}.","A lovely evening. Ingrid danced. I haven't seen her happy in a long time, dear."
+npc.halvdan.event.wedding.05,Совет да любовь. И благоразумия. Благоразумие — лучшее приданое.,Love and harmony. And prudence. Prudence is the best dowry.
+npc.halvdan.event.villains.01,"Вы победили. Поздравляю. Море не читает протоколов, а вы — читаете. Мой просчёт.","You won. Congratulations. The sea doesn't read reports, but you do. My miscalculation."
+npc.halvdan.event.villains.02,Триста лет мой род вёл учёт. Я — последний счетовод. Итог подведён.,For three hundred years my family kept the accounts. I'm the last bookkeeper. The balance is struck.
+npc.halvdan.event.villains.03,Ингрид держала меня за руку на причале. Я не заслужил. Я знаю.,Ingrid held my hand on the jetty. I didn't deserve it. I know.
+npc.halvdan.event.villains.04,Мёртвый Огонь… Если позволят — я буду его смотрителем. Настоящим. Хоть раз в жизни — настоящим.,The Dead Fire… If they let me — I'll be its keeper. A real one. For once in my life — real.
+npc.halvdan.event.villains.05,Двадцать безымянных. Сорок лет ложных огней. Никакой суммой это не покрыть. Я пытался посчитать. Не сходится.,Twenty nameless. Forty years of false fires. No sum covers it. I tried to calculate. It doesn't add up.
+ev.halvdan2.l01,"А, {дорогой|дорогая}! Проходите. У меня для вас подарок. Фамильные часы Гримов. Золото.","Ah, dear! Come in. I have a gift for you. The Grims' family watch. Gold."
+ev.halvdan2.l02,Чтобы вы никогда не опаздывали с огнём. Время — это груз. Его нужно доставлять вовремя.,So you're never late with the fire. Time is cargo. It must be delivered on time.
+ev.halvdan2.c01,Спасибо. Очень щедро.,Thank you. Very generous.
+ev.halvdan2.c02,Почему вы мне это дарите?,Why are you giving me this?
+ev.halvdan2.l03,"Щедрость — наша семейная черта, {дорогой|дорогая}. Мы всегда помним тех, кому дарим.","Generosity runs in the family, dear. We always remember those we give to."
+ev.halvdan2.l04,"Потому что мы соседи. А соседи должны знать, который час. Особенно ночью, {дорогой|дорогая}.","Because we're neighbours. And neighbours should know what time it is. Especially at night, dear."
+ev.halvdan4.l01,Садитесь. Выпейте со мной. Аквавит. Я расскажу вам о трудных временах. Мои предки их знали.,Sit. Drink with me. Aquavit. I'll tell you about hard times. My ancestors knew them.
+ev.halvdan4.l02,"Триста лет назад Гримы голодали. Рыба ушла. Дети умирали. И тогда мой пра-пра-прадед… договорился с морем, {дорогой|дорогая}.","Three hundred years ago the Grims were starving. The fish had gone. Children were dying. And then my great-great-great-grandfather… came to an arrangement with the sea, dear."
+ev.halvdan4.l03,"С тех пор мы не голодаем. Никогда. Море даёт, море берёт. Мы лишь ведём учёт.","We haven't gone hungry since. Never. The sea gives, the sea takes. We only keep the accounts."
+ev.halvdan4.c01,Какой договор?,What arrangement?
+ev.halvdan4.c02,За что берёт море?,What does the sea take in return?
+ev.halvdan4.l04,"Семейный, {дорогой|дорогая}. Семейный. Старые сказки. Ещё аквавита?","A family one, dear. Family. Old tales. More aquavit?"
+ev.halvdan4.l05,Хороший вопрос. Очень хороший. Слишком хороший для смотрителя. Спокойной ночи.,A good question. A very good one. Too good for a keeper. Good night.
+ev.halvdan6.l01,"Закройте дверь, {дорогой|дорогая}. Поговорим как деловые люди.","Close the door, dear. Let's talk like business people."
+ev.halvdan6.l02,Я предлагаю вам долю. Десятая часть Торгового дома. Навсегда. Условие одно: иногда вы будете… забывать про огонь.,I'm offering you a share. A tenth of the Trading House. For ever. One condition: sometimes you'll… forget about the fire.
+ev.halvdan6.l03,"Не часто. Раз в сезон. В ясную ночь. Я скажу, в какую. Подумайте, {дорогой|дорогая}. Агата не подумала.","Not often. Once a season. On a clear night. I'll tell you which. Think about it, dear. Agatha didn't."
+ev.halvdan6.c01,Я {согласен|согласна}.,I agree.
+ev.halvdan6.c02,Нет. Огонь горит каждую ночь.,No. The light burns every night.
+ev.halvdan6.l04,Мудро. Очень мудро. Вот расписание. Выучите и сожгите. Добро пожаловать в семью.,Wise. Very wise. Here's the schedule. Learn it and burn it. Welcome to the family.
+ev.halvdan6.l05,"Жаль. Очень жаль, {дорогой|дорогая}. Агата тоже сказала «нет». Идите. Берегите огонь. Он у вас один.","A pity. A great pity, dear. Agatha said no too. Go. Look after your fire. You only have one."
+item.family_tongs.name,Фамильные клещи,The family tongs
+item.family_tongs.desc,"Тора улучшает инструменты за 1 день вместо 2. Клещи Гудмунда, ручки обмотаны кожей в три слоя.","Tora upgrades tools in 1 day instead of 2. Gudmund's tongs, handles wrapped three times in leather."
+npc.tora.spring.01,Весна. Все хотят лопаты. Будто зимой их съели.,Spring. Everyone wants spades. As if they ate them over winter.
+npc.tora.spring.02,"Эйнар! Не так! Бей ровнее! …Прости, это не тебе. Хотя и тебе тоже.","Einar! Not like that! Strike evener! …Sorry, that wasn't for you. Though it's for you too."
+npc.tora.spring.03,Рука ноет к дождю. Двенадцать лет ноет. Лучше барометра.,My hand aches before rain. Twelve years it's ached. Better than a barometer.
+npc.tora.spring.04,"Уголь кончается. Грим поднял цену. Грим — жулик. Пиши в свою книжку, мне не жалко.","Coal's running out. Grim's raised the price. Grim's a crook. Put it in your book, I don't care."
+npc.tora.spring.05,"Ты мотыгу как держишь? Так ломают, а не копают. Дай покажу.","How are you holding that hoe? That's for breaking, not digging. Let me show you."
+npc.tora.spring.06,Весной в кузне пахнет весной. То есть мокрым железом. Люблю.,"In spring the forge smells of spring. That is, wet iron. Love it."
+npc.tora.spring.07,"Эль — это вода, которая сделала карьеру.",Ale is water that made a career of itself.
+npc.tora.spring.08,Кнуд просит гвозди. Всегда гвозди. Гробовщику гвозди — как мне молот.,Knud wants nails. Always nails. Nails are to an undertaker what a hammer is to me.
+npc.tora.spring.09,"Сын мой молчит, я ору. Так и работаем. Семейный подряд.","My son keeps quiet, I shout. That's how we work. Family business."
+npc.tora.spring.10,Ты {новый|новая} смотритель? Руки покажи. Хорошие. Будут мозоли — будешь человеком.,"You're the new keeper? Show me your hands. Good ones. When you get calluses, you'll be a person."
+npc.tora.summer.01,"Жара у горна — как в аду. Только в аду, говорят, пива нет. А у меня есть.",Heat at the forge — like hell. Only they say there's no beer in hell. I've got some.
+npc.tora.summer.02,"Летом всё ломается. Лодки, сети, люди. Лодки и сети неси мне. Людей — к Магнусу.","In summer everything breaks. Boats, nets, people. Bring me the boats and nets. People go to Magnus."
+npc.tora.summer.03,Лив опять с чертежами. Говорит «теоретически». Я говорю «практически — нет». Спорим. Весело.,Liv's back with drawings. Says 'theoretically'. I say 'practically — no'. We argue. It's fun.
+npc.tora.summer.04,Мой день рождения летом. Не поздравляй. Лучше принеси эль.,My birthday's in summer. Don't congratulate me. Bring ale instead.
+npc.tora.summer.05,"Эйнар сидит на холме каждый вечер. Смотрит на море. Думает, я не знаю. Я всё знаю.",Einar sits on the hill every evening. Looks at the sea. Thinks I don't know. I know everything.
+npc.tora.summer.06,"Регата — пустая трата лодок. Но красиво. Не говори никому, что я так сказала.",The regatta's a waste of boats. But pretty. Don't tell anyone I said so.
+npc.tora.summer.07,Сделай перерыв. Выпей воды. Упадёшь — я тебя не понесу. Эйнар понесёт.,Take a break. Drink some water. If you fall — I won't carry you. Einar will.
+npc.tora.summer.08,Летом Гудмунд уходил в море до рассвета. Я провожала. Потом перестала провожать.,In summer Gudmund went to sea before dawn. I'd see him off. Then I stopped.
+npc.tora.summer.09,Железо летом мягче. Или я злее. Одно из двух.,Iron's softer in summer. Or I'm angrier. One or the other.
+npc.tora.summer.10,"Если услышишь, как я пою в кузне, — {не слышал|не слышала}. Ясно?",If you hear me singing in the forge — you didn't. Clear?
+npc.tora.autumn.01,"Осень. Скобы, крюки, обручи для бочек. Сельдь всё решает.","Autumn. Brackets, hooks, barrel hoops. Herring decides everything."
+npc.tora.autumn.02,Гудмунда унесло осенью. Не лезь с сочувствием. Лучше подай тот молоток.,Gudmund was taken in autumn. Don't come at me with sympathy. Pass me that hammer instead.
+npc.tora.autumn.03,Ярмарка. Ножи продаются. Кнуд купит один. Как всегда. Он ими не режет. Коллекционирует.,The fair. The knives are selling. Knud will buy one. As always. He doesn't cut with them. He collects them.
+npc.tora.autumn.04,Ветер сорвал вывеску. Эйнар выкует новую. Или я его выкую. Заново.,The wind tore off the sign. Einar will forge a new one. Or I'll reforge him.
+npc.tora.autumn.05,Осенью я злая. Зимой — тоже. Весной и летом — тоже. Постоянство — добродетель.,In autumn I'm cross. In winter too. And spring and summer. Consistency is a virtue.
+npc.tora.autumn.06,Грим заказал фонарь с заслонкой. Большой. Я отказала. Не знаю почему. Нутро сказало.,Grim ordered a lantern with a shutter. A big one. I refused. Don't know why. My gut said so.
+npc.tora.autumn.07,Ты {похудел|похудела}. Ешь больше. Смотритель должен быть тяжёлым. Чтоб ветром не сдуло.,You've lost weight. Eat more. A keeper should be heavy. So the wind doesn't blow you off.
+npc.tora.autumn.08,Длинные вечера. Сижу у горна с элем. Лучшее кресло на острове — табурет у огня.,Long evenings. I sit by the forge with ale. Best chair on the island — a stool by the fire.
+npc.tora.autumn.09,Если идёшь на погост — захвати лом. Земля осенью тяжёлая. Как всё.,If you're going to the graveyard — take a crowbar. Soil's heavy in autumn. Like everything.
+npc.tora.autumn.10,Ржавчина осенью лезет везде. Как Олаф со сплетнями.,Rust gets everywhere in autumn. Like Olaf with his gossip.
+npc.tora.winter.01,Зима. У горна — рай. На улице — наоборот.,Winter. By the forge — paradise. Outside — the opposite.
+npc.tora.winter.02,"Рука болит зимой так, что хочется её отрубить. Не отрублю. Ещё пригодится — орать.",My hand hurts so badly in winter I want to chop it off. I won't. Still need it — for pointing while I shout.
+npc.tora.winter.03,"Эйнар делает коньки близнецам. Бесплатно. Думает, я не знаю. Я знаю. Пусть.",Einar's making skates for the twins. Free. Thinks I don't know. I know. Let him.
+npc.tora.winter.04,Долгая ночь. Рассказываю сыну про отца. Он слушает. Молчит. Весь в меня. То есть в него.,"The long night. I tell my son about his father. He listens. Keeps quiet. Takes after me. I mean, after him."
+npc.tora.winter.05,Лом для могил? Бери. Зимой земля как камень. Как Гримово сердце.,A crowbar for graves? Take it. In winter the ground's like stone. Like Grim's heart.
+npc.tora.winter.06,Снег на крыше кузни тает сразу. Горн греет. Вся деревня ходит греться. Бесплатно. Пока.,Snow on the forge roof melts at once. The fire warms it. The whole village comes to warm up. Free. For now.
+npc.tora.winter.07,"Зимой пью больше. Эль греет. Магнус говорит, что нет. Магнус пьёт аквавит. Кто бы говорил.",I drink more in winter. Ale warms you. Magnus says it doesn't. Magnus drinks aquavit. Look who's talking.
+npc.tora.winter.08,Твой маяк видно из кузни. Два огня на острове работают всю зиму. Мой и твой.,Your lighthouse can be seen from the forge. Two fires on the island work all winter. Mine and yours.
+npc.tora.winter.09,"Сияние. Гудмунд говорил — это кузнецы на небе куют. Глупости. Красиво, но глупости.","The aurora. Gudmund used to say it was smiths forging in the sky. Nonsense. Beautiful, but nonsense."
+npc.tora.winter.10,Весна скоро. Опять лопаты. Опять крики. Жду.,Spring's coming. Spades again. Shouting again. Can't wait.
+npc.tora.weather.rain.01,"Дождь. Рука ноет — значит, я права. Как всегда.",Rain. My hand aches — so I was right. As always.
+npc.tora.weather.rain.02,В дождь все несут чинить старьё. Нашли время.,In rain everyone brings junk to fix. Found the time for it.
+npc.tora.weather.storm.01,Шторм. Закрыли кузню. Сидим у горна. Эйнар не смотрит в окно. Я смотрю за двоих.,Storm. Shut the forge. Sitting by the fire. Einar won't look out of the window. I look for both of us.
+npc.tora.weather.storm.02,Держи огонь. Гудмунд шёл на огонь. Не на твой. Держи свой.,Keep your light going. Gudmund steered for a light. Not yours. Keep yours going.
+npc.tora.weather.fog.01,"Туман. Горн светится, как маяк. Кто-то стучал в дверь ночью. Не открыла.",Fog. The forge glows like a lighthouse. Someone knocked at the door last night. I didn't open.
+npc.tora.weather.fog.02,В тумане металл потеет. И люди. Не люблю.,In fog metal sweats. So do people. Don't like it.
+npc.tora.weather.snow.01,"Снег. Эйнар, крыльцо! …Опять ему кричу. Привычка.","Snow. Einar, the step! …Shouting at him again. Habit."
+npc.tora.weather.cloud.01,Облачно. Хорошо. Солнце не слепит у горна. Хоть что-то хорошо.,Cloudy. Good. No sun in your eyes at the forge. At least something's good.
+npc.tora.festival.boat_blessing.01,Спуск лодок. Все скобы наши. Если хоть одна отвалится — ко мне. Не отвалится.,The Boat Launch. All the brackets are ours. If one falls off — come to me. None will.
+npc.tora.festival.drowned_night.01,Ночь Утопленников. Несу фонарь за Гудмунда. Эйнар несёт второй. Молчим. Лучше слов.,Drowned Night. I carry a lantern for Gudmund. Einar carries another. We keep quiet. Better than words.
+npc.tora.festival.herring_fair.01,Ярмарка. Ставлю стол с ножами и ору цены. Лучший день в году.,The fair. I set out a table of knives and shout prices. Best day of the year.
+npc.tora.festival.ice_festival.01,"Ледовый праздник. Подставки для скульптур — наши. Лёд тает, железо остаётся.","The Ice Festival. The sculpture stands are ours. The ice melts, the iron stays."
+npc.tora.festival.01,Праздник. Все пьют. Я тоже. Эйнар носит мне эль. Хороший сын.,A holiday. Everyone's drinking. Me too. Einar brings me ale. Good son.
+npc.tora.festival.02,Танцевать? Я? Ну… один раз. Если сыграют кузнечную.,Dance? Me? Well… once. If they play the smiths' tune.
+npc.tora.gift.love.01,Железный слиток! Вот это разговор. Ты понимаешь в подарках.,An iron ingot! Now we're talking. You understand gifts.
+npc.tora.gift.love.02,"Эль! Лучший подарок — жидкий. Спасибо. Садись, выпьем.","Ale! The best gift is liquid. Thanks. Sit down, let's drink."
+npc.tora.gift.like.01,Сгодится. Спасибо.,It'll do. Thanks.
+npc.tora.gift.like.02,Хорошее. В дело пойдёт.,Good stuff. It'll get used.
+npc.tora.gift.neutral.01,"Ну, спасибо. Не знаю, зачем мне это. Но спасибо.","Well, thanks. Don't know what I need it for. But thanks."
+npc.tora.gift.neutral.02,Хм. Положу на полку. У меня большая полка для «хм».,Hm. I'll put it on the shelf. I've got a big shelf for 'hm'.
+npc.tora.gift.dislike.01,Сладкое? У меня зубы не железные. Хотя могу выковать.,Sweets? My teeth aren't iron. Though I could forge some.
+npc.tora.gift.dislike.02,"Не моё. Отдай кому-нибудь, кто любит бесполезное.",Not my thing. Give it to someone who likes useless stuff.
+npc.tora.gift.hate.01,"Цветы?! Ты с ума сошёл? Я кузнец, а не клумба!","Flowers?! Have you lost your mind? I'm a smith, not a flowerbed!"
+npc.tora.gift.hate.02,"Убери. И больше не носи. Цветы вянут, а я — нет.","Take them away. And don't bring them again. Flowers wilt, I don't."
+npc.tora.birthday.01,День рождения. Пятьдесят четыре. Не поздравляй. Наливай.,My birthday. Fifty-four. Don't congratulate me. Pour.
+npc.tora.birthday.02,Сын подарил мне новый фартук. Кожаный. Хороший. Не скажу ему. Он и так знает.,My son gave me a new apron. Leather. A good one. I won't tell him. He knows.
+npc.tora.birthday_gift.01,Подарок? Мне? Ну… спасибо. Не смотри так. Я не растрогалась.,A present? For me? Well… thanks. Don't look at me like that. I'm not touched.
+npc.tora.birthday_gift.02,Помнишь мой день. Надо же. Выпей со мной.,You remembered my day. Well I never. Drink with me.
+npc.tora.act1.01,"Агата была единственной, кто платил вовремя. И не торговалась. Уважала.",Agatha was the only one who paid on time. And didn't haggle. I respected her.
+npc.tora.act1.02,Инструменты у тебя старые. Агатины. Надо улучшить. Неси — сделаем.,Your tools are old. Agatha's. They need upgrading. Bring them — we'll do it.
+npc.tora.act1.03,Первый огонь горел неровно. Второй — лучше. Учишься. Хорошо.,The first night's fire burned unevenly. The second — better. You're learning. Good.
+npc.tora.act1.04,"Скобы для фонарной — наши. Если что шатается — неси сюда, не к Гриму.","The lamp-room brackets are ours. If anything's loose — bring it here, not to Grim."
+npc.tora.act1.05,Двадцать восьмое… Гудмунд вышел в море двадцать восьмого. Совпадение. Не люблю совпадения.,The twenty-eighth… Gudmund went to sea on the twenty-eighth. A coincidence. I don't like coincidences.
+npc.tora.act1.06,"Знакомишься со всеми? Меня ты уже знаешь. Громкая, злая, честная. Хватит.","Meeting everyone? You already know me. Loud, angry, honest. That'll do."
+npc.tora.act2.01,"«Святая Берта». Тот же огонь, что видел Гудмунд. Я знала. Двенадцать лет знала.",The Saint Bertha. The same fire Gudmund saw. I knew. Twelve years I've known.
+npc.tora.act2.02,Колокол для Эрланда — обручи мои. Лучшие. Если лопнет — я сама полезу чинить.,The hoops for Erland's bell are mine. The best. If one bursts — I'll go down and fix it myself.
+npc.tora.act2.03,Белая Хмарь. Я стояла у двери кузни с кочергой. Туман не вошёл. Боится меня. Правильно.,The White Fog. I stood at the forge door with a poker. The fog didn't come in. It's afraid of me. Quite right.
+npc.tora.act2.04,Для Большой Хмари сделаем подставки для костров. Шесть. Эйнар уже начал.,For the Great Fog we'll make bonfire stands. Six. Einar's already started.
+npc.tora.act2.05,Лив хочет стекло для иллюминатора. Я сделаю рамку. Она сделает стекло. Разделение труда.,Liv wants glass for a porthole. I'll make the frame. She'll make the glass. Division of labour.
+npc.tora.act2.06,Кай на Мёртвом Огне знал Гудмунда. Спроси его. Мне он ракетой пульнёт.,Kai at the Dead Fire knew Gudmund. Ask him. He'd fire a flare at me.
+npc.tora.act3.01,"Скафандр. Лив рисует, я кую. Если она ещё раз скажет «теоретически» — я её выкую.","The diving suit. Liv draws, I forge. If she says 'theoretically' once more — I'll forge her."
+npc.tora.act3.02,Пятнадцать слитков железа. Десять меди. Пять латуни. Добудь. Остальное — моё дело.,Fifteen iron ingots. Ten copper. Five brass. Get them. The rest is my job.
+npc.tora.act3.03,"Ты спускаешься туда, где лежит Гудмунд. Если найдёшь его нож — принеси. Не проси меня.",You're going down where Gudmund lies. If you find his knife — bring it. Don't make me ask.
+npc.tora.act3.04,"Грим приходил. Спрашивал, что мы куём для смотрителя. Я сказала — гвозди. Для его гроба.",Grim came by. Asked what we're forging for the keeper. I said — nails. For his coffin.
+npc.tora.act3.05,Если пойдёшь на Зубы — возьми Эйнара. Он боится моря. Но людей не боится. А там люди.,If you go to the Teeth — take Einar. He's afraid of the sea. But not of people. And there are people there.
+npc.tora.act3.06,"Улики, говоришь? Мой отказ ковать Гриму фонарь — это улика? Запиши. Мне приятно.","Evidence, you say? My refusal to forge Grim a lantern — is that evidence? Write it down. It'd please me."
+npc.tora.act4.01,В ночь Прилива я на маяке. Механизм вращения сломается — починю. Сразу. Одной рукой.,On Tide Night I'll be at the lighthouse. If the rotation gear breaks — I'll fix it. At once. One-handed.
+npc.tora.act4.02,Эйнар поставил ставни. Я проверила. Выдержат. Он сын своего отца.,Einar put up the shutters. I checked. They'll hold. He's his father's son.
+npc.tora.act4.03,"Если море уйдёт — я пойду смотреть на дно. Туда, где Гудмунд. Не отговаривай.",If the sea goes out — I'll go and look at the bottom. Where Gudmund is. Don't talk me out of it.
+npc.tora.act4.04,Страшно? Нет. Злая. Это лучше страха.,Scared? No. Angry. That's better than fear.
+npc.tora.act4.05,Держи огонь. Я держу молот. Кто сунется — пожалеет.,Hold the light. I'll hold the hammer. Anyone who tries it will regret it.
+npc.tora.act4.06,После всего — эль. Много. За Гудмунда. За Агату. За тебя.,After it's over — ale. Lots. For Gudmund. For Agatha. For you.
+npc.tora.married_other.01,{Женился|Замуж вышла}? Поздравляю. Подкову на дверь выкую.,Married? However you say it. Congratulations. I'll forge a horseshoe for the door.
+npc.tora.married_other.02,Свадьба хорошая была. Я плясала. Не рассказывай.,Good wedding. I danced. Don't tell anyone.
+npc.tora.married_other.03,Держитесь друг за друга. Мы с Гудмундом держались. Пока море не разжало.,Hold on to each other. Gudmund and I held on. Till the sea pried us apart.
+npc.tora.married_other.04,Если супруг обидит — скажи. Я умею разговаривать молотом.,If your spouse wrongs you — tell me. I can talk with a hammer.
+npc.tora.married_other.05,Будь {счастлив|счастлива}. Приказ.,Be happy. That's an order.
+npc.tora.event.wreck.01,Крушение. Кую скобы для гробов. Молча. Не лезь.,A wreck. Forging coffin brackets. Silently. Leave me be.
+npc.tora.event.wreck.02,Опять ясная ночь. Опять корабль. Как с Гудмундом. Кто-то это делает.,A clear night again. A ship again. Like Gudmund. Someone's doing this.
+npc.tora.event.wreck.03,Ограды для новых могил — бесплатно. Не спорь со мной.,Railings for the new graves — free. Don't argue with me.
+npc.tora.event.wreck.04,Эйнар не спал. Сидел у горна. Я сидела рядом. Так и сидели.,Einar didn't sleep. Sat by the forge. I sat beside him. That's how we sat.
+npc.tora.event.wreck.05,Если надо нести тела — зови Эйнара. Он сильный. И молчит. Им это нравится.,If you need bodies carried — call Einar. He's strong. And quiet. They'd like that.
+npc.tora.event.funeral.01,"{Похоронил|Похоронила}? Хорошо. Мёртвым — земля, живым — работа.","Buried? Good. Earth for the dead, work for the living."
+npc.tora.event.funeral.02,"Лом {держал|держала} правильно? Если нет — приходи, покажу.","Did you hold the crowbar right? If not — come by, I'll show you."
+npc.tora.event.funeral.03,Ограда вокруг могилы — чтоб знали: здесь кто-то есть. И кто-то о нём помнит.,A railing round a grave — so they know: someone's here. And someone remembers.
+npc.tora.event.funeral.04,Похороны — тяжёлая работа. Кузня — тоже. Мы с тобой одной породы.,"Burials are hard work. So is the forge. We're the same breed, you and I."
+npc.tora.event.funeral.05,Гудмунда так и не похоронили. Моря не хватило вернуть. Твоих — возвращает. Хорошо.,Gudmund was never buried. The sea wouldn't give him back. It gives yours back. Good.
+npc.tora.event.hmar.01,Ночь Хмари. Горн не гасили. Туман к огню не лезет. Как и я к Гриму.,Fog Night. Kept the forge lit. The fog won't go near fire. Like me with Grim.
+npc.tora.event.hmar.02,Слышала голос Гудмунда. Звал. Я крикнула: «Иди домой!» Замолчал.,I heard Gudmund's voice. Calling. I shouted: 'Go home!' He went quiet.
+npc.tora.event.hmar.03,Эйнар держал дверь. Всю ночь. Хороший сын.,Einar held the door. All night. Good son.
+npc.tora.event.hmar.04,Твой свет проходил по кузне. Как будто кто-то проверял. Спасибо.,Your light swept the forge. As if someone were checking. Thanks.
+npc.tora.event.hmar.05,Утром на наковальне соль. Много. Я её стёрла. Не хочу знать.,In the morning there was salt on the anvil. A lot. I wiped it off. Don't want to know.
+npc.tora.event.inspection.01,Пальм проверял скобы. Сказал «удовлетворительно». Он дурак. Они отличные.,Palm checked the brackets. Said 'satisfactory'. He's a fool. They're excellent.
+npc.tora.event.inspection.02,{Сдал|Сдала}? Хорошо. Агата сдавала всегда. Ты не хуже.,Passed? Good. Agatha always passed. You're no worse.
+npc.tora.event.inspection.03,Инспектор боится моего горна. Стоит у двери. Правильно делает.,The inspector's afraid of my forge. Stands by the door. Wise of him.
+npc.tora.event.inspection.04,"Пункт такой-то, пункт сякой-то. А огонь горит или нет — вот и весь устав.","Clause this, clause that. Does the fire burn or not — that's the whole rulebook."
+npc.tora.event.inspection.05,Инспекция прошла — выпей. Не прошла — тоже выпей. Эль не спрашивает.,Passed the inspection — have a drink. Failed — have a drink too. Ale doesn't ask.
+npc.tora.event.wedding.01,Свадьба! Кольца — работы Эйнара. Если жмут — к нему. Не жмут. Он сын своей матери.,The wedding! The rings are Einar's work. If they pinch — go to him. They won't. He's his mother's son.
+npc.tora.event.wedding.02,Плясала. Раз. Больше не буду. До следующей свадьбы.,Danced. Once. Won't again. Till the next wedding.
+npc.tora.event.wedding.03,Хорошая пара. Держитесь. Море любит разлучать.,A good match. Hold on. The sea loves to part people.
+npc.tora.event.wedding.04,Бьорн наливал щедро. Бенедикт стоял у стены. Хедда бросила сельдь. Нормальная свадьба.,Bjorn poured generously. Benedict stood by the wall. Hedda threw a herring. A normal wedding.
+npc.tora.event.wedding.05,Счастья. И крепкой крыши. Это тоже счастье.,Happiness. And a sturdy roof. That's happiness too.
+npc.tora.event.villains.01,Грим в кандалах. Кандалы — мои. Выковала сама. Бесплатно. С удовольствием.,Grim's in irons. The irons are mine. Forged them myself. Free. With pleasure.
+npc.tora.event.villains.02,"Гудмунд может спать. Двенадцать лет — и он может спать. Я тоже, может быть.",Gudmund can sleep now. Twelve years — and he can sleep. Maybe me too.
+npc.tora.event.villains.03,Эйнар сходил на Зубы. На лодке. Сам. Я плакала. Никому.,Einar went out to the Teeth. By boat. On his own. I cried. Tell no one.
+npc.tora.event.villains.04,Братья Скау… Нут — дрянь. Руд — дурак. Дуракам можно простить. Иногда.,The Skau brothers… Nut's scum. Rud's a fool. Fools can be forgiven. Sometimes.
+npc.tora.event.villains.05,"Спасибо, смотритель. Я не говорю «спасибо». Запомни этот день.","Thank you, keeper. I don't say thank you. Remember this day."
+ev.tora2.l01,"Встань сюда. Плавка. Руда — в тигель, тигель — в горн. Мехи качаешь ты. У меня рука не та.","Stand here. Smelting. Ore in the crucible, crucible in the forge. You work the bellows. My hand's not up to it."
+ev.tora2.l02,"Ровнее! Не рви! Горн не любит, когда рвут. Как и я.",Evenly! Don't jerk it! The forge hates jerking. So do I.
+ev.tora2.c01,"Качать ровно, считая про себя.","Pump evenly, counting under my breath."
+ev.tora2.c02,Качать изо всех сил.,Pump as hard as I can.
+ev.tora2.l03,"Вот. Слиток. Чистый. Ты, может, и не безнадёжен.",There. An ingot. A clean one. Maybe you're not hopeless.
+ev.tora2.l04,"Вот. Слиток. Чистый. Ты, может, и не {безнадёжен|безнадёжна}.",Slag. Nothing but slag. Never mind. Gudmund made slag his first time too. Then he learned.
+ev.tora4.l01,Садись. Эль. Не спорь. Расскажу про Гудмунда. Один раз. Больше не спрашивай.,Sit. Ale. Don't argue. I'll tell you about Gudmund. Once. Don't ask again.
+ev.tora4.l02,"Он был кузнец и рыбак. Утром — в море, вечером — у горна. Руки как якоря.","He was a smith and a fisherman. Mornings at sea, evenings at the forge. Hands like anchors."
+ev.tora4.l03,Он видел огонь на Зубах. Сказал Гриму. Через неделю не вернулся. Ясная ночь. Я не дура.,He saw the fire on the Teeth. Told Grim. A week later he didn't come back. A clear night. I'm not a fool.
+ev.tora4.l04,Вот. Рецепт янтарного кольца. Гудмунд сделал мне такое. Сделай кому-нибудь. Кому надо.,Here. The recipe for the amber ring. Gudmund made me one. Make one for someone. Someone who needs it.
+ev.tora6.l01,"Слушай. Мне надо, чтобы ты кое-что {сделал|сделала}. Уговори Эйнара выйти в море.",Listen. I need you to do something. Talk Einar into going to sea.
+ev.tora6.l02,"Он сидит на холме и смотрит. Десять лет. Он думает, море его заберёт, как отца. Оно не заберёт. Люди забрали.",He sits on the hill and watches. Ten years. He thinks the sea will take him like his father. It won't. People took his father.
+ev.tora6.c01,Я попробую. На тихой воде.,I'll try. On calm water.
+ev.tora6.c02,"Это его выбор, Тора.","It's his choice, Tora."
+ev.tora6.l03,На тихой. Да. Он тебе верит. Мне — нет. Я мать. Матерям не верят.,On calm water. Yes. He trusts you. Not me. I'm his mother. Nobody trusts mothers.
+ev.tora6.l04,Его выбор — сидеть на холме до старости? Ладно. Иди. Сама справлюсь. Как всегда.,His choice is to sit on a hill until he's old? Fine. Go. I'll manage myself. As always.
+ev.tora8.l01,"Держи. Клещи Гудмунда. Лучшие на острове. С ними я улучшаю инструменты за день, не за два.","Here. Gudmund's tongs. Best on the island. With them I upgrade tools in a day, not two."
+ev.tora8.l02,"Теперь они у тебя. Значит, твои инструменты — всегда за день. Не спорь. Не благодари. Иди работай.",Now they're yours. That means your tools are always done in a day. Don't argue. Don't thank me. Go and work.
+ev.tora10.l01,Садись. Сегодня пьём вдвоём. Эйнар пусть дома сидит. Это взрослый разговор.,Sit. Tonight it's just the two of us. Einar can stay home. This is a grown-up conversation.
+ev.tora10.l02,Ты мне как… Нет. Не скажу. Громко не скажу. Ты {понял|поняла}.,You're like a… No. I won't say it. Not out loud. You understand.
+ev.tora10.l03,Раз в сезон буду тебе что-нибудь ковать. Бесплатно. Просто так. Потому что могу.,Once a season I'll forge you something. Free. Just because. Because I can.
+npc.ilm.spring.01,Весна.,Spring.
+npc.ilm.spring.02,Доски. Сырые.,Boards. Damp.
+npc.ilm.spring.03,Работа есть.,There's work.
+npc.ilm.spring.04,Лодки. Чинить.,Boats. Mending.
+npc.ilm.spring.05,Кнуд болтает. Я — нет.,Knud talks. I don't.
+npc.ilm.spring.06,Хорошее утро.,Good morning.
+npc.ilm.spring.07,Смола дорогая.,Resin's dear.
+npc.ilm.spring.08,Гроб. Колыбель. Весна.,Coffin. Cradle. Spring.
+npc.ilm.spring.09,Руки покажи. Годятся.,Show your hands. They'll do.
+npc.ilm.spring.10,Агата. Хорошая была.,Agatha. Was a good one.
+npc.ilm.summer.01,Лето.,Summer.
+npc.ilm.summer.02,Жарко. Сохнет.,Hot. Drying.
+npc.ilm.summer.03,Мачта. Новая.,Mast. New one.
+npc.ilm.summer.04,Кнуд рыбачит. Пусть.,Knud's fishing. Let him.
+npc.ilm.summer.05,Сухая доска — хорошая доска.,Dry board — good board.
+npc.ilm.summer.06,Лив. Шумная.,Liv. Noisy.
+npc.ilm.summer.07,Регата. Кубок — Кнудов.,Regatta. Trophy's Knud's.
+npc.ilm.summer.08,Туристы. Мешают.,Tourists. In the way.
+npc.ilm.summer.09,Солнце. Хорошо.,Sun. Good.
+npc.ilm.summer.10,Строить. Пока светло.,Build. While it's light.
+npc.ilm.autumn.01,Осень.,Autumn.
+npc.ilm.autumn.02,Гробы. Много.,Coffins. Lots.
+npc.ilm.autumn.03,Ветер. Крыши.,Wind. Roofs.
+npc.ilm.autumn.04,Сельдь. Бочки.,Herring. Barrels.
+npc.ilm.autumn.05,Жена. Осенью. Давно.,My wife. In autumn. Long ago.
+npc.ilm.autumn.06,Дуб. Морёный. Беру.,Oak. Bog oak. I'll buy it.
+npc.ilm.autumn.07,Кнуд. Хороший сын.,Knud. Good son.
+npc.ilm.autumn.08,Шторм. Ставни.,Storm. Shutters.
+npc.ilm.autumn.09,Ярмарка. Не хожу.,The fair. I don't go.
+npc.ilm.autumn.10,Листья. Метла.,Leaves. Broom.
+npc.ilm.winter.01,Зима.,Winter.
+npc.ilm.winter.02,Сани.,Sledges.
+npc.ilm.winter.03,Мёрзлая земля. Ждут.,Frozen ground. They wait.
+npc.ilm.winter.04,Печь. Тепло.,Stove. Warm.
+npc.ilm.winter.05,Снег. Крыша. Лезу.,Snow. Roof. Climbing.
+npc.ilm.winter.06,Кнуд держит лестницу. Хорошо.,Knud holds the ladder. Good.
+npc.ilm.winter.07,Долгая ночь. Строгаю.,Long night. Planing.
+npc.ilm.winter.08,Сияние. Красиво.,Aurora. Beautiful.
+npc.ilm.winter.09,Холодно. Работай.,Cold. Work.
+npc.ilm.winter.10,Твой огонь. Виден.,Your light. Visible.
+npc.ilm.weather.rain.01,Сыро.,Damp.
+npc.ilm.weather.rain.02,Дождь. Доски в сарай.,Rain. Boards in the shed.
+npc.ilm.weather.storm.01,Шторм. Гробы.,Storm. Coffins.
+npc.ilm.weather.storm.02,Держи огонь.,Keep the light.
+npc.ilm.weather.fog.01,Туман. Дома сиди.,Fog. Stay in.
+npc.ilm.weather.fog.02,Туман. Плохо.,Fog. Bad.
+npc.ilm.weather.snow.01,Снег. Сани.,Snow. Sledges.
+npc.ilm.weather.cloud.01,Облачно. Работаем.,Cloudy. We work.
+npc.ilm.festival.boat_blessing.01,Лодки. Наши.,The boats. Ours.
+npc.ilm.festival.drowned_night.01,Фонарь. За жену.,Lantern. For my wife.
+npc.ilm.festival.ice_festival.01,Кнуд. Лёд. Маяк.,Knud. Ice. Lighthouse.
+npc.ilm.festival.regatta.01,Кубок. Не утопите.,The trophy. Don't sink it.
+npc.ilm.festival.01,Праздник. Хм.,Holiday. Hm.
+npc.ilm.festival.02,Пей. Я — нет.,Drink. I won't.
+npc.ilm.gift.love.01,Дуб! Спасибо.,Oak! Thanks.
+npc.ilm.gift.love.02,Хорошо. Очень.,Good. Very.
+npc.ilm.gift.like.01,Годится.,It'll do.
+npc.ilm.gift.like.02,Спасибо.,Thanks.
+npc.ilm.gift.neutral.01,Хм.,Hm.
+npc.ilm.gift.neutral.02,Ладно.,All right.
+npc.ilm.gift.dislike.01,Не надо.,Don't.
+npc.ilm.gift.dislike.02,Мусор.,Rubbish.
+npc.ilm.gift.hate.01,Нет.,No.
+npc.ilm.gift.hate.02,Убери.,Take it away.
+npc.ilm.birthday.01,День рождения. Шестьдесят.,Birthday. Sixty.
+npc.ilm.birthday.02,Кнуд. Рубанок подарил. Хорошо.,Knud. Gave me a plane. Good.
+npc.ilm.birthday_gift.01,Помнишь. Спасибо.,You remember. Thanks.
+npc.ilm.birthday_gift.02,Подарок. Хм. Хорошо.,A present. Hm. Good.
+npc.ilm.act1.01,Лодка Агаты. Два дня.,Agatha's boat. Two days.
+npc.ilm.act1.02,Лестница. Десять досок.,The stairs. Ten boards.
+npc.ilm.act1.03,Огонь. Горит. Хорошо.,The fire. Burning. Good.
+npc.ilm.act1.04,Гроб. Агатин. Пустой.,The coffin. Agatha's. Empty.
+npc.ilm.act1.05,Три гроба. Заранее.,Three coffins. In advance.
+npc.ilm.act1.06,Грим. Не люблю.,Grim. Don't like him.
+npc.ilm.act2.01,«Берта». Три гроба. Знал.,The Bertha. Three coffins. I knew.
+npc.ilm.act2.02,Двадцать. Сделаю.,Twenty. I'll make them.
+npc.ilm.act2.03,Лебёдка. Для ялика.,A winch. For the dinghy.
+npc.ilm.act2.04,Шлюпка. Эрланд. Доски.,The sloop. Erland. Boards.
+npc.ilm.act2.05,Туман злой.,Fog's angry.
+npc.ilm.act2.06,Щиты. На окна. Всем.,Shields. For windows. Everyone.
+npc.ilm.act3.01,Глубь. Осторожно.,The Deep. Careful.
+npc.ilm.act3.02,Грим. Ящик. Отказал.,Grim. A box. I refused.
+npc.ilm.act3.03,Большой гроб. Делаю.,Big coffin. Making it.
+npc.ilm.act3.04,Для кого? Не скажу.,Who for? Won't say.
+npc.ilm.act3.05,Рамка. Для доски улик. Кнуд.,Frame. For the evidence board. Knud.
+npc.ilm.act3.06,Возвращайся.,Come back.
+npc.ilm.act4.01,Дверь. Заколочу.,The door. I'll board it.
+npc.ilm.act4.02,Ночь. Длинная.,The night. A long one.
+npc.ilm.act4.03,Кнуд. Молоток. Мой.,Knud. The hammer. Mine.
+npc.ilm.act4.04,Страшно? Нет.,Scared? No.
+npc.ilm.act4.05,Держи огонь.,Keep the light.
+npc.ilm.act4.06,Потом. Скамейку.,Afterwards. A bench.
+npc.ilm.married_other.01,Поздравляю.,Congratulations.
+npc.ilm.married_other.02,Кровать. Двойная. Сделаю.,A bed. A double. I'll make one.
+npc.ilm.married_other.03,Хорошо.,Good.
+npc.ilm.married_other.04,Совет да любовь.,Love and harmony.
+npc.ilm.married_other.05,Живите. Долго.,Live. Long.
+npc.ilm.event.wreck.01,Крушение. Пилю.,A wreck. Sawing.
+npc.ilm.event.wreck.02,Гробы. Сколько?,Coffins. How many?
+npc.ilm.event.wreck.03,Ясная ночь. Не море.,Clear night. Not the sea.
+npc.ilm.event.wreck.04,Молчу. Работаю.,Quiet. Working.
+npc.ilm.event.wreck.05,Кнуд. Не шутит сегодня.,Knud. No jokes today.
+npc.ilm.event.funeral.01,Гроб не скрипел?,Did the coffin creak?
+npc.ilm.event.funeral.02,Хорошо {похоронил|похоронила}.,Buried well.
+npc.ilm.event.funeral.03,Крест. Ровный.,The cross. Straight.
+npc.ilm.event.funeral.04,Спят. Хорошо.,Sleeping. Good.
+npc.ilm.event.funeral.05,Земля. Лучше моря.,Earth. Better than sea.
+npc.ilm.event.hmar.01,Стучал. Всю ночь.,Hammered. All night.
+npc.ilm.event.hmar.02,Чтобы слышали.,So they hear.
+npc.ilm.event.hmar.03,Туман. Ушёл.,The fog. Gone.
+npc.ilm.event.hmar.04,Башмачки. На крыльце.,Little shoes. On the step.
+npc.ilm.event.hmar.05,Свет твой. Видел.,Your light. Saw it.
+npc.ilm.event.inspection.01,Перила. Крепкие.,The rail. Solid.
+npc.ilm.event.inspection.02,Пальм. Строгий. Хорошо.,Palm. Strict. Good.
+npc.ilm.event.inspection.03,{Сдал|Сдала}? Молодец.,Passed? Well done.
+npc.ilm.event.inspection.04,Лестница. Наша.,The stairs. Ours.
+npc.ilm.event.inspection.05,Бумаги. Не люблю.,Paperwork. Don't like it.
+npc.ilm.event.wedding.01,Столы. Мои.,Tables. Mine.
+npc.ilm.event.wedding.02,Совет да любовь.,Love and harmony.
+npc.ilm.event.wedding.03,Кнуд плясал. Плохо.,Knud danced. Badly.
+npc.ilm.event.wedding.04,Хорошая свадьба.,Good wedding.
+npc.ilm.event.wedding.05,Живите.,Live well.
+npc.ilm.event.villains.01,Грим. Всё.,Grim. Done.
+npc.ilm.event.villains.02,Большой гроб. Не нужен.,Big coffin. Not needed.
+npc.ilm.event.villains.03,Шкаф. Потайной ящик. Знал бы.,Wardrobe. Secret drawer. If I'd known.
+npc.ilm.event.villains.04,Спасибо.,Thank you.
+npc.ilm.event.villains.05,Тихо стало. Хорошо.,It's quiet now. Good.
+ev.ilm2.l01,Смотри.,Look.
+ev.ilm2.l02,"(Ильм разворачивает на верстаке пожелтевший чертёж: маяк «Вороний Глаз» в разрезе, дата — сто лет назад.)","(Ilm unrolls a yellowed drawing on the workbench: the Raven's Eye lighthouse in section, dated a hundred years ago.)"
+ev.ilm2.l03,Дед строил. Лестница — вот. Ниша — вот. Не знаешь? Узнаешь.,Grandfather built it. The stairs — here. A niche — here. Didn't know? You will.
+ev.ilm4.l01,Жена.,My wife.
+ev.ilm4.l02,"Её звали Марта, она пахла стружкой и молоком, пела, когда строгала, смеялась, когда я молчал, и говорила, что я молчу за двоих, а она поёт за двоих, и значит, у нас всё поровну, а когда родился Кнуд, она не встала, и я сделал колыбель и гроб в одну неделю одними руками, и с тех пор говорю мало, потому что всё, что хотел сказать, я сказал ей, а новых слов так и не нашёл.","Her name was Marta, she smelled of shavings and milk, she sang while she planed, laughed when I said nothing, and said I kept quiet for two while she sang for two, so everything between us was even, and when Knud was born she didn't get up again, and I made a cradle and a coffin in the same week with the same hands, and since then I've spoken little, because everything I wanted to say I said to her, and I never found any new words."
+ev.ilm4.l03,Всё.,That's all.
+ev.ilm6.l01,Постройки. Тебе. Скидка.,Buildings. For you. Discount.
+ev.ilm6.l02,Десять процентов. Кнуду не говори. Разорит.,Ten percent. Don't tell Knud. He'll ruin me.
+ev.ilm8.l01,Чертёж. «Маячный камень». Дедов.,A drawing. 'Lighthouse stone'. Grandfather's.
+ev.ilm8.l02,Кладка. Крепче. Бери.,Masonry. Stronger. Take it.
+ev.ilm10.l01,Садись.,Sit.
+ev.ilm10.l02,(Вы сидите с Ильмом на бревне у гавани целый час. Он не говорит ни слова. Это самый тёплый час за сезон.),(You sit with Ilm on a log by the harbour for a whole hour. He doesn't say a word. It's the warmest hour of the season.)
+ev.ilm10.l03,Хорошо.,Good.

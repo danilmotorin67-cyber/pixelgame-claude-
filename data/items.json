@@ -2704,5 +2704,21 @@
     "tags": [
       "expensive"
     ]
+  },
+  {
+    "id": "grim_watch",
+    "name": "item.grim_watch.name",
+    "desc": "item.grim_watch.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "family_tongs",
+    "name": "item.family_tongs.name",
+    "desc": "item.family_tongs.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
   }
 ]

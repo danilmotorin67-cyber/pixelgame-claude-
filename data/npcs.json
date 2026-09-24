@@ -417,7 +417,8 @@
     "tag:shells"
    ]
   },
-  "max_hearts": 6
+  "max_hearts": 6,
+  "freeze_after_act": 3
  },
  {
   "id": "npc_stern",

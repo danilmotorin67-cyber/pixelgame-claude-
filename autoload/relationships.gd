@@ -52,6 +52,9 @@ func cap(npc: String) -> int:
 
 
 func add_friendship(npc: String, pts: int) -> void:
+	var freeze := int(Data.by_id("npcs", npc).get("freeze_after_act", 0))
+	if freeze > 0 and Dialogue.story_act() > freeze:
+		return
 	var before := hearts_of(npc)
 	points[npc] = clampi(int(points.get(npc, 0)) + pts, 0, cap(npc) * HEART)
 	if hearts_of(npc) != before:

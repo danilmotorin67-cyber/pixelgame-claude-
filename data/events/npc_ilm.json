@@ -1,0 +1,331 @@
+{
+ "events": [
+  {
+   "id": "ev_ilm_2",
+   "npc": "npc_ilm",
+   "hearts": 2,
+   "trigger": {
+    "map": "village_ilm",
+    "hours": [
+     8,
+     17
+    ],
+    "when": "hearts('npc_ilm') >= 2 and weekday != 'tue'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_ilm",
+     "counter",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm2.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ilm2.l02"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm2.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "ilm_blueprint_seen"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_ilm_4",
+   "npc": "npc_ilm",
+   "hearts": 4,
+   "trigger": {
+    "map": "village_ilm",
+    "hours": [
+     17,
+     21
+    ],
+    "when": "hearts('npc_ilm') >= 4"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_ilm",
+     "workshop",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      5,
+      5
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "sad",
+     "ev.ilm4.l01"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "sad",
+     "ev.ilm4.l02"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm4.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "ilm_marta"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_ilm_6",
+   "npc": "npc_ilm",
+   "hearts": 6,
+   "trigger": {
+    "map": "village_ilm",
+    "hours": [
+     8,
+     17
+    ],
+    "when": "hearts('npc_ilm') >= 6 and weekday != 'tue'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_ilm",
+     "counter",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm6.l01"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm6.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "ilm_discount"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_ilm_8",
+   "npc": "npc_ilm",
+   "hearts": 8,
+   "trigger": {
+    "map": "village_ilm",
+    "hours": [
+     8,
+     17
+    ],
+    "when": "hearts('npc_ilm') >= 8 and weekday != 'tue'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_ilm",
+     "counter",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      4,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm8.l01"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm8.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "recipe",
+       "blueprint_lighthouse_stone"
+      ],
+      [
+       "flag",
+       "ilm_lighthouse_stone"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_ilm_10",
+   "npc": "npc_ilm",
+   "hearts": 10,
+   "trigger": {
+    "map": "village",
+    "hours": [
+     17,
+     20
+    ],
+    "when": "hearts('npc_ilm') >= 10"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_ilm",
+     "harbour_view",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      65,
+      45
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "neutral",
+     "ev.ilm10.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ilm10.l02"
+    ],
+    [
+     "say",
+     "npc_ilm",
+     "happy",
+     "ev.ilm10.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "ilm_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}
