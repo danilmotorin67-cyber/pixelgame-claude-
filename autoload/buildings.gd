@@ -140,6 +140,14 @@ func store_feed(id: String, count: int) -> int:
 	return n
 
 
+# 13.13: a scythe on meadow grass gives hay half the time, straight into the hayloft.
+func mow(rng_value: float) -> int:
+	if level("hayloft") <= 0 or hay >= hay_capacity() or rng_value >= 0.5:
+		return 0
+	hay += 1
+	return 1
+
+
 func serialize() -> Dictionary:
 	return {"levels": levels, "order": order, "hay": hay}
 

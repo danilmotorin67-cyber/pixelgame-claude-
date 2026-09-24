@@ -297,6 +297,12 @@
         "sail": 1.8,
         "hold": 24,
         "zones": 2
+      },
+      "bot": {
+        "row": 0.9,
+        "sail": 2.2,
+        "hold": 36,
+        "zones": 3
       }
     },
     "wind_angles": [

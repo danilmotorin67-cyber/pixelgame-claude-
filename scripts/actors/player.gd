@@ -284,6 +284,14 @@ func _gather(at: Vector2) -> bool:
 		play_tool("hoe", at)
 		_say("Песок: +1.")
 		return true
+	if id == "tool_scythe" and Router.current_map in ["cape", "moor", "birch"] and Buildings.level("hayloft") > 0 \
+			and not Fishing.is_water(Router.current_map, at):
+		spend_energy("scythe")
+		play_tool("hoe", at)
+		var got := Buildings.mow(randf())
+		_say("Сено в сенник: +1 (%d из %d)." % [Buildings.hay, Buildings.hay_capacity()] if got > 0
+			else ("Сенник полон." if Buildings.hay >= Buildings.hay_capacity() else "Трава скошена, сена не вышло."))
+		return true
 	if id == "tool_axe" and Router.current_map == "birch":
 		var felled := Crafting.fell_birch("birch", at)
 		if felled.has("log"):

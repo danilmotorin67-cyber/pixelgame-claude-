@@ -359,6 +359,101 @@ func _check_skills() -> void:
 	_check(Data.all("knowledge_tree").size() >= 90, "the whole tree of 26.2 is in the data")
 
 
+# 21.5: Ilm builds one thing at a time, from the day after payment; each building does its job.
+func _check_buildings() -> void:
+	_fresh()
+	var offer := Economy.shop_stock("shop_ilm").filter(func(e: Dictionary) -> bool: return e.has("building"))
+	var ids: Array = offer.map(func(e: Dictionary) -> String: return str(e["building"]))
+	_check("house" in ids and "well" in ids and not "coop" in ids, "Ilm offers the house and the well; the coop needs Z3")
+	Economy.money = 200000
+	_check(Buildings.place_order("house") == "materials", "the house needs 450 boards")
+	Inventory.add("boards", 999)
+	Inventory.add("stone", 999)
+	_check(Buildings.place_order("house") == "ok" and Economy.money == 190000 and Inventory.count_of("boards") == 549,
+		"house level 1: 10 000 crowns and 450 boards")
+	_check(Buildings.place_order("well") == "busy", "one building at a time")
+	for night in 3:
+		Clock.day_index += 1
+		_check(Buildings.night() == "", "not finished on night %d" % (night + 1))
+	Clock.day_index += 1
+	var mail_before := Mail.letters.size()
+	_check(Buildings.night() == "house" and Buildings.level("house") == 1, "the house is ready on the 4th morning (3 days from the next day)")
+	_check(Mail.letters.size() == mail_before + 1 and str(Mail.letters[-1]["items"][0][0]) == "kitchen_stove", "the kitchen stove arrives with it")
+	Inventory.add("amber_ring", 1)
+	var ring := -1
+	for i in Inventory.capacity:
+		if str(Inventory.slots[i]["id"]) == "amber_ring":
+			ring = i
+	_check(str(Relationships.give("npc_hedda", ring).get("reason", "")) != "house", "with a house the ring is no longer refused for want of one")
+	# graveyard extension, ice house, greenhouse
+	_check(Buildings.place_order("graveyard_ext") == "ok", "the graveyard extension")
+	Clock.day_index += 3
+	Buildings.night()
+	_check(Graveyard.graves.size() == 24 and Graveyard.block_count() == 2, "24 plots in two blocks")
+	_check(Graveyard.plot_position(12).x > Graveyard.plot_position(3).x, "the new block lies east of the old one")
+	Knowledge.unlock("P7")
+	Knowledge.unlock("P10")
+	Inventory.add("iron_ingot", 20)
+	_check(Buildings.place_order("ice_house") == "ok", "the ice house after P10")
+	Clock.day_index += 4
+	Buildings.night()
+	var b := {"id": "t", "where": "morgue", "preservation": 100.0, "arrived": Clock.day_index, "restless": false}
+	Graveyard.bodies.append(b)
+	Graveyard.advance_night(false)
+	_check(is_equal_approx(float(b["preservation"]), 98.0), "in the ice house bodies lose 2 a day")
+	Graveyard.bodies.erase(b)
+	Knowledge.unlock("Z2")
+	Knowledge.unlock("Z7")
+	Knowledge.unlock("Z13")
+	Inventory.add("glass", 30)
+	_check(Buildings.place_order("greenhouse_small") == "ok", "the small greenhouse after Z13")
+	Clock.day_index += 4
+	Buildings.night()
+	_check(Farm.opened.has("greenhouse_small"), "the greenhouse plot opens")
+	Clock.day_index = 84 + 3
+	_check(Clock.season == "winter", "winter")
+	_check(Farm.till(Vector2i(1, 1), "greenhouse_small"), "the greenhouse soil can be tilled")
+	Inventory.add("seed_rhubarb", 1)
+	_check(Farm.plant(Vector2i(1, 1), "seed_rhubarb", "greenhouse_small"), "spring rhubarb grows in a winter greenhouse")
+	_check(not Farm.plant(Vector2i(0, 0), "seed_rhubarb"), "but not outdoors")
+	for day in 14:
+		Farm.water(Vector2i(1, 1), "greenhouse_small")
+		Farm.advance_day(day == 3)
+	_check(bool(Farm.get_tile(Vector2i(1, 1), "greenhouse_small")["ready"]), "storms do not reach inside the greenhouse")
+	# the hayloft and the Ilm discount
+	Knowledge.unlock("Z4")
+	Buildings.place_order("hayloft")
+	Clock.day_index += 3
+	Buildings.night()
+	_check(Buildings.hay_capacity() == 240 and Buildings.mow(0.1) == 1 and Buildings.mow(0.9) == 0, "the scythe fills the hayloft half the time")
+	Inventory.add("hay", 10)
+	_check(Buildings.store_feed("hay", 10) == 10 and Buildings.hay == 11, "hay goes into the hayloft")
+	var price := int(Buildings.next_level_info("well")["price"])
+	Relationships.set_hearts("npc_ilm", 6)
+	_check(int(Buildings.next_level_info("well")["price"]) == int(round(price * 0.9)), "Ilm at 6 hearts: 10% off")
+	# the workshop and its interior
+	Knowledge.unlock("R6")
+	Knowledge.unlock("R16")
+	Inventory.add("boards", 300)
+	var workshop_reason := Buildings.place_order("workshop")
+	_check(workshop_reason == "ok", "the workshop after R16: " + workshop_reason)
+	Clock.day_index += 4
+	Buildings.night()
+	_check(MapInfo.is_interior("cape_workshop") and Mail.letters[-1]["items"][0][0] == "mill", "the workshop brings the mill")
+	Inventory.add("mill", 1)
+	Inventory.select_hotbar(0)
+	for i in Inventory.HOTBAR:
+		if str(Inventory.slots[i]["id"]) == "mill":
+			Inventory.select_hotbar(i)
+	_check(Crafting.place_selected("cape_workshop", Vector2(40, 40)) and Crafting.objects("cape_workshop", "mill").size() == 1,
+		"stations stand in the workshop")
+	# saves
+	var saved := JSON.stringify(Buildings.serialize())
+	Buildings.reset()
+	Buildings.deserialize(JSON.parse_string(saved))
+	_check(Buildings.level("house") == 1 and Buildings.level("workshop") == 1 and Buildings.hay == 11, "buildings survive a save")
+
+
 func _quality_of(id: String) -> int:
 	for slot in Inventory.slots:
 		if str(slot["id"]) == id:
@@ -372,5 +467,6 @@ func _run() -> void:
 	_check_engine()
 	_check_world_stations()
 	_check_skills()
+	_check_buildings()
 	print("M7 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)
