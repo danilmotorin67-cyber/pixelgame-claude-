@@ -4148,3 +4148,257 @@ npc.freya.event.villains.04,"Девочка из тумана больше не 
 npc.freya.event.villains.05,Ты {победил|победила}. Я знала. Я записала. На первой странице. Большими буквами.,You won. I knew it. I wrote it down. On the first page. In big letters.
 ev.freya10.l01,Держи. Это карта сокровищ. Я рисовала её три недели. Нильс не знает.,Here. It's a treasure map. I drew it for three weeks. Nils doesn't know.
 ev.freya10.l02,"Крестики: пирог Сольвейг, могила кота на пустоши и… твой маяк. Это самое главное сокровище. Я проверила.","The crosses: Solveig's pie, a cat's grave on the moor and… your lighthouse. That's the biggest treasure. I checked."
+npc.palm.spring.01,Пункт четырнадцатый: огонь должен гореть. Пункт пятнадцатый: см. пункт четырнадцатый.,Clause fourteen: the fire must burn. Clause fifteen: see clause fourteen.
+npc.palm.spring.02,"Весенняя инспекция. Двадцать восьмое число, десять ноль-ноль. Я не опаздываю. Опаздывают корабли. Иногда навсегда.","The spring inspection. The twenty-eighth, ten sharp. I am never late. Ships are late. Sometimes for ever."
+npc.palm.spring.03,Пункт третий устава: смотритель обязан кормить кота. Проверим.,Clause three of the regulations: the keeper is obliged to feed the cat. We shall check.
+npc.palm.spring.04,Лестница маяка — сто двенадцать ступеней. Я считаю каждый раз. Каждый раз — сто двенадцать. Успокаивает.,"The lighthouse stair — one hundred and twelve steps. I count them every time. Every time, one hundred and twelve. Soothing."
+npc.palm.spring.05,Весной приливы выше. Пункт сорок второй: учитывать. Вы учитываете? Записываю: «учитывает».,Spring tides run higher. Clause forty-two: take into account. Do you? Noting: 'takes into account'.
+npc.palm.spring.06,"Я пью только чай. Пункт личный, не уставной. Но соблюдаю строже уставных.","I drink only tea. A personal clause, not a statutory one. But I keep it more strictly than the statutory ones."
+npc.palm.spring.07,Стёкла фонарной должны быть чистыми. Пункт девятнадцатый. Я проверяю платком. Белым.,The lamp-room glass must be clean. Clause nineteen. I check with a handkerchief. A white one.
+npc.palm.spring.08,Весна — сезон отчётов. Моё любимое время года. Не говорите никому.,Spring — the season of reports. My favourite time of year. Don't tell anyone.
+npc.palm.spring.09,Журнал заполнен аккуратно. Почерк разборчивый. Замечаний нет. Это не похвала. Это констатация.,The log is neatly kept. The handwriting legible. No remarks. That's not praise. It's a statement of fact.
+npc.palm.spring.10,До встречи через сезон. Пункт двести: до встречи через сезон.,Until next season. Clause two hundred: until next season.
+npc.palm.summer.01,"Летняя инспекция. Ночь короткая, огонь должен гореть ровно столько, сколько положено. Пункт двадцатый.",The summer inspection. The night is short; the light must burn exactly as long as prescribed. Clause twenty.
+npc.palm.summer.02,Жара. Я в кителе. Пункт о форме одежды не делает исключений для погоды. Я тоже.,Heat. I'm in uniform. The dress clause makes no exceptions for weather. Neither do I.
+npc.palm.summer.03,"Туристы спрашивают, можно ли подняться на маяк. Пункт шестьдесят: посторонним запрещено. Вы не {посторонний|посторонняя}. Вы смотритель.",Tourists ask whether they may climb the lighthouse. Clause sixty: unauthorised persons forbidden. You're not unauthorised. You're the keeper.
+npc.palm.summer.04,Лив Хокон приложила к отчёту таблицы тумана. Пункт двадцать первый позволяет приложения. Таблицы превосходные.,Liv Hakon attached fog tables to the report. Clause twenty-one permits attachments. The tables are excellent.
+npc.palm.summer.05,Солнце летом не садится. Устав не предусматривает. Я написал запрос в управу. Ответа нет четыре года.,In summer the sun doesn't set. The regulations don't provide for it. I wrote to the directorate. No reply in four years.
+npc.palm.summer.06,Регата. Пункт семьдесят: суда не должны мешать судоходству. Регата мешает. Раз в год — допустимо.,The regatta. Clause seventy: vessels must not obstruct navigation. The regatta obstructs. Once a year — permissible.
+npc.palm.summer.07,Летом больше кораблей. Больше огня. Больше топлива. Пункт тридцать три: запас на семь ночей. Покажите.,More ships in summer. More light. More fuel. Clause thirty-three: seven nights' reserve. Show me.
+npc.palm.summer.08,Я загорел. Против устава не возражаю. Против загара — возражаю.,I've got a tan. I don't object on regulatory grounds. I object to the tan.
+npc.palm.summer.09,Вы работаете хорошо. Пункт сто: похвала смотрителю не предусмотрена. Я её не произносил.,You work well. Clause one hundred: praise of the keeper is not provided for. I didn't say it.
+npc.palm.summer.10,Сухари смотрителя. Агата угощала. Я не брал — пункт о взятках. Однажды взял. Записал на себя замечание.,Keeper's rusks. Agatha offered them. I didn't accept — the bribery clause. Once I did. I entered a remark against myself.
+npc.palm.autumn.01,Осенняя инспекция. Штормовой сезон. Пункт сорок: огонь горит в любую погоду. В любую.,The autumn inspection. Storm season. Clause forty: the light burns in all weathers. All.
+npc.palm.autumn.02,Осенью я проверяю тщательнее. Осенью ошибки стоят дороже.,In autumn I inspect more thoroughly. In autumn mistakes cost more.
+npc.palm.autumn.03,Статистика крушений у Зубов в ясные ночи противоречит здравому смыслу. Записываю: «противоречит».,The statistics for wrecks at the Teeth on clear nights contradict common sense. Noting: 'contradicts'.
+npc.palm.autumn.04,Пункт восемьдесят: при крушении смотритель обязан сообщить. Вы сообщили. Вовремя. Отмечаю.,Clause eighty: in the event of a wreck the keeper must report. You reported. On time. Noted.
+npc.palm.autumn.05,Сельдяная ярмарка. Я не посещаю. Пункт о беспристрастности. И о запахе.,The Herring Fair. I don't attend. The impartiality clause. And the smell clause.
+npc.palm.autumn.06,Ночь Утопленников — не уставной праздник. Но я ставлю свечу. Как частное лицо.,Drowned Night is not a statutory holiday. But I light a candle. As a private individual.
+npc.palm.autumn.07,Ветер осенью срывает таблички. Пункт девяносто: табличка «Маяк» должна быть видна. Проверьте крепление.,Autumn winds tear off signs. Clause ninety: the 'Lighthouse' sign must be visible. Check the fixings.
+npc.palm.autumn.08,Вы выглядите {уставшим|уставшей}. Устав не регулирует усталость. Я — тоже. Но советую чай.,You look tired. The regulations don't govern fatigue. Neither do I. But I recommend tea.
+npc.palm.autumn.09,Двадцать восьмое осени — особая дата. В этом году — просто инспекция. Надеюсь.,The twenty-eighth of autumn — a special date. This year — just an inspection. I hope.
+npc.palm.autumn.10,Журнал за сезон. Сорок ночей. Сорок записей. Ни одного пропуска. Хорошо. Это не похвала.,The season's log. Forty nights. Forty entries. No gaps. Good. That's not praise.
+npc.palm.winter.01,"Зимняя инспекция. Лёд, ветер, тьма. Пункт сорок первый: огонь особенно важен зимой. Особенно.","The winter inspection. Ice, wind, darkness. Clause forty-one: the light is especially important in winter. Especially."
+npc.palm.winter.02,Я приплыл на «Чайке» через льды. Кэп Ворчун ворчал всю дорогу. Пункт о жалобах он знает наизусть.,I came on the Chayka through the ice. Cap'n Grump grumbled all the way. He knows the complaints clause by heart.
+npc.palm.winter.03,Зимой топлива уходит вдвое. Пункт тридцать четвёртый: зимний запас — четырнадцать ночей. Покажите.,In winter fuel consumption doubles. Clause thirty-four: winter reserve — fourteen nights. Show me.
+npc.palm.winter.04,Долгая ночь. Самая важная ночь для смотрителя. Я проверю журнал за неё отдельно.,The long night. The most important night for a keeper. I'll check the log for it separately.
+npc.palm.winter.05,Снег на галерее. Пункт пятьдесят: галерея должна быть проходимой. Лопата есть? Хорошо.,Snow on the gallery. Clause fifty: the gallery must be passable. Have you a shovel? Good.
+npc.palm.winter.06,Метель. Инспекция переносится? Нет. Пункт двести один: инспекция не переносится. Я здесь.,Blizzard. Is the inspection postponed? No. Clause two hundred and one: inspections are not postponed. I'm here.
+npc.palm.winter.07,Северное сияние мешает видеть огонь? Нет. Записываю: «не мешает».,Does the aurora hinder the light's visibility? No. Noting: 'does not hinder'.
+npc.palm.winter.08,Горячий чай. Благодарю. Пункт о взятках на чай не распространяется. Я проверял.,Hot tea. Thank you. The bribery clause doesn't extend to tea. I checked.
+npc.palm.winter.09,Зимой я думаю об Агате. Двадцать лет инспекций. Ни одного замечания. Кроме сухарей.,In winter I think of Agatha. Twenty years of inspections. Not a single remark. Except the rusks.
+npc.palm.winter.10,Весной вернусь. Пункт двести: до встречи через сезон. Не гасите огонь.,I'll be back in spring. Clause two hundred: until next season. Don't let the fire go out.
+npc.palm.weather.rain.01,Дождь. Пункт о непромокаемой одежде: соблюдаю. Мой плащ — уставной.,Rain. The waterproof-clothing clause: complied with. My cloak is regulation.
+npc.palm.weather.rain.02,В дождь я проверяю протечки. В фонарной — ни одной. Отмечаю.,In rain I check for leaks. Not one in the lamp room. Noted.
+npc.palm.weather.storm.01,Шторм. Пункт сорок: огонь горит в любую погоду. Сегодня — проверка на практике.,Storm. Clause forty: the light burns in all weathers. Today — a practical test.
+npc.palm.weather.storm.02,Я на «Чайке» в шторм. Кэп Ворчун молчит. Это страшнее шторма.,I'm aboard the Chayka in a storm. Cap'n Grump is silent. That's worse than the storm.
+npc.palm.weather.fog.01,Туман. Пункт сорок три: туманный сигнал каждые десять минут. Вы звоните? Слышу. Хорошо.,Fog. Clause forty-three: a fog signal every ten minutes. Are you ringing? I hear it. Good.
+npc.palm.weather.fog.02,В тумане у Зубов я видел огонь. Не ваш. Записал. Запись никто не прочитал. Кроме меня.,In the fog by the Teeth I saw a light. Not yours. I wrote it down. Nobody read the note. Except me.
+npc.palm.weather.snow.01,Снег. Пункт пятьдесят: галерея проходима. Проверю лично.,Snow. Clause fifty: the gallery passable. I'll check personally.
+npc.palm.weather.cloud.01,Облачно. Видимость удовлетворительная. Записываю: «удовлетворительная».,Cloudy. Visibility satisfactory. Noting: 'satisfactory'.
+npc.palm.festival.boat_blessing.01,Спуск лодок. Пункт семьдесят один: суда должны быть исправны. Благословение не заменяет осмотр.,The Boat Launch. Clause seventy-one: vessels must be seaworthy. A blessing does not replace an inspection.
+npc.palm.festival.drowned_night.01,"Ночь Утопленников. Не уставная дата. Но я ставлю свечу. За тех, кого не спас устав.",Drowned Night. Not a statutory date. But I light a candle. For those the regulations didn't save.
+npc.palm.festival.long_night.01,Долгая ночь. Я проверю журнал за неё особо. Пункт сорок первый.,The Long Night. I'll check the log for it specially. Clause forty-one.
+npc.palm.festival.regatta.01,Регата. Пункт семьдесят: не мешать судоходству. Сегодня — исключение. Официальное.,The regatta. Clause seventy: do not obstruct navigation. Today — an exception. An official one.
+npc.palm.festival.01,Праздник. Инспектор не празднует. Инспектор наблюдает.,A holiday. An inspector doesn't celebrate. An inspector observes.
+npc.palm.festival.02,Люди веселятся. Против устава не возражаю.,People are enjoying themselves. I have no regulatory objection.
+npc.palm.gift.love.01,Чай. Хороший. Благодарю. Пункт о взятках на чай не распространяется.,Tea. Good tea. Thank you. The bribery clause doesn't extend to tea.
+npc.palm.gift.love.02,Это… неожиданно приятно. Записываю: «неожиданно приятно». В личный журнал.,This is… unexpectedly pleasant. Noting: 'unexpectedly pleasant'. In my personal log.
+npc.palm.gift.like.01,Благодарю. Приемлемо.,Thank you. Acceptable.
+npc.palm.gift.like.02,Полезная вещь. Записываю: «полезная».,A useful item. Noting: 'useful'.
+npc.palm.gift.neutral.01,Благодарю. Вношу в опись.,Thank you. Entering it in the inventory.
+npc.palm.gift.neutral.02,Хм. Назначение неясно. Уточню.,Hm. Purpose unclear. I'll clarify.
+npc.palm.gift.dislike.01,Это не по уставу. Но благодарю за намерение.,This isn't regulation. But I thank you for the intention.
+npc.palm.gift.dislike.02,Я не могу это принять. Пункт сто четыре. Шучу. Такого пункта нет. Просто не хочу.,I can't accept this. Clause one hundred and four. Joking. There's no such clause. I just don't want it.
+npc.palm.gift.hate.01,Это может расцениваться как взятка. Пункт двенадцать. Уберите.,This could be construed as a bribe. Clause twelve. Take it away.
+npc.palm.gift.hate.02,Нет. Категорически. Записываю: «категорически».,No. Categorically. Noting: 'categorically'.
+npc.palm.birthday.01,У меня нет дня рождения в досье. Пункт о личных данных. Я засекретил сам.,My file has no birthday. The personal-data clause. I classified it myself.
+npc.palm.birthday.02,Сегодня? Возможно. Не подтверждаю и не опровергаю.,Today? Possibly. I neither confirm nor deny.
+npc.palm.birthday_gift.01,Вы узнали мою дату? Как? Олаф. Пункт о разглашении он не соблюдает.,You found out my date? How? Olaf. He doesn't observe the disclosure clause.
+npc.palm.birthday_gift.02,Благодарю. Это… трогательно. Записывать не буду.,Thank you. That's… touching. I won't write it down.
+npc.palm.act1.01,Новый смотритель. {Родственник|Родственница} Агаты Линд. Пункт семь: пост может занять родственник. Всё законно.,A new keeper. A relative of Agatha Lind. Clause seven: the post may be taken by a relative. All in order.
+npc.palm.act1.02,Первая инспекция через четыре недели. Средняя Сила Огня — не ниже двадцати пяти. Пункт двадцать пять. Совпадение.,First inspection in four weeks. Average Fire Power — no less than twenty-five. Clause twenty-five. Coincidence.
+npc.palm.act1.03,Стёкла разбиты. Пункт девятнадцатый нарушен. Не вами. Отмечаю: «унаследовано».,The glass is broken. Clause nineteen breached. Not by you. Noting: 'inherited'.
+npc.palm.act1.04,Агата Линд пропала в море. Пункт восемьдесят пять: смотритель не выходит в море в ночь вахты. Она вышла днём. Устав не нарушен. Она — пропала.,Agatha Lind was lost at sea. Clause eighty-five: the keeper does not go to sea on a watch night. She went by day. No breach. And she's gone.
+npc.palm.act1.05,Удовлетворительно. Пятьсот крон. Не тратьте на глупости. Это не пункт. Это совет.,Satisfactory. Five hundred crowns. Don't spend it on nonsense. That's not a clause. It's advice.
+npc.palm.act1.06,"Двадцать восьмое весны, двадцать три ноль-ноль. Я на «Чайке». Если увидите что-то странное — записывайте время.","The twenty-eighth of spring, eleven pm. I'm aboard the Chayka. If you see anything strange — note the time."
+npc.palm.act2.01,«Святая Берта» разбилась при исправном огне. Пункт восемьдесят восемь: расследование. Расследование заблокировано. Кем — не записано.,The Saint Bertha was wrecked with the light in good order. Clause eighty-eight: an inquiry. The inquiry has been blocked. By whom — not recorded.
+npc.palm.act2.02,Доктор Фальк подписал «несчастный случай» за двадцать минут. Рекорд. Подозрительный рекорд.,Doctor Falk signed 'accident' in twenty minutes. A record. A suspicious record.
+npc.palm.act2.03,Белая Хмарь. Устав не знает такого явления. Я добавил пункт. Двести два: огонь горит и в Хмарь.,The White Fog. The regulations know no such phenomenon. I've added a clause. Two hundred and two: the light burns in the Fog too.
+npc.palm.act2.04,Телеграф починили? Прекрасно. Теперь я получаю отчёты вовремя. Все.,The telegraph's repaired? Splendid. Now I receive reports on time. All of them.
+npc.palm.act2.05,Двадцать скелетов в гротах. Судовая роль «Фортуны». Пункт о погребении: каждый имеет право на имя.,Twenty skeletons in the grottoes. The Fortuna's crew list. The burial clause: everyone has a right to a name.
+npc.palm.act2.06,Большая Хмарь. Я приплыву. Не как инспектор. Как свидетель.,The Great Fog. I'll come. Not as an inspector. As a witness.
+npc.palm.act3.01,Вы собираете улики. Пункт сто двадцать: смотритель вправе. Я — обязан их принять. Приносите.,You're gathering evidence. Clause one hundred and twenty: the keeper is entitled. I am obliged to receive it. Bring it.
+npc.palm.act3.02,Страховка «Святой Берты» вчетверо выше стоимости. Пункт о мошенничестве существует. Я его перечитал. Трижды.,The Saint Bertha's insurance was four times her value. There is a fraud clause. I've reread it. Three times.
+npc.palm.act3.03,Штерн. Я знаю это имя. Его подпись на слишком многих полисах. Записываю.,Stern. I know that name. His signature is on far too many policies. Noting it.
+npc.palm.act3.04,Если соберёте пять улик — я произведу арест. Лично. Пункт сто двадцать один. Я его давно ждал.,If you gather five pieces of evidence — I'll make the arrest. Personally. Clause one hundred and twenty-one. I've waited for it a long time.
+npc.palm.act3.05,Будьте осторожны. Пункт о безопасности смотрителя. Я его написал сам. Для вас.,Be careful. The keeper-safety clause. I wrote it myself. For you.
+npc.palm.act3.06,Двадцать лет я записывал странные огни у Зубов. Никто не читал. Теперь — вы читаете. Хорошо.,Twenty years I recorded strange lights at the Teeth. No one read them. Now — you do. Good.
+npc.palm.act4.01,В ночь Великого Прилива я пассажир «Королевы Кронвальда». Не инспектор. Пассажир. Моя жизнь — в вашем огне.,On the night of the Great Tide I'm a passenger on the Queen of Kronvald. Not an inspector. A passenger. My life is in your light.
+npc.palm.act4.02,Пункт четырнадцатый: огонь должен гореть. Сегодня это не пункт. Это просьба.,Clause fourteen: the fire must burn. Tonight it's not a clause. It's a request.
+npc.palm.act4.03,Оценку за сезон я выставлю утром. Если будет утро.,I'll give the season's rating in the morning. If there is a morning.
+npc.palm.act4.04,Я никогда не боялся. Пункт о личном мужестве. Сегодня — нарушаю.,I've never been afraid. The personal-courage clause. Tonight — I'm in breach.
+npc.palm.act4.05,Если «Королева» пройдёт — я лично напишу в управу. Пункт о благодарности. Его нет. Я напишу.,If the Queen gets through — I'll write to the directorate personally. The gratitude clause. There isn't one. I'll write it.
+npc.palm.act4.06,До встречи. Пункт двести: до встречи через сезон. Сегодня — до встречи утром.,Until we meet. Clause two hundred: until next season. Tonight — until morning.
+npc.palm.married_other.01,Поздравляю с браком. Пункт о семейном положении смотрителя: не ограничено. Внесу в досье.,Congratulations on your marriage. The keeper's marital-status clause: unrestricted. I'll add it to the file.
+npc.palm.married_other.02,Супруг смотрителя допускается в фонарную? Пункт шестьдесят один: допускается. Я проверил.,Is the keeper's spouse permitted in the lamp room? Clause sixty-one: permitted. I checked.
+npc.palm.married_other.03,Желаю благополучия. Это не пункт. Это пожелание. Неуставное.,I wish you well-being. That's not a clause. It's a wish. Non-statutory.
+npc.palm.married_other.04,Брак — договор. Я уважаю договоры. Особенно честные.,Marriage is a contract. I respect contracts. Especially honest ones.
+npc.palm.married_other.05,Свадьба прошла без нарушений. Почти. Сельдь в священника — пункт о приличиях. Прощаю.,The wedding passed without violations. Almost. A herring at the priest — the decency clause. I forgive it.
+npc.palm.event.wreck.01,Крушение. Пункт восемьдесят: доклад. Пункт восемьдесят восемь: расследование. Пункт восемьдесят девять: скорбь. Его нет. Я добавлю.,A wreck. Clause eighty: the report. Clause eighty-eight: the inquiry. Clause eighty-nine: grief. There isn't one. I'll add it.
+npc.palm.event.wreck.02,Огонь горел? Я проверю журнал. Если горел — это не ваша вина. Это чья-то. Я найду чья.,Was the light burning? I'll check the log. If it was — it's not your fault. It's someone's. I'll find whose.
+npc.palm.event.wreck.03,Ясная ночь. Исправный огонь. Крушение. Статистика невозможного растёт.,A clear night. A working light. A wreck. The statistics of the impossible keep growing.
+npc.palm.event.wreck.04,Я запросил судовую роль. Каждое имя — в реестр. Пункт о памяти. Его я тоже добавил.,I've requested the crew list. Every name into the register. The memory clause. I added that one too.
+npc.palm.event.wreck.05,Сожалею. Искренне. Это не по уставу. Это по-человечески.,I'm sorry. Sincerely. That's not regulation. That's human.
+npc.palm.event.funeral.01,Похороны проведены по уставу. Пункт девяносто: достойное погребение. Достойно.,The burial was conducted according to regulations. Clause ninety: a decent burial. Decent.
+npc.palm.event.funeral.02,"Знак установлен, имя верное. Записываю: «опознан, похоронен». Лучшая запись в журнале.","Marker in place, the name correct. Noting: 'identified, buried'. The best entry in any log."
+npc.palm.event.funeral.03,Погост в порядке. Пункт девяносто два: погост при маяке содержится смотрителем. Содержится хорошо.,The graveyard is in order. Clause ninety-two: the lighthouse graveyard is kept by the keeper. It is kept well.
+npc.palm.event.funeral.04,Я постоял у могилы минуту. Пункт о минуте молчания. Его нет. Я постоял.,I stood at the grave for a minute. The minute's-silence clause. There isn't one. I stood.
+npc.palm.event.funeral.05,"Вы хороните чужих, как своих. Устав этого не требует. Вы это делаете.",You bury strangers like your own. The regulations don't require it. You do it.
+npc.palm.event.hmar.01,Ночь Хмари. Пункт двести два: огонь горит и в Хмарь. Горел. Отмечаю.,Fog Night. Clause two hundred and two: the light burns in the Fog too. It burned. Noted.
+npc.palm.event.hmar.02,Я был на «Чайке» у Сольвика. Туман шептал номера пунктов. Моих. Это недопустимо.,I was on the Chayka off Solvik. The fog was whispering clause numbers. Mine. That's unacceptable.
+npc.palm.event.hmar.03,"Видимость — ноль. Ваш луч — видим. Невозможно. Записываю: «невозможно, но так».","Visibility — nil. Your beam — visible. Impossible. Noting: 'impossible, but so'."
+npc.palm.event.hmar.04,Устав не знает Хмари. Хмарь не знает устава. Мы в равном положении.,The regulations don't know the Fog. The Fog doesn't know the regulations. We're on equal terms.
+npc.palm.event.hmar.05,Утром — все живы? Проверил по реестру. Все. Хорошо. Это похвала. Неуставная.,In the morning — everyone alive? Checked the register. Everyone. Good. That's praise. Non-statutory.
+npc.palm.event.inspection.01,Инспекция завершена. Замечаний нет. Это высшая оценка. Не ищите другую.,Inspection concluded. No remarks. That's the highest rating. Don't look for another.
+npc.palm.event.inspection.02,Пункт двести: до встречи через сезон. Пункт двести один: не гасите огонь до встречи.,Clause two hundred: until next season. Clause two hundred and one: don't let the fire go out till then.
+npc.palm.event.inspection.03,"Ваш журнал лучше, чем у Агаты. Не передавайте ей. Если встретите.",Your log is better than Agatha's. Don't tell her. If you meet her.
+npc.palm.event.inspection.04,Я выпил чай в таверне. Бьорн плакал. Традиция.,I had tea at the tavern. Bjorn wept. Tradition.
+npc.palm.event.inspection.05,Оценка: «удовлетворительно». Это хорошо. «Отлично» я ставил один раз. Сорок лет назад. Ошибся.,Rating: 'satisfactory'. That's good. I gave 'excellent' once. Forty years ago. I was wrong.
+npc.palm.event.wedding.01,Свадьба. Я присутствовал как частное лицо. Частное лицо плакало. Инспектор — нет.,A wedding. I attended as a private individual. The private individual wept. The inspector did not.
+npc.palm.event.wedding.02,Пункт о брачных церемониях отсутствует. Я не делал замечаний. Впервые за сорок лет.,There's no clause on marriage ceremonies. I made no remarks. First time in forty years.
+npc.palm.event.wedding.03,"Желаю соблюдения взаимных обязательств. Это самое тёплое, что я умею сказать.",I wish you the observance of mutual obligations. That's the warmest thing I know how to say.
+npc.palm.event.wedding.04,Сельдь в священника — нарушение приличий. Но смешное. Прощено.,A herring at the priest — a breach of decency. But funny. Forgiven.
+npc.palm.event.wedding.05,Внёс в досье: «смотритель — в браке». Досье стало теплее.,Entered in the file: 'keeper — married'. The file got warmer.
+npc.palm.event.villains.01,Хальвдан Грим арестован. Пункт сто двадцать один. Я его исполнил. Двадцать лет ждал.,Halvdan Grim is under arrest. Clause one hundred and twenty-one. I've executed it. Waited twenty years.
+npc.palm.event.villains.02,"Штерн — по телеграфу. «Нептун» — под следствием. Пункт о мошенничестве работает. Медленно, но работает.","Stern — by telegraph. Neptune — under investigation. The fraud clause works. Slowly, but it works."
+npc.palm.event.villains.03,Мои двадцать лет записей о странных огнях — приобщены к делу. Их наконец прочитали.,My twenty years of notes on strange lights have been entered in evidence. At last someone read them.
+npc.palm.event.villains.04,Оценка за сезон: «отлично». Второй раз в жизни. На этот раз — не ошибся.,Rating for the season: 'excellent'. The second time in my life. This time — no mistake.
+npc.palm.event.villains.05,Благодарю вас. Пункта о благодарности нет. Я его написал сегодня утром. Номер первый.,Thank you. There's no gratitude clause. I wrote it this morning. Number one.
+npc.grump.spring.01,Опять рыба. Хоть бы раз кто-то отправил пирог.,Fish again. Just once someone could ship a pie.
+npc.grump.spring.02,Весна. Лёд сошёл. «Чайка» ходит. Я ворчу. Всё как положено.,Spring. The ice has gone. The Chayka's running. I'm grumbling. All as it should be.
+npc.grump.spring.03,"Восемнадцать ноль-ноль. Причал. Ящик. Всё, что не в ящике, — не моя проблема.",Six o'clock. Jetty. Crate. Anything not in the crate isn't my problem.
+npc.grump.spring.04,Семена репы на материк? Кто их там сажает? Никто. Везу.,Turnip seeds to the mainland? Who plants them over there? Nobody. I'm taking them.
+npc.grump.spring.05,Ты {новый|новая} смотритель? Хорошо. Старую я возил двадцать лет. Ни разу не отправила пирог.,You're the new keeper? Good. I ferried the old one twenty years. She never once shipped a pie.
+npc.grump.spring.06,Ветер в лицо. Всегда в лицо. Сорок лет — и ни разу в спину.,Wind in my face. Always in my face. Forty years and never once at my back.
+npc.grump.spring.07,Весной пассажиров больше. Все блюют. Я не блюю. Я ворчу. Это полезнее.,More passengers in spring. They're all sick. I'm not sick. I grumble. It's healthier.
+npc.grump.spring.08,Опять ящик тяжёлый. Что там? Камни? Репа. Тяжёлая репа — глупая репа.,Another heavy crate. What's in it? Stones? Turnips. A heavy turnip's a stupid turnip.
+npc.grump.spring.09,"Туман весной — хуже всего. Не видно ни причала, ни смысла.",Spring fog's the worst. Can't see the jetty or the point.
+npc.grump.spring.10,До завтра. Если «Чайка» доплывёт. Она всегда доплывает. Назло.,Till tomorrow. If the Chayka makes it. She always does. Out of spite.
+npc.grump.summer.01,"Лето. Туристы. Спрашивают, где тут романтика. Я показываю за борт.",Summer. Tourists. They ask where the romance is. I point over the side.
+npc.grump.summer.02,Опять рыба. Летом — больше рыбы. Больше вони. Больше денег. Меньше радости.,Fish again. More fish in summer. More stink. More money. Less joy.
+npc.grump.summer.03,Жара. Смола на палубе плавится. Я — тоже. Но медленнее.,Heat. The pitch on deck is melting. So am I. Only slower.
+npc.grump.summer.04,Лив Хокон — лучший пассажир. Всю дорогу смотрит на чаек и молчит. Идеально.,Liv Hakon's the best passenger. Watches gulls the whole way and says nothing. Ideal.
+npc.grump.summer.05,Сандро с «Пёстрой» опять обогнал меня. На шебеке! Я на пароходе! Позор.,Sandro in the Pyostraya overtook me again. In a xebec! And me in a steamer! Disgraceful.
+npc.grump.summer.06,Белые ночи — плавать можно всю ночь. Но я не плаваю. Я сплю. В рубке. С ворчанием.,White nights — you can sail all night. But I don't. I sleep. In the wheelhouse. Grumbling.
+npc.grump.summer.07,Клубника на материк? В ящике? Она же раздавится. Ладно. Раздавится у них.,Strawberries to the mainland? In a crate? They'll be squashed. Fine. They'll be squashed over there.
+npc.grump.summer.08,Регата. Все эти лодки болтаются у меня на курсе. Каждый год. Я гужу. Они машут. Бесит.,The regatta. All those boats bobbing about on my course. Every year. I sound the horn. They wave. Infuriating.
+npc.grump.summer.09,"Летом море спокойное. Не доверяю. Спокойное море — это море, которое что-то задумало.",The sea's calm in summer. I don't trust it. A calm sea's a sea that's up to something.
+npc.grump.summer.10,Кто-нибудь отправит пирог? Нет? Опять рыба. Как всегда.,Anyone shipping a pie? No? Fish again. As always.
+npc.grump.autumn.01,"Осень. Шторма. Сельдь. Сельдь в шторм — это не груз, это приговор.","Autumn. Storms. Herring. Herring in a storm isn't cargo, it's a sentence."
+npc.grump.autumn.02,Опять рыба. Бочками. Солёная. Весь пароход провонял. Я тоже. Навсегда.,Fish again. In barrels. Salted. The whole steamer reeks. So do I. For ever.
+npc.grump.autumn.03,"В шторм не хожу. Пункт устава Пальма. Единственный пункт, который мне нравится.",I don't sail in a storm. One of Palm's clauses. The only clause I like.
+npc.grump.autumn.04,Ярмарка. Везу сто бочек сельди на материк. Там её никто не ест. Везу обратно. Шучу. Хотя…,The fair. Shipping a hundred barrels of herring to the mainland. Nobody eats it there. I'll bring it back. Joking. Although…
+npc.grump.autumn.05,Листья летят на палубу. Кто их будет убирать? Я. Как всегда.,Leaves blowing onto the deck. Who'll sweep them up? Me. As always.
+npc.grump.autumn.06,Осенью у Зубов плохо. Я обхожу их на две мили. Сорок лет обхожу. Жив.,The Teeth are bad in autumn. I give them two miles. Forty years I've given them two miles. Still alive.
+npc.grump.autumn.07,Опять ящик. Что там? Ракушки? Кому нужны ракушки на материке? Везу.,Another crate. What's in it? Shells? Who needs shells on the mainland? Taking them.
+npc.grump.autumn.08,Ты {устал|устала}? Все устали. Я устал сорок лет назад и так и не отдохнул.,Tired? Everyone's tired. I got tired forty years ago and never rested since.
+npc.grump.autumn.09,"Ночь Утопленников. Я гужу три раза у Зубов. За тех, кого не довёз. Их много.",Drowned Night. I sound the horn three times off the Teeth. For those I didn't bring home. There are many.
+npc.grump.autumn.10,До завтра. Не забудь: восемнадцать ноль-ноль. Опоздаешь — рыба останется у тебя. Воняет.,Till tomorrow. Don't forget: six o'clock. Be late and the fish stays with you. It stinks.
+npc.grump.winter.01,Зима. Лёд. «Чайка» ходит раз в неделю. Я ворчу каждый день. Экономлю силы.,Winter. Ice. The Chayka runs once a week. I grumble every day. Saving my strength.
+npc.grump.winter.02,Опять рыба. Замороженная. Хоть не воняет. Зима — единственное хорошее в рыбе.,Fish again. Frozen. At least it doesn't stink. Winter's the only good thing about fish.
+npc.grump.winter.03,Лёд ломаю носом парохода. «Чайка» стонет. Я тоже. Мы старые.,I break the ice with the steamer's bow. The Chayka groans. So do I. We're old.
+npc.grump.winter.04,Метель. Не пойду. Пальм пусть сидит на материке. Пункт о метели. Я его сам придумал.,Blizzard. Not going. Palm can sit on the mainland. The blizzard clause. I made it up myself.
+npc.grump.winter.05,Долгая ночь. Сижу в рубке. Пью грог. Смотрю на твой маяк. Хоть что-то видно.,The long night. Sitting in the wheelhouse. Drinking grog. Watching your lighthouse. At least something's visible.
+npc.grump.winter.06,"Зимой посылки. Носки, шарфы, варежки. От Маргит — на материк. Хоть бы раз пирог.","Parcels in winter. Socks, scarves, mittens. Margit's, to the mainland. Just once a pie."
+npc.grump.winter.07,Сияние. Красиво. Мешает навигации. Всё красивое мешает навигации.,The aurora. Pretty. Gets in the way of navigation. Everything pretty gets in the way of navigation.
+npc.grump.winter.08,Лёд вокруг острова. Если «Чайка» застрянет — буду зимовать у вас. Готовьте пирог.,Ice round the island. If the Chayka gets stuck — I'll winter with you. Get a pie ready.
+npc.grump.winter.09,Ты {замёрз|замёрзла}? Я замёрз в тридцать втором году. Так и не оттаял.,Frozen? I froze in the year thirty-two. Never thawed since.
+npc.grump.winter.10,Весной — снова рыба. Я уже чувствую запах. Отсюда. Из зимы.,In spring — fish again. I can smell it already. From here. From winter.
+npc.grump.weather.rain.01,Дождь. Ящики мокрые. Рыба мокрая. Я мокрый. Всё мокрое. Как обычно.,Rain. Wet crates. Wet fish. Wet me. Everything's wet. As usual.
+npc.grump.weather.rain.02,В дождь пассажиры сидят в каюте и жалуются. Хорошо. Хоть не на палубе.,In rain passengers sit in the cabin complaining. Good. At least they're not on deck.
+npc.grump.weather.storm.01,Шторм. Не пойду. «Чайка» стоит. Я стою. Рыба воняет. Вот и всё.,Storm. Not going. The Chayka stays. I stay. The fish stinks. That's that.
+npc.grump.weather.storm.02,"Держи огонь, смотритель. Я, может, и ворчу, но на твой огонь иду всю жизнь.","Keep the light, keeper. I may grumble, but I've steered by your light all my life."
+npc.grump.weather.fog.01,Туман. Гужу каждые две минуты. Устав Пальма. Уши болят. Мои и пассажиров.,Fog. Sounding the horn every two minutes. Palm's regulations. My ears hurt. Mine and the passengers'.
+npc.grump.weather.fog.02,В тумане видел огонь у Зубов. Не твой. Ровный. Я знаю разницу. Сорок лет знаю.,Saw a light by the Teeth in the fog. Not yours. Steady. I know the difference. Forty years I've known.
+npc.grump.weather.snow.01,Снег на палубе. Скользко. Кто-нибудь упадёт. Не я. Я держусь за штурвал. И за ворчание.,Snow on deck. Slippery. Someone'll fall. Not me. I hold on to the wheel. And to grumbling.
+npc.grump.weather.cloud.01,"Облачно. Ни солнца, ни дождя. Как моя жизнь. Стабильно.","Cloudy. No sun, no rain. Like my life. Stable."
+npc.grump.festival.regatta.01,Регата. Лодки на моём курсе. Каждый год. Я гужу. Они машут. Я гужу громче.,The regatta. Boats on my course. Every year. I sound the horn. They wave. I sound it louder.
+npc.grump.festival.herring_fair.01,Ярмарка. Сто бочек сельди. На материк. «Чайка» стонет. Я тоже.,The fair. A hundred barrels of herring. To the mainland. The Chayka groans. So do I.
+npc.grump.festival.drowned_night.01,"Ночь Утопленников. Три гудка у Зубов. За тех, кого не довёз. Их больше, чем гудков.",Drowned Night. Three blasts off the Teeth. For those I didn't bring home. There are more of them than blasts.
+npc.grump.festival.boat_blessing.01,Спуск лодок. Бенедикт хотел благословить «Чайку». Шест не достал. Правильно. «Чайку» уже ничто не спасёт.,The Boat Launch. Benedict wanted to bless the Chayka. His pole didn't reach. Quite right. Nothing can save the Chayka now.
+npc.grump.festival.01,Праздник. Для меня — работа. Всем надо на остров. Всем надо с острова.,A holiday. For me — work. Everyone needs to get to the island. Everyone needs to get off it.
+npc.grump.festival.02,"Весело? Мне — нет. Но я рад, что вам весело. Внутри. Очень глубоко.",Merry? Not me. But I'm glad you're merry. Inside. Very deep inside.
+npc.grump.gift.love.01,"Пирог?! Пирог! Сорок лет я ждал, что кто-то отправит пирог! Спасибо! Я… я не ворчу. Сегодня.",A pie?! A pie! Forty years I've waited for someone to send a pie! Thank you! I… I'm not grumbling. Today.
+npc.grump.gift.love.02,Блюдо! Горячее! Не рыба! Ты {лучший|лучшая} на этом острове.,A dish! Hot! Not fish! You're the best person on this island.
+npc.grump.gift.like.01,О. Еда. Не рыба. Хорошо.,Oh. Food. Not fish. Good.
+npc.grump.gift.like.02,Спасибо. Съем в рубке. Никому не скажу.,Thanks. I'll eat it in the wheelhouse. I won't tell anyone.
+npc.grump.gift.neutral.01,Хм. Спасибо. Отвезу на материк. Шучу. Оставлю.,Hm. Thanks. I'll ship it to the mainland. Joking. I'll keep it.
+npc.grump.gift.neutral.02,Ладно. Возьму. Не воняет — уже хорошо.,All right. I'll take it. Doesn't stink — that's something.
+npc.grump.gift.dislike.01,Рыба. Опять рыба. Даже в подарок — рыба.,Fish. Fish again. Even as a present — fish.
+npc.grump.gift.dislike.02,Это? Мне? Я это вожу каждый день. Не надо.,This? For me? I haul this every day. Don't.
+npc.grump.gift.hate.01,"Мусор? Мне? У меня пароход, а не свалка.","Rubbish? For me? I run a steamer, not a tip."
+npc.grump.gift.hate.02,Нет. Выброшу за борт. Прямо сейчас.,No. Going over the side. Right now.
+npc.grump.birthday.01,День рождения? Мой? Никто не помнит. Даже я. Пароход помнит — скрипит громче.,A birthday? Mine? Nobody remembers. Not even me. The steamer remembers — creaks louder.
+npc.grump.birthday.02,"Сколько мне лет? Больше, чем «Чайке». «Чайке» — сорок. Считай.",How old am I? Older than the Chayka. The Chayka's forty. Do the sums.
+npc.grump.birthday_gift.01,Подарок? Мне? В мой день? Ты… ладно. Спасибо. Не смотри так.,A present? For me? On my day? You… fine. Thanks. Don't look at me like that.
+npc.grump.birthday_gift.02,Сорок лет никто не дарил. Ты — {первый|первая}. Запомню. Буду ворчать меньше. Немного.,Forty years nobody's given me anything. You're the first. I'll remember. I'll grumble less. A bit.
+npc.grump.act1.01,Привёз тебя сюда. Помнишь? В тумане. Ты {блевал|блевала} за борт. Все блюют. Не стыдись.,I brought you here. Remember? In the fog. You were sick over the side. Everyone is. No shame.
+npc.grump.act1.02,Первая твоя посылка на материк — репа. Как у всех. Хоть бы раз пирог.,Your first parcel to the mainland — turnips. Like everyone's. Just once a pie.
+npc.grump.act1.03,Первый огонь видел с «Чайки». Гуднул три раза. Традиция. Агате гудел сорок лет.,Saw the first light from the Chayka. Sounded three blasts. Tradition. Blew for Agatha forty years.
+npc.grump.act1.04,Штерн едет на «Чайке» двадцатого. Неприятный пассажир. Даёт чаевые. Слишком много. Подозрительно.,Stern's coming on the Chayka on the twentieth. Nasty passenger. Tips. Too much. Suspicious.
+npc.grump.act1.05,Пальм едет двадцать восьмого. Приятный пассажир. Не даёт чаевых. Не блюёт. Идеал.,Palm's coming on the twenty-eighth. Pleasant passenger. Doesn't tip. Doesn't get sick. The ideal.
+npc.grump.act1.06,Двадцать восьмого ночью я не хожу. Никогда. Не спрашивай почему. Сорок лет не хожу.,On the night of the twenty-eighth I don't sail. Never. Don't ask why. Forty years I haven't.
+npc.grump.act2.01,«Святая Берта». Я видел её за день до крушения. Капитан спрашивал про Зубы. Я сказал — обходи на две мили. Не послушал.,The Saint Bertha. I saw her the day before she went down. The captain asked about the Teeth. I said — give them two miles. He didn't listen.
+npc.grump.act2.02,Лив Хокон — хороший пассажир. Смотрит на чаек. Молчит. Везу её с удовольствием. Не говори ей.,Liv Hakon — a good passenger. Watches the gulls. Says nothing. I carry her gladly. Don't tell her.
+npc.grump.act2.03,Медь для колокола? Двенадцать слитков? «Чайка» просела. Ладно. Везу.,Copper for the bell? Twelve ingots? The Chayka's low in the water. Fine. I'll take it.
+npc.grump.act2.04,Белая Хмарь. «Чайка» стояла в Сольвике. Я не спал. Туман гудел моим гудком. Сам. Жутко.,The White Fog. The Chayka was at Solvik. I didn't sleep. The fog blew my horn. By itself. Eerie.
+npc.grump.act2.05,Телеграф починили? Теперь управа будет слать телеграммы вместо писем. Я — лишний. Хорошо. Отдохну.,The telegraph's fixed? Now the directorate will send telegrams instead of letters. I'm redundant. Good. I'll rest.
+npc.grump.act2.06,Большая Хмарь. Уведу «Чайку» в бухту. Если надо — возьму людей. Много. «Чайка» выдержит. Я — не уверен.,The Great Fog. I'll take the Chayka into the bay. If needed — I'll take people. Many. The Chayka will hold. Me — not sure.
+npc.grump.act3.01,Штерн отправляет Гриму посылки. Тяжёлые. Без описи. Я не открываю. Пункт о тайне переписки. Жаль.,Stern sends Grim parcels. Heavy ones. No manifest. I don't open them. The privacy-of-post clause. Pity.
+npc.grump.act3.02,Ты собираешь улики? Мой журнал рейсов — улика? Бери. Сорок лет записей. Всё там.,You're gathering evidence? My voyage log — is that evidence? Take it. Forty years of entries. It's all there.
+npc.grump.act3.03,Двадцать восьмое. Сорок лет я не хожу в ночь двадцать восьмого. Потому что видел. Молодым. Огонь. Не твой.,The twenty-eighth. Forty years I haven't sailed on the night of the twenty-eighth. Because I saw. When I was young. A light. Not yours.
+npc.grump.act3.04,"Зимой скучно. Лёд. Грог. Думы. Думы — самое тяжёлое, что я вожу.",Winter's dull. Ice. Grog. Thoughts. Thoughts are the heaviest cargo I carry.
+npc.grump.act3.05,Если понадобится — «Чайка» твоя. Для дела. Для хорошего. Для плохого — ищи другую.,If you need her — the Chayka's yours. For a cause. A good one. For a bad one — find another.
+npc.grump.act3.06,Опять рыба. Даже в такое время — рыба. Жизнь продолжается. Вонюче.,Fish again. Even at a time like this — fish. Life goes on. Smellily.
+npc.grump.act4.01,"«Королева Кронвальда». Большой корабль. Я сорок лет мечтал стоять на её мостике. Сегодня — молюсь, чтобы она дошла.",The Queen of Kronvald. A big ship. Forty years I dreamt of standing on her bridge. Tonight — I pray she makes it.
+npc.grump.act4.02,В ночь Прилива «Чайка» будет в Сольвике. На всякий случай. Если кого-то вытаскивать — я вытащу.,On Tide Night the Chayka will be at Solvik. Just in case. If anyone needs pulling out — I'll pull them.
+npc.grump.act4.03,Держи огонь. Я не хожу в ночь двадцать восьмого. Но сегодня — пойду. Если надо.,Keep the light. I don't sail on the night of the twenty-eighth. But tonight — I will. If needed.
+npc.grump.act4.04,Я ворчу сорок лет. Сегодня не буду. Сегодня — страшно.,I've grumbled for forty years. Not tonight. Tonight — I'm scared.
+npc.grump.act4.05,Если «Королева» дойдёт — отправлю тебе пирог. Сам. Впервые. Обещаю.,If the Queen makes it — I'll send you a pie. Myself. First time ever. I promise.
+npc.grump.act4.06,До утра. Надеюсь. Иначе — рыба останется неотправленной. Это будет самая грустная рыба.,Till morning. I hope. Otherwise — the fish stays unshipped. That'll be the saddest fish.
+npc.grump.married_other.01,"{Женился|Вышла замуж}, значит. Ну и ну. Отправь мне кусок свадебного торта. Не рыбу.","Married, then. Well, well. Send me a slice of wedding cake. Not fish."
+npc.grump.married_other.02,Свадьба? Я вёз гостей с материка. Все блевали. Традиция.,A wedding? I ferried the guests from the mainland. They were all sick. Tradition.
+npc.grump.married_other.03,Совет: не ходите в море вдвоём в ясную ночь. Больше советов не будет. Этот — бесплатно.,Advice: don't go to sea together on a clear night. That's the only advice. This one's free.
+npc.grump.married_other.04,Поздравляю. Сорок лет никого не поздравлял. Звучит странно. Поздравляю.,Congratulations. Forty years since I congratulated anyone. Sounds odd. Congratulations.
+npc.grump.married_other.05,Теперь посылок будет вдвое больше. Вдвое больше рыбы. Спасибо.,Now there'll be twice the parcels. Twice the fish. Thanks.
+npc.grump.event.wreck.01,Крушение. Я видел обломки с «Чайки». Гуднул три раза. Больше ничего не мог.,A wreck. I saw the wreckage from the Chayka. Sounded three blasts. Couldn't do anything more.
+npc.grump.event.wreck.02,Опять ясная ночь. Опять Зубы. Я сорок лет говорю: обходи на две мили. Никто не слушает.,A clear night again. The Teeth again. Forty years I've said: give them two miles. Nobody listens.
+npc.grump.event.wreck.03,Судовую роль повезу в управу. Каждое имя. Тяжелее рыбы.,I'll take the crew list to the directorate. Every name. Heavier than fish.
+npc.grump.event.wreck.04,Я не ворчу сегодня. Сегодня не о чем ворчать. Сегодня только молчать.,I'm not grumbling today. There's nothing to grumble about today. Today there's only silence.
+npc.grump.event.wreck.05,Похорони их. Я привезу гробы. Бесплатно. Не спорь.,Bury them. I'll bring the coffins. Free. Don't argue.
+npc.grump.event.funeral.01,"{Похоронил|Похоронила}? Хорошо. Лучше, чем море. Я знаю — я сорок лет на море.",Buried? Good. Better than the sea. I'd know — forty years on the sea.
+npc.grump.event.funeral.02,Отвезу письмо семье. Приоритетным рейсом. Для этого — приоритет.,I'll take the letter to the family. Priority run. For that — priority.
+npc.grump.event.funeral.03,"Гуднул трижды, когда проходил мимо погоста. Традиция. Моя.",Sounded three blasts passing the graveyard. Tradition. Mine.
+npc.grump.event.funeral.04,"Хорошо, что хоронишь. Моряку в земле — отдых. В море — вахта. Вечная.",Good that you bury them. A sailor in the earth — rests. In the sea — keeps watch. For ever.
+npc.grump.event.funeral.05,Ещё один нашёл берег. Хорошо. Мне — ещё рейс. Всё как всегда.,One more has found the shore. Good. Me — another run. As always.
+npc.grump.event.hmar.01,Ночь Хмари. «Чайка» гудела сама. Всю ночь. Я не трогал. Жуть.,Fog Night. The Chayka blew her horn by herself. All night. I didn't touch it. Creepy.
+npc.grump.event.hmar.02,В тумане видел лодки. Много. Старые. Без людей. Или с людьми. Не разглядел. Не хотел.,Saw boats in the fog. Many. Old ones. Empty. Or crewed. Couldn't make out. Didn't want to.
+npc.grump.event.hmar.03,"Твой луч проходил через рубку. Каждый раз я говорил: «Держись, старик». Себе. Помогало.","Your beam swept through the wheelhouse. Each time I said: 'Hold on, old man.' To myself. It helped."
+npc.grump.event.hmar.04,Утром на палубе — лужи. Солёные. В сухую погоду. Не спрашивай.,In the morning — puddles on deck. Salty. In dry weather. Don't ask.
+npc.grump.event.hmar.05,Хмарь — не туман. Я знаю туман сорок лет. Это — кто-то. Грустный кто-то.,The Fog's not fog. I've known fog forty years. This is someone. A sad someone.
+npc.grump.event.inspection.01,Вёз Пальма. Он не блевал. Не ворчал. Не давал чаевых. Лучший пассажир. Скучный.,Brought Palm. He wasn't sick. Didn't grumble. Didn't tip. Best passenger. Boring.
+npc.grump.event.inspection.02,{Сдал|Сдала}? Хорошо. Пальм на обратном пути даже сказал «хм». Это много.,Passed? Good. On the way back Palm even said 'hm'. That's a lot.
+npc.grump.event.inspection.03,"Инспекции — единственные дни, когда «Чайка» приходит вовремя. Пальм смотрит на часы.",Inspection days are the only days the Chayka comes on time. Palm watches the clock.
+npc.grump.event.inspection.04,"Пальм спросил, почему я гужу у Зубов. Я сказал — пункт личный. Он записал. Уважаю.",Palm asked why I sound the horn off the Teeth. I said — a personal clause. He wrote it down. Respect.
+npc.grump.event.inspection.05,После инспекции везу отчёт на материк. Лёгкий. Хорошие отчёты всегда лёгкие.,After an inspection I take the report to the mainland. Light. Good reports are always light.
+npc.grump.event.wedding.01,Свадьба. Вёз гостей. Все блевали. Потом танцевали. Потом снова блевали. Хорошая свадьба.,A wedding. Ferried the guests. They were all sick. Then they danced. Then they were sick again. A good wedding.
+npc.grump.event.wedding.02,Мне дали кусок торта. Не рыба. Первый раз за сорок лет на свадьбе дали не рыбу.,They gave me a slice of cake. Not fish. First time in forty years at a wedding they gave me something other than fish.
+npc.grump.event.wedding.03,"Гуднул трижды, когда молодые вышли из часовни. Бенедикт подпрыгнул. Хорошо.",Sounded three blasts when the couple came out of the chapel. Benedict jumped. Good.
+npc.grump.event.wedding.04,Совет да любовь. И отправляйте пироги. Не рыбу. Пироги.,Love and harmony. And ship pies. Not fish. Pies.
+npc.grump.event.wedding.05,"Хорошая пара. Надеюсь, не придётся везти одного из вас на материк навсегда.",A good match. I hope I'll never have to take one of you to the mainland for good.
+npc.grump.event.villains.01,Вёз Грима на материк. В кандалах. Самый тихий пассажир. Ни разу не сказал «дорогой».,Took Grim to the mainland. In irons. The quietest passenger. Didn't say 'dear' once.
+npc.grump.event.villains.02,Теперь хожу в ночь двадцать восьмого. Впервые за сорок лет. Страшно. Хорошо.,Now I sail on the night of the twenty-eighth. First time in forty years. Scary. Good.
+npc.grump.event.villains.03,Мой журнал рейсов приобщили к делу. Сорок лет записей. Кто бы мог подумать — пригодились.,My voyage log's gone into evidence. Forty years of entries. Who'd have thought — they came in handy.
+npc.grump.event.villains.04,Артель отправила на материк первую партию. Честную. Я везу с удовольствием. Даже рыбу.,The Artel's shipped its first consignment to the mainland. An honest one. I carry it gladly. Even the fish.
+npc.grump.event.villains.05,"Спасибо, смотритель. Я отправил тебе пирог. Сам. Как обещал. С рыбой. Прости. Другого не было.","Thank you, keeper. I've sent you a pie. Myself. As promised. A fish pie. Sorry. There wasn't any other."
