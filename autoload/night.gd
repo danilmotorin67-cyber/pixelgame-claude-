@@ -29,6 +29,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	var night_index := Clock.day_index
 	var aurora_tonight := Weather.aurora
 	var storm_today := Weather.current in ["storm", "blizzard"]
+	var compass_before := [Lighthouse.fire_power, Graveyard.peace, Sea.mercy]
 	_step(report, "lighthouse", func() -> void:
 		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted))
 	_step(report, "weather_tides", func() -> void:
@@ -55,6 +56,9 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["levels"] = Skills.apply_levels())
 	_step(report, "autosave", func() -> void:
 		report["saved"] = Save.save_game())
+	report["compass"] = {"light": Lighthouse.fire_power - float(compass_before[0]),
+		"peace": Graveyard.peace - float(compass_before[1]), "sea": Sea.mercy - float(compass_before[2])}
+	report["fortuna"] = Dialogue.hint_of_the_day()
 	report["day"] = Clock.day
 	report["season"] = Clock.season
 	report["weather"] = Weather.current

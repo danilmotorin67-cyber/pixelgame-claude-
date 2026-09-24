@@ -123,25 +123,7 @@ func _on_console_submitted(text: String) -> void:
 
 
 func _on_night_resolved(report: Dictionary) -> void:
-	var reason := str(report.get("faint_message", "Вы потеряли сознание.")) \
-		if report["fainted"] else "Ночь прошла спокойно."
-	var loss := "\nПотеряно: %d кр." % report["money_lost"] if report["money_lost"] > 0 else ""
-	var save_line := "Игра сохранена." if report["saved"] else "Ошибка сохранения."
-	var light: Dictionary = report.get("lighthouse", {})
-	var light_line := "\nМаяк: %d · Свет: %d" % [
-		int(round(float(light.get("power", 0.0)))), int(round(float(light.get("light", 0.0))))]
-	if bool(light.get("no_fire", false)):
-		light_line = "\nМаяк: огонь не требовался · Свет: %d" % int(round(float(light.get("light", 0.0))))
-	if int(report.get("stations_ready", 0)) > 0:
-		light_line += "\nСтанки: готово заданий — %d" % int(report["stations_ready"])
-	var sales: Dictionary = report.get("sales", {})
-	if int(sales.get("income", 0)) > 0:
-		light_line += "\nВыручка «Чайки»: %d кр" % int(sales["income"])
-	elif bool(sales.get("storm", false)) and int(sales.get("waiting", 0)) > 0:
-		light_line += "\nШторм: «Чайка» не пришла, ящик ждёт до завтра"
-	morning_text.text = "Утро, %s %d. %s\n%s%s%s\n%s" % [
-		report["season"], report["day"], WEATHER_NAMES.get(report["weather"], ""),
-		reason, loss, light_line, save_line]
+	morning_text.text = NightReport.text(report)
 	morning_panel.visible = true
 	Clock.paused = true
 	_refresh_hud()

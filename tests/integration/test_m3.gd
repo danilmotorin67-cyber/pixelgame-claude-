@@ -612,6 +612,89 @@ func _check_tower() -> void:
 	Clock.paused = true
 
 
+func _simulate_week(diligent: bool) -> Array:
+	_fresh(0)
+	Weather.start_day(0)
+	Crafting.reset()
+	Farm.reset()
+	Save.save_root = "user://saltlight_m3_test_saves"
+	Save.current_slot = 2
+	Router.current_map = "cape"
+	Router.spawn = Vector2(600, 360)
+	Game.player_state = {}
+	get_tree().change_scene_to_file("res://scenes/world/cape.tscn")
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var reports: Array = []
+	var catcher := func(report: Dictionary) -> void: reports.append(report)
+	Events.night_resolved.connect(catcher)
+	for night in 7:
+		Clock.paused = false
+		if diligent:
+			Inventory.add("fish_oil", 1)
+			Inventory.add("rag", 1)
+			Lighthouse.refill()
+			Lighthouse.wind()
+			if Lighthouse.cleanliness < 6.0:
+				Lighthouse.clean_glass()
+			Lighthouse.write_log()
+			var sunset := Lighthouse.sunset_minutes()
+			Clock.set_time(sunset / 60, sunset % 60)
+			Lighthouse.light_lamp()
+			for hour in range(sunset / 60, 23):
+				Clock.set_time(hour, 30)
+				Lighthouse.ring_bell()
+		Clock.set_time(23, 0)
+		Night.end_day(false, diligent and night % 2 == 1)
+		await get_tree().process_frame
+		if Router.current_map != "cape":
+			Router.goto_map("cape", Vector2(600, 360))
+			await get_tree().process_frame
+			await get_tree().process_frame
+	Events.night_resolved.disconnect(catcher)
+	for file_path in Save._candidate_paths(2):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(file_path))
+	Save.save_root = "user://saves"
+	Save.current_slot = 0
+	return reports
+
+
+func _check_week_of_nights() -> void:
+	var reports: Array = await _simulate_week(true)
+	_check(reports.size() == 7 and Clock.day_index == 7 and Clock.weekday == "mon", "a week of nights ends on Monday")
+	var total := 0.0
+	var all_lit := true
+	for report in reports:
+		total += float(report["lighthouse"]["power"])
+		all_lit = all_lit and bool(report["lighthouse"]["lit"]) and bool(report["lighthouse"]["on_time"])
+		_check(NightReport.text(report).begins_with("Ночной отчёт смотрителя"), "every morning shows the report")
+	_check(all_lit, "the diligent keeper lights on time every night")
+	_check(is_equal_approx(Lighthouse.fire_power, total / 7.0) and Lighthouse.fire_power >= 20.0,
+		"Light is the week's average (%.1f)" % Lighthouse.fire_power)
+	var salary: Dictionary = {}
+	for letter in Mail.letters:
+		if str(letter["text"]).begins_with("mail.salary"):
+			salary = letter
+	_check(not salary.is_empty() and int(salary["money"]) >= 150 + 5 * int(floor(Lighthouse.fire_power)),
+		"Monday brings the week's salary")
+	_check(Knowledge.sea_pts >= 7 + 7, "on-time fires and log entries teach sea notes (%d)" % Knowledge.sea_pts)
+	var last_text := NightReport.text(reports[-1])
+	_check(last_text.contains("Фортуна:") and last_text.contains("Компас:"), "the report carries the compass and Fortuna")
+	var mercy_kept := Sea.mercy
+
+	var dark: Array = await _simulate_week(false)
+	_check(dark.size() == 7 and Lighthouse.fire_power == 0.0, "a forgotten lighthouse drops Light to zero")
+	var wrecks := 0
+	for report in dark:
+		_check(not bool(report["lighthouse"]["lit"]), "nobody lit the lamp")
+		for ship in report["lighthouse"]["ships"]:
+			if ship["wrecked"]:
+				wrecks += 1
+	_check(Sea.mercy <= 30.0 - 14.0 - 3.0 * wrecks + 0.001, "every dark night costs mercy, every wreck more")
+	_check(Sea.mercy < mercy_kept, "darkness angers the sea more than a kept watch")
+	print("M3 week: light %.1f, dark wrecks %d" % [total / 7.0, wrecks])
+
+
 func _run() -> void:
 	await _check_world_objects()
 	_check_components()
@@ -625,6 +708,7 @@ func _run() -> void:
 	_check_knowledge()
 	_check_fuel_chain()
 	await _check_tower()
+	await _check_week_of_nights()
 	_fresh()
 	print("M3 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)
