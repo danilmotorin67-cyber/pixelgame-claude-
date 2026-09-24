@@ -2,10 +2,12 @@ extends Control
 class_name EnergyHud
 
 var energy := 270.0
+var maximum := 270.0
 
 
-func set_energy(value: float) -> void:
+func set_energy(value: float, max_value: float) -> void:
 	energy = value
+	maximum = maxf(max_value, 1.0)
 	queue_redraw()
 
 
@@ -14,8 +16,9 @@ func _draw() -> void:
 	draw_rect(Rect2(0, 0, 22, 1), Color("#b08f6c"))
 	draw_rect(Rect2(0, 64, 22, 1), Color("#b08f6c"))
 	draw_rect(Rect2(6, 5, 10, 53), Color("#45464e"))
-	var height := int(51.0 * clampf(energy / 270.0, 0.0, 1.0))
+	var height := int(51.0 * clampf(energy / maximum, 0.0, 1.0))
 	if height > 0:
-		draw_rect(Rect2(7, 57 - height, 8, height), Color("#e9a64a"))
+		var tired := energy <= maximum * float(Game.balance("fatigue_share", 0.15))
+		draw_rect(Rect2(7, 57 - height, 8, height), Color("#b04a3a") if tired else Color("#e9a64a"))
 		draw_rect(Rect2(7, 57 - height, 2, height), Color("#ffc85a"))
 	draw_rect(Rect2(9, 60, 5, 1), Color("#ffe9a8"))

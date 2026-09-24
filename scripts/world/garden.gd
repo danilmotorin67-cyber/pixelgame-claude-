@@ -22,19 +22,19 @@ func use_at(world_position: Vector2, player: Player) -> bool:
 		_hint("Репа собрана." if Farm.harvest(cell) else "Нет места для урожая.")
 		return true
 	var selected := Inventory.selected_id()
-	if selected in ["tool_hoe", "tool_can"] and player.energy < 2.0:
+	if selected in ["tool_hoe", "tool_can"] and player.energy <= 0.0:
 		_hint("Нужен отдых, сил на работу нет.")
 		return true
 	if selected == "tool_hoe":
 		if Farm.till(cell):
-			player.energy -= 2.0
+			player.spend_energy("hoe")
 			player.play_tool("hoe", to_global(Vector2(cell) * TILE + Vector2(8, 8)))
 			_hint("Земля взрыхлена. Теперь посади семена.")
 		else:
 			_hint("Здесь уже есть грядка.")
 	elif selected == "tool_can":
 		if Farm.water(cell):
-			player.energy -= 2.0
+			player.spend_energy("can")
 			player.play_tool("can", to_global(Vector2(cell) * TILE + Vector2(8, 8)))
 			_hint("Грядка полита.")
 		else:

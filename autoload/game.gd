@@ -48,6 +48,27 @@ func add_honor(n: int) -> void:
 	honor = clampi(honor + n, -100, 100)
 
 
+func balance(key: String, fallback: Variant) -> Variant:
+	var table: Variant = Data.tables.get("balance", {})
+	return table.get(key, fallback) if table is Dictionary else fallback
+
+
+func max_energy() -> float:
+	return float(balance("energy_max", 270)) + float(balance("energy_star_amber", 30)) \
+		* float(clampi(int(counters.get("star_amber", 0)), 0, 7))
+
+
+# Energy for one action of spec 8.1, reduced by the linked skill down to 1.
+func action_cost(action: String, cold: float = 0.0) -> float:
+	var info: Dictionary = balance("energy_actions", {}).get(action, {})
+	var cost := float(info.get("cost", 0))
+	if info.has("skill"):
+		cost = maxf(1.0, cost - float(info.get("per_level", 0.0)) * float(Skills.level(str(info["skill"]))))
+	if cold >= float(balance("cold_energy_threshold", 50)):
+		cost *= float(balance("cold_energy_mult", 1.25))
+	return cost
+
+
 func roll_luck(index: int, aurora_bonus: bool) -> float:
 	var rng := RandomNumberGenerator.new()
 	rng.seed = posmod(world_seed * 40503 + index * 7919 + 313, 2147483647)

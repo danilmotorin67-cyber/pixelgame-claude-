@@ -20,4 +20,4 @@ func _process(delta: float) -> void:
 	var player := get_parent().get_node_or_null("Player") as Player
 	if player != null and not is_equal_approx(_last_energy, player.energy):
 		_last_energy = player.energy
-		energy_bar.set_energy(_last_energy)
+		energy_bar.set_energy(_last_energy, Game.max_energy())

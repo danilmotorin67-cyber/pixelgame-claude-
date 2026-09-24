@@ -40,6 +40,8 @@ func end_day(fainted: bool = false) -> void:
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))
 	_wake_hero(report, bedtime, fainted, night_index, player)
+	_step(report, "skills", func() -> void:
+		report["levels"] = Skills.apply_levels())
 	_step(report, "autosave", func() -> void:
 		report["saved"] = Save.save_game())
 	report["day"] = Clock.day
@@ -80,7 +82,7 @@ func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: in
 		report["faint_message"] = FAINT_MESSAGES[posmod(Game.world_seed + night_index, FAINT_MESSAGES.size())]
 	report["money_lost"] = lost_money
 	var state := Game.player_state.duplicate(true)
-	state["energy"] = 270.0 * energy_fraction(bedtime, fainted)
+	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted)
 	state["cold"] = 0.0
 	state["x"] = HOME_SPAWN.x
 	state["y"] = HOME_SPAWN.y

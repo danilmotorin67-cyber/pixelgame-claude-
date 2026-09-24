@@ -44,6 +44,8 @@ func _physics_process(delta: float) -> void:
 	if dir.length() > 0.1:
 		facing = dir.normalized()
 	var spd := slow_speed if Input.is_action_pressed("walk_slow") else walk_speed
+	if is_tired():
+		spd *= float(Game.balance("fatigue_speed", 0.9))
 	velocity = dir * spd
 	move_and_slide()
 	if dir.length() > 0.1:
@@ -75,9 +77,21 @@ func play_tool(kind: String, target: Vector2) -> void:
 	if toward.length() > 4.0:
 		facing = toward.normalized()
 	tool_kind = kind
-	tool_time = TOOL_DURATION
+	tool_time = TOOL_DURATION * (float(Game.balance("fatigue_tool_time", 1.25)) if is_tired() else 1.0)
 	_update_sprite(false)
 	tool_art.queue_redraw()
+
+
+func is_tired() -> bool:
+	return energy <= Game.max_energy() * float(Game.balance("fatigue_share", 0.15))
+
+
+# At zero energy tools stop working; the last action may drain the keeper to zero.
+func spend_energy(action: String) -> bool:
+	if energy <= 0.0:
+		return false
+	energy = maxf(0.0, energy - Game.action_cost(action, cold))
+	return true
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -139,7 +153,7 @@ func serialize_state() -> Dictionary:
 
 func restore_state(state: Dictionary) -> void:
 	global_position = Vector2(float(state.get("x", 600)), float(state.get("y", 360)))
-	energy = float(state.get("energy", 270.0))
+	energy = clampf(float(state.get("energy", Game.max_energy())), 0.0, Game.max_energy())
 	health = float(state.get("health", 100.0))
 	cold = float(state.get("cold", 0.0))
 	lantern_on = bool(state.get("lantern_on", false))

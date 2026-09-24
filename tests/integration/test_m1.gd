@@ -127,6 +127,40 @@ func _check_shipping() -> void:
 	Clock.day_index = 0
 
 
+func _check_energy_and_skills(player: Player) -> void:
+	Skills.reset()
+	_check(Game.action_cost("hoe") == 2.0 and Game.action_cost("scythe") == 1.0
+		and Game.action_cost("cast") == 6.0, "base action costs from 8.1")
+	Skills.levels["farming"] = 5
+	Skills.levels["fishing"] = 10
+	_check(is_equal_approx(Game.action_cost("can"), 1.5) and is_equal_approx(Game.action_cost("cast"), 2.0),
+		"skill levels reduce tool energy")
+	Skills.levels["farming"] = 10
+	_check(Game.action_cost("hoe") == 1.0, "tool energy never drops below 1")
+	_check(is_equal_approx(Game.action_cost("hoe", 60.0), 1.25), "cold of 50+ costs 25% more energy")
+	Skills.reset()
+	Game.counters["star_amber"] = 9
+	_check(Game.max_energy() == 480.0, "seven star ambers cap energy at 480")
+	Game.counters.erase("star_amber")
+	_check(Game.max_energy() == 270.0, "base energy is 270")
+	var saved_energy := player.energy
+	player.energy = 1.0
+	_check(player.spend_energy("hoe") and player.energy == 0.0, "the last action may drain energy to zero")
+	_check(not player.spend_energy("hoe"), "tools do not work at zero energy")
+	player.energy = 270.0 * 0.15
+	_check(player.is_tired(), "15% energy means fatigue")
+	player.energy = 270.0 * 0.16
+	_check(not player.is_tired(), "fatigue starts at 15%")
+	player.energy = saved_energy
+	_check(Skills.level_for_xp(99) == 0 and Skills.level_for_xp(100) == 1
+		and Skills.level_for_xp(14999) == 9 and Skills.level_for_xp(15000) == 10, "skill XP table 25.1")
+	Skills.add_xp("keeping", 400)
+	_check(Skills.level("keeping") == 0, "levels are only counted in sleep")
+	var gained := Skills.apply_levels()
+	_check(Skills.level("keeping") == 2 and gained.size() == 2, "sleep grants every level reached")
+	Skills.reset()
+
+
 func _run() -> void:
 	var tree := get_tree()
 	var night_reports: Array[Dictionary] = []
@@ -224,6 +258,7 @@ func _run() -> void:
 	Lighthouse.reset()
 	_check_calendar_rules()
 	_check_shipping()
+	_check_energy_and_skills(player)
 
 	Game.set_flag("m1_roundtrip", true)
 	Game.add_stat("m1_test_items", 3)
@@ -340,7 +375,7 @@ func _run() -> void:
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
 	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
-		"lighthouse", "weather_tides", "farm", "sales", "luck", "autosave", "report"],
+		"lighthouse", "weather_tides", "farm", "sales", "luck", "skills", "autosave", "report"],
 		"night resolution must follow the order of spec 6.4")
 	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(
@@ -361,8 +396,10 @@ func _run() -> void:
 		Clock.start_next_day()
 		Farm.advance_day()
 	_check(bool(Farm.get_tile(garden_cell)["ready"]), "turnip did not ripen after four watered nights")
+	var farming_xp := int(Skills.xp["farming"])
 	_check(Farm.harvest(garden_cell) and Inventory.count_of("turnip") == 1,
 		"ripe turnip was not added to inventory")
+	_check(int(Skills.xp["farming"]) == farming_xp + 4, "harvest gives 3 + price/20 farming XP")
 
 	for file_path in Save._candidate_paths(2):
 		DirAccess.remove_absolute(ProjectSettings.globalize_path(file_path))

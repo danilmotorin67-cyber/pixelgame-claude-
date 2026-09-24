@@ -70,6 +70,8 @@ func harvest(cell: Vector2i) -> bool:
 	tile["crop"] = ""
 	tile["days"] = 0
 	tile["ready"] = false
+	var price := int(Data.by_id("items", str(crop["produce"])).get("price", 0))
+	Skills.add_xp("farming", 3 + price / 20)
 	Events.crop_harvested.emit(str(crop["produce"]), 0)
 	Events.farm_changed.emit()
 	return true
