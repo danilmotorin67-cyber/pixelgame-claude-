@@ -39,6 +39,19 @@ func _ready() -> void:
 	_barrier.position = Vector2(width * TILE / 2.0, zone_row * TILE - 8)
 	_barrier.disabled = int(SeaChart.boat_info().get("zones", 1)) >= 2
 	walls.add_child(_barrier)
+	var barrier3 := CollisionShape2D.new()
+	var shape3 := RectangleShape2D.new()
+	shape3.size = Vector2(width * TILE, 16)
+	barrier3.shape = shape3
+	barrier3.position = Vector2(width * TILE / 2.0, int(SeaChart.cfg("zone3_row")) * TILE - 8)
+	barrier3.disabled = int(SeaChart.boat_info().get("zones", 1)) >= 3
+	walls.add_child(barrier3)
+	_wall(walls, SeaChart.place_pos("nameless_isle"), Vector2(64, 40))
+	if Clock.season == "winter" and Inventory.count_of("icebreaker_bow") <= 0:
+		# 16.5: icebergs ring the ice field in winter; the icebreaker bow cuts through thin ice.
+		var field := SeaChart.place_pos("ice_field")
+		for i in 8:
+			_wall(walls, field + Vector2.from_angle(i * TAU / 8.0) * 90.0, Vector2(28, 20))
 	var dock: Array = SeaChart.cfg("dock")
 	var exit_node := RegionExit.new()
 	exit_node.name = "To_cape"
@@ -58,6 +71,11 @@ func _ready() -> void:
 	garden.name = "SeaGarden"
 	add_child(garden)
 	rebuild_garden()
+	var events := Node2D.new()
+	events.name = "SeaEvents"
+	add_child(events)
+	Sea.roll_outing()
+	rebuild_events()
 	var well := DeepEntrance.new()
 	well.name = "DrownedWell"
 	var well_at: Array = SeaChart.cfg("drowned_well")
@@ -67,6 +85,23 @@ func _ready() -> void:
 	buoy.name = "RestPlace"
 	buoy.position = SeaChart.place_pos("rest_place")
 	add_child(buoy)
+
+
+func rebuild_events() -> void:
+	var layer := get_node_or_null("SeaEvents")
+	if layer == null:
+		return
+	for child in layer.get_children():
+		child.queue_free()
+	for ev in Sea.outing:
+		var node := SeaEventObject.new()
+		node.entry = ev
+		node.position = Vector2(float(ev["x"]), float(ev["y"]))
+		layer.add_child(node)
+	if Sea.outing.any(func(e: Dictionary) -> bool: return str(e["id"]) == "squall"):
+		var hint := get_parent().get_node_or_null("HUD/Hint") as Label
+		if hint:
+			hint.text = Loc.t("sea_event.squall")
 
 
 func rebuild_garden() -> void:
@@ -98,12 +133,24 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	var patch := SeaGarden.area()
-	draw_rect(Rect2(Vector2(patch.position) * TILE, Vector2(patch.size) * TILE), Color(0.9, 0.8, 0.5, 0.18), false, 1.0)
 	draw_rect(Rect2(-400, -400, width * TILE + 800, height * TILE + 800), DEEP)
 	draw_rect(Rect2(0, 0, width * TILE, height * TILE), WATER)
 	var zone_row := int(SeaChart.cfg("zone2_row"))
 	draw_rect(Rect2(0, zone_row * TILE, width * TILE, (height - zone_row) * TILE), DEEP)
+	var zone3 := int(SeaChart.cfg("zone3_row"))
+	draw_rect(Rect2(0, zone3 * TILE, width * TILE, (height - zone3) * TILE), DEEP.darkened(0.25))
+	var patch := SeaGarden.area()
+	draw_rect(Rect2(Vector2(patch.position) * TILE, Vector2(patch.size) * TILE), Color(0.9, 0.8, 0.5, 0.18), false, 1.0)
+	if Clock.season == "winter":
+		var field := SeaChart.place_pos("ice_field")
+		draw_circle(field, 110.0, Color(0.85, 0.9, 0.95, 0.35))
+		for i in 8:
+			draw_rect(Rect2(field + Vector2.from_angle(i * TAU / 8.0) * 90.0 - Vector2(14, 10), Vector2(28, 20)), Color("#dfe9ea"))
+	var isle_n := SeaChart.place_pos("nameless_isle")
+	draw_rect(Rect2(isle_n - Vector2(32, 20), Vector2(64, 40)), Color("#5e6a4e"))
+	var fairway := SeaChart.place_pos("fairway")
+	for x in range(0, width * TILE, 40):
+		draw_rect(Rect2(x, fairway.y, 20, 2), Color(0.9, 0.9, 0.7, 0.3))
 	var frame := int(_t * 4.0)
 	for i in 260:
 		var x := (i * 97) % (width * TILE)

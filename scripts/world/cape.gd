@@ -34,6 +34,9 @@ func _ready() -> void:
 	add_child(Stations.new())
 	if map_id == "cape":
 		$Garden.add_to_group("gardens")
+		if Sea.towing:
+			var honour := Sea.finish_tow()
+			call_deferred("_tow_hint", honour)
 		for plot_id in ["greenhouse_small", "greenhouse"]:
 			var house := preload("res://scripts/world/garden.gd").new()
 			house.name = "Garden_" + plot_id
@@ -98,6 +101,10 @@ func _ready() -> void:
 		var report := Night.pending_report.duplicate(true)
 		Night.pending_report.clear()
 		call_deferred("_deliver_report", report)
+
+
+func _tow_hint(honour: int) -> void:
+	$HUD/Hint.text = "Рыбак спасён: 300 кр, треска и честь +%d." % honour
 
 
 func _deliver_report(report: Dictionary) -> void:

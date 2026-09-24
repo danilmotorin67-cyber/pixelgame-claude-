@@ -194,6 +194,7 @@ static func wait_seconds(rod_id: String, bait: String, rng: RandomNumberGenerato
 		seconds *= float(Data.by_id("items", bait).get("bait", 1.0))
 	if Sea.mercy >= 40.0:
 		seconds *= 0.95
+	seconds *= maxf(0.3, 1.0 + Game.effect("bite"))
 	if Game.flag("listen_water"): # Hedda's lesson at 14 hearts (4.3)
 		seconds *= 0.9
 	return seconds

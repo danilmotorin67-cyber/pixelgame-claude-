@@ -25,6 +25,9 @@ var clams: Array = []
 var pools_fished: Dictionary = {}
 # The sea garden of 13.10 by the cape pier: [{kind, x, y, planted, next, ready, broken}] in sea-map tiles.
 var sea_garden: Array = []
+# 16.6: the events met on this outing, rolled when the boat leaves the pier: [{id, x, y, done}] in pixels.
+var outing: Array = []
+var towing: bool = false
 
 
 func reset() -> void:
@@ -44,6 +47,8 @@ func reset() -> void:
 	clams.clear()
 	pools_fished.clear()
 	sea_garden.clear()
+	outing.clear()
+	towing = false
 
 
 func schedule_gift(item: String, beach: String, day: int) -> void:
@@ -373,6 +378,99 @@ func night_gear() -> void:
 	_spawn_clams(Clock.day_index)
 
 
+# ---- the events of an outing (16.6) ----
+
+func _random_water(rng: RandomNumberGenerator, zones: Array) -> Vector2:
+	var size: Array = SeaChart.cfg("size")
+	for n in 200:
+		var at := Vector2(rng.randi_range(4, int(size[0]) - 5) * 16 + 8, rng.randi_range(int(SeaChart.cfg("coast_rows")) + 3, int(size[1]) - 3) * 16 + 8)
+		if SeaChart.zone_of(at) in zones and not SeaChart.is_land(at):
+			return at
+	return SeaChart.place_pos("sea_garden")
+
+
+func roll_outing(seed_value: int = -1) -> Array:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = seed_value if seed_value >= 0 else posmod(Game.world_seed * 71 + Clock.day_index * 13 + Clock.minutes, 2147483647)
+	outing.clear()
+	var reach: Array = range(1, int(SeaChart.boat_info().get("zones", 1)) + 1)
+	for ev in SeaChart.cfg("events"):
+		var id := str(ev["id"])
+		var zones: Array = ev.get("zones", reach).filter(func(z: Variant) -> bool: return int(z) in reach)
+		if zones.is_empty():
+			continue
+		if ev.has("season") and Clock.season != str(ev["season"]):
+			continue
+		if ev.has("days") and (Clock.day < int(ev["days"][0]) or Clock.day > int(ev["days"][1])):
+			continue
+		if bool(ev.get("hmar", false)) and not Weather.hmar_night:
+			continue
+		if bool(ev.get("bad_weather", false)) and Weather.current not in ["rain", "storm", "fog", "snow", "blizzard"]:
+			continue
+		if rng.randf() >= float(ev["chance"]):
+			continue
+		var at := _random_water(rng, zones)
+		if ev.has("near"):
+			at = SeaChart.place_pos(str(ev["near"])) + Vector2(rng.randf_range(-40, 40), rng.randf_range(24, 48))
+		outing.append({"id": id, "x": at.x, "y": at.y, "done": false})
+		if id == "squall":
+			damage_hull(5.0)
+			Weather.wind_direction = (Weather.wind_direction + 4) % 8
+	return outing
+
+
+# Meeting an event: returns the line to show.
+func meet(ev: Dictionary) -> String:
+	if bool(ev["done"]):
+		return ""
+	var id := str(ev["id"])
+	match id:
+		"cargo", "bottle":
+			if Inventory.count_of("gaff_wood") + Inventory.count_of("gaff_iron") <= 0:
+				return "Не дотянуться — нужен багор."
+			var item: String = "sealed_bottle_letter" if id == "bottle" else str(["cargo_fishing", "cargo_merchant"][int(ev["x"]) % 2])
+			if Inventory.add(item, 1) != 1:
+				return "Трюм и рюкзак полны."
+			Skills.add_xp("foraging", 10 if id == "bottle" else 3)
+		"bird_frenzy":
+			Game.add_buff({"bite": -0.5, "hours": 1})
+		"seals":
+			var key := "seal_fed_%d" % Clock.day_index
+			if Game.flag(key):
+				return "Тюлени сыты и довольны."
+			if not Inventory.take("fish_herring", 1):
+				return "Тюлени смотрят выжидательно. У вас нет сельди."
+			Game.set_flag(key)
+			Game.add_stat("seal_feed_days")
+		"whales", "orcas":
+			Game.add_stat(id + "_seen")
+			Game.set_flag(id + "_seen")
+		"ghost_ship":
+			if int(Game.counters.get("eleonora_year", 0)) == Clock.year:
+				return "«Элеонора» растворяется в тумане."
+			var isle := SeaChart.place_pos("nameless_isle") + Vector2(0, 40)
+			outing.append({"id": "eleonora_chest", "x": isle.x, "y": isle.y, "done": false})
+		"eleonora_chest":
+			Game.counters["eleonora_year"] = Clock.year
+			Inventory.add("chest_deep", 1)
+		"fisher_in_trouble":
+			towing = true
+	ev["done"] = true
+	return Loc.t("sea_event." + id) if Loc.has("sea_event." + id) else "Сундук у Острова Без Имени."
+
+
+# Towing a fisherman back to the pier (16.6): a present and honour (doubled for the Rescuer).
+func finish_tow() -> int:
+	if not towing:
+		return 0
+	towing = false
+	var honour := 6 if Skills.has_profession("rescuer") else 3
+	Game.add_honor(honour)
+	Economy.add(300)
+	Inventory.add("fish_cod", 3)
+	return honour
+
+
 # ---- boats (16) ----
 
 func set_boat(id: String) -> void:
@@ -387,7 +485,8 @@ func can_sail(zone: int = 1) -> String:
 		return "no_boat"
 	if zone > int(SeaChart.boat_info().get("zones", 1)):
 		return "zone"
-	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails"):
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") \
+			and not (Inventory.count_of("storm_sails") > 0 and bool(SeaChart.boat_info().get("storm_ok_with_sails", false) or boat == "sloop")):
 		return "storm"
 	return ""
 

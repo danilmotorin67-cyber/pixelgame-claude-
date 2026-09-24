@@ -21,7 +21,10 @@ static func place_pos(place: String) -> Vector2:
 
 
 static func zone_of(at: Vector2) -> int:
-	return 2 if tile_of(at).y >= int(cfg("zone2_row")) else 1
+	var row := tile_of(at).y
+	if row >= int(cfg("zone3_row")):
+		return 3
+	return 2 if row >= int(cfg("zone2_row")) else 1
 
 
 static func is_land(at: Vector2) -> bool:

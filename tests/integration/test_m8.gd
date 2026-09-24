@@ -365,6 +365,69 @@ func _check_grotto() -> void:
 	_check(Grotto.flood_energy() == 0.0, "Otliva keeps the water off the keeper")
 
 
+# 16.1, 16.5, 16.6: the sloop and Raven's Eye, zone 3, and what the sea brings on an outing.
+func _check_sea() -> void:
+	_fresh()
+	_check(SeaChart.zone_of(Vector2(100, 40 * 16)) == 1 and SeaChart.zone_of(Vector2(100, 60 * 16)) == 2
+		and SeaChart.zone_of(Vector2(100, 110 * 16)) == 3, "three zones down the chart")
+	Sea.set_boat("sloop")
+	_check(Sea.can_sail(2) == "" and Sea.can_sail(3) == "zone", "the sloop reaches zone 2, not 3")
+	Sea.set_boat("bot")
+	_check(Sea.can_sail(3) == "" and Sea.hold.size() >= 48, "Raven's Eye: zone 3 and a 48-slot hold")
+	Weather.current = "storm"
+	_check(Sea.can_sail(1) == "storm", "no sailing into a storm without storm sails")
+	Inventory.add("storm_sails", 1)
+	_check(Sea.can_sail(1) == "", "the boat with storm sails goes out in a storm")
+	Weather.current = "clear"
+	_check(SeaChart.place_pos("ice_field").y > float(SeaChart.cfg("zone3_row")) * 16.0, "the ice field lies in zone 3")
+	# event frequencies over many outings
+	Clock.day_index = 28 + 16
+	var counts := {}
+	for n in 600:
+		for ev in Sea.roll_outing(n):
+			counts[str(ev["id"])] = int(counts.get(str(ev["id"]), 0)) + 1
+	_check(int(counts.get("cargo", 0)) > 60 and int(counts.get("cargo", 0)) < 120, "floating cargo on ~15%% of outings (%d/600)" % int(counts.get("cargo", 0)))
+	_check(int(counts.get("whales", 0)) > 130 and int(counts.get("whales", 0)) < 230, "whales on ~30%% of summer outings 15-21 (%d)" % int(counts.get("whales", 0)))
+	_check(int(counts.get("orcas", 0)) > 10 and int(counts.get("orcas", 0)) < 60, "orcas ~5%% in zone 3 (%d)" % int(counts.get("orcas", 0)))
+	_check(not counts.has("ghost_ship") and not counts.has("squall"), "no ghost ship without the Hmar, no squall in fair weather")
+	Clock.day_index = 28 + 3
+	var whales := 0
+	for n in 200:
+		for ev in Sea.roll_outing(n):
+			whales += 1 if str(ev["id"]) == "whales" else 0
+	_check(whales == 0, "whales only on Summer 15-21")
+	# meeting them
+	var cargo := {"id": "cargo", "x": 16.0, "y": 0.0, "done": false}
+	_check(Sea.meet(cargo).begins_with("Не дотянуться"), "cargo needs a gaff")
+	Inventory.add("gaff_wood", 1)
+	Sea.meet(cargo)
+	_check(bool(cargo["done"]) and (Inventory.count_of("cargo_fishing") + Inventory.count_of("cargo_merchant")) == 1,
+		"the gaff hooks a crate")
+	var seals := {"id": "seals", "x": 0.0, "y": 0.0, "done": false}
+	_check(Sea.meet(seals).begins_with("Тюлени смотрят"), "seals want herring")
+	Inventory.add("fish_herring", 2)
+	Sea.meet(seals)
+	_check(Game.stat("seal_feed_days") == 1, "feeding the seals counts a day (the way to Tuve)")
+	var ghost := {"id": "ghost_ship", "x": 0.0, "y": 0.0, "done": false}
+	Sea.meet(ghost)
+	var chest: Dictionary = Sea.outing.filter(func(e: Dictionary) -> bool: return str(e["id"]) == "eleonora_chest")[0]
+	Sea.meet(chest)
+	_check(Inventory.count_of("chest_deep") == 1 and int(Game.counters["eleonora_year"]) == Clock.year, "the Eleonora leads to a chest by the Nameless Isle")
+	var again := {"id": "ghost_ship", "x": 0.0, "y": 0.0, "done": false}
+	_check(Sea.meet(again).contains("растворяется"), "once a year")
+	var fisher := {"id": "fisher_in_trouble", "x": 0.0, "y": 0.0, "done": false}
+	Sea.meet(fisher)
+	var money := Economy.money
+	_check(Sea.towing and Sea.finish_tow() == 3 and Economy.money == money + 300 and Game.honor == 3, "towing a fisherman home: a present and honour")
+	var frenzy := {"id": "bird_frenzy", "x": 0.0, "y": 0.0, "done": false}
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 5
+	var slow := Fishing.wait_seconds("rod_agatha", "", rng)
+	Sea.meet(frenzy)
+	rng.seed = 5
+	_check(is_equal_approx(Fishing.wait_seconds("rod_agatha", "", rng), slow * 0.5), "under the bird frenzy fish bite twice as often")
+
+
 func _run() -> void:
 	_check_combat()
 	_check_bosses()
@@ -372,5 +435,6 @@ func _run() -> void:
 	_check_air()
 	_check_descent()
 	_check_grotto()
+	_check_sea()
 	print("M8 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)
