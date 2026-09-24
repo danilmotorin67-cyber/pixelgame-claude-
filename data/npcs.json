@@ -538,6 +538,18 @@
     "tag:flower"
    ],
    "hate": []
+  },
+  "letters": {
+   "8": {
+    "text": "mail.karl.h8",
+    "items": [
+     [
+      "salted_herring",
+      5
+     ]
+    ],
+    "recipe": "cook_berg_herring"
+   }
   }
  },
  {
@@ -570,6 +582,18 @@
     "tag:raw_fish"
    ],
    "hate": []
+  },
+  "letters": {
+   "8": {
+    "text": "mail.solveig.h8",
+    "items": [
+     [
+      "rhubarb_pie",
+      1
+     ]
+    ],
+    "recipe": "cook_rhubarb_pie"
+   }
   }
  },
  {
@@ -604,6 +628,28 @@
     "tea"
    ],
    "hate": []
+  },
+  "letters": {
+   "2": {
+    "text": "mail.bjorn.h2",
+    "items": [
+     [
+      "grog",
+      2
+     ]
+    ],
+    "recipe": "cook_grog"
+   },
+   "8": {
+    "text": "mail.bjorn.h8",
+    "items": [
+     [
+      "ale",
+      3
+     ]
+    ],
+    "recipe": "cook_dry_drowned_ale"
+   }
   }
  },
  {

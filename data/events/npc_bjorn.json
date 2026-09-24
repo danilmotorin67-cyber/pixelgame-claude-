@@ -1,0 +1,391 @@
+{
+ "events": [
+  {
+   "id": "ev_bjorn_2",
+   "npc": "npc_bjorn",
+   "hearts": 2,
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     12,
+     18
+    ],
+    "when": "hearts('npc_bjorn') >= 2"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_bjorn",
+     "bar_keeper",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      8,
+      4
+     ]
+    ],
+    [
+     "face",
+     "hero",
+     "up"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn2.l01"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn2.l02"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.bjorn2.c01",
+       [
+        [
+         "friendship",
+         "npc_bjorn",
+         60
+        ]
+       ],
+       "rum"
+      ],
+      [
+       "ev.bjorn2.c02",
+       [
+        [
+         "friendship",
+         "npc_bjorn",
+         80
+        ]
+       ],
+       "honey"
+      ]
+     ]
+    ],
+    [
+     "label",
+     "rum"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn2.l03"
+    ],
+    [
+     "goto",
+     "end"
+    ],
+    [
+     "label",
+     "honey"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn2.l04"
+    ],
+    [
+     "goto",
+     "end"
+    ],
+    [
+     "label",
+     "end"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "bjorn_grog_lesson"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_bjorn_4",
+   "npc": "npc_bjorn",
+   "hearts": 4,
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     20,
+     24
+    ],
+    "when": "hearts('npc_bjorn') >= 4"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_bjorn",
+     "fire",
+     "left"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      12,
+      5
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn4.l01"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn4.l02"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "sad",
+     "ev.bjorn4.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "bjorn_fortuna_yarn"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_bjorn_6",
+   "npc": "npc_bjorn",
+   "hearts": 6,
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     20,
+     24
+    ],
+    "when": "hearts('npc_bjorn') >= 6"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_bjorn",
+     "bar_keeper",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      8,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn6.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.bjorn6.l02"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn6.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "bjorn_cellar"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_bjorn_8",
+   "npc": "npc_bjorn",
+   "hearts": 8,
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     12,
+     18
+    ],
+    "when": "hearts('npc_bjorn') >= 8"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_bjorn",
+     "bar_keeper",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      8,
+      4
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn8.l01"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn8.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "bjorn_recipe_told"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_bjorn_10",
+   "npc": "npc_bjorn",
+   "hearts": 10,
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     23,
+     26
+    ],
+    "when": "hearts('npc_bjorn') >= 10"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_bjorn",
+     "table_1",
+     "right"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      3,
+      7
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn10.l01"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "neutral",
+     "ev.bjorn10.l02"
+    ],
+    [
+     "say",
+     "npc_bjorn",
+     "happy",
+     "ev.bjorn10.l03"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "bjorn_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

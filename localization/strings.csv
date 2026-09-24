@@ -2709,3 +2709,451 @@ ev.ilm8.l02,Кладка. Крепче. Бери.,Masonry. Stronger. Take it.
 ev.ilm10.l01,Садись.,Sit.
 ev.ilm10.l02,(Вы сидите с Ильмом на бревне у гавани целый час. Он не говорит ни слова. Это самый тёплый час за сезон.),(You sit with Ilm on a log by the harbour for a whole hour. He doesn't say a word. It's the warmest hour of the season.)
 ev.ilm10.l03,Хорошо.,Good.
+npc.karl.spring.01,Скидок нет. Надежды тоже. Но есть репа.,No discounts. No hope either. But we have turnips.
+npc.karl.spring.02,Весна. Люди покупают семена и верят в урожай. Я продаю семена и не верю.,Spring. People buy seeds and believe in a harvest. I sell seeds and don't.
+npc.karl.spring.03,Двадцать крон за пакет репы. Через месяц будет двадцать две. Всё дорожает. Кроме меня.,Twenty crowns a packet of turnip. In a month it'll be twenty-two. Everything goes up. Except me.
+npc.karl.spring.04,Сольвейг опять испекла пирог с ревенем. Себестоимость — три кроны. Радость — отрицательная.,Solveig baked rhubarb pie again. Cost — three crowns. Joy — negative.
+npc.karl.spring.05,Солнце вышло. Ненадолго. Всё хорошее — ненадолго.,The sun's out. Not for long. Nothing good lasts.
+npc.karl.spring.06,Вы купили лопату? Сломается. Все ломаются. Приходите за новой.,You bought a spade? It'll break. They all do. Come back for a new one.
+npc.karl.spring.07,Весенний туман. Продажи падают. Как и настроение. Как и всё.,Spring fog. Sales drop. So does mood. So does everything.
+npc.karl.spring.08,"Сигрид считает, что я не замечаю чернила на её пальцах. Я замечаю. Я всё замечаю. Бухгалтер.",Sigrid thinks I don't notice the ink on her fingers. I notice. I notice everything. Accountant.
+npc.karl.spring.09,Пароход пришёл. Товар подорожал. Пароход ушёл. Товар всё равно дорогой.,The steamer came. Goods went up. The steamer left. Goods are still dear.
+npc.karl.spring.10,Добрый день. Хотя это ещё не доказано.,Good day. Though that's yet to be proven.
+npc.karl.summer.01,Лето. Туристы покупают открытки. Одну. На всю семью.,Summer. Tourists buy postcards. One. For the whole family.
+npc.karl.summer.02,Клубника в продаже. Кислая. Как жизнь.,Strawberries on sale. Sour. Like life.
+npc.karl.summer.03,Жара. Масло тает. Прибыль — тоже.,Heat. The butter's melting. So are the profits.
+npc.karl.summer.04,Лив купила сорок блокнотов. Сорок! Я впервые улыбнулся в этом году.,Liv bought forty notebooks. Forty! I smiled for the first time this year.
+npc.karl.summer.05,"Сольвейг говорит, что лето — время радоваться. Я радуюсь. Внутри. Глубоко. Не видно.",Solveig says summer is a time to rejoice. I'm rejoicing. Inside. Deep down. You can't see it.
+npc.karl.summer.06,Регата. Все болеют за Хедду. Я — за погоду. Чтобы не испортилась. Испортится.,The regatta. Everyone roots for Hedda. I root for the weather. Not to turn. It will.
+npc.karl.summer.07,Белые ночи. Можно работать дольше. Покупатели всё равно не приходят.,White nights. You can work longer. The customers still don't come.
+npc.karl.summer.08,Вы загорели. Это старит. Говорю как друг. И как продавец крема.,You've tanned. It ages you. I say it as a friend. And as a seller of cream.
+npc.karl.summer.09,Летом у меня хорошее настроение. Оно выглядит как обычное. Но оно хорошее.,In summer I'm in a good mood. It looks like my usual one. But it's good.
+npc.karl.summer.10,Солёная сельдь. Лучшее в мире. Летом — тоже.,Salted herring. The best thing in the world. In summer too.
+npc.karl.autumn.01,Осень. Наконец-то погода соответствует моему настроению.,Autumn. At last the weather matches my mood.
+npc.karl.autumn.02,Сельдь! Солёная! Лучший сезон. Я почти счастлив. Почти.,Herring! Salted! The best season. I'm almost happy. Almost.
+npc.karl.autumn.03,Ярмарка. Выручка — хорошая. Ожидания — всё равно плохие. Принцип.,The fair. Takings — good. Expectations — still bad. On principle.
+npc.karl.autumn.04,Тыквы не продаются. Люди боятся круглого. Я тоже.,Pumpkins don't sell. People fear round things. So do I.
+npc.karl.autumn.05,"Долги растут, как грибы. Только грибы можно съесть.",Debts grow like mushrooms. Only you can eat mushrooms.
+npc.karl.autumn.06,Сигрид ушла гулять на погост. Опять. У неё хороший вкус к местам.,Sigrid's gone walking to the graveyard. Again. She has good taste in places.
+npc.karl.autumn.07,Осенью я пересчитываю склад. Три раза. Каждый раз меньше.,In autumn I recount the stock. Three times. Less each time.
+npc.karl.autumn.08,Ветер сорвал вывеску «Лавка Бергов». Теперь это просто лавка. Как и было.,The wind tore off the 'Berg Shop' sign. Now it's just a shop. As it always was.
+npc.karl.autumn.09,Вы выглядите {усталым|усталой}. Кофе — пятнадцать крон. Для вас — пятнадцать.,You look tired. Coffee — fifteen crowns. For you — fifteen.
+npc.karl.autumn.10,"Осень учит: всё, что растёт, однажды упадёт. Бухгалтерия учит тому же.",Autumn teaches: everything that grows will one day fall. Bookkeeping teaches the same.
+npc.karl.winter.01,Зима. Мой день рождения. Праздновать нечего. Но Сольвейг испечёт пирог. С ревенем.,Winter. My birthday. Nothing to celebrate. But Solveig will bake a pie. Rhubarb.
+npc.karl.winter.02,Соль кончилась. Метель. Пароход не придёт. Всё как я и говорил.,We're out of salt. Blizzard. The steamer won't come. Just as I said.
+npc.karl.winter.03,Свечи продаются хорошо. Люди боятся темноты. Правильно делают.,Candles sell well. People fear the dark. Quite right too.
+npc.karl.winter.04,Долгая ночь. Я считаю убытки при свече. Свеча — тоже убыток.,The long night. I count losses by candlelight. The candle's a loss too.
+npc.karl.winter.05,Лёд на лагуне. Нильс уже провалился. По колено. Сольвейг продала ему сухие носки. Бизнес.,Ice on the lagoon. Nils has already gone through. Up to the knee. Solveig sold him dry socks. Business.
+npc.karl.winter.06,"Сахар подорожал. Зима. Людям нужно сладкое, чтобы пережить горькое.",Sugar's gone up. Winter. People need sweetness to get through the bitterness.
+npc.karl.winter.07,Ваш маяк светит всю зиму. Сколько он жрёт топлива? Не говорите. Я расстроюсь.,Your lighthouse burns all winter. How much fuel does it eat? Don't tell me. I'll get upset.
+npc.karl.winter.08,Снег на крыльце. Сигрид чистит. Медленно. Пишет что-то пальцем на снегу. Не читаю.,Snow on the step. Sigrid's clearing it. Slowly. Writing something in the snow with her finger. I don't read it.
+npc.karl.winter.09,Зимой все становятся пессимистами. Наконец-то я в большинстве.,In winter everyone turns pessimist. At last I'm in the majority.
+npc.karl.winter.10,Весна придёт. Со счетами.,Spring will come. With its bills.
+npc.karl.weather.rain.01,Дождь. Покупателей нет. Сижу. Считаю. Всё сходится. В минус.,Rain. No customers. I sit. I count. It all adds up. To a loss.
+npc.karl.weather.rain.02,Дождь. Хорошо для урожая. Плохо для всего остального. Баланс отрицательный.,Rain. Good for crops. Bad for everything else. Negative balance.
+npc.karl.weather.storm.01,Шторм. Ставни закрыл. Убытки посчитал заранее. Готов.,Storm. Shutters shut. Losses counted in advance. Ready.
+npc.karl.weather.storm.02,В шторм продаю только свечи. И сочувствие. Сочувствие — бесплатно. Не привыкайте.,In a storm I sell only candles. And sympathy. Sympathy's free. Don't get used to it.
+npc.karl.weather.fog.01,Туман. Никто не видит вывеску. Никто не приходит. Логично.,Fog. Nobody sees the sign. Nobody comes. Logical.
+npc.karl.weather.fog.02,В тумане я слышу шаги у лавки. Никто не входит. Даже призраки экономят.,In fog I hear footsteps by the shop. Nobody comes in. Even ghosts economise.
+npc.karl.weather.snow.01,Снег. Цена на сани выросла. У Кнуда. Не у меня. У меня — на варежки.,Snow. The price of sledges went up. At Knud's. Not mine. Mine went up on mittens.
+npc.karl.weather.cloud.01,"Облачно. Как обычно. Стабильность — единственное, что меня радует.",Cloudy. As usual. Stability is the only thing that cheers me.
+npc.karl.festival.herring_fair.01,Ярмарка! Солёная сельдь идёт по двадцать. Я почти улыбаюсь. Не смотрите.,The fair! Salted herring going at twenty. I'm almost smiling. Don't look.
+npc.karl.festival.boat_blessing.01,"Спуск лодок. Бенедикт благословляет. Я считаю, сколько лодок потонет к осени. Про себя.",The Boat Launch. Benedict blesses. I count how many will sink by autumn. To myself.
+npc.karl.festival.long_night.01,Долгая ночь. Продаю свечи. Много. Праздник для бухгалтерии.,The Long Night. Selling candles. Lots. A holiday for the books.
+npc.karl.festival.ice_festival.01,Ледовый праздник. Горячий чай — пять крон. Замёрзшим — шесть. Инфляция.,Ice Festival. Hot tea — five crowns. For the frozen — six. Inflation.
+npc.karl.festival.01,Праздник. Сольвейг танцует. Я держу кассу. Кто-то должен.,A holiday. Solveig dances. I mind the till. Someone has to.
+npc.karl.festival.02,Все веселятся. Завтра все будут покупать соль от похмелья. Готовлюсь.,Everyone's merry. Tomorrow they'll all be buying salt for the hangover. I'm preparing.
+npc.karl.gift.love.01,Солёная сельдь… Вы понимаете в жизни. Это редкость.,Salted herring… You understand life. That's rare.
+npc.karl.gift.love.02,Кофе. Хороший. Я… тронут. Это не записывается в приход. Но я тронут.,Coffee. Good coffee. I'm… touched. It doesn't go in the ledger. But I'm touched.
+npc.karl.gift.like.01,Рыба. Хорошая. Спасибо. Себестоимость приемлемая.,Fish. Good fish. Thanks. Acceptable cost.
+npc.karl.gift.like.02,"Неплохо. Даже хорошо. Не говорите Сольвейг, что я сказал «хорошо».","Not bad. Good, even. Don't tell Solveig I said 'good'."
+npc.karl.gift.neutral.01,Спасибо. Запишу в приход. Графа «прочее».,Thanks. I'll enter it as income. 'Miscellaneous'.
+npc.karl.gift.neutral.02,Хм. Полезно? Посмотрим. Всё проверяется временем. Обычно проваливает.,Hm. Useful? We'll see. Everything's tested by time. It usually fails.
+npc.karl.gift.dislike.01,Цветы. Завянут. Как всё. Спасибо.,Flowers. They'll wilt. Like everything. Thanks.
+npc.karl.gift.dislike.02,Это… Нет. Это не продастся. Даже со скидкой. У меня нет скидок.,This… No. It won't sell. Even discounted. I don't do discounts.
+npc.karl.gift.hate.01,"Лютефиск. Вы знаете, сколько стоит проветрить лавку?",Lutefisk. Do you know what it costs to air out a shop?
+npc.karl.gift.hate.02,Мусор? Это убыток в чистом виде. Уберите.,Rubbish? That's a loss in its purest form. Take it away.
+npc.karl.birthday.01,День рождения. Пятьдесят пять. Ещё год убытков позади.,My birthday. Fifty-five. Another year of losses behind me.
+npc.karl.birthday.02,Сольвейг испекла пирог с ревенем. Сигрид — стихотворение. Мрачное. Моё любимое.,Solveig baked a rhubarb pie. Sigrid — a poem. A gloomy one. My favourite.
+npc.karl.birthday_gift.01,"Подарок. Мне. Я… не знаю, куда это записать. Пусть будет «радость».",A present. For me. I… don't know where to enter it. Let's call it 'joy'.
+npc.karl.birthday_gift.02,Вы помните мой день рождения. Я не помню ваш. Это надо исправить. Запишу.,You remember my birthday. I don't remember yours. That must be fixed. I'll note it.
+npc.karl.act1.01,Агата покупала у нас ворвань и чай. Платила сразу. Единственный честный клиент за двадцать лет.,Agatha bought oil and tea from us. Paid at once. The only honest customer in twenty years.
+npc.karl.act1.02,Ворвань — сорок крон порция. Для огня — не жалейте. Для себя — пожалейте.,Oil — forty crowns a portion. For the fire — don't skimp. For yourself — do.
+npc.karl.act1.03,"Первый огонь видел. Сольвейг плакала. Я посчитал, сколько вы сожгли. Одобряю.",Saw the first fire. Solveig cried. I calculated how much you burned. I approve.
+npc.karl.act1.04,Грим продаёт стекло по сто. У меня стекла нет. Иначе было бы девяносто пять. Я не жадный. Я конкурентный.,Grim sells glass at a hundred. I have no glass. Otherwise it'd be ninety-five. I'm not greedy. I'm competitive.
+npc.karl.act1.05,Инспекция в конце весны. Удачи. Статистически — пятьдесят на пятьдесят.,Inspection at the end of spring. Good luck. Statistically — fifty-fifty.
+npc.karl.act1.06,Конец весны. Грим уплыл по делам. У него всегда дела в ясные ночи. Я не спрашиваю. Я должен ему.,End of spring. Grim's gone off on business. He always has business on clear nights. I don't ask. I owe him.
+npc.karl.act2.01,«Святая Берта». Грим выкупил груз с аукциона. За треть цены. Я бы тоже. Не будь я честным.,The Saint Bertha. Grim bought the cargo at auction. For a third of the price. I would too. If I weren't honest.
+npc.karl.act2.02,Белая Хмарь. Люди скупили все свечи. Я впервые продал весь склад. Ненавижу себя за радость.,The White Fog. People bought up every candle. For the first time I sold out the whole stock. I hate myself for being glad.
+npc.karl.act2.03,"Телеграф? Прогноз точнее? Значит, я буду знать заранее, что всё будет плохо. Прекрасно.",The telegraph? A better forecast? So I'll know in advance that everything will go badly. Wonderful.
+npc.karl.act2.04,Двадцать скелетов. Двадцать гробов. Двадцать счетов. Я их порвал. Не спрашивайте.,Twenty skeletons. Twenty coffins. Twenty bills. I tore them up. Don't ask.
+npc.karl.act2.05,Долг Гриму растёт. Проценты — как прилив. Только не уходят.,My debt to Grim keeps growing. The interest's like a tide. Only it never goes out.
+npc.karl.act2.06,Большая Хмарь? Продам факелы. Не для выгоды. Для выживания. Ну и для выгоды.,"The Great Fog? I'll sell torches. Not for profit. For survival. Well, and profit."
+npc.karl.act3.01,Вы собираете улики на Грима? Я ничего не знаю. Я знаю всё. Приходите вечером.,You're gathering evidence on Grim? I know nothing. I know everything. Come by this evening.
+npc.karl.act3.02,Долговая книга Грима — там есть наша страница. И все остальные. Весь остров должен ему.,Grim's debt book — our page is in it. And everyone else's. The whole island owes him.
+npc.karl.act3.03,"Скафандр? Сколько стоит? Не говорите. Я знаю, что дорого. И что вы всё равно купите.",A diving suit? How much? Don't tell me. I know it's expensive. And that you'll buy it anyway.
+npc.karl.act3.04,Сигрид ходит к вам на маяк? Хорошо. Там хотя бы светло.,Sigrid visits you at the lighthouse? Good. At least it's light there.
+npc.karl.act3.05,Штерн покупал у нас табак. Расплатился новыми купюрами. Из Кронвальда. Пахнут страховкой.,Stern bought tobacco from us. Paid in new notes. From Kronvald. They smell of insurance.
+npc.karl.act3.06,Если Грима посадят — долги сгорят? Не отвечайте. Я не хочу надеяться. Это вредно.,If Grim's jailed — will the debts go up in smoke? Don't answer. I don't want to hope. It's bad for you.
+npc.karl.act4.01,"Великий Прилив. Застраховал лавку. У «Нептуна». Смешно, правда?","The Great Tide. I've insured the shop. With Neptune. Funny, isn't it?"
+npc.karl.act4.02,Сигрид будет у колокола. Я — у кассы. Каждый защищает своё.,Sigrid will be at the bell. I'll be at the till. Everyone defends their own.
+npc.karl.act4.03,Если вы погибнете — лавка будет закрыта день. Из уважения. Два — если вы вернёте долг.,If you die — the shop will close for a day. Out of respect. Two if you've paid your tab.
+npc.karl.act4.04,Мне страшно. Это нерентабельно. Но страшно.,I'm scared. It's unprofitable. But I'm scared.
+npc.karl.act4.05,Держите огонь. Иначе — всё. Убытки абсолютные.,Keep the light. Otherwise — that's it. Total losses.
+npc.karl.act4.06,После всего… Я выпью. За свой счёт. Впервые.,After it's all over… I'll have a drink. On my own account. For the first time.
+npc.karl.married_other.01,Поздравляю. Свадебный подарок — мешок соли. Соль — это надолго. Как брак. Надеюсь.,Congratulations. Wedding present — a sack of salt. Salt lasts. Like marriage. I hope.
+npc.karl.married_other.02,Свадьба обошлась острову дорого. Но оно того стоило. Первый раз говорю такое.,The wedding cost the island dear. But it was worth it. First time I've ever said that.
+npc.karl.married_other.03,Сольвейг плакала. Сигрид молчала. Я считал гостей. Шестьдесят два. Рекорд.,Solveig cried. Sigrid kept quiet. I counted the guests. Sixty-two. A record.
+npc.karl.married_other.04,Желаю вам процветания. И отсутствия долгов. Это одно и то же.,I wish you prosperity. And no debts. Same thing.
+npc.karl.married_other.05,Семейным — скидка. Шучу. Скидок нет. Но я подумал.,Discount for the married. Joking. No discounts. But I thought about it.
+npc.karl.event.wreck.01,Крушение. Цены на доски и гвозди вырастут. Я их не подниму. Сегодня.,A wreck. Board and nail prices will go up. I won't raise mine. Today.
+npc.karl.event.wreck.02,Люди погибли. Никакая бухгалтерия этого не посчитает. Я пробовал.,People died. No bookkeeping can count that. I've tried.
+npc.karl.event.wreck.03,Свечи для похорон — бесплатно. Не спорьте. Я сам в шоке.,Candles for the funerals — free. Don't argue. I'm shocked myself.
+npc.karl.event.wreck.04,Опять ясная ночь. Опять Грим уплывал. Я ничего не говорю. Я должен.,A clear night again. Grim went out again. I say nothing. I owe him.
+npc.karl.event.wreck.05,Сигрид пишет эпитафии для них. Я покупаю ей бумагу. Молча.,Sigrid's writing epitaphs for them. I buy her the paper. Silently.
+npc.karl.event.funeral.01,Похороны. Хорошо. Мёртвые не должны. Им повезло.,A burial. Good. The dead owe nothing. Lucky them.
+npc.karl.event.funeral.02,Свечи на могилу — от лавки. Не благодарите. Это вложение. В карму.,Candles for the grave — from the shop. Don't thank me. It's an investment. In karma.
+npc.karl.event.funeral.03,Вы хороните чужих людей бесплатно. Это нерационально. И правильно.,You bury strangers for nothing. It's irrational. And right.
+npc.karl.event.funeral.04,Сигрид прочла эпитафию. Я прослезился. Это от ветра.,Sigrid read an epitaph. I teared up. That's the wind.
+npc.karl.event.funeral.05,Ещё одна душа без долгов. Завидую.,One more soul free of debt. I envy it.
+npc.karl.event.hmar.01,Ночь Хмари. Скупили все свечи. Я впервые продал склад и не рад.,Fog Night. They bought up every candle. For the first time I sold out and I'm not glad.
+npc.karl.event.hmar.02,Туман шептал цифры. Мои долги. Точные. Жутко.,The fog whispered numbers. My debts. Exact ones. Creepy.
+npc.karl.event.hmar.03,Сольвейг всю ночь молилась. Сигрид — писала. Я — считал. Каждый справляется как умеет.,Solveig prayed all night. Sigrid wrote. I counted. Everyone copes their own way.
+npc.karl.event.hmar.04,Ваш луч проходил по лавке. Я посчитал: каждые двенадцать секунд. Стабильно. Люблю стабильность.,Your beam swept through the shop. I counted: every twelve seconds. Stable. I love stability.
+npc.karl.event.hmar.05,Утром все пришли за солью. Соль от нечисти. Я не верю. Продал.,In the morning everyone came for salt. Salt against evil. I don't believe it. Sold it anyway.
+npc.karl.event.inspection.01,Инспекция прошла? Поздравляю. Мои расчёты давали пятьдесят процентов. Вы их превзошли.,Passed the inspection? Congratulations. My figures gave you fifty percent. You beat them.
+npc.karl.event.inspection.02,Пальм купил один леденец. Сдачу пересчитал. Уважаю.,Palm bought one mint drop. Recounted his change. I respect that.
+npc.karl.event.inspection.03,"Инспектор — единственный человек, который торгуется со мной меньше, чем я с ним.",The inspector is the only man who haggles with me less than I haggle with him.
+npc.karl.event.inspection.04,Пальм спросил про цены. Я сказал — справедливые. Он записал: «субъективно».,Palm asked about prices. I said — fair. He wrote: 'subjective'.
+npc.karl.event.inspection.05,Сдали. Хорошо. Огонь горит — корабли ходят — товар идёт. Экономика.,Passed. Good. The fire burns — ships sail — goods arrive. Economics.
+npc.karl.event.wedding.01,Свадьба. Я подарил весы. Чтобы всё было поровну. Это романтично. По-своему.,The wedding. I gave a pair of scales. So everything's even. It's romantic. In its way.
+npc.karl.event.wedding.02,Сольвейг заставила меня танцевать. Два круга. Это стоило мне здоровья.,Solveig made me dance. Two rounds. It cost me my health.
+npc.karl.event.wedding.03,Хорошая свадьба. Почти без убытков.,A good wedding. Almost no losses.
+npc.karl.event.wedding.04,Сигрид поймала букет. И бросила его обратно. Моя дочь.,Sigrid caught the bouquet. And threw it back. That's my daughter.
+npc.karl.event.wedding.05,"Будьте счастливы. Это единственная инвестиция, которая окупается.",Be happy. It's the only investment that pays off.
+npc.karl.event.villains.01,"Грим арестован. Долговая книга изъята. Долги… аннулированы. Я не знаю, что делать с надеждой.",Grim's arrested. The debt book's seized. The debts… cancelled. I don't know what to do with hope.
+npc.karl.event.villains.02,Артель Сольвика. Цены честные. Я… разорюсь от честной конкуренции. И я рад.,The Solvik Artel. Honest prices. I'll… go broke from honest competition. And I'm glad.
+npc.karl.event.villains.03,Я улыбнулся. Сольвейг испугалась. Сигрид записала. Исторический день.,I smiled. Solveig was frightened. Sigrid wrote it down. A historic day.
+npc.karl.event.villains.04,Двадцать лет я платил Гриму проценты. Теперь буду платить себе. Странно.,For twenty years I paid Grim interest. Now I'll pay myself. Strange.
+npc.karl.event.villains.05,Спасибо. Это… бесценно. Впервые говорю это слово без иронии.,Thank you. It's… priceless. First time I've said that word without irony.
+ev.karl2.l01,"Садитесь. Нет, не туда. Туда. Вот книга. Двадцать лет бухгалтерии. Каждая крона.","Sit. No, not there. There. Here's the book. Twenty years of accounts. Every crown."
+ev.karl2.l02,Приход — вот. Расход — вот. А вот графа «надежда». Пустая. Я её завёл в первый год. Так и не пригодилась.,Income — here. Expenses — here. And here's a column for 'hope'. Empty. I started it the first year. Never needed it.
+ev.karl2.c01,Давайте впишем туда что-нибудь.,Let's write something in it.
+ev.karl2.c02,"Может, вам просто нужен отпуск?",Maybe you just need a holiday?
+ev.karl2.l03,Что? …«Смотритель помог посчитать». Хорошо. Одна запись. Для начала.,What? …'The keeper helped count.' All right. One entry. For a start.
+ev.karl2.l04,"Отпуск — это убыток с видом на море. Спасибо, у меня есть вид на море.","A holiday is a loss with a sea view. Thanks, I've got a sea view."
+ev.karl4.l01,Закройте дверь. Я скажу это один раз. Мы должны Гриму. Много. Лавка заложена.,Close the door. I'll say this once. We owe Grim. A lot. The shop's mortgaged.
+ev.karl4.l02,Сольвейг не знает. Сигрид знает. Она всё знает. Она не говорит. Мы Берги — мы не говорим.,Solveig doesn't know. Sigrid knows. She knows everything. She doesn't say. We Bergs don't say.
+ev.karl4.c01,Я помогу. Вместе расплатимся.,I'll help. We'll pay it off together.
+ev.karl4.c02,"Спасибо, что сказали.",Thank you for telling me.
+ev.karl4.l03,Вместе? Это… нерационально. Спасибо. Я запишу это в графу «надежда». Вторая запись.,Together? That's… irrational. Thank you. I'll enter it under 'hope'. The second entry.
+ev.karl4.l04,Не за что. Это было дорого сказать. Я сказал. Теперь дешевле.,Don't mention it. It was costly to say. I've said it. Now it's cheaper.
+ev.karl6.l01,Долговая книга. Моя копия. Двести сорок крон осталось. Я посчитал: к зиме справимся. Если продавать репу. Много репы.,The debt book. My copy. Two hundred and forty crowns left. I've calculated: we'll manage by winter. If we sell turnips. Lots of turnips.
+ev.karl6.c01,"Я буду приносить урожай вам, а не Гриму.","I'll bring my harvest to you, not to Grim."
+ev.karl6.l02,"Нам. Не Гриму. Хорошо. Я впервые рассчитываю на человека, а не на погоду.","To us. Not Grim. Good. For the first time I'm counting on a person, not the weather."
+ev.karl6.c02,Вот двести сорок крон. Закройте долг.,Here's two hundred and forty. Close the debt.
+ev.karl6.c03,"Я буду приносить урожай вам, а не Гриму.","I'll bring my harvest to you, not to Grim."
+ev.karl6.l03,Вы… Двести сорок… Я верну. С процентами. Нет — без. Без процентов. Впервые в жизни — без.,You… Two hundred and forty… I'll repay it. With interest. No — without. Without interest. For the first time in my life — without.
+mail.karl.h8,"Карл: «Рецепт сельди по-бергски. Никому не показывать. Особенно Гриму. Соль, сахар, перец, терпение. Терпения — больше». Приложено: 5 солёной сельди.","Karl: ""The recipe for Berg-style herring. Show no one. Especially Grim. Salt, sugar, pepper, patience. More patience."" Enclosed: 5 salted herring."
+ev.karl8.l01,Я отправил вам письмо. С рецептом. Сельдь по-бергски. Семейный.,I've sent you a letter. With a recipe. Berg-style herring. The family's.
+ev.karl8.l02,Мой прадед придумал его в голодный год. Сказал: «Если есть сельдь и соль — всё переживём». Он пережил. Мы — тоже.,My great-grandfather made it up in a hungry year. Said: 'If there's herring and salt — we'll get through anything.' He did. So have we.
+ev.karl10.l01,Садитесь. Сегодня лавка закрыта раньше. Я закрыл. Сам. Без причины.,Sit. The shop's closed early today. I closed it. Myself. For no reason.
+ev.karl10.l02,Вот ваша страница в графе «надежда». Она целая. Двадцать записей. Все — вы.,Here's your page under 'hope'. A whole page. Twenty entries. All of them you.
+ev.karl10.l03,Скидок нет. Но для вас — есть одна. На всю жизнь. Не говорите Сольвейг. Она расплачется.,No discounts. But for you — there's one. For life. Don't tell Solveig. She'll cry.
+npc.solveig.spring.01,"Весна, {милый|милая}! Ревень пошёл! Пирог будет каждый день. Ну, он и так каждый день.","Spring, dear! The rhubarb's up! There'll be pie every day. Well, there already is."
+npc.solveig.spring.02,Слышали? Маргит видела во сне третьего мужа. Он жаловался на сырость. Я бы тоже жаловалась.,Have you heard? Margit dreamt of her third husband. He was complaining about the damp. So would I.
+npc.solveig.spring.03,Попробуйте пирожок. С чем? С ревенем. С чем же ещё.,Try a pasty. With what? Rhubarb. What else.
+npc.solveig.spring.04,Карл сегодня сказал «доброе утро». Первый раз за месяц. Я испекла торт. С ревенем.,Karl said 'good morning' today. First time in a month. I baked a cake. Rhubarb.
+npc.solveig.spring.05,"Олаф рассказал, что Хедда рассказала, что Бьорн сказал… Ой, это я вам не должна.","Olaf told me Hedda told him Bjorn said… Oh, I shouldn't tell you that."
+npc.solveig.spring.06,"Вы похудели, {милый|милая}. Возьмите булочку. Не спорьте. Я мать. Не ваша, но мать.","You've got thinner, dear. Have a bun. Don't argue. I'm a mother. Not yours, but a mother."
+npc.solveig.spring.07,Первые цветы у часовни! Бенедикт их поливает. Из кружки. Боится лейки — там вода.,First flowers by the chapel! Benedict waters them. From a mug. Afraid of the watering can — there's water in it.
+npc.solveig.spring.08,Сигрид опять не съела пирог. Опять! Третий день. Я начинаю обижаться.,Sigrid didn't eat her pie again. Again! Third day. I'm starting to take offence.
+npc.solveig.spring.09,"Весной все влюбляются. Я знаю кто в кого. Спросите. Нет, не спрашивайте. Спросите!","In spring everyone falls in love. I know who with whom. Ask me. No, don't. Ask me!"
+npc.solveig.spring.10,"Хорошего дня, {милый|милая}! Если будет плохой — приходите. У меня пирог.","Have a good day, dear! If it's a bad one — come by. I've got pie."
+npc.solveig.summer.01,Лето! Клубника! Пирог с клубникой и ревенем! Сигрид опять будет недовольна. Ну и пусть.,Summer! Strawberries! Strawberry and rhubarb pie! Sigrid will be cross again. Let her.
+npc.solveig.summer.02,Лив — такая милая девочка. Худая. Надо кормить. Я ношу ей пирожки в управу. Она их забывает.,Liv's such a sweet girl. Thin. Needs feeding. I take her pasties at the office. She forgets them.
+npc.solveig.summer.03,Слышали? Кнуд измерил туриста и сказал ему размер гроба. Турист уехал раньше.,Have you heard? Knud measured a tourist and told him his coffin size. The tourist left early.
+npc.solveig.summer.04,"Жара, а я у печки. Зато загар ровный. С одной стороны.",It's hot and I'm at the oven. At least my tan's even. On one side.
+npc.solveig.summer.05,Регата! Я пеку пирог для победителя. Хедда его не ест. Отдаёт Бьорну. Бьорн съедает с бочкой.,The regatta! I bake a pie for the winner. Hedda doesn't eat it. Gives it to Bjorn. Bjorn eats it with a barrel.
+npc.solveig.summer.06,"Белые ночи — и никто не спит. А кто не спит, тот сплетничает. Я — счастлива.",White nights — and nobody sleeps. And whoever doesn't sleep gossips. I'm in heaven.
+npc.solveig.summer.07,"Вы, {милый|милая}, загорели. Вам идёт. Не то что Карлу — он краснеет, как рак.","You've caught the sun, dear. It suits you. Not like Karl — he goes red as a lobster."
+npc.solveig.summer.08,Магнус опять в таверне. Такой умный мужчина. Пропадает. Жениться ему надо.,Magnus is in the tavern again. Such a clever man. Going to waste. He needs to marry.
+npc.solveig.summer.09,Мёд вересковый — лучше сахара. Хельга продаёт. Я покупаю. Для пирога. С ревенем.,Heather honey — better than sugar. Helga sells it. I buy it. For pie. Rhubarb.
+npc.solveig.summer.10,Летом у меня хорошее настроение. И у Карла. Он скрывает. Я знаю. Я жена.,In summer I'm in a good mood. So is Karl. He hides it. I know. I'm his wife.
+npc.solveig.autumn.01,Осень! Время пирогов с капустой. И с ревенем. Сушёным.,Autumn! Time for cabbage pies. And rhubarb. Dried.
+npc.solveig.autumn.02,"Слышали, что на ярмарке было? Нет? Садитесь. Это надолго.",Heard what happened at the fair? No? Sit down. This'll take a while.
+npc.solveig.autumn.03,Сигрид гуляет на погосте. Я волнуюсь. Карл говорит — там безопасно. Там все спокойные.,Sigrid walks in the graveyard. I worry. Karl says it's safe there. Everyone's calm there.
+npc.solveig.autumn.04,"Вы, {милый|милая}, опять хоронили? Возьмите пирог. После похорон нужно есть. Это закон.","Been burying again, dear? Take some pie. After a funeral you must eat. That's the law."
+npc.solveig.autumn.05,Осень — время сватовства. Я уже присмотрела пару для Магнуса. Не скажу кого. Скажу! Нет.,Autumn's matchmaking time. I've already picked someone for Magnus. Won't say who. I will! No.
+npc.solveig.autumn.06,Ветер сорвал вывеску. Карл сказал — к убыткам. Он всегда так говорит. Даже про дождь.,The wind tore off the sign. Karl said — losses ahead. He always says that. Even about rain.
+npc.solveig.autumn.07,Длинные вечера. Вяжу. Слушаю. Все проходят мимо окна. Всё вижу.,Long evenings. I knit. I listen. Everyone passes the window. I see it all.
+npc.solveig.autumn.08,Маргит рассказала про второго мужа. Он утонул в бочке с сельдью. Или в море. Она путается.,Margit told me about her second husband. He drowned in a herring barrel. Or the sea. She gets muddled.
+npc.solveig.autumn.09,"Сельдь, сельдь, сельдь! Всё пахнет сельдью. Даже пирог. Даже с ревенем.","Herring, herring, herring! Everything smells of herring. Even the pie. Even rhubarb."
+npc.solveig.autumn.10,"Не грустите, {милый|милая}. Осень пройдёт. Всё проходит. Кроме пирога. Пирог — каждый день.","Don't be sad, dear. Autumn will pass. Everything passes. Except pie. Pie's every day."
+npc.solveig.winter.01,"Зима! Печка! Пироги! Жизнь прекрасна, если не выходить на улицу.",Winter! The stove! Pies! Life is beautiful if you don't go outside.
+npc.solveig.winter.02,Карлов день рождения зимой. Я пеку пирог. Он ворчит. Съедает весь. Традиция.,Karl's birthday's in winter. I bake a pie. He grumbles. Eats the lot. Tradition.
+npc.solveig.winter.03,"Слышали? Олаф упал на лыжах в сугроб у дома Хельги. Она ему погадала, пока он вылезал.",Heard? Olaf fell on his skis into a drift by Helga's. She told his fortune while he climbed out.
+npc.solveig.winter.04,"Долгая ночь. Мы с Сигрид вяжем. Она молчит, я говорю. Идеальная пара.","The long night. Sigrid and I knit. She's quiet, I talk. A perfect pair."
+npc.solveig.winter.05,"Вам холодно, {милый|милая}? Вот шарф. Кривой. Мой. Тёплый.","Cold, dear? Here's a scarf. Crooked. Mine. Warm."
+npc.solveig.winter.06,Ингрид вяжет шарфы близнецам. Такая добрая девочка. В кого — не знаю. Не в отца.,Ingrid knits scarves for the twins. Such a kind girl. Who she takes after I don't know. Not her father.
+npc.solveig.winter.07,Метель. Никто не приходит. Я пеку впрок. Если кто замёрзнет — у меня пирог.,Blizzard. Nobody comes. I'm baking ahead. If anyone freezes — I have pie.
+npc.solveig.winter.08,Сияние было! Я загадала желание. Не скажу какое. Про Сигрид.,There was an aurora! I made a wish. Won't say what. About Sigrid.
+npc.solveig.winter.09,Зимой все такие грустные. Надо чаще печь.,Everyone's so sad in winter. I must bake more often.
+npc.solveig.winter.10,"Ваш огонь видно из нашего окна. Я каждый вечер говорю: «Вот, смотритель не спит». И сплю спокойно.","We can see your light from our window. Every evening I say: 'There, the keeper's awake.' And I sleep soundly."
+npc.solveig.weather.rain.01,Дождь! Все дома. Идеально для пирогов. И для сплетен.,Rain! Everyone's indoors. Perfect for pies. And gossip.
+npc.solveig.weather.rain.02,"Промокли, {милый|милая}? Сушитесь у печки. Пока сохнете — расскажу новости.","Soaked, dear? Dry off by the stove. While you dry, I'll tell you the news."
+npc.solveig.weather.storm.01,"Шторм! Ой, я вся дрожу. Держите огонь, пожалуйста. Мой Карл однажды… нет, не буду.","A storm! Oh, I'm all a-tremble. Keep the light going, please. My Karl once… no, I won't."
+npc.solveig.weather.storm.02,"В шторм я пеку. Чтобы руки заняты. И чтобы было что нести тем, кому плохо.",In a storm I bake. To keep my hands busy. And to have something to take to those who are suffering.
+npc.solveig.weather.fog.01,"Туман. Не ходите далеко. Говорят, в тумане кто-то зовёт. Я не слышала. Маргит слышала.",Fog. Don't go far. They say someone calls in the fog. I didn't hear it. Margit did.
+npc.solveig.weather.fog.02,"В туман я держу свечу на окне. Для тех, кто заблудился.",In fog I keep a candle in the window. For anyone lost.
+npc.solveig.weather.snow.01,Снег! Нильс и Фрейя лепят снеговика у лавки. С носом из ревеня. Я горжусь.,Snow! Nils and Freya are building a snowman by the shop. With a rhubarb nose. I'm proud.
+npc.solveig.weather.cloud.01,Облачно. Хорошая погода для теста. Не поднимается от солнца.,Cloudy. Good weather for dough. The sun doesn't make it rise wrong.
+npc.solveig.festival.boat_blessing.01,Спуск лодок! Я пеку пирожки в форме лодочек. С ревенем. Все едят. Все!,The Boat Launch! I bake boat-shaped pasties. Rhubarb. Everyone eats them. Everyone!
+npc.solveig.festival.white_sun.01,Ночь Белого Солнца! Мы с Карлом познакомились в эту ночь. Он был весёлый. Один раз.,White Sun Night! Karl and I met on this night. He was cheerful. Once.
+npc.solveig.festival.herring_fair.01,"Ярмарка! Я продаю пироги, Карл — сельдь, Сигрид — делает вид, что нас не знает.","The fair! I sell pies, Karl sells herring, Sigrid pretends she doesn't know us."
+npc.solveig.festival.long_night.01,Долгая ночь. Пеку до утра. Пирог на каждый дом. Традиция Бергов. Моя.,The Long Night. Baking till morning. A pie for every house. A Berg tradition. Mine.
+npc.solveig.festival.01,Праздник! Я знаю всё про всех. Сегодня все узнают всё про всех. Благодаря мне.,A holiday! I know everything about everyone. Today everyone will know everything about everyone. Thanks to me.
+npc.solveig.festival.02,"Танцевать! Карл, не прячься! Я тебя вижу!","Let's dance! Karl, don't hide! I can see you!"
+npc.solveig.gift.love.01,"Ревень! Свежий! Ой, {милый|милая}, вы золото! Я испеку вам пирог. С ним же.","Rhubarb! Fresh! Oh, dear, you're a treasure! I'll bake you a pie. With it."
+npc.solveig.gift.love.02,"Вересковый мёд! Ох! Это же лучший подарок! Сигрид, иди посмотри! Не идёт. Ладно.","Heather honey! Oh! The best present! Sigrid, come and look! She won't. Oh well."
+npc.solveig.gift.like.01,"Какая прелесть! Спасибо, {милый|милая}!","How lovely! Thank you, dear!"
+npc.solveig.gift.like.02,"Ой, мне? Вы меня балуете. Продолжайте.","Oh, for me? You spoil me. Keep going."
+npc.solveig.gift.neutral.01,Спасибо! Найду применение. Я всему нахожу применение. Кроме Карлова ворчания.,Thank you! I'll find a use for it. I find a use for everything. Except Karl's grumbling.
+npc.solveig.gift.neutral.02,"Спасибо, {милый|милая}. Как мило, что вы вспомнили обо мне.","Thank you, dear. How sweet of you to think of me."
+npc.solveig.gift.dislike.01,Сырая рыба? Ой. Спасибо. Я её… Карлу отдам. Он любит.,Raw fish? Oh. Thank you. I'll… give it to Karl. He likes it.
+npc.solveig.gift.dislike.02,Это… интересно. Спасибо. Поставлю подальше от теста.,That's… interesting. Thank you. I'll put it well away from the dough.
+npc.solveig.gift.hate.01,"Ой, нет-нет. Это в лавку нельзя. Покупатели разбегутся.",Oh no no. That can't come into the shop. The customers will run.
+npc.solveig.gift.hate.02,"Уберите это, пожалуйста. Я вас люблю, но это — нет.","Take that away, please. I love you, but not that."
+npc.solveig.birthday.01,У меня день рождения! Я испекла сама себе пирог. С ревенем. Сюрприз!,It's my birthday! I baked myself a pie. Rhubarb. Surprise!
+npc.solveig.birthday.02,Пятьдесят два. Карл подарил мне весы. Опять. Я коллекционирую весы. Не по своей воле.,Fifty-two. Karl gave me scales. Again. I collect scales. Not by choice.
+npc.solveig.birthday_gift.01,Подарок! Ой! Вы помните! Спасибо! Я расскажу всем!,A present! Oh! You remembered! Thank you! I'll tell everyone!
+npc.solveig.birthday_gift.02,Вы лучше Карла. Не говорите ему. Скажите! Нет.,You're better than Karl. Don't tell him. Do! No.
+npc.solveig.act1.01,"Агата брала пирог каждую субботу. Без ревеня. Единственная, кому я пекла без ревеня.",Agatha took a pie every Saturday. No rhubarb. The only one I ever baked for without rhubarb.
+npc.solveig.act1.02,"Добро пожаловать, {милый|милая}! Вы уже со всеми познакомились? Я расскажу, с кем не надо.","Welcome, dear! Have you met everyone yet? I'll tell you who to avoid."
+npc.solveig.act1.03,Первый огонь! Я плакала. Карл считал. Сигрид писала. Все по-своему рады.,The first light! I cried. Karl counted. Sigrid wrote. Everyone's glad in their own way.
+npc.solveig.act1.04,Похоронили бедного Ларса? Ох. Я испеку пирог его семье. Отправите?,Buried poor Lars? Oh. I'll bake a pie for his family. Will you send it?
+npc.solveig.act1.05,Штерн из «Нептуна» приезжает. Олаф говорит — неприятный. Олаф всегда прав про людей. Про погоду — нет.,Stern from Neptune's coming. Olaf says he's unpleasant. Olaf's always right about people. Not about weather.
+npc.solveig.act1.06,"Конец весны. Хальвдан опять уплыл. Он всегда уплывает в конце весны. Странно, правда? Ой, я ничего не говорила.","End of spring. Halvdan's gone off again. He always goes off at the end of spring. Strange, isn't it? Oh, I didn't say anything."
+npc.solveig.act2.01,«Святая Берта»… Там была учительница. Вера. Я пекла ей пирог в прошлом году. Она проезжала.,The Saint Bertha… There was a teacher aboard. Vera. I baked her a pie last year. She was passing through.
+npc.solveig.act2.02,"Белая Хмарь! Я всю ночь молилась. И пекла. И молилась над тестом. Тесто поднялось. Значит, услышали.",The White Fog! I prayed all night. And baked. And prayed over the dough. The dough rose. So they heard.
+npc.solveig.act2.03,Слышали про кости в гротах? Двадцать! Маргит говорит — это «Фортуна». Помните песню?,Heard about the bones in the grottoes? Twenty! Margit says it's the Fortuna. Remember the song?
+npc.solveig.act2.04,"Лив приехала — такая умница. Будете дружить? Будете! Я вижу, {милый|милая}.","Liv's arrived — such a clever girl. Will you be friends? You will! I can see it, dear."
+npc.solveig.act2.05,Мы с Сигрид поссорились. Из-за пирога. Опять. Помирите нас? Вы же всех мирите. С мёртвыми.,Sigrid and I quarrelled. Over pie. Again. Will you make peace between us? You make peace with everyone. The dead included.
+npc.solveig.act2.06,Большая Хмарь придёт осенью. Я напеку на всю деревню. Голодным страшнее.,The Great Fog comes in autumn. I'll bake for the whole village. Hungry people are more frightened.
+npc.solveig.act3.01,Вы собираете что-то против Хальвдана? Я ничего не знаю. Спросите меня завтра. Я узнаю.,You're gathering something against Halvdan? I know nothing. Ask me tomorrow. I'll find out.
+npc.solveig.act3.02,Карл признался про долги. Мне! Двадцать лет молчал. Я его обняла. Потом стукнула. Потом обняла.,Karl confessed about the debts. To me! Twenty years he kept quiet. I hugged him. Then hit him. Then hugged him.
+npc.solveig.act3.03,Ингрид похудела. Я ношу ей пироги. Она ест. Хороший знак.,Ingrid's lost weight. I take her pies. She eats them. A good sign.
+npc.solveig.act3.04,"Вы ныряете? В Глубь? Ох. Возьмите пирожок. Нет, два. Под водой есть хочется.","You dive? Into the Deep? Oh. Take a pasty. No, two. You get hungry underwater."
+npc.solveig.act3.05,Штерн ужинал у Гримов. Я видела в окно. Случайно. Я всегда вижу в окна случайно.,Stern dined at the Grims'. I saw through the window. By chance. I always see through windows by chance.
+npc.solveig.act3.06,"Всё будет хорошо, {милый|милая}. Я это знаю. Я испекла пирог на удачу. Он удался.","It'll all be fine, dear. I know it. I baked a pie for luck. It turned out well."
+npc.solveig.act4.01,Великий Прилив… Я напекла на всех. На маяк тоже. Отнесёте?,The Great Tide… I've baked for everyone. For the lighthouse too. Will you take them?
+npc.solveig.act4.02,Сигрид будет у колокола. Я — рядом. С пирогами. Для храбрости.,Sigrid will be at the bell. I'll be beside her. With pies. For courage.
+npc.solveig.act4.03,Мне страшно. Я не скрываю. Я никогда ничего не скрываю. Это моё проклятие.,I'm scared. I don't hide it. I never hide anything. That's my curse.
+npc.solveig.act4.04,"Возвращайтесь, {милый|милая}. У меня для вас пирог. Не с ревенем. Специально.","Come back, dear. I have a pie for you. Not rhubarb. Specially."
+npc.solveig.act4.05,Карл застраховал лавку. У «Нептуна»! Я его чуть не убила.,Karl insured the shop. With Neptune! I nearly killed him.
+npc.solveig.act4.06,Держите огонь. А я буду держать всех остальных. Словами. И пирогами.,Keep the light going. And I'll hold everyone else together. With words. And pies.
+npc.solveig.married_other.01,"Поздравляю, {милый|милая}! Свадебный пирог — от меня. Без ревеня. Для вас — всё что угодно.","Congratulations, dear! The wedding pie's from me. No rhubarb. For you — anything."
+npc.solveig.married_other.02,Какая пара! Я знала! Я всем говорила! Никто не верил!,What a couple! I knew it! I told everyone! No one believed me!
+npc.solveig.married_other.03,Я плакала всю свадьбу. От счастья. И от лука. Резала на салат.,I cried all through the wedding. From happiness. And onions. Chopping for the salad.
+npc.solveig.married_other.04,"Теперь вы семья. Приходите вдвоём. Пирог — один на двоих. Шучу, два.","Now you're a family. Come by together. One pie for two. Joking, two."
+npc.solveig.married_other.05,Будьте счастливы. И не ссорьтесь из-за пирога. Мы с Карлом ссоримся. Тридцать лет.,Be happy. And don't quarrel over pie. Karl and I do. Thirty years.
+npc.solveig.event.wreck.01,"Корабль… Ох. Я пеку для похорон. Много. Людям нужно есть, когда горе.",A ship… Oh. I'm baking for the funerals. A lot. People need to eat when they're grieving.
+npc.solveig.event.wreck.02,"Там были женщины? Дети? Скажите, что нет. Ох.",Were there women aboard? Children? Tell me no. Oh.
+npc.solveig.event.wreck.03,Я слышала колокол ночью. Разбудила Карла. Он сказал — спи. Сам не спал.,I heard the bell in the night. Woke Karl. He said — sleep. He didn't sleep himself.
+npc.solveig.event.wreck.04,Опять ясная ночь. Олаф говорит — странно. Маргит говорит — проклятие. Я говорю — пирог. Для всех.,A clear night again. Olaf says it's strange. Margit says it's a curse. I say — pie. For everyone.
+npc.solveig.event.wreck.05,"Вам тяжело, {милый|милая}? Я вижу. Приходите вечером. Просто посидите у печки.","Is it hard for you, dear? I can see. Come by this evening. Just sit by the stove."
+npc.solveig.event.funeral.01,Похороны. Я принесла пирог к погосту. Оставила у ограды. Для живых. Не для мёртвых.,A burial. I brought a pie to the graveyard. Left it by the fence. For the living. Not the dead.
+npc.solveig.event.funeral.02,Вы опять хоронили. Вы такой… {надёжный|надёжная}. Остров вам благодарен.,You held a burial again. You're so… dependable. The island's grateful to you.
+npc.solveig.event.funeral.03,"Сигрид читала эпитафию. Я плакала. Карл делал вид, что не плачет. Ветер помог.",Sigrid read the epitaph. I cried. Karl pretended not to. The wind helped.
+npc.solveig.event.funeral.04,"Каждый, кого вы хороните, — чей-то сын. Я пеку для его матери. Даже если не знаю, где она.",Everyone you bury is somebody's son. I bake for his mother. Even if I don't know where she is.
+npc.solveig.event.funeral.05,После похорон — чай. Это закон. Приходите.,After a burial — tea. That's the law. Come by.
+npc.solveig.event.hmar.01,"Ночь Хмари! Ох, я не спала. Пекла. Молилась. Пекла. Всё сгорело. Не страшно.","Fog Night! Oh, I didn't sleep. Baked. Prayed. Baked. It all burned. Doesn't matter."
+npc.solveig.event.hmar.02,Туман шептал. Маргит говорит — мужей. Моего Карла там нет. Он живой. Слава Эльму.,The fog whispered. Margit says — husbands. My Karl's not there. He's alive. Thank Elmo.
+npc.solveig.event.hmar.03,Ваш свет проходил через окно. Я каждый раз крестилась. Потом устала. Стала просто считать.,Your light came through the window. I crossed myself each time. Then got tired. Started just counting.
+npc.solveig.event.hmar.04,"Сигрид всю ночь сидела у окна со свечой. Смелая. Вся в меня. Нет, в отца.","Sigrid sat by the window with a candle all night. Brave. Just like me. No, like her father."
+npc.solveig.event.hmar.05,Утром все пришли за хлебом. Раньше обычного. Страх будит аппетит.,In the morning everyone came for bread. Earlier than usual. Fear wakes the appetite.
+npc.solveig.event.inspection.01,Инспектор Пальм! Такой строгий. Я угостила его пирогом. Он записал: «взятка». Съел.,Inspector Palm! So strict. I treated him to pie. He wrote: 'bribe'. Ate it.
+npc.solveig.event.inspection.02,"Сдали? Ох, {милый|милая}, я знала! Я всем говорила!","Passed? Oh, dear, I knew it! I told everyone!"
+npc.solveig.event.inspection.03,"Пальм спросил, из чего пирог. Я сказала — из ревеня. Он записал: «пункт шестнадцатый, соответствует».","Palm asked what the pie was made of. I said rhubarb. He wrote: 'clause sixteen, compliant'."
+npc.solveig.event.inspection.04,"Инспекция — это как свекровь. Приходит, смотрит, уходит. Все выдыхают.","An inspection is like a mother-in-law. Comes, looks, leaves. Everyone breathes out."
+npc.solveig.event.inspection.05,"Я слышала, что Пальм улыбнулся. Кто-то видел. Я не видела. Но расскажу, что видела.",I heard Palm smiled. Someone saw it. I didn't. But I'll say I did.
+npc.solveig.event.wedding.01,Свадьба! Я пекла три дня. Торт в три яруса! С ревенем! Сигрид чуть не ушла.,The wedding! I baked for three days. A three-tier cake! Rhubarb! Sigrid nearly walked out.
+npc.solveig.event.wedding.02,Какие красивые! Какие молодые! Я плакала. Олаф тоже. Мы плакали вместе. Сплетничая.,So beautiful! So young! I cried. So did Olaf. We cried together. Gossiping.
+npc.solveig.event.wedding.03,Карл танцевал! Два круга! Я запишу этот день в календарь. Красным.,Karl danced! Two rounds! I'll mark this day on the calendar. In red.
+npc.solveig.event.wedding.04,Хедда бросила сельдь в Бенедикта. На счастье. Бенедикт упал. Тоже на счастье.,Hedda threw a herring at Benedict. For luck. Benedict fell over. Also for luck.
+npc.solveig.event.wedding.05,"Совет да любовь, {милый|милая}! И пирог — каждое воскресенье. Это мой подарок.","Love and harmony, dear! And a pie every Sunday. That's my present."
+npc.solveig.event.villains.01,"Хальвдан! Я пекла ему пироги двадцать лет! Он хвалил! Лгал, значит. Про всё.",Halvdan! I baked him pies for twenty years! He praised them! So he lied. About everything.
+npc.solveig.event.villains.02,Бедная Ингрид. Я отнесла ей пирог. Она ела и плакала. Я тоже.,Poor Ingrid. I took her a pie. She ate and cried. So did I.
+npc.solveig.event.villains.03,"Долги Карла… сгорели! Я впервые вижу, как он улыбается. Страшно. Непривычно. Прекрасно.",Karl's debts… gone! First time I've seen him smile. Frightening. Unfamiliar. Wonderful.
+npc.solveig.event.villains.04,Теперь вместо Торгового дома — Артель. Честная. Я испеку им вывеску. Из теста.,Now instead of the Trading House — the Artel. An honest one. I'll bake them a sign. Out of dough.
+npc.solveig.event.villains.05,"Спасибо вам, {милый|милая}. Весь остров спит спокойнее. Даже я. А я никогда не сплю.","Thank you, dear. The whole island sleeps easier. Even me. And I never sleep."
+ev.solveig2.l01,"Проходите, {милый|милая}! Сейчас научу печь. Руки в муку. Не бойтесь, мука не кусается. Кусается Карл.","Come in, dear! I'll teach you to bake. Hands in the flour. Don't be afraid, flour doesn't bite. Karl does."
+ev.solveig2.l02,Тесто любит тепло и разговоры. Я с ним разговариваю. Поэтому у меня лучшее тесто на острове.,Dough loves warmth and conversation. I talk to it. That's why I have the best dough on the island.
+ev.solveig2.c01,Поговорить с тестом.,Talk to the dough.
+ev.solveig2.c02,Просто месить молча.,Just knead in silence.
+ev.solveig2.l03,"Вот! Видите, как поднялось? Оно вас полюбило. Как и я.",There! See how it rose? It loves you. Like I do.
+ev.solveig2.l04,Тихое тесто. Как Сигрид. Тоже хорошее. Просто грустное.,Quiet dough. Like Sigrid. Good too. Just sad.
+ev.solveig4.l01,"Хотите, расскажу, как познакомилась с Карлом? Все хотят. Никто не просит. Вы просите?",Want to hear how I met Karl? Everyone does. Nobody asks. Are you asking?
+ev.solveig4.l02,"Ночь Белого Солнца. Он стоял у бочки с сельдью и считал, сколько её продали. Вслух. Я спросила, сколько. Он сказал: «Недостаточно».",White Sun Night. He was standing by a herring barrel counting how much had sold. Out loud. I asked how much. He said: 'Not enough.'
+ev.solveig4.l03,И улыбнулся. Один раз. Тридцать лет назад. Я до сих пор жду второго. Дождусь.,And smiled. Once. Thirty years ago. I'm still waiting for the second. I'll get it.
+ev.solveig6.l01,"Она опять не съела пирог! Три дня! Я пеку с любовью, а она — нос воротит!","She didn't eat her pie again! Three days! I bake with love, and she turns her nose up!"
+ev.solveig6.l02,Мама. Я ем пирог с ревенем девять тысяч дней. Я имею право на один день без него.,Mum. I've eaten rhubarb pie for nine thousand days. I'm entitled to one day without it.
+ev.solveig6.c01,"Может, печь по субботам другой пирог? Для Сигрид.",Maybe bake a different pie on Saturdays? For Sigrid.
+ev.solveig6.c02,Сольвейг права — пирог от сердца.,Solveig's right — the pie's from the heart.
+ev.solveig6.c03,Сигрид права — это слишком.,Sigrid's right — it's too much.
+ev.solveig6.l03,"По субботам… Другой? С морошкой? …Ладно. Для тебя, доченька. С морошкой.","On Saturdays… Another kind? Cloudberry? …All right. For you, darling. Cloudberry."
+ev.solveig6.l04,"Спасибо, мама. И вам. Это первое перемирие за десять лет.","Thank you, Mum. And you. That's the first truce in ten years."
+ev.solveig6.l05,Конечно. Все за маму. Пойду. Съем пирог. Назло.,Of course. Everyone sides with Mum. I'll go. Eat the pie. Out of spite.
+ev.solveig6.l06,"Слишком? Любовь не бывает слишком! …Ладно. Может, бывает. Немного.",Too much? Love is never too much! …All right. Maybe it is. A little.
+mail.solveig.h8,"Сольвейг: «Рецепт пирога с ревенем! Настоящий! Семейный! Сигрид сказала, что вы заслужили наказание. Шучу. Награду». Приложено: пирог с ревенем.","Solveig: ""The rhubarb pie recipe! The real one! The family one! Sigrid said you'd earned a punishment. Joking. A reward."" Enclosed: a rhubarb pie."
+ev.solveig8.l01,Я отправила вам рецепт! Пирог с ревенем. Тот самый. Его знали только три человека. Теперь — четыре.,I've sent you the recipe! Rhubarb pie. The very one. Only three people knew it. Now — four.
+ev.solveig8.l02,Главный секрет — не ревень. Главный секрет — печь каждый день. Даже когда никто не ест. Особенно тогда.,The main secret isn't the rhubarb. The main secret is baking every day. Even when nobody eats it. Especially then.
+ev.solveig10.l01,"Садитесь со мной на крыльцо, {милый|милая}. Сегодня я ничего не буду рассказывать. Ну… почти ничего.","Sit with me on the porch, dear. Today I won't tell you anything. Well… almost nothing."
+ev.solveig10.l02,"Вы знаете, я болтаю, потому что боюсь тишины. В тишине слышно, как море забирает людей.","You know, I chatter because I'm afraid of silence. In silence you can hear the sea taking people."
+ev.solveig10.l03,"А с вами не страшно молчать. Вот. Помолчим. Минутку. Ну, две.","But with you I'm not afraid to be quiet. There. Let's be quiet. A minute. Well, two."
+npc.bjorn.spring.01,"Добро пожаловать в «Сухой Утопленник»! Первый хозяин утонул в собственной бочке. Сухим его никто не видел, но звучит бодро!","Welcome to the Dry Drowned Man! The first landlord drowned in his own barrel. Nobody ever saw him dry, but it sounds cheerful!"
+npc.bjorn.spring.02,"Весна! Варю первый эль сезона. Лёгкий, как совесть рыбака.",Spring! Brewing the season's first ale. Light as a fisherman's conscience.
+npc.bjorn.spring.03,"Что налить? Эль, грог или правду? Правда — за счёт заведения. Её никто не заказывает.","What'll it be? Ale, grog or the truth? The truth's on the house. Nobody ever orders it."
+npc.bjorn.spring.04,Хмель взошёл! Малыш ещё. Через лето будет пиво. Через два — песни.,The hops are up! Just a baby yet. By summer there'll be beer. By next summer — songs.
+npc.bjorn.spring.05,"Магнус сидит у стойки с открытия. Говорит, это медицинское наблюдение. За мной.",Magnus has been at the bar since opening. Says it's medical observation. Of me.
+npc.bjorn.spring.06,"Весной все влюблённые. Заказывают сидр. Сидра нет. Даю эль и говорю, что сидр.",In spring everyone's in love. They order cider. I've no cider. I give them ale and call it cider.
+npc.bjorn.spring.07,"Слыхал анекдот? Приходит утопленник в таверну… А, ты смотритель. Ты таких видел. Не смешно?","Heard this one? A drowned man walks into a tavern… Ah, you're the keeper. You've seen plenty. Not funny?"
+npc.bjorn.spring.08,Первая рыба сезона! Уху сварю. С перцем. С огоньком. Как у тебя на маяке.,First fish of the season! I'll make soup. With pepper. With a spark. Like your lighthouse.
+npc.bjorn.spring.09,Хедда проиграла вчера в кости. Разбила кружку. Кружка не виновата. Я записал на неё.,Hedda lost at dice yesterday. Broke a mug. The mug wasn't to blame. I put it on her tab.
+npc.bjorn.spring.10,Заходи вечером. Будет весело. Или грустно. У меня всегда одно из двух.,Come by tonight. It'll be merry. Or sad. It's always one or the other here.
+npc.bjorn.summer.01,Лето! Туристы! Они платят вдвое и пьют вполовину. Лучшие клиенты.,Summer! Tourists! They pay double and drink half. Best customers.
+npc.bjorn.summer.02,"Жара. Эль холодный, погреб глубокий, я счастливый.","Heat. Ale's cold, cellar's deep, I'm happy."
+npc.bjorn.summer.03,"День рождения у меня летом. Весь остров пьёт за меня. За мой счёт. Традиция, будь она неладна.","My birthday's in summer. The whole island drinks to me. At my expense. Tradition, curse it."
+npc.bjorn.summer.04,Регата! Ставлю бочку победителю. Хедда выигрывает бочку восьмой год. Я разоряюсь восьмой год.,The regatta! A barrel for the winner. Hedda's won the barrel eight years running. I've been going broke eight years running.
+npc.bjorn.summer.05,Лив заказала эль и блокнот. Блокнота нет. Налил эль. Она записала на салфетке.,Liv ordered an ale and a notebook. I've no notebooks. Poured the ale. She wrote on a napkin.
+npc.bjorn.summer.06,Белые ночи — таверна не закрывается. Закрывается только Бьорн. Иногда. Под стойкой.,White nights — the tavern never closes. Only Bjorn closes. Sometimes. Under the bar.
+npc.bjorn.summer.07,Ты {загорел|загорела}! Или {обгорел|обгорела}? Эль лечит и то и другое. Внутрь.,You've caught the sun! Or burned? Ale cures both. Taken internally.
+npc.bjorn.summer.08,Олаф всё время сидит в углу и пишет. Я сказал ему: «Про меня пиши хорошее». Он написал «шумный».,Olaf sits in the corner writing all the time. I told him: 'Write nice things about me.' He wrote 'loud'.
+npc.bjorn.summer.09,Уха сегодня — из трёх рыб и одного секрета. Секрет — не спрашивай. Это укроп.,Today's soup — three fish and one secret. Don't ask. It's dill.
+npc.bjorn.summer.10,Летом песни громче. Слышно до маяка? Нет? Надо громче!,Songs are louder in summer. Can you hear them at the lighthouse? No? Must sing louder!
+npc.bjorn.autumn.01,Осень! Сельдь и эль! Лучшая пара на свете после меня и моей бочки.,Autumn! Herring and ale! Best couple in the world after me and my barrel.
+npc.bjorn.autumn.02,Ярмарка! Варил неделю. Пять бочек. Хватит на вечер. Если повезёт.,The fair! Brewed a week. Five barrels. Enough for one evening. With luck.
+npc.bjorn.autumn.03,"Шторма! Рыбаки сидят у меня. Злые, мокрые, платёжеспособные.","Storms! Fishermen sit here. Angry, wet and solvent."
+npc.bjorn.autumn.04,"Байка: однажды утопленник вышел из моря, зашёл сюда и спросил пива. Я налил. Он заплатил ракушкой. Храню.","A yarn: once a drowned man walked out of the sea, came in here and asked for a beer. I poured. He paid with a shell. I keep it."
+npc.bjorn.autumn.05,Хмель собрал. Теперь варить. Лучшее время года — для бочки.,Hops are in. Now to brew. Best time of the year — for a barrel.
+npc.bjorn.autumn.06,Осенью люди больше говорят. Я больше слушаю. Трактирщик — это священник с краном.,In autumn people talk more. I listen more. A landlord is a priest with a tap.
+npc.bjorn.autumn.07,"Ты выглядишь как человек, которому нужен грог. Не спорь. У меня глаз намётан.",You look like someone who needs grog. Don't argue. I've an eye for it.
+npc.bjorn.autumn.08,Ночь Утопленников скоро. В этот вечер я наливаю одну кружку лишнюю. На стойку. Для них.,Drowned Night soon. On that evening I pour one extra mug. On the bar. For them.
+npc.bjorn.autumn.09,Нут и Руд пьют и молчат. Когда рыбаки молчат — жди беды. Или они просто устали.,Nut and Rud drink and say nothing. When fishermen go quiet — expect trouble. Or they're just tired.
+npc.bjorn.autumn.10,"Листья падают, а я поднимаю. Кружки. Ха!","The leaves fall, and I raise. Mugs. Ha!"
+npc.bjorn.winter.01,Зима! Таверна — самое тёплое место на острове. Кроме горна Торы. Но там не наливают.,Winter! The tavern's the warmest place on the island. Except Tora's forge. But they don't pour there.
+npc.bjorn.winter.02,Метель. Никто не уходит домой. Я не выгоняю. Бьорн своих в метель не бросает.,Blizzard. Nobody goes home. I don't throw them out. Bjorn doesn't abandon his own in a blizzard.
+npc.bjorn.winter.03,Горячий эль с мёдом. Зимний рецепт. Бабушкин. Она утонула. Трезвой.,Hot ale with honey. A winter recipe. Granny's. She drowned. Sober.
+npc.bjorn.winter.04,Долгая ночь. Играем в кости до утра. Хедда выигрывает. Я разоряюсь. Все счастливы.,The long night. Dice till dawn. Hedda wins. I go broke. Everyone's happy.
+npc.bjorn.winter.05,"Зимой пьют больше, но платят меньше. Экономика холода.",In winter they drink more but pay less. The economics of cold.
+npc.bjorn.winter.06,Магнус бросил пить. Я в трауре. Он был моим лучшим клиентом. И другом. В таком порядке.,Magnus has stopped drinking. I'm in mourning. He was my best customer. And friend. In that order.
+npc.bjorn.winter.07,Снег на крыше таверны. Если рухнет — будет «Мокрый Утопленник». Надо почистить.,Snow on the tavern roof. If it caves in — it'll be the Wet Drowned Man. Better clear it.
+npc.bjorn.winter.08,Ты {замёрз|замёрзла}? Садись к огню. Первая кружка — моя. Вторая — твоя. Третья — песня.,Frozen? Sit by the fire. First mug's on me. The second's on you. The third's a song.
+npc.bjorn.winter.09,Сияние было! Все выбежали смотреть. Эль остыл. Жертвы красоты.,There was an aurora! Everyone ran out to look. The ale went cold. Casualties of beauty.
+npc.bjorn.winter.10,"Зимой я варю тёмный эль. Тёмный, как ночь. Крепкий, как Тора.",In winter I brew dark ale. Dark as night. Strong as Tora.
+npc.bjorn.weather.rain.01,Дождь! Все в таверне! Ура! Для меня дождь — это деньги с неба.,Rain! Everyone's in the tavern! Hooray! For me rain is money from heaven.
+npc.bjorn.weather.rain.02,"Мокрые плащи на вешалке, сухие глотки у стойки. Идеальный день.","Wet coats on the pegs, dry throats at the bar. A perfect day."
+npc.bjorn.weather.storm.01,"Шторм! Хедда уже тут, злая. Налил ей грог. Двойной. За счёт заведения. Иначе разнесёт.","Storm! Hedda's already here, furious. Poured her a grog. A double. On the house. Otherwise she'll smash the place."
+npc.bjorn.weather.storm.02,В шторм я пою громче моря. Иногда выигрываю.,In a storm I sing louder than the sea. Sometimes I win.
+npc.bjorn.weather.fog.01,Туман. Люди боятся идти домой. Сидят до утра. Туман — друг трактирщика.,Fog. People are afraid to go home. They stay till dawn. Fog is a landlord's friend.
+npc.bjorn.weather.fog.02,"В тумане кто-то стучит в окна. Я не открываю. Я наливаю. Тем, кто внутри.",In fog someone taps at the windows. I don't open. I pour. For those inside.
+npc.bjorn.weather.snow.01,Снег! Горячий эль! Продаю вёдрами.,Snow! Hot ale! Selling it by the bucket.
+npc.bjorn.weather.cloud.01,"Облачно. Средняя погода — средний эль. Шучу, у меня эль всегда отличный.","Cloudy. Average weather — average ale. Joking, my ale's always excellent."
+npc.bjorn.festival.herring_fair.01,Ярмарка! Пять бочек эля и одна бочка терпения. Терпение кончится первым.,The fair! Five barrels of ale and one of patience. The patience'll run out first.
+npc.bjorn.festival.regatta.01,"Регата! Бочка победителю! Хедда, не надо, ты уже выиграла восемь раз!","The regatta! A barrel for the winner! Hedda, don't, you've already won eight times!"
+npc.bjorn.festival.drowned_night.01,Ночь Утопленников. Лишняя кружка на стойке. Каждый год кто-то её выпивает. Не я.,Drowned Night. An extra mug on the bar. Every year someone drinks it. Not me.
+npc.bjorn.festival.long_night.01,"Долгая ночь! Таверна открыта до рассвета. Песни, кости, эль. Святое дело.","The Long Night! Tavern open till dawn. Songs, dice, ale. A sacred duty."
+npc.bjorn.festival.01,Праздник! Наливаю всем! Платите завтра. Или никогда. Праздник же!,A holiday! Pouring for everyone! Pay tomorrow. Or never. It's a holiday!
+npc.bjorn.festival.02,"Сегодня я не трактирщик. Сегодня я — дирижёр. Песни, тосты, драки — всё по нотам.","Today I'm not a landlord. Today I'm a conductor. Songs, toasts, brawls — all on cue."
+npc.bjorn.gift.love.01,"Хмель! Свежий! Ты понимаешь в жизни, смотритель! Сварю из него в твою честь!","Hops! Fresh! You understand life, keeper! I'll brew them in your honour!"
+npc.bjorn.gift.love.02,Мёд! Вересковый! Для эля — лучшее. Для меня — ещё лучше. Спасибо!,Honey! Heather honey! Best for ale. Even better for me. Thanks!
+npc.bjorn.gift.like.01,"О! Хорошо! Налью тебе за это. Нет, налью в любом случае.","Oh! Good! I'll pour you one for this. No, I'll pour you one anyway."
+npc.bjorn.gift.like.02,Спасибо! Сгодится. В хозяйстве трактирщика всё сгодится.,Thanks! It'll do. Everything's useful to a landlord.
+npc.bjorn.gift.neutral.01,Спасибо! Поставлю на полку за стойкой. Там всё интересное.,Thanks! I'll put it on the shelf behind the bar. That's where the interesting stuff goes.
+npc.bjorn.gift.neutral.02,"Хм! Спасибо. Не знаю, что это, но ставлю кружку.","Hm! Thanks. Don't know what it is, but I'll stand you a mug."
+npc.bjorn.gift.dislike.01,Чай? Мне? В таверне? Ты хочешь меня разорить?,Tea? For me? In a tavern? Trying to ruin me?
+npc.bjorn.gift.dislike.02,Ну… спасибо. Отдам Бенедикту. Он всё берёт.,Well… thanks. I'll give it to Benedict. He takes anything.
+npc.bjorn.gift.hate.01,Консервы «Нептун»? В моём заведении? Выброшу в море. Пусть море разбирается.,Neptune tins? In my establishment? I'll throw them in the sea. Let the sea deal with it.
+npc.bjorn.gift.hate.02,"Нет, друг. Это не подарок. Это оскорбление бочке.","No, friend. That's not a gift. That's an insult to the barrel."
+npc.bjorn.birthday.01,У меня день рождения! Сорок семь! Наливаю всем! За мой счёт! …Кто это придумал?,It's my birthday! Forty-seven! Drinks for everyone! On me! …Whose idea was this?
+npc.bjorn.birthday.02,"Сорок семь лет. Тридцать из них — за стойкой. Хорошая жизнь. Мокрая, но хорошая.","Forty-seven years. Thirty of them behind the bar. A good life. Wet, but good."
+npc.bjorn.birthday_gift.01,"Подарок! Мне! В мой день! Ну-ка, все, выпьем за смотрителя!","A present! For me! On my day! Right, everyone, a toast to the keeper!"
+npc.bjorn.birthday_gift.02,Ты помнишь мой день рождения. Обычно помнят только про бесплатную выпивку. Спасибо.,You remember my birthday. Usually they only remember the free drinks. Thanks.
+npc.bjorn.act1.01,Агата заходила раз в месяц. Одна кружка. Ни слова. Уходила. Лучший клиент — тихий клиент.,Agatha came once a month. One mug. Not a word. Left. The best customer's a quiet customer.
+npc.bjorn.act1.02,"Новый смотритель! Первая кружка — бесплатно. Вторая — тоже, если расскажешь, как там Фортуна.","A new keeper! First mug's free. The second too, if you tell me how Fortuna's doing."
+npc.bjorn.act1.03,Хальвдан собирает всех в таверне. Про Гильдейский дом. Говорит — нечисто. Я говорю — нечисто у всех.,Halvdan's gathering everyone at the tavern. About the Guild House. Says it's unclean. I say everyone's unclean.
+npc.bjorn.act1.04,Первый огонь видели все. Выпили за тебя. Трижды. Потом за Агату. Потом просто так.,Everyone saw the first light. We drank to you. Three times. Then to Agatha. Then just because.
+npc.bjorn.act1.05,Инспектор Пальм пьёт только чай. У меня. В таверне. Каждый раз я плачу.,"Inspector Palm drinks only tea. At my place. In a tavern. Every time, I weep."
+npc.bjorn.act1.06,Конец весны. Плохое время. Всегда кто-то не возвращается. Я держу лишнюю кружку.,End of spring. A bad time. Someone never comes back. I keep a spare mug.
+npc.bjorn.act2.01,«Святая Берта». В тот вечер Нут и Руд расплатились золотом. Рыбаки. Золотом. Я запомнил.,The Saint Bertha. That evening Nut and Rud paid in gold. Fishermen. In gold. I remembered.
+npc.bjorn.act2.02,Белая Хмарь. Никто не ушёл из таверны. Сорок человек до утра. Пели. Туман слушал.,The White Fog. Nobody left the tavern. Forty people till dawn. Singing. The fog listened.
+npc.bjorn.act2.03,Слыхал про двадцать в гротах? За каждого налью. Двадцать кружек. Выпью сам. Медленно.,Heard about the twenty in the grottoes? I'll pour one for each. Twenty mugs. I'll drink them myself. Slowly.
+npc.bjorn.act2.04,Кай с Мёртвого Огня заходил лет десять назад. Сказал: «Огонь не для кораблей». И ушёл. Я не понял. Теперь понимаю.,Kai from the Dead Fire came in about ten years ago. Said: 'The fire's not for ships.' And left. I didn't understand. Now I do.
+npc.bjorn.act2.05,Лив сидит у меня вечерами и считает туман. В кружке. Говорит — образец.,Liv sits here evenings counting fog. In a mug. Says it's a sample.
+npc.bjorn.act2.06,"Большая Хмарь? Таверна будет убежищем. Двери открыты, эль бесплатный. Пусть приходит, сволочь.","The Great Fog? The tavern will be a shelter. Doors open, ale free. Let it come, the swine."
+npc.bjorn.act3.01,"Штерн пил у меня. Заказал самое дорогое. Не допил. Оставил чаевые. Больше, чем стоил эль. Не люблю таких.",Stern drank here. Ordered the priciest. Didn't finish it. Left a tip. More than the ale cost. Don't like that sort.
+npc.bjorn.act3.02,Магнус бросил пить. Сидит у стойки с чаем. Я плачу. От гордости. И от убытков.,Magnus has stopped drinking. Sits at the bar with tea. I weep. From pride. And losses.
+npc.bjorn.act3.03,"Улики? У трактирщика лучшая память на острове. Кто когда пил, с кем, на какие деньги. Спрашивай.","Evidence? A landlord has the best memory on the island. Who drank when, with whom, with what money. Ask."
+npc.bjorn.act3.04,"Нут пьёт больше. Руд — меньше. Руд смотрит в кружку, как в зеркало. Не нравится ему, что видит.",Nut drinks more. Rud — less. Rud looks into his mug like a mirror. Doesn't like what he sees.
+npc.bjorn.act3.05,Ныряешь в Глубь? Перед спуском — ничего крепкого. После — всё крепкое. Правило Бьорна.,Diving in the Deep? Nothing strong before going down. Everything strong after. Bjorn's rule.
+npc.bjorn.act3.06,Зимой рассказывают страшные истории. В этом году никто не рассказывает. Все и так боятся.,In winter people tell scary stories. This year no one does. They're scared enough already.
+npc.bjorn.act4.01,Великий Прилив. Таверна открыта всю ночь. Для всех. Кто выживет — пьёт бесплатно год.,The Great Tide. The tavern's open all night. For everyone. Whoever survives drinks free for a year.
+npc.bjorn.act4.02,Если враги пойдут через деревню — у меня есть бочки. Тяжёлые. Катятся хорошо.,If enemies come through the village — I've got barrels. Heavy ones. They roll nicely.
+npc.bjorn.act4.03,"Мне страшно. Налью себе. Одну. Для храбрости. Ладно, две.","I'm scared. I'll pour myself one. Just one. For courage. All right, two."
+npc.bjorn.act4.04,"Держи огонь, смотритель. А я подержу деревню. Песнями. Громкими.","Keep the light, keeper. I'll keep the village. With songs. Loud ones."
+npc.bjorn.act4.05,Лишняя кружка на стойке сегодня — для тебя. Вернёшься — выпьешь. Не вернёшься — выпью я. За тебя.,The spare mug on the bar tonight is for you. Come back and you'll drink it. Don't — and I'll drink it. To you.
+npc.bjorn.act4.06,После всего — праздник. Самый большой. Я уже варю.,Afterwards — a party. The biggest ever. I'm already brewing.
+npc.bjorn.married_other.01,Свадьба! Эль — рекой! Бочка на молодых! Счёт — потом. Никогда.,A wedding! Ale flowing like a river! A barrel for the couple! The bill — later. Never.
+npc.bjorn.married_other.02,"Поздравляю, друг! Первую кружку в браке — у меня. Традиция. Моя.","Congratulations, friend! Your first married mug — at my place. Tradition. Mine."
+npc.bjorn.married_other.03,"Хорошая пара. Пьёте одинаково — значит, сойдётесь.",A good match. You drink the same — you'll get on.
+npc.bjorn.married_other.04,"Я пел на свадьбе. Три песни. Все плакали. Кто от чувств, кто от голоса.","I sang at the wedding. Three songs. Everyone cried. Some from feeling, some from my voice."
+npc.bjorn.married_other.05,Живите долго! И приходите по пятницам. Вдвоём дешевле. Нет. Но веселее.,Live long! And come on Fridays. It's cheaper for two. No it isn't. But it's merrier.
+npc.bjorn.event.wreck.01,"Крушение. Наливаю каждому, кто пришёл. Молча. Сегодня без песен.",A wreck. Pouring for everyone who comes in. In silence. No songs today.
+npc.bjorn.event.wreck.02,Лишняя кружка на стойке. Сегодня — много кружек.,A spare mug on the bar. Today — many mugs.
+npc.bjorn.event.wreck.03,Моряки с того корабля пили у меня прошлым летом. Помню лица. Не помню имён. Жалею.,Sailors off that ship drank here last summer. I remember faces. Not names. I'm sorry for it.
+npc.bjorn.event.wreck.04,Ясная ночь. Опять. Нут и Руд опять платят золотом. Я записал. На всякий случай.,A clear night. Again. Nut and Rud paying in gold again. I made a note. Just in case.
+npc.bjorn.event.wreck.05,Если понадобится — таверна примет выживших. Кровати наверху. Суп на плите.,If needed — the tavern will take in survivors. Beds upstairs. Soup on the stove.
+npc.bjorn.event.funeral.01,Поминки у меня. Всегда. Бесплатно. Это не торговля — это долг.,The wake's at my place. Always. Free. That's not trade — it's duty.
+npc.bjorn.event.funeral.02,{Похоронил|Похоронила}? Выпей. Одну. За него. Потом одну за себя. Тебе тоже тяжело.,Buried him? Have a drink. One. For him. Then one for yourself. It's hard for you too.
+npc.bjorn.event.funeral.03,Хорошие похороны — это когда потом все собираются и вспоминают. Приходите.,A good funeral is when everyone gathers afterwards and remembers. Come by.
+npc.bjorn.event.funeral.04,Сигрид читала эпитафию у меня в таверне. Все замолчали. Даже Хедда.,Sigrid read the epitaph in my tavern. Everyone went quiet. Even Hedda.
+npc.bjorn.event.funeral.05,Ещё один спит в земле. Налью ему кружку. На стойку. Пусть стоит.,One more sleeping in the earth. I'll pour him a mug. On the bar. Let it stand.
+npc.bjorn.event.hmar.01,Ночь Хмари! Сорок человек в таверне. Пели до утра. Туман стоял у окон и слушал. Не вошёл.,Fog Night! Forty people in the tavern. Sang till dawn. The fog stood at the windows listening. Didn't come in.
+npc.bjorn.event.hmar.02,Лишняя кружка на стойке утром была пустая. Никто не пил. Все клянутся.,The spare mug on the bar was empty in the morning. Nobody drank it. Everyone swears so.
+npc.bjorn.event.hmar.03,Твой свет проходил по таверне. Все поднимали кружки. Каждый раз. Пьяная ночь.,Your light swept through the tavern. Everyone raised their mugs. Every time. A drunken night.
+npc.bjorn.event.hmar.04,Хедда стояла у двери с гарпуном. Всю ночь. Я носил ей грог. Она пила и не отходила.,Hedda stood at the door with a harpoon. All night. I brought her grog. She drank and didn't budge.
+npc.bjorn.event.hmar.05,"После Хмари все пьют за то, что живы. Лучший тост на свете.",After the Fog everyone drinks to being alive. Best toast there is.
+npc.bjorn.event.inspection.01,Пальм пил чай. У меня. Опять. Я плачу. От тоски.,Palm drank tea. At my place. Again. I'm weeping. From despair.
+npc.bjorn.event.inspection.02,"{Сдал|Сдала} инспекцию? Выпей! За огонь! За Пальма! За чай! Нет, за Пальма не надо.","Passed the inspection? Drink! To the light! To Palm! To tea! No, not to Palm."
+npc.bjorn.event.inspection.03,"Пальм спросил, есть ли у меня лицензия. Есть. Сорок лет. Он записал: «ветхая».",Palm asked if I have a licence. I have. Forty years old. He wrote: 'dilapidated'.
+npc.bjorn.event.inspection.04,"После инспекции таверна всегда полная. Все празднуют, что ничего не случилось.",After an inspection the tavern's always full. Everyone celebrating that nothing happened.
+npc.bjorn.event.inspection.05,"Инспектор — единственный, кто оставляет точную сумму. Без чаевых. Уважаю. Ненавижу.",The inspector's the only one who leaves the exact amount. No tip. I respect it. I hate it.
+npc.bjorn.event.wedding.01,Свадьба! Лучший день для таверны за год! Выпито девять бочек! Рекорд!,The wedding! Best day for the tavern this year! Nine barrels drunk! A record!
+npc.bjorn.event.wedding.02,Хедда бросила сельдь. Попала в Бенедикта. Бенедикт выпил. Впервые. Историческая свадьба.,Hedda threw a herring. Hit Benedict. Benedict had a drink. First time ever. A historic wedding.
+npc.bjorn.event.wedding.03,Я пел. Все плакали. Хочу думать — от чувств.,I sang. Everyone cried. I like to think it was from feeling.
+npc.bjorn.event.wedding.04,Молодым — бочка эля. Свадебный подарок. Открывать через год. Будет лучше. Как и вы.,A barrel of ale for the couple. A wedding present. Open it in a year. It'll be better. Like you two.
+npc.bjorn.event.wedding.05,Совет да любовь! И приходите. Счастливые люди — лучшие клиенты.,Love and harmony! And come by. Happy people make the best customers.
+npc.bjorn.event.villains.01,Грим! Он угощал всех по четвергам. На наши же деньги. Больше не угостит.,Grim! He stood everyone a round on Thursdays. With our own money. No more.
+npc.bjorn.event.villains.02,"Нут и Руд в тюрьме. Их кружки висят на стене. Руду вернём, когда отпустят. Нуту — нет.",Nut and Rud are in jail. Their mugs hang on the wall. Rud's we'll give back when they let him out. Not Nut's.
+npc.bjorn.event.villains.03,Весь остров пришёл в таверну праздновать. Бесплатно! Я разорился. Я счастлив.,The whole island came to the tavern to celebrate. Free! I'm ruined. I'm happy.
+npc.bjorn.event.villains.04,Лишняя кружка на стойке. Сегодня — для двадцати с «Фортуны». Пусть отдыхают.,The spare mug on the bar. Today — for the twenty from the Fortuna. Let them rest.
+npc.bjorn.event.villains.05,"Спасибо, смотритель. Поднимаю за тебя кружку. И ещё одну. И ещё. Праздник же!","Thanks, keeper. Raising a mug to you. And another. And another. It's a celebration!"
+mail.bjorn.h2,"Бьорн: «Держи рецепты! Грог по-моряцки и горячий эль с мёдом. Вари сам, а пить приходи ко мне — у меня веселее». Приложено: 2 грога.","Bjorn: ""Here are the recipes! Sailor's grog and hot honey ale. Brew them yourself, but come drink at mine — it's merrier here."" Enclosed: 2 grog."
+mail.bjorn.h8,"Бьорн: «Рецепт эля «Сухой Утопленник». Семейный. Первый хозяин унёс его в бочку, я достал. Не утони в нём сам». Приложено: 3 эля.","Bjorn: ""The recipe for Dry Drowned Man ale. The family's. The first landlord took it into the barrel with him; I fished it out. Don't drown in it yourself."" Enclosed: 3 ale."
+ev.bjorn2.l01,"Смотритель! Иди сюда, за стойку. Урок. Как варить грог, чтобы Хедда не разнесла таверну.","Keeper! Come here, behind the bar. A lesson. How to make grog so Hedda doesn't wreck the tavern."
+ev.bjorn2.l02,"Ром, горячая вода, мёд, лимон. Лимона нет — бери клюкву. Клюквы нет — бери честное лицо и говори, что лимон.","Rum, hot water, honey, lemon. No lemon — use cranberry. No cranberry — keep a straight face and call it lemon."
+ev.bjorn2.c01,Больше рома.,More rum.
+ev.bjorn2.c02,Больше мёда.,More honey.
+ev.bjorn2.l03,Ха! Хеддин вкус! Она тебя полюбит. Или убьёт. Одно из двух.,Ha! Hedda's taste! She'll love you. Or kill you. One or the other.
+ev.bjorn2.l04,Мягко! Для Бенедикта. Он пьёт раз в год и всегда с мёдом.,Smooth! For Benedict. He drinks once a year and always with honey.
+ev.bjorn4.l01,Садись у огня. Байка. Правдивая. Все мои байки правдивые. Почти.,Sit by the fire. A yarn. A true one. All my yarns are true. Nearly.
+ev.bjorn4.l02,"Сорок лет назад у стойки сидел юнга. Лет четырнадцати. Сказал: «Завтра мы идём на огонь у Зубов, капитан говорит — маяк». Выпил молока. Ушёл.","Forty years ago a cabin boy sat at this bar. Fourteen or so. Said: 'Tomorrow we steer for the light at the Teeth, the captain says it's the lighthouse.' Drank some milk. Left."
+ev.bjorn4.l03,"Корабль назывался «Фортуна». Я был мальчишкой, помогал отцу. Кружка из-под молока до сих пор стоит на полке.","The ship was called the Fortuna. I was a boy, helping my father. The milk mug's still on the shelf."
+ev.bjorn6.l01,Пойдём. Покажу погреб. Туда пускают только своих. Ты теперь {свой|своя}.,Come on. I'll show you the cellar. Only our own go down there. You're one of us now.
+ev.bjorn6.l02,"(Под таверной — низкий сводчатый погреб, бочки до потолка и маленькая стойка на двоих.)","(Under the tavern — a low vaulted cellar, barrels to the ceiling and a little bar for two.)"
+ev.bjorn6.l03,"Здесь я пробую эль, прежде чем наливать людям. И здесь можно посидеть, когда наверху шумно. Приходи когда хочешь.",Here I taste the ale before I pour it for people. And here you can sit when it's too loud upstairs. Come whenever you like.
+ev.bjorn8.l01,Я отправил тебе письмо. Рецепт «Сухого Утопленника». Никому его не давал. Даже Хедде. Особенно Хедде.,I've sent you a letter. The Dry Drowned Man recipe. Never given it to anyone. Not even Hedda. Especially not Hedda.
+ev.bjorn8.l02,"Первый хозяин утонул в бочке с этим элем. Я думаю, он умер счастливым. Главное — не повторяй.",The first landlord drowned in a barrel of this ale. I think he died happy. Just don't repeat it.
+ev.bjorn10.l01,"Закрыто! Все по домам! …Кроме тебя. Садись. Сегодня я пью с тобой, а не наливаю.",Closing time! Everyone home! …Except you. Sit. Tonight I drink with you instead of pouring.
+ev.bjorn10.l02,"Тридцать лет за стойкой. Я знаю всех на острове. А меня, кажется, знаешь только ты.",Thirty years behind the bar. I know everyone on the island. And it seems only you know me.
+ev.bjorn10.l03,"За тебя, друг. Лучший клиент — это друг. Хоть и не платит.","To you, friend. The best customer is a friend. Even one who doesn't pay."
