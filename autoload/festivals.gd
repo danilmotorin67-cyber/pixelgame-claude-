@@ -131,11 +131,12 @@ func finish(act: String, game: Minigame) -> String:
 			return Loc.t("fest.win" if won else "fest.lose") % "+300 кр"
 		"eggs":
 			var eggs := int(game.score)
-			Inventory.add("egg_large", maxi(1, eggs / 3))
-			if eggs >= 15:
+			Inventory.add("egg_large", maxi(1, eggs / 10))
+			# the most eggs of the day: the rivals gather about as many as the need
+			if won:
 				Inventory.add("nest_box", 2)
 				Economy.add(500)
-			return Loc.t("fest.eggs") % eggs + ("  " + Loc.t("fest.win") % "2 гнездовых ящика, 500 кр" if eggs >= 15 else "")
+			return Loc.t("fest.eggs") % eggs + ("  " + Loc.t("fest.win") % "2 гнездовых ящика, 500 кр" if won else "")
 		"birds":
 			for bird in ["puffin", "guillemot", "loon", "eider", "cormorant"]:
 				Collections.mark("birds", bird)

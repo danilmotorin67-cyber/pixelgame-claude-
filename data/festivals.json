@@ -81,8 +81,8 @@
      "collect": true,
      "distance": 9999,
      "speed": 12,
-     "gap": 0.8,
-     "need": 15,
+     "gap": 1.2,
+     "need": 85,
      "limit": 180
     }
    },
@@ -203,7 +203,7 @@
      "type": "mash",
      "per": 4,
      "limit": 20,
-     "need": 12
+     "need": 30
     }
    },
    {

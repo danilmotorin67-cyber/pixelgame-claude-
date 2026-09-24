@@ -1463,7 +1463,10 @@
     "desc": "item.pim_harmonica.desc",
     "category": "keepsake",
     "price": 0,
-    "stack": 1
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ]
   },
   {
     "id": "fish_saithe",

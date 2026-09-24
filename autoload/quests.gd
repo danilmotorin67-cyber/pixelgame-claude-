@@ -40,6 +40,7 @@ func start(id: String) -> void:
 		Mail.send(str(info["mail_on_start"]))
 	for flag in info.get("flags", []):
 		Game.set_flag(str(flag))
+	Effects.apply(info.get("start_effects", []))
 	for entry in info.get("on_start", []):
 		if str(entry[0]) == "shore":
 			Sea.schedule_gift(str(entry[1]), str(entry[2]), Clock.day_index + randi_range(1, int(entry[3])))

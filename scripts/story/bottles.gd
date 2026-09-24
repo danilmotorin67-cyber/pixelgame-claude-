@@ -46,10 +46,17 @@ static func read(n: int) -> String:
 	var row := Data.by_id("bottles", "bottle_%d" % n)
 	Effects.apply(row.get("effects", []))
 	Events.quest_event.emit("bottle_read", str(n))
+	check_forty()
+	return Loc.t("bottle.opened") % [n, Loc.t(str(row.get("text", "")))]
+
+
+# Olaf's fortieth comes when the other 39 are in (Pim's No. 13 counts once found).
+static func check_forty() -> bool:
 	if read_count() >= 39 and not is_read(40):
 		Collections.mark("bottles", "bottle_40")
 		Mail.send("mail.bottle_40", [], 0, [["star_amber", 1]])
-	return Loc.t("bottle.opened") % [n, Loc.t(str(row.get("text", "")))]
+		return true
+	return false
 
 
 # Where bottles wash up (18.6): 10% a day in Wreck Bay, 3% on other beaches.

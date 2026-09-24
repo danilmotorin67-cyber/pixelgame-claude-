@@ -14,6 +14,7 @@ var next_in: float = 0.5
 var hits: int = 0
 var allowed: int = 2
 var collect: bool = false
+var density: float = 0.75
 const PLAYER_X := 12.0
 const HORIZON := 60.0
 
@@ -26,6 +27,7 @@ func setup(p: Dictionary) -> void:
 	gap = float(p.get("gap", 1.2))
 	allowed = int(p.get("allowed", 2))
 	collect = bool(p.get("collect", false))
+	density = float(p.get("density", 0.75))
 	limit = float(p.get("limit", distance / speed + 5.0))
 
 
@@ -35,11 +37,12 @@ func step(delta: float) -> void:
 	if next_in <= 0.0:
 		next_in = gap * rng.randf_range(0.6, 1.4)
 		var free := rng.randi_range(0, lanes - 1)
-		for l in lanes:
-			if l != free and (collect or rng.randf() < 0.55):
-				things.append({"lane": l, "x": HORIZON})
-				if collect:
-					break
+		if collect:
+			things.append({"lane": free, "x": HORIZON})
+		else:
+			for l in lanes:
+				if l != free and rng.randf() < density:
+					things.append({"lane": l, "x": HORIZON})
 	var keep: Array = []
 	for t in things:
 		var before := float(t["x"])
@@ -85,7 +88,8 @@ func _lane_busy(l: int) -> bool:
 
 
 func bot(skill: float) -> void:
-	if rng.randf() > 0.15 + 0.85 * skill:
+	# A slow hand reacts in a frame now and then, a quick one almost every frame.
+	if rng.randf() > 0.01 + 0.5 * skill:
 		return
 	if collect:
 		var best := -1.0

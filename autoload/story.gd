@@ -388,6 +388,9 @@ func call_named(what: String, npc: String = "") -> String:
 		"greenhouse":
 			Farm.open_plot("greenhouse")
 			return ""
+		"bottles_check":
+			Bottles.check_forty()
+			return ""
 	return ""
 
 
