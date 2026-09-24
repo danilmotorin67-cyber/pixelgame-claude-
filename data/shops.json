@@ -389,6 +389,17 @@
       {
         "item": "coffin_carved",
         "price": 2500
+      },
+      {
+        "upgrade": "boathouse",
+        "level": 2,
+        "price": 3000,
+        "items": [
+          [
+            "boards",
+            200
+          ]
+        ]
       }
     ]
   },

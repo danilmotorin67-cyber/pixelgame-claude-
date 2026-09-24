@@ -113,6 +113,31 @@
   ]
  },
  {
+  "id": "q1_6_boat",
+  "type": "main",
+  "title": "q.q1_6.title",
+  "start": "day_index >= 2",
+  "mail_on_start": "mail.q1_6_ilm",
+  "steps": [
+   {
+    "id": "order",
+    "text": "q.q1_6.s1",
+    "on": "boat_ordered"
+   },
+   {
+    "id": "launch",
+    "text": "q.q1_6.s2",
+    "on": "boat_launched"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "sea_zone_1"
+   ]
+  ]
+ },
+ {
   "id": "q1_5_registry",
   "type": "main",
   "title": "q.q1_5.title",

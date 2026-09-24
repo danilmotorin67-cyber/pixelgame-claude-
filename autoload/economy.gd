@@ -120,6 +120,8 @@ func shop_stock(shop_id: String) -> Array:
 		if str(entry.get("upgrade", "")) == "backpack":
 			if int(entry["slots"]) != Inventory.capacity + Inventory.HOTBAR:
 				continue
+		if str(entry.get("upgrade", "")) == "boathouse" and Sea.boat != "yalik":
+			continue
 		offer.append(entry)
 	return offer
 
@@ -135,6 +137,15 @@ func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 	if str(entry.get("upgrade", "")) == "backpack":
 		pay(total)
 		Inventory.upgrade_capacity(int(entry["slots"]))
+		return "ok"
+	if str(entry.get("upgrade", "")) == "boathouse":
+		for need in entry.get("items", []):
+			if Inventory.count_of(str(need[0])) < int(need[1]):
+				return "materials"
+		for need in entry.get("items", []):
+			Inventory.take(str(need[0]), int(need[1]))
+		pay(total)
+		Sea.set_boat("sloop")
 		return "ok"
 	var id := str(entry["item"])
 	if not Inventory.can_fit(id, count):

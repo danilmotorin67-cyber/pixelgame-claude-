@@ -15,6 +15,10 @@ var trash_mercy_today: float = 0.0
 var scheduled: Array = []
 # Set traps and nets: {kind, map, x, y, baited, catch: [[id, n]], set_day, set_minute}.
 var gear: Array = []
+var hull: float = 100.0
+var hold: Array = []
+var visited: Dictionary = {}
+var boat_ready_day: int = -1
 # Rock pools (fixed per world) and today's clam bubbles; "fished" marks today's visits.
 var pools: Dictionary = {}
 var clams: Array = []
@@ -30,6 +34,10 @@ func reset() -> void:
 	trash_mercy_today = 0.0
 	scheduled.clear()
 	gear.clear()
+	hull = 100.0
+	hold.clear()
+	visited.clear()
+	boat_ready_day = -1
 	pools.clear()
 	clams.clear()
 	pools_fished.clear()
@@ -340,10 +348,95 @@ func night_gear() -> void:
 	_spawn_clams(Clock.day_index)
 
 
+# ---- boats (16) ----
+
+func set_boat(id: String) -> void:
+	boat = id
+	var size := int(SeaChart.boat_info(id).get("hold", 12))
+	while hold.size() < size:
+		hold.append({"id": "", "count": 0, "quality": 0})
+
+
+func can_sail(zone: int = 1) -> String:
+	if boat == "":
+		return "no_boat"
+	if zone > int(SeaChart.boat_info().get("zones", 1)):
+		return "zone"
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails"):
+		return "storm"
+	return ""
+
+
+func damage_hull(amount: float) -> bool:
+	hull = maxf(0.0, hull - amount)
+	return hull <= 0.0
+
+
+# At 0 the boat is towed home for 500 kr and the hold is lost (16.3).
+func tow_home() -> void:
+	for slot in hold:
+		slot["id"] = ""
+		slot["count"] = 0
+		slot["quality"] = 0
+	var price := int(SeaChart.cfg("tow_price"))
+	Economy.add(-mini(price, Economy.money))
+	hull = 100.0
+	Mail.send("mail.towed")
+
+
+func repair_at_boathouse() -> int:
+	var fixed := 0
+	while hull < 100.0 and Inventory.count_of("boards") >= 1 and Inventory.count_of("resin") >= 1:
+		Inventory.take("boards", 1)
+		Inventory.take("resin", 1)
+		hull = minf(100.0, hull + 10.0)
+		fixed += 10
+	return fixed
+
+
+func use_repair_kit() -> bool:
+	if hull >= 100.0 or not Inventory.take("repair_kit", 1):
+		return false
+	hull = minf(100.0, hull + 30.0)
+	return true
+
+
+# First visits to named places: +30 seafaring XP and +3 sea notes (25.2, 26.1).
+func visit(place: String) -> bool:
+	if place == "" or visited.has(place):
+		return false
+	visited[place] = true
+	Skills.add_xp("seafaring", 30)
+	Knowledge.add_points("sea", 3)
+	return true
+
+
+# Q1.6: Ilm needs 20 driftwood, 5 resin and 300 kr; the dinghy is ready two days later.
+func order_boat() -> bool:
+	if boat != "" or boat_ready_day >= 0:
+		return false
+	if Inventory.count_of("driftwood") < 20 or Inventory.count_of("resin") < 5 or not Economy.can_pay(300):
+		return false
+	Inventory.take("driftwood", 20)
+	Inventory.take("resin", 5)
+	Economy.pay(300)
+	boat_ready_day = Clock.day_index + 2
+	Events.quest_event.emit("boat_ordered", "")
+	return true
+
+
+func night_boats() -> void:
+	if boat == "" and boat_ready_day >= 0 and Clock.day_index >= boat_ready_day:
+		set_boat("yalik")
+		Mail.send("mail.boat_ready")
+		Events.quest_event.emit("boat_launched", "")
+
+
 func serialize() -> Dictionary:
 	return {"mercy": mercy, "blessings": blessings, "boat": boat, "revealed": revealed,
 		"gifts": gifts, "trash_mercy_today": trash_mercy_today, "scheduled": scheduled,
-		"gear": gear, "pools": pools, "clams": clams, "pools_fished": pools_fished}
+		"gear": gear, "hull": hull, "hold": hold, "visited": visited, "boat_ready_day": boat_ready_day,
+		"pools": pools, "clams": clams, "pools_fished": pools_fished}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -352,6 +445,15 @@ func deserialize(d: Dictionary) -> void:
 	boat = str(d.get("boat", ""))
 	revealed = d.get("revealed", {})
 	trash_mercy_today = float(d.get("trash_mercy_today", 0.0))
+	hull = clampf(float(d.get("hull", 100.0)), 0.0, 100.0)
+	hold = d.get("hold", []).duplicate(true)
+	for slot in hold:
+		slot["count"] = int(slot.get("count", 0))
+		slot["quality"] = int(slot.get("quality", 0))
+	visited = d.get("visited", {}).duplicate()
+	boat_ready_day = int(d.get("boat_ready_day", -1))
+	if boat != "":
+		set_boat(boat)
 	gear = d.get("gear", []).duplicate(true)
 	for g in gear:
 		g["set_day"] = int(g["set_day"])

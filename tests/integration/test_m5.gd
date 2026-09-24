@@ -281,10 +281,94 @@ func _check_gear() -> void:
 	Clock.day_index = 0
 
 
+func _check_boat() -> void:
+	_fresh()
+	Clock.day_index = 2
+	Quests.check_starts()
+	_check(Quests.state("q1_6_boat") == "active", "Q1.6 starts on the third day with Ilm's letter")
+	_check(Sea.can_sail() == "no_boat", "no boat, no sailing")
+	_check(not Sea.order_boat(), "Ilm needs the driftwood, resin and money first")
+	Inventory.add("driftwood", 20)
+	Inventory.add("resin", 5)
+	Economy.money = 500
+	_check(Sea.order_boat() and Economy.money == 200 and Inventory.count_of("driftwood") == 0, "the dinghy costs 20 driftwood, 5 resin, 300 kr")
+	_check(Quests.step_done("q1_6_boat", "order"), "ordering ticks the quest step")
+	Clock.day_index = 3
+	Sea.night_boats()
+	_check(Sea.boat == "", "the dinghy is not ready the next morning")
+	Clock.day_index = 4
+	Sea.night_boats()
+	_check(Sea.boat == "yalik" and Sea.hold.size() == 12, "two days later the dinghy with a 12-slot hold")
+	_check(Quests.state("q1_6_boat") == "done" and Game.flag("sea_zone_1"), "Q1.6 is done and zone 1 is open")
+	_check(Sea.can_sail(1) == "" and Sea.can_sail(2) == "zone", "the dinghy only goes into zone 1")
+	Weather.current = "storm"
+	_check(Sea.can_sail() == "storm", "no putting out in a storm")
+	Weather.current = "clear"
+
+	Weather.calm = false
+	Weather.wind_strength = 2
+	Weather.wind_direction = 0
+	var to := SeaChart.wind_to()
+	_check(is_equal_approx(SeaChart.angle_multiplier(-to), 0.0), "straight into the wind the sail stalls")
+	_check(is_equal_approx(SeaChart.angle_multiplier(to.rotated(PI - deg_to_rad(55))), 0.6), "close-hauled ×0.6")
+	_check(is_equal_approx(SeaChart.angle_multiplier(to.rotated(PI / 2)), 1.0), "a beam reach ×1.0")
+	_check(is_equal_approx(SeaChart.angle_multiplier(to.rotated(deg_to_rad(50))), 1.2), "a broad reach ×1.2 is the fastest")
+	_check(is_equal_approx(SeaChart.angle_multiplier(to), 1.0), "running before the wind ×1.0")
+	_check(is_equal_approx(SeaChart.sail_speed(to.rotated(PI / 2)), 0.0), "the dinghy has no sail")
+	Weather.calm = true
+	_check(is_equal_approx(SeaChart.strength_multiplier(), 0.0), "in a calm there is no wind to sail")
+	Weather.calm = false
+
+	var dock := SeaChart.place_pos("rest_place") - Vector2(0, 60 * 16)
+	_check(SeaChart.is_land(dock) and Fishing.spot_tags("sea", dock).is_empty(), "the coast rows are land")
+	_check(Fishing.spot_tags("sea", SeaChart.place_pos("seal_rock")).has("seal_rock"), "the seal rock is a fishing spot")
+	_check(Fishing.spot_tags("sea", SeaChart.place_pos("rest_place")).has("sea_z1"), "the Resting Place lies in zone 1")
+	_check(Fishing.spot_tags("sea", SeaChart.place_pos("teeth")).has("sea_teeth") \
+		and SeaChart.zone_of(SeaChart.place_pos("teeth")) == 2, "the Teeth are a zone-2 spot")
+
+	var xp := int(Skills.xp["seafaring"])
+	_check(Sea.visit("rest_place") and not Sea.visit("rest_place"), "a place is discovered once")
+	_check(int(Skills.xp["seafaring"]) == xp + 30 and Sea.visited.has("rest_place"), "discovery: +30 seafaring XP")
+	SeaChart.reveal(SeaChart.place_pos("rest_place"))
+	_check(Sea.revealed.has(SeaChart.chunk_key(SeaChart.place_pos("rest_place"))), "sailing reveals the chart")
+
+	Inventory.add("fish_cod", 1)
+	Crafting.store({"slots": Sea.hold}, Inventory.slots.find_custom(func(s: Dictionary) -> bool: return s["id"] == "fish_cod"))
+	_check(str(Sea.hold[0]["id"]) == "fish_cod", "fish goes into the hold")
+	Economy.money = 700
+	_check(not Sea.damage_hull(60.0) and Sea.damage_hull(60.0), "the hull breaks at zero")
+	Sea.tow_home()
+	_check(Economy.money == 200 and Sea.hull == 100.0 and str(Sea.hold[0]["id"]) == "", "towing: 500 kr, and the hold is lost")
+	Sea.damage_hull(35.0)
+	Inventory.add("boards", 2)
+	Inventory.add("resin", 2)
+	_check(Sea.repair_at_boathouse() == 20 and is_equal_approx(Sea.hull, 85.0), "boards and resin mend 10% each at the boathouse")
+	Inventory.add("repair_kit", 1)
+	_check(Sea.use_repair_kit() and is_equal_approx(Sea.hull, 100.0) and not Sea.use_repair_kit(), "a repair kit patches 30% at sea")
+
+	Clock.set_time(12, 0)
+	var entry: Dictionary = {}
+	for e in Economy.shop_stock("shop_ilm"):
+		if str(e.get("upgrade", "")) == "boathouse":
+			entry = e
+	_check(not entry.is_empty(), "Ilm offers the sloop once there is a dinghy")
+	Economy.money = 3000
+	_check(Economy.buy("shop_ilm", entry) == "materials", "the sloop needs 200 boards")
+	Inventory.reset()
+	Inventory.add("boards", 200)
+	_check(Economy.buy("shop_ilm", entry) == "ok" and Sea.boat == "sloop" and Sea.hold.size() == 24, "the sloop: 24-slot hold")
+	_check(Sea.can_sail(2) == "" and SeaChart.sail_speed(to.rotated(PI / 2)) > 1.0, "the sloop sails into zone 2")
+	var saved := JSON.stringify(Sea.serialize())
+	Sea.reset()
+	Sea.deserialize(JSON.parse_string(saved))
+	_check(Sea.boat == "sloop" and Sea.hold.size() == 24 and Sea.visited.has("rest_place"), "the boat survives a save")
+
+
 func _run() -> void:
 	_check_every_fish()
 	_check_minigame_rules()
 	await _check_q1_3()
 	_check_gear()
+	_check_boat()
 	print("M5 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

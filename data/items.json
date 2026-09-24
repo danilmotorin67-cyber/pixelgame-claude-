@@ -2245,5 +2245,13 @@
     "category": "tool",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "repair_kit",
+    "name": "item.repair_kit.name",
+    "desc": "item.repair_kit.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 10
   }
 ]

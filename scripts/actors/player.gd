@@ -15,6 +15,13 @@ var _walk_time: float = 0.0
 var tool_kind: String = ""
 var tool_time: float = 0.0
 var _carry_distance: float = 0.0
+var boat_heading: Vector2 = Vector2.DOWN
+var boat_speed: float = 0.0
+var sail_up: bool = false
+var _row_distance: float = 0.0
+var _sail_distance: float = 0.0
+var _hit_cooldown: float = 0.0
+var _storm_clock: float = 0.0
 const TOOL_DURATION := 0.34
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
@@ -24,6 +31,11 @@ const CARRY_TILES_PER_ENERGY := 10.0
 
 
 func _ready() -> void:
+	if Router.current_map == "sea":
+		var art := BoatArt.new()
+		art.name = "BoatArt"
+		art.show_behind_parent = true
+		add_child(art)
 	if Game.player_state.is_empty():
 		global_position = Router.spawn
 	else:
@@ -38,6 +50,9 @@ func _physics_process(delta: float) -> void:
 	if tool_time > 0.0:
 		tool_time = maxf(0.0, tool_time - delta)
 		tool_art.queue_redraw()
+	if Router.current_map == "sea":
+		_boat_physics(delta)
+		return
 	if _dodge_t > 0.0:
 		_dodge_t -= delta
 		move_and_slide()
@@ -74,6 +89,69 @@ func _physics_process(delta: float) -> void:
 		camera.position.y = lerpf(camera.position.y, -55.0 if near_tower else 0.0,
 			clampf(delta * 5.0, 0.0, 1.0))
 	_tint()
+
+
+# Rowing and sailing (16.1-16.3): inertia, wind, rudder, rocks and storms.
+func _boat_physics(delta: float) -> void:
+	var info := SeaChart.boat_info()
+	var input := Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	var fishing_hud := get_tree().current_scene.get_node_or_null("HUD/FishingHud") as FishingHud
+	if fishing_hud and fishing_hud.active():
+		input = Vector2.ZERO
+	var rowing := not (sail_up and float(info.get("sail", 0.0)) > 0.0)
+	if rowing:
+		if input.length() > 0.1 and energy > 0.0:
+			boat_heading = input.normalized()
+		var target := input * walk_speed * float(info.get("row", 1.0)) if energy > 0.0 else Vector2.ZERO
+		velocity = velocity.move_toward(target, 140.0 * delta)
+	else:
+		boat_heading = boat_heading.rotated(Input.get_axis("move_left", "move_right") * 1.6 * delta).normalized()
+		boat_speed = move_toward(boat_speed, walk_speed * SeaChart.sail_speed(boat_heading), 30.0 * delta)
+		velocity = boat_heading * boat_speed
+	var before := global_position
+	var speed := velocity.length()
+	move_and_slide()
+	var moved := global_position.distance_to(before)
+	_hit_cooldown = maxf(0.0, _hit_cooldown - delta)
+	if get_slide_collision_count() > 0 and speed > 30.0 and _hit_cooldown <= 0.0:
+		_hit_cooldown = 1.0
+		boat_speed *= 0.3
+		if Sea.damage_hull(lerpf(10.0, 30.0, clampf(speed / 130.0, 0.0, 1.0))):
+			_towed()
+			return
+		_say("Удар о камни! Корпус %d%%." % int(Sea.hull))
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails"):
+		_storm_clock += delta
+		if _storm_clock >= float(SeaChart.cfg("storm_damage_every")):
+			_storm_clock = 0.0
+			if Sea.damage_hull(1.0):
+				_towed()
+				return
+	if rowing and moved > 0.0:
+		_row_distance += moved
+		var per_energy := float(SeaChart.cfg("row_tiles_per_energy")) * 16.0
+		if _row_distance >= per_energy:
+			_row_distance -= per_energy
+			energy = maxf(0.0, energy - (0.5 if Sea.blessings.has("zyb") else 1.0))
+	_sail_distance += moved
+	if _sail_distance >= 20.0 * 16.0:
+		_sail_distance -= 20.0 * 16.0
+		var mult := 2.0 if Weather.current == "storm" else (1.5 if Weather.current in ["rain", "fog"] else 1.0)
+		Skills.add_xp("seafaring", int(round(mult)))
+	SeaChart.reveal(global_position)
+	if Sea.visit(SeaChart.near_place(global_position, 4.0)):
+		_say("Новое место на карте: %s." % Loc.t("sea." + SeaChart.near_place(global_position, 4.0)))
+	facing = boat_heading
+	_update_sprite(false)
+	var art := get_node_or_null("BoatArt")
+	if art:
+		art.queue_redraw()
+
+
+func _towed() -> void:
+	Sea.tow_home()
+	var landing: Array = SeaChart.cfg("cape_landing")
+	Router.goto_map("cape", Vector2(float(landing[0]), float(landing[1])))
 
 
 func _direction_index() -> int:
@@ -204,6 +282,17 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _place_selected(get_global_mouse_position()):
 			get_viewport().set_input_as_handled()
 			return
+	if Router.current_map == "sea" and event.is_action_pressed("dodge"):
+		if float(SeaChart.boat_info().get("sail", 0.0)) > 0.0:
+			sail_up = not sail_up
+			boat_speed = velocity.length()
+			_say("Парус поднят: руль — A/D." if sail_up else "Парус спущен: на вёслах.")
+		get_viewport().set_input_as_handled()
+		return
+	if Router.current_map == "sea" and event.is_action_pressed("quick_eat") and Inventory.selected_id() == "repair_kit":
+		_say("Корпус залатан: %d%%." % int(Sea.hull) if Sea.use_repair_kit() else "Корпус и так цел.")
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:
 		_dodge_t = 0.18
 		velocity = facing * dodge_speed

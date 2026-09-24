@@ -34,6 +34,11 @@ func _ready() -> void:
 	add_child(Stations.new())
 	if map_id == "cape":
 		add_child(GraveyardWorld.new())
+		var landing := BoatLanding.new()
+		landing.name = "BoatLanding"
+		var at: Array = Game.balance("sea", {}).get("cape_landing", [900, 850])
+		landing.position = Vector2(float(at[0]), float(at[1]) - 16.0)
+		add_child(landing)
 	add_child(BodiesLayer.new())
 	if map_id == "cape":
 		var bell := TowerBell.new()
@@ -60,6 +65,8 @@ func _ready() -> void:
 	morning_panel.visible = false
 	if Router.TOWER_MAPS.has(map_id):
 		$HUD/Hint.text = str(preload("res://scripts/world/lighthouse_floor.gd").TITLES.get(map_id, map_id))
+	elif map_id == "sea":
+		$HUD/Hint.text = "Залив. Пробел — парус, M — карта, E у причала — на берег."
 	elif map_id != "cape":
 		var info: Dictionary = Data.tables.get("regions", {}).get(map_id, {})
 		$HUD/Hint.text = "%s   E: переход" % str(info.get("title", map_id))
@@ -113,6 +120,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			Clock.paused = _was_paused_before_console
 			console.release_focus()
 		get_viewport().set_input_as_handled()
+	if event.is_action_pressed("open_map") and not console.visible:
+		SeaChartPanel.toggle(hud)
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("open_quests") and not console.visible:
 		InfoPanel.open(hud, "Журнал: задания", func() -> String:
 			var lines := Quests.journal_lines()

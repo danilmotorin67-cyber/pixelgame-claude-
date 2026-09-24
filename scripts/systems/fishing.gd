@@ -46,7 +46,7 @@ static func is_water(map_id: String, at: Vector2) -> bool:
 	if map_id == "birch":
 		return _in_rect(cell, _landmark("birch", "stream"))
 	if map_id == "sea":
-		return true
+		return not SeaChart.is_land(at)
 	return _sea_water(map_id, cell)
 
 
@@ -56,6 +56,8 @@ static func spot_tags(map_id: String, at: Vector2) -> Array:
 		return []
 	var cell := Vector2i(floori(at.x / TILE), floori(at.y / TILE))
 	match map_id:
+		"sea":
+			return SeaChart.tags_at(at)
 		"moor":
 			return ["lake"]
 		"birch":

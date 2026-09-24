@@ -594,3 +594,18 @@ q.q1_3.title,Удочка Агаты,Agatha's Rod
 q.q1_3.s1,"Забрать удочку у Эрланда (лодочная лавка, Сольвик)","Collect the rod from Erland (boat shop, Solvik)"
 q.q1_3.s2,Поймать 3 рыбы,Catch 3 fish
 mail.q1_3_erland,"Эрланд. «Зайди, у меня удочка Агаты. Она просила отдать тому, кто зажжёт огонь. Я, признаться, ставил на кота»","Erland: “Drop by, I have Agatha's rod. She asked me to give it to whoever lit the fire. Frankly, I bet on the cat.”"
+item.repair_kit.name,Ремкомплект,Repair kit
+item.repair_kit.desc,"Корпус лодки +30 прямо в море. Доски, смола и надежда.","Hull +30 right at sea. Boards, resin and hope."
+q.q1_6.title,Лодка Агаты,Agatha's Boat
+q.q1_6.s1,"Принести Ильму 20 плавника, 5 смолы и 300 кр","Bring Ilm 20 driftwood, 5 resin and 300 kr"
+q.q1_6.s2,Спустить ялик на воду (через 2 дня),Launch the boat (in 2 days)
+mail.q1_6_ilm,"Ильм. «Лодка Агаты гниёт у меня в сарае. Принеси 20 плавника, 5 смолы — у Эрланда — и 300 кр. Остальное сделаю, не впервой»","Ilm: “Agatha's boat is rotting in my shed. Bring 20 driftwood, 5 resin (Erland has it) and 300 kr. I'll do the rest; not my first.”"
+mail.boat_ready,Ильм. «Ялик «Агата» на воде у мыса. Не топи. Она этого не любила»,Ilm: “The dinghy Agatha is in the water by the cape. Don't sink her. She didn't like that.”
+mail.towed,"Хедда. «Выловила твою лодку и тебя. С тебя 500 кр. За лодку — 300, за тебя — остальное»","Hedda: “Fished out your boat, and you. That's 500 kr. Three hundred for the boat, the rest for you.”"
+sea.rest_place,Место Упокоения,The Resting Place
+sea.drowned_well,Колодец Утопленников,The Drowned Well
+sea.seal_rock,Тюлений камень,Seal Rock
+sea.sea_garden,Морской огород,Sea garden
+sea.teeth,Скалы Зубы,The Teeth
+sea.eider_isle,Остров Гаг,Eider Isle
+sea.dead_fire,Мёртвый Огонь,The Dead Fire

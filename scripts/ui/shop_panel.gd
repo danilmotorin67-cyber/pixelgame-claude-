@@ -85,6 +85,8 @@ func refresh() -> void:
 static func entry_name(entry: Dictionary) -> String:
 	if str(entry.get("upgrade", "")) == "backpack":
 		return "Рюкзак на %d мест" % int(entry["slots"])
+	if str(entry.get("upgrade", "")) == "boathouse":
+		return "Лодочный сарай ур. 2 и шлюпка (200 досок)"
 	var id := str(entry["item"])
 	return Loc.t(str(Data.by_id("items", id).get("name", id)))
 
@@ -102,6 +104,8 @@ func buy_selected(count: int) -> String:
 			_status.text = "Не хватает крон."
 		"space":
 			_status.text = "Рюкзак полон."
+		"materials":
+			_status.text = "Не хватает материалов."
 		_:
 			_status.text = "Этого сейчас нет."
 	refresh()

@@ -4,6 +4,7 @@ const ISLAND_MAPS := ["cape", "village", "moor", "birch", "seal_shore",
 	"wreck_bay", "bird_cliffs", "lagoon"]
 const TOWER_MAPS := ["lh_1", "lh_2", "lh_3", "lh_4"]
 const TOWER_SCENE := "res://scenes/world/lighthouse_interior.tscn"
+const SEA_SCENE := "res://scenes/world/sea.tscn"
 
 var current_map: String = ""
 var spawn: Vector2 = Vector2(600, 360)
@@ -23,19 +24,24 @@ func _default_spawn(id: String) -> Vector2:
 		return Vector2(600, 360)
 	if TOWER_MAPS.has(id):
 		return Vector2(10 * 16 + 8, 9 * 16 + 8)
+	if id == "sea":
+		var dock: Array = Game.balance("sea", {}).get("dock", [45, 7])
+		return Vector2(int(dock[0]) * 16 + 8, int(dock[1]) * 16 + 8)
 	var entry: Dictionary = Data.tables.get("regions", {}).get(id, {})
 	var size: Array = entry.get("size", [50, 40])
 	return Vector2(int(size[0]) * 8, int(size[1]) * 8)
 
 
 func goto_map(id: String, pos: Vector2 = Vector2.ZERO) -> bool:
-	if not ISLAND_MAPS.has(id) and not TOWER_MAPS.has(id):
+	if not ISLAND_MAPS.has(id) and not TOWER_MAPS.has(id) and id != "sea":
 		return false
 	var path := "res://scenes/world/island_region.tscn"
 	if id == "cape":
 		path = "res://scenes/world/cape.tscn"
 	elif TOWER_MAPS.has(id):
 		path = TOWER_SCENE
+	elif id == "sea":
+		path = SEA_SCENE
 	if not ResourceLoader.exists(path):
 		return false
 	var tree := get_tree()

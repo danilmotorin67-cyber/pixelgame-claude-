@@ -32,4 +32,10 @@ func interact(_player: Player) -> void:
 		Events.quest_event.emit("rod_received", "")
 		(scene.get_node("HUD/Hint") as Label).text = "Эрланд: «Держи. Ива помнит её руки. Твои — пусть привыкают»."
 		return
+	if shop_id == "shop_ilm" and Quests.state("q1_6_boat") == "active" and not Quests.step_done("q1_6_boat", "order"):
+		var hint := scene.get_node("HUD/Hint") as Label
+		if Sea.order_boat():
+			hint.text = "Ильм: «Через два дня ялик будет на воде у мыса. Не торопи дерево»."
+			return
+		hint.text = "Ильм: «Для лодки Агаты — 20 плавника, 5 смолы и 300 кр»."
 	ShopPanel.open(scene.get_node("HUD"), shop_id)
