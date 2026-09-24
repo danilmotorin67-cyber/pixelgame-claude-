@@ -69,5 +69,20 @@
   ],
   "every": 3,
   "salt": 1
+ },
+ {
+  "id": "bog_cranberry",
+  "built": true,
+  "days": 7,
+  "fruit": "cranberry",
+  "seasons": [
+   "autumn"
+  ],
+  "every": 2,
+  "yield": [
+   3,
+   5
+  ],
+  "salt": 2
  }
 ]

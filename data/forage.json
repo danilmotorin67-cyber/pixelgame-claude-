@@ -142,6 +142,20 @@
         30,
         12
       ]
+    ],
+    "bird_cliffs": [
+      [
+        9,
+        33,
+        12,
+        7
+      ],
+      [
+        8,
+        10,
+        10,
+        7
+      ]
     ]
   },
   "spots_per_zone": [
@@ -179,6 +193,16 @@
         "scurvygrass",
         "seal_shore",
         50
+      ],
+      [
+        "guano",
+        "bird_cliffs",
+        50
+      ],
+      [
+        "raven_feather",
+        "bird_cliffs",
+        25
       ]
     ],
     "summer": [
@@ -211,6 +235,21 @@
         "samphire",
         "seal_shore",
         50
+      ],
+      [
+        "guano",
+        "bird_cliffs",
+        50
+      ],
+      [
+        "raven_feather",
+        "bird_cliffs",
+        25
+      ],
+      [
+        "puffin_feather",
+        "bird_cliffs",
+        25
       ]
     ],
     "autumn": [
@@ -238,6 +277,16 @@
         "fly_agaric",
         "birch",
         45
+      ],
+      [
+        "guano",
+        "bird_cliffs",
+        50
+      ],
+      [
+        "raven_feather",
+        "bird_cliffs",
+        25
       ]
     ],
     "winter": [
@@ -255,6 +304,16 @@
         "ice_crystal",
         "lagoon",
         100
+      ],
+      [
+        "guano",
+        "bird_cliffs",
+        50
+      ],
+      [
+        "raven_feather",
+        "bird_cliffs",
+        25
       ]
     ]
   },

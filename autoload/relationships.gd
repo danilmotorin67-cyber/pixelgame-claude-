@@ -187,7 +187,7 @@ func _courtship(npc: String, index: int, id: String) -> Dictionary:
 		return {"ok": false, "reason": "taken", "line": "ring_taken"}
 	if not dating.has(npc) or hearts_of(npc) < 10:
 		return {"ok": false, "reason": "too_soon", "line": "ring_no"}
-	if int(Game.counters.get("house_level", 0)) < 1:
+	if Buildings.level("house") < 1:
 		return {"ok": false, "reason": "house", "line": "ring_house"}
 	Inventory.take_slot(index, 1)
 	engaged_to = npc

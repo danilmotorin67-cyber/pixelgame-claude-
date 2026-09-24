@@ -89,6 +89,18 @@ static func entry_name(entry: Dictionary) -> String:
 		return "Лодочный сарай ур. 2 и шлюпка (200 досок)"
 	if entry.has("service"):
 		return Loc.t("service." + str(entry["service"]))
+	if entry.has("building"):
+		var id_b := str(entry["building"])
+		var next := Buildings.next_level_info(id_b)
+		var parts: Array[String] = []
+		for need in next.get("items", []):
+			parts.append("%s ×%d" % [Crafting.item_name(str(need[0])), int(need[1])])
+		var level_text := " ур. %d" % (Buildings.level(id_b) + 1) if Buildings.max_level(id_b) > 1 else ""
+		return "Постройка: %s%s (%s; %d дн.)" % [Loc.t("building." + id_b), level_text, ", ".join(parts) if not parts.is_empty() else "без материалов", int(next.get("days", 1))]
+	if entry.has("animal"):
+		return Loc.t("animal." + str(entry["animal"]))
+	if entry.has("recipe"):
+		return "Рецепт: " + Crafting.item_name(str(Crafting._recipe(str(entry["recipe"])).get("out", ["", 1])[0]))
 	var id := str(entry["item"])
 	return Loc.t(str(Data.by_id("items", id).get("name", id)))
 
@@ -101,7 +113,12 @@ func buy_selected(count: int) -> String:
 	var result := Economy.buy(shop_id, entry, count)
 	match result:
 		"ok":
-			_status.text = Economy.last_service if entry.has("service") else "Куплено: %s ×%d. Осталось %d кр." % [entry_name(entry), count, Economy.money]
+			if entry.has("building"):
+				_status.text = "Ильм взялся за работу: готово через %d дн." % Buildings.days_left()
+			elif entry.has("animal"):
+				_status.text = "Маргит приведёт его к вам на мыс сегодня же."
+			else:
+				_status.text = Economy.last_service if entry.has("service") else "Куплено: %s ×%d. Осталось %d кр." % [entry_name(entry), count, Economy.money]
 		"money":
 			_status.text = "Не хватает крон."
 		"space":
@@ -110,6 +127,12 @@ func buy_selected(count: int) -> String:
 			_status.text = "Не хватает материалов."
 		"nothing":
 			_status.text = "Для этой услуги нечего предъявить."
+		"busy":
+			_status.text = "Ильм уже строит: ещё %d дн." % Buildings.days_left()
+		"home":
+			_status.text = "Для него нет места: нужна постройка или свободное место в ней."
+		"season":
+			_status.text = "Пока не продаётся."
 		_:
 			_status.text = "Этого сейчас нет."
 	refresh()

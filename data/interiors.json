@@ -1223,5 +1223,64 @@
     4
    ]
   }
+ },
+ "cape_workshop": {
+  "title": "Мастерская",
+  "size": [
+   12,
+   10
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#7a6a58",
+  "wall": "#5a5048",
+  "exits": [
+   {
+    "at": [
+     6,
+     9
+    ],
+    "to": "cape",
+    "spawn": [
+     57,
+     40
+    ],
+    "label": "cape"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "table",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "barrel",
+    "at": [
+     10,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "bench": [
+    2,
+    2
+   ],
+   "door": [
+    6,
+    8
+   ]
+  }
  }
 }

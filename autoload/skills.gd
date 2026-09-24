@@ -21,8 +21,20 @@ func reset() -> void:
 		levels[n] = 0
 
 
-func level(skill: String) -> int:
+# The learned level (unlocks and discoveries); `level` adds food buffs on top (section 20).
+func base_level(skill: String) -> int:
 	return int(levels.get(skill, 0))
+
+
+func level(skill: String) -> int:
+	return base_level(skill) + int(Game.effect("skill_" + skill) + Game.effect("skill_all"))
+
+
+func has_profession(id: String) -> bool:
+	for skill in professions:
+		if id in professions[skill]:
+			return true
+	return false
 
 
 func add_xp(skill: String, amount: int) -> void:

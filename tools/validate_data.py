@@ -71,6 +71,11 @@ def main() -> int:
         for entry in shop.get("stock", []):
             if "service" in entry and entry["service"] not in ("open_chest", "rumor", "boat_blessing"):
                 errs.append(f"shop {shop.get('id')} offers unknown service {entry['service']}")
+            if "recipe" in entry:
+                recipe_ids = {r["id"] for t in ("recipes_craft", "recipes_cook") for r in rows(tables.get(t, []))}
+                if entry["recipe"] not in recipe_ids:
+                    errs.append(f"shop {shop.get('id')} teaches unknown recipe {entry['recipe']}")
+                continue
             if "upgrade" not in entry and "service" not in entry and entry.get("item") not in item_ids:
                 errs.append(f"shop {shop.get('id')} sells unknown item {entry.get('item')}")
     tag_ids = set()
@@ -224,6 +229,8 @@ def check_crafting(tables, item_ids, npc_ids) -> list:
                 errs.append(f"animal {a['id']} unknown {key} {a[key]}")
     for t in rows(tables.get("trees", [])):
         for key in ("sapling", "fruit"):
+            if key == "sapling" and t.get("built"):
+                continue
             if t.get(key) not in item_ids:
                 errs.append(f"tree {t['id']} unknown {key}")
     return errs

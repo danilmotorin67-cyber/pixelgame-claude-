@@ -33,7 +33,16 @@ func _ready() -> void:
 	add_child(Pickups.new())
 	add_child(Stations.new())
 	if map_id == "cape":
+		$Garden.add_to_group("gardens")
+		for plot_id in ["greenhouse_small", "greenhouse"]:
+			var house := preload("res://scripts/world/garden.gd").new()
+			house.name = "Garden_" + plot_id
+			house.plot = plot_id
+			house.position = Farm.PLOTS[plot_id]["origin"]
+			house.add_to_group("gardens")
+			add_child(house)
 		add_child(GraveyardWorld.new())
+		add_child(Farmstead.new())
 		var landing := BoatLanding.new()
 		landing.name = "BoatLanding"
 		var at: Array = Game.balance("sea", {}).get("cape_landing", [900, 850])

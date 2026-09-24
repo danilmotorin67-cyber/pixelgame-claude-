@@ -129,7 +129,7 @@ func refill(id: String = "") -> int:
 const REPAIRS := {
 	"stairs": {"items": [["boards", 10]], "points": 2},
 	"masonry": {"items": [["stone", 20]], "points": 2},
-	"paint": {"items": [["shell_lime", 5], ["whale_oil", 1]], "points": 2},
+	"paint": {"items": [["shell_lime", 5], ["whale_oil", 1]], "alt": [["tower_paint", 1]], "points": 2},
 	"glass": {"items": [["glass", 3]], "flag": "lantern_glass_repaired"},
 }
 
@@ -143,10 +143,18 @@ func repair(part: String) -> String:
 		return "unknown"
 	if (info.has("flag") and Game.flag(str(info["flag"]))) or (info.has("points") and int(tower.get(part, 0)) >= 2):
 		return "done"
-	for need in info["items"]:
+	var items: Array = info["items"]
+	for option in [info["items"], info.get("alt", [])]:
+		var enough: bool = not (option as Array).is_empty()
+		for need in option:
+			enough = enough and Data.exists("items", str(need[0])) and Inventory.count_of(str(need[0])) >= int(need[1])
+		if enough:
+			items = option
+			break
+	for need in items:
 		if not Data.exists("items", str(need[0])) or Inventory.count_of(str(need[0])) < int(need[1]):
 			return "materials"
-	for need in info["items"]:
+	for need in items:
 		Inventory.take(str(need[0]), int(need[1]))
 	if info.has("flag"):
 		Game.set_flag(str(info["flag"]))
@@ -154,6 +162,60 @@ func repair(part: String) -> String:
 		tower[part] = int(info["points"])
 	Events.quest_event.emit("tower_part_repaired", part)
 	return "ok"
+
+
+# Parts from the stations (10.4-10.10, 19.4) go in by hand; a better part replaces the old one, which goes
+# back to the backpack if it was made. Returns "ok", "worse", "space" or "unknown".
+func install_part(item_id: String) -> String:
+	var spec: Array = Data.by_id("items", item_id).get("install", [])
+	if spec.size() < 2 or Inventory.count_of(item_id) <= 0:
+		return "unknown"
+	var slot := str(spec[0])
+	var value: Variant = spec[1]
+	var tables := {"lens": "lenses", "lamp": "lamps", "mechanism": "mechanisms", "signal": "signals"}
+	var old := ""
+	match slot:
+		"lens", "lamp", "mechanism", "signal":
+			var table: Dictionary = cfg(tables[slot])
+			var current := str(get(slot if slot != "signal" else "signal_kind"))
+			var rank := func(id: String) -> float:
+				var entry: Variant = table.get(id, 0)
+				return float(entry["points"]) if entry is Dictionary else float(entry)
+			if float(rank.call(str(value))) <= float(rank.call(current)):
+				return "worse"
+			old = _part_item(slot, current)
+			if old != "" and not Inventory.can_fit(old, 1):
+				return "space"
+			set(slot if slot != "signal" else "signal_kind", str(value))
+		"reservoir":
+			if int(value) <= reservoir_level:
+				return "worse"
+			reservoir_level = int(value)
+		"shroud":
+			if salt_shroud:
+				return "worse"
+			salt_shroud = true
+		"tower":
+			if int(tower.get(str(value), 0)) >= 2:
+				return "worse"
+			tower[str(value)] = 2
+		"red_sector":
+			if Game.flag("red_sector"):
+				return "worse"
+			Game.set_flag("red_sector")
+	Inventory.take(item_id, 1)
+	if old != "":
+		Inventory.add(old, 1)
+	Events.quest_event.emit("lighthouse_part", item_id)
+	return "ok"
+
+
+func _part_item(slot: String, value: String) -> String:
+	for item in Data.all("items"):
+		var spec: Array = item.get("install", [])
+		if spec.size() == 2 and str(spec[0]) == slot and str(spec[1]) == value:
+			return str(item["id"])
+	return ""
 
 
 # Fuel drained into the storeroom barrel goes back into an empty (or same-fuel) reservoir.

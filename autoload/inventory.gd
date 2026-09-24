@@ -123,6 +123,24 @@ func take_matching(need: String, count: int) -> bool:
 	return true
 
 
+# Takes `count` matching items from the best stacks first; returns the lowest quality taken (-1 if short).
+func take_matching_best(need: String, count: int) -> int:
+	if count_matching(need) < count:
+		return -1
+	var left := count
+	var lowest := 3
+	while left > 0:
+		var best := -1
+		for index in capacity:
+			if matches(str(slots[index]["id"]), need) and (best < 0 or int(slots[index]["quality"]) > int(slots[best]["quality"])):
+				best = index
+		var n := mini(int(slots[best]["count"]), left)
+		lowest = mini(lowest, int(slots[best]["quality"]))
+		take_slot(best, n)
+		left -= n
+	return lowest
+
+
 func count_of(id: String) -> int:
 	var n := 0
 	for s in slots:

@@ -67,7 +67,8 @@ func _physics_process(delta: float) -> void:
 	var spd := slow_speed if Input.is_action_pressed("walk_slow") else walk_speed
 	if is_tired():
 		spd *= float(Game.balance("fatigue_speed", 0.9))
-	if Graveyard.carried != "":
+	spd *= maxf(0.5, 1.0 + Game.effect("speed")) * (Animals.ride_speed() if Animals.riding else 1.0)
+	if Graveyard.carried != "" and not (Buildings.level("hearse") > 0 and Animals.has_pony()):
 		spd *= CARRY_SPEED
 	velocity = dir * spd
 	var before := global_position
@@ -195,6 +196,29 @@ func use_selected() -> String:
 			Game.counters["star_amber"] = int(Game.counters.get("star_amber", 0)) + 1
 			energy = minf(energy + 30.0, Game.max_energy())
 			return "Звёздный янтарь тёплый, как ладонь. Сил навсегда стало больше."
+		"calm_tomorrow":
+			if Weather.requested_calm == Clock.day_index + 1:
+				return "Штиль на завтра уже обещан."
+			Inventory.take_slot(index, 1)
+			Weather.requested_calm = Clock.day_index + 1
+			return "Зелье выпито. Ветер к утру ляжет."
+	var use := str(Data.by_id("items", id).get("use", ""))
+	if use.begins_with("warp:"):
+		var target := use.substr(5)
+		if Router.current_map == target:
+			return "Вы и так здесь."
+		Inventory.take_slot(index, 1)
+		Router.goto_map(target, Router.WARP_SPAWNS.get(target, Vector2(400, 300)))
+		return "Тотем рассыпался. Мир на миг стал другим."
+	var item := Data.by_id("items", id)
+	if item.has("slot") or str(item.get("category", "")) == "amulet":
+		match Game.equip(id):
+			"on":
+				return "Надето: %s." % Loc.t(str(item["name"]))
+			"off":
+				return "Снято: %s." % Loc.t(str(item["name"]))
+			_:
+				return "Некуда снять надетое: рюкзак полон."
 	return ""
 
 
@@ -207,11 +231,21 @@ func eat_selected() -> String:
 		return ""
 	energy = minf(energy + float(edible.get("energy", 0)), Game.max_energy())
 	health = minf(health + float(edible.get("health", 0)), max_health())
+	var buff: Dictionary = Data.by_id("items", id).get("buff", {})
+	if not buff.is_empty():
+		Game.add_buff(buff)
+		if bool(buff.get("warm_now", false)):
+			cold = 0.0
 	return id
 
 
+func spend_raw(amount: float) -> void:
+	energy = maxf(0.0, energy - amount)
+
+
 func _place_selected(at: Vector2) -> bool:
-	if str(Data.by_id("items", Inventory.selected_id()).get("place", "")) == "":
+	var info := Data.by_id("items", Inventory.selected_id())
+	if str(info.get("place", "")) == "" and str(info.get("plant", "")) == "":
 		return false
 	if global_position.distance_to(at) > Crafting.PLACE_REACH:
 		return false
@@ -220,6 +254,45 @@ func _place_selected(at: Vector2) -> bool:
 		if stations:
 			stations.rebuild()
 	return true
+
+
+# 19.1/19.3 raw materials: sand from beaches, seawater with a bucket, birches in the grove.
+func _gather(at: Vector2) -> bool:
+	if global_position.distance_to(at) > 48.0:
+		return false
+	var id := Inventory.selected_id()
+	var scoop := int(Data.by_id("items", id).get("use_water", 0))
+	if scoop > 0:
+		var got := Crafting.scoop_seawater(Router.current_map, at, scoop)
+		_say("Морская вода: +%d." % got if got > 0 else "Зачерпнуть можно только у моря.")
+		return true
+	if energy <= 0.0 and id in ["tool_shovel", "tool_axe"]:
+		_say("Нужен отдых, сил на работу нет.")
+		return true
+	if id == "tool_shovel" and Router.current_map in Crafting.GATHER_BEACHES and Router.current_map != "cape":
+		var sand := Crafting.dig_sand(Router.current_map, at)
+		if sand > 0:
+			spend_energy("shovel")
+			play_tool("hoe", at)
+			_say("Песок: +%d." % sand)
+			return true
+	if id == "tool_shovel" and Router.current_map == "cape" and Crafting.dig_sand("cape", at) > 0:
+		spend_energy("shovel")
+		play_tool("hoe", at)
+		_say("Песок: +1.")
+		return true
+	if id == "tool_axe" and Router.current_map == "birch":
+		var felled := Crafting.fell_birch("birch", at)
+		if felled.has("log"):
+			spend_energy("axe")
+			play_tool("hoe", at)
+			_say("Берёза срублена: бревно, кора и щепа.")
+		elif felled.has("done"):
+			_say("На сегодня хватит: рощу берегут.")
+		else:
+			return false
+		return true
+	return false
 
 
 func is_tired() -> bool:
@@ -295,13 +368,16 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 			return
 	if event.is_action_pressed("use_tool") and Router.current_map == "cape":
-		var garden := get_tree().current_scene.get_node_or_null("Garden")
-		if garden and garden.use_at(get_global_mouse_position(), self):
-			get_viewport().set_input_as_handled()
-			return
-		if _place_selected(get_global_mouse_position()):
-			get_viewport().set_input_as_handled()
-			return
+		for garden in get_tree().get_nodes_in_group("gardens"):
+			if garden.use_at(get_global_mouse_position(), self):
+				get_viewport().set_input_as_handled()
+				return
+	if event.is_action_pressed("use_tool") and _place_selected(get_global_mouse_position()):
+		get_viewport().set_input_as_handled()
+		return
+	if event.is_action_pressed("use_tool") and _gather(get_global_mouse_position()):
+		get_viewport().set_input_as_handled()
+		return
 	if Router.current_map == "sea" and event.is_action_pressed("dodge"):
 		if float(SeaChart.boat_info().get("sail", 0.0)) > 0.0:
 			sail_up = not sail_up

@@ -27,6 +27,9 @@ func sunday_gazette() -> bool:
 	for i in mini(3, Weather.forecast.size()):
 		days.append(str(names.get(str(Weather.forecast[i]), Weather.forecast[i])))
 	send("mail.gazette", [", ".join(days), Dialogue.rumor()])
+	var recipe := Crafting.gazette_recipe()
+	if recipe != "":
+		send("mail.gazette_recipe", [Crafting.item_name(str(Crafting._recipe(recipe)["out"][0]))])
 	return true
 
 

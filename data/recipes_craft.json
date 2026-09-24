@@ -3966,22 +3966,6 @@
   "minutes": 60
  },
  {
-  "id": "seeds_rosehip",
-  "station": "seed_box",
-  "in": [
-   [
-    "rosehip",
-    5
-   ]
-  ],
-  "out": [
-   "rosehip",
-   3
-  ],
-  "unlock": "skill:foraging:6",
-  "minutes": 60
- },
- {
   "id": "furn_stool",
   "station": "workbench",
   "in": [

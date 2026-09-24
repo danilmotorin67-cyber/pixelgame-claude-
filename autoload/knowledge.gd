@@ -45,6 +45,8 @@ func blocked_reason(id: String) -> String:
 			return "requires"
 	if info.has("story") and not Game.flag(str(info["story"])):
 		return "story"
+	if info.has("when") and not ConditionContext.check(str(info["when"])):
+		return "story"
 	var cost: Dictionary = info.get("cost", {})
 	for kind in cost:
 		if points(kind) < int(cost[kind]):

@@ -350,7 +350,7 @@ func _check_forage() -> void:
 	_check(is_equal_approx(Sea.mercy, 30.3), "rubbish lifts mercy by at most 2 a day")
 
 	Farm.spawn_wild(3)
-	var spring_items := ["morel", "wild_garlic", "sorrel", "cottongrass", "armeria", "scurvygrass"]
+	var spring_items := ["morel", "wild_garlic", "sorrel", "cottongrass", "armeria", "scurvygrass", "guano", "raven_feather"]
 	var zones: Dictionary = Data.tables["forage"]["zones"]
 	for map_id in Farm.wild:
 		for spot in Farm.wild[map_id]:

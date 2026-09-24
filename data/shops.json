@@ -222,6 +222,18 @@
       {
         "item": "salted_herring",
         "price": 80
+      },
+      {
+        "item": "sapling_buckthorn",
+        "price": 400
+      },
+      {
+        "item": "sapling_apple",
+        "price": 800
+      },
+      {
+        "item": "bucket",
+        "price": 150
       }
     ],
     "keepers": [
@@ -266,6 +278,18 @@
       {
         "item": "rosehip_tea",
         "price": 80
+      },
+      {
+        "item": "sapling_rowan",
+        "price": 600
+      },
+      {
+        "item": "bush_blueberry",
+        "price": 300
+      },
+      {
+        "item": "bush_lingonberry",
+        "price": 300
       }
     ],
     "keepers": [
@@ -709,6 +733,11 @@
       {
         "item": "star_amber",
         "price": 50000,
+        "once": true
+      },
+      {
+        "recipe": "cook_steamed_lobster",
+        "price": 1000,
         "once": true
       }
     ]

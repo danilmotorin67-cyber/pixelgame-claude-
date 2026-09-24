@@ -5,6 +5,8 @@ const ISLAND_MAPS := ["cape", "village", "moor", "birch", "seal_shore",
 const TOWER_MAPS := ["lh_1", "lh_2", "lh_3", "lh_4"]
 const TOWER_SCENE := "res://scenes/world/lighthouse_interior.tscn"
 const SEA_SCENE := "res://scenes/world/sea.tscn"
+# Totems of 19.6 land here: the cape house, the grotto shore of the bay, the chapel porch.
+const WARP_SPAWNS := {"cape": Vector2(600, 360), "wreck_bay": Vector2(11 * 16 + 8, 24 * 16 + 8), "village": Vector2(17 * 16 + 8, 43 * 16 + 8)}
 
 var current_map: String = ""
 var spawn: Vector2 = Vector2(600, 360)

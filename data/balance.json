@@ -104,7 +104,7 @@
         "nights": 2,
         "points": 10
       },
-      "bright_water": {
+      "light_water": {
         "nights": 4,
         "points": 15
       }
@@ -227,13 +227,42 @@
     }
   },
   "rann": {
-    "at": [70, 56],
-    "loves": ["gold_ingot", "black_pearl", "music_box"],
-    "likes": ["pearl", "amber", "silver_ingot", "bright_water"],
-    "neutral": ["scallop_shell", "bread_rye", "potato_flatbread", "ale"],
-    "dislikes": ["stone", "rock"],
-    "hates": ["neptune_can", "harpoon_bolt"],
-    "mercy": {"loves": 10, "likes": 5, "neutral": 1, "dislikes": -2, "hates": -5},
+    "at": [
+      70,
+      56
+    ],
+    "loves": [
+      "gold_ingot",
+      "black_pearl",
+      "music_box"
+    ],
+    "likes": [
+      "pearl",
+      "amber",
+      "silver_ingot",
+      "light_water"
+    ],
+    "neutral": [
+      "scallop_shell",
+      "bread_rye",
+      "potato_flatbread",
+      "ale"
+    ],
+    "dislikes": [
+      "stone",
+      "rock"
+    ],
+    "hates": [
+      "neptune_can",
+      "harpoon_bolt"
+    ],
+    "mercy": {
+      "loves": 10,
+      "likes": 5,
+      "neutral": 1,
+      "dislikes": -2,
+      "hates": -5
+    },
     "calm_min_mercy": 60,
     "calm_free_mercy": 80,
     "calm_cost": 5,
@@ -413,5 +442,23 @@
         80
       ]
     ]
+  },
+  "garden": {
+    "water_days": {
+      "watering_barrel": 5,
+      "cistern": 7
+    },
+    "gull_chance": 0.01,
+    "guard": {
+      "gull_scarer": 8,
+      "keeper_scarecrow": 16,
+      "cat": 8
+    },
+    "cat_at": [
+      600,
+      360
+    ],
+    "salt_shore_tiles": 12,
+    "salt_chance": 0.25
   }
 }

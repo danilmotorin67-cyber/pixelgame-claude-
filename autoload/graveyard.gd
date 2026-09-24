@@ -57,12 +57,32 @@ func _empty_grave(plot: int) -> Dictionary:
 		"filled": false, "marker": "", "quality": 0, "name": "", "weeds": false, "sunk": false}
 
 
-func plot_position(plot: int) -> Vector2:
+# 11.11: Ilm's extension grows the graveyard to 24 / 40 / 60 plots, row by row below the old ones.
+func extend_plots(total: int) -> void:
+	while graves.size() < total:
+		graves.append(_empty_grave(graves.size()))
+
+
+# The graveyard is laid out in fenced blocks of 12 plots (4 × 3); extensions add blocks east and south.
+const BLOCK_OFFSETS := [Vector2(0, 0), Vector2(184, 0), Vector2(368, 0), Vector2(0, 192), Vector2(184, 192)]
+
+
+func block_count() -> int:
+	return ceili(float(graves.size()) / float(int(cfg("cols")) * int(cfg("rows"))))
+
+
+func block_origin(block: int) -> Vector2:
 	var origin: Array = cfg("origin")
+	return Vector2(float(origin[0]), float(origin[1])) + BLOCK_OFFSETS[clampi(block, 0, BLOCK_OFFSETS.size() - 1)]
+
+
+func plot_position(plot: int) -> Vector2:
 	var size: Array = cfg("plot")
 	var cols := int(cfg("cols"))
-	return Vector2(float(origin[0]) + float(plot % cols) * float(size[0]) + float(size[0]) / 2.0,
-		float(origin[1]) + float(plot / cols) * float(size[1]) + float(size[1]) / 2.0)
+	var per_block := cols * int(cfg("rows"))
+	var index := plot % per_block
+	return block_origin(plot / per_block) + Vector2(float(index % cols) * float(size[0]) + float(size[0]) / 2.0,
+		float(index / cols) * float(size[1]) + float(size[1]) / 2.0)
 
 
 func _rng(salt: int) -> RandomNumberGenerator:
@@ -186,6 +206,8 @@ func advance_night(storm: bool) -> Array:
 		if is_buried(b):
 			continue
 		var place := "morgue" if str(b["where"]) == "morgue" else "shore"
+		if place == "morgue" and Buildings.level("ice_house") > 0:
+			place = "icehouse"
 		b["preservation"] = maxf(0.0, float(b["preservation"]) - float(decay.get(place, 10)))
 		if Clock.day_index - int(b["arrived"]) >= int(cfg("restless_days")):
 			b["restless"] = true
@@ -719,8 +741,27 @@ func recalc_peace() -> float:
 	return peace
 
 
+const DECOR_BEAUTY := {"fence_wood": 0.2, "fence_stone": 0.3, "fence_iron": 0.45, "stone_path": 0.1, "bench": 1.0,
+	"memory_lantern": 1.0, "statue_mourning": 3.0}
+
+
+# 11.11/P12: fences, paths, benches, lanterns and the statue within the graveyard, and the small chapel (+5).
 func beauty() -> float:
-	return clampf(float(Game.counters.get("graveyard_beauty", 0)) / 10.0, 0.0, 25.0)
+	var total := float(Game.counters.get("graveyard_beauty", 0)) / 10.0
+	var size: Array = cfg("plot")
+	var block := Vector2(float(size[0]) * float(cfg("cols")), float(size[1]) * float(cfg("rows")))
+	for obj in Crafting.placed.get("cape", []):
+		var bonus := float(DECOR_BEAUTY.get(str(obj.get("item", "")), 0.0))
+		if bonus <= 0.0:
+			continue
+		var at := Vector2(float(obj["x"]), float(obj["y"]))
+		for b in block_count():
+			if Rect2(block_origin(b) - Vector2(40, 40), block + Vector2(80, 80)).has_point(at):
+				total += bonus
+				break
+	if Buildings.level("chapel") > 0:
+		total += 5.0
+	return clampf(total, 0.0, 25.0)
 
 
 # ---- named ghosts (11.8) ----

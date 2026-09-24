@@ -261,7 +261,9 @@ func _check_shops() -> void:
 		_check(Relationships.night_letters() >= 1 and Mail.letters.size() > before, "Karl writes at %d hearts" % need)
 		_check(Relationships.night_letters() == 0, "each letter comes once")
 	Clock.day_index = 6 # sunday
-	_check(Mail.sunday_gazette() and str(Mail.letters[-1]["text"]) == "mail.gazette", "the Sunday paper")
+	var paper_from := Mail.letters.size()
+	_check(Mail.sunday_gazette() and str(Mail.letters[paper_from]["text"]) == "mail.gazette"
+		and str(Mail.letters[-1]["text"]) == "mail.gazette_recipe", "the Sunday paper with its kitchen column")
 
 
 func _run() -> void:

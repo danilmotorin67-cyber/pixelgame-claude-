@@ -78,6 +78,17 @@ func _draw() -> void:
 func interact(player: Player) -> void:
 	if Clock.paused:
 		return
+	var part := Inventory.selected_id()
+	if Data.by_id("items", part).has("install") and kind in ["lamp", "mechanism", "lens", "repair", "barrel"]:
+		var name_text := Loc.t(str(Data.by_id("items", part)["name"]))
+		match Lighthouse.install_part(part):
+			"ok":
+				_hint("Установлено: %s. Сила огня теперь %d." % [name_text, int(Lighthouse.base_power())])
+			"worse":
+				_hint("Стоящее сейчас не хуже.")
+			"space":
+				_hint("Старую деталь некуда убрать: рюкзак полон.")
+		return
 	match kind:
 		"stairs_up":
 			Router.goto_map("lh_%d" % (LighthouseFloorInfo.number() + 1), Vector2(3 * 16 + 8, 3 * 16 + 8))

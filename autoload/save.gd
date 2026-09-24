@@ -87,6 +87,7 @@ func save_game(slot: int = -1) -> bool:
 		"sea": Sea.serialize(),
 		"farm": Farm.serialize(),
 		"animals": Animals.serialize(),
+		"buildings": Buildings.serialize(),
 		"crafting": Crafting.serialize(),
 		"mail": Mail.serialize(),
 		"collections": Collections.serialize(),
@@ -148,6 +149,7 @@ func load_game(slot: int) -> bool:
 	Graveyard.deserialize(payload.get("graveyard", {}))
 	Sea.deserialize(payload.get("sea", {}))
 	Farm.deserialize(payload.get("farm", {}))
+	Buildings.deserialize(payload.get("buildings", {}))
 	Animals.deserialize(payload.get("animals", {}))
 	Crafting.deserialize(payload.get("crafting", {}))
 	Mail.deserialize(payload.get("mail", {}))

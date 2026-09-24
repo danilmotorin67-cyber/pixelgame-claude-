@@ -347,5 +347,10 @@
   "id": "decor",
   "name": "station.decor",
   "kind": "decor"
+ },
+ {
+  "id": "tree",
+  "name": "station.tree",
+  "kind": "tree"
  }
 ]

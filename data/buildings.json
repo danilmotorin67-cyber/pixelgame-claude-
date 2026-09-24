@@ -246,16 +246,6 @@
   "name": "building.boathouse",
   "levels": [
    {
-    "price": 3000,
-    "items": [
-     [
-      "boards",
-      200
-     ]
-    ],
-    "days": 2
-   },
-   {
     "price": 15000,
     "items": [
      [

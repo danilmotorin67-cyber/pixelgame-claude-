@@ -29,6 +29,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	var night_index := Clock.day_index
 	var aurora_tonight := Weather.aurora
 	var storm_today := Weather.current in ["storm", "blizzard"]
+	var weather_today := Weather.current
 	var compass_before := [Lighthouse.fire_power, Graveyard.peace, Sea.mercy]
 	_step(report, "lighthouse", func() -> void:
 		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted))
@@ -38,7 +39,11 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	_step(report, "farm", func() -> void:
 		Farm.advance_day(storm_today)
 		Farm.spawn_wild(Clock.day_index))
+	_step(report, "animals", func() -> void:
+		report["animals"] = Animals.night(weather_today))
 	_step(report, "stations", func() -> void:
+		report["built"] = Buildings.night()
+		report["crafting"] = Crafting.night(weather_today)
 		report["stations_ready"] = Crafting.finished_overnight())
 	_step(report, "bodies", func() -> void:
 		report["bodies_arrived"] = Graveyard.advance_night(storm_today))
@@ -53,6 +58,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		Lighthouse.night_mail(night_index)
 		Graveyard.deliver_replies(Clock.day_index)
 		Relationships.night_letters()
+		Crafting.recipe_letters()
 		Mail.sunday_gazette()
 		report["mail"] = Mail.unread())
 	_step(report, "sales", func() -> void:

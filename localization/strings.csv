@@ -5654,7 +5654,7 @@ building.stable,Конюшня,Stable
 building.hayloft,Сенник,Hayloft
 building.workshop,Мастерская,Workshop
 building.well,Колодец,Well
-building.boathouse,Лодочный сарай,Boathouse
+building.boathouse,Лодочный сарай ур. 3 (бот),Boathouse level 3 (the boat)
 building.ice_house,Ледник,Ice house
 building.graveyard_ext,Расширение погоста,Graveyard extension
 building.chapel,Малая часовня на погосте,Small graveyard chapel
@@ -5680,3 +5680,7 @@ tag.candle,любая свеча,any candle
 tag.seaweed,водоросли,seaweed
 tag.smoked,копчёная рыба,smoked fish
 tag.wine,вино,wine
+mail.recipe_letter,"Смотрителю. %s пишет: «Держи рецепт — «%s». Готовь на здоровье, а мне потом расскажешь». Рецепт записан в книгу.",To the keeper. %s writes: 'Here's a recipe — %s. Cook it in good health and tell me how it went.' The recipe is in your book.
+mail.gazette_recipe,"«Сольвикский вестник», кулинарная колонка: «%s». Рецепт вырезан и вложен в книгу.","The Solvik Gazette, cookery column: '%s'. The recipe is cut out and put in your book."
+station.tree,Дерево,Tree
+mail.building_done,"Ильм: «%s готово. Принимай работу — и вот, возьми, прилагается».","Ilm: '%s is done. Come and see — and here, this comes with it.'"

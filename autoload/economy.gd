@@ -133,8 +133,29 @@ func shop_stock(shop_id: String) -> Array:
 				continue
 		if str(entry.get("upgrade", "")) == "boathouse" and Sea.boat != "yalik":
 			continue
+		if entry.has("recipe") and Crafting.learned.has(str(entry["recipe"])):
+			continue
 		offer.append(entry)
+	offer.append_array(_dynamic_stock(shop_id))
 	return offer
+
+
+# Ilm takes building orders (21.5) and Margit sells animals (14.2); both lists follow the game state.
+func _dynamic_stock(shop_id: String) -> Array:
+	var out: Array = []
+	match shop_id:
+		"shop_ilm":
+			for b in Data.all("buildings"):
+				var id := str(b["id"])
+				var reason := Buildings.blocked_reason(id)
+				if reason in ["done", "blueprint", "unknown", "boat"]:
+					continue
+				out.append({"building": id, "price": int(Buildings.next_level_info(id).get("price", 0))})
+		"shop_margit":
+			for a in Data.all("animals"):
+				if Clock.day_index >= int(a.get("after_day", 0)):
+					out.append({"animal": str(a["id"]), "price": int(a["price"])})
+	return out
 
 
 # Sandro's shebeka brings ten of its wares each week (21.3), chosen from the week and the world seed.
@@ -187,6 +208,15 @@ func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 	var total := int(entry["price"]) * count
 	if not can_pay(total):
 		return "money"
+	if entry.has("building"):
+		return Buildings.place_order(str(entry["building"]))
+	if entry.has("animal"):
+		return Animals.buy(str(entry["animal"]))
+	if entry.has("recipe"):
+		if not pay(total):
+			return "money"
+		Crafting.learn(str(entry["recipe"]))
+		return "ok"
 	if entry.has("service"):
 		last_service = ""
 		var done := _service(entry)
