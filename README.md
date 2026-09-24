@@ -8,7 +8,10 @@
 инспекции, цепочка топлива и Фортуна; неделя ночей проверяется автотестом
 `tests/integration/test_m3`. Готова основа M4 (покой): тела, покойницкая,
 похороны и знаки, шкала Покоя, реестр и опознание, письма семьям, призраки;
-квесты Q1.1 и Q1.5 проходятся целиком (`tests/integration/test_m4`). Полная
+квесты Q1.1 и Q1.5 проходятся целиком (`tests/integration/test_m4`). Готова
+основа M5 (рыба и море) и M6 (люди): жители по расписаниям, разговоры,
+подарки, сердечки, 113 сцен, все лавки, календарь и письма; неделя без
+застреваний проверяется `tests/integration/test_m6`. Полная
 спецификация игры — в [docs/full.md](docs/full.md). Игра ещё не готова.
 Визуальное направление и первый участок графической переработки описаны в
 [docs/ART_DIRECTION.md](docs/ART_DIRECTION.md).
@@ -21,5 +24,5 @@
 
 При каждом обновлении GitHub Actions проверяет таблицы данных, импорт проекта
 в Godot 4.4.1 и интеграционные сценарии `tests/integration/test_m1.gd`,
-`tests/integration/test_m2.gd`, `tests/integration/test_m3.gd` и
-`tests/integration/test_m4.gd`.
+`tests/integration/test_m2.gd` … `tests/integration/test_m6.gd`, а также
+полноту реплик жителей (`tools/dialogue_coverage.py --strict`).

@@ -16,6 +16,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate game data
         run: python3 tools/validate_data.py
+      - name: Dialogue coverage (spec 2.4)
+        run: python3 tools/dialogue_coverage.py --strict
       - name: Download Godot 4.4.1
         run: |
           curl -fL --retry 3 -o godot.zip \
