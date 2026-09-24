@@ -58,6 +58,11 @@ func _ready() -> void:
 	garden.name = "SeaGarden"
 	add_child(garden)
 	rebuild_garden()
+	var well := DeepEntrance.new()
+	well.name = "DrownedWell"
+	var well_at: Array = SeaChart.cfg("drowned_well")
+	well.position = Vector2(int(well_at[0]) * TILE + 8, int(well_at[1]) * TILE + 8)
+	add_child(well)
 	var buoy := RestPlaceBuoy.new()
 	buoy.name = "RestPlace"
 	buoy.position = SeaChart.place_pos("rest_place")

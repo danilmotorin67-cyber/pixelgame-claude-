@@ -133,8 +133,112 @@ func _check_bosses() -> void:
 				_check(Inventory.count_of("star_amber") == 1 and Inventory.count_of("whalebone") == 10, "the Bone Whale: star amber and whalebone")
 
 
+# 17.2: every level of the Deep (and the bottomless ones) is whole: exit, finds, chests and foes reachable.
+func _check_generation() -> void:
+	_fresh()
+	var locked := 0
+	for lv in range(1, 81):
+		for seed_value in [1, 2]:
+			var d := DeepGen.generate(lv, seed_value)
+			var problems := DeepGen.check(d)
+			_check(problems.is_empty(), "level %d seed %d: %s" % [lv, seed_value, ", ".join(problems)])
+			_check(d["rows"].size() == 30 and str(d["rows"][0]).length() == 40, "level %d is 40×30" % lv)
+			if str(d["exit_kind"]) == "locked":
+				locked += 1
+		var d1 := DeepGen.generate(lv, 1)
+		var expect := "kelp" if lv <= 20 else ("old_solvick" if lv <= 40 else "bone_abyss")
+		_check(str(d1["biome"]) == expect, "level %d lies in %s" % [lv, expect])
+		if lv in [10, 30, 50]:
+			_check(d1["enemies"].is_empty() and not d1["chests"].is_empty() and str(d1["exit_kind"]) == "open", "level %d is a treasury" % lv)
+		if lv in [20, 40, 60]:
+			_check(str(d1["boss"]) != "" and str(d1["exit_kind"]) == "boss", "level %d has its boss" % lv)
+		_check(bool(d1["station"]) == (lv % 5 == 0), "bell stations every 5 levels")
+	_check(locked > 5 and locked < 40, "about 15%% of levels are locked until cleared (%d of 160)" % locked)
+	_check(DeepGen.generate(7, 1)["rows"] == DeepGen.generate(7, 1)["rows"], "the same seed builds the same level")
+	var w := CombatWorld.new(1)
+	var weak := w.spawn("crab", Vector2.ZERO, 30)
+	var strong := w.spawn("crab", Vector2.ZERO, 80)
+	_check(is_equal_approx(float(strong["max_hp"]), float(weak["max_hp"]) * 2.0), "the bottomless Deep: +5% a level past 60")
+
+
+# Air (17.1) and passing out (8.5).
+func _check_air() -> void:
+	_fresh()
+	_check(Deep.begin(1) == "gear", "no dive without gear")
+	Game.set_flag("diving_bell")
+	_check(Deep.max_level() == 20 and Deep.begin(1) == "ok", "the bell: levels 1-20")
+	var entry := Deep.cell_center(Deep.data["entry"])
+	var away := entry + Vector2(80, 0)
+	for n in 10:
+		Deep.world.player["pos"] = away
+		Deep.breathe(1.0)
+	_check(is_equal_approx(Deep.air, 90.0), "outside the bell: −1 air a second")
+	Deep.world.player["pos"] = entry
+	Deep.breathe(1.0)
+	_check(Deep.air > 90.0, "the bell refills the air")
+	Inventory.add("air_bag", 1)
+	_check(is_equal_approx(Deep.air_max(), 130.0), "the air bag: +30")
+	Inventory.add("diving_suit", 1)
+	_check(Deep.gear() == "suit" and Deep.max_level() == 40, "the suit: levels to 40")
+	Knowledge.unlock("S11")
+	_check(Deep.max_level() == 60, "the steam pump: to 60")
+	Deep.world.player["pos"] = entry + Vector2(20 * 16, 0)
+	Deep.breathe(1.0)
+	_check(is_equal_approx(Deep.air, Deep.air_max()), "inside the hose radius the air is endless")
+	Deep.world.player["pos"] = entry + Vector2(35 * 16, 0)
+	Deep.breathe(30.0)
+	_check(Deep.air < Deep.air_max() * 0.6, "off the hose the air lasts 60 seconds")
+	Inventory.add("bread_rye", 5)
+	Inventory.add("fish_cod", 5)
+	Economy.money = 5000
+	var result := Deep.pass_out()
+	_check(result["lost"].size() >= 2 and int(result["money"]) == 500 and not Deep.active, "passing out: stacks and 10% of the money lost")
+	_check(Inventory.count_of("diving_suit") == 1, "the suit (a tool) is never lost")
+
+
+# The test mode of M8: straight down to 60 — breaking debris, clearing locked levels, beating the bosses.
+func _check_descent() -> void:
+	_fresh()
+	Game.set_flag("test_deep")
+	Skills.levels["diving"] = 9
+	Inventory.add("cod_solvik", 20)
+	_check(Deep.begin(1) == "ok", "the test dive starts")
+	var stuck := ""
+	while Deep.level < 60 and stuck == "":
+		match str(Deep.data["exit_kind"]):
+			"debris":
+				_check(not Deep.exit_open() and Deep.break_debris("gaff_wood"), "level %d: the gaff breaks the debris" % Deep.level)
+			"locked":
+				_check(not Deep.exit_open() or Deep.world.hostile_count() == 0, "level %d stays locked while foes live" % Deep.level)
+				for e in Deep.world.enemies.duplicate():
+					if not bool(CombatWorld.enemy_info(str(e["kind"])).get("invulnerable", false)):
+						Deep.world._kill(e)
+			"boss":
+				Deep.world.player["pos"] = Deep.world.boss["center"] + Vector2(0, 120)
+				Deep.world.player["hp"] = Deep.world.player["max_hp"]
+				var bot := CombatBot.new(Deep.world, "silver_cutlass" if Deep.level >= 40 else "cutlass")
+				bot.bounds = Rect2(16, 16, 38 * 16, 28 * 16)
+				var outcome := bot.fight(600.0)
+				_check(outcome == "won", "level %d boss: %s" % [Deep.level, outcome])
+		var before := Deep.level
+		var result := Deep.descend()
+		if result != "ok" or Deep.level != before + 1:
+			stuck = "level %d: %s" % [before, result]
+	_check(stuck == "" and Deep.level == 60, "the test descent reaches 60 " + stuck)
+	var bot60 := CombatBot.new(Deep.world, "silver_cutlass")
+	Deep.world.player["pos"] = Deep.world.boss["center"] + Vector2(0, 120)
+	bot60.bounds = Rect2(16, 16, 38 * 16, 28 * 16)
+	_check(bot60.fight(600.0) == "won", "the Bone Whale falls on level 60")
+	_check(Deep.descend() == "ok" and Deep.level == 61, "past 60 the bottomless Deep goes on")
+	_check(int(Game.counters.get("deep_max", 0)) == 61 and int(Game.counters.get("deep_station", 0)) == 60, "the deepest level and station are kept")
+	_check(Game.flag("boss_mother_moray") and Game.flag("boss_bell_ringer") and Game.flag("boss_bone_whale"), "all three bosses paid out")
+
+
 func _run() -> void:
 	_check_combat()
 	_check_bosses()
+	_check_generation()
+	_check_air()
+	_check_descent()
 	print("M8 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

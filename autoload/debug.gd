@@ -27,6 +27,14 @@ func exec(line: String) -> String:
 				var n := int(p[2]) if p.size() >= 3 else 1
 				Inventory.add(p[1], n)
 			return "ok"
+		"deep":
+			# Test mode of M8: the keeper breathes freely and may start at any level.
+			Game.set_flag("test_deep")
+			var start_level := int(p[1]) if p.size() >= 2 else 1
+			if Deep.begin(start_level) != "ok":
+				return "no"
+			Router.goto_map("deep", Deep.cell_center(Deep.data["entry"]))
+			return "deep %d" % start_level
 		"weather":
 			if p.size() >= 2:
 				Weather.set_weather(p[1])

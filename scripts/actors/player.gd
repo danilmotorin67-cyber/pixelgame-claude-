@@ -53,6 +53,10 @@ func _physics_process(delta: float) -> void:
 	if Router.current_map == "sea":
 		_boat_physics(delta)
 		return
+	if Router.current_map in ["deep", "grotto"] and _held():
+		velocity = Vector2.ZERO
+		move_and_slide()
+		return
 	if _dodge_t > 0.0:
 		_dodge_t -= delta
 		move_and_slide()
@@ -71,6 +75,14 @@ func _physics_process(delta: float) -> void:
 	if Graveyard.carried != "" and not (Buildings.level("hearse") > 0 and Animals.has_pony()):
 		spd *= CARRY_SPEED
 	velocity = dir * spd
+	if Router.current_map == "deep" and Deep.active:
+		# 17.1: swimming in eight directions with a light drift; the suit walks the bottom at ×0.8.
+		var walking := Deep.gear() == "suit"
+		velocity *= float(Deep.cfg("suit_speed")) if walking else 1.0
+		if not walking:
+			velocity += Vector2.from_angle(float(Deep.level) * 1.7) * 6.0
+		velocity += Deep.world.player["push"] as Vector2
+		Deep.world.player["push"] = (Deep.world.player["push"] as Vector2) * 0.85
 	var before := global_position
 	move_and_slide()
 	if Graveyard.carried != "":
@@ -340,6 +352,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		_say("С ношей на плечах инструменты не взять. E — положить.")
 		get_viewport().set_input_as_handled()
 		return
+	if event.is_action_pressed("use_tool") and Router.current_map == "deep" and Deep.active \
+			and str(Data.by_id("items", Inventory.selected_id()).get("category", "")) == "weapon":
+		Deep.world.player["facing"] = facing
+		var hits := Deep.world.attack(Inventory.selected_id())
+		play_tool("hoe", global_position + facing * 16.0)
+		if not hits.is_empty():
+			_say("Попадание!")
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("use_tool") and not Fishing.rod(Inventory.selected_id()).is_empty():
 		var hud := get_tree().current_scene.get_node_or_null("HUD") as CanvasLayer
 		if hud and not FishingHud.of(hud).active():
@@ -416,6 +437,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:
+		if Router.current_map == "deep" and Deep.active and not Deep.world.dodge():
+			return
 		_dodge_t = 0.18
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
@@ -447,6 +470,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			npc.receive_gift(self)
 		else:
 			_say("Подарок вручают лицом к лицу. G рядом с жителем.")
+
+
+func _held() -> bool:
+	if Router.current_map == "deep" and Deep.active and Deep.world:
+		return float(Deep.world.player["held"]) > 0.0 or float(Deep.world.player["stun"]) > 0.0
+	return false
 
 
 func _say(text: String) -> void:
