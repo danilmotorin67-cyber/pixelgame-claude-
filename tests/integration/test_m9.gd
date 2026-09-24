@@ -56,7 +56,8 @@ func _swap(i: int) -> void:
 
 func _run() -> void:
 	for section in ["_check_quest_engine", "_check_prologue_and_act_one", "_check_act_two", "_check_twenty",
-			"_check_ghosts", "_check_collections", "_check_daughters", "_check_community", "_check_festivals"]:
+			"_check_ghosts", "_check_collections", "_check_daughters", "_check_community", "_check_festivals",
+			"_check_evidence", "_check_fire_hold", "_check_story_runs", "_check_full_run", "_check_postgame", "_check_save"]:
 		print("- ", section)
 		call(section)
 	print("M9 integration: %d failure(s)" % failures.size())
@@ -713,3 +714,345 @@ func _check_festivals() -> void:
 	_goto(84 + 17, 20)
 	Festivals.night()
 	_check(Mail.letters.any(func(l: Dictionary) -> bool: return str(l["text"]) == "mail.secret_giver"), "the Secret Giver's letter")
+
+
+# The evidence board (Q3.5), the safe (Q3.8) both ways, the ambush at the Teeth (Q3.9) both ways, the stone.
+func _check_evidence() -> void:
+	_fresh()
+	_goto(84, 10)
+	Quests.check_starts()
+	_check(Quests.state("q3_1_truth") == "active" and Story.fortuna_scene() == "ev_story_fortuna_truth", "Winter 1: Fortuna's truth")
+	Cutscenes.simulate("ev_story_fortuna_truth")
+	_check(Game.flag("board_open") and Story.spots_on("lh_3").any(func(s: Dictionary) -> bool: return str(s["id"]) == "evidence_board"),
+		"the evidence board appears in the watch room")
+	Quests.check_starts()
+	_check(Story.board_text().contains("0 из 7") or Story.board_text().contains("0 of 7"), "the board starts empty")
+	# Hedda's testimony: the Treska aground
+	Game.set_flag("quest_ready_treska_aground")
+	Quests.check_starts()
+	var low := -1
+	for m in range(0, 1440, 10):
+		if Clock.tide_height_at(Clock.day_index, m) <= -0.5:
+			low = m
+			break
+	Clock.set_time(low / 60, low % 60)
+	Inventory.add("boards", 5)
+	Story.spot_action("treska", "refloat")
+	Story.npc_action("npc_hedda", "deliver:sq_treska_aground:chest")
+	_check(Story.evidence.has("hedda") and Story.pages.has(9), "Hedda's testimony and page 9")
+	# the doctor's signature
+	Game.set_flag("evidence_doctor_ready")
+	Quests.check_starts()
+	Story.spot_action("office_archive", "copy")
+	Story.npc_action("npc_magnus", "deliver:sq_doctor_signature:sign")
+	_check(Story.evidence.has("doctor"), "the doctor's signature")
+	# the interception at the telegraph
+	Game.set_flag("telegraph_working")
+	Relationships.set_hearts("npc_olaf", 4)
+	Quests.check_starts()
+	Clock.set_time(23, 0)
+	Story.spot_action("telegraph", "listen")
+	_check(Story.evidence.has("telegram") and Quests.state("sq_intercept") == "done", "the telegram intercepted")
+	# the Saint Berta's hold
+	Game.set_flag("diving_bell")
+	Story.spot_action("berta_wreck", "dive")
+	_check(Story.evidence.has("berta_hold"), "the hold of the Saint Berta")
+	_check(Story.evidence_count() == 4, "four on the board")
+	# the safe: a night break-in costs honour
+	Quests.check_starts()
+	_check(Quests.state("q3_8_safe") == "active", "four evidences open the safe quest")
+	Clock.set_time(23, 30)
+	var safe := Story.spot("grim_safe")
+	var honor := Game.honor
+	var game := Spots.minigame(safe, "break")
+	game.autoplay(1.0)
+	Spots.after_minigame(safe, "break", game)
+	_check(Game.honor == honor - 15 and Game.flag("safe_opened") and Story.fragments.has(3), "the break-in: honour −15, the third fragment")
+	_check(Story.evidence.has("black_book") and Inventory.count_of("tuve_skin") == 1, "the black book and Tuve's skin")
+	_check(Story.evidence_count() == 5, "the black book counts as one")
+	# the ambush: caught
+	_goto(157, 22)
+	_check(Weather.current == "fog", "Summer 18 of year 2 is foggy")
+	Relationships.set_hearts("npc_hedda", 6)
+	Relationships.set_hearts("npc_kai", 6)
+	Relationships.set_hearts("npc_rud", 4)
+	Story.spot_action("teeth_ambush", "ally:npc_hedda")
+	Story.spot_action("teeth_ambush", "ally:npc_kai")
+	_check(Spots.ambush_crew.size() == 2, "two allies aboard")
+	var stealth := Spots.minigame(Story.spot("teeth_ambush"), "approach")
+	_check(int(stealth.params["allowed"]) == 5, "Hedda and Kai watch the beam")
+	stealth.autoplay(1.0)
+	_check(Spots.after_minigame(Story.spot("teeth_ambush"), "approach", stealth) == Loc.t("spot.ambush_won_rud"), "Nut caught, Rud testifies")
+	_check(Story.evidence.has("lantern") and Story.evidence_count() == 6, "the false fire's lantern")
+	# the ambush lost: the lantern is dived for the next day
+	_fresh()
+	Spots.ambush_result(false)
+	_goto(158, 10)
+	Game.set_flag("diving_bell")
+	_check(Story.spots_on("sea").any(func(s: Dictionary) -> bool: return str(s["id"]) == "teeth_lantern"), "the sunken lantern can be found")
+	Story.spot_action("teeth_lantern", "dive")
+	_check(Story.evidence.has("lantern"), "the lantern from the bottom counts")
+	# Ingrid's key instead of a break-in
+	_fresh()
+	Quests.start("q3_8_safe")
+	Relationships.set_hearts("npc_ingrid", 6)
+	Story.npc_action("npc_ingrid", "opt:ingrid_key")
+	var honour := Game.honor
+	Story.spot_action("grim_safe", "open")
+	_check(Game.flag("safe_opened") and Game.honor == honour, "Ingrid's key opens it without shame")
+	# the stone
+	Story.add_fragment(1)
+	Story.add_fragment(2)
+	_goto(170, 10)
+	Game.act = 4
+	Quests.check_starts()
+	_check(Story.can_join_stone() and Story.join_stone() and Quests.state("q4_3_stone") == "done", "the Pact Stone is whole again")
+	# Tuve's skin
+	Game.set_flag("tuve_skin_quest")
+	Quests.check_starts()
+	Story.npc_action("npc_tuve", "deliver:q3_6_tuve:skin")
+	_check(Game.flag("tuve_stays"), "Tuve chooses to stay")
+
+
+# Q4.5 phase 1: a sure keeper holds the fire, a careless one does not; the allies change the night.
+func _check_fire_hold() -> void:
+	var good := FireHold.new(3, [])
+	good.autoplay(1.0)
+	_check(good.done() and good.won(), "a sure keeper holds the fire (dark %.1f of %.0f)" % [good.dark, good.allowed])
+	var bad := FireHold.new(3, [])
+	bad.autoplay(0.0)
+	_check(bad.done() and not bad.won(), "a careless keeper loses the Queen")
+	var olaf := FireHold.new(3, ["npc_olaf", "npc_liv", "npc_tora", "npc_hedda"])
+	_check(olaf.allowed == 6.0 and olaf.light_water == 3 and olaf.saboteurs_left == 4, "Olaf, Liv, Tora and Hedda change the night")
+	var wins := 0
+	for seed_value in 8:
+		var h := FireHold.new(100 + seed_value, [])
+		h.autoplay(0.8)
+		if h.won():
+			wins += 1
+	_check(wins >= 6, "a good keeper wins most nights (%d of 8)" % wins)
+
+
+# The story run with debug skips: the same island, four different keepers, four endings (5.6).
+func _prepare_finale(light: float, peace: float, mercy: float, honor: int) -> void:
+	_goto(195, 20)
+	Game.act = 4
+	Lighthouse.fire_power = light
+	Graveyard.peace = peace
+	Sea.mercy = mercy
+	Game.honor = honor
+
+
+func _check_story_runs() -> void:
+	# A: the New Pact
+	_fresh()
+	_story_skip_to_finale(true)
+	_prepare_finale(85.0, 75.0, 65.0, 10)
+	_check(Finale.finale_today(), "Autumn 28 of year 2 is the Great Tide")
+	_check(Weather.weather_for_day(195) == "storm" and Weather.hmar_chance(195) == 1.0, "a storm and the Hmar together")
+	_sleep()
+	_check(Clock.day_index == 195, "the Great Tide cannot be slept through")
+	Story.ask_ally("npc_olaf")
+	var pick := Finale.simulate(1.0, "A")
+	_check(pick == "A" and Story.ending == "A", "ending A: the New Pact")
+	_check(Game.flag("hmar_gone") and Daughters.has("hmar") and Weather.hmar_chance(250) == 0.0, "the Hmar becomes the Morning Haze; no more Hmar Nights")
+	_check(Story.resolution == "trial" and Game.flag("artel") and Game.flag("neptune_ruined"), "five evidences: the court, the Artel, Neptune sunk")
+	_check(Quests.state("q4_5_great_tide") == "done" and Game.flag("finale_done") and Game.act == 5, "the Great Tide is done: free play")
+	_check(Story.fortuna_fate != "", "Fortuna's fate is decided")
+	var slides := Finale.epilogue_slides()
+	_check(slides.size() >= 6 and slides.size() <= 8 and str(slides[0]) == "epilogue.ending.a", "6-8 epilogue slides")
+	_check(Story.pages.has(24) and Story.page_text(24) == Loc.t("page.24.a"), "the last page matches the ending")
+	_sleep()
+	_check(Game.flag("agatha_visiting"), "Agatha comes back for one day")
+	Quests.check_starts()
+	_check(Quests.state("q4_6_court") != "none", "the morning's judgement")
+	# B: the price of light — the sea takes Halvdan
+	_fresh()
+	_story_skip_to_finale(false)
+	_prepare_finale(60.0, 50.0, 45.0, -5)
+	_check(not Finale.available("A") or Finale.phase != "choice", "A is closed for this keeper")
+	pick = Finale.simulate(1.0, "B")
+	_check(pick == "B" and Game.flag("agatha_alive") and Story.resolution == "taken", "ending B: Agatha lives, the sea takes Halvdan")
+	_check(is_equal_approx(Finale.hmar_mult(), 0.3), "the Hmar comes 70% less")
+	_check(Story.spots_on("lh_3").any(func(s: Dictionary) -> bool: return str(s["id"]) == "agatha_home"), "Agatha lives in the watch room")
+	# B with Kai: he goes instead, Halvdan faces the court (3-4 evidences: arrest)
+	_fresh()
+	_story_skip_to_finale(false)
+	Story.evidence.erase("lantern")
+	Story.evidence.erase("black_book")
+	Story.evidence.erase("telegram")
+	Relationships.set_hearts("npc_kai", 8)
+	_prepare_finale(60.0, 50.0, 45.0, 0)
+	Finale.simulate(1.0, "B")
+	_check(Game.flag("kai_sacrifice") and Story.resolution == "arrest" and Game.flag("poseidon_open"), "Kai goes to her; Halvdan is arrested, Stern escapes")
+	# C: the broken pact — the Great Eye burns the Hmar
+	_fresh()
+	_story_skip_to_finale(false)
+	Inventory.take("rann_gills", 1)
+	Lighthouse.lens = "great_eye"
+	Story.evidence.clear()
+	_prepare_finale(75.0, 40.0, 30.0, 0)
+	Game.set_flag("ghost_nilsen")
+	pick = Finale.simulate(1.0, "C")
+	_check(pick == "C" and Game.flag("ghosts_gone") and Sea.mercy == 0.0 and Sea.blessings.is_empty(), "ending C: no Hmar, no ghosts, the sea silent")
+	_check(Graveyard.present_ghosts().is_empty() and Story.resolution == "fled", "no evidence: Halvdan sails into the storm")
+	# D: the postponed pact — no gills, weak light
+	_fresh()
+	_story_skip_to_finale(false)
+	Inventory.take("rann_gills", 1)
+	_prepare_finale(50.0, 40.0, 30.0, 0)
+	_check(Finale.forced_postpone(), "without the Gills and 70 Light only D remains")
+	pick = Finale.simulate(1.0, "A")
+	_check(pick == "D" and Story.finale_day == 195 + 112 and Game.act == 4, "ending D: the finale comes again next year")
+	_check(Quests.state("q4_5_great_tide") == "none" and not Game.flag("finale_done"), "the Great Tide will be played again")
+	_check(Weather.weather_for_day(195 + 112) == "storm" and Story.hmar_on(195 + 112), "next Autumn 28 brings the storm and the Hmar again")
+	# and the pardon, with Ingrid 8+ and Honour 30+
+	_fresh()
+	_story_skip_to_finale(true)
+	Relationships.set_hearts("npc_ingrid", 8)
+	_prepare_finale(85.0, 75.0, 65.0, 40)
+	pick = Finale.simulate(1.0, "A", true, true)
+	_check(Story.resolution == "pardon" and Game.flag("dead_fire_keeper") and Story.fortuna_fate == "released", "the pardon; Fortuna let go")
+	Quests.start("g20_redemption")
+	_check(Graveyard.laid_ghosts.has("ghost_grim") and Inventory.count_of("grim_drawing") == 1, "after the pardon Grim's ghost rests")
+
+
+# The skips of a story run: what a keeper would have done by the finale.
+func _story_skip_to_finale(full: bool) -> void:
+	Game.act = 4
+	for n in [1, 2, 3]:
+		Story.add_fragment(n)
+	Story.stone_whole = true
+	Game.set_flag("stone_whole")
+	Inventory.add("rann_gills", 1)
+	for id in ["portfolio", "berta_hold", "tin_box", "hedda", "telegram", "lantern", "black_book"]:
+		Story.add_evidence(id)
+	if full:
+		Game.set_flag("twenty_buried")
+		Game.set_flag("eleonora_buried")
+		Game.counters["fortuna_talks"] = 90
+	Quests.states["q4_1_letter"] = {"steps": ["find"], "done": true, "counts": {}}
+	Quests.start("q4_2_team")
+	Quests.start("q4_5_great_tide")
+
+
+# The postgame (5.7): two fires, the legends' children, Poseidon, Kronvald, the cabinet, perfection.
+func _check_postgame() -> void:
+	_fresh()
+	Game.act = 5
+	_goto(230, 9)
+	Game.act = 5
+	Quests.check_starts()
+	_check(Quests.state("pg_two_fires") == "active", "the second lighthouse can be built")
+	for pair in [["stone", 500], ["boards", 200], ["iron_ingot", 50], ["brass", 20], ["lens_fresnel_2", 1]]:
+		Inventory.add(str(pair[0]), int(pair[1]))
+	Story.npc_action("npc_ilm", "deliver:pg_two_fires:build")
+	_check(Game.flag("two_fires"), "Two Fires: the Dead Fire lit again")
+	Lighthouse.week_powers = [50.0, 50.0]
+	var salary := Lighthouse.weekly_salary()
+	_check(salary >= 150 + 250 + 100, "a hundred more every week")
+	_goto(112 * 2 + 3, 9)
+	Game.act = 5
+	Quests.check_starts()
+	_check(Quests.state("pg_children_of_legends") == "active" and Game.flag("children_of_legends"), "year 3: the legends' children")
+	Game.set_flag("poseidon_open")
+	Quests.check_starts()
+	for id in ["portfolio", "berta_hold", "tin_box", "hedda", "doctor"]:
+		Story.add_evidence(id)
+	Clock.day_index = 112 * 2 + 27
+	Quests.poll()
+	_check(Quests.state("pg_poseidon") == "done" and Game.flag("neptune_ruined"), "Poseidon sinks too")
+	# Kronvald once a season
+	_check(Kronvald.travel().contains(Loc.t("kronvald.colleagues")) and Kronvald.travel() == Loc.t("kronvald.done"), "a day in Kronvald, once a season")
+	# the cabinet
+	for id in ["old_crown", "false_lantern", "sextant_cracked", "scrimshaw", "amber"]:
+		Inventory.add(id, 1)
+		_hotbar(id)
+		Cabinet.donate(Inventory.selected_hotbar)
+	_check(Cabinet.count() == 5 and Economy.money >= 500, "five exhibits: the first reward")
+	var percent := Perfection.percent()
+	_check(percent > 0 and percent < 100, "the Keeper's Perfection counts (%d%%)" % percent)
+
+
+# The story's state survives a save.
+func _check_save() -> void:
+	_fresh()
+	Story.add_page(3)
+	Story.add_evidence("hedda")
+	Story.allies.append("npc_olaf")
+	Community.neptune = "torn"
+	Community._record("workshop", "metal", "iron_ingot")
+	Twenty.carried_out = 7
+	Story.ending = "D"
+	Story.finale_day = 307
+	var saved := {"s": Story.serialize(), "c": Community.serialize(), "t": Twenty.serialize(), "f": Finale.serialize()}
+	var text := JSON.stringify(saved)
+	var back: Dictionary = JSON.parse_string(text)
+	Story.deserialize(back["s"])
+	Community.deserialize(back["c"])
+	Twenty.deserialize(back["t"])
+	Finale.deserialize(back["f"])
+	_check(Story.pages == [3] and Story.evidence.has("hedda") and Story.allies == ["npc_olaf"], "pages, evidence and allies are saved")
+	_check(Community.neptune == "torn" and Community.slot_given("workshop", "metal") == ["iron_ingot"] and Twenty.carried_out == 7, "the Guild House and the Twenty are saved")
+	_check(Story.ending == "D" and Story.finale_day == 307, "a postponed pact is saved")
+
+
+# The whole story, night by night from Spring 1 to the Great Tide of year 2, with the quests skipped as they
+# begin (debug skips) — then, from the same eve of the finale, each of the four endings.
+func _check_full_run() -> void:
+	_fresh()
+	var started := {}
+	var started_ms := Time.get_ticks_msec()
+	while Clock.day_index < Story.DAY_GREAT_TIDE:
+		for id in Quests.states.keys():
+			started[str(id)] = true
+		Clock.set_time(19, 0)
+		Events.hour_changed.emit(19)
+		for id in Quests.states.keys():
+			started[str(id)] = true
+		Debug.skip_active()
+		Clock.set_time(21, 0)
+		Lighthouse.lamp_on = true
+		Lighthouse.fuel_nights = 3.0
+		Router.current_map = "cape"
+		_sleep()
+	_check(Clock.day_index == Story.DAY_GREAT_TIDE and Game.act == 4, "the run reaches Autumn 28 of year 2 in Act IV")
+	for id in ["p2_first_fire", "q1_1_sea_returns", "q1_7_logbook", "q1_13_false_fire", "q2_1_morning_after", "q2_2_white_hmar",
+			"q2_4_bell", "q2_10_twenty", "q2_12_drowned_night", "q2_13_great_hmar", "q3_1_truth", "q3_2_suit", "q3_4_stone",
+			"q3_7_stern_returns", "q4_1_letter", "q4_2_team", "q4_3_stone"]:
+		_check(started.has(id), "the run met %s" % id)
+	_check(Game.flag("berta_wrecked") and Story.great_hmar == "won", "the false fire and the Great Hmar happened on their dates")
+	print("  (the run took %d ms)" % (Time.get_ticks_msec() - started_ms))
+	# the eve of the Great Tide, kept to replay four keepers
+	var eve := {"game": Game.serialize(), "story": Story.serialize(), "quests": Quests.serialize(), "inventory": Inventory.serialize(),
+		"sea": Sea.serialize(), "community": Community.serialize(), "twenty": Twenty.serialize(), "light": Lighthouse.serialize(),
+		"rel": Relationships.serialize()}
+	var eve_text := JSON.stringify(eve)
+	var endings := {"A": [90.0, 80.0, 70.0, 20, true], "B": [60.0, 50.0, 45.0, 0, true], "C": [80.0, 50.0, 30.0, 0, false], "D": [40.0, 40.0, 30.0, 0, false]}
+	for ending in endings:
+		var back: Dictionary = JSON.parse_string(eve_text)
+		Game.deserialize(back["game"])
+		Story.deserialize(back["story"])
+		Quests.deserialize(back["quests"])
+		Inventory.deserialize(back["inventory"])
+		Sea.deserialize(back["sea"])
+		Community.deserialize(back["community"])
+		Twenty.deserialize(back["twenty"])
+		Lighthouse.deserialize(back["light"])
+		Relationships.deserialize(back["rel"])
+		Finale.reset()
+		var e: Array = endings[ending]
+		# the ending's keeper: its scales, the gills (Q3.11) and the Great Eye as the skips left them
+		if not bool(e[4]):
+			Inventory.take("rann_gills", Inventory.count_of("rann_gills"))
+		if ending == "C":
+			Lighthouse.lens = "great_eye"
+		if bool(e[4]):
+			# the Gills and the whole stone, as the skipped Q3.11 and Q4.3 would have left them
+			Inventory.add("rann_gills", 1)
+			Story.stone_whole = true
+		Clock.day_index = Story.DAY_GREAT_TIDE
+		_prepare_finale(float(e[0]), float(e[1]), float(e[2]), int(e[3]))
+		Game.set_flag("twenty_buried", ending == "A")
+		var pick := Finale.simulate(0.9, str(ending))
+		_check(pick == ending, "the story run reaches ending %s (got %s)" % [ending, pick])

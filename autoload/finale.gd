@@ -268,6 +268,7 @@ func epilogue_slides() -> Array:
 	slides.append("epilogue.ending.%s" % Story.ending.to_lower())
 	slides.append("epilogue.court.%s" % (Story.resolution if Story.resolution != "" else "none"))
 	slides.append("epilogue.fortuna.%s" % (Story.fortuna_fate if Story.fortuna_fate != "" else "silent"))
+	slides.append("epilogue.twenty.%s" % ("done" if Game.flag("twenty_buried") else "waiting"))
 	if Game.flag("tuve_met"):
 		slides.append("epilogue.tuve.%s" % ("stays" if Game.flag("tuve_stays") else ("left" if Game.flag("tuve_left") else "sea")))
 	slides.append("epilogue.community.%s" % ("all" if Community.rooms_done() >= 6 else ("some" if Community.rooms_done() > 0 else "none")))
@@ -276,6 +277,7 @@ func epilogue_slides() -> Array:
 		slides.append("epilogue.spouse")
 	if int(Game.counters.get("children", 0)) > 0:
 		slides.append("epilogue.children")
+	slides = slides.slice(0, 8)
 	Story.epilogue = slides
 	return slides
 

@@ -37,7 +37,10 @@ var left_cape_day: int = -1
 
 func _ready() -> void:
 	Events.gift_given.connect(func(npc: String, _item: String, reaction: String) -> void: Tales.on_gift(npc, reaction))
-	Events.quest_completed.connect(func(id: String) -> void: Ghosts.on_quest_completed(id))
+	Events.quest_completed.connect(func(id: String) -> void:
+		Ghosts.on_quest_completed(id)
+		if id == "q2_13_great_hmar":
+			great_hmar = "won")
 	Events.item_added.connect(_on_item_added)
 	Events.npc_talked.connect(_on_npc_talked)
 	Events.map_entered.connect(_on_map_entered)

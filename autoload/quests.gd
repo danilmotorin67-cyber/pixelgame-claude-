@@ -20,7 +20,10 @@ func _ready() -> void:
 	Events.boss_defeated.connect(func(id: String) -> void: notify("boss", id))
 	Events.blessing_gained.connect(func(id: String) -> void: notify("blessing", id))
 	Events.ghost_laid_to_rest.connect(func(id: String) -> void: notify("ghost_laid", id))
-	Events.hour_changed.connect(func(_h: int) -> void: poll())
+	# Quests begin when their condition holds (33.4): checked every hour and every night.
+	Events.hour_changed.connect(func(_h: int) -> void:
+		check_starts()
+		poll())
 
 
 func reset() -> void:
