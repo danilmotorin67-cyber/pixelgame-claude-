@@ -31,7 +31,7 @@ func _check_data() -> void:
 		var info := NPCs.info(id)
 		_check(Loc.t(str(info["name"])) != str(info["name"]), id + " needs a name")
 		var home: Dictionary = info["home"]
-		if str(home["map"]) != "away":
+		if str(home["map"]) != "away" and not NPCs.is_static(id):
 			_check(MapInfo.walkable(str(home["map"]), MapInfo.spot(str(home["map"]), str(home["spot"]))), id + " home must be walkable")
 		for e in NPCs.schedule(id):
 			_check(ConditionContext.valid(str(e.get("when", ""))), id + " has a broken condition: " + str(e.get("when", "")))
@@ -60,7 +60,7 @@ func _check_data() -> void:
 			for weather in ["clear", "rain", "storm"]:
 				Weather.set_weather(weather)
 				for id in NPCs.ids():
-					if bool(NPCs.info(id).get("visitor", false)) or id == "npc_tuve":
+					if bool(NPCs.info(id).get("visitor", false)) or id == "npc_tuve" or NPCs.is_static(id):
 						continue
 					_check(not NPCs.entry_for(id).is_empty(), "%s has no schedule on %s %s in %s" % [id, Clock.season, Clock.weekday, weather])
 	Weather.set_weather("clear")
@@ -130,9 +130,61 @@ func _check_places() -> void:
 	_check(bool(NPCs.where_is("npc_karl")["hidden"]), "at night Karl sleeps upstairs")
 
 
+func _check_friendship() -> void:
+	_fresh()
+	Clock.day_index = 3
+	_check(Relationships.talk("npc_hedda") and not Relationships.talk("npc_hedda") and Relationships.points["npc_hedda"] == 20,
+		"talking: +20 once a day")
+	_check(Relationships.taste("npc_hedda", "grog") == "love" and Relationships.taste("npc_hedda", "fish_halibut", 2) == "love"
+		and Relationships.taste("npc_hedda", "fish_halibut", 1) == "like" and Relationships.taste("npc_hedda", "fish_cod", 0) == "neutral", "Hedda loves an excellent halibut and likes any good fish")
+	_check(Relationships.taste("npc_hedda", "heather_bouquet") == "dislike" and Relationships.taste("npc_hedda", "old_boot") == "hate",
+		"flowers and rubbish")
+	_check(Relationships.taste("npc_helga", "lutefisk") == "love" and Relationships.taste("npc_karl", "lutefisk") == "hate",
+		"only Helga loves lutefisk")
+	_check(Relationships.taste("npc_karl", "keeper_soup") == "like" and Relationships.taste("npc_karl", "stone") == "neutral",
+		"dishes please everyone; a stone is just a stone")
+	Inventory.add("amber", 5)
+	var slot := func(id: String) -> int:
+		return Inventory.slots.find_custom(func(s: Dictionary) -> bool: return s["id"] == id)
+	var gift := Relationships.give("npc_hedda", slot.call("amber"))
+	_check(bool(gift["ok"]) and str(gift["reaction"]) == "love" and Relationships.points["npc_hedda"] == 100, "amber for Hedda: +80")
+	_check(str(Relationships.give("npc_hedda", slot.call("amber"))["reason"]) == "today", "one gift a day")
+	Clock.day_index = 4
+	Relationships.gifted_today.clear()
+	Relationships.give("npc_hedda", slot.call("amber"))
+	Clock.day_index = 5
+	Relationships.gifted_today.clear()
+	_check(str(Relationships.give("npc_hedda", slot.call("amber"))["reason"]) == "week", "two gifts a week")
+	Clock.day_index = 3 * 28 - 8 # autumn 21, Hedda's birthday
+	Relationships.gifted_today.clear()
+	var before := int(Relationships.points["npc_hedda"])
+	_check(bool(Relationships.give("npc_hedda", slot.call("amber"))["ok"]) and int(Relationships.points["npc_hedda"]) == before + 640,
+		"on the birthday a gift counts eight times, past the weekly limit")
+	Relationships.set_hearts("npc_sigrid", 9)
+	_check(Relationships.hearts_of("npc_sigrid") == 9 and Relationships.dating.has("npc_sigrid"), "romance past 8 hearts means dating")
+	Relationships.reset()
+	Relationships.add_friendship("npc_sigrid", 5000)
+	_check(Relationships.hearts_of("npc_sigrid") == 8, "a romance stops at 8 hearts before the bouquet")
+	Relationships.add_friendship("npc_halvdan", 5000)
+	_check(Relationships.hearts_of("npc_halvdan") == 6, "Halvdan stops at 6 hearts")
+	Relationships.points["npc_karl"] = 3 * 250
+	Clock.day_index = 8
+	Relationships.night()
+	_check(Relationships.points["npc_karl"] == 748, "two points a day fade without a talk")
+	var key := Dialogue.talk_line("npc_karl")
+	_check(key != "" and Loc.t(key) != key, "everyone has something to say")
+	_check(Dialogue.talk_line("npc_karl") == key or Dialogue.lines("npc_karl", "again").size() > 0, "the day's line repeats")
+	Game.hero["gender"] = "f"
+	Game.hero["name"] = "Ада"
+	_check(Loc.format("{name}, {внук|внучка} Агаты") == "Ада, внучка Агаты", "name and gender tags (2.4)")
+	Game.hero["gender"] = "m"
+	_check(Loc.format("{внук|внучка}") == "внук", "the male form")
+
+
 func _run() -> void:
 	_check_data()
 	_check_week()
 	_check_places()
+	_check_friendship()
 	print("M6 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

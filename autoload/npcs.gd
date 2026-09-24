@@ -24,12 +24,17 @@ func info(id: String) -> Dictionary:
 	return Data.by_id("npcs", id)
 
 
+# Everyone with a place in the world; Fortuna hangs on the tower wall and is drawn by the tower.
 func ids() -> Array:
 	var out: Array = []
 	for npc in Data.all("npcs"):
-		if not bool(npc.get("static", false)):
+		if str(npc.get("home", {}).get("map", "")) != "lh_1":
 			out.append(str(npc["id"]))
 	return out
+
+
+func is_static(id: String) -> bool:
+	return bool(info(id).get("static", false))
 
 
 func schedule(id: String) -> Array:
@@ -93,6 +98,11 @@ func _resolve(id: String, step: Array) -> Dictionary:
 
 # Where the NPC should be now: the latest step that has begun, or home before the first one.
 func target(id: String) -> Dictionary:
+	if is_static(id):
+		var home := _home(id)
+		home["hidden"] = false
+		home["anim"] = ""
+		return home
 	var path: Array = entry_for(id).get("path", [])
 	var now := now_minutes()
 	var found: Dictionary = _home(id)

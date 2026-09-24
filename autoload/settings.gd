@@ -11,6 +11,15 @@ var save_anytime: bool = false
 var fortuna_reminder: bool = true
 var fishing_assist: bool = false
 
+func _ready() -> void:
+	apply_language()
+
+
+# The game speaks Russian unless the player picks English (34).
+func apply_language() -> void:
+	TranslationServer.set_locale(language if language in ["ru", "en"] else "ru")
+
+
 func serialize() -> Dictionary:
 	return {
 		"language": language, "ui_scale": ui_scale, "shake": shake,
@@ -30,3 +39,4 @@ func deserialize(d: Dictionary) -> void:
 	save_anytime = bool(d.get("save_anytime", false))
 	fortuna_reminder = bool(d.get("fortuna_reminder", true))
 	fishing_assist = bool(d.get("fishing_assist", false))
+	apply_language()

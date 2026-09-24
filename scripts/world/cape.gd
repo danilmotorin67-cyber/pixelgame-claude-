@@ -44,6 +44,9 @@ func _ready() -> void:
 		stone.position = RannStone.position()
 		add_child(stone)
 	add_child(BodiesLayer.new())
+	var npcs := NpcLayer.new()
+	npcs.map_id = map_id
+	add_child(npcs)
 	if map_id == "cape":
 		var bell := TowerBell.new()
 		bell.name = "TowerBell"
@@ -72,8 +75,8 @@ func _ready() -> void:
 	elif map_id == "sea":
 		$HUD/Hint.text = "Залив. Пробел — парус, M — карта, E у причала — на берег."
 	elif map_id != "cape":
-		var info: Dictionary = Data.tables.get("regions", {}).get(map_id, {})
-		$HUD/Hint.text = "%s   E: переход" % str(info.get("title", map_id))
+		var info := MapInfo.region(map_id)
+		$HUD/Hint.text = "%s   E: переход%s" % [str(info.get("title", map_id)), "   E у жителя — поговорить, G — подарить" if map_id == "village" or MapInfo.is_interior(map_id) else ""]
 	else:
 		$HUD/Hint.text = "Маяк: E у двери — войти; огонь зажигают в фонарной"
 	_refresh_hud()

@@ -29,6 +29,7 @@ func _on_new_game() -> void:
 	Relationships.reset()
 	Cutscenes.reset()
 	NPCs.reset()
+	Dialogue.reset()
 	Farm.scatter_rocks()
 	Crafting.add_prefilled("cape", "chest", 664, 380, [["canvas", 1], ["thread", 2], ["rag", 3]])
 	Farm.spawn_wild(0)

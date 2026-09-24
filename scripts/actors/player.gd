@@ -314,6 +314,12 @@ func _unhandled_input(event: InputEvent) -> void:
 		lantern_on = not lantern_on
 	if event.is_action_pressed("interact"):
 		_try_interact()
+	if event.is_action_pressed("give"):
+		var npc := _facing_object("receive_gift")
+		if npc:
+			npc.receive_gift(self)
+		else:
+			_say("Подарок вручают лицом к лицу. G рядом с жителем.")
 
 
 func _say(text: String) -> void:
@@ -343,6 +349,16 @@ func _use_on_object(at: Vector2) -> bool:
 				_say(result)
 				return true
 	return false
+
+
+func _facing_object(method: String) -> Node:
+	var q := PhysicsRayQueryParameters2D.create(global_position, global_position + facing * 18.0)
+	q.collide_with_areas = true
+	q.hit_from_inside = true
+	q.collision_mask = 8
+	var hit := get_world_2d().direct_space_state.intersect_ray(q)
+	var n: Node = hit.get("collider") if hit else null
+	return n if n and n.has_method(method) else null
 
 
 func _try_interact() -> void:

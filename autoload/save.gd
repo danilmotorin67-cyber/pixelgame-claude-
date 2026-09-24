@@ -80,6 +80,7 @@ func save_game(slot: int = -1) -> bool:
 		"relationships": Relationships.serialize(),
 		"npcs": NPCs.serialize(),
 		"cutscenes": Cutscenes.serialize(),
+		"dialogue": Dialogue.serialize(),
 		"quests": Quests.serialize(),
 		"lighthouse": Lighthouse.serialize(),
 		"graveyard": Graveyard.serialize(),
@@ -141,6 +142,7 @@ func load_game(slot: int) -> bool:
 	Knowledge.deserialize(payload.get("knowledge", {}))
 	Relationships.deserialize(payload.get("relationships", {}))
 	Cutscenes.deserialize(payload.get("cutscenes", {}))
+	Dialogue.deserialize(payload.get("dialogue", {}))
 	Quests.deserialize(payload.get("quests", {}))
 	Lighthouse.deserialize(payload.get("lighthouse", {}))
 	Graveyard.deserialize(payload.get("graveyard", {}))

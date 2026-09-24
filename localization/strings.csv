@@ -648,3 +648,15 @@ npc.nut.name,Нут Скау,Nut Skau
 npc.rud.name,Руд Скау,Rud Skau
 npc.sandro.name,Сандро,Sandro
 npc.grump.name,Кэп Ворчун,Cap'n Grump
+npc.generic.hello.01,"А, смотритель. Огонь вчера был виден. Спасибо.","Ah, the keeper. We saw the light last night. Thank you."
+npc.generic.hello.02,"Ветер опять с севера. Он всегда с севера, когда у меня стирка.",Wind's from the north again. It always is when I've got washing out.
+npc.generic.hello.03,"Вы тот, кто у Агаты теперь вместо Агаты? Держитесь.",You're the one standing in for Agatha now? Hold on tight.
+npc.generic.gift.love.01,"Это… мне? Вы что, подслушивали мои мысли?",This… for me? Have you been reading my mind?
+npc.generic.gift.like.01,"Хороший подарок. Спасибо, правда.","A good gift. Thank you, really."
+npc.generic.gift.neutral.01,"Спасибо. Найду, куда это деть.",Thanks. I'll find a place for it.
+npc.generic.gift.dislike.01,Ну… спасибо. Наверное.,Well… thanks. I suppose.
+npc.generic.gift.hate.01,Вы серьёзно? Уберите это от меня.,Are you serious? Take that away from me.
+gift.refuse.not_giftable,Это не дарят. Это носят с собой.,That's not a gift. That's equipment.
+gift.refuse.today,На сегодня подарков хватит. Спасибо.,That's enough gifts for today. Thank you.
+gift.refuse.week,Два подарка за неделю — вы меня разбалуете.,Two gifts in one week — you'll spoil me.
+gift.refuse.empty,Руки пусты. Жест оценён.,Your hands are empty. The gesture is noted.
