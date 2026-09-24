@@ -38,8 +38,22 @@ func sunset_minutes() -> int:
 		"autumn":
 			return int(round(lerpf(1200.0, 1020.0, d)))
 		"winter":
+			if Clock.day >= 10 and Clock.day <= 20:
+				return 870
 			return int(round(lerpf(960.0, 900.0, d)))
 	return 1200
+
+
+func white_nights() -> bool:
+	return Clock.season == "summer" and Clock.day >= 8 and Clock.day <= 14
+
+
+func fire_needed() -> bool:
+	return not bool(Clock.festival_on().get("no_fire", false))
+
+
+func on_time_until() -> int:
+	return 23 * 60 if white_nights() else sunset_minutes() + 60
 
 
 func light_lamp() -> bool:
@@ -49,7 +63,7 @@ func light_lamp() -> bool:
 	lit_at_minutes = Clock.minutes
 	# Starter equipment: lens 10, lamp 8, raw oil 3, glass 6, tower 8.
 	current_power = clampf(29.0 + cleanliness, 0.0, 100.0)
-	Events.lamp_lit.emit(Clock.minutes <= sunset_minutes() + 60)
+	Events.lamp_lit.emit(Clock.minutes <= on_time_until())
 	return true
 
 
@@ -58,23 +72,26 @@ func resolve_night() -> Dictionary:
 	if lamp_on and fuel > 0.0:
 		power = current_power
 		var sunset := sunset_minutes()
-		if lit_at_minutes > sunset + 60 or lit_at_minutes < 360:
+		var deadline := on_time_until()
+		if lit_at_minutes > deadline or lit_at_minutes < 360:
 			power *= 0.8
-		if lit_at_minutes > sunset + 120 or lit_at_minutes < 360:
+		if lit_at_minutes > deadline + 60 or lit_at_minutes < 360:
 			var lit_minute := lit_at_minutes if lit_at_minutes >= 360 else lit_at_minutes + 1440
 			power *= clampf(float(1560 - lit_minute) / float(1560 - sunset), 0.0, 1.0)
 		fuel = maxf(0.0, fuel - 1.0)
 		if Weather.current == "fog":
 			power *= 0.6
 	power = clampf(power, 0.0, 100.0)
-	nightly_powers.append(power)
-	if nightly_powers.size() > 7:
-		nightly_powers.pop_front()
-	var total := 0.0
-	for score in nightly_powers:
-		total += score
-	fire_power = total / float(nightly_powers.size())
-	last_report = {"power": power, "light": fire_power, "lit": lamp_on}
+	var needed := fire_needed()
+	if needed:
+		nightly_powers.append(power)
+		if nightly_powers.size() > 7:
+			nightly_powers.pop_front()
+		var total := 0.0
+		for score in nightly_powers:
+			total += score
+		fire_power = total / float(nightly_powers.size())
+	last_report = {"power": power, "light": fire_power, "lit": lamp_on, "no_fire": not needed}
 	lamp_on = false
 	current_power = 0.0
 	lit_at_minutes = -1

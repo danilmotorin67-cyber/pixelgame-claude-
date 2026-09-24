@@ -12,6 +12,7 @@ func _ready() -> void:
 func _on_new_game() -> void:
 	Game.reset()
 	Clock.reset()
+	Weather.reset()
 	Weather.start_day(0)
 	Economy.money = 500
 	Inventory.reset()

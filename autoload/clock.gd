@@ -110,6 +110,17 @@ func goto_date(y: int, season_name: String, d: int) -> void:
 	Events.tide_changed.emit(tide_height())
 
 
+func festival_on(index: int = -1) -> Dictionary:
+	if index < 0:
+		index = day_index
+	var season_name := SEASONS[(index % DAYS_PER_YEAR) / DAYS_PER_SEASON]
+	var d := 1 + index % DAYS_PER_SEASON
+	for festival in Data.all("festivals"):
+		if str(festival.get("season", "")) == season_name and int(festival.get("day", 0)) == d:
+			return festival
+	return {}
+
+
 func is_night() -> bool:
 	return hour >= 21 or hour < 6
 

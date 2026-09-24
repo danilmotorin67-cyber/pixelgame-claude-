@@ -5,6 +5,7 @@ var counters: Dictionary = {}
 var stats: Dictionary = {}
 var act: int = 0
 var honor: int = 0
+var luck: float = 0.0
 var hero: Dictionary = {
 	"name": "Смотритель",
 	"gender": "m",
@@ -47,12 +48,20 @@ func add_honor(n: int) -> void:
 	honor = clampi(honor + n, -100, 100)
 
 
+func roll_luck(index: int, aurora_bonus: bool) -> float:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(world_seed * 40503 + index * 7919 + 313, 2147483647)
+	luck = rng.randf_range(-0.1, 0.1) + (0.05 if aurora_bonus else 0.0)
+	return luck
+
+
 func reset() -> void:
 	flags.clear()
 	counters.clear()
 	stats.clear()
 	act = 0
 	honor = 0
+	luck = 0.0
 	hero = {"name": "Смотритель", "gender": "m", "love": "",
 		"skin": 1, "hair": 0, "hair_color": 0, "eyes": 0,
 		"shirt": 0, "pants": 0, "shoes": 0}
@@ -64,7 +73,7 @@ func reset() -> void:
 func serialize() -> Dictionary:
 	return {
 		"flags": flags, "counters": counters, "stats": stats,
-		"act": act, "honor": honor, "hero": hero,
+		"act": act, "honor": honor, "luck": luck, "hero": hero,
 		"world_seed": world_seed, "playtime_sec": playtime_sec,
 		"player_state": player_state,
 	}
@@ -80,6 +89,7 @@ func deserialize(d: Dictionary) -> void:
 		stats[key] = int(stats[key])
 	act = int(d.get("act", 0))
 	honor = int(d.get("honor", 0))
+	luck = clampf(float(d.get("luck", 0.0)), -0.1, 0.15)
 	hero = d.get("hero", hero)
 	for key in ["skin", "hair", "hair_color", "eyes", "shirt", "pants", "shoes"]:
 		if hero.has(key):

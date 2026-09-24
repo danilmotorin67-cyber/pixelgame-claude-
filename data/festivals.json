@@ -1,1 +1,10 @@
-[]
+[
+  {"id": "boat_blessing", "name": "Спуск лодок", "season": "spring", "day": 13, "start": 9, "end": 14, "place": "harbor", "night": false},
+  {"id": "bird_day", "name": "Птичий день", "season": "spring", "day": 24, "start": 8, "end": 13, "place": "eider_isle", "night": false},
+  {"id": "white_sun", "name": "Ночь Белого Солнца", "season": "summer", "day": 11, "start": 21, "end": 1, "place": "nine_maidens", "night": true, "no_fire": true},
+  {"id": "regatta", "name": "Регата", "season": "summer", "day": 25, "start": 9, "end": 15, "place": "harbor", "night": false},
+  {"id": "herring_fair", "name": "Сельдяная ярмарка", "season": "autumn", "day": 16, "start": 9, "end": 15, "place": "harbor", "night": false},
+  {"id": "drowned_night", "name": "Ночь Утопленников", "season": "autumn", "day": 27, "start": 18, "end": 24, "place": "harbor", "night": true, "story": true},
+  {"id": "ice_festival", "name": "Праздник льда", "season": "winter", "day": 8, "start": 9, "end": 14, "place": "still_pool", "night": false},
+  {"id": "long_night", "name": "Долгая ночь", "season": "winter", "day": 25, "start": 16, "end": 22, "place": "chapel_square", "night": true, "aurora": true}
+]

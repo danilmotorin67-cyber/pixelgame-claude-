@@ -104,12 +104,15 @@ func _on_console_submitted(text: String) -> void:
 
 
 func _on_night_resolved(report: Dictionary) -> void:
-	var reason := "Вы потеряли сознание." if report["fainted"] else "Ночь прошла спокойно."
+	var reason := str(report.get("faint_message", "Вы потеряли сознание.")) \
+		if report["fainted"] else "Ночь прошла спокойно."
 	var loss := "\nПотеряно: %d кр." % report["money_lost"] if report["money_lost"] > 0 else ""
 	var save_line := "Игра сохранена." if report["saved"] else "Ошибка сохранения."
 	var light: Dictionary = report.get("lighthouse", {})
 	var light_line := "\nМаяк: %d · Свет: %d" % [
 		int(round(float(light.get("power", 0.0)))), int(round(float(light.get("light", 0.0))))]
+	if bool(light.get("no_fire", false)):
+		light_line = "\nМаяк: огонь не требовался · Свет: %d" % int(round(float(light.get("light", 0.0))))
 	morning_text.text = "Утро, %s %d. %s\n%s%s%s\n%s" % [
 		report["season"], report["day"], WEATHER_NAMES.get(report["weather"], ""),
 		reason, loss, light_line, save_line]

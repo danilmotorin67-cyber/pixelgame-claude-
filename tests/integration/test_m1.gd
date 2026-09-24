@@ -15,8 +15,92 @@ func _check(condition: bool, message: String) -> void:
 		push_error(message)
 
 
+func _check_calendar_rules() -> void:
+	var spring_13 := 12
+	var autumn_16 := 2 * 28 + 15
+	var autumn_27 := 2 * 28 + 26
+	var winter_8 := 3 * 28 + 7
+	var winter_25 := 3 * 28 + 24
+	_check(Clock.festival_on(spring_13).get("id", "") == "boat_blessing", "Spring 13 must be the boat blessing")
+	_check(Clock.festival_on(spring_13 + 1).is_empty(), "Spring 14 is not a festival")
+	var storm_week_storms := 0
+	for seed_value in range(1, 301):
+		Game.world_seed = seed_value
+		for index in [spring_13, autumn_16, winter_8, winter_25 + 112]:
+			_check(Weather.weather_for_day(index) not in ["storm", "blizzard"],
+				"festival day %d rolled a storm with seed %d" % [index, seed_value])
+		if Weather.weather_for_day(2 * 28 + 9) == "storm":
+			storm_week_storms += 1
+		_check(Weather.aurora_on(winter_25), "the Long Night must always have an aurora")
+		_check(not Weather.aurora_on(28 + 5) and not Weather.calm_on(5),
+			"aurora is winter-only and calm is summer-only")
+		if Weather.calm_on(28 + 5):
+			_check(Weather.weather_for_day(28 + 5) == "clear", "calm must be a clear day")
+	_check(storm_week_storms > 75, "the autumn storm week must double storms")
+	Game.world_seed = 42
+
+	Graveyard.peace = 0.0
+	Weather.last_hmar_day = -100
+	_check(Weather.hmar_chance(28 + 1) == 0.0, "no Hmar nights before Act II")
+	Game.act = 2
+	_check(is_equal_approx(Weather.hmar_chance(28 + 1), 0.2), "Hmar: 5% + (100-Peace)/10% + 5% new moon")
+	_check(is_equal_approx(Weather.hmar_chance(28 + 9), 0.15), "Hmar chance without new moon")
+	_check(Weather.hmar_chance(spring_13) == 0.0, "no Hmar on festival nights")
+	_check(Weather.hmar_chance(autumn_27) > 0.0, "story festival nights may bring Hmar")
+	Game.set_flag("twenty_buried")
+	Game.set_flag("guild_house_restored")
+	_check(is_equal_approx(Weather.hmar_chance(28 + 9), 0.15 * 0.7 * 0.5), "Hmar multipliers")
+	Weather.last_hmar_day = 28 + 7
+	_check(Weather.hmar_chance(28 + 9) == 0.0 and Weather.hmar_chance(28 + 11) > 0.0,
+		"Hmar nights at most once in four days")
+	Game.act = 0
+	Game.flags.erase("twenty_buried")
+	Game.flags.erase("guild_house_restored")
+	Weather.last_hmar_day = -100
+
+	var right := 0
+	var samples := 0
+	for index in range(3, 603):
+		Clock.day_index = index - 1
+		samples += 1
+		if Weather.barometer(1) == Weather.weather_for_day(index):
+			right += 1
+	var accuracy := float(right) / float(samples)
+	_check(accuracy > 0.8 and accuracy < 0.9, "barometer must be right about 85%% (got %.2f)" % accuracy)
+	Game.set_flag("telegraph_working")
+	right = 0
+	for index in range(3, 603):
+		Clock.day_index = index - 1
+		if Weather.barometer(1) == Weather.weather_for_day(index):
+			right += 1
+	_check(float(right) / float(samples) > 0.92, "telegraph barometer must be right about 95%")
+	Game.flags.erase("telegraph_working")
+
+	Clock.day_index = 3 * 28 + 11
+	_check(Lighthouse.sunset_minutes() == 870, "Winter 10-20 sunset is 14:30")
+	Clock.day_index = 28 + 9
+	_check(Lighthouse.on_time_until() == 23 * 60, "white nights: fire on time until 23:00")
+	Clock.day_index = 28 + 10
+	var powers_before := Lighthouse.nightly_powers.size()
+	var white_sun := Lighthouse.resolve_night()
+	_check(bool(white_sun["no_fire"]) and Lighthouse.nightly_powers.size() == powers_before,
+		"the Night of the White Sun needs no fire and must not lower Light")
+	Clock.day_index = 0
+	Lighthouse.reset()
+
+	var first_luck := Game.roll_luck(10, false)
+	_check(first_luck >= -0.1 and first_luck <= 0.1, "luck of the day must stay within ±0.1")
+	_check(is_equal_approx(Game.roll_luck(10, true), first_luck + 0.05), "aurora adds 0.05 luck")
+	Game.luck = 0.0
+	_check(Night.energy_fraction(23 * 60, false) == 1.0 and Night.energy_fraction(30, false) == 0.9
+		and Night.energy_fraction(90, false) == 0.75 and Night.energy_fraction(120, true) == 0.5,
+		"sleep energy table (8.4)")
+
+
 func _run() -> void:
 	var tree := get_tree()
+	var night_reports: Array[Dictionary] = []
+	Events.night_resolved.connect(func(report: Dictionary) -> void: night_reports.append(report))
 	Save.save_root = TEST_SAVE_ROOT
 	Save.current_slot = 2
 	Game.reset()
@@ -108,6 +192,7 @@ func _run() -> void:
 	_check(is_equal_approx(float(station.call("hold_seconds")), 4.0), "storm must double the ignition hold")
 	Weather.set_weather("clear")
 	Lighthouse.reset()
+	_check_calendar_rules()
 
 	Game.set_flag("m1_roundtrip", true)
 	Game.add_stat("m1_test_items", 3)
@@ -205,6 +290,13 @@ func _run() -> void:
 		"fainting must restore half energy")
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
+	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
+		"lighthouse", "weather_tides", "farm", "luck", "autosave", "report"],
+		"night resolution must follow the order of spec 6.4")
+	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
+		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(
+			str(night_reports[-1].get("faint_message", "-"))),
+		"fainting must show one of the spec's faint messages")
 	_check(int(Lighthouse.last_report.get("power", 0)) == 35 and Lighthouse.fuel == 0.0,
 		"night resolution must record the lamp score and burn its fuel")
 	_check(morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains("Маяк: 35"),
