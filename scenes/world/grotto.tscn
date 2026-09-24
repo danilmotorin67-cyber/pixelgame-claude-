@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/cape.gd" id="1_world"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/world/grotto_hall.gd" id="3_grotto"]
+[ext_resource type="PackedScene" path="res://scenes/ui/world_hud.tscn" id="6_hud"]
+
+[node name="Grotto" type="Node2D"]
+script = ExtResource("1_world")
+map_id = "grotto"
+y_sort_enabled = true
+
+[node name="Terrain" type="Node2D" parent="."]
+script = ExtResource("3_grotto")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(40, 56)
+
+[node name="HUD" parent="." instance=ExtResource("6_hud")]
+
+[connection signal="text_submitted" from="HUD/Console" to="." method="_on_console_submitted"]
+[connection signal="pressed" from="HUD/MorningPanel/MorningOk" to="." method="_on_morning_ok"]

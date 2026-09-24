@@ -151,6 +151,11 @@ func _dynamic_stock(shop_id: String) -> Array:
 				if reason in ["done", "blueprint", "unknown", "boat"]:
 					continue
 				out.append({"building": id, "price": int(Buildings.next_level_info(id).get("price", 0))})
+		"shop_smith":
+			for tool_id in Buildings.TOOL_KEYS:
+				var cost := Buildings.tool_upgrade_price(str(tool_id))
+				if not cost.is_empty():
+					out.append({"tool_upgrade": str(tool_id), "price": int(cost[1])})
 		"shop_margit":
 			for a in Data.all("animals"):
 				if Clock.day_index >= int(a.get("after_day", 0)):
@@ -210,6 +215,8 @@ func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 		return "money"
 	if entry.has("building"):
 		return Buildings.place_order(str(entry["building"]))
+	if entry.has("tool_upgrade"):
+		return Buildings.order_tool(str(entry["tool_upgrade"]))
 	if entry.has("animal"):
 		return Animals.buy(str(entry["animal"]))
 	if entry.has("recipe"):

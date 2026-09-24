@@ -24,6 +24,7 @@ func _on_new_game() -> void:
 	Buildings.reset()
 	Animals.reset()
 	Deep.reset()
+	Grotto.reset()
 	Graveyard.reset()
 	Mail.reset()
 	Knowledge.reset()

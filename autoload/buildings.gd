@@ -6,6 +6,11 @@ var levels: Dictionary = {}
 # {id, level, done_day} or {}.
 var order: Dictionary = {}
 var hay: int = 0
+# Tora's tool upgrade in progress (9): {tool, done_day} — the tool stays at the smithy meanwhile.
+var tool_order: Dictionary = {}
+const TOOL_TIERS := [["copper_ingot", 2000], ["iron_ingot", 5000], ["silver_ingot", 10000], ["moon_silver", 25000]]
+const TOOL_KEYS := {"tool_pick": "pick_level", "tool_axe": "axe_level", "tool_hoe": "hoe_level", "tool_can": "can_level",
+	"tool_shovel": "shovel_level"}
 
 
 func _ready() -> void:
@@ -15,6 +20,7 @@ func _ready() -> void:
 func reset() -> void:
 	levels.clear()
 	order.clear()
+	tool_order.clear()
 	hay = 0
 
 
@@ -148,8 +154,56 @@ func mow(rng_value: float) -> int:
 	return 1
 
 
+# 9: rusty → copper → iron → silver → moon silver, each for crowns and 5 ingots; 2 days (1 with the family tongs).
+static func tool_level(tool_id: String) -> int:
+	return int(Game.counters.get(str(TOOL_KEYS.get(tool_id, tool_id)), 0))
+
+
+func tool_upgrade_price(tool_id: String) -> Array:
+	var lv := tool_level(tool_id)
+	if lv >= TOOL_TIERS.size():
+		return []
+	var price := int(TOOL_TIERS[lv][1])
+	if Skills.has_profession("artel"):
+		price /= 2
+	return [str(TOOL_TIERS[lv][0]), price]
+
+
+func order_tool(tool_id: String) -> String:
+	if not TOOL_KEYS.has(tool_id):
+		return "unknown"
+	if not tool_order.is_empty():
+		return "busy"
+	var cost := tool_upgrade_price(tool_id)
+	if cost.is_empty():
+		return "done"
+	if Inventory.count_of(tool_id) <= 0:
+		return "nothing"
+	if Inventory.count_of(str(cost[0])) < 5:
+		return "materials"
+	if not Economy.can_pay(int(cost[1])):
+		return "money"
+	Inventory.take(tool_id, 1)
+	Inventory.take(str(cost[0]), 5)
+	Economy.pay(int(cost[1]))
+	var days := 1 if Inventory.count_of("family_tongs") > 0 or Game.flag("family_tongs") else 2
+	tool_order = {"tool": tool_id, "done_day": Clock.day_index + days}
+	return "ok"
+
+
+func tool_night() -> String:
+	if tool_order.is_empty() or Clock.day_index < int(tool_order["done_day"]):
+		return ""
+	var tool_id := str(tool_order["tool"])
+	var key := str(TOOL_KEYS[tool_id])
+	Game.counters[key] = tool_level(tool_id) + 1
+	tool_order.clear()
+	Mail.send("mail.tool_ready", [Crafting.item_name(tool_id)], 0, [[tool_id, 1]])
+	return tool_id
+
+
 func serialize() -> Dictionary:
-	return {"levels": levels, "order": order, "hay": hay}
+	return {"levels": levels, "order": order, "hay": hay, "tool_order": tool_order}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -162,3 +216,6 @@ func deserialize(d: Dictionary) -> void:
 	if o.has("id") and not info(str(o["id"])).is_empty():
 		order = {"id": str(o["id"]), "level": int(o["level"]), "done_day": int(o["done_day"])}
 	hay = int(d.get("hay", 0))
+	var t: Dictionary = d.get("tool_order", {})
+	if t.has("tool"):
+		tool_order = {"tool": str(t["tool"]), "done_day": int(t["done_day"])}

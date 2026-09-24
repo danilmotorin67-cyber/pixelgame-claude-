@@ -83,6 +83,8 @@ func _ready() -> void:
 		$HUD/Hint.text = str(preload("res://scripts/world/lighthouse_floor.gd").TITLES.get(map_id, map_id))
 	elif map_id == "sea":
 		$HUD/Hint.text = "Залив. Пробел — парус, M — карта, E у причала — на берег."
+	elif map_id in ["deep", "grotto"]:
+		$Terrain.call_deferred("_hint")
 	elif map_id == "cape_workshop":
 		$HUD/Hint.text = "Мастерская: станки ставятся ЛКМ, выход — дверь внизу"
 	elif map_id != "cape":

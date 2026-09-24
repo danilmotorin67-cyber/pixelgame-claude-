@@ -611,7 +611,13 @@ func roll_loot(table_id: String, rng: RandomNumberGenerator) -> Array:
 	var table: Dictionary = Data.tables.get("loot_tables", {}).get(table_id, {})
 	var entries: Array = table.get("table", [])
 	var out: Array = []
-	for roll in int(table.get("rolls", 1)):
+	if bool(table.get("fixed", false)):
+		for entry in entries:
+			out.append([str(entry[0]), rng.randi_range(int(entry[1]), int(entry[2]))])
+		return out
+	var rolls_value: Variant = table.get("rolls", 1)
+	var rolls := rng.randi_range(int(rolls_value[0]), int(rolls_value[1])) if rolls_value is Array else int(rolls_value)
+	for roll in rolls:
 		var total := 0
 		for entry in entries:
 			total += int(entry[3])
@@ -636,6 +642,11 @@ func open_crate(index: int) -> Array:
 	var loot := roll_loot(table, rng)
 	for entry in loot:
 		Inventory.add(str(entry[0]), int(entry[1]))
+	var money := int(Data.tables.get("loot_tables", {}).get(table, {}).get("money", 0))
+	if money > 0:
+		Economy.add(money)
+	if not id.begins_with("cargo_"):
+		return loot
 	var opened := int(Game.counters.get("crates_opened", 0)) + 1
 	Game.counters["crates_opened"] = opened
 	if opened > int(Game.counters.get("crates_allowed", 0)):

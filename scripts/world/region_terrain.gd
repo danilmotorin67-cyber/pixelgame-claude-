@@ -115,6 +115,11 @@ func _build_landmarks() -> void:
 				Vector2(int(dimensions[0]) * TILE, int(dimensions[1]) * TILE))
 		if item.has("interior") or bool(item.get("home", false)):
 			_add_door(item)
+	if Router.current_map == "seal_shore":
+		var mouth := GrottoEntrance.new()
+		mouth.name = "GrottoEntrance"
+		mouth.position = Grotto.ENTRANCE - Vector2(0, 16)
+		add_child(mouth)
 	if biome == "village" and coast_row > 0:
 		var box := ShippingBox.new()
 		box.name = "ShippingBox"

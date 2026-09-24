@@ -5923,3 +5923,4 @@ place.open_sea,Открытое море,Open sea
 place.ice_field,Ледяное поле,Ice field
 place.nameless_isle,Остров Без Имени,The Nameless Isle
 place.fairway,Кронвальдский фарватер,Kronvald fairway
+mail.tool_ready,Тора: «%s готов. Забирай — и не роняй в море».,Tora: '%s is ready. Take it — and don't drop it in the sea.'

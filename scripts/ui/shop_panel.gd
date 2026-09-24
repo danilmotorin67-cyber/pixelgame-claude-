@@ -97,6 +97,12 @@ static func entry_name(entry: Dictionary) -> String:
 			parts.append("%s ×%d" % [Crafting.item_name(str(need[0])), int(need[1])])
 		var level_text := " ур. %d" % (Buildings.level(id_b) + 1) if Buildings.max_level(id_b) > 1 else ""
 		return "Постройка: %s%s (%s; %d дн.)" % [Loc.t("building." + id_b), level_text, ", ".join(parts) if not parts.is_empty() else "без материалов", int(next.get("days", 1))]
+	if entry.has("tool_upgrade"):
+		var tool_id := str(entry["tool_upgrade"])
+		var cost := Buildings.tool_upgrade_price(tool_id)
+		var tiers := ["медная", "железная", "серебряная", "из лунного серебра"]
+		return "Улучшить: %s → %s (5 × %s, %d дн.)" % [Crafting.item_name(tool_id), tiers[Buildings.tool_level(tool_id)],
+			Crafting.item_name(str(cost[0])), 1 if Game.flag("family_tongs") else 2]
 	if entry.has("animal"):
 		return Loc.t("animal." + str(entry["animal"]))
 	if entry.has("recipe"):
@@ -128,7 +134,7 @@ func buy_selected(count: int) -> String:
 		"nothing":
 			_status.text = "Для этой услуги нечего предъявить."
 		"busy":
-			_status.text = "Ильм уже строит: ещё %d дн." % Buildings.days_left()
+			_status.text = "Тора уже куёт другой инструмент." if entry.has("tool_upgrade") else "Ильм уже строит: ещё %d дн." % Buildings.days_left()
 		"home":
 			_status.text = "Для него нет места: нужна постройка или свободное место в ней."
 		"season":

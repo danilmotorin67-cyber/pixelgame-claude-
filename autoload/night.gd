@@ -43,6 +43,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["animals"] = Animals.night(weather_today))
 	_step(report, "stations", func() -> void:
 		report["built"] = Buildings.night()
+		report["tool_ready"] = Buildings.tool_night()
 		report["crafting"] = Crafting.night(weather_today)
 		report["stations_ready"] = Crafting.finished_overnight())
 	_step(report, "bodies", func() -> void:

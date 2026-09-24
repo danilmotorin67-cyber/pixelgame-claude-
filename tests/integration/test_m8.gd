@@ -234,11 +234,143 @@ func _check_descent() -> void:
 	_check(Game.flag("boss_mother_moray") and Game.flag("boss_bell_ringer") and Game.flag("boss_bone_whale"), "all three bosses paid out")
 
 
+func _low_tide(threshold: float, from_day: int) -> Array:
+	for day in range(from_day, from_day + 60):
+		for m in range(0, 1440, 10):
+			if Clock.tide_height_at(day, m) <= threshold - 0.05 and Clock.tide_height_at(day, m + 120) <= threshold:
+				return [day, m]
+	return []
+
+
+func _hall_path(index: int) -> bool:
+	var r := Grotto.rows(index)
+	var start := Grotto.entry_cell(index)
+	var target := Vector2i(-1, -1)
+	for y in r.size():
+		var x := str(r[y]).find(">")
+		if x >= 0:
+			target = Vector2i(x, y)
+	if target.x < 0:
+		return true
+	var seen := {start: true}
+	var queue: Array = [start]
+	while not queue.is_empty():
+		var c: Vector2i = queue.pop_front()
+		if c == target:
+			return true
+		for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
+			var n: Vector2i = c + d
+			if not seen.has(n) and Grotto.tile(n, index) != "#":
+				seen[n] = true
+				queue.append(n)
+	return false
+
+
+# 17.6: ten halls, the tide window, the flood, the plates, the echo, the dive, the rubble and the treasures.
+func _check_grotto() -> void:
+	_fresh()
+	_check(Data.tables["grotto"]["halls"].size() == 10, "ten halls")
+	for i in 10:
+		_check(_hall_path(i), "hall %d leads from its entry to the next hall" % (i + 1))
+	var low := _low_tide(-0.4, 14)
+	_check(not low.is_empty(), "a low tide after Spring 15")
+	Clock.day_index = int(low[0])
+	Clock.minutes = int(low[1])
+	_check(Grotto.entrance_state() == "rock", "a stone closes the mouth")
+	_check(not Grotto.break_entrance("tool_axe") and Grotto.break_entrance("tool_pick"), "a pickaxe breaks it at the ebb")
+	_check(Grotto.enter() and Grotto.hall == 0, "the keeper walks into hall 1")
+	_check(Grotto.minutes_left(1) > 0, "the hint counts the minutes to the water")
+	# hall 2: three plates lift the grate
+	Grotto.hall = 1
+	var boulders: Array = []
+	var plate_cells: Array = []
+	var rows := Grotto.rows()
+	for y in rows.size():
+		for x in str(rows[y]).length():
+			if str(rows[y])[x] == "B":
+				boulders.append(Vector2i(x, y))
+			if str(rows[y])[x] == "p":
+				plate_cells.append(Vector2i(x, y))
+	_check(not Grotto.gate_open(), "the grate of hall 2 is down")
+	for i in 3:
+		Grotto.interact(boulders[i])
+		Grotto.interact(plate_cells[i])
+	_check(Grotto.gate_open(), "three stones on three plates lift the grate")
+	# hall 6: the echo
+	Grotto.hall = 5
+	var stal: Array = []
+	rows = Grotto.rows()
+	for y in rows.size():
+		for x in str(rows[y]).length():
+			if str(rows[y])[x] == "T":
+				stal.append(Vector2i(x, y))
+	_check(Grotto.strike(stal[3]).begins_with("Звук"), "a wrong stalactite starts the rhythm over")
+	for i in Grotto.ECHO:
+		Grotto.strike(stal[int(i)])
+	_check(Grotto.gate_open() and Game.flag("grotto_echo"), "the echo answers the drops' rhythm")
+	# hall 7: 30 seconds of breath
+	Grotto.hall = 6
+	var water := Vector2(8 * 16 + 8, 3 * 16 + 8)
+	_check(Grotto.dive_tick(20.0, water) == "" and Grotto.dive_tick(11.0, water) == "gasp", "30 s of breath in the flooded passage")
+	# hall 8: the rubble needs an iron pickaxe from Tora
+	Grotto.hall = 7
+	var rubble := Vector2i(11, 1)
+	_check(Grotto.tile(rubble) == "R" and Grotto.interact(rubble, "tool_pick").begins_with("Завал"), "a rusty pick does not break the rubble")
+	Inventory.add("tool_pick", 1)
+	Inventory.add("copper_ingot", 5)
+	Inventory.add("iron_ingot", 5)
+	Economy.money = 20000
+	_check(Buildings.order_tool("tool_pick") == "ok" and Inventory.count_of("tool_pick") == 0, "Tora takes the pickaxe for copper")
+	_check(Buildings.order_tool("tool_axe") == "busy", "one tool at a time")
+	Clock.day_index += 2
+	_check(Buildings.tool_night() == "tool_pick" and Buildings.tool_level("tool_pick") == 1, "two days later the copper pick")
+	_check(Mail.read(Mail.letters[-1]) and Inventory.count_of("tool_pick") == 1, "the pickaxe comes back by mail")
+	_check(Buildings.order_tool("tool_pick") == "ok", "then iron")
+	Clock.day_index += 2
+	Buildings.tool_night()
+	_check(Buildings.tool_level("tool_pick") == 2, "the iron pickaxe")
+	_check(Grotto.interact(rubble, "tool_pick").begins_with("Завал рухнул") and not Grotto.blocked("R"), "the iron pick breaks into the Hall of the Twenty")
+	# hall 9 and 10: treasure and the heart of the grotto
+	Grotto.hall = 8
+	_check(Grotto.interact(Vector2i(15, 2)).begins_with("Клад") and Inventory.count_of("old_crown") >= 3, "Crooked Lantern's hoard")
+	_check(Grotto.interact(Vector2i(18, 3)).begins_with("Старый") and Inventory.count_of("false_lantern") == 1, "the old false lantern")
+	Grotto.hall = 9
+	_check(Grotto.interact(Vector2i(11, 3)).begins_with("Сундук") and Grotto.interact(Vector2i(11, 3)) == "Сундук пуст.", "the heart chest, once")
+	var money := Economy.money
+	var slot := -1
+	for i in Inventory.capacity:
+		if str(Inventory.slots[i]["id"]) == "heart_of_grotto":
+			slot = i
+	Lighthouse.open_crate(slot)
+	_check(Inventory.count_of("deep_quartz") >= 1 and Inventory.count_of("black_pearl") == 1 and Economy.money == money + 1000,
+		"'Heart of the Grotto': deep quartz, a black pearl and 1 000 crowns")
+	# the halls' finds
+	Grotto.hall = 0
+	_check(Grotto.interact(Vector2i(7, 1)).begins_with("В луже") and Grotto.interact(Vector2i(7, 1)).begins_with("Лужа пуста"), "a tidepool once per ebb")
+	Grotto.hall = 2
+	_check(Grotto.interact(Vector2i(14, 3)).begins_with("Страница") and Knowledge.rest_pts >= 3, "page 2 in the 'F' niche")
+	# the flood
+	Grotto.hall = 5
+	Inventory.add("bread_rye", 3)
+	var closing := 0
+	while Grotto.band_open(2) and closing < 720:
+		Clock.minutes += 5
+		closing += 5
+		if Clock.minutes >= 1440:
+			Clock.minutes -= 1440
+			Clock.day_index += 1
+	var result := Grotto.check_water()
+	_check(result.begins_with("flood") and not Grotto.active and Grotto.flood_energy() == 20.0, "the water returns: thrown out, −20 energy, a stack lost")
+	Sea.blessings.append("otliva")
+	_check(Grotto.flood_energy() == 0.0, "Otliva keeps the water off the keeper")
+
+
 func _run() -> void:
 	_check_combat()
 	_check_bosses()
 	_check_generation()
 	_check_air()
 	_check_descent()
+	_check_grotto()
 	print("M8 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

@@ -352,10 +352,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		_say("С ношей на плечах инструменты не взять. E — положить.")
 		get_viewport().set_input_as_handled()
 		return
-	if event.is_action_pressed("use_tool") and Router.current_map == "deep" and Deep.active \
+	if event.is_action_pressed("use_tool") and _combat() != null \
 			and str(Data.by_id("items", Inventory.selected_id()).get("category", "")) == "weapon":
-		Deep.world.player["facing"] = facing
-		var hits := Deep.world.attack(Inventory.selected_id())
+		_combat().player["facing"] = facing
+		var hits := _combat().attack(Inventory.selected_id())
 		play_tool("hoe", global_position + facing * 16.0)
 		if not hits.is_empty():
 			_say("Попадание!")
@@ -437,7 +437,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:
-		if Router.current_map == "deep" and Deep.active and not Deep.world.dodge():
+		if _combat() != null and not _combat().dodge():
 			return
 		_dodge_t = 0.18
 		velocity = facing * dodge_speed
@@ -472,9 +472,19 @@ func _unhandled_input(event: InputEvent) -> void:
 			_say("Подарок вручают лицом к лицу. G рядом с жителем.")
 
 
+# The fight model of the place the keeper is in: a Deep level or a grotto hall.
+func _combat() -> CombatWorld:
+	if Router.current_map == "deep" and Deep.active:
+		return Deep.world
+	if Router.current_map == "grotto" and Grotto.active:
+		return Grotto.world
+	return null
+
+
 func _held() -> bool:
-	if Router.current_map == "deep" and Deep.active and Deep.world:
-		return float(Deep.world.player["held"]) > 0.0 or float(Deep.world.player["stun"]) > 0.0
+	var world := _combat()
+	if world:
+		return float(world.player["held"]) > 0.0 or float(world.player["stun"]) > 0.0
 	return false
 
 

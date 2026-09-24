@@ -385,7 +385,7 @@ func hit_rock(map_id: String, rock: Dictionary) -> int:
 	var list: Array = rocks.get(map_id, [])
 	if not list.has(rock):
 		return -1
-	rock["hp"] = int(rock["hp"]) - 1
+	rock["hp"] = int(rock["hp"]) - 1 - Buildings.tool_level("tool_pick")
 	if int(rock["hp"]) > 0:
 		return 0
 	var amount: Array = Game.balance("graveyard", {}).get("rocks", {}).get("stone", [1, 3])
