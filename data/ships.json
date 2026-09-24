@@ -1,10 +1,114 @@
 [
   {
-    "id": "ship_gull",
-    "name": "ship.gull.name"
+    "id": "fishing_boat",
+    "name": "ship.fishing_boat.name",
+    "chance": 0.85,
+    "bodies": [
+      1,
+      3
+    ],
+    "crates": [
+      1,
+      2
+    ],
+    "crate": "cargo_fishing",
+    "names": [
+      "ship.treska.name",
+      "ship.diligent.name",
+      "ship.cabin_boy.name"
+    ]
   },
   {
-    "id": "ship_queen",
-    "name": "ship.queen.name"
+    "id": "merchant_brig",
+    "name": "ship.merchant_brig.name",
+    "per_week": [
+      2,
+      3
+    ],
+    "bodies": [
+      3,
+      8
+    ],
+    "crates": [
+      2,
+      5
+    ],
+    "crate": "cargo_merchant",
+    "names": [
+      "ship.hope.name",
+      "ship.silver_herring.name",
+      "ship.north_star.name",
+      "ship.count_elmstorp.name"
+    ]
+  },
+  {
+    "id": "whaler",
+    "name": "ship.whaler.name",
+    "per_week": [
+      1,
+      1
+    ],
+    "seasons": [
+      "summer",
+      "autumn"
+    ],
+    "bodies": [
+      4,
+      10
+    ],
+    "crates": [
+      2,
+      4
+    ],
+    "crate": "cargo_whaler",
+    "names": [
+      "ship.harald.name"
+    ]
+  },
+  {
+    "id": "collier",
+    "name": "ship.collier.name",
+    "per_week": [
+      1,
+      1
+    ],
+    "bodies": [
+      3,
+      6
+    ],
+    "crates": [
+      2,
+      4
+    ],
+    "crate": "cargo_collier",
+    "names": [
+      "ship.black_olaf.name"
+    ]
+  },
+  {
+    "id": "queen",
+    "name": "ship.queen.name",
+    "day": 13,
+    "bodies": [
+      10,
+      30
+    ],
+    "crates": [
+      5,
+      10
+    ],
+    "crate": "cargo_queen",
+    "double_check": true,
+    "names": [
+      "ship.queen.name"
+    ]
+  },
+  {
+    "id": "gull",
+    "name": "ship.gull.name",
+    "daytime": true,
+    "names": [
+      "ship.gull.name"
+    ]
   }
 ]

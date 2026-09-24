@@ -152,8 +152,16 @@ func _unhandled_input(event: InputEvent) -> void:
 		_dodge_t = 0.18
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
-		var eaten := eat_selected()
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+		if Data.by_id("items", Inventory.selected_id()).has("open"):
+			var loot := Lighthouse.open_crate(Inventory.selected_hotbar)
+			var names: Array[String] = []
+			for entry in loot:
+				names.append("%s ×%d" % [Loc.t(str(Data.by_id("items", str(entry[0]))["name"])), int(entry[1])])
+			if hint:
+				hint.text = "В ящике: " + ", ".join(names)
+			return
+		var eaten := eat_selected()
 		if hint:
 			hint.text = ("Съедено: %s" % Loc.t(str(Data.by_id("items", eaten)["name"]))) if eaten != "" \
 				else "Это не едят. Даже на спор."

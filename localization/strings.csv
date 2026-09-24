@@ -254,3 +254,40 @@ item.rag.name,Ветошь,Rag
 item.rag.desc,Протереть стёкла фонарной. Бывшая рубашка бывшего смотрителя.,For wiping the lantern glass. A former shirt of a former keeper.
 item.glass.name,Стекло,Glass
 item.glass.desc,"Для стёкол фонарной и призм. Прозрачное, в отличие от местных дел.","For lantern panes and prisms. Transparent, unlike local business."
+ship.fishing_boat.name,Рыбацкий бот,Fishing boat
+ship.merchant_brig.name,Торговый бриг,Merchant brig
+ship.whaler.name,Китобой,Whaler
+ship.collier.name,Угольщик,Collier
+ship.treska.name,Бот «Треска»,Boat Treska
+ship.diligent.name,Лоцманский бот «Прилежный»,Pilot boat Diligent
+ship.cabin_boy.name,Учебное судно «Юнга»,Training ship Cabin Boy
+ship.hope.name,Бриг «Надежда»,Brig Hope
+ship.silver_herring.name,Шхуна «Серебряная сельдь»,Schooner Silver Herring
+ship.north_star.name,Барк «Звезда Севера»,Barque North Star
+ship.count_elmstorp.name,Пароход «Граф Эльмсторп»,Steamer Count Elmstorp
+ship.harald.name,Китобой «Харальд»,Whaler Harald
+ship.black_olaf.name,Угольщик «Чёрный Олаф»,Collier Black Olaf
+item.cargo_fishing.name,Ящик с рыбацкого бота,Fishing boat crate
+item.cargo_fishing.desc,"Q — вскрыть. Треть груза ваша по береговому праву, остальное — в управу.",Q to open. A third is yours by shore right; the rest belongs to the directorate.
+item.cargo_merchant.name,Ящик торгового брига,Merchant brig crate
+item.cargo_merchant.desc,"Q — вскрыть. Ткани, чай, ром. Хозяину они уже не понадобятся.","Q to open. Cloth, tea, rum. The owner won't need them now."
+item.cargo_whaler.name,Ящик китобоя,Whaler crate
+item.cargo_whaler.desc,Q — вскрыть. Ус и жир. Кит бы оценил иронию.,Q to open. Bone and oil. The whale would appreciate the irony.
+item.cargo_collier.name,Ящик угольщика,Collier crate
+item.cargo_collier.desc,"Q — вскрыть. Уголь и железо. Тонет быстро, выносит медленно.","Q to open. Coal and iron. Sinks fast, washes up slow."
+item.cargo_queen.name,Ящик «Королевы Кронвальда»,Queen of Kronwald crate
+item.cargo_queen.desc,"Q — вскрыть. Роскошь, кофе, керосин. Страховая уже подсчитала.","Q to open. Luxury, coffee, kerosene. The insurers have already done the sums."
+item.cloth.name,Ткань,Cloth
+item.cloth.desc,"Для одежды и занавесок. Ехала в Кронвальд, осталась здесь.","For clothes and curtains. Was bound for Kronwald, stayed here."
+item.spices.name,Специи,Spices
+item.spices.desc,"Для кухни и подарков. Пахнут далёкими берегами, где тепло.",For cooking and gifts. Smell of faraway warm shores.
+item.rum.name,Ром,Rum
+item.rum.desc,"Для грога и подарков. Моряки говорят, он согревает. Моряки много чего говорят.",For grog and gifts. Sailors say it warms you. Sailors say many things.
+item.coffee.name,Кофе,Coffee
+item.coffee.desc,Для долгой вахты. Лучший друг смотрителя после кота.,For long watches. A keeper's best friend after the cat.
+item.coal.name,Уголь,Coal
+item.coal.desc,"Топливо для горна и стекловарни. Чёрный, как список долгов Грима.",Fuel for the forge and glassworks. Black as Grim's ledger.
+item.iron_scrap.name,Ржавое железо,Rusty iron
+item.iron_scrap.desc,На слитки в горне. Раньше было кораблём.,For ingots at the forge. Used to be a ship.
+item.whalebone.name,Китовый ус,Whalebone
+item.whalebone.desc,"Для корсетов и поделок. Кит не спрашивал, на что пойдёт.",For corsets and carvings. Nobody asked the whale.

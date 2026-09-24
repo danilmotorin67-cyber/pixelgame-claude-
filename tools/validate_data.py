@@ -84,6 +84,17 @@ def main() -> int:
                     errs.append(f"{recipe.get('id')} unknown ingredient {need}")
             if recipe.get("out", [None])[0] not in item_ids:
                 errs.append(f"{recipe.get('id')} unknown product")
+    loot = tables.get("loot_tables", {})
+    for name, table in (loot.items() if isinstance(loot, dict) else []):
+        for item, _lo, _hi, _weight in table.get("table", []):
+            if item not in item_ids:
+                errs.append(f"loot {name} unknown item {item}")
+    for ship in rows(tables.get("ships", [])):
+        if "crate" in ship and ship["crate"] not in item_ids:
+            errs.append(f"ship {ship['id']} unknown crate {ship['crate']}")
+    for row in rows(tables.get("items", [])):
+        if "open" in row and row["open"] not in loot:
+            errs.append(f"item {row['id']} opens unknown loot {row['open']}")
     forage = tables.get("forage", {})
     for band in ("near", "far", "storm"):
         for item, _weight in forage.get(band, []):

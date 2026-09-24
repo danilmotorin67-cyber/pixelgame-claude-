@@ -26,6 +26,7 @@ func _fresh(day: int = 0) -> void:
 	Sea.reset()
 	Skills.reset()
 	Knowledge.sea_pts = 0
+	Graveyard.reset()
 
 
 func _light(at_hour: int, at_minute: int = 0) -> void:
@@ -166,11 +167,133 @@ func _check_breakdowns() -> void:
 	_check(strikes > 20 and strikes < 70, "lightning strikes about 10%% of storm nights without a rod (%d/400)" % strikes)
 
 
+func _count_type(ships: Array, type: String) -> int:
+	var n := 0
+	for ship in ships:
+		if ship["type"] == type:
+			n += 1
+	return n
+
+
+func _check_ship_schedule() -> void:
+	_fresh()
+	var boats := 0
+	for index in 28:
+		var ships := ShipTraffic.ships_for_night(index)
+		_check(JSON.stringify(ships) == JSON.stringify(ShipTraffic.ships_for_night(index)), "the schedule is deterministic")
+		boats += _count_type(ships, "fishing_boat")
+		_check(_count_type(ships, "whaler") == 0, "no whalers in spring")
+		_check(_count_type(ships, "queen") == (1 if index == 12 else 0), "the Queen passes only on the night to the 14th")
+	_check(boats >= 18 and boats <= 28, "fishing boats almost every night (%d/28)" % boats)
+	for week in 8:
+		var brigs := 0
+		var colliers := 0
+		var whalers := 0
+		for night in 7:
+			var ships := ShipTraffic.ships_for_night(28 + week * 7 + night)
+			brigs += _count_type(ships, "merchant_brig")
+			colliers += _count_type(ships, "collier")
+			whalers += _count_type(ships, "whaler")
+		_check(brigs >= 2 and brigs <= 3, "2-3 merchant brigs a week (%d)" % brigs)
+		_check(colliers == 1 and whalers == 1, "one collier and one summer whaler a week")
+	var calendar := ShipTraffic.calendar(5)
+	_check(calendar.size() == 7 and int(calendar[0]["day_index"]) == 5, "the pilot calendar covers seven nights")
+	_check(is_equal_approx(ShipTraffic.wreck_chance("clear", false, true, 50.0, false), 0.01), "P = 1% x 0.5 x 2")
+	_check(is_equal_approx(ShipTraffic.wreck_chance("fog", false, true, 0.0, true), 0.10 * 2.0 * 1.2), "new moon x1.2")
+	_check(is_equal_approx(ShipTraffic.wreck_chance("storm", false, false, 80.0, false), 0.55), "dark night: base x3 + 10%")
+	_check(is_equal_approx(ShipTraffic.base_chance("clear", true), 0.25), "a Hmar night starts at 25%")
+
+
+func _check_wrecks() -> void:
+	var found := false
+	for seed_value in 60:
+		_fresh(seed_value * 7 % 28)
+		Game.world_seed = seed_value
+		Weather.set_weather("storm")
+		var mercy := Sea.mercy
+		var night := Lighthouse.resolve_night()
+		var wrecked: Array = []
+		for ship in night["ships"]:
+			if ship["wrecked"]:
+				wrecked.append(ship)
+		if wrecked.is_empty():
+			continue
+		found = true
+		var bodies := 0
+		var crates := 0
+		var allowed := 0
+		for ship in wrecked:
+			bodies += int(ship["bodies"])
+			crates += int(ship["crates"])
+			allowed += ceili(float(ship["crates"]) / 3.0)
+		_check(is_equal_approx(Sea.mercy, mercy - 2.0 - 3.0 * wrecked.size()), "each wreck costs 3 mercy")
+		_check(Graveyard.incoming.size() == bodies and Lighthouse.wrecks.size() == wrecked.size(),
+			"the drowned wait to wash ashore")
+		for body in Graveyard.incoming:
+			_check(int(body["arrive"]) >= Clock.day_index + 1 and int(body["arrive"]) <= Clock.day_index + 3,
+				"bodies arrive within 1-3 days")
+		_check(Lighthouse.pending_shore.size() == crates and int(Game.counters["crates_allowed"]) == allowed,
+			"crates wash up and a third belongs to the keeper")
+		_check(Lighthouse.week_wrecked, "a wreck burns the weekly bonus")
+		Sea.generate_gifts(Clock.day_index + 1, true)
+		var on_shore := 0
+		for beach in Sea.gifts:
+			for gift in Sea.gifts[beach]:
+				if str(gift["item"]).begins_with("cargo_"):
+					on_shore += 1
+		_check(on_shore == crates and Lighthouse.pending_shore.is_empty(), "crates lie on the beaches next morning")
+		Inventory.reset()
+		var crate_id := str(Data.by_id("ships", str(wrecked[0]["type"]))["crate"])
+		Inventory.add(crate_id, allowed + 1)
+		Inventory.select_hotbar(0)
+		for n in allowed:
+			_check(not Lighthouse.open_crate(0).is_empty(), "a crate holds goods")
+		_check(Game.honor == 0, "opening your third is honest")
+		var mercy_before := Sea.mercy
+		Lighthouse.open_crate(0)
+		_check(Game.honor == -2 and is_equal_approx(Sea.mercy, mercy_before - 1.0), "keeping more than a third: -2 honour, -1 mercy")
+		Inventory.add(crate_id, 2)
+		_check(Lighthouse.hand_in_crates() == 2 and Game.honor == 4, "handing crates to the directorate: +3 honour each")
+		break
+	_check(found, "a dark stormy night must wreck something within 60 worlds")
+
+	var queen_wrecks := 0
+	var other_wrecks := 0
+	for seed_value in 300:
+		_fresh(12)
+		Game.world_seed = seed_value
+		Weather.set_weather("storm")
+		for ship in Lighthouse.resolve_night()["ships"]:
+			if ship["type"] == "queen" and ship["wrecked"]:
+				queen_wrecks += 1
+			elif ship["type"] == "fishing_boat" and ship["wrecked"]:
+				other_wrecks += 1
+	_check(queen_wrecks < other_wrecks, "the Queen sinks only on two failed checks (%d vs %d)" % [queen_wrecks, other_wrecks])
+
+	_fresh(3)
+	Weather.set_weather("fog")
+	Inventory.add("kerosene", 1)
+	Lighthouse.refill()
+	Lighthouse.wind()
+	_light(19, 30)
+	for hour in [19, 20, 21]:
+		Clock.set_time(hour, 30)
+		Lighthouse.ring_bell()
+	var foggy := Lighthouse.resolve_night(22 * 60)
+	var safe := 0
+	for ship in foggy["ships"]:
+		if bool(ship.get("safe_bad_weather", false)):
+			safe += 1
+	_check(Lighthouse.week_bonus == 20 * safe and Knowledge.sea_pts >= safe, "safe passage in fog: +20 kr and +1 sea note per ship")
+
+
 func _run() -> void:
 	_check_components()
 	_check_fuel()
 	_check_modifiers()
 	_check_breakdowns()
+	_check_ship_schedule()
+	_check_wrecks()
 	_fresh()
 	print("M3 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

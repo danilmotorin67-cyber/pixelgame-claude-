@@ -1066,5 +1066,106 @@
     "category": "material",
     "price": 50,
     "stack": 99
+  },
+  {
+    "id": "cargo_fishing",
+    "name": "item.cargo_fishing.name",
+    "desc": "item.cargo_fishing.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 20,
+    "open": "cargo_fishing"
+  },
+  {
+    "id": "cargo_merchant",
+    "name": "item.cargo_merchant.name",
+    "desc": "item.cargo_merchant.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 20,
+    "open": "cargo_merchant"
+  },
+  {
+    "id": "cargo_whaler",
+    "name": "item.cargo_whaler.name",
+    "desc": "item.cargo_whaler.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 20,
+    "open": "cargo_whaler"
+  },
+  {
+    "id": "cargo_collier",
+    "name": "item.cargo_collier.name",
+    "desc": "item.cargo_collier.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 20,
+    "open": "cargo_collier"
+  },
+  {
+    "id": "cargo_queen",
+    "name": "item.cargo_queen.name",
+    "desc": "item.cargo_queen.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 20,
+    "open": "cargo_queen"
+  },
+  {
+    "id": "cloth",
+    "name": "item.cloth.name",
+    "desc": "item.cloth.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "spices",
+    "name": "item.spices.name",
+    "desc": "item.spices.desc",
+    "category": "ingredient",
+    "price": 80,
+    "stack": 99
+  },
+  {
+    "id": "rum",
+    "name": "item.rum.name",
+    "desc": "item.rum.desc",
+    "category": "ingredient",
+    "price": 100,
+    "stack": 20
+  },
+  {
+    "id": "coffee",
+    "name": "item.coffee.name",
+    "desc": "item.coffee.desc",
+    "category": "ingredient",
+    "price": 75,
+    "stack": 99
+  },
+  {
+    "id": "coal",
+    "name": "item.coal.name",
+    "desc": "item.coal.desc",
+    "category": "fuel_misc",
+    "price": 75,
+    "stack": 99
+  },
+  {
+    "id": "iron_scrap",
+    "name": "item.iron_scrap.name",
+    "desc": "item.iron_scrap.desc",
+    "category": "material",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "whalebone",
+    "name": "item.whalebone.name",
+    "desc": "item.whalebone.desc",
+    "category": "material",
+    "price": 120,
+    "stack": 99
   }
 ]

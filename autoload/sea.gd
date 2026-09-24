@@ -83,6 +83,13 @@ func generate_gifts(index: int, storm: bool) -> void:
 			_place(placed, used, rng, columns, rng.randi_range(FAR_ROW, SHORE_ROWS - 1),
 				str(rare[rng.randi_range(0, rare.size() - 1)]))
 		gifts[map_id] = placed
+	for entry in Lighthouse.pending_shore:
+		var beach_id := str(entry["beach"])
+		var columns: Array = config.get("beaches", {}).get(beach_id, {}).get("columns", [2, 60])
+		if not gifts.has(beach_id):
+			gifts[beach_id] = []
+		_place(gifts[beach_id], {}, rng, columns, rng.randi_range(0, FAR_ROW - 1), str(entry["item"]))
+	Lighthouse.pending_shore.clear()
 
 
 func _place(placed: Array, used: Dictionary, rng: RandomNumberGenerator, columns: Array,

@@ -20,6 +20,13 @@ var bell_hours: Array = []
 var fire_power: float = 0.0 # Light: average of the last seven nights.
 var nightly_powers: Array[float] = []
 var last_report: Dictionary = {}
+# Weekly ledger for Monday's salary: nightly powers, bad-weather bonus, darkness and wrecks.
+var week_powers: Array = []
+var week_bonus: int = 0
+var week_dark: bool = false
+var week_wrecked: bool = false
+var wrecks: Array = []
+var pending_shore: Array = []
 
 
 func cfg(key: String) -> Variant:
@@ -47,6 +54,12 @@ func reset() -> void:
 	fire_power = 0.0
 	nightly_powers.clear()
 	last_report.clear()
+	week_powers.clear()
+	week_bonus = 0
+	week_dark = false
+	week_wrecked = false
+	wrecks.clear()
+	pending_shore.clear()
 
 
 func _ready() -> void:
@@ -287,7 +300,10 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 			tower[hit] = int(tower[hit]) - 1
 			events.append("lightning_" + hit)
 	var needed := fire_needed()
+	var ships := _resolve_ships(needed, burning, power)
 	if needed:
+		week_powers.append(power)
+		week_dark = week_dark or not burning
 		nightly_powers.append(power)
 		if nightly_powers.size() > 7:
 			nightly_powers.pop_front()
@@ -301,11 +317,106 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 			Knowledge.add_points("sea", 1)
 			Skills.add_xp("keeping", 10)
 	last_report = {"power": power, "light": fire_power, "lit": burning, "on_time": on_time,
-		"no_fire": not needed, "parts": parts, "events": events}
+		"no_fire": not needed, "parts": parts, "events": events, "ships": ships}
 	lamp_on = false
 	lit_at_minutes = -1
 	bell_hours.clear()
 	return last_report.duplicate(true)
+
+
+func _resolve_ships(needed: bool, burning: bool, power: float) -> Array:
+	var passed: Array = []
+	var rng := _rng(13)
+	var new_moon := Clock.day <= 3 or Clock.day >= 26
+	var bad := Weather.hmar_night or Weather.current in ShipTraffic.BAD_WEATHER
+	for ship in ShipTraffic.ships_for_night(Clock.day_index):
+		var entry: Dictionary = ship.duplicate()
+		entry["wrecked"] = false
+		var info := Data.by_id("ships", str(ship["type"]))
+		if needed:
+			var chance := ShipTraffic.wreck_chance(Weather.current, Weather.hmar_night, burning, power, new_moon)
+			var wrecked := rng.randf() < chance
+			if wrecked and bool(info.get("double_check", false)):
+				wrecked = rng.randf() < chance
+			if wrecked:
+				_wreck(entry, info, rng)
+			elif bad:
+				Knowledge.add_points("sea", 1)
+				week_bonus += 20
+				entry["safe_bad_weather"] = true
+				if rng.randf() < 0.05:
+					pending_shore.append({"item": roll_loot("gift_from_board", rng)[0][0], "beach": "cape"})
+		passed.append(entry)
+	return passed
+
+
+func _wreck(entry: Dictionary, info: Dictionary, rng: RandomNumberGenerator) -> void:
+	entry["wrecked"] = true
+	var body_range: Array = info.get("bodies", [1, 1])
+	var crate_range: Array = info.get("crates", [0, 0])
+	var bodies := rng.randi_range(int(body_range[0]), int(body_range[1]))
+	var crates := rng.randi_range(int(crate_range[0]), int(crate_range[1]))
+	entry["bodies"] = bodies
+	entry["crates"] = crates
+	Sea.add_mercy(-3.0)
+	week_wrecked = true
+	wrecks.append({"day": Clock.day_index, "ship": entry["name"], "type": entry["type"], "bodies": bodies})
+	for n in bodies:
+		Graveyard.incoming.append({"ship": str(entry["name"]), "arrive": Clock.day_index + rng.randi_range(1, 3),
+			"beach": ShipTraffic.pick_beach(rng)})
+	for n in crates:
+		var beach := ShipTraffic.pick_beach(rng)
+		pending_shore.append({"item": str(info["crate"]), "beach": "cape" if beach == "lagoon" else beach})
+	Game.counters["crates_allowed"] = int(Game.counters.get("crates_allowed", 0)) + ceili(float(crates) / 3.0)
+
+
+func roll_loot(table_id: String, rng: RandomNumberGenerator) -> Array:
+	var table: Dictionary = Data.tables.get("loot_tables", {}).get(table_id, {})
+	var entries: Array = table.get("table", [])
+	var out: Array = []
+	for roll in int(table.get("rolls", 1)):
+		var total := 0
+		for entry in entries:
+			total += int(entry[3])
+		var pick := rng.randi_range(0, maxi(total - 1, 0))
+		for entry in entries:
+			pick -= int(entry[3])
+			if pick < 0:
+				out.append([str(entry[0]), rng.randi_range(int(entry[1]), int(entry[2]))])
+				break
+	return out
+
+
+# Shore right (8.7): a third of every wreck's crates is the keeper's; opening more costs honour and mercy.
+func open_crate(index: int) -> Array:
+	var id := str(Inventory.slots[index]["id"])
+	var table := str(Data.by_id("items", id).get("open", ""))
+	if table == "" or not Inventory.take_slot(index, 1):
+		return []
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 7 + Clock.day_index * 131 + Clock.minutes + int(Game.counters.get("crates_opened", 0)) * 977,
+		2147483647)
+	var loot := roll_loot(table, rng)
+	for entry in loot:
+		Inventory.add(str(entry[0]), int(entry[1]))
+	var opened := int(Game.counters.get("crates_opened", 0)) + 1
+	Game.counters["crates_opened"] = opened
+	if opened > int(Game.counters.get("crates_allowed", 0)):
+		Game.add_honor(-2)
+		Sea.add_mercy(-1.0)
+	return loot
+
+
+func hand_in_crates() -> int:
+	var handed := 0
+	for index in Inventory.capacity:
+		var id := str(Inventory.slots[index]["id"])
+		if Data.by_id("items", id).has("open") and id.begins_with("cargo_"):
+			var count := int(Inventory.slots[index]["count"])
+			Inventory.take_slot(index, count)
+			handed += count
+	Game.add_honor(3 * handed)
+	return handed
 
 
 func serialize() -> Dictionary:
@@ -314,7 +425,8 @@ func serialize() -> Dictionary:
 		"barrel": barrel, "cleanliness": cleanliness, "tower": tower, "salt_shroud": salt_shroud,
 		"lamp_on": lamp_on, "lit_at_minutes": lit_at_minutes, "wound_until": wound_until,
 		"bell_hours": bell_hours, "fire_power": fire_power, "nightly_powers": nightly_powers,
-		"last_report": last_report}
+		"last_report": last_report, "week_powers": week_powers, "week_bonus": week_bonus,
+		"week_dark": week_dark, "week_wrecked": week_wrecked, "wrecks": wrecks, "pending_shore": pending_shore}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -350,3 +462,13 @@ func deserialize(d: Dictionary) -> void:
 		for value in loaded.slice(maxi(0, loaded.size() - 7)):
 			nightly_powers.append(clampf(float(value), 0.0, 100.0))
 	last_report = d.get("last_report", {}) if d.get("last_report", {}) is Dictionary else {}
+	for value in d.get("week_powers", []):
+		week_powers.append(float(value))
+	week_bonus = int(d.get("week_bonus", 0))
+	week_dark = bool(d.get("week_dark", false))
+	week_wrecked = bool(d.get("week_wrecked", false))
+	for wreck in d.get("wrecks", []):
+		wrecks.append({"day": int(wreck["day"]), "ship": str(wreck["ship"]), "type": str(wreck["type"]),
+			"bodies": int(wreck["bodies"])})
+	for entry in d.get("pending_shore", []):
+		pending_shore.append({"item": str(entry["item"]), "beach": str(entry["beach"])})
