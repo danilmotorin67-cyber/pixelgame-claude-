@@ -1,0 +1,70 @@
+{
+ "events": [
+  {
+   "id": "ev_freya_10",
+   "npc": "npc_freya",
+   "hearts": 10,
+   "trigger": {
+    "map": "village",
+    "hours": [
+     14,
+     18
+    ],
+    "when": "hearts('npc_freya') >= 10"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_freya",
+     "well",
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      43,
+      28
+     ]
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_freya",
+     "neutral",
+     "ev.freya10.l01"
+    ],
+    [
+     "say",
+     "npc_freya",
+     "happy",
+     "ev.freya10.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "give",
+       "freya_map",
+       1
+      ],
+      [
+       "flag",
+       "freya_best_friend"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

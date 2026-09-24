@@ -3885,3 +3885,266 @@ ev.kai8.c02,Ты расскажешь это Пальму?,Will you tell Palm th
 ev.kai10.l01,Смотри.,Look.
 ev.kai10.l02,"(Кай подносит лампу к старой линзе Мёртвого Огня. На миг над морем встаёт второй луч — ровный, честный, зелёный от патины.)","(Kai raises a lamp to the old lens of the Dead Fire. For a moment a second beam rises over the sea — steady, honest, green with patina.)"
 ev.kai10.l03,Для неё. Одну минуту. Больше — не могу. Пока. Но одну — могу.,For her. One minute. More — I can't. Yet. But one — I can.
+item.ghost_club_badge.name,Значок Клуба охотников за привидениями,Ghost Hunters' Club badge
+item.ghost_club_badge.desc,"Почётный член клуба Сольвика. Вырезан из жести ножницами Маргит. Светится, если рядом призрак. Не светится.",Honorary member of the Solvik club. Cut from tin with Margit's scissors. Glows when a ghost is near. Doesn't glow.
+item.freya_map.name,Карта сокровищ Фрейи,Freya's treasure map
+item.freya_map.desc,"Крестиком отмечены: пирог Сольвейг, могила кота и «ваш маяк — самое главное сокровище».","Marked with crosses: Solveig's pie, a cat's grave and 'your lighthouse — the biggest treasure'."
+npc.nils.spring.01,"Смотритель! Я видел призрака! Настоящего! Он был прозрачный! Фрейя говорит, это была простыня. Это был призрак!",Keeper! I saw a ghost! A real one! It was see-through! Freya says it was a sheet. It was a ghost!
+npc.nils.spring.02,Весной я залез на курятник. Фрейя меня столкнула. Это было нечестно. Но смешно.,In spring I climbed the henhouse. Freya pushed me off. That wasn't fair. But it was funny.
+npc.nils.spring.03,Ингрид учит нас писать. Я написал «море» с тремя «р». Она сказала — так даже лучше.,Ingrid's teaching us to write. I spelled 'sea' with three e's. She said it's even better that way.
+npc.nils.spring.04,У тебя правда говорящая деревянная тётя? Фрейя не верит. Я верю. Можно посмотреть?,Have you really got a talking wooden lady? Freya doesn't believe it. I do. Can I see?
+npc.nils.spring.05,"Я найду клад! На пустоши! Хельга сказала, там закопан котёл. С супом. Это считается.",I'm going to find treasure! On the moor! Helga said there's a pot buried there. With soup. That counts.
+npc.nils.spring.06,"Бабушка говорит, дедушки на небе. Фрейя говорит — в море. Я думаю — везде понемножку.",Granny says the grandads are in heaven. Freya says — in the sea. I think — a bit everywhere.
+npc.nils.spring.07,Ты хоронишь утопленников? Круто! То есть грустно. Но круто.,You bury drowned people? Cool! I mean sad. But cool.
+npc.nils.spring.08,Весной в лагуне лягушки. Я поймал одну. Назвал Хальвданом. Она ускакала. Как настоящий.,In spring there are frogs in the lagoon. I caught one. Named it Halvdan. It hopped off. Like the real one.
+npc.nils.spring.09,Мы основали клуб! Клуб охотников за привидениями Сольвика! Членов — двое. Хочешь — третьим?,We've founded a club! The Solvik Ghost Hunters' Club! Two members. Want to be the third?
+npc.nils.spring.10,Я сильнее Фрейи. Но она быстрее. И умнее. Но я сильнее!,I'm stronger than Freya. But she's faster. And cleverer. But I'm stronger!
+npc.nils.summer.01,Лето! Лагуна! Купаться! Бабушка сказала — до пупка. Я купаюсь до пупка. Потом до носа.,Summer! The lagoon! Swimming! Granny said — up to the belly button. I go up to the belly button. Then up to the nose.
+npc.nils.summer.02,Мой день рождения летом! Мне десять! Фрейе тоже десять. Мы близнецы. Я старше на восемь минут!,My birthday's in summer! I'm ten! Freya's ten too. We're twins. I'm eight minutes older!
+npc.nils.summer.03,"Я видел тюленя! Он мне подмигнул! Фрейя говорит, тюлени не подмигивают. Этот подмигнул!",I saw a seal! It winked at me! Freya says seals don't wink. This one did!
+npc.nils.summer.04,Лив дала мне лупу! Я смотрю на всё! На муравьёв! На Фрейю! Фрейя дерётся.,Liv gave me a magnifying glass! I look at everything! At ants! At Freya! Freya hits me.
+npc.nils.summer.05,Регата! Я хочу лодку! Бабушка говорит — вырастешь. Я расту! Каждый день!,The regatta! I want a boat! Granny says — when you're grown. I'm growing! Every day!
+npc.nils.summer.06,В белую ночь не надо спать! Это закон! Бабушка говорит — нет такого закона. Есть!,On white nights you don't have to sleep! That's the law! Granny says there's no such law. There is!
+npc.nils.summer.07,Я нашёл в песке пуговицу. Золотую! То есть медную. Но блестит как золотая.,"I found a button in the sand. A gold one! Well, copper. But it shines like gold."
+npc.nils.summer.08,Кнуд меня измерил. Метр тридцать восемь! Он сказал — гроб ещё не скоро. Я рад!,Knud measured me. A metre thirty-eight! He said a coffin won't be needed for ages. I'm glad!
+npc.nils.summer.09,"Можно с тобой на маяк? Я не буду трогать лампу. Честно. Может, чуть-чуть.",Can I come to the lighthouse with you? I won't touch the lamp. Honest. Maybe a tiny bit.
+npc.nils.summer.10,Я поймал краба! Он меня тоже поймал. За палец. Ничья.,I caught a crab! It caught me too. By the finger. A draw.
+npc.nils.autumn.01,"Осень! Время охоты за привидениями! Их больше, когда темно! Мы идём в Гильдейский дом!",Autumn! Ghost-hunting season! There are more when it's dark! We're going to the Guild House!
+npc.nils.autumn.02,Ночь Утопленников — лучший праздник! Все с фонарями! Как будто охотники за привидениями!,Drowned Night's the best holiday! Everyone has lanterns! Like ghost hunters!
+npc.nils.autumn.03,Листья! Я прыгаю в кучи! Фрейя кладёт в кучи шишки. Это подло.,Leaves! I jump in the piles! Freya hides pine cones in the piles. That's sneaky.
+npc.nils.autumn.04,"Ингрид сказала, что школа откроется. С партами! У меня будет парта! Я вырежу на ней призрака.",Ingrid says the school will open. With desks! I'll have a desk! I'm going to carve a ghost on it.
+npc.nils.autumn.05,"Шторм! Бабушка не пускает на улицу. Я смотрю в окно. Там волны выше домов! Ну, почти.","A storm! Granny won't let us out. I'm watching from the window. The waves are taller than houses! Well, nearly."
+npc.nils.autumn.06,Ярмарка! Я съел три пирога. Живот болит. Оно того стоило.,The fair! I ate three pies. My tummy hurts. It was worth it.
+npc.nils.autumn.07,Хельга рассказала сказку. Страшную! Про кривой фонарь! Я не спал. Фрейя спала. Она бессердечная.,Helga told a story. A scary one! About a crooked lantern! I didn't sleep. Freya did. She's heartless.
+npc.nils.autumn.08,Я видел утопленника! Живого! То есть мёртвого! Но он шёл! Фрейя говорит — это был Олаф. Это был утопленник!,I saw a drowned man! Alive! I mean dead! But walking! Freya says it was Olaf. It was a drowned man!
+npc.nils.autumn.09,Бабушка вяжет мне шарф. Он длинный! Я могу завязать им Фрейю. Попробую.,Granny's knitting me a scarf. It's long! I could tie Freya up with it. I'll try.
+npc.nils.autumn.10,Ты {смелый|смелая}? Ты ходишь на погост ночью? Возьми меня! Я тоже смелый! Днём.,Are you brave? Do you go to the graveyard at night? Take me! I'm brave too! In the daytime.
+npc.nils.winter.01,Зима! Снег! Снежки! Я попал в Бенедикта! Он сказал «Господи». Это считается ругательством?,Winter! Snow! Snowballs! I hit Benedict! He said 'Lord'. Does that count as swearing?
+npc.nils.winter.02,Эйнар сделал нам коньки! Я езжу быстрее Фрейи! Потом падаю. Но быстрее!,Einar made us skates! I skate faster than Freya! Then I fall. But faster!
+npc.nils.winter.03,Долгая ночь! Бабушка рассказывает про дедушек. Я знаю все истории. Всё равно слушаю.,The long night! Granny tells stories about the grandads. I know them all. I still listen.
+npc.nils.winter.04,Лёд на лагуне! Я провалился по колено! Сольвейг продала мне носки. Сухие. Но дорогие.,Ice on the lagoon! I went through up to my knee! Solveig sold me socks. Dry. But expensive.
+npc.nils.winter.05,Мы слепили трёх снеговиков. Назвали как дедушек. Бабушка плакала. Потом смеялась. Взрослые странные.,We made three snowmen. Named them after the grandads. Granny cried. Then laughed. Grown-ups are strange.
+npc.nils.winter.06,"Сияние! Я загадал желание! Чтобы увидеть настоящего призрака! Фрейя загадала, чтобы я замолчал.",The aurora! I made a wish! To see a real ghost! Freya wished for me to shut up.
+npc.nils.winter.07,Зимой призраки мёрзнут? Если мёрзнут — я им отнесу шарф.,Do ghosts get cold in winter? If they do — I'll take them a scarf.
+npc.nils.winter.08,Ингрид связала мне шарф. Кривой. Бабушка перевязала. Я сказал Ингрид. Бабушка сердится.,Ingrid knitted me a scarf. Crooked. Granny re-knitted it. I told Ingrid. Granny's cross.
+npc.nils.winter.09,Твой маяк видно из моего окна! Я машу ему перед сном. Он мне мигает! Честно!,I can see your lighthouse from my window! I wave to it before bed. It winks at me! Honest!
+npc.nils.winter.10,Когда вырасту — стану смотрителем! Или охотником за привидениями! Или обоими!,When I grow up — I'll be a keeper! Or a ghost hunter! Or both!
+npc.nils.weather.rain.01,Дождь! Лужи! Я прыгаю! Бабушка кричит! Всё как надо!,Rain! Puddles! I'm jumping! Granny's shouting! All as it should be!
+npc.nils.weather.rain.02,В дождь призраки выходят? Надо проверить!,Do ghosts come out in the rain? Must check!
+npc.nils.weather.storm.01,Шторм! Бабушка не пускает! Я смотрю в окно! Там молния! Как в сказке!,A storm! Granny won't let us out! I'm watching from the window! There's lightning! Like in a story!
+npc.nils.weather.storm.02,Твой маяк горит в шторм? Он же не погаснет? Не погаснет же?,"Does your lighthouse burn in a storm? It won't go out? It won't, will it?"
+npc.nils.weather.fog.01,Туман! Лучшая погода для призраков! Бабушка не пускает. Худшая погода для меня.,Fog! The best weather for ghosts! Granny won't let us out. The worst weather for me.
+npc.nils.weather.fog.02,В тумане кто-то плакал. Я спросил — ты кто? Не ответили. Я немножко испугался. Совсем немножко.,Someone was crying in the fog. I asked — who are you? No answer. I got a bit scared. Just a tiny bit.
+npc.nils.weather.snow.01,Снег! Лепим крепость! Фрейя — генерал. Я — армия.,Snow! We're building a fort! Freya's the general. I'm the army.
+npc.nils.weather.cloud.01,Облака похожи на призраков. Вон тот — точно призрак. С бородой.,The clouds look like ghosts. That one's definitely a ghost. With a beard.
+npc.nils.festival.drowned_night.01,Ночь Утопленников! Я несу фонарь! Три фонаря! За трёх дедушек! Бабушка несёт свои.,Drowned Night! I'm carrying a lantern! Three lanterns! For three grandads! Granny carries hers too.
+npc.nils.festival.ice_festival.01,Ледовый праздник! Кнуд вырезал маяк! Я его лизнул. Язык прилип. Было больно. И смешно.,The Ice Festival! Knud carved a lighthouse! I licked it. My tongue stuck. It hurt. And it was funny.
+npc.nils.festival.regatta.01,Регата! Я болею за Хедду! Она самая сильная! Сильнее меня! Пока!,The regatta! I'm cheering for Hedda! She's the strongest! Stronger than me! For now!
+npc.nils.festival.bird_day.01,"День птиц! Я нарисовал чайку! Лив сказала — похоже на тупика. Значит, я нарисовал тупика!",Bird Day! I drew a gull! Liv said it looks like a puffin. So I drew a puffin!
+npc.nils.festival.01,Праздник! Пироги! Можно съесть три! Бабушка сказала два. Я съем три.,A holiday! Pies! I can have three! Granny said two. I'll have three.
+npc.nils.festival.02,Я танцую! Плохо! Но громко!,I'm dancing! Badly! But loudly!
+npc.nils.gift.love.01,Сладкое! Мне! Ура! Ты {лучший взрослый|лучшая взрослая} на острове!,Sweets! For me! Hooray! You're the best grown-up on the island!
+npc.nils.gift.love.02,Морское стекло! Настоящее! Зелёное! Это для коллекции клуба! Спасибо!,Sea glass! Real! Green! This is for the club's collection! Thanks!
+npc.nils.gift.like.01,Яйцо! Можно я его высижу? Шучу. Отдам бабушке. Или высижу.,An egg! Can I hatch it? Joking. I'll give it to Granny. Or hatch it.
+npc.nils.gift.like.02,Морская звезда! Она живая? Нет? Жаль. Всё равно красивая!,A starfish! Is it alive? No? Pity. Still pretty!
+npc.nils.gift.neutral.01,Это что? Ладно! Спасибо! Положу в тайник!,What's this? All right! Thanks! I'll put it in my hideout!
+npc.nils.gift.neutral.02,Хм. А это для чего? Для охоты на призраков? Годится!,Hm. What's it for? For ghost hunting? It'll do!
+npc.nils.gift.dislike.01,Рыба? Сырая? Фу! Отдай бабушке!,Fish? Raw? Yuck! Give it to Granny!
+npc.nils.gift.dislike.02,Это невкусно. Я знаю. Я пробовал.,It's not tasty. I know. I tried it.
+npc.nils.gift.hate.01,Лютефиск! Фу-у-у! Это же воняет! Хуже призраков!,Lutefisk! Eww! It stinks! Worse than ghosts!
+npc.nils.gift.hate.02,"Нет! Это ужасно! Фрейя, смотри, что мне подарили! Не смотри!","No! It's horrible! Freya, look what I got! Don't look!"
+npc.nils.birthday.01,У меня день рождения! И у Фрейи! Но у меня первым! На восемь минут!,It's my birthday! And Freya's! But mine's first! By eight minutes!
+npc.nils.birthday.02,Мне десять! Я уже большой! Бабушка говорит — ещё нет. Большой!,I'm ten! I'm big now! Granny says not yet. Big!
+npc.nils.birthday_gift.01,Подарок! Мне! Спасибо! А Фрейе? Ей тоже? Мне первому!,A present! For me! Thanks! And Freya? Her too? Me first!
+npc.nils.birthday_gift.02,Ты лучше всех! Ты помнишь про день рождения! Даже Олаф иногда забывает!,You're the best! You remember birthdays! Even Olaf forgets sometimes!
+npc.nils.act1.01,Ты {новый|новая} смотритель? А где Агата? Она давала нам сухари. Ты дашь сухари?,Are you the new keeper? Where's Agatha? She used to give us rusks. Will you give us rusks?
+npc.nils.act1.02,"Я видел, как ты {нёс|несла} утопленника! Он был в парусине! Как настоящий покойник! Он и был настоящий!",I saw you carrying a drowned man! He was in canvas! Like a real dead body! He was a real one!
+npc.nils.act1.03,Можно я буду помогать на погосте? Я умею копать! Я копал в огороде. Бабушка ругалась.,Can I help at the graveyard? I can dig! I dug in the garden. Granny was cross.
+npc.nils.act1.04,"Первый огонь! Я видел! Мы с Фрейей махали! Ты {видел|видела}, как мы махали?",The first light! I saw it! Freya and I waved! Did you see us waving?
+npc.nils.act1.05,"В Гильдейском доме живут пушистики! Облачка с глазками! Хальвдан говорит, их нет. Они есть!",Fluffies live in the Guild House! Little clouds with eyes! Halvdan says they don't exist. They do!
+npc.nils.act1.06,Двадцать восьмого не будем спать! Будем смотреть на Зубы! Бабушка не знает. Не говори ей!,On the twenty-eighth we won't sleep! We'll watch the Teeth! Granny doesn't know. Don't tell her!
+npc.nils.act2.01,Я видел ложный огонь! На Зубах! Настоящий! Потом корабль — бах! Я плакал. Не говори Фрейе.,I saw the false fire! On the Teeth! A real one! Then the ship — crash! I cried. Don't tell Freya.
+npc.nils.act2.02,Белая Хмарь! Бабушка держала нас всю ночь! Туман пел! Мне понравилось! Нет! Мне было страшно! Немножко понравилось.,The White Fog! Granny held us all night! The fog was singing! I liked it! No! I was scared! I liked it a little.
+npc.nils.act2.03,Клуб охотников нашёл в Гильдейском доме записку! «Ф»! Это ключ! Бабушка её сожгла! Зачем?!,The hunters' club found a note in the Guild House! 'F'! It's a clue! Granny burned it! Why?!
+npc.nils.act2.04,Двадцать скелетов! В гротах! Можно посмотреть? Нельзя? Я знал. Всё интересное — нельзя.,Twenty skeletons! In the grottoes! Can I see? No? I knew it. Everything interesting's not allowed.
+npc.nils.act2.05,Лив приехала! Она ловит туман в банки! Можно я тоже? Она дала мне банку! Я поймал! Пустая. Но я поймал!,Liv's arrived! She catches fog in jars! Can I too? She gave me a jar! I caught some! It's empty. But I caught it!
+npc.nils.act2.06,Большая Хмарь! Я буду охранять бабушку! С палкой! С рябиновой! Хельга дала!,The Great Fog! I'll guard Granny! With a stick! A rowan one! Helga gave it to me!
+npc.nils.act3.01,Ты ныряешь в Глубь? Там русалки? Там утопленники? Там клад? Расскажи!,You dive in the Deep? Are there mermaids? Drowned men? Treasure? Tell me!
+npc.nils.act3.02,Ингрид грустная. Я подарил ей лягушку. Она засмеялась. Потом заплакала. Лягушка ускакала.,Ingrid's sad. I gave her a frog. She laughed. Then cried. The frog hopped off.
+npc.nils.act3.03,Клуб охотников ведёт расследование! Про Хальвдана! Фрейя всё записывает! Мы как ты!,The hunters' club is investigating! About Halvdan! Freya writes everything down! We're like you!
+npc.nils.act3.04,"Я видел, как братья Скау несли большой фонарь. Ночью! Я запомнил! Это улика?",I saw the Skau brothers carrying a big lantern. At night! I remembered! Is that evidence?
+npc.nils.act3.05,Скафандр! Можно померить? Хоть шлем? Хоть посмотреть? Хоть потрогать?,The diving suit! Can I try it on? Just the helmet? Just look? Just touch?
+npc.nils.act3.06,Зимой скучно. Но мы расследуем. Расследовать — не скучно.,Winter's boring. But we're investigating. Investigating isn't boring.
+npc.nils.act4.01,Великий Прилив! Море уйдёт! Можно пойти по дну? Там же клады! Нельзя? Всегда нельзя!,The Great Tide! The sea's going out! Can we walk on the bottom? There's treasure! No? It's always no!
+npc.nils.act4.02,Бабушка сказала — сидеть дома. Я буду сидеть. С рябиновой палкой. На всякий случай.,Granny said — stay home. I'll stay. With the rowan stick. Just in case.
+npc.nils.act4.03,Ты победишь? Ты победишь! Смотрители всегда побеждают! В сказках Хельги!,Will you win? You'll win! Keepers always win! In Helga's stories!
+npc.nils.act4.04,Я буду махать маяку всю ночь. Чтобы он не погас. Это помогает. Честно.,I'll wave to the lighthouse all night. So it doesn't go out. It helps. Honest.
+npc.nils.act4.05,Мне не страшно! Мне страшно. Но я смелый!,I'm not scared! I'm scared. But I'm brave!
+npc.nils.act4.06,Когда вернёшься — расскажешь всё! Всё-всё! И про русалок!,When you come back — tell me everything! Everything! And about the mermaids!
+npc.nils.married_other.01,Ты {женился|вышла замуж}! Бабушка плакала. Фрейя тоже. Я — нет. Я большой.,You got married! Granny cried. Freya too. Not me. I'm big.
+npc.nils.married_other.02,На свадьбе я бросил сельдь! Попал в Бьорна! Он смеялся! Потом бросил в меня!,At the wedding I threw a herring! Hit Bjorn! He laughed! Then threw it at me!
+npc.nils.married_other.03,Теперь у тебя семья? А мы всё равно будем приходить? Будем!,Now you've got a family? We can still come round? We will!
+npc.nils.married_other.04,Когда будут дети — я научу их охотиться на призраков! Бесплатно!,When you have kids — I'll teach them to hunt ghosts! For free!
+npc.nils.married_other.05,Поздравляю! Это я Фрейю передразниваю. Она так сказала. Я тоже поздравляю!,Congratulations! That's me copying Freya. She said that. I say it too!
+npc.nils.event.wreck.01,Корабль разбился… Бабушка молчит. Когда бабушка молчит — это очень плохо.,A ship's been wrecked… Granny's quiet. When Granny's quiet — that's very bad.
+npc.nils.event.wreck.02,Я видел с холма обломки. Мне не понравилось. Совсем. Это не приключение.,I saw the wreckage from the hill. I didn't like it. At all. It's not an adventure.
+npc.nils.event.wreck.03,"Там были дети? Как я? Скажи, что нет.",Were there children? Like me? Say no.
+npc.nils.event.wreck.04,"Фрейя плакала. Я её обнял. Она не дралась. Значит, очень грустно.",Freya cried. I hugged her. She didn't hit me. So it's very sad.
+npc.nils.event.wreck.05,Я хочу помочь хоронить. Можно? Я буду нести цветы. Только цветы.,I want to help with the burial. Can I? I'll carry flowers. Only flowers.
+npc.nils.event.funeral.01,Я положил камешек на могилу. Как учила Ингрид. Три камешка. На всякий случай.,I put a pebble on the grave. Like Ingrid taught us. Three pebbles. Just in case.
+npc.nils.event.funeral.02,На похоронах тихо. Я тоже был тихий. Целых пять минут!,Funerals are quiet. I was quiet too. For five whole minutes!
+npc.nils.event.funeral.03,Он теперь призрак? Или просто спит? Если призрак — я с ним познакомлюсь.,Is he a ghost now? Or just sleeping? If he's a ghost — I'll say hello.
+npc.nils.event.funeral.04,Ты хорошо копаешь. Можно я тоже научусь? Когда вырасту?,You dig well. Can I learn too? When I'm grown?
+npc.nils.event.funeral.05,Похороны грустные. Но потом у Бьорна пироги. Это немножко помогает.,Funerals are sad. But afterwards there are pies at Bjorn's. That helps a bit.
+npc.nils.event.hmar.01,Ночь Хмари! Мы спали у бабушки! Все! С псом! С курами! Куры храпят!,Fog Night! We slept at Granny's! All of us! With the dog! With the hens! Hens snore!
+npc.nils.event.hmar.02,"Туман звал маму. Я хотел сказать ему, где мама. Но я не знаю, где его мама.",The fog was calling for its mum. I wanted to tell it where its mum is. But I don't know where its mum is.
+npc.nils.event.hmar.03,Твой свет проходил по комнате! Я считал! До ста! Потом уснул.,Your light went round the room! I counted! Up to a hundred! Then I fell asleep.
+npc.nils.event.hmar.04,Утром на крыльце были мокрые следы! Детские! Как мои! Но не мои!,In the morning there were wet footprints on the step! A child's! Like mine! But not mine!
+npc.nils.event.hmar.05,Я совсем не испугался. Почти. Фрейя испугалась. Она держала меня за руку всю ночь.,I wasn't scared at all. Nearly. Freya was scared. She held my hand all night.
+npc.nils.event.inspection.01,Инспектор приезжал! У него очки! И блокнот! Как у Фрейи! Он скучный!,The inspector came! He's got glasses! And a notebook! Like Freya's! He's boring!
+npc.nils.event.inspection.02,Ты {сдал|сдала}? Ура! Бабушка испекла пирог! За тебя!,You passed? Hooray! Granny baked a pie! For you!
+npc.nils.event.inspection.03,"Инспектор спросил, как меня зовут. Я сказал — Нильс Охотник. Он записал. Теперь я официальный!",The inspector asked my name. I said — Nils the Hunter. He wrote it down. Now I'm official!
+npc.nils.event.inspection.04,Пальм не улыбается. Я корчил рожи. Он всё равно не улыбался. Он точно не призрак?,Palm doesn't smile. I pulled faces. He still didn't smile. Are you sure he's not a ghost?
+npc.nils.event.inspection.05,Инспекция — это как контрольная. Только для маяка.,An inspection's like a test. Only for a lighthouse.
+npc.nils.event.wedding.01,Свадьба! Я бросал рис! И сельдь! И Фрейю! Фрейя бросала меня!,A wedding! I threw rice! And herring! And Freya! Freya threw me!
+npc.nils.event.wedding.02,Я съел пять кусков торта! Бабушка не видела! Теперь видела.,I ate five slices of cake! Granny didn't see! Now she has.
+npc.nils.event.wedding.03,Все танцевали! Я танцевал с бабушкой! Она лучше всех танцует! После Хедды!,Everyone danced! I danced with Granny! She dances best! After Hedda!
+npc.nils.event.wedding.04,Бенедикт упал! От сельди! Это было лучшее на свадьбе!,Benedict fell over! From a herring! That was the best bit of the wedding!
+npc.nils.event.wedding.05,"Когда я вырасту, у меня будет такая же свадьба! С сельдью!",When I grow up I'll have a wedding just like that! With herring!
+npc.nils.event.villains.01,Хальвдана поймали! Мы знали! Клуб охотников знал! Мы почти поймали его сами!,Halvdan's been caught! We knew! The hunters' club knew! We nearly caught him ourselves!
+npc.nils.event.villains.02,Бабушка плюнула Гриму под ноги! Бабушка никогда не плюётся! Она сказала — один раз можно.,Granny spat at Grim's feet! Granny never spits! She said once is allowed.
+npc.nils.event.villains.03,"Ингрид больше не грустная. Ну, грустная. Но меньше. Я подарил ей ещё лягушку.","Ingrid's not sad any more. Well, she is. But less. I gave her another frog."
+npc.nils.event.villains.04,Теперь на Зубах нет огней! Можно ходить туда на лодке? Когда вырасту?,Now there are no lights on the Teeth! Can we go there by boat? When I'm grown?
+npc.nils.event.villains.05,Ты {герой|героиня}! Как в сказках! Можно я буду как ты?,You're a hero! Like in the stories! Can I be like you?
+ev.nils10.l01,Смотритель! Стой смирно! Сейчас будет торжественно!,Keeper! Stand still! This is going to be solemn!
+ev.nils10.l02,"Клуб охотников за привидениями Сольвика принимает тебя в почётные члены. За храбрость, за погост и за то, что не {смеялся|смеялась}.","The Solvik Ghost Hunters' Club makes you an honorary member. For bravery, for the graveyard and for not laughing."
+ev.nils10.l03,Вот значок! Я сам вырезал! Из жести! Бабушкиными ножницами! Не говори бабушке!,Here's the badge! I cut it out myself! From tin! With Granny's scissors! Don't tell Granny!
+npc.freya.spring.01,Нильс опять видел призрака. Это была простыня. Я её вешала.,Nils saw a ghost again. It was a sheet. I hung it out.
+npc.freya.spring.02,Весной я считаю ласточек. Двадцать три. Нильс насчитал сто. Он считает дважды.,In spring I count swallows. Twenty-three. Nils counted a hundred. He counts twice.
+npc.freya.spring.03,"Ингрид говорит, я умная. Я знаю. Но приятно слышать.",Ingrid says I'm clever. I know. But it's nice to hear.
+npc.freya.spring.04,"Я столкнула Нильса с курятника. Он сам хотел узнать, умеет ли летать. Не умеет.",I pushed Nils off the henhouse. He wanted to know if he could fly. He can't.
+npc.freya.spring.05,Ты хоронишь людей. Это грустная работа. Я бы тоже хоронила. Аккуратно.,You bury people. That's sad work. I'd bury them too. Neatly.
+npc.freya.spring.06,"Я написала письмо Агате. Не знаю, куда отправить. Олаф сказал — в море. Я бросила бутылку.",I wrote a letter to Agatha. I don't know where to send it. Olaf said — the sea. I threw in a bottle.
+npc.freya.spring.07,"Бабушка говорит, дедушки в море. Лив говорит, в море вода. Я думаю, они в бабушке.",Granny says the grandads are in the sea. Liv says there's water in the sea. I think they're in Granny.
+npc.freya.spring.08,У меня есть тетрадь. Туда я записываю всё странное. Ты — на третьей странице.,I've got a notebook. I write everything strange in it. You're on page three.
+npc.freya.spring.09,Весной пахнет морем и землёй. Нильс пахнет лягушками.,Spring smells of sea and earth. Nils smells of frogs.
+npc.freya.spring.10,"Клуб охотников за привидениями — это была моя идея. Нильс говорит, его. Он врёт.",The Ghost Hunters' Club was my idea. Nils says it was his. He's lying.
+npc.freya.summer.01,"Лето. У нас день рождения. Нильс говорит, он старше на восемь минут. Я говорю — на восемь минут глупее.",Summer. It's our birthday. Nils says he's eight minutes older. I say eight minutes sillier.
+npc.freya.summer.02,Лив учит меня латыни. Ларус — чайка. Нильсус — брат. Это я сама придумала.,Liv's teaching me Latin. Larus — gull. Nilsus — brother. I made that one up myself.
+npc.freya.summer.03,Я плаваю лучше Нильса. Он брызгается. Это не плавание.,I swim better than Nils. He splashes. That's not swimming.
+npc.freya.summer.04,Летом в лагуне я нашла ракушку. Внутри шумит море. Или это у меня в ухе.,In summer I found a shell in the lagoon. The sea roars inside. Or it's my ear.
+npc.freya.summer.05,Кнуд меня измерил. Метр тридцать шесть. На два сантиметра ниже Нильса. Пока.,Knud measured me. A metre thirty-six. Two centimetres shorter than Nils. For now.
+npc.freya.summer.06,Можно я посмотрю на твой маяк изнутри? Я ничего не трону. В отличие от Нильса.,Can I see inside your lighthouse? I won't touch anything. Unlike Nils.
+npc.freya.summer.07,Белая ночь. Я читаю под одеялом. Без свечи. Лето — лучшее время для тайного чтения.,A white night. I'm reading under the blanket. Without a candle. Summer's the best time for secret reading.
+npc.freya.summer.08,"Лив говорит, туман — это загадка. Я люблю загадки. Я её разгадаю.",Liv says the fog is a mystery. I love mysteries. I'll solve it.
+npc.freya.summer.09,Нильс поймал краба. Краб поймал Нильса. Я записала: «ничья».,Nils caught a crab. The crab caught Nils. I wrote down: 'a draw'.
+npc.freya.summer.10,"Сольвейг дала мне пирог. С ревенем. Я съела. Сигрид сказала, что я смелая.",Solveig gave me a pie. Rhubarb. I ate it. Sigrid said I'm brave.
+npc.freya.autumn.01,Осень — сезон призраков. Я веду журнал наблюдений. Пока ноль. Но я терпеливая.,Autumn is ghost season. I keep an observation log. Zero so far. But I'm patient.
+npc.freya.autumn.02,В Гильдейском доме мы нашли записку с буквой «Ф». «Ф» — как Фрейя. Или как «Фортуна». Я думаю.,In the Guild House we found a note with the letter 'F'. 'F' as in Freya. Or as in Fortuna. I'm thinking.
+npc.freya.autumn.03,Нильс прыгает в листья. Я кладу туда шишки. Это научный эксперимент.,Nils jumps in the leaves. I put pine cones in them. It's a scientific experiment.
+npc.freya.autumn.04,Ночь Утопленников — не праздник. Это когда вспоминают. Я вспоминаю дедушек. Я их не знала. Но вспоминаю.,Drowned Night isn't a party. It's when you remember. I remember the grandads. I never knew them. But I remember.
+npc.freya.autumn.05,Хельга рассказала сказку про кривой фонарь. Я спросила — это правда? Она сказала — почти. Почти — это много.,Helga told a tale about a crooked lantern. I asked — is it true? She said — nearly. Nearly is a lot.
+npc.freya.autumn.06,Школа откроется! Ингрид обещала! У меня будет своя парта. Я буду сидеть отдельно от Нильса.,The school's opening! Ingrid promised! I'll have my own desk. I'll sit away from Nils.
+npc.freya.autumn.07,"Шторм. Я считаю секунды от молнии до грома. Одиннадцать. Значит, гроза над Зубами.",A storm. I'm counting the seconds from lightning to thunder. Eleven. So the storm's over the Teeth.
+npc.freya.autumn.08,Ты {устал|устала}? У тебя лицо как у бабушки после похорон. Хочешь яблоко?,Are you tired? Your face looks like Granny's after a funeral. Want an apple?
+npc.freya.autumn.09,Ярмарка. Я купила Нильсу карамель. Чтобы он молчал. Не помогло.,The fair. I bought Nils a toffee. To keep him quiet. Didn't help.
+npc.freya.autumn.10,"Осенью Бьорн ставит лишнюю кружку на стойку. Я знаю, для кого. Я никому не говорю.",In autumn Bjorn puts an extra mug on the bar. I know who for. I don't tell anyone.
+npc.freya.winter.01,Зима. Я коллекционирую снежинки. На варежке. Они тают. Коллекция маленькая.,Winter. I collect snowflakes. On my mitten. They melt. The collection's small.
+npc.freya.winter.02,Эйнар сделал нам коньки. Я катаюсь медленно. Нильс — быстро. Он падает. Я — нет.,Einar made us skates. I skate slowly. Nils — fast. He falls. I don't.
+npc.freya.winter.03,Долгая ночь. Бабушка рассказывает про дедушек. Каждый год по-разному. Я записываю версии.,The long night. Granny tells us about the grandads. Different every year. I write down the versions.
+npc.freya.winter.04,Снеговики — как дедушки. Бабушка плакала. Нильс не понял почему. Я поняла.,The snowmen are like the grandads. Granny cried. Nils didn't understand why. I did.
+npc.freya.winter.05,"Сияние. Лив говорит, это частицы. Хельга — дочери Ранн. Я думаю, это частицы дочерей Ранн.",The aurora. Liv says it's particles. Helga says it's Rann's daughters. I think it's the particles of Rann's daughters.
+npc.freya.winter.06,"Я загадала, чтобы Нильс замолчал. Не сбылось. Желания зимой плохо работают.",I wished for Nils to be quiet. It didn't come true. Wishes don't work well in winter.
+npc.freya.winter.07,Ингрид связала мне шарф. Кривой. Я его люблю. Кривые вещи самые тёплые.,Ingrid knitted me a scarf. Crooked. I love it. Crooked things are the warmest.
+npc.freya.winter.08,Лёд на лагуне тонкий. Я проверила палкой. Нильс проверил собой.,The lagoon ice is thin. I tested it with a stick. Nils tested it with himself.
+npc.freya.winter.09,"Твой маяк мигает. Я посчитала: каждые двенадцать секунд. Нильс думает, он ему подмигивает.",Your lighthouse blinks. I counted: every twelve seconds. Nils thinks it's winking at him.
+npc.freya.winter.10,"Когда я вырасту, я буду учёной. Как Лив. Или учительницей. Как Ингрид. Или смотрителем. Как ты.",When I grow up I'll be a scientist. Like Liv. Or a teacher. Like Ingrid. Or a keeper. Like you.
+npc.freya.weather.rain.01,Дождь. Нильс прыгает в лужи. Я считаю капли. Мы оба заняты.,Rain. Nils jumps in puddles. I count raindrops. We're both busy.
+npc.freya.weather.rain.02,"В дождь я читаю. Бабушка говорит, я испорчу глаза. Я говорю — улучшу голову.",When it rains I read. Granny says I'll ruin my eyes. I say I'll improve my head.
+npc.freya.weather.storm.01,"Шторм. Я держу Нильса за руку. Он думает, что это он меня держит. Пусть думает.",A storm. I'm holding Nils's hand. He thinks he's holding mine. Let him think so.
+npc.freya.weather.storm.02,Твой маяк горит? Горит. Хорошо. Я проверяю каждые пять минут.,Is your lighthouse burning? It is. Good. I check every five minutes.
+npc.freya.weather.fog.01,Туман. Кто-то плачет. Девочка. Я хочу ей помочь. Бабушка не пускает.,Fog. Someone's crying. A girl. I want to help her. Granny won't let me.
+npc.freya.weather.fog.02,"В тумане я записываю звуки. Колокол, чайки, плач. Плач — самый громкий.","In fog I write down the sounds. The bell, gulls, crying. The crying's the loudest."
+npc.freya.weather.snow.01,Снег. Я генерал снежной крепости. Нильс — армия. Армия опять сбежала.,Snow. I'm the general of the snow fort. Nils is the army. The army's run off again.
+npc.freya.weather.cloud.01,Облака. Кучевые. Лив научила. Нильс говорит — пушистые. Оба правы.,Clouds. Cumulus. Liv taught me. Nils says fluffy. Both are right.
+npc.freya.festival.drowned_night.01,Ночь Утопленников. Я несу фонарь за дедушек. И ещё один — за девочку из тумана. Никто не несёт за неё.,Drowned Night. I carry a lantern for the grandads. And another — for the girl in the fog. Nobody carries one for her.
+npc.freya.festival.bird_day.01,"День птиц! Я насчитала сорок видов. Лив — сорок два. Она знает двух, которых я не видела.",Bird Day! I counted forty species. Liv — forty-two. She knows two I've never seen.
+npc.freya.festival.ice_festival.01,Ледовый праздник. Нильс лизнул скульптуру. Я предупреждала.,The Ice Festival. Nils licked the sculpture. I did warn him.
+npc.freya.festival.long_night.01,Долгая ночь. Я не сплю до утра. Нильс засыпает в десять. Я выигрываю.,The Long Night. I stay up till morning. Nils falls asleep at ten. I win.
+npc.freya.festival.01,Праздник. Все громкие. Я — наблюдаю.,A holiday. Everyone's loud. I'm observing.
+npc.freya.festival.02,"Я танцую, только если никто не смотрит. Нильс смотрит. Не танцую.",I only dance when nobody's watching. Nils is watching. Not dancing.
+npc.freya.gift.love.01,Янтарь! С мушкой внутри! Это же доисторическая мушка! Спасибо!,Amber! With a fly inside! It's a prehistoric fly! Thank you!
+npc.freya.gift.love.02,Сладкое! Я не скажу Нильсу. Половину съем сама. Половину — тоже сама.,Sweets! I won't tell Nils. Half I'll eat myself. The other half — myself too.
+npc.freya.gift.like.01,Морское стекло. Синее. Редкое. Спасибо. Для коллекции.,Sea glass. Blue. Rare. Thank you. For the collection.
+npc.freya.gift.like.02,Цветы! Я засушу их в тетради. Там уже есть три. Это будет четвёртый.,Flowers! I'll press them in my notebook. There are three there already. This'll be the fourth.
+npc.freya.gift.neutral.01,"Спасибо. Запишу в тетрадь: «подарок, назначение неизвестно».","Thank you. I'll write in my notebook: 'gift, purpose unknown'."
+npc.freya.gift.neutral.02,Хм. Интересно. Спасибо.,Hm. Interesting. Thanks.
+npc.freya.gift.dislike.01,Рыба. Сырая. Спасибо. Я отдам коту.,Fish. Raw. Thank you. I'll give it to the cat.
+npc.freya.gift.dislike.02,Это не для детей. Я знаю. Я умная.,That's not for children. I know. I'm clever.
+npc.freya.gift.hate.01,"Лютефиск. Фу. Нильс, беги!","Lutefisk. Yuck. Nils, run!"
+npc.freya.gift.hate.02,"Нет. Спасибо, но нет. Это даже бабушка не ест.","No. Thanks, but no. Even Granny won't eat that."
+npc.freya.birthday.01,День рождения. Мне десять. Нильсу тоже. Но умнее — я.,It's our birthday. I'm ten. So's Nils. But I'm the clever one.
+npc.freya.birthday.02,Бабушка испекла торт на двоих. Нильс съел половину. Свою и мою.,Granny baked a cake for two. Nils ate half. His and mine.
+npc.freya.birthday_gift.01,Подарок! Мне! Отдельно от Нильса! Это впервые!,A present! For me! Separate from Nils! That's a first!
+npc.freya.birthday_gift.02,"Ты помнишь, что у нас день рождения. Ты {внимательный|внимательная}. Это редко у взрослых.",You remember our birthday. You're thoughtful. That's rare in grown-ups.
+npc.freya.act1.01,"Ты {новый|новая} смотритель. Я записала тебя в тетрадь. Страница три. Первая запись: «Кажется, добрый».",You're the new keeper. I've put you in my notebook. Page three. First entry: 'Seems kind.'
+npc.freya.act1.02,"Я видела, как ты несёшь утопленника. Ты {нёс|несла} его аккуратно. Это хорошо. Он же чей-то.",I saw you carrying a drowned man. You carried him carefully. That's good. He belongs to someone.
+npc.freya.act1.03,Агата давала нам сухари. И рассказывала про огонь. Я помню. Нильс помнит только сухари.,Agatha gave us rusks. And told us about the fire. I remember. Nils only remembers the rusks.
+npc.freya.act1.04,Первый огонь. Мы махали. Нильс кричал. Я считала вспышки. Их было много.,The first light. We waved. Nils shouted. I counted the flashes. There were lots.
+npc.freya.act1.05,В Гильдейском доме живут облачка с глазками. Они не страшные. Им грустно.,Little clouds with eyes live in the Guild House. They're not scary. They're sad.
+npc.freya.act1.06,Двадцать восьмого будет плохо. Я чувствую. Я редко ошибаюсь.,Something bad will happen on the twenty-eighth. I can feel it. I'm rarely wrong.
+npc.freya.act2.01,Я видела ложный огонь. Он горел ровно. Твой — мигает. Я поняла разницу. Нильс — нет.,I saw the false fire. It burned steady. Yours blinks. I understood the difference. Nils didn't.
+npc.freya.act2.02,Белая Хмарь. Девочка из тумана пела. Я знаю эту песню. Бабушка пела её нам.,The White Fog. The girl in the fog was singing. I know that song. Granny used to sing it to us.
+npc.freya.act2.03,Записка с «Ф». Бабушка сожгла. Я успела переписать. Я всегда успеваю.,The note with the 'F'. Granny burned it. I managed to copy it. I always manage.
+npc.freya.act2.04,Двадцать скелетов. Их надо похоронить. Все двадцать. Я помогу считать.,Twenty skeletons. They must be buried. All twenty. I'll help count.
+npc.freya.act2.05,"Лив учит меня мерить туман. Туман не хочет, чтобы его мерили. Как Нильс.",Liv's teaching me to measure the fog. The fog doesn't want to be measured. Like Nils.
+npc.freya.act2.06,В Большую Хмарь я буду держать бабушку за руку. И Нильса. И пса. У меня две руки. Пёс сам.,During the Great Fog I'll hold Granny's hand. And Nils's. And the dog. I've two hands. The dog'll manage.
+npc.freya.act3.01,Я веду расследование. Про Хальвдана. В тетради уже пять страниц. Хочешь посмотреть?,I'm running an investigation. About Halvdan. Five pages in my notebook already. Want to see?
+npc.freya.act3.02,Братья Скау носят фонарь ночью. Я видела. Три раза. Я записала даты. Это улика?,The Skau brothers carry a lantern at night. I saw. Three times. I wrote the dates down. Is that evidence?
+npc.freya.act3.03,Ингрид плачет по ночам. Я слышу — мы живём рядом. Я оставляю ей на крыльце цветы.,Ingrid cries at night. I can hear — we live close by. I leave flowers on her step.
+npc.freya.act3.04,Ты спускаешься в Глубь. Там темно. Возьми мою свечку. Она маленькая. Но своя.,You're going down into the Deep. It's dark there. Take my candle. It's small. But it's mine.
+npc.freya.act3.05,Нильс хочет стать смотрителем. Я — тоже. Но я буду лучше. Не говори ему.,Nils wants to be a keeper. So do I. But I'll be better. Don't tell him.
+npc.freya.act3.06,Зимой я читаю Хельгины сказки. В них всё про Уговор. Я почти поняла. Почти — это много.,In winter I read Helga's tales. They're all about the Pact. I almost understood. Almost is a lot.
+npc.freya.act4.01,Великий Прилив. Я посчитала: вода уйдёт на полтора километра. Лив проверила. Я права.,The Great Tide. I calculated: the water will go out a mile. Liv checked. I'm right.
+npc.freya.act4.02,"Я буду считать вспышки маяка всю ночь. Если собьюсь — значит, что-то не так.",I'll count the lighthouse flashes all night. If I lose count — something's wrong.
+npc.freya.act4.03,Мне страшно. Я не скрываю. Страх — это информация.,I'm scared. I don't hide it. Fear is information.
+npc.freya.act4.04,"Если встретишь девочку из тумана — скажи ей, что я несла за неё фонарь. Каждый год.",If you meet the girl in the fog — tell her I carried a lantern for her. Every year.
+npc.freya.act4.05,"Нильс говорит, ты победишь. Я говорю — вероятность высокая. Мы оба за тебя.",Nils says you'll win. I say the probability is high. We're both on your side.
+npc.freya.act4.06,Возвращайся. У меня в тетради для тебя ещё много страниц.,Come back. I've got lots more pages for you in my notebook.
+npc.freya.married_other.01,Поздравляю. Я записала дату в тетрадь. Красными чернилами.,Congratulations. I've written the date in my notebook. In red ink.
+npc.freya.married_other.02,Свадьба была красивая. Нильс бросался сельдью. Я — рисом. Рис правильнее.,It was a lovely wedding. Nils threw herring. I threw rice. Rice is more correct.
+npc.freya.married_other.03,"Теперь у тебя семья. Это хорошо. Семья — это те, кто держит тебя за руку в шторм.",Now you've got a family. That's good. Family is who holds your hand in a storm.
+npc.freya.married_other.04,Мы будем приходить в гости? Будем. Я спрашиваю из вежливости.,Will we come and visit? We will. I'm only asking to be polite.
+npc.freya.married_other.05,Я немножко грустная. Не знаю почему. Запишу и подумаю.,I'm a bit sad. I don't know why. I'll write it down and think about it.
+npc.freya.event.wreck.01,Корабль. Я считала огни ночью. Их было два. Один — лишний.,A ship. I counted the lights last night. There were two. One too many.
+npc.freya.event.wreck.02,"Бабушка не спит. Когда бабушка не спит — значит, крушение.",Granny's not sleeping. When Granny doesn't sleep — it means a wreck.
+npc.freya.event.wreck.03,Я хочу помочь. Я могу писать письма семьям. У меня красивый почерк. Ингрид сказала.,I want to help. I can write letters to families. I've got nice handwriting. Ingrid said so.
+npc.freya.event.wreck.04,Там были дети? Я должна знать. Я запишу их имена. Чтобы кто-то помнил.,Were there children? I need to know. I'll write their names. So someone remembers.
+npc.freya.event.wreck.05,Я не плачу. Я записываю. Это одно и то же.,I'm not crying. I'm writing it down. It's the same thing.
+npc.freya.event.funeral.01,Я положила на могилу засушенный цветок. Из тетради. Самый красивый.,I put a pressed flower on the grave. From my notebook. The prettiest one.
+npc.freya.event.funeral.02,Похороны — это когда человек наконец дома. Мне так Ингрид сказала. Я верю.,A funeral is when a person is finally home. Ingrid told me that. I believe it.
+npc.freya.event.funeral.03,Ты {похоронил|похоронила} его ровно. Я смотрела. Всё правильно.,You buried him straight. I was watching. Everything's right.
+npc.freya.event.funeral.04,Нильс положил три камешка. Я — один. Один правильно. Но три — от души.,Nils put three pebbles. I put one. One is correct. But three is from the heart.
+npc.freya.event.funeral.05,Теперь он не будет ходить в тумане. Я проверю. В следующий туман.,Now he won't walk in the fog. I'll check. Next fog.
+npc.freya.event.hmar.01,Ночь Хмари. Я держала Нильса за руку. Он держал пса. Пёс держал бабушку. Мы цепочка.,Fog Night. I held Nils's hand. He held the dog. The dog held Granny. We're a chain.
+npc.freya.event.hmar.02,"Девочка из тумана плакала у нашего окна. Я постучала ей в ответ. Она замолчала. Может, услышала.",The girl in the fog cried at our window. I knocked back. She went quiet. Maybe she heard.
+npc.freya.event.hmar.03,Я считала вспышки маяка. Тысяча двести. Ни одной пропущенной. Ты молодец.,I counted the lighthouse flashes. Twelve hundred. Not one missed. Well done.
+npc.freya.event.hmar.04,Утром следы на крыльце. Маленькие. Мокрые. Босые. Я их зарисовала.,In the morning footprints on the step. Small. Wet. Bare. I drew them.
+npc.freya.event.hmar.05,"Хмарь — это девочка, которая потеряла маму. Я поняла. Надо найти её маму.",The Fog is a girl who lost her mum. I've understood. Her mum must be found.
+npc.freya.event.inspection.01,Инспектор Пальм посмотрел мою тетрадь. Сказал: «Образцовый учёт». Я счастлива.,Inspector Palm looked at my notebook. Said: 'Exemplary records.' I'm so happy.
+npc.freya.event.inspection.02,Ты {сдал|сдала}. Я знала. Я посчитала вероятность. Девяносто процентов.,You passed. I knew. I calculated the probability. Ninety percent.
+npc.freya.event.inspection.03,"Пальм — как я, только старый. Он тоже всё записывает.","Palm's like me, only old. He writes everything down too."
+npc.freya.event.inspection.04,"Нильс корчил рожи Пальму. Пальм записал: «ребёнок, гримасы». Нильс гордится.","Nils pulled faces at Palm. Palm wrote: 'child, grimaces'. Nils is proud."
+npc.freya.event.inspection.05,"Инспекция — это когда проверяют, хороший ли ты. Ты {хороший|хорошая}. Я и так знала.",An inspection is when they check if you're good. You are. I knew already.
+npc.freya.event.wedding.01,Свадьба. Я бросала рис. По правилам. Нильс — сельдь. Не по правилам.,The wedding. I threw rice. By the rules. Nils threw herring. Not by the rules.
+npc.freya.event.wedding.02,Я танцевала. Один раз. Когда Нильс отвернулся.,I danced. Once. When Nils looked away.
+npc.freya.event.wedding.03,Это была очень правильная свадьба. Все плакали. Даже Бьорн.,It was a very proper wedding. Everyone cried. Even Bjorn.
+npc.freya.event.wedding.04,Я нарисовала вас. Вдвоём. Подарю. Нильс нарисовал сельдь. Не подарит.,I drew you both. Together. I'll give it to you. Nils drew a herring. He won't.
+npc.freya.event.wedding.05,Будьте счастливы. Это моя научная рекомендация.,Be happy. That's my scientific recommendation.
+npc.freya.event.villains.01,Хальвдан. Моё расследование было правильным. Все пять страниц.,Halvdan. My investigation was correct. All five pages.
+npc.freya.event.villains.02,Бабушка плюнула. Первый раз в жизни. Я записала.,Granny spat. First time in her life. I wrote it down.
+npc.freya.event.villains.03,Ингрид стала другой. Спокойнее. Как будто сняла тяжёлый рюкзак.,Ingrid's different now. Calmer. As if she's taken off a heavy rucksack.
+npc.freya.event.villains.04,"Девочка из тумана больше не плачет у нашего окна. Может, ей стало легче.",The girl in the fog doesn't cry at our window any more. Maybe she feels better.
+npc.freya.event.villains.05,Ты {победил|победила}. Я знала. Я записала. На первой странице. Большими буквами.,You won. I knew it. I wrote it down. On the first page. In big letters.
+ev.freya10.l01,Держи. Это карта сокровищ. Я рисовала её три недели. Нильс не знает.,Here. It's a treasure map. I drew it for three weeks. Nils doesn't know.
+ev.freya10.l02,"Крестики: пирог Сольвейг, могила кота на пустоши и… твой маяк. Это самое главное сокровище. Я проверила.","The crosses: Solveig's pie, a cat's grave on the moor and… your lighthouse. That's the biggest treasure. I checked."

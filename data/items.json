@@ -2745,5 +2745,21 @@
     "category": "keepsake",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "ghost_club_badge",
+    "name": "item.ghost_club_badge.name",
+    "desc": "item.ghost_club_badge.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "freya_map",
+    "name": "item.freya_map.name",
+    "desc": "item.freya_map.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
   }
 ]
