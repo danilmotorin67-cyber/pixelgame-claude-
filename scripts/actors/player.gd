@@ -346,6 +346,21 @@ func _unhandled_input(event: InputEvent) -> void:
 			FishingHud.of(hud).begin(self, Inventory.selected_id())
 		get_viewport().set_input_as_handled()
 		return
+	if event.is_action_pressed("use_tool") and Router.current_map == "sea" \
+			and str(Data.by_id("items", Inventory.selected_id()).get("sea_garden", "")) != "":
+		var at_sea := get_global_mouse_position()
+		match SeaGarden.place(Inventory.selected_id(), at_sea) if global_position.distance_to(at_sea) <= 48.0 else "far":
+			"ok":
+				var map_node := get_tree().current_scene.get_node_or_null("Terrain")
+				if map_node and map_node.has_method("rebuild_garden"):
+					map_node.rebuild_garden()
+				_say("Поставлено в морском огороде. Урожай — с лодки, E рядом.")
+			"taken":
+				_say("Здесь уже что-то стоит.")
+			_:
+				_say("Морской огород — участок у причала мыса (рамка на воде).")
+		get_viewport().set_input_as_handled()
+		return
 	var gear_kind := str(Data.by_id("items", Inventory.selected_id()).get("place_water", ""))
 	if event.is_action_pressed("use_tool") and gear_kind != "":
 		var at := get_global_mouse_position()

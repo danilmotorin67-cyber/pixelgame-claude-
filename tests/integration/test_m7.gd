@@ -454,6 +454,113 @@ func _check_buildings() -> void:
 	_check(Buildings.level("house") == 1 and Buildings.level("workshop") == 1 and Buildings.hay == 11, "buildings survive a save")
 
 
+# 14: animals from Margit, fed from the hayloft, petted, their products in the box; 13.9 trees; 13.10 sea garden.
+func _check_farm_life() -> void:
+	_fresh()
+	Economy.money = 100000
+	_check(Animals.buy("chicken") == "home", "no chickens without a coop")
+	Buildings.levels["coop"] = 1
+	Buildings.levels["hayloft"] = 1
+	_check(Animals.buy("duck") == "home", "ducks need coop level 2")
+	for n in 4:
+		_check(Animals.buy("chicken") == "ok", "chicken %d" % (n + 1))
+	_check(Animals.buy("chicken") == "home", "coop level 1 holds 4")
+	var land := Knowledge.land_pts
+	_check(land == 3, "a new kind of animal is 3 land notes (once)")
+	Buildings.hay = 3
+	Clock.day_index = 1
+	var night := Animals.night("clear")
+	_check(int(night["products"]) == 3 and int(night["hungry"]) == 1 and Buildings.hay == 0, "three fed hens lay, the fourth goes hungry")
+	_check(Animals.box_count("coop") == 3, "eggs wait in the coop box")
+	var eggs := Animals.collect("coop")
+	_check(eggs == 3 and Inventory.count_matching("tag:egg") == 3, "collecting the eggs")
+	var hen: Dictionary = Animals.herd[0]
+	_check(Animals.pet(int(hen["id"])) and not Animals.pet(int(hen["id"])) and int(hen["friendship"]) == 15, "petting: +15 once a day")
+	hen["friendship"] = 900
+	Buildings.hay = 10
+	var big := 0
+	for day in range(2, 30):
+		Clock.day_index = day
+		Animals.night("clear")
+	for entry in Animals.boxes.get("coop", []):
+		if str(entry[0]) == "egg_large":
+			big += int(entry[1])
+	_check(big > 0, "a hen with 200+ friendship lays large eggs")
+	# the barn, the pasture and manure
+	Buildings.levels["barn"] = 1
+	_check(Animals.buy("cow") == "ok" and Animals.buy("sheep") == "ok", "a cow and a sheep in the barn")
+	Buildings.hay = 0
+	Buildings.levels["pasture"] = 1
+	Clock.day_index = 30
+	Animals.night("clear")
+	var sheep: Dictionary = Animals.herd.filter(func(a: Dictionary) -> bool: return str(a["kind"]) == "sheep")[0]
+	_check(int(sheep["fed"]) == 30, "the sheep grazes seaweed on the pasture without hay")
+	Buildings.hay = 5
+	for day in range(31, 36):
+		Clock.day_index = day
+		Animals.night("clear")
+	_check(Animals.boxes.get("barn", []).any(func(e: Array) -> bool: return str(e[0]) == "manure"), "the barn gathers manure")
+	_check(Animals.boxes.get("barn", []).any(func(e: Array) -> bool: return str(e[0]) == "wool"), "wool every 3 days")
+	# eider and nest box, pony
+	Clock.day_index = 25
+	Crafting._add("cape", "eider_nest", 900, 800)
+	_check(Animals.buy("eider") == "ok", "an eider settles into the nest box after Bird Day")
+	Clock.day_index = 26
+	Animals.night("clear")
+	var nest: Dictionary = Crafting.objects("cape", "eider_nest")[0]
+	_check(Animals.collect_nest(nest) == 1 and Inventory.count_of("eider_down") == 1, "eider down once a spring")
+	Buildings.levels["stable"] = 1
+	Clock.day_index = 29
+	_check(Animals.buy("pony") == "ok" and Animals.has_pony(), "a pony from Summer 1")
+	var saved := JSON.stringify(Animals.serialize())
+	Animals.reset()
+	Animals.deserialize(JSON.parse_string(saved))
+	_check(Animals.herd.size() == 8 and Animals.has_pony(), "animals survive a save")
+	# trees on the cape; cloudberries only on the bog
+	_empty_inventory()
+	Inventory.add("cloudberry_bush", 1)
+	Inventory.add("sapling_apple", 1)
+	Inventory.select_hotbar(0)
+	_check(not Crafting.place_selected("cape", Vector2(1200, 900)), "cloudberries need the bog")
+	var bog := Crafting._add("cape", "tree", 1200, 880)
+	bog["tree"] = "bog_cranberry"
+	_check(Crafting.place_selected("cape", Vector2(1210, 900)), "a cloudberry bush on the cranberry bog")
+	Inventory.select_hotbar(1)
+	_check(Crafting.place_selected("cape", Vector2(300, 300)) and Crafting.objects("cape", "tree").size() == 3, "an apple tree planted")
+	# the sea garden
+	_empty_inventory()
+	var patch := SeaGarden.area()
+	var spot := Vector2(patch.position.x * 16 + 24, (patch.position.y + 2) * 16 + 8)
+	Inventory.add("kelp_line", 1)
+	Inventory.add("oyster_cage", 1)
+	_check(SeaGarden.place("kelp_line", Vector2(5, 60) * 16) == "area", "only inside the patch by the pier")
+	_check(SeaGarden.place("kelp_line", spot) == "ok" and SeaGarden.place("oyster_cage", spot) == "taken", "one object per tile")
+	var line: Dictionary = Sea.sea_garden[0]
+	Clock.day_index = 28 + 11
+	SeaGarden.night(false)
+	_check(not bool(line["ready"]) and SeaGarden.work(line).begins_with("Растёт"), "kelp takes 12 days")
+	Clock.day_index = 28 + 13
+	SeaGarden.night(false)
+	var kelp_before := Inventory.count_of("kelp")
+	_check(SeaGarden.work(line).begins_with("Собрано") and Inventory.count_of("kelp") - kelp_before >= 5, "5-8 kelp from a line")
+	_check(int(line["next"]) == Clock.day_index + 6, "then every 6 days")
+	var torn := 0
+	for day in 60:
+		Clock.day_index += 1
+		line["broken"] = false
+		SeaGarden.night(true)
+		torn += 1 if bool(line["broken"]) else 0
+	_check(torn > 0 and torn < 20, "storms tear objects loose about one time in ten (%d of 60)" % torn)
+	line["broken"] = true
+	_check(SeaGarden.work(line).begins_with("Сорвано"), "a torn line needs a thread")
+	Inventory.add("thread", 1)
+	_check(SeaGarden.work(line) == "Починено." and not bool(line["broken"]), "a thread mends it")
+	Clock.day_index = 84 + 1
+	Inventory.add("kelp_line", 1)
+	SeaGarden.place("kelp_line", spot + Vector2(16, 0))
+	_check(int(Sea.sea_garden[-1]["next"]) - Clock.day_index == 24, "in winter kelp grows half as fast")
+
+
 func _quality_of(id: String) -> int:
 	for slot in Inventory.slots:
 		if str(slot["id"]) == id:
@@ -468,5 +575,6 @@ func _run() -> void:
 	_check_world_stations()
 	_check_skills()
 	_check_buildings()
+	_check_farm_life()
 	print("M7 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

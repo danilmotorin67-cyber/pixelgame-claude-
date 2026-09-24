@@ -52,6 +52,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	_step(report, "sea", func() -> void:
 		Sea.night_mercy()
 		Sea.night_gear()
+		SeaGarden.night(storm_today)
 		Sea.night_boats()
 		Sea.generate_gifts(Clock.day_index, storm_today))
 	_step(report, "mail", func() -> void:

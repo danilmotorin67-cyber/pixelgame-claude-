@@ -54,10 +54,27 @@ func _ready() -> void:
 	collision.shape = exit_shape
 	exit_node.add_child(collision)
 	add_child(exit_node)
+	var garden := Node2D.new()
+	garden.name = "SeaGarden"
+	add_child(garden)
+	rebuild_garden()
 	var buoy := RestPlaceBuoy.new()
 	buoy.name = "RestPlace"
 	buoy.position = SeaChart.place_pos("rest_place")
 	add_child(buoy)
+
+
+func rebuild_garden() -> void:
+	var layer := get_node_or_null("SeaGarden")
+	if layer == null:
+		return
+	for child in layer.get_children():
+		child.free()
+	for g in Sea.sea_garden:
+		var node := SeaGardenObject.new()
+		node.entry = g
+		node.position = Vector2(int(g["x"]) * TILE + 8, int(g["y"]) * TILE + 8)
+		layer.add_child(node)
 
 
 func _wall(body: StaticBody2D, at: Vector2, size: Vector2) -> void:
@@ -76,6 +93,8 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
+	var patch := SeaGarden.area()
+	draw_rect(Rect2(Vector2(patch.position) * TILE, Vector2(patch.size) * TILE), Color(0.9, 0.8, 0.5, 0.18), false, 1.0)
 	draw_rect(Rect2(-400, -400, width * TILE + 800, height * TILE + 800), DEEP)
 	draw_rect(Rect2(0, 0, width * TILE, height * TILE), WATER)
 	var zone_row := int(SeaChart.cfg("zone2_row"))

@@ -23,6 +23,8 @@ var boat_ready_day: int = -1
 var pools: Dictionary = {}
 var clams: Array = []
 var pools_fished: Dictionary = {}
+# The sea garden of 13.10 by the cape pier: [{kind, x, y, planted, next, ready, broken}] in sea-map tiles.
+var sea_garden: Array = []
 
 
 func reset() -> void:
@@ -41,6 +43,7 @@ func reset() -> void:
 	pools.clear()
 	clams.clear()
 	pools_fished.clear()
+	sea_garden.clear()
 
 
 func schedule_gift(item: String, beach: String, day: int) -> void:
@@ -461,7 +464,7 @@ func serialize() -> Dictionary:
 	return {"mercy": mercy, "blessings": blessings, "boat": boat, "revealed": revealed,
 		"gifts": gifts, "trash_mercy_today": trash_mercy_today, "scheduled": scheduled,
 		"gear": gear, "hull": hull, "hold": hold, "visited": visited, "boat_ready_day": boat_ready_day,
-		"pools": pools, "clams": clams, "pools_fished": pools_fished}
+		"pools": pools, "clams": clams, "pools_fished": pools_fished, "sea_garden": sea_garden}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -495,6 +498,10 @@ func deserialize(d: Dictionary) -> void:
 		spot["x"] = int(spot["x"])
 		spot["row"] = int(spot["row"])
 	pools_fished = d.get("pools_fished", {}).duplicate()
+	sea_garden.clear()
+	for g in d.get("sea_garden", []):
+		sea_garden.append({"kind": str(g["kind"]), "x": int(g["x"]), "y": int(g["y"]), "planted": int(g["planted"]),
+			"next": int(g["next"]), "ready": bool(g.get("ready", false)), "broken": bool(g.get("broken", false))})
 	scheduled.clear()
 	for entry in d.get("scheduled", []):
 		scheduled.append({"item": str(entry["item"]), "beach": str(entry["beach"]), "day": int(entry["day"])})

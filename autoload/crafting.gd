@@ -637,6 +637,14 @@ func sheltered(map_id: String, at: Vector2) -> bool:
 
 # ---- placing and picking up ----
 
+# 13.9: cloudberries grow only on bog ground — the cranberry bog Ilm lays out on the cape.
+func near_bog(map_id: String, at: Vector2) -> bool:
+	for obj in placed.get(map_id, []):
+		if str(obj.get("tree", "")) == "bog_cranberry" and at.distance_to(Vector2(float(obj["x"]), float(obj["y"]))) <= 40.0:
+			return true
+	return false
+
+
 func can_place_at(map_id: String, at: Vector2) -> bool:
 	for obj in placed.get(map_id, []):
 		if Vector2(float(obj["x"]), float(obj["y"])).distance_to(at) < 16.0:
@@ -656,7 +664,11 @@ func place_selected(map_id: String, at: Vector2) -> bool:
 	var maps: Array = HIVE_MAPS if station_id == "beehive" else PLACE_MAPS
 	if tree_id != "":
 		maps = ["cape"]
-	if map_id not in maps or not can_place_at(map_id, snapped) or not Inventory.take_slot(index, 1):
+	if map_id not in maps or not can_place_at(map_id, snapped):
+		return false
+	if tree_id != "" and bool(Data.by_id("trees", tree_id).get("bog", false)) and not near_bog(map_id, snapped):
+		return false
+	if not Inventory.take_slot(index, 1):
 		return false
 	if tree_id != "":
 		var tree := _add(map_id, "tree", int(snapped.x), int(snapped.y))
