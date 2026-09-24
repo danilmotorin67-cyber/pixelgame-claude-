@@ -350,6 +350,10 @@
       {
         "item": "trap",
         "price": 1000
+      },
+      {
+        "item": "hand_net",
+        "price": 200
       }
     ]
   },

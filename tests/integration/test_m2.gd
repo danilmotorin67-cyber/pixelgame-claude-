@@ -602,7 +602,8 @@ func _run() -> void:
 	get_tree().current_scene = cape
 	await get_tree().process_frame
 	var pickups: Pickups = cape.get_node_or_null("Pickups")
-	_check(pickups != null and pickups.get_child_count() == Sea.gifts["cape"].size(),
+	var gift_nodes := pickups.get_children().filter(func(n: Node) -> bool: return n is PickupSpot) if pickups else []
+	_check(pickups != null and gift_nodes.size() == Sea.gifts["cape"].size(),
 		"the cape shows every gift of the morning")
 	_check_eating(cape.get_node("Player"))
 	var stations: Stations = cape.get_node_or_null("Stations")

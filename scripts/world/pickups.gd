@@ -20,6 +20,15 @@ func rebuild() -> void:
 		_spawn(gift, Vector2(int(gift["x"]) * TILE + 8, (row0 + int(gift["row"])) * TILE + 8), true)
 	for spot in Farm.wild.get(map_id, []):
 		_spawn(spot, Vector2(int(spot["x"]) * TILE + 8, int(spot["y"]) * TILE + 8), false)
+	Sea.ensure_pools()
+	for pool in Sea.pools.get(map_id, []):
+		_feature("pool", pool, Vector2(int(pool["x"]) * TILE + 8, (row0 + int(pool["row"])) * TILE + 8))
+	for spot in Sea.clams:
+		if str(spot["map"]) == map_id:
+			_feature("clam", spot, Vector2(int(spot["x"]) * TILE + 8, (row0 + int(spot["row"])) * TILE + 8))
+	for g in Sea.gear:
+		if str(g["map"]) == map_id:
+			_feature(str(g["kind"]), g, Vector2(float(g["x"]), float(g["y"])))
 	_on_tide_changed(Clock.tide_height())
 
 
@@ -31,7 +40,17 @@ func _spawn(entry: Dictionary, at: Vector2, beach: bool) -> void:
 	add_child(spot)
 
 
+func _feature(kind: String, entry: Dictionary, at: Vector2) -> void:
+	var node := ShoreFeature.new()
+	node.kind = kind
+	node.entry = entry
+	node.position = at
+	add_child(node)
+
+
 func _on_tide_changed(_level: float) -> void:
 	for spot in get_children():
 		if spot is PickupSpot and spot.beach:
 			spot.set_available(Sea.is_dry(spot.entry))
+		elif spot is ShoreFeature:
+			spot.refresh()

@@ -164,6 +164,19 @@ func _unhandled_input(event: InputEvent) -> void:
 			FishingHud.of(hud).begin(self, Inventory.selected_id())
 		get_viewport().set_input_as_handled()
 		return
+	var gear_kind := str(Data.by_id("items", Inventory.selected_id()).get("place_water", ""))
+	if event.is_action_pressed("use_tool") and gear_kind != "":
+		var at := get_global_mouse_position()
+		if global_position.distance_to(at) <= 48.0:
+			if Sea.place_gear(gear_kind, Router.current_map, at):
+				var pickups := get_tree().current_scene.get_node_or_null("Pickups") as Pickups
+				if pickups:
+					pickups.rebuild()
+				_say("Поставлено." if gear_kind == "trap" else "Сеть поставлена. Снимать — на следующем отливе.")
+			else:
+				_say("Ловушку — в воду у берега; сеть — на приливную полосу в отлив.")
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("use_tool") and _use_on_object(get_global_mouse_position()):
 		get_viewport().set_input_as_handled()
 		return

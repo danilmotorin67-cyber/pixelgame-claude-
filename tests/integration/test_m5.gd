@@ -192,9 +192,99 @@ func _check_q1_3() -> void:
 	await get_tree().process_frame
 
 
+func _tide_minute(index: int, low: bool) -> int:
+	var best := 0
+	for minute in range(0, 1440, 10):
+		var h := Clock.tide_height_at(index, minute)
+		if (low and h < Clock.tide_height_at(index, best)) or (not low and h > Clock.tide_height_at(index, best)):
+			best = minute
+	return best
+
+
+func _check_gear() -> void:
+	_fresh()
+	Clock.day_index = 2
+	var high := _tide_minute(2, false)
+	Clock.set_time(high / 60, high % 60)
+	Inventory.add("trap", 2)
+	Inventory.add("bait", 3)
+	_check(not Sea.place_gear("trap", "cape", Vector2(600, 400)), "a trap is not set on dry land")
+	_check(Sea.place_gear("trap", "cape", Vector2(600, 56 * 16 + 8)), "a trap goes into the water by the cape")
+	var trap: Dictionary = Sea.gear[0]
+	_check(Sea.bait_trap(trap) and Inventory.count_of("bait") == 2 and not Sea.bait_trap(trap), "one bait per trap")
+	Clock.day_index = 3
+	Sea.night_gear()
+	_check(trap["catch"].size() == 1 and str(trap["catch"][0][0]) in ["lobster", "mussels", "rock_crab", "trash"],
+		"by morning the rocky cape trap holds a catch")
+	var got := Sea.lift_gear(trap)
+	_check(got.size() == 1 and Inventory.count_of(str(got[0][0])) >= 1 and int(Skills.xp["fishing"]) == 5,
+		"lifting a trap: the catch and 5 fishing XP")
+	Sea.night_gear()
+	_check(trap["catch"].is_empty(), "an unbaited trap stays empty")
+
+	Inventory.add("set_net", 1)
+	var low := _tide_minute(3, true)
+	Clock.set_time(high / 60, high % 60)
+	_check(not Sea.place_gear("net", "seal_shore", Vector2(20 * 16, 30 * 16)), "nets are set at low tide")
+	Clock.set_time(low / 60, low % 60)
+	_check(Sea.place_gear("net", "seal_shore", Vector2(20 * 16, 30 * 16)), "a net on the tidal strip at low tide")
+	var net: Dictionary = Sea.gear[-1]
+	_check(Sea.lift_gear(net).is_empty(), "a net is not lifted on the same low water")
+	Clock.day_index = 4
+	var next_low := _tide_minute(4, true)
+	Clock.set_time(next_low / 60, next_low % 60)
+	var fish_before := int(Collections.found.get("fish", {}).size())
+	var catch := Sea.lift_gear(net)
+	var fish_count := 0
+	for entry in catch:
+		if str(entry[0]).begins_with("fish_"):
+			fish_count += 1
+	_check(fish_count >= 3 and fish_count <= 6 and Inventory.count_of("set_net") == 1, "the next low tide: 3-6 fish, and the net back")
+
+	Sea.ensure_pools()
+	_check(Sea.pools["cape"].size() >= 6 and Sea.pools["seal_shore"].size() <= 10, "6-10 rock pools per rocky beach")
+	var pool: Dictionary = Sea.pools["seal_shore"][0]
+	_check(Sea.net_pool(pool).is_empty(), "no hand net, no catch")
+	Inventory.add("hand_net", 1)
+	Clock.set_time(high / 60, high % 60)
+	_check(Sea.net_pool(pool).is_empty(), "pools are under water at high tide")
+	Clock.set_time(next_low / 60, next_low % 60)
+	var pool_catch := Sea.net_pool(pool)
+	_check(pool_catch.size() >= 1 and pool_catch.size() <= 3 and Sea.net_pool(pool).is_empty(), "1-3 creatures, once a day")
+	var scorpion := false
+	for seed_value in 60:
+		Game.world_seed = seed_value
+		Sea.pools_fished.clear()
+		Inventory.reset()
+		Inventory.add("hand_net", 1)
+		for id in Sea.net_pool(pool):
+			scorpion = scorpion or id == "fish_sea_scorpion"
+	_check(scorpion, "the sea scorpion lives in spring rock pools")
+	Inventory.reset()
+	Game.world_seed = 5
+	Sea._spawn_clams(4)
+	_check(Sea.clams.size() >= 3, "clam bubbles on the Seal Shore sand")
+	_check(Sea.dig_clam(Sea.clams[0]) and Inventory.count_of("mya_clam") == 1, "the shovel finds a soft-shell clam")
+
+	Sea.mercy = 10.0
+	Game.world_seed = 5
+	var lost := 0
+	for n in 200:
+		Sea.gear = [{"kind": "trap", "map": "cape", "x": 8.0 * n, "y": 900.0, "baited": false, "catch": [],
+			"set_day": 0, "set_minute": 0}]
+		Clock.day_index = 10 + n
+		Sea.night_gear()
+		if Sea.gear.is_empty():
+			lost += 1
+	_check(lost >= 8 and lost <= 35, "a hostile sea takes about 10%% of gear (%d/200)" % lost)
+	Sea.mercy = 30.0
+	Clock.day_index = 0
+
+
 func _run() -> void:
 	_check_every_fish()
 	_check_minigame_rules()
 	await _check_q1_3()
+	_check_gear()
 	print("M5 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)
