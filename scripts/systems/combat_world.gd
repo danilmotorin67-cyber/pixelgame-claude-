@@ -102,7 +102,7 @@ func attack(weapon_id: String) -> Array:
 		if w.has("ammo") and not Inventory.take(str(w["ammo"]), 1):
 			return []
 		shots.append({"from": "player", "pos": player["pos"], "dir": (player["facing"] as Vector2).normalized(), "speed": 260.0,
-			"range": float(w["ranged"]) * TILE, "travel": 0.0, "weapon": weapon_id, "pierce": bool(w.get("pierce", false)), "hit": []})
+			"range": float(w["ranged"]) * TILE, "travel": 0.0, "weapon": weapon_id, "pierce": bool(w.get("pierce", false)) or Skills.has_profession("harpooner"), "hit": []})
 		return []
 	var reach := float(w.get("reach", 1)) * TILE + CONTACT + float(w.get("area", 0.0)) * TILE
 	var hit: Array = []
@@ -266,7 +266,9 @@ func _think(e: Dictionary, delta: float) -> void:
 				player["held"] = 1.5
 				e["cool"] = 3.0
 		"phaser", "shooter":
-			if dist < 12.0 * TILE:
+			if bool(player["lantern"]) and dist < 3.2 * TILE:
+				_move(e, -to.normalized() * speed, delta, true)
+			elif dist < 12.0 * TILE:
 				_move(e, to.normalized() * speed * (0.6 if str(info["behavior"]) == "shooter" and dist < 4.0 * TILE else 1.0), delta, true)
 			if str(info["behavior"]) == "shooter" and dist < 6.0 * TILE and float(e["cool"]) <= 0.0:
 				e["cool"] = 3.0

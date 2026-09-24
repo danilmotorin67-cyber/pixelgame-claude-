@@ -404,6 +404,22 @@ func put_down(map_id: String, at: Vector2) -> bool:
 	return true
 
 
+# 17.5: the remains of a drowned one brought up from the Deep become a body in the morgue, to be named and buried.
+func add_remains() -> Dictionary:
+	if not Inventory.take("drowned_remains", 1):
+		return {}
+	var rng := _rng(71)
+	var reg := _person(rng, "", "")
+	var id := "body_%d" % next_id
+	next_id += 1
+	var b := _new_body(id, reg, false, rng)
+	b["where"] = "morgue"
+	b["preservation"] = 40.0
+	bodies.append(b)
+	Events.body_spawned.emit(id)
+	return b
+
+
 func morgue_count() -> int:
 	var n := 0
 	for b in bodies:

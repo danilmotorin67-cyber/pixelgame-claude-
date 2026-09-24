@@ -38,6 +38,11 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["hmar_night"] = Weather.hmar_night)
 	_step(report, "farm", func() -> void:
 		Farm.advance_day(storm_today)
+		# 17.4: the frozen swordfish (Ice Festival prize) thaws in spring into an ordinary one.
+		if Clock.season == "spring" and Clock.day == 1:
+			var frozen := Inventory.count_of("frozen_swordfish")
+			if frozen > 0 and Inventory.take("frozen_swordfish", frozen):
+				Inventory.add("swordfish", frozen)
 		Farm.spawn_wild(Clock.day_index))
 	_step(report, "animals", func() -> void:
 		report["animals"] = Animals.night(weather_today))

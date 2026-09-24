@@ -56,6 +56,10 @@ func _ready() -> void:
 		stone.position = RannStone.position()
 		add_child(stone)
 	add_child(BodiesLayer.new())
+	if map_id in ["cape", "village", "seal_shore", "wreck_bay", "lagoon"]:
+		var foes := LandFoes.new()
+		foes.map_id = map_id
+		add_child(foes)
 	var npcs := NpcLayer.new()
 	npcs.map_id = map_id
 	add_child(npcs)

@@ -56,6 +56,7 @@ func _check_combat() -> void:
 	w.attack("oar")
 	_check(hp0 - float(h["hp"]) <= 6.0 * 1.5 * 0.25 + 0.01, "weapons hurt a hmar-thing at a quarter")
 	w.player["lantern"] = true
+	h["stun"] = 5.0
 	for n in 20:
 		w.step(0.1)
 		w.player["pos"] = Vector2.ZERO
@@ -428,6 +429,37 @@ func _check_sea() -> void:
 	_check(is_equal_approx(Fishing.wait_seconds("rod_agatha", "", rng), slow * 0.5), "under the bird frenzy fish bite twice as often")
 
 
+# 17.7: Hmar Night ashore, and remains from the Deep that become bodies to bury.
+func _check_land() -> void:
+	_fresh()
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 3
+	Graveyard.peace = 80.0
+	_check(LandFoes.spawns("cape", rng).size() == 6, "six come ashore on the cape")
+	Graveyard.peace = 40.0
+	_check(LandFoes.spawns("cape", rng).size() == 8, "the restless graveyard (Peace < 60) adds two hmar-things")
+	for i in 5:
+		var t := Crafting._add("cape", "tree", 100 + i * 32, 100)
+		t["tree"] = "tree_rowan"
+		t["grown"] = true
+	_check(is_equal_approx(LandFoes.rowan_cut(), 0.25) and LandFoes.spawns("seal_shore", rng).size() == 3, "five rowans: a quarter fewer")
+	Weather.hmar_night = true
+	Clock.set_time(22, 0)
+	_check(LandFoes.active_now(), "the Hmar comes after 21:00")
+	Clock.set_time(12, 0)
+	_check(not LandFoes.active_now(), "and not by day")
+	var w := _arena(9)
+	var h := w.spawn("hmarnik", Vector2(30, 0))
+	w.player["lantern"] = true
+	w.step(0.5)
+	_check((h["pos"] as Vector2).length() > 30.0, "a hmar-thing backs out of the lantern's circle")
+	# remains
+	Inventory.add("drowned_remains", 1)
+	var b := Graveyard.add_remains()
+	_check(not b.is_empty() and str(b["where"]) == "morgue" and Inventory.count_of("drowned_remains") == 0, "remains from the Deep lie in the morgue")
+	_check(Graveyard.candidates(b, false).size() > 0, "and can be named from the registry")
+
+
 func _run() -> void:
 	_check_combat()
 	_check_bosses()
@@ -436,5 +468,6 @@ func _run() -> void:
 	_check_descent()
 	_check_grotto()
 	_check_sea()
+	_check_land()
 	print("M8 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

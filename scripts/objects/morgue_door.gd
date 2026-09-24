@@ -18,4 +18,7 @@ func interact(_player: Player) -> void:
 		if Graveyard.store_in_morgue():
 			hint.text = "Тело в покойницкой. «Стучите. Нам торопиться некуда»."
 		return
+	if Inventory.selected_id() == "drowned_remains" and not Graveyard.add_remains().is_empty():
+		hint.text = "Останки из Глуби легли на стол. У них тоже было имя."
+		return
 	MorguePanel.open(get_tree().current_scene.get_node("HUD"))

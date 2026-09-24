@@ -478,6 +478,8 @@ func _combat() -> CombatWorld:
 		return Deep.world
 	if Router.current_map == "grotto" and Grotto.active:
 		return Grotto.world
+	if LandFoes.current != null and LandFoes.active_now():
+		return LandFoes.current
 	return null
 
 

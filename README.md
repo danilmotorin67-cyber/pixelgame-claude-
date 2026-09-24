@@ -13,7 +13,9 @@
 подарки, сердечки, 113 сцен, все лавки, календарь и письма; неделя без
 застреваний проверяется `tests/integration/test_m6`. Готова основа M7
 (ремесло и знания): все станки и рецепты, древо знаний, профессии, постройки
-Ильма, животные, теплица и морской огород (`tests/integration/test_m7`). Полная
+Ильма, животные, теплица и морской огород (`tests/integration/test_m7`). Готова основа M8
+(глубина): бой, Глубь до 60 и дальше, гроты, боссы, зона 3 и морские события
+(`tests/integration/test_m8`). Полная
 спецификация игры — в [docs/full.md](docs/full.md). Игра ещё не готова.
 Визуальное направление и первый участок графической переработки описаны в
 [docs/ART_DIRECTION.md](docs/ART_DIRECTION.md).
@@ -26,5 +28,5 @@
 
 При каждом обновлении GitHub Actions проверяет таблицы данных, импорт проекта
 в Godot 4.4.1 и интеграционные сценарии `tests/integration/test_m1.gd`,
-`tests/integration/test_m2.gd` … `tests/integration/test_m7.gd`, а также
+`tests/integration/test_m2.gd` … `tests/integration/test_m8.gd`, а также
 полноту реплик жителей (`tools/dialogue_coverage.py --strict`).
