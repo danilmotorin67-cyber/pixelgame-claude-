@@ -156,6 +156,7 @@ def main() -> int:
         errs.append("regions data must be an object")
     errs.extend(check_people(tables, npc_ids))
     errs.extend(check_crafting(tables, item_ids, npc_ids))
+    errs.extend(check_deep(tables, item_ids))
     if errs:
         print("FAIL")
         for e in errs:
@@ -172,6 +173,61 @@ PROFESSIONS = ("gardener", "herder", "salt_farmer", "northern_gardener", "surf_s
                "smuggler", "salvager", "deep_hunter", "pearler", "rust_baron", "harpooner", "whale_lungs", "craftsman", "optician",
                "artel", "cooper", "fresnel_pupil", "glassblower", "beachcomber", "herbalist", "raven_eye", "driftwood_master",
                "healer", "hmar_forager", "fire_keeper", "gravedigger", "lighthouse_eye", "night_pilot", "soul_guide", "stone_carver")
+
+
+def check_deep(tables, item_ids) -> list:
+    """M8: enemies, bosses, the Deep's biomes and fragments (every gate reachable), the grotto halls, weapons."""
+    from collections import deque
+    errs = []
+    enemy_ids = {e["id"] for e in rows(tables.get("enemies", []))}
+    for e in rows(tables.get("enemies", [])):
+        for item, _lo, _hi, _chance in e.get("loot", []):
+            if item not in item_ids:
+                errs.append(f"enemy {e['id']} drops unknown {item}")
+    for b in rows(tables.get("bosses", [])):
+        for item, _n in b.get("reward", {}).get("items", []):
+            if item not in item_ids:
+                errs.append(f"boss {b['id']} rewards unknown {item}")
+    gates = [(4, 0), (5, 0), (4, 9), (5, 9), (0, 4), (0, 5), (9, 4), (9, 5)]
+    for biome in rows(tables.get("deep_biomes", [])):
+        for item, *_ in biome.get("resources", []):
+            if item not in item_ids:
+                errs.append(f"biome {biome['id']} unknown resource {item}")
+        for enemy, *_ in biome.get("enemies", []):
+            if enemy not in enemy_ids:
+                errs.append(f"biome {biome['id']} unknown enemy {enemy}")
+        if len(biome.get("fragments", [])) < 30:
+            errs.append(f"biome {biome['id']} needs 30+ fragments")
+        for n, frag in enumerate(biome.get("fragments", [])):
+            if len(frag) != 10 or any(len(r) != 10 for r in frag):
+                errs.append(f"biome {biome['id']} fragment {n} is not 10x10")
+                continue
+            seen = {gates[0]}
+            queue = deque([gates[0]])
+            while queue:
+                x, y = queue.popleft()
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < 10 and 0 <= ny < 10 and frag[ny][nx] != "#" and (nx, ny) not in seen:
+                        seen.add((nx, ny))
+                        queue.append((nx, ny))
+            if not all(g in seen for g in gates):
+                errs.append(f"biome {biome['id']} fragment {n}: gates not connected")
+    grotto = tables.get("grotto", {})
+    halls = grotto.get("halls", []) if isinstance(grotto, dict) else []
+    if len(halls) != 10:
+        errs.append("the grottoes need 10 halls")
+    for h in halls:
+        if any(ch not in grotto.get("legend", {}) for r in h["rows"] for ch in r):
+            errs.append(f"{h['id']} has unknown tiles")
+        if not any("<" in r for r in h["rows"]):
+            errs.append(f"{h['id']} has no entry")
+    for w in rows(tables.get("weapons", [])):
+        if w["id"] not in item_ids:
+            errs.append(f"weapon {w['id']} has no item")
+        if "ammo" in w and w["ammo"] not in item_ids:
+            errs.append(f"weapon {w['id']} unknown ammo")
+    return errs
 
 
 def check_crafting(tables, item_ids, npc_ids) -> list:

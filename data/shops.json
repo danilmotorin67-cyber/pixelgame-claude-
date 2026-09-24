@@ -422,6 +422,18 @@
       {
         "item": "hand_net",
         "price": 200
+      },
+      {
+        "item": "fisher_knife",
+        "price": 300
+      },
+      {
+        "item": "speargun",
+        "price": 3000
+      },
+      {
+        "item": "harpoon_bolts",
+        "price": 15
       }
     ],
     "keepers": [
@@ -590,6 +602,10 @@
       {
         "service": "open_chest",
         "price": 25
+      },
+      {
+        "item": "cutlass",
+        "price": 2500
       }
     ]
   },

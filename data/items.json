@@ -6012,5 +6012,397 @@
     "stack": 20,
     "place": "decor",
     "tier": 3
+  },
+  {
+    "id": "brass_fittings",
+    "name": "item.brass_fittings.name",
+    "desc": "item.brass_fittings.desc",
+    "category": "material",
+    "price": 120,
+    "stack": 99
+  },
+  {
+    "id": "moon_slate",
+    "name": "item.moon_slate.name",
+    "desc": "item.moon_slate.desc",
+    "category": "material",
+    "price": 800,
+    "stack": 99
+  },
+  {
+    "id": "black_pearl",
+    "name": "item.black_pearl.name",
+    "desc": "item.black_pearl.desc",
+    "category": "gift",
+    "price": 1500,
+    "stack": 99
+  },
+  {
+    "id": "pearl_oyster",
+    "name": "item.pearl_oyster.name",
+    "desc": "item.pearl_oyster.desc",
+    "category": "material",
+    "price": 0,
+    "stack": 99,
+    "use": "open_oyster"
+  },
+  {
+    "id": "baleen",
+    "name": "item.baleen.name",
+    "desc": "item.baleen.desc",
+    "category": "material",
+    "price": 150,
+    "stack": 99
+  },
+  {
+    "id": "crab_shell",
+    "name": "item.crab_shell.name",
+    "desc": "item.crab_shell.desc",
+    "category": "material",
+    "price": 30,
+    "stack": 99,
+    "tags": [
+      "shell"
+    ]
+  },
+  {
+    "id": "crab_meat",
+    "name": "item.crab_meat.name",
+    "desc": "item.crab_meat.desc",
+    "category": "food",
+    "price": 60,
+    "stack": 20,
+    "edible": {
+      "energy": 30,
+      "health": 12
+    }
+  },
+  {
+    "id": "glowing_whisker",
+    "name": "item.glowing_whisker.name",
+    "desc": "item.glowing_whisker.desc",
+    "category": "material",
+    "price": 400,
+    "stack": 99
+  },
+  {
+    "id": "bone",
+    "name": "item.bone.name",
+    "desc": "item.bone.desc",
+    "category": "material",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "copper_helmet",
+    "name": "item.copper_helmet.name",
+    "desc": "item.copper_helmet.desc",
+    "category": "decor",
+    "price": 400,
+    "stack": 10,
+    "place": "decor",
+    "tier": 2
+  },
+  {
+    "id": "drowned_remains",
+    "name": "item.drowned_remains.name",
+    "desc": "item.drowned_remains.desc",
+    "category": "remains",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "salt_crystal",
+    "name": "item.salt_crystal.name",
+    "desc": "item.salt_crystal.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 99
+  },
+  {
+    "id": "old_crown",
+    "name": "item.old_crown.name",
+    "desc": "item.old_crown.desc",
+    "category": "gift",
+    "price": 300,
+    "stack": 99
+  },
+  {
+    "id": "grandma_anchor",
+    "name": "item.grandma_anchor.name",
+    "desc": "item.grandma_anchor.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "swordfish",
+    "name": "item.swordfish.name",
+    "desc": "item.swordfish.desc",
+    "category": "food",
+    "price": 300,
+    "stack": 10,
+    "edible": {
+      "energy": 50,
+      "health": 20
+    }
+  },
+  {
+    "id": "chest_deep",
+    "name": "item.chest_deep.name",
+    "desc": "item.chest_deep.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 10,
+    "open": "deep_chest"
+  },
+  {
+    "id": "heart_of_grotto",
+    "name": "item.heart_of_grotto.name",
+    "desc": "item.heart_of_grotto.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 1,
+    "open": "heart_of_grotto"
+  },
+  {
+    "id": "smuggler_crate",
+    "name": "item.smuggler_crate.name",
+    "desc": "item.smuggler_crate.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 10,
+    "open": "smuggler_crate"
+  },
+  {
+    "id": "sextant_cracked",
+    "name": "item.sextant_cracked.name",
+    "desc": "item.sextant_cracked.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "captain_glasses",
+    "name": "item.captain_glasses.name",
+    "desc": "item.captain_glasses.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "medallion_portrait",
+    "name": "item.medallion_portrait.name",
+    "desc": "item.medallion_portrait.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "solvik_nail",
+    "name": "item.solvik_nail.name",
+    "desc": "item.solvik_nail.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "toy_boat",
+    "name": "item.toy_boat.name",
+    "desc": "item.toy_boat.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "street_sign",
+    "name": "item.street_sign.name",
+    "desc": "item.street_sign.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "chapel_bell_cracked",
+    "name": "item.chapel_bell_cracked.name",
+    "desc": "item.chapel_bell_cracked.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "fresco_fragment",
+    "name": "item.fresco_fragment.name",
+    "desc": "item.fresco_fragment.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "squid_beak",
+    "name": "item.squid_beak.name",
+    "desc": "item.squid_beak.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "scrimshaw",
+    "name": "item.scrimshaw.name",
+    "desc": "item.scrimshaw.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "smuggler_flask",
+    "name": "item.smuggler_flask.name",
+    "desc": "item.smuggler_flask.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": false
+  },
+  {
+    "id": "fortuna_wheel",
+    "name": "item.fortuna_wheel.name",
+    "desc": "item.fortuna_wheel.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": true
+  },
+  {
+    "id": "false_lantern",
+    "name": "item.false_lantern.name",
+    "desc": "item.false_lantern.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": true
+  },
+  {
+    "id": "grim_seal",
+    "name": "item.grim_seal.name",
+    "desc": "item.grim_seal.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 5,
+    "rare": true
+  },
+  {
+    "id": "fisher_knife",
+    "name": "item.fisher_knife.name",
+    "desc": "item.fisher_knife.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "gaff_wood",
+    "name": "item.gaff_wood.name",
+    "desc": "item.gaff_wood.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "gaff_iron",
+    "name": "item.gaff_iron.name",
+    "desc": "item.gaff_iron.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "cutlass",
+    "name": "item.cutlass.name",
+    "desc": "item.cutlass.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "speargun",
+    "name": "item.speargun.name",
+    "desc": "item.speargun.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "silver_cutlass",
+    "name": "item.silver_cutlass.name",
+    "desc": "item.silver_cutlass.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "frozen_swordfish",
+    "name": "item.frozen_swordfish.name",
+    "desc": "item.frozen_swordfish.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "moray_fang",
+    "name": "item.moray_fang.name",
+    "desc": "item.moray_fang.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "damage": 0.1
+    }
+  },
+  {
+    "id": "ringer_bell",
+    "name": "item.ringer_bell.name",
+    "desc": "item.ringer_bell.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "stun_chance": 0.1
+    }
+  },
+  {
+    "id": "fragment_f2",
+    "name": "item.fragment_f2.name",
+    "desc": "item.fragment_f2.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "diving_suit",
+    "name": "item.diving_suit.name",
+    "desc": "item.diving_suit.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "rann_gills",
+    "name": "item.rann_gills.name",
+    "desc": "item.rann_gills.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "gills": 1
+    }
   }
 ]

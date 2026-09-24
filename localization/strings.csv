@@ -5775,3 +5775,151 @@ skill.diving,Ныряние,Diving
 skill.crafting,Ремесло,Crafting
 skill.foraging,Собирательство,Foraging
 skill.keeping,Смотрительство,Keeping
+item.brass_fittings.name,Латунная фурнитура,Brass fittings
+item.brass_fittings.desc,Старый Сольвик. Горн: 2 → латунь.,Old Solvik. Forge: 2 → brass.
+item.moon_slate.name,Лунный сланец,Moon slate
+item.moon_slate.desc,Бездна. 3 сланца + серебро → лунное серебро.,The Abyss. 3 slate + silver → moon silver.
+item.black_pearl.name,Чёрная жемчужина,Black pearl
+item.black_pearl.desc,Из жемчужниц Бездны.,From the pearl oysters of the Abyss.
+item.pearl_oyster.name,Раковина-жемчужница,Pearl oyster
+item.pearl_oyster.desc,Открыть ножом рыбака (Q).,Open with the fisher's knife (Q).
+item.baleen.name,Китовый ус,Baleen
+item.baleen.desc,"Бездна, Бухта.","The Abyss, the bay."
+item.crab_shell.name,Панцирь краба,Crab shell
+item.crab_shell.desc,Добыча с крабов.,Taken from crabs.
+item.crab_meat.name,Мясо краба,Crab meat
+item.crab_meat.desc,Сладкое и нежное.,Sweet and tender.
+item.glowing_whisker.name,Светящийся ус,Glowing whisker
+item.glowing_whisker.desc,Ус удильщика. Светится в темноте.,An anglerfish whisker. Glows in the dark.
+item.bone.name,Кость,Bone
+item.bone.desc,Бездна.,The Abyss.
+item.copper_helmet.name,Медный шлем,Copper helmet
+item.copper_helmet.desc,Шлем рака-стражника.,A helmet crab's helmet.
+item.drowned_remains.name,Останки,Remains
+item.drowned_remains.desc,Похоронить на погосте: E у покойницкой.,Bury in the graveyard: E at the morgue.
+item.salt_crystal.name,Соляной кристалл,Salt crystal
+item.salt_crystal.desc,Соляной зал гротов. Верстак: 1 → 3 соли.,The Salt Hall. Workbench: 1 → 3 salt.
+item.old_crown.name,Старая крона,Old crown
+item.old_crown.desc,Монета Кривого Фонаря.,A coin of Crooked Lantern's time.
+item.grandma_anchor.name,Якорь бабушки,Grandmother's anchor
+item.grandma_anchor.desc,Из сундука на 55-м уровне Глуби.,From a chest on level 55 of the Deep.
+item.swordfish.name,Меч-рыба,Swordfish
+item.swordfish.desc,Оттаявшая.,Thawed out.
+item.chest_deep.name,Сундук из Глуби,Chest from the Deep
+item.chest_deep.desc,Q — открыть.,Q to open.
+item.heart_of_grotto.name,Сундук «Сердце грота»,Chest 'Heart of the Grotto'
+item.heart_of_grotto.desc,Q — открыть.,Q to open.
+item.smuggler_crate.name,Ящик контрабандистов,Smugglers' crate
+item.smuggler_crate.desc,Q — открыть.,Q to open.
+item.sextant_cracked.name,Секстант с трещиной,Cracked sextant
+item.sextant_cracked.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.captain_glasses.name,Очки капитана,Captain's spectacles
+item.captain_glasses.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.medallion_portrait.name,Медальон с портретом,Portrait locket
+item.medallion_portrait.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.solvik_nail.name,Кованый гвоздь Старого Сольвика,Forged nail of Old Solvik
+item.solvik_nail.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.toy_boat.name,Детская деревянная лодочка,Child's wooden boat
+item.toy_boat.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.street_sign.name,"Табличка «Ул. Сетей, 3»","Sign 'Net Street, 3'"
+item.street_sign.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.chapel_bell_cracked.name,Треснутый колокольчик часовни,Cracked chapel bell
+item.chapel_bell_cracked.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.fresco_fragment.name,Фрагмент фрески,Fresco fragment
+item.fresco_fragment.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.squid_beak.name,Клюв гигантского кальмара,Giant squid beak
+item.squid_beak.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.scrimshaw.name,Скримшоу,Scrimshaw
+item.scrimshaw.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.smuggler_flask.name,Фляга контрабандиста,Smuggler's flask
+item.smuggler_flask.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.fortuna_wheel.name,Обломок штурвала «Фортуны»,Piece of the Fortuna's wheel
+item.fortuna_wheel.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.false_lantern.name,Старый ложный фонарь,Old false lantern
+item.false_lantern.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.grim_seal.name,Печать Гримов,The Grims' seal
+item.grim_seal.desc,Для Кунсткамеры маяка.,For the lighthouse cabinet of curiosities.
+item.fisher_knife.name,Нож рыбака,Fisher's knife
+item.fisher_knife.desc,Открывает раковины.,Opens shells.
+item.gaff_wood.name,Деревянный багор,Wooden gaff
+item.gaff_wood.desc,"Дальность +1, ломает обломки.","Reach +1, breaks debris."
+item.gaff_iron.name,Кованый багор,Forged gaff
+item.gaff_iron.desc,"Дальность +1, ломает обломки.","Reach +1, breaks debris."
+item.cutlass.name,Абордажный тесак,Boarding cutlass
+item.cutlass.desc,Честный клинок.,An honest blade.
+item.speargun.name,Гарпунное ружьё,Speargun
+item.speargun.desc,"Стреляет стрелами, только под водой.","Fires bolts, underwater only."
+item.silver_cutlass.name,Серебряный тесак,Silver cutlass
+item.silver_cutlass.desc,+50% урона утопцам.,+50% damage to the drowned.
+item.frozen_swordfish.name,Замороженная меч-рыба,Frozen swordfish
+item.frozen_swordfish.desc,Весной оттает.,Thaws in spring.
+item.moray_fang.name,Клык Мурены,Moray's Fang
+item.moray_fang.desc,Урон +10% (складывается с зубаткой).,Damage +10% (stacks with the wolffish).
+item.ringer_bell.name,Колокольчик Звонаря,The Ringer's bell
+item.ringer_bell.desc,10% шанс оглушить при ударе.,10% chance to stun on a hit.
+item.fragment_f2.name,Фрагмент Ф2,Fragment F2
+item.fragment_f2.desc,Из колокольни Старого Сольвика.,From the bell tower of Old Solvik.
+item.diving_suit.name,Скафандр,Diving suit
+item.diving_suit.desc,Шланг даёт бесконечный воздух в радиусе 30.,The hose gives endless air within 30 tiles.
+item.rann_gills.name,«Жабры Ранн»,'Rann's Gills'
+item.rann_gills.desc,"Воздух не нужен, полная скорость под водой.","No air needed, full speed underwater."
+weapon.oar,Весло,Oar
+weapon.fisher_knife,Нож рыбака,Fisher's knife
+weapon.gaff_wood,Деревянный багор,Wooden gaff
+weapon.gaff_iron,Кованый багор,Forged gaff
+weapon.cutlass,Абордажный тесак,Boarding cutlass
+weapon.speargun,Гарпунное ружьё,Speargun
+weapon.silver_cutlass,Серебряный тесак,Silver cutlass
+weapon.whaling_harpoon,Китобойный гарпун,Whaling harpoon
+weapon.frozen_swordfish,Замороженная меч-рыба,Frozen swordfish
+weapon.anchor_agatha,«Якорь Агаты»,'Agatha's Anchor'
+enemy.crab,Краб-клешнерез,Cutter crab
+enemy.jellyfish,Медуза-жгучка,Stinging jellyfish
+enemy.urchin,Морской ёж,Sea urchin
+enemy.moray,Мурена кельповая,Kelp moray
+enemy.bullhead,Колючий бычок,Spiny bullhead
+enemy.seal_bully,Тюлень-хулиган,Bully seal
+enemy.drowned,Утопец,Drowned one
+enemy.drowned_citizen,Утопец-горожанин,Drowned townsman
+enemy.hmarnik,Хмарник,Hmar-thing
+enemy.helmet_crayfish,Рак в шлеме,Helmeted crayfish
+enemy.octopus,Спрут,Octopus
+enemy.electric_ray,Скат-электрик,Electric ray
+enemy.net_trap,Сеть-ловушка,Net trap
+enemy.anglerfish,Удильщик,Anglerfish
+enemy.deep_crab,Глубинный краб,Deep crab
+enemy.bonefish,Костяная рыба,Bonefish
+enemy.hmar_spirit,Хмаревой дух,Hmar spirit
+enemy.hot_vent,Горячее жерло,Hot vent
+enemy.gull_marauder,Чайка-мародёр,Marauder gull
+enemy.wet_dog,Мокрый пёс,Wet dog
+enemy.saboteur,Саботажник,Saboteur
+boss.mother_moray,Мать-Мурена,Mother Moray
+boss.bell_ringer,Звонарь,The Bell-Ringer
+boss.bone_whale,Костяной Кит,The Bone Whale
+biome.kelp,Кельповый лес,Kelp forest
+biome.old_solvick,Старый Сольвик,Old Solvik
+biome.bone_abyss,Костяная Бездна,Bone Abyss
+grotto.hall_1,Устье,The Mouth
+grotto.hall_2,Галерея раковин,Gallery of Shells
+grotto.hall_3,Ниша «Ф»,The 'F' niche
+grotto.hall_4,Соляной зал,The Salt Hall
+grotto.hall_5,Склад контрабандистов,Smugglers' store
+grotto.hall_6,Колодец эха,Well of Echoes
+grotto.hall_7,Затопленный ход,Flooded passage
+grotto.hall_8,Зал Двадцати,Hall of the Twenty
+grotto.hall_9,Кладовая Кривого Фонаря,Crooked Lantern's larder
+grotto.hall_10,Зал Эха Отлива,Hall of the Ebb's Echo
+sea_event.cargo,Плавучий груз! Подцепите багром.,Floating cargo! Hook it with a gaff.
+sea_event.bottle,Бутылка на волне.,A bottle on the waves.
+sea_event.bird_frenzy,Птичий базар над водой: рыба клюёт вдвое чаще.,A bird frenzy over the water: fish bite twice as often.
+sea_event.seals,Тюлени у камня. Им бы сельди.,Seals by the rock. They'd like some herring.
+sea_event.whales,Киты! Фонтаны у горизонта.,Whales! Spouts on the horizon.
+sea_event.orcas,Касатки режут волну.,Orcas cut through the waves.
+sea_event.ghost_ship,Корабль без огней. «Элеонора».,A ship with no lights. The Eleonora.
+sea_event.fisher_in_trouble,Рыбак в беде: лодка без вёсел.,A fisherman in trouble: a boat without oars.
+sea_event.squall,Шквал! Ветер рванул с другой стороны.,A squall! The wind tears in from the other side.
+place.open_sea,Открытое море,Open sea
+place.ice_field,Ледяное поле,Ice field
+place.nameless_isle,Остров Без Имени,The Nameless Isle
+place.fairway,Кронвальдский фарватер,Kronvald fairway

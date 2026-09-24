@@ -1,1 +1,89 @@
-[]
+[
+ {
+  "id": "mother_moray",
+  "name": "boss.mother_moray",
+  "level": 20,
+  "hp": 400,
+  "damage": 18,
+  "phases": [
+   1.0,
+   0.5
+  ],
+  "mechanics": [
+   "burrows",
+   "bubbles_warning",
+   "calls_morays"
+  ],
+  "reward": {
+   "items": [
+    [
+     "moray_fang",
+     1
+    ]
+   ],
+   "money": 2000
+  },
+  "xp": 200
+ },
+ {
+  "id": "bell_ringer",
+  "name": "boss.bell_ringer",
+  "level": 40,
+  "hp": 1200,
+  "damage": 24,
+  "phases": [
+   1.0,
+   0.66,
+   0.33
+  ],
+  "mechanics": [
+   "bell_wave",
+   "raise_drowned",
+   "bell_falls"
+  ],
+  "reward": {
+   "items": [
+    [
+     "fragment_f2",
+     1
+    ],
+    [
+     "ringer_bell",
+     1
+    ]
+   ],
+   "money": 0,
+   "flag": "ghost_nilsen"
+  },
+  "xp": 200
+ },
+ {
+  "id": "bone_whale",
+  "name": "boss.bone_whale",
+  "level": 60,
+  "hp": 3000,
+  "damage": 30,
+  "phases": [
+   1.0,
+   0.5
+  ],
+  "mechanics": [
+   "glow_nodes",
+   "inhale"
+  ],
+  "reward": {
+   "items": [
+    [
+     "star_amber",
+     1
+    ],
+    [
+     "whalebone",
+     10
+    ]
+   ],
+   "money": 10000
+  },
+  "xp": 200
+ }
+]

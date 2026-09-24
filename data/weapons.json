@@ -1,6 +1,107 @@
 [
-  {
-    "id": "oar",
-    "damage": 4
+ {
+  "id": "oar",
+  "damage": [
+   3,
+   6
+  ],
+  "speed": "medium",
+  "reach": 1
+ },
+ {
+  "id": "fisher_knife",
+  "damage": [
+   4,
+   8
+  ],
+  "speed": "fast",
+  "reach": 1,
+  "tool": "opens"
+ },
+ {
+  "id": "gaff_wood",
+  "damage": [
+   5,
+   9
+  ],
+  "speed": "slow",
+  "reach": 2,
+  "ranged": 1,
+  "tool": "breaks"
+ },
+ {
+  "id": "gaff_iron",
+  "damage": [
+   9,
+   15
+  ],
+  "speed": "slow",
+  "reach": 2,
+  "ranged": 1,
+  "tool": "breaks"
+ },
+ {
+  "id": "cutlass",
+  "damage": [
+   10,
+   18
+  ],
+  "speed": "medium",
+  "reach": 1
+ },
+ {
+  "id": "speargun",
+  "damage": [
+   12,
+   20
+  ],
+  "speed": "slow",
+  "reach": 1,
+  "ranged": 6,
+  "underwater_only": true,
+  "ammo": "harpoon_bolts"
+ },
+ {
+  "id": "silver_cutlass",
+  "damage": [
+   18,
+   28
+  ],
+  "speed": "medium",
+  "reach": 1,
+  "bonus": {
+   "drowned": 0.5
   }
+ },
+ {
+  "id": "whaling_harpoon",
+  "damage": [
+   25,
+   40
+  ],
+  "speed": "very_slow",
+  "reach": 1,
+  "ranged": 6,
+  "pierce": true
+ },
+ {
+  "id": "frozen_swordfish",
+  "damage": [
+   20,
+   30
+  ],
+  "speed": "fast",
+  "reach": 1
+ },
+ {
+  "id": "anchor_agatha",
+  "damage": [
+   30,
+   50
+  ],
+  "speed": "slow",
+  "reach": 1,
+  "area": 1.5,
+  "stun": 1.0
+ }
 ]

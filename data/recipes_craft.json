@@ -5075,5 +5075,135 @@
    1
   ],
   "unlock": "profession:glassblower"
+ },
+ {
+  "id": "smelt_brass_fittings",
+  "station": "forge",
+  "in": [
+   [
+    "brass_fittings",
+    2
+   ]
+  ],
+  "out": [
+   "brass",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "smelt_moon_silver",
+  "station": "forge",
+  "in": [
+   [
+    "moon_slate",
+    3
+   ],
+   [
+    "silver_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "moon_silver",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "forge_silver_cutlass",
+  "station": "forge",
+  "in": [
+   [
+    "silver_ingot",
+    3
+   ],
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "silver_cutlass",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "forge_anchor_agatha",
+  "station": "forge",
+  "in": [
+   [
+    "moon_silver",
+    5
+   ],
+   [
+    "grandma_anchor",
+    1
+   ]
+  ],
+  "out": [
+   "anchor_agatha",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "craft_gaff_wood",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    5
+   ],
+   [
+    "iron_ingot",
+    1
+   ]
+  ],
+  "out": [
+   "gaff_wood",
+   1
+  ],
+  "unlock": "start"
+ },
+ {
+  "id": "forge_gaff_iron",
+  "station": "forge",
+  "in": [
+   [
+    "gaff_wood",
+    1
+   ],
+   [
+    "iron_ingot",
+    3
+   ]
+  ],
+  "out": [
+   "gaff_iron",
+   1
+  ],
+  "unlock": "start",
+  "minutes": 120
+ },
+ {
+  "id": "craft_salt_crystal",
+  "station": "workbench",
+  "in": [
+   [
+    "salt_crystal",
+    1
+   ]
+  ],
+  "out": [
+   "salt",
+   3
+  ],
+  "unlock": "start"
  }
 ]

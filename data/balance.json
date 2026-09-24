@@ -273,7 +273,7 @@
   "sea": {
     "size": [
       120,
-      90
+      140
     ],
     "coast_rows": 6,
     "dock": [
@@ -301,8 +301,11 @@
       "bot": {
         "row": 0.9,
         "sail": 2.2,
-        "hold": 36,
-        "zones": 3
+        "hold": 48,
+        "zones": 3,
+        "cabin": true,
+        "pump": true,
+        "storm_ok_with_sails": true
       }
     },
     "wind_angles": [
@@ -388,6 +391,36 @@
           78
         ],
         "zone": 2
+      },
+      "open_sea": {
+        "at": [
+          60,
+          110
+        ],
+        "zone": 3
+      },
+      "ice_field": {
+        "at": [
+          22,
+          125
+        ],
+        "zone": 3,
+        "season": "winter"
+      },
+      "nameless_isle": {
+        "at": [
+          104,
+          126
+        ],
+        "zone": 3,
+        "secret": true
+      },
+      "fairway": {
+        "at": [
+          64,
+          134
+        ],
+        "zone": 3
       }
     },
     "reefs": [
@@ -446,7 +479,82 @@
       [
         24,
         80
+      ],
+      [
+        40,
+        104
+      ],
+      [
+        86,
+        108
+      ],
+      [
+        100,
+        118
+      ],
+      [
+        30,
+        132
       ]
+    ],
+    "zone3_row": 95,
+    "events": [
+      {
+        "id": "cargo",
+        "chance": 0.15
+      },
+      {
+        "id": "bottle",
+        "chance": 0.1
+      },
+      {
+        "id": "bird_frenzy",
+        "chance": 0.15,
+        "hours": 1
+      },
+      {
+        "id": "seals",
+        "chance": 0.2,
+        "near": "seal_rock"
+      },
+      {
+        "id": "whales",
+        "chance": 0.3,
+        "zones": [
+          2,
+          3
+        ],
+        "season": "summer",
+        "days": [
+          15,
+          21
+        ]
+      },
+      {
+        "id": "orcas",
+        "chance": 0.05,
+        "zones": [
+          3
+        ]
+      },
+      {
+        "id": "ghost_ship",
+        "chance": 0.2,
+        "hmar": true
+      },
+      {
+        "id": "fisher_in_trouble",
+        "chance": 0.05
+      },
+      {
+        "id": "squall",
+        "chance": 0.05,
+        "bad_weather": true
+      }
+    ],
+    "drowned_well": [
+      96,
+      36
     ]
   },
   "garden": {
@@ -466,5 +574,56 @@
     ],
     "salt_shore_tiles": 12,
     "salt_chance": 0.25
+  },
+  "deep": {
+    "size": [
+      40,
+      30
+    ],
+    "fragment": 10,
+    "grid": [
+      4,
+      3
+    ],
+    "bell_air": 100,
+    "air_per_sec": 1.0,
+    "air_bag": 30,
+    "hose": [
+      30,
+      45,
+      60
+    ],
+    "detach_seconds": 60,
+    "suit_speed": 0.8,
+    "stations_every": 5,
+    "treasure_levels": [
+      10,
+      30,
+      50
+    ],
+    "boss_levels": [
+      20,
+      40,
+      60
+    ],
+    "locked_chance": 0.15,
+    "endless_scale": 0.05,
+    "cold_per_10min": 2,
+    "attack_slow": 1.2
+  },
+  "combat": {
+    "crit": 0.05,
+    "crit_mult": 1.5,
+    "per_diving_level": 0.02,
+    "invuln": 0.5,
+    "dodge_invuln": 0.3,
+    "dodge_cooldown": 1.0,
+    "speeds": {
+      "fast": 0.35,
+      "medium": 0.55,
+      "slow": 0.8,
+      "very_slow": 1.2
+    },
+    "knockback": 60
   }
 }
