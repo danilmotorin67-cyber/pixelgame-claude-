@@ -106,6 +106,10 @@ func evidence() -> int:
 	return n
 
 
+func boat() -> String:
+	return Sea.boat
+
+
 func best_hearts() -> int:
 	var best := 0
 	for npc in Relationships.points:

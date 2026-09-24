@@ -1292,3 +1292,500 @@ ev.hedda14.l01,"Вставай. Рассвет. Идём в море. Я нау�
 ev.hedda14.l02,"Закрой глаза. Слушай воду. Не ветер, не чаек — воду. Она говорит, где рыба.","Close your eyes. Listen to the water. Not the wind, not the gulls — the water. It tells you where the fish are."
 ev.hedda14.l03,"(Сначала только плеск. Потом — тонкий, едва слышный перестук под днищем. Как будто кто-то стучит изнутри.)",(At first only lapping. Then a faint patter under the hull. As if someone were knocking from inside.)
 ev.hedda14.l04,"Слышишь? Это она. Теперь ты {рыбак|рыбачка}. Не {такой|такая}, как я. Но {рыбак|рыбачка}.",Hear that? That's them. Now you're a fisherman. Not like me. But a fisherman.
+npc.ingrid.spring.01,"Весной близнецы учатся хуже. Им хочется на берег. Мне тоже, если честно.","In spring the twins learn worse. They want to be on the beach. So do I, honestly."
+npc.ingrid.spring.02,"Я читаю Нильсу и Фрейе о дальних странах. Фрейя спросила, есть ли там утопленники. Я не знала, что ответить.",I read Nils and Freya about faraway lands. Freya asked whether they have drowned people there. I didn't know what to say.
+npc.ingrid.spring.03,"Папа говорит, остров держится на его щедрости. Я думаю, он держится на людях.",Papa says the island rests on his generosity. I think it rests on people.
+npc.ingrid.spring.04,"Школа закрыта уже шесть лет. Я учу на крыльце. Крыльцо — тоже школа, если стараться.","The school's been shut for six years. I teach on the porch. A porch is a school too, if you try."
+npc.ingrid.spring.05,Весенние цветы у погоста — самые ранние. Как будто им там теплее.,The spring flowers by the graveyard come first. As if it were warmer there.
+npc.ingrid.spring.06,"Вы уже прочитали «Устав смотрителя»? Олаф говорит, никто не читает. Я прочитала. Дважды.",Have you read the Keeper's Regulations yet? Olaf says nobody does. I did. Twice.
+npc.ingrid.spring.07,Вчера Нильс написал «море» с тремя «р». Я не исправила. Иногда море и правда такое.,Yesterday Nils spelled 'sea' with three e's. I didn't correct it. Sometimes the sea really is like that.
+npc.ingrid.spring.08,Папа подарил мне новое платье. Я бы лучше получила книги. Не говорите ему.,Papa gave me a new dress. I'd rather have had books. Don't tell him.
+npc.ingrid.spring.09,"Если идёте мимо часовни — Бенедикт просил передать, что свечи подорожали. Он извиняется.",If you pass the chapel — Benedict asked me to say candles have gone up. He apologises.
+npc.ingrid.spring.10,"У вас земля на рукавах. Значит, вы работали. Мне это нравится больше, чем чистые манжеты.",You've soil on your sleeves. So you've been working. I like that better than clean cuffs.
+npc.ingrid.summer.01,Летом я провожу уроки на берегу. Близнецы считают чаек вместо ворон. Это тоже арифметика.,In summer I hold lessons on the beach. The twins count gulls instead of crows. That's arithmetic too.
+npc.ingrid.summer.02,Лив подарила мне книгу о птицах. С латинскими названиями. Я выучила три. Лив выучила двести.,Liv gave me a book about birds. With Latin names. I learned three. Liv knows two hundred.
+npc.ingrid.summer.03,"Белые ночи хороши для чтения. Свечи не нужны. Папа ворчит, что я не сплю.",White nights are good for reading. No candles needed. Papa grumbles that I don't sleep.
+npc.ingrid.summer.04,"В Ночь Белого Солнца мама раньше танцевала. Теперь танцую я. Плохо, но за двоих.","On White Sun Night Mama used to dance. Now I dance. Badly, but for two."
+npc.ingrid.summer.05,"Сегодня Фрейя спросила, почему мёртвых хоронят лицом к морю. Я сказала: чтобы им было на что смотреть.",Today Freya asked why the dead are buried facing the sea. I said: so they have something to look at.
+npc.ingrid.summer.06,Лето короткое. Как хорошее стихотворение. Сигрид сказала бы лучше.,Summer is short. Like a good poem. Sigrid would put it better.
+npc.ingrid.summer.07,"Я написала письмо в Кронвальд, в попечительский совет. Про школу. Они ответили: «Рассмотрим». В прошлый раз тоже.",I wrote to the board of trustees in Kronvald. About the school. They replied: 'Under consideration.' Same as last time.
+npc.ingrid.summer.08,Папа опять уплыл «по делам». У него много дел по ночам.,Papa went off 'on business' again. He has a lot of business at night.
+npc.ingrid.summer.09,"Можно я возьму у вас почитать журнал Агаты? Нет, конечно. Это личное. Простите.","Could I borrow Agatha's logbook to read? No, of course not. It's private. Forgive me."
+npc.ingrid.summer.10,"Морошка поспела. Это единственное, что на острове принадлежит всем поровну.",The cloudberries are ripe. The only thing on this island that belongs to everyone equally.
+npc.ingrid.autumn.01,Осенью начинается учебный год. Даже если школы нет. Особенно если нет.,The school year starts in autumn. Even when there's no school. Especially then.
+npc.ingrid.autumn.02,"Сельдяная ярмарка — единственное время, когда папа улыбается искренне. Деньги его радуют больше людей.",The Herring Fair is the only time Papa smiles sincerely. Money pleases him more than people.
+npc.ingrid.autumn.03,Я разобрала мамины книги. Среди них сказки о Ранн. Мама подчёркивала в них что-то карандашом.,I sorted Mama's books. There are tales of Rann among them. Mama underlined things in pencil.
+npc.ingrid.autumn.04,Ветер рвёт страницы из рук. Приходится читать быстрее. Осень учит скорочтению.,The wind tears pages from my hands. I have to read faster. Autumn teaches speed-reading.
+npc.ingrid.autumn.05,"Если близнецы говорят, что видели призрака, — верьте им. Они врут только про уроки.",If the twins say they saw a ghost — believe them. They only lie about homework.
+npc.ingrid.autumn.06,"В Ночь Утопленников я всегда ставлю свечу на окно. Для тех, кого никто не ждёт.",On Drowned Night I always put a candle in the window. For those nobody waits for.
+npc.ingrid.autumn.07,Папа запретил мне ходить к Гильдейскому дому. Сказал — нечисто. Я ходила. Там просто грустно.,Papa forbade me to go near the Guild House. Said it's unclean. I went. It's just sad there.
+npc.ingrid.autumn.08,У вас усталое лицо. Возьмите яблоко. Их в этом году много — хоть что-то много.,You look tired. Have an apple. There are plenty this year — at least something is plentiful.
+npc.ingrid.autumn.09,"Я учу близнецов писать письма. Первое письмо Фрейи было Агате. Она не знала, куда его отправить.",I'm teaching the twins to write letters. Freya's first letter was to Agatha. She didn't know where to send it.
+npc.ingrid.autumn.10,"Осень честная. Она не притворяется, что всё будет хорошо.",Autumn is honest. It doesn't pretend everything will be all right.
+npc.ingrid.winter.01,Зимой уроки у меня дома. Папа терпит. Близнецы едят печенье. Все довольны.,In winter I hold lessons at home. Papa puts up with it. The twins eat biscuits. Everyone's content.
+npc.ingrid.winter.02,Долгая ночь — лучшее время для историй. Я читаю вслух. Даже папа иногда слушает из коридора.,The long night is the best time for stories. I read aloud. Even Papa sometimes listens from the hallway.
+npc.ingrid.winter.03,"Снег такой чистый. Жаль, что люди не такие.",The snow is so clean. A pity people aren't.
+npc.ingrid.winter.04,"Вы видели сияние вчера? Я стояла на крыльце, пока не замёрзли пальцы. Оно того стоило.",Did you see the aurora last night? I stood on the porch until my fingers froze. It was worth it.
+npc.ingrid.winter.05,"Зимой в доме Гримов тихо. Слишком тихо. Слышно, как папа считает.",In winter the Grim house is quiet. Too quiet. You can hear Papa counting.
+npc.ingrid.winter.06,Я вяжу шарфы близнецам. Маргит говорит — криво. Близнецам нравится.,I'm knitting scarves for the twins. Margit says they're crooked. The twins like them.
+npc.ingrid.winter.07,"Лёд на лагуне ещё тонкий. Не ходите по нему, пожалуйста. У меня нет сил на ещё одни похороны.",The lagoon ice is still thin. Please don't walk on it. I haven't the strength for another funeral.
+npc.ingrid.winter.08,Мама умерла зимой. Я не люблю зиму. Но она красивая. Мама бы сказала — это не одно и то же.,Mama died in winter. I don't like winter. But it's beautiful. Mama would say those aren't the same thing.
+npc.ingrid.winter.09,"Горячий чай и хорошая книга — вот моё богатство. Папа не понимает, как можно быть богатой так дёшево.",Hot tea and a good book — that's my wealth. Papa doesn't understand how one can be rich so cheaply.
+npc.ingrid.winter.10,"Спасибо, что светите. Зимой без вашего огня остров был бы похож на пустую страницу.",Thank you for shining. In winter without your light the island would look like a blank page.
+npc.ingrid.weather.rain.01,Дождь. Урок сегодня под навесом. Капли — отличный метроном для диктанта.,Rain. Today's lesson is under the awning. Raindrops make an excellent metronome for dictation.
+npc.ingrid.weather.rain.02,"В дождь я читаю у окна. Кажется, что книга тоже промокла.",In rain I read by the window. It feels as if the book got wet too.
+npc.ingrid.weather.storm.01,"Шторм. Папа ходит по дому и смотрит на море. Он всегда так в шторм. Я не знаю, чего он ждёт.",A storm. Papa paces the house watching the sea. He always does in storms. I don't know what he's waiting for.
+npc.ingrid.weather.storm.02,"Пожалуйста, будьте осторожны. В такие ночи кто-то всегда не возвращается.",Please be careful. On nights like this someone never comes back.
+npc.ingrid.weather.fog.01,Туман. Близнецы не пошли на урок — Маргит не пустила. Правильно сделала.,Fog. The twins didn't come to lessons — Margit kept them in. Rightly so.
+npc.ingrid.weather.fog.02,"В тумане мне кажется, что кто-то зовёт по имени. Не моему. Чужому.",In fog I feel someone calling a name. Not mine. Someone else's.
+npc.ingrid.weather.snow.01,Снег! Близнецы строят крепость. Урок природоведения — практический.,Snow! The twins are building a fort. A practical natural science lesson.
+npc.ingrid.weather.cloud.01,"Пасмурно. Хорошая погода, чтобы думать. Плохая, чтобы ничего не делать.",Overcast. Good weather for thinking. Bad for doing nothing.
+npc.ingrid.festival.boat_blessing.01,Спуск лодок. Папа произносит речь каждый год. Одну и ту же. Я знаю её наизусть. Мне стыдно.,The Boat Launch. Papa gives a speech every year. The same one. I know it by heart. I'm ashamed.
+npc.ingrid.festival.drowned_night.01,Ночь Утопленников. Каждый несёт фонарь за кого-то. Я несу за маму. И ещё за одного — не знаю за кого.,Drowned Night. Everyone carries a lantern for someone. I carry one for Mama. And one more — I don't know for whom.
+npc.ingrid.festival.long_night.01,Долгая ночь. Я читаю близнецам до утра. Они засыпают на третьей сказке. Я дочитываю одна.,The Long Night. I read to the twins until dawn. They fall asleep on the third tale. I finish alone.
+npc.ingrid.festival.ice_festival.01,"Ледовый праздник. Кнуд вырезал из льда маяк. Он тает, но светится. Как всё хорошее.","The Ice Festival. Knud carved a lighthouse from ice. It melts, but it glows. Like all good things."
+npc.ingrid.festival.01,Праздник — это когда даже папа ненадолго забывает о деньгах.,A holiday is when even Papa forgets about money for a while.
+npc.ingrid.festival.02,"Люблю, когда вся деревня в одном месте. Кажется, что мы семья.",I love it when the whole village is in one place. It feels like we're a family.
+npc.ingrid.gift.love.01,"Это… книга! И какая! Вы знаете, сколько лет я её искала? Я вас обниму. Мысленно. Нет, по-настоящему.","This is… a book! And what a book! Do you know how many years I've looked for it? I'll hug you. In my mind. No, for real."
+npc.ingrid.gift.love.02,"Спасибо. Правда. Вы видите меня, а не мою фамилию.","Thank you. Truly. You see me, not my surname."
+npc.ingrid.gift.like.01,"Как мило! Спасибо. Поставлю на подоконник, чтобы видеть утром.",How lovely! Thank you. I'll put it on the windowsill so I see it in the morning.
+npc.ingrid.gift.like.02,Вы очень внимательны. Это редкое качество. Особенно у нас.,You're very thoughtful. That's a rare quality. Especially here.
+npc.ingrid.gift.neutral.01,Спасибо. Это очень любезно.,Thank you. That's very kind.
+npc.ingrid.gift.neutral.02,"О, спасибо! Я найду этому применение. Обязательно.","Oh, thank you! I'll find a use for it. Definitely."
+npc.ingrid.gift.dislike.01,"Торф… Спасибо. Папа скажет, что это знак. Какой — не знаю.","Peat… Thank you. Papa will say it's a sign. Of what, I don't know."
+npc.ingrid.gift.dislike.02,Ох. Спасибо. Я… отнесу это Маргит. Ей пригодится.,Oh. Thank you. I'll… take it to Margit. She'll find a use for it.
+npc.ingrid.gift.hate.01,"Ворвань. В нашем доме ею пахнет каждая вещь. Пожалуйста, не надо.","Fish oil. Everything in our house smells of it. Please, no."
+npc.ingrid.gift.hate.02,"Водоросли? Простите, но я не могу это взять. Меня от них мутит с детства.","Seaweed? Forgive me, but I can't take it. It's made me sick since childhood."
+npc.ingrid.birthday.01,"Сегодня мой день рождения. Папа подарит украшение. Я бы хотела, чтобы он просто посидел со мной.",It's my birthday today. Papa will give me jewellery. I'd rather he just sat with me.
+npc.ingrid.birthday.02,Двадцать семь. Мама в этом возрасте уже была мамой. Я пока только учительница без школы.,Twenty-seven. At this age Mama was already a mother. I'm still only a teacher without a school.
+npc.ingrid.birthday_gift.01,Вы помните мой день рождения? Это лучше любого украшения.,You remembered my birthday? That's better than any jewellery.
+npc.ingrid.birthday_gift.02,Подарок… для меня. Не для Грим. Для Ингрид. Спасибо.,A gift… for me. Not for a Grim. For Ingrid. Thank you.
+npc.ingrid.act1.01,Папа встречал вас на причале с корзиной. Он всех встречает с корзиной. В корзине всегда есть счёт.,Papa met you at the jetty with a basket. He meets everyone with a basket. There's always a bill in it.
+npc.ingrid.act1.02,Я видела ваш огонь в первую ночь. Я стояла у окна. Папа задёрнул штору. Сказал — слепит.,I saw your light the first night. I was standing at the window. Papa drew the curtain. Said it was blinding.
+npc.ingrid.act1.03,"Папа хочет снести Гильдейский дом. Говорит — нечист. Я думаю, он просто хочет место под склад.",Papa wants to pull down the Guild House. Says it's unclean. I think he just wants the space for a warehouse.
+npc.ingrid.act1.04,Стекло для фонарной продаёт только папа. Простите. Мне за это стыдно.,Only Papa sells glass for the lamp room. Forgive me. I'm ashamed of it.
+npc.ingrid.act1.05,"Весна двадцать восьмого… Папа сказал, что уплывёт по делам. Опять.",The twenty-eighth of spring… Papa said he's going away on business. Again.
+npc.ingrid.act1.06,"Если вам нужна помощь с письмами семьям утопленников — я хорошо пишу. Это меньшее, что я могу.",If you need help writing to the families of the drowned — I write well. It's the least I can do.
+npc.ingrid.act2.01,«Святая Берта»… Папа не спал в ту ночь. Утром у него были мокрые сапоги.,The Saint Bertha… Papa didn't sleep that night. In the morning his boots were wet.
+npc.ingrid.act2.02,"После Белой Хмари папа сказал, что туман — это суеверие. И велел запереть все ставни.",After the White Fog Papa said fog is superstition. And ordered all the shutters locked.
+npc.ingrid.act2.03,Вера Сольм была учительницей. Её похоронили вы. Я принесу цветы. Коллеге.,Vera Solm was a teacher. You buried her. I'll bring flowers. For a colleague.
+npc.ingrid.act2.04,"Двадцать скелетов… В маминых книгах есть песня про двадцать. Я думала, это просто песня.",Twenty skeletons… There's a song about twenty in Mama's books. I thought it was just a song.
+npc.ingrid.act2.05,Братья Скау приходят к папе по ночам. Шепчутся. Когда я вхожу — замолкают.,The Skau brothers come to Papa at night. They whisper. When I walk in — they go quiet.
+npc.ingrid.act2.06,Я буду провожать людей по домам в Большую Хмарь. Я знаю все переулки. Я здесь выросла.,I'll walk people home during the Great Fog. I know every alley. I grew up here.
+npc.ingrid.act3.01,"В затонувшем Сольвике есть дом Гримов? С заваленным погребом? …Я боюсь спросить, что в погребе.",Is there a Grim house in sunken Solvik? With a blocked cellar? …I'm afraid to ask what's in the cellar.
+npc.ingrid.act3.02,"Вы собираете улики против моего отца. Я знаю. Я не мешаю. Я не знаю, помогаю ли.",You're gathering evidence against my father. I know. I'm not stopping you. I don't know if I'm helping.
+npc.ingrid.act3.03,"У папы есть сейф. Ключ он носит на шее. Я знаю, где он кладёт его ночью.",Papa has a safe. He wears the key round his neck. I know where he puts it at night.
+npc.ingrid.act3.04,Я перестала называть его «папа» в мыслях. Потом называю снова. Это очень трудно.,I've stopped calling him 'Papa' in my head. Then I start again. It's very hard.
+npc.ingrid.act3.05,"Штерн был у нас на ужине. Он улыбался папе так, как улыбаются кредиторы.",Stern came to dinner. He smiled at Papa the way creditors smile.
+npc.ingrid.act3.06,Если что-то случится — позаботьтесь о близнецах. Они ни в чём не виноваты. Никто из детей не виноват.,If something happens — look after the twins. They're not to blame. No child is to blame.
+npc.ingrid.act4.01,"В ночь Прилива я удержу папу дома. До полуночи. Я не знаю, как. Но удержу.",On Tide Night I'll keep Papa at home. Until midnight. I don't know how. But I will.
+npc.ingrid.act4.02,"Если он пойдёт к Вратам… Скажите ему, что я его люблю. И что я всё знаю. В таком порядке.",If he goes to the Gate… Tell him I love him. And that I know everything. In that order.
+npc.ingrid.act4.03,Я Грим. Мне и нести этот груз. Не вам.,I'm a Grim. This burden is mine to carry. Not yours.
+npc.ingrid.act4.04,"Я написала завещание. Всё — школе. Смешно, да? Мне двадцать семь.","I've written a will. Everything to the school. Funny, isn't it? I'm twenty-seven."
+npc.ingrid.act4.05,"Мама говорила: «Море помнит всех, кто его обманул». Я думаю, сегодня оно вспомнит.",Mama used to say: 'The sea remembers everyone who cheated it.' I think tonight it will remember.
+npc.ingrid.act4.06,Держите огонь. А я — держу отца. Кто-то из нас должен справиться.,Hold the light. And I'll hold my father. One of us has to manage.
+npc.ingrid.married_other.01,Поздравляю вас от всего сердца. Правда. Вы заслуживаете счастья.,Congratulations with all my heart. Truly. You deserve happiness.
+npc.ingrid.married_other.02,Я принесла вам книгу в подарок. «О долгой жизни вдвоём». Там в конце все счастливы. Редкость.,I brought you a book as a gift. 'On a Long Life Together'. Everyone's happy at the end. A rarity.
+npc.ingrid.married_other.03,"Свадьба была прекрасной. Я плакала. Сигрид сказала, что я плачу за двоих — за себя и за неё.",The wedding was beautiful. I cried. Sigrid said I was crying for two — for myself and for her.
+npc.ingrid.married_other.04,Ваш супруг — хороший человек. Берегите друг друга.,Your spouse is a good person. Take care of each other.
+npc.ingrid.married_other.05,"Теперь, когда вы женаты, я буду реже заходить. Так правильно. Но на уроки приходите.",Now that you're married I'll visit less. That's proper. But do come to the lessons.
+npc.ingrid.event.wreck.01,Корабль разбился… Папа уплыл вчера вечером. Вернулся утром. Я не спрашиваю. Я боюсь спрашивать.,A ship went down… Papa sailed out last evening. Came back at dawn. I don't ask. I'm afraid to ask.
+npc.ingrid.event.wreck.02,"Я написала письма семьям — от имени управы. Олаф отправит. Это всё, что я могу.",I wrote letters to the families — on behalf of the office. Olaf will send them. It's all I can do.
+npc.ingrid.event.wreck.03,"Когда корабль разбивается, папа покупает груз на аукционе. Дёшево. Мне от этого холодно.","When a ship goes down, Papa buys the cargo at auction. Cheap. It makes me cold."
+npc.ingrid.event.wreck.04,"Там были дети? Скажите, что не было. Пожалуйста.",Were there children aboard? Tell me there weren't. Please.
+npc.ingrid.event.wreck.05,Вы похороните их достойно. Я знаю. Хоть в этом я уверена.,You'll bury them with dignity. I know. At least of that I'm sure.
+npc.ingrid.event.funeral.01,"Я видела похороны с холма. Вы стояли долго. Спасибо, что не торопились.",I saw the burial from the hill. You stood there a long time. Thank you for not hurrying.
+npc.ingrid.event.funeral.02,"Я прочитала над могилой стихотворение. Сигрид написала. Мне кажется, оно было хорошее.",I read a poem over the grave. Sigrid wrote it. I think it was a good one.
+npc.ingrid.event.funeral.03,"Каждый, кого вы хороните, чей-то ребёнок. Я думаю об этом каждый раз.",Everyone you bury is somebody's child. I think of that every time.
+npc.ingrid.event.funeral.04,Я научила близнецов класть камешек на могилу. Они теперь кладут везде. Даже на грядки.,I taught the twins to put a pebble on a grave. Now they put them everywhere. Even on vegetable beds.
+npc.ingrid.event.funeral.05,После похорон легче дышать. Как будто мир становится немного правильнее.,After a burial it's easier to breathe. As if the world became a little more right.
+npc.ingrid.event.hmar.01,Ночь Хмари… Папа не спал. Он стоял у окна и шептал что-то. Молитву или счёт.,Fog Night… Papa didn't sleep. He stood at the window whispering. A prayer or a sum.
+npc.ingrid.event.hmar.02,Туман пел. Колыбельную. Мама пела такую. Я не могу это объяснить.,The fog sang. A lullaby. Mama used to sing that one. I can't explain it.
+npc.ingrid.event.hmar.03,Я держала близнецов за руки всю ночь. Маргит — с другой стороны. Мы справились.,I held the twins' hands all night. Margit on the other side. We managed.
+npc.ingrid.event.hmar.04,Ваш луч проходил по нашей улице каждые двенадцать секунд. Я считала. Близнецы считали со мной.,Your beam crossed our street every twelve seconds. I counted. The twins counted with me.
+npc.ingrid.event.hmar.05,"Хельга сказала: «Хмарь — это горе». Я знаю, чьё. Но не могу сказать.",Helga said: 'The Fog is grief.' I know whose. But I can't say.
+npc.ingrid.event.inspection.01,Инспектор Пальм обедал у нас. Папа был очень любезен. Слишком любезен.,Inspector Palm dined with us. Papa was very gracious. Too gracious.
+npc.ingrid.event.inspection.02,"Как прошла инспекция? Я уверена, что хорошо. Ваш огонь видно даже из нашей гостиной.",How did the inspection go? I'm sure it went well. Your light can be seen even from our parlour.
+npc.ingrid.event.inspection.03,Пальм спросил меня про школу. Сказал: «Пункт тридцать восемь: образование». Я чуть не расплакалась.,Palm asked me about the school. Said: 'Clause thirty-eight: education.' I nearly cried.
+npc.ingrid.event.inspection.04,"Инспекция — единственный день, когда папа боится кого-то, кроме моря.",Inspection day is the only day Papa fears someone other than the sea.
+npc.ingrid.event.inspection.05,Поздравляю. Агата бы гордилась. Она всегда говорила: огонь не терпит лени.,Congratulations. Agatha would be proud. She always said: fire won't tolerate idleness.
+npc.ingrid.event.wedding.01,"Свадьба! Я плела венок всю ночь. Криво, но от души.","A wedding! I wove a wreath all night. Crooked, but from the heart."
+npc.ingrid.event.wedding.02,Папа подарил молодым серебряный поднос. Дорогой. Бездушный. Как всё у него.,Papa gave the couple a silver tray. Expensive. Soulless. Like everything of his.
+npc.ingrid.event.wedding.03,Близнецы бросали рис. Потом сельдь. Потом Нильса. Праздник удался.,The twins threw rice. Then herring. Then Nils. The party was a success.
+npc.ingrid.event.wedding.04,Я танцевала с Кнудом. Он измерял меня во время танца. Вслух.,I danced with Knud. He measured me during the dance. Out loud.
+npc.ingrid.event.wedding.05,Счастья вам. И долгих спокойных ночей без крушений.,Happiness to you. And long quiet nights without wrecks.
+npc.ingrid.event.villains.01,Папа… Хальвдан признался. Я была там. Я держала его за руку. Он не отнял.,Papa… Halvdan confessed. I was there. I held his hand. He didn't pull it away.
+npc.ingrid.event.villains.02,"Все смотрят на меня. Ждут, что я заплачу или уеду. Я не сделаю ни того, ни другого.",Everyone's looking at me. Waiting for me to cry or leave. I'll do neither.
+npc.ingrid.event.villains.03,Деньги Грима пойдут на школу. Хоть что-то из них выйдет хорошее.,The Grim money will go to the school. At least something good will come of it.
+npc.ingrid.event.villains.04,Я меняю фамилию. На мамину. Не потому что стыдно. Потому что так честнее.,I'm changing my surname. To Mama's. Not from shame. Because it's more honest.
+npc.ingrid.event.villains.05,"Спасибо вам. Вы сделали то, на что у меня не хватало смелости. Шесть лет.",Thank you. You did what I didn't have the courage to do. For six years.
+npc.ingrid.bouquet_yes.01,"Армерия… Цветок с обрыва. Я много лет боялась обрывов. Кажется, больше не боюсь. Да.",Armeria… A flower from the cliff edge. For years I was afraid of edges. I think I'm not any more. Yes.
+npc.ingrid.ring_yes.01,Да. Я согласна. Только пусть папа узнает последним. Хотя бы раз.,Yes. I accept. Only let Papa be the last to know. Just this once.
+ev.ingrid2.l01,"Ой! Держите — нет, не так, снизу! Двенадцать книг. Я сказала себе, что донесу. Себе я врать умею.","Oh! Hold these — no, not like that, from underneath! Twelve books. I told myself I'd manage. I'm good at lying to myself."
+ev.ingrid2.l02,"Спасибо. Это для близнецов. География, арифметика и сказки. Сказки — для меня.","Thank you. These are for the twins. Geography, arithmetic and fairy tales. The fairy tales are for me."
+ev.ingrid2.c01,Если нужно — буду носить книги каждую неделю.,"If you need, I'll carry books every week."
+ev.ingrid2.c02,Почему школа закрыта?,Why is the school closed?
+ev.ingrid2.l03,"Каждую неделю? Вы не знаете, на что подписываетесь. У меня много книг.",Every week? You don't know what you're signing up for. I have a lot of books.
+ev.ingrid2.l04,Учитель уехал. Новый не приехал. Папа сказал — невыгодно. Шесть лет невыгодно.,The teacher left. No new one came. Papa said — not profitable. Six years not profitable.
+ev.ingrid4.l01,Вы? Не спится? Мне тоже. Я смотрю на Зубы.,You? Can't sleep? Me neither. I'm watching the Teeth.
+ev.ingrid4.l02,Папа снова уплыл «по делам». Он всегда уплывает в ясные ночи. Никогда в туман.,Papa's gone 'on business' again. He always goes on clear nights. Never in fog.
+ev.ingrid4.l03,"Я говорю себе, что это совпадение. Я учительница. Я знаю, что такое совпадение. Это не оно.",I tell myself it's a coincidence. I'm a teacher. I know what a coincidence is. This isn't one.
+ev.ingrid4.c01,Ты не обязана нести это одна.,You don't have to carry this alone.
+ev.ingrid4.c02,"Может, у него и правда дела.",Maybe he really does have business.
+ev.ingrid4.c03,Что ты знаешь? Расскажи всё.,What do you know? Tell me everything.
+ev.ingrid4.l04,Не обязана… Никто мне этого не говорил. Спасибо. Постойте со мной ещё немного.,Don't have to… Nobody's ever told me that. Thank you. Stay with me a little longer.
+ev.ingrid4.l05,Может быть. Я бы очень хотела в это верить.,Maybe. I'd very much like to believe that.
+ev.ingrid4.l06,Я… не могу. Это мой отец. Простите. Мне нужно идти.,I… can't. He's my father. Forgive me. I have to go.
+ev.ingrid6.l01,Я решилась. Я открою школу. Сама. Без попечительского совета и без папиных денег.,I've decided. I'll open the school. Myself. Without the trustees and without Papa's money.
+ev.ingrid6.l02,Нужно пять парт — это двадцать досок. И три книги для начала. Остальное — руки и упрямство.,I need five desks — that's twenty boards. And three books to start. The rest is hands and stubbornness.
+ev.ingrid6.c01,Я достану доски. Жди.,I'll get the boards. Wait for me.
+ev.ingrid6.l03,Я жду. Я умею ждать. Шесть лет тренировалась.,I'll wait. I know how to wait. Six years of practice.
+ev.ingrid6.c02,Вот двадцать досок. Прямо сейчас.,Here are twenty boards. Right now.
+ev.ingrid6.c03,"Я достану всё, что нужно. Позже.",I'll get everything you need. Later.
+ev.ingrid6.l04,Двадцать! Вы… вы носите доски с собой? Кнуд сделает парты к понедельнику. Школа будет!,Twenty! You… you carry boards around with you? Knud will make the desks by Monday. There will be a school!
+ev.ingrid8.l01,"Я взяла это из папиного кабинета. Чёрная книга. Даты, суммы, названия кораблей.","I took this from Papa's study. A black book. Dates, sums, ships' names."
+ev.ingrid8.l02,«Святая Берта» — четыре тысячи. «Милосердие» — шесть. Напротив — «страховка получена».,'Saint Bertha' — four thousand. 'Mercy' — six. Beside them — 'insurance received'.
+ev.ingrid8.l03,"Скажите, что я ошибаюсь. Пожалуйста. Скажите, что это торговые записи.",Tell me I'm wrong. Please. Tell me these are trade records.
+ev.ingrid8.c01,Я не могу тебе солгать. Прости.,I can't lie to you. I'm sorry.
+ev.ingrid8.c02,"Может, есть другое объяснение. Давай разберёмся вместе.",Maybe there's another explanation. Let's work it out together.
+ev.ingrid8.l04,"Я знала. Я просто хотела, чтобы кто-то сказал это вслух. Не я.",I knew. I just wanted someone to say it out loud. Not me.
+ev.ingrid8.l05,Вместе. Да. Одна я бы сожгла эту книгу. Вместе — не сожгу.,Together. Yes. Alone I'd burn this book. Together — I won't.
+ev.ingrid10.l01,Ночь Утопленников. Каждый несёт фонарь за своего. Я понесу за экипаж «Фортуны».,Drowned Night. Everyone carries a lantern for their own. I'll carry one for the crew of the Fortuna.
+ev.ingrid10.l02,Их погубил мой прадед. Я Грим. Мне и нести.,My great-grandfather killed them. I'm a Grim. It's mine to carry.
+ev.ingrid10.c01,Я понесу второй фонарь рядом с тобой.,I'll carry a second lantern beside you.
+ev.ingrid10.c02,Ты не отвечаешь за прадеда. Но это смело.,You're not responsible for your great-grandfather. But it's brave.
+ev.ingrid10.l03,Двадцать фонарей было бы правильно. Но два — тоже хорошее начало.,Twenty lanterns would be right. But two is a good beginning too.
+ev.ingrid14.l01,"Сегодня школа открывается. По-настоящему. С партами, доской и звонком.","Today the school opens. For real. With desks, a blackboard and a bell."
+ev.ingrid14.l02,"Первая лекция: «Почему мы хороним тех, кого вернуло море». Нильс, не вертись.","First lecture: 'Why we bury those the sea returned.' Nils, sit still."
+ev.ingrid14.l03,"Потому что море отдаёт не мусор. Оно отдаёт людей, которых кто-то любил. И кто-то должен сказать им: вы дома.",Because the sea doesn't give back rubbish. It gives back people somebody loved. And someone has to tell them: you're home.
+ev.ingrid14.l04,Как смотритель!,Like the keeper!
+ev.ingrid14.l05,Как смотритель. Урок окончен. Он мой любимый.,Like the keeper. Lesson over. It's my favourite.
+item.anchor_agatha.name,Якорь Агаты,Agatha's Anchor
+item.anchor_agatha.desc,"Лучшее оружие острова: тяжёлый, честный, возвращается в руку. Выкован Эйнаром на десяти сердцах.","The island's finest weapon: heavy, honest, returns to the hand. Forged by Einar at ten hearts."
+npc.einar.spring.01,"Весна. Много работы. Лопаты, мотыги. Всем нужно копать.","Spring. Lots of work. Spades, hoes. Everyone needs to dig."
+npc.einar.spring.02,Мама велела перековать петли на воротах. Я перековал. Она велела ещё раз.,Mum told me to reforge the gate hinges. I did. She told me to again.
+npc.einar.spring.03,Лёд сошёл. Море шумит. Я слышу из кузни. Стараюсь не слушать.,The ice has gone. The sea's loud. I hear it from the forge. I try not to listen.
+npc.einar.spring.04,Сделал якорь. Хороший. Для Эрланда. Он его никогда не бросит. Как и я.,Made an anchor. A good one. For Erland. He'll never drop it. Like me.
+npc.einar.spring.05,Ты хорошо держишь мотыгу. Кто учил? Никто? Видно.,You hold a hoe well. Who taught you? Nobody? It shows.
+npc.einar.spring.06,Весной угля мало. Торф плохо горит. Горн злится.,In spring coal's short. Peat burns badly. The forge gets angry.
+npc.einar.spring.07,Кнуд просит гвозди для гробов. Много гвоздей. Весна.,Knud wants nails for coffins. Lots of nails. Spring.
+npc.einar.spring.08,"Слушай молот. Он говорит, когда металл готов.",Listen to the hammer. It tells you when the metal's ready.
+npc.einar.spring.09,На холме цветёт армерия. Я смотрю на неё. Не на море.,Armeria's blooming on the hill. I look at it. Not at the sea.
+npc.einar.spring.10,Хорошее утро. Тихое.,Good morning. Quiet.
+npc.einar.summer.01,Жарко у горна летом. Пью воду вёдрами. Мама пьёт эль.,Hot at the forge in summer. I drink water by the bucket. Mum drinks ale.
+npc.einar.summer.02,"Летом люди ломают больше. Лодки, сети, заборы. Хорошо для кузни.","In summer people break more. Boats, nets, fences. Good for the forge."
+npc.einar.summer.03,Вечером сижу на холме. Смотрю на гавань. Издалека море не страшное.,In the evenings I sit on the hill. Watch the harbour. From far off the sea isn't frightening.
+npc.einar.summer.04,Лив принесла мне сломанный прибор. Я починил. Она говорила полчаса. Я кивал.,Liv brought me a broken instrument. I fixed it. She talked for half an hour. I nodded.
+npc.einar.summer.05,Регата. Я не участвую. Смотрю. Болею за Хедду.,The regatta. I don't take part. I watch. I root for Hedda.
+npc.einar.summer.06,Летом отец ходил в море каждый день. Я помню запах его куртки. Соль и дым.,In summer my father went to sea every day. I remember the smell of his jacket. Salt and smoke.
+npc.einar.summer.07,Сделал подкову. Лошадей на острове нет. Повешу на счастье.,Made a horseshoe. There are no horses on the island. I'll hang it for luck.
+npc.einar.summer.08,Солнце не садится. Работать можно всю ночь. Мама не даёт.,The sun won't set. I could work all night. Mum won't let me.
+npc.einar.summer.09,"Спасибо, что заходишь. Не все заходят в кузню. Жарко.",Thanks for stopping by. Not everyone comes into the forge. It's hot.
+npc.einar.summer.10,Копчёная скумбрия. Если найдёшь — я твой должник.,Smoked mackerel. If you find some — I owe you.
+npc.einar.autumn.01,Осень. Все чинят лодки к шторму. Я кую скобы. Много скоб.,Autumn. Everyone's fixing boats before the storms. I forge brackets. Lots of brackets.
+npc.einar.autumn.02,Отца унесло осенью. Десять лет. Я не хожу на берег в этот день.,My father was taken in autumn. Ten years ago. I don't go to the shore on that day.
+npc.einar.autumn.03,Сельдь идёт. Все радуются. Я кую крюки. Тоже радуюсь. Тихо.,The herring's running. Everyone's glad. I forge hooks. I'm glad too. Quietly.
+npc.einar.autumn.04,"Ветер сорвал вывеску с кузни. Мама сказала — хорошо, новую выкуешь. Выкую.","The wind tore the sign off the forge. Mum said good, you'll forge a new one. I will."
+npc.einar.autumn.05,Ярмарка. Продам ножи. Кнуд купит один. Он всегда покупает один.,The fair. I'll sell knives. Knud will buy one. He always buys one.
+npc.einar.autumn.06,Длинные вечера. Сижу у горна дольше. Огонь — хороший собеседник. Молчит.,Long evenings. I sit by the forge longer. Fire's a good companion. Keeps quiet.
+npc.einar.autumn.07,Ты выглядишь {усталым|усталой}. Садись у горна. Погрейся.,You look tired. Sit by the forge. Warm up.
+npc.einar.autumn.08,"Мама говорит, я слишком мало говорю. Я говорю, когда есть что.",Mum says I talk too little. I talk when there's something to say.
+npc.einar.autumn.09,Осенью железо ржавеет быстрее. Как люди.,In autumn iron rusts faster. Like people.
+npc.einar.autumn.10,Хочу выковать что-то красивое. Не для дела. Просто так. Не знаю что.,I want to forge something beautiful. Not for work. Just because. Don't know what.
+npc.einar.winter.01,Зимой в кузне лучше всего. Тепло. Снаружи — метель. Внутри — огонь.,In winter the forge is the best place. Warm. Blizzard outside. Fire inside.
+npc.einar.winter.02,Лёд на лагуне. Кую коньки близнецам. Бесплатно. Не говори маме.,Ice on the lagoon. Making skates for the twins. Free. Don't tell Mum.
+npc.einar.winter.03,Зимой море тише. Всё равно не хожу.,In winter the sea is quieter. I still don't go.
+npc.einar.winter.04,Уголь дорогой. Грим поднял цену. Мама ругалась. Громко.,Coal's dear. Grim raised the price. Mum swore. Loudly.
+npc.einar.winter.05,Долгая ночь. Сидим с мамой. Она рассказывает про отца. Я слушаю.,The long night. Mum and I sit together. She talks about Father. I listen.
+npc.einar.winter.06,Снег на наковальне шипит. Красиво.,Snow hisses on the anvil. Beautiful.
+npc.einar.winter.07,Зимой много заказов на ломы. Для могил. Спасибо тебе за работу. Странно звучит.,In winter lots of orders for crowbars. For graves. Thanks for the work. Sounds odd.
+npc.einar.winter.08,Твой огонь видно из кузни. Два огня на острове. Твой и мой.,Your light's visible from the forge. Two fires on the island. Yours and mine.
+npc.einar.winter.09,Мёрзнут руки. Горн греет. Работаю.,Hands freeze. The forge warms them. I work.
+npc.einar.winter.10,Зима длинная. Но горн не гаснет. Как твой маяк.,Winter's long. But the forge doesn't go out. Like your lighthouse.
+npc.einar.weather.rain.01,Дождь. Хорошо. Людям нечего делать — приносят чинить старое.,Rain. Good. People have nothing to do — they bring old things to fix.
+npc.einar.weather.rain.02,Дождь стучит по крыше кузни. Как маленький молот.,Rain on the forge roof. Like a small hammer.
+npc.einar.weather.storm.01,Шторм. Сижу в таверне. Не смотрю в окно.,Storm. I sit in the tavern. I don't look out the window.
+npc.einar.weather.storm.02,В такой шторм отец не вернулся. Держи огонь. Пожалуйста.,In a storm like this Father didn't come back. Keep the light going. Please.
+npc.einar.weather.fog.01,Туман. Горн в тумане светится как маяк. Маленький.,Fog. The forge glows in the fog like a lighthouse. A small one.
+npc.einar.weather.fog.02,"В тумане я слышу, как кто-то стучит по наковальне. Не я.",In fog I hear someone striking an anvil. Not me.
+npc.einar.weather.snow.01,Снег. Мама велит чистить крыльцо. Я чищу. Она велит ещё раз.,Snow. Mum tells me to clear the step. I clear it. She tells me again.
+npc.einar.weather.cloud.01,Облачно. Хорошо для работы. Солнце не слепит у горна.,Cloudy. Good for work. The sun doesn't dazzle at the forge.
+npc.einar.festival.boat_blessing.01,Спуск лодок. Я делаю для них скобы. Сам не спускаю. Пока.,The Boat Launch. I make the brackets for them. Don't launch one myself. Not yet.
+npc.einar.festival.regatta.01,Регата. Кричу за Хедду. Громко. Мама удивляется.,The regatta. I shout for Hedda. Loudly. Mum's surprised.
+npc.einar.festival.drowned_night.01,Ночь Утопленников. Несу фонарь за отца. Каждый год. Ближе к воде не подхожу.,Drowned Night. I carry a lantern for Father. Every year. I don't go closer to the water.
+npc.einar.festival.ice_festival.01,Ледовый праздник. Выковал подставки для ледяных скульптур. Кнуд доволен.,Ice Festival. Forged stands for the ice sculptures. Knud's pleased.
+npc.einar.festival.01,Праздник. Мама танцует. Я держу её эль.,A holiday. Mum dances. I hold her ale.
+npc.einar.festival.02,"Люди весёлые. Мне хорошо, когда им хорошо.",People are cheerful. I'm glad when they're glad.
+npc.einar.gift.love.01,Это… Спасибо. Очень. Я запомню.,This… Thank you. Very much. I'll remember.
+npc.einar.gift.love.02,Лучший подарок. Честно. Я не умею говорить. Но — лучший.,The best gift. Honestly. I'm no good with words. But — the best.
+npc.einar.gift.like.01,Хорошо. Спасибо.,Good. Thanks.
+npc.einar.gift.like.02,"Пригодится. Спасибо, что {подумал|подумала} обо мне.",It'll come in handy. Thanks for thinking of me.
+npc.einar.gift.neutral.01,Спасибо.,Thanks.
+npc.einar.gift.neutral.02,Хм. Ладно. Спасибо.,Hm. All right. Thanks.
+npc.einar.gift.dislike.01,"Сырая рыба… Не надо. Не люблю, когда пахнет морем.",Raw fish… Don't. I don't like it when things smell of the sea.
+npc.einar.gift.dislike.02,"Морская звезда. Нет. Убери, пожалуйста.","A starfish. No. Put it away, please."
+npc.einar.gift.hate.01,Водоросли. Отца нашли в водорослях. Не надо.,Seaweed. They found Father in seaweed. Don't.
+npc.einar.gift.hate.02,Нет. Прости. Не могу это взять.,No. Sorry. I can't take that.
+npc.einar.birthday.01,У меня день рождения. Мама испечёт пирог. Я съем. Весь.,It's my birthday. Mum will bake a pie. I'll eat it. All of it.
+npc.einar.birthday.02,"Двадцать девять. Отцу было столько, когда я родился.",Twenty-nine. Father was that age when I was born.
+npc.einar.birthday_gift.01,Ты {запомнил|запомнила}? Спасибо. Мама скажет — хороший человек. Она права.,You remembered? Thanks. Mum will say — a good person. She's right.
+npc.einar.birthday_gift.02,Подарок. Мне. Хорошо. Очень хорошо.,A gift. For me. Good. Very good.
+npc.einar.act1.01,"Агата заказывала у нас скобы для фонарной. Всегда вовремя платила. Всегда говорила «спасибо, сынок».","Agatha ordered brackets for the lamp room from us. Always paid on time. Always said 'thank you, son'."
+npc.einar.act1.02,Инструменты хорошие? Если сломаются — неси. Сделаю лучше.,Are your tools good? If they break — bring them. I'll make them better.
+npc.einar.act1.03,Первый огонь видел с холма. Хорошо горел.,Saw the first light from the hill. It burned well.
+npc.einar.act1.04,Ремонт башни? Нужны скобы — приходи.,Repairing the tower? Need brackets — come by.
+npc.einar.act1.05,Отец говорил: огонь на мысу — как якорь. Держит остров на месте.,Father used to say: the fire on the cape is like an anchor. Holds the island in place.
+npc.einar.act1.06,Двадцать восьмого? Мама велела не выходить. Почему — не сказала.,The twenty-eighth? Mum said not to go out. Didn't say why.
+npc.einar.act2.01,«Святая Берта». Отец видел такой же огонь. Перед тем как… Да.,The Saint Bertha. Father saw that same fire. Before he… Yes.
+npc.einar.act2.02,Колокол для Эрланда. Мы с мамой ковали обручи. Двое суток. Сделано.,The bell for Erland. Mum and I forged the hoops. Two days straight. Done.
+npc.einar.act2.03,Двадцать в гротах. Если нужно вынести — помогу. Только не в воду.,Twenty in the grottoes. If you need them carried out — I'll help. Just not into the water.
+npc.einar.act2.04,Белая Хмарь. Я стоял у горна с кочергой. Туман не вошёл. Огонь не любит.,The White Fog. I stood by the forge with a poker. The fog didn't come in. Fire's not to its taste.
+npc.einar.act2.05,Для костров в Большую Хмарь выкую подставки. Шесть. Чтобы не опрокинулись.,I'll forge stands for the Great Fog bonfires. Six. So they don't tip over.
+npc.einar.act2.06,"Кай. Он знал отца. Может, знает, что случилось. Спроси его. Я не могу. Там море.",Kai. He knew Father. Maybe he knows what happened. Ask him. I can't. There's sea there.
+npc.einar.act3.01,Скафандр. Мама и Лив ругались над чертежом. Я ковал. Молча. Так лучше.,The diving suit. Mum and Liv argued over the plans. I forged. Quietly. That's better.
+npc.einar.act3.02,"Ты спускаешься туда, где отец. Если увидишь его… Нет. Ничего.",You're going down to where Father is. If you see him… No. Never mind.
+npc.einar.act3.03,Затонувший Сольвик. Там наша старая кузня? Наковальня ещё там?,Sunken Solvik. Is our old forge down there? Is the anvil still there?
+npc.einar.act3.04,Грим заказал у нас фонарь. Большой. С заслонкой. Мама отказалась. Теперь я понимаю почему.,Grim ordered a lantern from us. A big one. With a shutter. Mum refused. Now I see why.
+npc.einar.act3.05,Если пойдёшь на Зубы — я выкую тебе крюк. Острый. Для верёвки.,If you go to the Teeth — I'll forge you a hook. A sharp one. For the rope.
+npc.einar.act3.06,Отец говорил: якорь — это обещание вернуться. Возвращайся.,Father said: an anchor is a promise to come back. Come back.
+npc.einar.act4.01,Железные ставни на фонарную готовы. Саботажники не пролезут. Я проверил. Три раза.,Iron shutters for the lamp room are ready. Saboteurs won't get through. I checked. Three times.
+npc.einar.act4.02,В ночь Прилива я буду у маяка. Внизу. С молотом.,On Tide Night I'll be at the lighthouse. Downstairs. With a hammer.
+npc.einar.act4.03,Если море уйдёт — я увижу дно. Где лежит отец. Я не боюсь. Боюсь. Пойду.,If the sea goes out — I'll see the bottom. Where Father lies. I'm not scared. I am. I'll go.
+npc.einar.act4.04,Мама наточила все мои ножи. Молча. Она так прощается.,Mum sharpened all my knives. Silently. That's how she says goodbye.
+npc.einar.act4.05,Держи огонь. Я держу дверь.,Hold the light. I'll hold the door.
+npc.einar.act4.06,После — выкую что-нибудь красивое. Для тебя. Уже знаю что.,Afterwards — I'll forge something beautiful. For you. I already know what.
+npc.einar.married_other.01,Поздравляю. Выковал вам подкову. На дверь. На счастье.,Congratulations. Forged you a horseshoe. For the door. For luck.
+npc.einar.married_other.02,Хорошая свадьба. Мама плакала. Я тоже. Немного.,Good wedding. Mum cried. So did I. A bit.
+npc.einar.married_other.03,Будь {счастлив|счастлива}. Ты {заслужил|заслужила}.,Be happy. You've earned it.
+npc.einar.married_other.04,Если нужно что-то для дома — приходи. Для молодых — скидка.,If you need anything for the house — come by. Discount for newlyweds.
+npc.einar.married_other.05,Ладно. Молот ждёт. Работа лечит.,All right. The hammer's waiting. Work heals.
+npc.einar.event.wreck.01,Крушение. Опять. Кую скобы для гробов. Много.,A wreck. Again. Forging coffin brackets. Lots.
+npc.einar.event.wreck.02,Отец тоже… Нет. Работать надо.,Father too… No. Got to work.
+npc.einar.event.wreck.03,Приходили за железом для могильных оград. Отдал бесплатно.,They came for iron for grave railings. I gave it free.
+npc.einar.event.wreck.04,Ясная ночь. Корабль разбился. Не бывает так. Кто-то помог.,A clear night. A ship went down. That doesn't happen. Someone helped.
+npc.einar.event.wreck.05,Держись. Если тяжело — приходи в кузню. Помолчим вместе.,Hold on. If it's hard — come to the forge. We'll be quiet together.
+npc.einar.event.funeral.01,Видел похороны с холма. Всё правильно {сделал|сделала}.,Saw the burial from the hill. You did everything right.
+npc.einar.event.funeral.02,"Ограды для могил — моя работа. Хорошие ограды. Чтобы было видно, что кто-то заботится.",Grave railings are my work. Good railings. So it's clear someone cares.
+npc.einar.event.funeral.03,"Похороны. Мама всегда говорит: мёртвым нужен покой, живым — работа.","A burial. Mum always says: the dead need peace, the living need work."
+npc.einar.event.funeral.04,"Ещё одного положили. Хорошо, что в землю.",One more laid to rest. Good that it's in the ground.
+npc.einar.event.funeral.05,Нужен лом зимой — бери мой. Лучший на острове.,Need a crowbar in winter — take mine. Best on the island.
+npc.einar.event.hmar.01,Ночь Хмари. Горн горел всю ночь. Туман не вошёл в кузню.,Fog Night. The forge burned all night. The fog didn't come into the forge.
+npc.einar.event.hmar.02,Слышал отца. В тумане. Он звал. Я не пошёл. Правильно?,Heard Father. In the fog. He was calling. I didn't go. Right?
+npc.einar.event.hmar.03,Мама сидела у двери с молотом. Туман её обошёл. Все обходят маму.,Mum sat by the door with a hammer. The fog went round her. Everyone goes round Mum.
+npc.einar.event.hmar.04,Твой свет проходил по кузне. Каждые полминуты. Спасибо.,Your light swept through the forge. Every half minute. Thanks.
+npc.einar.event.hmar.05,Утром на наковальне была соль. Много соли. Не моя.,In the morning there was salt on the anvil. A lot of salt. Not mine.
+npc.einar.event.inspection.01,Инспекция. Пальм спрашивал про скобы на фонарной. Сказал — наши. Он записал.,Inspection. Palm asked about the brackets in the lamp room. I said — ours. He wrote it down.
+npc.einar.event.inspection.02,{Сдал|Сдала}? Хорошо. Я знал.,Passed? Good. I knew you would.
+npc.einar.event.inspection.03,Пальм заходил в кузню. Посмотрел на горн. Сказал «пункт девять». Ушёл.,Palm came into the forge. Looked at the fire. Said 'clause nine'. Left.
+npc.einar.event.inspection.04,"Мама говорит, инспекторы — как ржавчина. Приходят сами.",Mum says inspectors are like rust. They come on their own.
+npc.einar.event.inspection.05,Если нужно что-то починить к инспекции — неси заранее.,If something needs fixing before an inspection — bring it early.
+npc.einar.event.wedding.01,Свадьба. Я выковал кольца. Хорошие. Не жмут?,The wedding. I forged the rings. Good ones. Do they pinch?
+npc.einar.event.wedding.02,Танцевал. Наступил Лив на ногу. Два раза. Извинился три.,I danced. Stepped on Liv's foot. Twice. Apologised three times.
+npc.einar.event.wedding.03,Хорошая пара. Держитесь крепко.,A good match. Hold on tight.
+npc.einar.event.wedding.04,Мама напилась. Пела про кузнецов. Громко. Всем понравилось.,Mum got drunk. Sang about blacksmiths. Loudly. Everyone loved it.
+npc.einar.event.wedding.05,Счастья вам. Как огню — чтобы не гас.,Happiness to you. Like a fire — never going out.
+npc.einar.event.villains.01,Грим. Отца утопили из-за него. Теперь я знаю. Мне стало тише.,Grim. Father was drowned because of him. Now I know. I feel quieter.
+npc.einar.event.villains.02,Мама пошла на причал. Посмотрела на Грима. Ничего не сказала. Ему хватило.,Mum went to the jetty. Looked at Grim. Said nothing. It was enough for him.
+npc.einar.event.villains.03,Нут и Руд. Я делал им крюки. Не знал для чего.,Nut and Rud. I made hooks for them. Didn't know what for.
+npc.einar.event.villains.04,"Отец может спать. Ты {сказал|сказала} ему? Там, внизу?",Father can rest now. Did you tell him? Down there?
+npc.einar.event.villains.05,Спасибо. Я не умею говорить. Но — спасибо.,Thank you. I'm no good with words. But — thank you.
+npc.einar.bouquet_yes.01,Армерия. Растёт у меня на холме. Да. Конечно да.,Armeria. It grows on my hill. Yes. Of course yes.
+npc.einar.ring_yes.01,Кольцо. Я бы выковал лучше. Но это — лучшее. Да.,A ring. I'd have forged a better one. But this one is the best. Yes.
+ev.einar2.l01,"Хочешь попробовать? Вот молот. Бей, когда я скажу. Слушай металл.",Want to try? Here's the hammer. Strike when I say. Listen to the metal.
+ev.einar2.l02,"Раз. Два. Раз. Два. Не торопись. Металл не любит, когда торопятся.",One. Two. One. Two. Don't rush. Metal doesn't like to be rushed.
+ev.einar2.c01,"Бить ровно, в такт его счёту.","Strike evenly, in time with his count."
+ev.einar2.c02,Бить сильнее — так быстрее.,Strike harder — it's quicker.
+ev.einar2.l03,Хорошо. Слышишь? Звенит ровно. У тебя рука кузнеца. Почти.,Good. Hear that? It rings even. You've got a smith's hand. Almost.
+ev.einar2.l04,Трещина. Ничего. Отец тоже спешил. Потом научился ждать.,A crack. Never mind. Father rushed too. Then he learned to wait.
+ev.einar4.l01,Садись. Отсюда видно гавань. Я прихожу каждый вечер.,Sit. You can see the harbour from here. I come every evening.
+ev.einar4.l02,Я боюсь моря. Десять лет. С тех пор как отца… Я кую якоря и никогда их не бросаю.,I'm afraid of the sea. Ten years. Since Father… I forge anchors and never drop one.
+ev.einar4.l03,Сын рыбака боится воды. Смешно. Никому не говорил. Тебе — сказал.,A fisherman's son afraid of water. Funny. Never told anyone. Told you.
+ev.einar4.c01,Это не смешно. Это честно.,It's not funny. It's honest.
+ev.einar4.c02,Когда-нибудь выйдем в море вместе. На тихой воде.,One day we'll go out together. On calm water.
+ev.einar4.c03,Надо просто себя заставить.,You just have to force yourself.
+ev.einar4.l04,Честно. Да. Спасибо.,Honest. Yes. Thanks.
+ev.einar4.l05,Вместе… Может быть. На тихой. Очень тихой.,Together… Maybe. On calm water. Very calm.
+ev.einar4.l06,Заставлял. Не выходит. Ладно. Пойду в кузню.,I've tried forcing it. Doesn't work. All right. I'll go back to the forge.
+ev.einar6.l01,Тихо сегодня. Совсем тихо. Ты {обещал|обещала}. Я пришёл.,It's calm today. Completely calm. You promised. I came.
+ev.einar6.l02,"(Эйнар держится за борт так, что белеют пальцы. Ялик едва покачивается.)",(Einar grips the gunwale until his knuckles go white. The dinghy barely rocks.)
+ev.einar6.l03,"Вода… прозрачная. Я думал — чёрная. Отец говорил: море днём честнее, чем ночью.",The water's… clear. I thought it was black. Father said the sea's more honest by day than by night.
+ev.einar6.c01,"Хочешь, поплывём дальше?",Want to go further?
+ev.einar6.c02,Хватит на первый раз. Ты молодец.,Enough for a first time. Well done.
+ev.einar6.l04,До буйка. Не дальше. До буйка — можно.,To the buoy. No further. The buoy — all right.
+ev.einar6.l05,Первый раз. Десять лет. И я плыву. Скажу маме. Она не поверит.,First time. Ten years. And I'm afloat. I'll tell Mum. She won't believe it.
+ev.einar8.l01,"Ты {сказал|сказала}, отец здесь. Его голос. Я не слышу. Ты — слышишь?",You said Father's here. His voice. I can't hear it. Can you?
+ev.einar8.l02,"(Холодный ветер от моря. Вы слышите тихий, хриплый голос — Гудмунд, кузнец и рыбак.)","(A cold wind off the sea. You hear a quiet, hoarse voice — Gudmund, smith and fisherman.)"
+ev.einar8.l03,(«Скажи сыну: я видел огонь на Зубах. Я не ошибся. Меня утопили. Пусть не боится воды. Бояться надо людей.»),"(""Tell my son: I saw the fire on the Teeth. I wasn't mistaken. They drowned me. He shouldn't fear the water. It's people he should fear."")"
+ev.einar8.c01,Передать слово в слово.,Pass it on word for word.
+ev.einar8.c02,Смягчить: «Он гордится тобой и просит не бояться».,Soften it: 'He's proud of you and asks you not to be afraid.'
+ev.einar8.l04,"Утопили… Я знал. Десять лет знал. Бояться людей. Да. Спасибо, отец. Спасибо.","Drowned him… I knew. Ten years I knew. Fear people. Yes. Thank you, Father. Thank you."
+ev.einar8.l05,Гордится… Он никогда не говорил. Теперь сказал. Через тебя.,Proud… He never said it. Now he has. Through you.
+ev.einar10.l01,Держи. «Якорь Агаты». Ковал месяц. Ночами.,Here. 'Agatha's Anchor'. Forged it over a month. At night.
+ev.einar10.l02,Тяжёлый. Честный. Возвращается в руку. Как обещание.,Heavy. Honest. Returns to your hand. Like a promise.
+ev.einar10.l03,Теперь я готов бросить свой. Якорь. Здесь. С тобой.,Now I'm ready to drop my own. Anchor. Here. With you.
+ev.einar14.l01,Лодка. Я строил её всю зиму. Сам. Каждая доска. Каждая скоба.,The boat. I built her all winter. Myself. Every plank. Every bracket.
+ev.einar14.l02,Спустим вместе. Отец бы смеялся. Сын кузнеца строит лодки. Сын рыбака — не боится воды.,We'll launch her together. Father would laugh. A smith's son building boats. A fisherman's son not afraid of water.
+ev.einar14.l03,(Лодка мягко сходит в воду. Эйнар стоит по колено в море и не замечает этого.),(The boat slides gently into the water. Einar stands knee-deep in the sea and doesn't even notice.)
+item.lighthouse_figurine.name,Маяк из морёного дуба,Bog-oak lighthouse
+item.lighthouse_figurine.desc,"Декор. Фигурка маяка работы Кнуда: окошко фонарной вырезано так тонко, что просвечивает.",Decor. Knud's carving of the lighthouse: the lamp-room window is cut so fine that light shows through.
+npc.knud.spring.01,Весна! Всё растёт. Люди тоже. Я по мерке вижу — ты за зиму на полпальца {вырос|выросла}. Шучу. {Сел|Села}.,Spring! Everything grows. People too. I can tell by measure — you've grown half a finger since winter. Joking. You've shrunk.
+npc.knud.spring.02,Весной у нас много заказов. Колыбели и гробы. Жизнь в обе стороны.,Lots of orders in spring. Cradles and coffins. Life going both ways.
+npc.knud.spring.03,"Метр семьдесят восемь, плечи сорок шесть. Не обращай внимания, это я так здороваюсь.","One seventy-eight, shoulders forty-six. Don't mind me, that's how I say hello."
+npc.knud.spring.04,Отец сказал сегодня три слова. Праздник! Обычно два.,Father said three words today. A holiday! Usually it's two.
+npc.knud.spring.05,Доски после зимы сырые. Гроб из сырой доски — как обещание из пьяного рта. Держится недолго.,Boards are damp after winter. A coffin of damp wood is like a drunk's promise. Doesn't hold long.
+npc.knud.spring.06,Все мы мои клиенты. Просто в разном темпе. Ты — в очень медленном. Так держать!,We're all my customers. Just at different speeds. You're at a very slow one. Keep it up!
+npc.knud.spring.07,Утки прилетели на лагуну. Я вырезал одну из дерева. Настоящие с ней дружат.,The ducks are back on the lagoon. I carved one out of wood. The real ones are friends with it.
+npc.knud.spring.08,Если нужен ящик под семена — сделаю. Гробы и ящики — почти одно ремесло. Только крышка разная.,If you need a box for seeds — I'll make one. Coffins and boxes are nearly the same craft. Just a different lid.
+npc.knud.spring.09,"Солнце вышло! Отличный день, чтобы мерить людей. Все стоят прямо, щурятся.",The sun's out! Great day for measuring people. Everyone stands straight and squints.
+npc.knud.spring.10,"Слышал, ты {похоронил|похоронила} кого-то на мысу? Какой гроб? Простой? Надо было ко мне. Шучу. Хорошо {сделал|сделала}.",Heard you buried someone on the cape? What coffin? A plain one? Should've come to me. Joking. Well done.
+npc.knud.summer.01,"Лето! Лучшее время для резьбы. Доски сухие, руки тёплые, настроение — как у именинника.","Summer! Best time for carving. Dry boards, warm hands, mood like a birthday."
+npc.knud.summer.02,"По воскресеньям рыбачу на причале. Рыба не клюёт, зато я отдыхаю. Выгодная сделка.","Sundays I fish off the jetty. The fish don't bite, but I rest. A good deal."
+npc.knud.summer.03,Сделал Лив ящик для образцов. Двенадцать отделений. Она заполнила их за два дня.,Made Liv a specimen box. Twelve compartments. She filled them in two days.
+npc.knud.summer.04,Метр семьдесят восемь. Ты не {вырос|выросла}. Хорошо. Стабильность — основа гробостроения.,One seventy-eight. You haven't grown. Good. Stability is the foundation of coffin-making.
+npc.knud.summer.05,"Летом никто не умирает! Ну, почти. Я тогда делаю стулья. Стулья — это гробы для живых.","Nobody dies in summer! Well, almost. Then I make chairs. Chairs are coffins for the living."
+npc.knud.summer.06,Регата скоро. Я вырезаю призовой кубок. Деревянный. Хедда его в прошлый раз утопила.,The regatta's soon. I'm carving the trophy. Wooden. Hedda sank it last time.
+npc.knud.summer.07,Жарко! Отец в мастерской в двух свитерах. Говорит: «Привык». Одно слово — рекорд лаконичности.,Hot! Father's in the workshop wearing two jumpers. Says: 'Used to it.' Two words — a record in brevity.
+npc.knud.summer.08,Что ты любишь больше всего? Я — запах свежей стружки. И пироги. И людей. В таком порядке.,What do you love most? Me — the smell of fresh shavings. And pies. And people. In that order.
+npc.knud.summer.09,"Белые ночи! Можно работать без свечи. Экономия — отец доволен. Не сказал, но я чувствую.","White nights! You can work without a candle. Thrift — Father's pleased. Didn't say so, but I can tell."
+npc.knud.summer.10,Если увидишь где-нибудь морёный дуб — неси. Заплачу. Или вырежу тебе что-нибудь. Что хочешь.,If you see bog oak anywhere — bring it. I'll pay. Or carve you something. Whatever you like.
+npc.knud.autumn.01,"Осень! Сезон гробов. Не радуюсь, не подумай. Просто работы много.","Autumn! Coffin season. I'm not glad, don't think that. There's just a lot of work."
+npc.knud.autumn.02,Ярмарка! Продам резные ложки. Ложка — лучший подарок: каждый день пригождается и никогда не умирает.,The fair! I'll sell carved spoons. A spoon's the best gift: useful every day and never dies.
+npc.knud.autumn.03,Отец сказал «хорошо» про мой гроб. Одно слово — а я неделю летаю.,Father said 'good' about my coffin. One word — and I've been flying for a week.
+npc.knud.autumn.04,Листья летят. Мне их жалко. Такие красивые — и в грязь. Как иные люди.,The leaves are falling. I feel sorry for them. So beautiful — and into the mud. Like some people.
+npc.knud.autumn.05,"Метр семьдесят восемь, но в куртке — восемьдесят. Не волнуйся, я учту.","One seventy-eight, but one eighty in a coat. Don't worry, I'll allow for it."
+npc.knud.autumn.06,"Осенью я вырезаю кресты. Много. Думаю о каждом, для кого он. Это правильно.",In autumn I carve crosses. Many. I think of everyone each is for. It's the right way.
+npc.knud.autumn.07,"Сегодня кто-то заказал колыбель. Осенью! Значит, весной будет малыш. Лучший заказ года.",Someone ordered a cradle today. In autumn! So there'll be a baby in spring. Best order of the year.
+npc.knud.autumn.08,Если в шторм хлопает дверь — это не призрак. Это дверь. Я её чинил. Плохо.,If a door bangs in the storm — it's not a ghost. It's the door. I fixed it. Badly.
+npc.knud.autumn.09,"Хочешь, научу строгать? Строгать — это как говорить. Главное — не спешить.",Want me to teach you to plane? Planing is like talking. The main thing is not to hurry.
+npc.knud.autumn.10,"Сельдь, сельдь, сельдь. Даже доски пахнут сельдью. Зато не гниют.","Herring, herring, herring. Even the boards smell of herring. At least they don't rot."
+npc.knud.winter.01,"Зима. Земля мёрзлая, гробы ждут. Как и все мы. Шучу. Грелку хочешь?","Winter. Ground's frozen, coffins wait. Like all of us. Joking. Want a hot-water bottle?"
+npc.knud.winter.02,"Зимой я делаю сани. Сани — это гробы, которые катаются. Весёлые гробы!",In winter I make sledges. Sledges are coffins that roll. Cheerful coffins!
+npc.knud.winter.03,Отец зимой говорит больше. Вчера — пять слов. Я записал.,Father talks more in winter. Yesterday — five words. I wrote them down.
+npc.knud.winter.04,"Метр семьдесят восемь, в трёх свитерах — метр девяносто. Зима меняет всех.","One seventy-eight, in three jumpers — one ninety. Winter changes everyone."
+npc.knud.winter.05,Снег на крыше мастерской. Отец лезет чистить. Я держу лестницу и молюсь.,Snow on the workshop roof. Father climbs up to clear it. I hold the ladder and pray.
+npc.knud.winter.06,"Долгая ночь. Вырезаю фигурки для близнецов. Нильсу — кит, Фрейе — русалка. Они поменяются.","The long night. Carving figures for the twins. A whale for Nils, a mermaid for Freya. They'll swap."
+npc.knud.winter.07,Зимой хорошо в таверне. Бьорн разрешает мерить посетителей. Бесплатно. Им нравится. Мне — очень.,Winter's good in the tavern. Bjorn lets me measure the customers. Free. They like it. I love it.
+npc.knud.winter.08,"Лёд на лагуне! Кто упадёт — лечу. Не гробом, не бойся. Горячим чаем.","Ice on the lagoon! Whoever falls — I'll treat them. Not with a coffin, don't worry. With hot tea."
+npc.knud.winter.09,Твой огонь зимой — как свеча на подоконнике. Все знают: кто-то не спит.,Your light in winter is like a candle in a window. Everyone knows someone's awake.
+npc.knud.winter.10,Весна скоро. Я уже заготовил доски на колыбели. Верю в людей.,Spring's coming. I've already set aside boards for cradles. I believe in people.
+npc.knud.weather.rain.01,"Дождь! Отлично! Доски не сохнут, заказов нет, я вырезаю для души.","Rain! Great! Boards won't dry, no orders, I carve for the soul."
+npc.knud.weather.rain.02,В дождь отец говорит «сыро». Всегда. Это наше семейное прогнозирование.,In rain Father says 'damp'. Always. That's our family weather forecast.
+npc.knud.weather.storm.01,"Шторм. Все сидят по домам, а я делаю гробы. Прости, профессиональное предчувствие.","A storm. Everyone's indoors, and I'm making coffins. Sorry, professional hunch."
+npc.knud.weather.storm.02,Держи огонь! Мне не нужны заказы. Правда не нужны.,Keep the light going! I don't want the orders. Really I don't.
+npc.knud.weather.fog.01,"Туман. Плохо видно, кого мерить. Приходится на ощупь. Шучу!",Fog. Hard to see who to measure. Have to go by feel. Joking!
+npc.knud.weather.fog.02,В тумане все как призраки. Я с ними здороваюсь. Вдруг кто-то из клиентов.,In fog everyone looks like a ghost. I say hello to them. Might be a customer.
+npc.knud.weather.snow.01,"Снег! Будем лепить снеговика. В полный рост. Метр семьдесят восемь, как ты.","Snow! Let's make a snowman. Full height. One seventy-eight, like you."
+npc.knud.weather.cloud.01,"Облачно. Идеальный свет для резьбы. Не слепит, не темно. Как хороший разговор.","Cloudy. Perfect light for carving. Not glaring, not dark. Like a good conversation."
+npc.knud.festival.boat_blessing.01,"Спуск лодок! Половину этих лодок чинили мы с отцом. Благословляйте осторожно, лак свежий.","The Boat Launch! Father and I patched half these boats. Bless them gently, the varnish is fresh."
+npc.knud.festival.regatta.01,Регата! Мой кубок в этот раз тонуть не будет. Я вставил пробку.,The regatta! My trophy won't sink this time. I put a cork in it.
+npc.knud.festival.herring_fair.01,"Ярмарка! Я продаю ложки, а Хедда — сельдь. Ложкой сельдь не едят. Мы всё равно дружим.","The fair! I sell spoons, Hedda sells herring. You don't eat herring with a spoon. We're still friends."
+npc.knud.festival.ice_festival.01,Ледовый праздник! Я вырезаю маяк изо льда. Он тает к вечеру. Как настоящее искусство.,Ice Festival! I'm carving a lighthouse from ice. It melts by evening. Like real art.
+npc.knud.festival.01,"Праздник! Все нарядные, прямые, довольные. Идеальная возможность снять мерку.","A holiday! Everyone's dressed up, standing straight, happy. Perfect chance to take measurements."
+npc.knud.festival.02,"Танцуем! Я танцую плохо, но с энтузиазмом. Энтузиазм важнее.","Let's dance! I dance badly, but with enthusiasm. Enthusiasm matters more."
+npc.knud.gift.love.01,"Морёный дуб?! Ты… ты знаешь, что это? Это как золото, только лучше пахнет!","Bog oak?! You… you know what this is? It's like gold, only it smells better!"
+npc.knud.gift.love.02,Вот это подарок! Я вырежу из него что-нибудь для тебя. Не гроб. Честно.,Now that's a gift! I'll carve you something from it. Not a coffin. Honest.
+npc.knud.gift.like.01,"О, спасибо! Хорошая вещь. Пригодится в мастерской.","Oh, thanks! Good stuff. It'll come in handy in the workshop."
+npc.knud.gift.like.02,"Здорово! Ты знаешь, чем меня порадовать. Почти как отец. Только разговорчивее.",Great! You know how to cheer me up. Almost like Father. Only chattier.
+npc.knud.gift.neutral.01,Спасибо! Интересно. Положу на полку «интересное».,Thanks! Interesting. I'll put it on the 'interesting' shelf.
+npc.knud.gift.neutral.02,"Хм, спасибо! Найду применение. Я всему нахожу применение.","Hm, thanks! I'll find a use for it. I find a use for everything."
+npc.knud.gift.dislike.01,Гнилые доски… Ты хочешь меня обидеть или проверить? Проверку не {прошёл|прошла}.,Rotten boards… Are you trying to insult me or test me? You failed the test.
+npc.knud.gift.dislike.02,Эм. Спасибо. Это пойдёт на растопку. Не обижайся.,Um. Thanks. This'll go for kindling. No offence.
+npc.knud.gift.hate.01,Лютефиск! Нет-нет-нет. Даже гроб не выдержит этот запах.,Lutefisk! No no no. Not even a coffin could hold that smell.
+npc.knud.gift.hate.02,"Мусор? В подарок? Я делаю гробы, а не свалки!","Rubbish? As a gift? I make coffins, not dumps!"
+npc.knud.birthday.01,У меня день рождения! Отец подарил рубанок. И сказал «с днём». Два слова. Счастье!,It's my birthday! Father gave me a plane. And said 'happy day'. Two words. Bliss!
+npc.knud.birthday.02,"Двадцать восемь лет! Метр семьдесят девять. Я вырос! Нет, это каблуки.","Twenty-eight! One seventy-nine. I've grown! No, it's the heels."
+npc.knud.birthday_gift.01,"Подарок! Мне! В день рождения! Я сейчас расплачусь. Нет, расскажу отцу — он скажет «хм».","A present! For me! On my birthday! I'm going to cry. No, I'll tell Father — he'll say 'hm'."
+npc.knud.birthday_gift.02,Ты помнишь мой день рождения. Я вырежу тебе за это что-нибудь. Не спорь.,You remember my birthday. I'll carve you something for it. Don't argue.
+npc.knud.act1.01,Агата заказала у нас гроб десять лет назад. «На всякий случай». Он до сих пор стоит в мастерской. Пустой.,Agatha ordered a coffin from us ten years ago. 'Just in case.' It's still in the workshop. Empty.
+npc.knud.act1.02,"Первый утопленник твой? Приходи, покажу, как правильно зашивать парусину. Не нос! Парусину.","Your first drowned man? Come by, I'll show you how to stitch the canvas properly. Not the nose! The canvas."
+npc.knud.act1.03,Лодку Агаты отец чинил неделю. Сказал: «Хорошая». Высшая похвала.,Father spent a week on Agatha's boat. Said: 'Good.' Highest praise.
+npc.knud.act1.04,Доски для лестницы маяка — у нас. Для тебя — скидка. Для Грима — нет.,Boards for the lighthouse stairs — ours. Discount for you. None for Grim.
+npc.knud.act1.05,Весной двадцать восьмого… Отец велел сделать три простых гроба заранее. Он никогда не ошибается.,The twenty-eighth of spring… Father told me to make three plain coffins in advance. He's never wrong.
+npc.knud.act1.06,"Ты знакомишься со всеми? Молодец. Я уже всех измерил. Могу рассказать, кто сколько.",Meeting everyone? Good. I've measured them all already. I can tell you who's what.
+npc.knud.act2.01,Три гроба для «Святой Берты». Отец знал. Откуда он знал? Он не ответил. Одним словом не ответил.,Three coffins for the Saint Bertha. Father knew. How did he know? He didn't answer. Didn't answer in one word.
+npc.knud.act2.02,Двадцать в гротах… Я сделаю двадцать гробов. Бесплатно. Не спорь.,Twenty in the grottoes… I'll make twenty coffins. Free. Don't argue.
+npc.knud.act2.03,Когда будешь выносить их — позови. Я сильный. И не боюсь костей. Кости — это просто люди без спешки.,When you carry them out — call me. I'm strong. And not afraid of bones. Bones are just people with no rush.
+npc.knud.act2.04,"Белая Хмарь. Я забаррикадировал мастерскую гробами. Надёжно. Жутко, но надёжно.","The White Fog. I barricaded the workshop with coffins. Sturdy. Creepy, but sturdy."
+npc.knud.act2.05,Для Большой Хмари сделаю щиты на окна. Много. Всем.,For the Great Fog I'll make window shields. Lots. For everyone.
+npc.knud.act2.06,Отец сказал сегодня: «Туман злой». Два слова — и я не спал всю ночь.,Father said today: 'Fog's angry.' Two words — and I didn't sleep all night.
+npc.knud.act3.01,"В затонувшем Сольвике есть мастерская гробовщика? Интересно, кто там мерил людей.",Is there an undertaker's workshop in sunken Solvik? I wonder who measured people down there.
+npc.knud.act3.02,"Скафандр — это же гроб, который дышит! Прости. Нервное.",A diving suit is a coffin that breathes! Sorry. Nerves.
+npc.knud.act3.03,Грим заказал у нас ящик. Длинный. Без крышки. Отец отказал. Двумя словами. Не буду повторять.,Grim ordered a box from us. Long. No lid. Father refused. In two words. I won't repeat them.
+npc.knud.act3.04,"Ты {стал бледный|стала бледная}. Спускаешься в Глубь слишком часто. Метр семьдесят восемь, но в плечах — уже сорок четыре.","You've gone pale. Going down to the Deep too often. One seventy-eight, but only forty-four across the shoulders now."
+npc.knud.act3.05,Если соберёшь улики — я вырежу рамку для доски. Красивую. Правда заслуживает рамки.,If you gather the evidence — I'll carve a frame for the board. A beautiful one. Truth deserves a frame.
+npc.knud.act3.06,Отец начал делать гроб. Большой. Не сказал для кого. Я боюсь спросить.,Father's started a coffin. A big one. Didn't say who for. I'm afraid to ask.
+npc.knud.act4.01,В ночь Прилива я заколочу нижнюю дверь маяка. Досками и гробом. Никто не пройдёт.,On Tide Night I'll board up the lighthouse's lower door. With planks and a coffin. Nobody's getting through.
+npc.knud.act4.02,"Я снял с тебя мерку давно. На всякий случай. Сейчас хочу, чтобы этот случай никогда не наступил.",I took your measurements long ago. Just in case. Now I want that case never to come.
+npc.knud.act4.03,Отец дал мне свой старый молоток. Сказал: «Держи». Одно слово. Я понял всё.,Father gave me his old hammer. Said: 'Keep it.' One word. I understood everything.
+npc.knud.act4.04,Все мы мои клиенты. Но не сегодня. Сегодня — никто.,We're all my customers. But not today. Today — no one.
+npc.knud.act4.05,Если пойдёшь по дну — принеси мне кусочек морёного дуба. Для гроба Гриму. Шучу. Наполовину.,If you walk the sea floor — bring me a bit of bog oak. For Grim's coffin. Joking. Half.
+npc.knud.act4.06,Держи огонь. А я подержу дверь. И остроумие. Кто-то должен.,Hold the light. I'll hold the door. And the jokes. Someone has to.
+npc.knud.married_other.01,Поздравляю! Я сделал вам колыбель. Не намекаю. Просто сделал.,Congratulations! I made you a cradle. Not hinting. Just made it.
+npc.knud.married_other.02,"Свадьба! Лучший повод, чтобы измерить двоих сразу. Вы подходите друг другу по росту.",A wedding! Best excuse to measure two at once. You match in height.
+npc.knud.married_other.03,"Я немного грустный, но очень рад. Бывает и так.","I'm a bit sad, but very glad. That happens too."
+npc.knud.married_other.04,Если нужна мебель в дом — приходи. Кровать на двоих — моё любимое изделие после колыбели.,If you need furniture for the house — come by. A double bed is my favourite piece after cradles.
+npc.knud.married_other.05,Живите долго! Мне не нужны такие заказы. Никогда.,Live long! I don't want those orders from you. Ever.
+npc.knud.event.wreck.01,Крушение. Отец уже пилит доски. Молча. Я тоже молчу. Мы так горюем.,A wreck. Father's already sawing boards. Silently. I'm silent too. That's how we grieve.
+npc.knud.event.wreck.02,"Сколько их? Скажи — я сделаю. Лучше, чем обычно. Им это нужнее.",How many? Tell me — I'll make them. Better than usual. They need it more.
+npc.knud.event.wreck.03,Я не шучу сегодня. Даже я.,I'm not joking today. Even me.
+npc.knud.event.wreck.04,Ясная ночь и крушение. Отец сказал: «Не море». Два слова. Самые страшные за год.,A clear night and a wreck. Father said: 'Not sea.' Two words. The scariest this year.
+npc.knud.event.wreck.05,"Приходи, если нужно помочь нести. Я сильный. И мне не страшно. Мне грустно.",Come if you need help carrying. I'm strong. And I'm not afraid. I'm sad.
+npc.knud.event.funeral.01,Как гроб? Не скрипел? Я волнуюсь за каждый. Как за детей.,How was the coffin? Didn't creak? I worry about every one. Like children.
+npc.knud.event.funeral.02,"Похороны прошли хорошо? Для покойника, я имею в виду. Для нас — всегда плохо.","Did the burial go well? For the deceased, I mean. For us it's always bad."
+npc.knud.event.funeral.03,Ты кладёшь камень на могилу? Правильно. А я вырезаю на кресте птичку. Никто не знает зачем. Даже я.,You put a stone on the grave? Right. And I carve a little bird on the cross. Nobody knows why. Not even me.
+npc.knud.event.funeral.04,Хороший погост у тебя. Ровный. Ухоженный. Лучшая реклама моему ремеслу.,You keep a good graveyard. Even. Tidy. Best advert for my trade.
+npc.knud.event.funeral.05,Ещё один спит спокойно. Это лучше любого заказа.,One more sleeping peacefully. Better than any order.
+npc.knud.event.hmar.01,Ночь Хмари! Я сидел в мастерской среди гробов. Туман заглянул и ушёл. Даже ему стало неуютно.,Fog Night! I sat in the workshop among the coffins. The fog looked in and left. Even it felt uncomfortable.
+npc.knud.event.hmar.02,Отец всю ночь стучал молотком. Сказал утром: «Чтобы слышали». Кто — не сказал.,Father hammered all night. Said in the morning: 'So they hear.' Didn't say who.
+npc.knud.event.hmar.03,"Мне снилось, что я мерю туман. Метр семьдесят восемь. Как ты. Жутко.",I dreamt I was measuring the fog. One seventy-eight. Like you. Creepy.
+npc.knud.event.hmar.04,"Твой свет проходил через щели в ставнях. Как будто кто-то проверял, все ли на месте.",Your light came through the cracks in the shutters. As if someone were checking everyone was there.
+npc.knud.event.hmar.05,Утром на крыльце лежали мокрые детские башмачки. Я поставил их на полку. Пусть ждут хозяйку.,In the morning there were wet child's shoes on the doorstep. I put them on a shelf. Let them wait for their owner.
+npc.knud.event.inspection.01,Инспекция! Пальм постучал по перилам лестницы маяка. Наши перила. Не шатаются! Я счастлив.,Inspection! Palm knocked on the lighthouse stair rail. Our rail. Doesn't wobble! I'm thrilled.
+npc.knud.event.inspection.02,"Пальм: метр шестьдесят два, строгий взгляд, пункт номер… он сам скажет.","Palm: one sixty-two, stern look, clause number… he'll tell you himself."
+npc.knud.event.inspection.03,{Сдал|Сдала} инспекцию? Отлично! Отец сказал «молодец». Про тебя. Я чуть не упал.,Passed the inspection? Excellent! Father said 'well done'. About you. I nearly fell over.
+npc.knud.event.inspection.04,В прошлый раз Пальм записал нам замечание: «гробы стоят у входа». А где им ещё стоять?,Last time Palm noted a remark against us: 'coffins by the entrance'. Where else should they stand?
+npc.knud.event.inspection.05,"Инспекции нужны. Чтобы все помнили: огонь — это работа, а не чудо.","Inspections are needed. So everyone remembers: the light is work, not a miracle."
+npc.knud.event.wedding.01,Свадьба! Я делал столы. Все шестнадцать. Никто не сломал. Даже Хедда.,The wedding! I made the tables. All sixteen. No one broke one. Not even Hedda.
+npc.knud.event.wedding.02,Я танцевал с Ингрид и мерил её в танце. Вслух. Она смеялась. Хороший знак.,I danced with Ingrid and measured her mid-dance. Out loud. She laughed. A good sign.
+npc.knud.event.wedding.03,Отец пришёл на свадьбу. Сказал молодым «совет да любовь». Три слова! Исторический день.,Father came to the wedding. Told the couple 'love and harmony'. Three words! A historic day.
+npc.knud.event.wedding.04,Лучшая свадьба за десять лет. Я знаю — я делал мебель для всех.,Best wedding in ten years. I'd know — I made the furniture for all of them.
+npc.knud.event.wedding.05,Живите долго и счастливо. И никогда не становитесь моими клиентами.,Live long and happily. And never become my customers.
+npc.knud.event.villains.01,"Грим… Я делал ему шкаф. С потайным ящиком. Теперь я знаю, что там лежало.",Grim… I made him a wardrobe. With a secret drawer. Now I know what was in it.
+npc.knud.event.villains.02,Отец закончил тот большой гроб. Сказал: «Не понадобился». Я никогда не видел его таким довольным.,Father finished that big coffin. Said: 'Not needed.' I've never seen him so pleased.
+npc.knud.event.villains.03,"Братья Скау… Я мерил их в прошлом году. Метр девяносто и метр девяносто два. Большие люди, маленькая совесть.","The Skau brothers… I measured them last year. One ninety and one ninety-two. Big men, small consciences."
+npc.knud.event.villains.04,"Теперь, может, работы станет меньше. Это лучшая новость для гробовщика. Серьёзно.",Now maybe there'll be less work. Best news an undertaker can get. Seriously.
+npc.knud.event.villains.05,"Спасибо. Ты {сделал|сделала} так, что мне реже придётся делать гробы. Лучший подарок моему ремеслу.",Thank you. You made it so I'll have to make fewer coffins. Best gift my trade ever got.
+npc.knud.bouquet_yes.01,"Армерия? Мне? Метр семьдесят восемь… то есть да! Да! Прости, от волнения меряю.","Armeria? For me? One seventy-eight… I mean yes! Yes! Sorry, I measure when I'm nervous."
+npc.knud.ring_yes.01,Кольцо! Я снял мерку с твоего пальца давно. Оно подойдёт. Да!,A ring! I took the measure of your finger long ago. It'll fit. Yes!
+ev.knud2.l01,"О, заходи! Стой ровно. Руки в стороны. Не бойся, это не то, что ты думаешь. То есть то. Но на всякий случай.","Oh, come in! Stand straight. Arms out. Don't worry, it's not what you think. Well, it is. But just in case."
+ev.knud2.l02,Метр семьдесят восемь. Плечи сорок шесть. Рука длинная — хорошо копаешь. Записал.,One seventy-eight. Shoulders forty-six. Long arms — you dig well. Noted.
+ev.knud2.c01,А мне скидка будет?,Do I get a discount?
+ev.knud2.c02,"Надеюсь, пригодится нескоро.",I hope it won't be needed for a long time.
+ev.knud2.c03,"Это неприятно, Кнуд.","That's unpleasant, Knud."
+ev.knud2.l03,"Ха! Первый, кто спросил! Двадцать процентов. Но только посмертно.",Ha! First person ever to ask! Twenty percent. Posthumously only.
+ev.knud2.l04,"Ха! {Первый|Первая}, кто спросил! Двадцать процентов. Но только посмертно.",Very long! I'll put your measurements on the shelf. The farthest one.
+ev.knud2.l05,Прости. Я не хотел. Это просто моя работа. Я так людей узнаю.,Sorry. I didn't mean to. It's just my job. It's how I get to know people.
+ev.knud4.l01,"Хочешь научиться резьбе? Вот нож. Вот доска. Вот крест. Резной. Такие ставят тем, кого любили.",Want to learn carving? Here's a knife. Here's a board. Here's a cross. A carved one. For those who were loved.
+ev.knud4.l02,Режь от себя. Всегда от себя. Это главное правило. И в жизни тоже.,Cut away from yourself. Always away. That's the main rule. In life too.
+ev.knud4.c01,"Медленно, по его линии.","Slowly, along his line."
+ev.knud4.c02,"Быстро, пока не {устал|устала}.","Quickly, before I tire."
+ev.knud4.l03,"Красиво! Ты {вырезал|вырезала} лучше, чем я в первый раз. Отцу не говори.",Beautiful! You carved it better than I did my first time. Don't tell Father.
+ev.knud4.l04,"Крест кривой, зато честный. Сойдёт для того, кто любил кривые вещи.","The cross is crooked, but honest. It'll do for someone who loved crooked things."
+ev.knud6.l01,"Делаю колыбель. На заказ. Маргит — для правнука, который будет весной.",I'm making a cradle. To order. Margit's — for a great-grandchild coming in spring.
+ev.knud6.l02,"Моя мама умерла, когда я родился. Отец сделал колыбель и гроб в одну неделю. Одними руками.",My mother died when I was born. Father made a cradle and a coffin in the same week. With the same hands.
+ev.knud6.l03,Он с тех пор мало говорит. Я — много. Кто-то же должен говорить за двоих.,He's hardly spoken since. I talk a lot. Someone has to talk for two.
+ev.knud6.c01,Твоя колыбель будет лучшей на острове.,Your cradle will be the best on the island.
+ev.knud6.c02,"Ты говоришь за двоих, а он любит за двоих.","You talk for two, and he loves for two."
+ev.knud6.l04,Будет. Я вырежу на ней чаек. Смешных. Чтобы малыш смеялся.,It will be. I'll carve gulls on it. Funny ones. So the baby laughs.
+ev.knud6.l05,Любит за двоих… Я никогда так не думал. Спасибо. Пойду скажу ему. Нет — сделаю ему чай.,Loves for two… I never thought of it like that. Thank you. I'll go and tell him. No — I'll make him tea.
+ev.knud8.l01,"Бревно, доски, гвозди от Эйнара. Будем строить скамейку. Для погоста.","A log, boards, nails from Einar. We're building a bench. For the graveyard."
+ev.knud8.l02,Чтобы было где сидеть в старости. И после. Шучу. Почти.,Somewhere to sit in old age. And after. Joking. Almost.
+ev.knud8.l03,"(К вечеру у ворот погоста стоит скамейка с резной спинкой: маяк, чайки и одна кривая волна — ваша.)","(By evening a bench with a carved back stands by the graveyard gate: a lighthouse, gulls and one crooked wave — yours.)"
+ev.knud8.l04,Сигрид будет тут писать. Ингрид — читать. Мы — сидеть. Все довольны.,Sigrid will write here. Ingrid will read. We'll sit. Everyone's happy.
+ev.knud10.l01,Держи. Маяк. Из морёного дуба. Резал полгода. По ночам. При свече. Отец ругался. Одним словом.,Here. A lighthouse. Bog oak. Took me half a year. At night. By candle. Father scolded me. In one word.
+ev.knud10.l02,"Посмотри в окошко фонарной. Там просвечивает. Это ты. Ну, огонь. Но и ты тоже.","Look through the lamp-room window. Light shows through. That's you. Well, the fire. But you too."
+ev.knud14.l01,"Закрой глаза. Нет, не подсматривай! Я вырезал знак на двери. Наш знак.","Close your eyes. No, don't peek! I carved a sign on the door. Our sign."
+ev.knud14.l02,Якорь и свеча. Якорь — чтобы держаться. Свеча — чтобы видеть. Вместе — чтобы возвращаться домой.,An anchor and a candle. The anchor to hold on. The candle to see by. Together — to come home.
+ev.knud14.c01,Лучшая дверь на острове.,The best door on the island.
+ev.knud14.c02,Теперь это точно наш дом.,Now it's truly our home.
+ev.knud14.l03,"Метр семьдесят восемь и метр… в общем, два человека. Под одной дверью. Идеально.","One seventy-eight and one… well, two people. Under one door. Perfect."

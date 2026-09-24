@@ -2657,5 +2657,25 @@
     "category": "forage",
     "price": 120,
     "stack": 20
+  },
+  {
+    "id": "anchor_agatha",
+    "name": "item.anchor_agatha.name",
+    "desc": "item.anchor_agatha.desc",
+    "category": "weapon",
+    "price": 0,
+    "stack": 1,
+    "weapon": {
+      "damage": 45,
+      "speed": 0.8
+    }
+  },
+  {
+    "id": "lighthouse_figurine",
+    "name": "item.lighthouse_figurine.name",
+    "desc": "item.lighthouse_figurine.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1
   }
 ]
