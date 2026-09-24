@@ -203,6 +203,70 @@ def check_people(tables, npc_ids) -> list:
                     continue
                 if map_id not in maps or not spot_ok(map_id, spot):
                     errs.append(f"schedule {path.name} unknown place {map_id}:{spot}")
+    errs.extend(check_scenes(tables, npc_ids, maps))
+    return errs
+
+
+SCENE_COMMANDS = {"fade_out", "fade_in", "place", "move", "face", "wait", "emote", "say", "choice", "label", "goto",
+                  "camera_pan", "camera_follow", "shake", "sound", "music", "spawn", "despawn", "anim", "set_time",
+                  "set_weather", "effects", "end"}
+EFFECTS = {"friendship", "flag", "give", "item", "take", "money", "honor", "points", "xp", "start_quest", "step_quest",
+           "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy"}
+
+
+def loc_keys():
+    import csv
+    with open(ROOT / "localization" / "strings.csv", encoding="utf-8") as f:
+        return {row[0] for row in csv.reader(f) if row}
+
+
+def check_scenes(tables, npc_ids, maps) -> list:
+    """Scene scripts of 33.6: known commands, labels, speakers, text keys and effects."""
+    errs = []
+    keys = loc_keys()
+    events_dir = DATA / "events"
+    seen_ids = set()
+    for path in sorted(events_dir.glob("*.json")) if events_dir.exists() else []:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        scenes = data if isinstance(data, list) else data.get("events", [data])
+        for scene in scenes:
+            sid = scene.get("id", "?")
+            if sid in seen_ids:
+                errs.append(f"scene {sid} defined twice")
+            seen_ids.add(sid)
+            trig = scene.get("trigger", {})
+            if trig.get("map") and trig["map"] not in maps:
+                errs.append(f"scene {sid} on unknown map {trig['map']}")
+            script = scene.get("script", [])
+            labels = {c[1] for c in script if c and c[0] == "label"}
+            if not script or script[-1][0] != "end":
+                errs.append(f"scene {sid} must finish with end")
+            for c in script:
+                op = c[0]
+                if op not in SCENE_COMMANDS:
+                    errs.append(f"scene {sid} unknown command {op}")
+                if op == "say":
+                    if c[1] not in npc_ids and c[1] != "hero":
+                        errs.append(f"scene {sid} unknown speaker {c[1]}")
+                    if c[3] not in keys:
+                        errs.append(f"scene {sid} missing text {c[3]}")
+                if op == "goto" and c[1] not in labels:
+                    errs.append(f"scene {sid} goto missing label {c[1]}")
+                if op == "choice":
+                    for option in c[1]:
+                        if option[0] not in keys:
+                            errs.append(f"scene {sid} missing choice text {option[0]}")
+                        if len(option) > 2 and option[2] and option[2] not in labels:
+                            errs.append(f"scene {sid} choice to missing label {option[2]}")
+                        for eff in option[1]:
+                            if eff[0] not in EFFECTS:
+                                errs.append(f"scene {sid} unknown effect {eff[0]}")
+                if op == "effects":
+                    for eff in c[1]:
+                        if eff[0] not in EFFECTS:
+                            errs.append(f"scene {sid} unknown effect {eff[0]}")
+                if op in ("place", "move", "face", "emote", "anim", "spawn", "despawn") and c[1] not in npc_ids and c[1] != "hero":
+                    errs.append(f"scene {sid} unknown actor {c[1]}")
     return errs
 
 

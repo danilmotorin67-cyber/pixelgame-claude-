@@ -181,10 +181,33 @@ func _check_friendship() -> void:
 	_check(Loc.format("{внук|внучка}") == "внук", "the male form")
 
 
+func _check_scenes() -> void:
+	_fresh()
+	Clock.day_index = 5
+	Clock.minutes = 20 * 60
+	_check(Cutscenes.pending("village_tavern") == "", "no scene before four hearts")
+	Relationships.set_hearts("npc_hedda", 4)
+	_check(Cutscenes.pending("village_tavern") == "ev_hedda_4", "at four hearts Hedda's story waits in the tavern")
+	_check(Cutscenes.pending("village") == "", "only in the tavern")
+	Clock.minutes = 12 * 60
+	_check(Cutscenes.pending("village_tavern") == "", "only in the evening")
+	Clock.minutes = 20 * 60
+	var before := int(Relationships.points["npc_hedda"])
+	var said := Cutscenes.simulate("ev_hedda_4", [0])
+	_check(said.has("ev.hedda4.l7") and Game.flag("hedda_testimony_told") and int(Relationships.points["npc_hedda"]) == before + 80,
+		"the warm answer: +80 and her testimony")
+	_check(Cutscenes.pending("village_tavern") == "" and Cutscenes.seen.has("ev_hedda_4"), "each scene plays once")
+	Cutscenes.reset()
+	Game.flags.clear()
+	said = Cutscenes.simulate("ev_hedda_4", [2])
+	_check(not said.has("ev.hedda4.l7") and not Game.flag("hedda_testimony_told"), "the cold answer ends it")
+
+
 func _run() -> void:
 	_check_data()
 	_check_week()
 	_check_places()
 	_check_friendship()
+	_check_scenes()
 	print("M6 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

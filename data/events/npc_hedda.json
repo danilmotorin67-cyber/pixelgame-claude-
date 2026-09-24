@@ -1,0 +1,14 @@
+{"events": [
+ {"id": "ev_hedda_4", "npc": "npc_hedda", "hearts": 4,
+  "trigger": {"map": "village_tavern", "hours": [19, 23], "when": "hearts('npc_hedda') >= 4 and weather != 'storm'"},
+  "script": [["fade_out", 0.5], ["place", "npc_hedda", "table_6", "left"], ["place", "hero", [11, 7]], ["face", "hero", "right"], ["fade_in", 0.5],
+   ["say", "npc_hedda", "sad", "ev.hedda4.l1"],
+   ["say", "npc_hedda", "neutral", "ev.hedda4.l2"],
+   ["say", "npc_hedda", "sad", "ev.hedda4.l3"],
+   ["choice", [["ev.hedda4.c1", [["friendship", "npc_hedda", 80]], "warm"], ["ev.hedda4.c2", [["friendship", "npc_hedda", 60]], "dry"], ["ev.hedda4.c3", [["friendship", "npc_hedda", -50]], "cold"]]],
+   ["label", "warm"], ["say", "npc_hedda", "neutral", "ev.hedda4.l4"], ["goto", "testimony"],
+   ["label", "dry"], ["say", "npc_hedda", "happy", "ev.hedda4.l5"], ["goto", "testimony"],
+   ["label", "cold"], ["emote", "npc_hedda", "angry"], ["say", "npc_hedda", "angry", "ev.hedda4.l6"], ["end"],
+   ["label", "testimony"], ["say", "npc_hedda", "neutral", "ev.hedda4.l7"],
+   ["effects", [["flag", "hedda_testimony_told"], ["flag", "quest_ready_treska_aground"]]], ["end"]]}
+]}

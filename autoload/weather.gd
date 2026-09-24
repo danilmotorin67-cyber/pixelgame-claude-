@@ -19,6 +19,7 @@ var hmar_night: bool = false
 var last_hmar_day: int = -100
 var forecast: Array = []
 var requested_calm: int = -1
+var forced: Dictionary = {}
 
 
 func _day_rng(index: int, salt: int) -> RandomNumberGenerator:
@@ -34,6 +35,8 @@ func _season_of(index: int) -> int:
 func weather_for_day(index: int) -> String:
 	if index < 3 or index == requested_calm:
 		return "clear"
+	if forced.has(str(index)):
+		return str(forced[str(index)])
 	var season_idx := _season_of(index)
 	var weights: Array = WEIGHTS[season_idx].duplicate()
 	# 12.2: a hostile sea brings half again as many storms, a generous one 30% fewer.
@@ -104,6 +107,7 @@ func reset() -> void:
 	hmar_night = false
 	last_hmar_day = -100
 	requested_calm = -1
+	forced.clear()
 	forecast.clear()
 
 
@@ -145,6 +149,15 @@ func barometer(offset: int) -> String:
 	return options[rng.randi_range(0, options.size() - 1)] if not options.is_empty() else truth
 
 
+# A scene or a story night decides tomorrow's weather ("calm" is a clear day without wind).
+func force(index: int, id: String) -> void:
+	if id == "calm":
+		requested_calm = index
+	elif TYPES.has(id):
+		forced[str(index)] = id
+	forecast_refresh()
+
+
 func set_weather(id: String) -> void:
 	if not TYPES.has(id):
 		return
@@ -156,7 +169,7 @@ func serialize() -> Dictionary:
 	return {"current": current, "calm": calm, "aurora": aurora, "wind": wind,
 		"wind_direction": wind_direction, "wind_strength": wind_strength,
 		"hmar_night": hmar_night, "last_hmar_day": last_hmar_day, "forecast": forecast,
-		"requested_calm": requested_calm}
+		"requested_calm": requested_calm, "forced": forced}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -171,4 +184,5 @@ func deserialize(d: Dictionary) -> void:
 	last_hmar_day = int(d.get("last_hmar_day", -100))
 	forecast = d.get("forecast", []).duplicate()
 	requested_calm = int(d.get("requested_calm", -1))
+	forced = d.get("forced", {}).duplicate()
 	Events.weather_changed.emit(current)

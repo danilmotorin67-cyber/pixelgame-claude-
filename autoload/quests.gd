@@ -80,23 +80,7 @@ func complete(id: String) -> void:
 	if bool(states[id]["done"]):
 		return
 	states[id]["done"] = true
-	for reward in quest(id).get("rewards", []):
-		match str(reward[0]):
-			"xp":
-				Skills.add_xp(str(reward[1]), int(reward[2]))
-			"points":
-				Knowledge.add_points(str(reward[1]), int(reward[2]))
-			"money":
-				Economy.add(int(reward[1]))
-			"item":
-				if Inventory.add(str(reward[1]), int(reward[2])) != int(reward[2]):
-					Mail.send("mail.quest_parcel", [], 0, [[str(reward[1]), int(reward[2])]])
-			"flag":
-				Game.set_flag(str(reward[1]))
-			"mail":
-				Mail.send(str(reward[1]))
-			"recipe":
-				Crafting.learn(str(reward[1]))
+	Effects.apply(quest(id).get("rewards", []))
 	Events.quest_completed.emit(id)
 
 

@@ -59,7 +59,7 @@ func _process(delta: float) -> void:
 	_moving = d.length() > 0.5
 	if d.length() > 48.0:
 		position = target
-	elif _moving and not Clock.paused:
+	elif _moving and (not Clock.paused or Cutscenes.playing):
 		position += d.normalized() * minf(d.length(), SPEED * delta * (7.0 / maxf(Clock.seconds_per_10min, 1.0)))
 		if absf(d.x) > absf(d.y):
 			facing = "right" if d.x > 0 else "left"
@@ -69,8 +69,8 @@ func _process(delta: float) -> void:
 	else:
 		facing = str(s.get("face", facing))
 	anim = str(s.get("anim", ""))
-	var player := get_tree().current_scene.get_node_or_null("Player") as Node2D if get_tree().current_scene else null
-	_label.visible = player != null and player.global_position.distance_to(global_position) < 40.0
+	var layer := get_parent() as NpcLayer
+	_label.visible = layer != null and layer.nearest == self
 	queue_redraw()
 
 
@@ -112,6 +112,23 @@ func _draw() -> void:
 	elif anim in ["fish"]:
 		draw_line(Vector2(5, -8), Vector2(12, -20), Color("#6b4a32"), 1.0)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+const EMOTES := {"happy": "♪", "love": "♥", "surprise": "!", "question": "?", "sad": "…", "angry": "#"}
+
+
+func emote(kind: String) -> void:
+	var bubble := Label.new()
+	bubble.text = str(EMOTES.get(kind, kind))
+	bubble.add_theme_font_size_override("font_size", 10)
+	bubble.add_theme_color_override("font_color", Color("#121a26"))
+	var style := StyleBoxFlat.new()
+	style.bg_color = Color("#f0e7cc")
+	style.set_corner_radius_all(3)
+	bubble.add_theme_stylebox_override("normal", style)
+	bubble.position = Vector2(-5, -38)
+	add_child(bubble)
+	get_tree().create_timer(1.0, true).timeout.connect(bubble.queue_free)
 
 
 func interact(_player: Player) -> void:

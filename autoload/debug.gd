@@ -49,7 +49,28 @@ func exec(line: String) -> String:
 			return str(Sea.mercy)
 		"god":
 			return "ok"
+		"hearts":
+			if p.size() >= 3:
+				Relationships.set_hearts(p[1], int(p[2]))
+			return "%s: %d" % [p[1] if p.size() > 1 else "?", Relationships.hearts_of(p[1]) if p.size() > 1 else 0]
+		"scene":
+			if p.size() >= 2:
+				Cutscenes.seen.erase(p[1])
+				Cutscenes.play(p[1])
+			return "scene"
+		"flag":
+			if p.size() >= 3 and p[1] == "set":
+				Game.set_flag(p[2])
+			return "ok"
+		"act":
+			if p.size() >= 2:
+				Game.act = int(p[1])
+			return "act=%d" % Game.act
+		"where":
+			if p.size() >= 2:
+				return str(NPCs.where_is(p[1]))
+			return str(NPCs.on_map(Router.current_map))
 		"help":
-			return "time day money give weather tp light peace sea god"
+			return "time day money give weather tp light peace sea god hearts scene flag act where"
 		_:
 			return "unknown: %s" % p[0]

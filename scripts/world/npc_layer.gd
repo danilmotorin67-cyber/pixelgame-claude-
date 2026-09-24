@@ -4,6 +4,7 @@ class_name NpcLayer
 # Shows the islanders whose logical position is on this map (33.7).
 var map_id: String = ""
 var _actors: Dictionary = {}
+var nearest: NpcActor = null
 
 
 func _ready() -> void:
@@ -15,6 +16,16 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	refresh()
+	nearest = null
+	var player := get_parent().get_node_or_null("Player") as Node2D
+	if player == null:
+		return
+	var best := 40.0
+	for actor in _actors.values():
+		var d: float = player.global_position.distance_to(actor.global_position)
+		if d < best:
+			best = d
+			nearest = actor
 
 
 func refresh() -> void:
