@@ -2253,5 +2253,393 @@
     "category": "material",
     "price": 60,
     "stack": 10
+  },
+  {
+    "id": "bouquet_armeria",
+    "name": "item.bouquet_armeria.name",
+    "desc": "item.bouquet_armeria.desc",
+    "category": "gift",
+    "price": 50,
+    "stack": 1
+  },
+  {
+    "id": "wood_lacquer",
+    "name": "item.wood_lacquer.name",
+    "desc": "item.wood_lacquer.desc",
+    "category": "material",
+    "price": 60,
+    "stack": 20
+  },
+  {
+    "id": "copper_ingot",
+    "name": "item.copper_ingot.name",
+    "desc": "item.copper_ingot.desc",
+    "category": "material",
+    "price": 100,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "iron_ingot",
+    "name": "item.iron_ingot.name",
+    "desc": "item.iron_ingot.desc",
+    "category": "material",
+    "price": 150,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "ale",
+    "name": "item.ale.name",
+    "desc": "item.ale.desc",
+    "category": "food",
+    "price": 30,
+    "stack": 20,
+    "edible": {
+      "energy": 20,
+      "health": 0
+    },
+    "tags": [
+      "drink"
+    ]
+  },
+  {
+    "id": "dark_ale",
+    "name": "item.dark_ale.name",
+    "desc": "item.dark_ale.desc",
+    "category": "food",
+    "price": 45,
+    "stack": 20,
+    "edible": {
+      "energy": 25,
+      "health": 0
+    },
+    "tags": [
+      "drink"
+    ]
+  },
+  {
+    "id": "grog",
+    "name": "item.grog.name",
+    "desc": "item.grog.desc",
+    "category": "food",
+    "price": 45,
+    "stack": 20,
+    "edible": {
+      "energy": 35,
+      "health": 5
+    },
+    "tags": [
+      "drink"
+    ]
+  },
+  {
+    "id": "ukha",
+    "name": "item.ukha.name",
+    "desc": "item.ukha.desc",
+    "category": "food",
+    "price": 60,
+    "stack": 20,
+    "edible": {
+      "energy": 70,
+      "health": 20
+    }
+  },
+  {
+    "id": "fish_pie",
+    "name": "item.fish_pie.name",
+    "desc": "item.fish_pie.desc",
+    "category": "food",
+    "price": 100,
+    "stack": 20,
+    "edible": {
+      "energy": 110,
+      "health": 30
+    }
+  },
+  {
+    "id": "aged_aquavit",
+    "name": "item.aged_aquavit.name",
+    "desc": "item.aged_aquavit.desc",
+    "category": "food",
+    "price": 150,
+    "stack": 20,
+    "edible": {
+      "energy": 20,
+      "health": -5
+    },
+    "tags": [
+      "drink"
+    ]
+  },
+  {
+    "id": "sea_chart",
+    "name": "item.sea_chart.name",
+    "desc": "item.sea_chart.desc",
+    "category": "gift",
+    "price": 250,
+    "stack": 5,
+    "use": "reveal_sea"
+  },
+  {
+    "id": "old_sea_chart",
+    "name": "item.old_sea_chart.name",
+    "desc": "item.old_sea_chart.desc",
+    "category": "gift",
+    "price": 300,
+    "stack": 5
+  },
+  {
+    "id": "heather_tea",
+    "name": "item.heather_tea.name",
+    "desc": "item.heather_tea.desc",
+    "category": "food",
+    "price": 30,
+    "stack": 20,
+    "edible": {
+      "energy": 25,
+      "health": 5
+    }
+  },
+  {
+    "id": "rosehip_tea",
+    "name": "item.rosehip_tea.name",
+    "desc": "item.rosehip_tea.desc",
+    "category": "food",
+    "price": 40,
+    "stack": 20,
+    "edible": {
+      "energy": 20,
+      "health": 15
+    }
+  },
+  {
+    "id": "hay",
+    "name": "item.hay.name",
+    "desc": "item.hay.desc",
+    "category": "material",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "yarn",
+    "name": "item.yarn.name",
+    "desc": "item.yarn.desc",
+    "category": "material",
+    "price": 40,
+    "stack": 99
+  },
+  {
+    "id": "wool",
+    "name": "item.wool.name",
+    "desc": "item.wool.desc",
+    "category": "material",
+    "price": 50,
+    "stack": 99
+  },
+  {
+    "id": "brass",
+    "name": "item.brass.name",
+    "desc": "item.brass.desc",
+    "category": "material",
+    "price": 300,
+    "stack": 99,
+    "tags": [
+      "ingot"
+    ]
+  },
+  {
+    "id": "zinc",
+    "name": "item.zinc.name",
+    "desc": "item.zinc.desc",
+    "category": "material",
+    "price": 75,
+    "stack": 99
+  },
+  {
+    "id": "tin",
+    "name": "item.tin.name",
+    "desc": "item.tin.desc",
+    "category": "material",
+    "price": 75,
+    "stack": 99
+  },
+  {
+    "id": "gas_mantle",
+    "name": "item.gas_mantle.name",
+    "desc": "item.gas_mantle.desc",
+    "category": "material",
+    "price": 1000,
+    "stack": 5
+  },
+  {
+    "id": "clock_spring",
+    "name": "item.clock_spring.name",
+    "desc": "item.clock_spring.desc",
+    "category": "material",
+    "price": 750,
+    "stack": 5
+  },
+  {
+    "id": "music_box",
+    "name": "item.music_box.name",
+    "desc": "item.music_box.desc",
+    "category": "gift",
+    "price": 1500,
+    "stack": 1,
+    "tags": [
+      "expensive"
+    ]
+  },
+  {
+    "id": "amber_ring",
+    "name": "item.amber_ring.name",
+    "desc": "item.amber_ring.desc",
+    "category": "gift",
+    "price": 2500,
+    "stack": 1
+  },
+  {
+    "id": "rare_book",
+    "name": "item.rare_book.name",
+    "desc": "item.rare_book.desc",
+    "category": "gift",
+    "price": 400,
+    "stack": 5,
+    "tags": [
+      "book"
+    ]
+  },
+  {
+    "id": "med_treatise",
+    "name": "item.med_treatise.name",
+    "desc": "item.med_treatise.desc",
+    "category": "gift",
+    "price": 300,
+    "stack": 5,
+    "tags": [
+      "book"
+    ]
+  },
+  {
+    "id": "stamp_pyostraya",
+    "name": "item.stamp_pyostraya.name",
+    "desc": "item.stamp_pyostraya.desc",
+    "category": "gift",
+    "price": 25,
+    "stack": 20
+  },
+  {
+    "id": "fake_kraken_tooth",
+    "name": "item.fake_kraken_tooth.name",
+    "desc": "item.fake_kraken_tooth.desc",
+    "category": "decor",
+    "price": 100,
+    "stack": 1
+  },
+  {
+    "id": "star_amber",
+    "name": "item.star_amber.name",
+    "desc": "item.star_amber.desc",
+    "category": "gift",
+    "price": 10000,
+    "stack": 1,
+    "use": "star_amber"
+  },
+  {
+    "id": "cloudberry_bush",
+    "name": "item.cloudberry_bush.name",
+    "desc": "item.cloudberry_bush.desc",
+    "category": "material",
+    "price": 500,
+    "stack": 5
+  },
+  {
+    "id": "heather_honey",
+    "name": "item.heather_honey.name",
+    "desc": "item.heather_honey.desc",
+    "category": "food",
+    "price": 90,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 10
+    },
+    "tags": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "cloudberry_pie",
+    "name": "item.cloudberry_pie.name",
+    "desc": "item.cloudberry_pie.desc",
+    "category": "food",
+    "price": 180,
+    "stack": 20,
+    "edible": {
+      "energy": 120,
+      "health": 40
+    },
+    "tags": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "rhubarb_pie",
+    "name": "item.rhubarb_pie.name",
+    "desc": "item.rhubarb_pie.desc",
+    "category": "food",
+    "price": 90,
+    "stack": 20,
+    "edible": {
+      "energy": 80,
+      "health": 20
+    },
+    "tags": [
+      "sweet"
+    ]
+  },
+  {
+    "id": "salted_herring",
+    "name": "item.salted_herring.name",
+    "desc": "item.salted_herring.desc",
+    "category": "food",
+    "price": 40,
+    "stack": 20,
+    "edible": {
+      "energy": 40,
+      "health": 5
+    }
+  },
+  {
+    "id": "smoked_mackerel",
+    "name": "item.smoked_mackerel.name",
+    "desc": "item.smoked_mackerel.desc",
+    "category": "food",
+    "price": 70,
+    "stack": 20,
+    "edible": {
+      "energy": 60,
+      "health": 10
+    },
+    "tags": [
+      "smoked"
+    ]
+  },
+  {
+    "id": "lutefisk",
+    "name": "item.lutefisk.name",
+    "desc": "item.lutefisk.desc",
+    "category": "food",
+    "price": 80,
+    "stack": 20,
+    "edible": {
+      "energy": 30,
+      "health": 0
+    }
   }
 ]

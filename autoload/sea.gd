@@ -369,6 +369,8 @@ func can_sail(zone: int = 1) -> String:
 
 
 func damage_hull(amount: float) -> bool:
+	if int(Game.counters.get("boat_blessed_until", -1)) >= Clock.day_index:
+		amount *= 0.9
 	hull = maxf(0.0, hull - amount)
 	return hull <= 0.0
 

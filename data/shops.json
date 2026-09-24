@@ -205,7 +205,29 @@
       {
         "item": "worms",
         "price": 5
+      },
+      {
+        "item": "bouquet_armeria",
+        "price": 200,
+        "when": "best_hearts() >= 8"
+      },
+      {
+        "item": "wood_lacquer",
+        "price": 150
+      },
+      {
+        "item": "rhubarb_pie",
+        "price": 180
+      },
+      {
+        "item": "salted_herring",
+        "price": 80
       }
+    ],
+    "keepers": [
+      "npc_karl",
+      "npc_solveig",
+      "npc_sigrid"
     ]
   },
   {
@@ -236,7 +258,18 @@
       {
         "item": "helga_fertilizer",
         "price": 150
+      },
+      {
+        "item": "heather_tea",
+        "price": 60
+      },
+      {
+        "item": "rosehip_tea",
+        "price": 80
       }
+    ],
+    "keepers": [
+      "npc_helga"
     ]
   },
   {
@@ -257,7 +290,18 @@
         "seasons": [
           "spring"
         ]
+      },
+      {
+        "item": "hay",
+        "price": 50
+      },
+      {
+        "item": "yarn",
+        "price": 80
       }
+    ],
+    "keepers": [
+      "npc_margit"
     ]
   },
   {
@@ -355,6 +399,9 @@
         "item": "hand_net",
         "price": 200
       }
+    ],
+    "keepers": [
+      "npc_erland"
     ]
   },
   {
@@ -401,6 +448,10 @@
           ]
         ]
       }
+    ],
+    "keepers": [
+      "npc_ilm",
+      "npc_knud"
     ]
   },
   {
@@ -432,7 +483,26 @@
       {
         "item": "rum",
         "price": 200
+      },
+      {
+        "item": "brass",
+        "price": 600
+      },
+      {
+        "item": "zinc",
+        "price": 150
+      },
+      {
+        "item": "tin",
+        "price": 150
+      },
+      {
+        "item": "neptune_can",
+        "price": 30
       }
+    ],
+    "keepers": [
+      "npc_halvdan"
     ]
   },
   {
@@ -447,6 +517,199 @@
       {
         "item": "wax_candle",
         "price": 40
+      },
+      {
+        "service": "boat_blessing",
+        "price": 100,
+        "days": [
+          "sun"
+        ],
+        "hours": [
+          9,
+          12
+        ]
+      }
+    ],
+    "keepers": [
+      "npc_benedict"
+    ]
+  },
+  {
+    "id": "shop_smith",
+    "name": "Кузня",
+    "open": 9,
+    "close": 16,
+    "closed": [
+      "fri"
+    ],
+    "region": "village",
+    "buys": [
+      "material"
+    ],
+    "keepers": [
+      "npc_tora",
+      "npc_einar"
+    ],
+    "stock": [
+      {
+        "item": "coal",
+        "price": 150
+      },
+      {
+        "item": "copper_ingot",
+        "price": 300
+      },
+      {
+        "item": "iron_ingot",
+        "price": 500
+      },
+      {
+        "service": "open_chest",
+        "price": 25
+      }
+    ]
+  },
+  {
+    "id": "shop_tavern",
+    "name": "Таверна «Сухой Утопленник»",
+    "open": 12,
+    "close": 24,
+    "closed": [],
+    "region": "village",
+    "buys": [],
+    "keepers": [
+      "npc_bjorn"
+    ],
+    "stock": [
+      {
+        "item": "ale",
+        "price": 60
+      },
+      {
+        "item": "dark_ale",
+        "price": 90
+      },
+      {
+        "item": "grog",
+        "price": 90
+      },
+      {
+        "item": "ukha",
+        "price": 120
+      },
+      {
+        "item": "fish_pie",
+        "price": 200
+      },
+      {
+        "item": "aged_aquavit",
+        "price": 300
+      },
+      {
+        "service": "rumor",
+        "price": 0
+      }
+    ]
+  },
+  {
+    "id": "shop_office",
+    "name": "Лоцманская управа",
+    "open": 8,
+    "close": 17,
+    "closed": [
+      "sun"
+    ],
+    "region": "village",
+    "buys": [],
+    "keepers": [
+      "npc_olaf"
+    ],
+    "stock": [
+      {
+        "item": "sea_chart",
+        "price": 500
+      }
+    ]
+  },
+  {
+    "id": "shop_sandro",
+    "name": "Шебека «Пёстрая»",
+    "open": 10,
+    "close": 18,
+    "closed": [
+      "mon",
+      "tue",
+      "wed",
+      "thu",
+      "sat",
+      "sun"
+    ],
+    "region": "village",
+    "buys": [
+      "forage",
+      "fish"
+    ],
+    "keepers": [
+      "npc_sandro"
+    ],
+    "rotating": 10,
+    "stock": [
+      {
+        "item": "gas_mantle",
+        "price": 2000
+      },
+      {
+        "item": "clock_spring",
+        "price": 1500
+      },
+      {
+        "item": "cloudberry_bush",
+        "price": 1000
+      },
+      {
+        "item": "silk_line",
+        "price": 1500
+      },
+      {
+        "item": "music_box",
+        "price": 3000
+      },
+      {
+        "item": "amber_ring",
+        "price": 5000
+      },
+      {
+        "item": "rare_book",
+        "price": 800
+      },
+      {
+        "item": "med_treatise",
+        "price": 600
+      },
+      {
+        "item": "stamp_pyostraya",
+        "price": 50
+      },
+      {
+        "item": "spices",
+        "price": 120
+      },
+      {
+        "item": "coffee",
+        "price": 140
+      },
+      {
+        "item": "fake_kraken_tooth",
+        "price": 400
+      },
+      {
+        "item": "old_sea_chart",
+        "price": 900
+      },
+      {
+        "item": "star_amber",
+        "price": 50000,
+        "once": true
       }
     ]
   }

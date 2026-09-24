@@ -148,5 +148,52 @@
     20
    ]
   ]
+ },
+ "overgrown_chest": {
+  "rolls": 2,
+  "table": [
+   [
+    "amber",
+    1,
+    2,
+    20
+   ],
+   [
+    "sea_glass",
+    2,
+    4,
+    25
+   ],
+   [
+    "iron_scrap",
+    2,
+    5,
+    25
+   ],
+   [
+    "copper_ingot",
+    1,
+    1,
+    12
+   ],
+   [
+    "old_sea_chart",
+    1,
+    1,
+    6
+   ],
+   [
+    "music_box",
+    1,
+    1,
+    2
+   ],
+   [
+    "rum",
+    1,
+    1,
+    10
+   ]
+  ]
  }
 }

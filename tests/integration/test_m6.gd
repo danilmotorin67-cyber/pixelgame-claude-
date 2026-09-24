@@ -203,11 +203,57 @@ func _check_scenes() -> void:
 	_check(not said.has("ev.hedda4.l7") and not Game.flag("hedda_testimony_told"), "the cold answer ends it")
 
 
+func _check_shops() -> void:
+	_fresh()
+	Clock.day_index = 4 # friday
+	Clock.set_time(12, 0)
+	var ids: Array = []
+	for shop in Data.all("shops"):
+		ids.append(str(shop["id"]))
+	for id in ["shop_berg", "shop_smith", "shop_erland", "shop_ilm", "shop_margit", "shop_tavern", "shop_chapel",
+			"shop_office", "shop_helga", "shop_grim", "shop_sandro"]:
+		_check(ids.has(id), "21.3 lists " + id)
+	var wares := Economy.shop_stock("shop_sandro")
+	_check(wares.size() == 10 and Economy.shop_closed_reason("shop_sandro") == "", "the Pyostraya brings 10 wares on Fridays")
+	Clock.day_index = 12
+	var next_week := Economy.shop_stock("shop_sandro")
+	_check(Economy.shop_closed_reason("shop_sandro") == "day" and JSON.stringify(next_week) != JSON.stringify(wares), "other wares next week")
+	Clock.day_index = 0
+	var armeria := func() -> bool:
+		for e in Economy.shop_stock("shop_berg"):
+			if str(e.get("item", "")) == "bouquet_armeria":
+				return true
+		return false
+	_check(not armeria.call(), "no armeria bouquet before 8 hearts")
+	Relationships.set_hearts("npc_einar", 8)
+	_check(armeria.call(), "the bouquet goes on sale at 8 hearts with anyone")
+	Economy.money = 100
+	Clock.set_time(14, 0)
+	var rumor: Dictionary = Economy.shop_stock("shop_tavern").filter(func(e: Dictionary) -> bool: return e.has("service"))[0]
+	_check(Economy.buy("shop_tavern", rumor) == "ok" and Economy.last_service.begins_with("Бьорн"), "Bjorn tells the rumour of the day")
+	Inventory.add("overgrown_chest", 1)
+	var chest: Dictionary = Economy.shop_stock("shop_smith").filter(func(e: Dictionary) -> bool: return e.has("service"))[0]
+	_check(Economy.buy("shop_smith", chest) == "ok" and Inventory.count_of("overgrown_chest") == 0 and Economy.money == 75,
+		"Tora opens an overgrown chest for 25 kr")
+	_check(Economy.buy("shop_smith", chest) == "nothing", "no chest, no service")
+	Relationships.set_hearts("npc_karl", 0)
+	var info: Dictionary = Data.by_id("npcs", "npc_karl")
+	if info.has("letters"):
+		var need := int(info["letters"].keys()[0])
+		Relationships.set_hearts("npc_karl", need)
+		var before := Mail.letters.size()
+		_check(Relationships.night_letters() >= 1 and Mail.letters.size() > before, "Karl writes at %d hearts" % need)
+		_check(Relationships.night_letters() == 0, "each letter comes once")
+	Clock.day_index = 6 # sunday
+	_check(Mail.sunday_gazette() and str(Mail.letters[-1]["text"]) == "mail.gazette", "the Sunday paper")
+
+
 func _run() -> void:
 	_check_data()
 	_check_week()
 	_check_places()
 	_check_friendship()
 	_check_scenes()
+	_check_shops()
 	print("M6 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

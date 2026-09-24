@@ -52,6 +52,8 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	_step(report, "mail", func() -> void:
 		Lighthouse.night_mail(night_index)
 		Graveyard.deliver_replies(Clock.day_index)
+		Relationships.night_letters()
+		Mail.sunday_gazette()
 		report["mail"] = Mail.unread())
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))

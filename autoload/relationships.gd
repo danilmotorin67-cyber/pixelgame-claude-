@@ -176,6 +176,25 @@ func night() -> void:
 		gifts_week.clear()
 
 
+# Night mail (step 9): residents write when friendship reaches a letter's hearts ("letters" in npcs.json).
+func night_letters() -> int:
+	var sent := 0
+	for npc in Data.all("npcs"):
+		var id := str(npc["id"])
+		for need in npc.get("letters", {}):
+			var flag := "letter_%s_%s" % [id, need]
+			if hearts_of(id) < int(need) or Game.flag(flag):
+				continue
+			var letter: Dictionary = npc["letters"][need]
+			Game.set_flag(flag)
+			Mail.send(str(letter["text"]), [], int(letter.get("money", 0)), letter.get("items", []))
+			if letter.has("recipe"):
+				Crafting.learn(str(letter["recipe"]))
+			Effects.apply(letter.get("effects", []))
+			sent += 1
+	return sent
+
+
 func serialize() -> Dictionary:
 	return {"points": points, "talked_today": talked_today, "gifted_today": gifted_today, "gifts_week": gifts_week,
 		"birthday_gift": birthday_gift, "dating": dating, "married_to": married_to}

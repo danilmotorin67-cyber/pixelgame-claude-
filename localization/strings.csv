@@ -670,3 +670,94 @@ ev.hedda4.l4,Нарочно. Вот и я так думаю. Только всл
 ev.hedda4.l5,"Ха. Трое умных… Ларс бы с тобой поспорил. Ладно. Спасибо, что не утешаешь.",Ha. Three clever ones… Lars would argue with you. Fine. Thanks for not trying to comfort me.
 ev.hedda4.l6,"Перепутала?! Я тридцать лет хожу по этим водам. Иди проверь свою лампу, смотритель.","Mixed up?! I've sailed these waters for thirty years. Go check your lamp, keeper."
 ev.hedda4.l7,"Если захочешь знать, как всё было, — рундук с того бота у меня. Там записи. Только никому, ясно?","If you want to know how it went — I kept the sea chest from that boat. There are notes. Tell no one, understood?"
+item.bouquet_armeria.name,Букет армерии,Armeria bouquet
+item.bouquet_armeria.desc,Подаришь — начнёте встречаться. Армерия растёт на скалах и не боится ветра.,Give it to start courting. Armeria grows on cliffs and fears no wind.
+item.wood_lacquer.name,Лак для дерева,Wood lacquer
+item.wood_lacquer.desc,Фортуна его обожает: +1 к её особой дружбе.,Fortuna adores it: +1 to her special friendship.
+item.copper_ingot.name,Медный слиток,Copper ingot
+item.copper_ingot.desc,Для горна и оптики. У Торы втридорога.,For the forge and the optics. Tora charges triple.
+item.iron_ingot.name,Железный слиток,Iron ingot
+item.iron_ingot.desc,Груз для морского погребения и сырьё для горна.,"A sea-burial weight and forge stock. Honest, heavy, grey."
+item.ale.name,Эль,Ale
+item.ale.desc,+20 энергии. Бьорн варит его в подвале и называет «жидким хлебом».,+20 energy. Bjorn brews it in the cellar and calls it liquid bread.
+item.dark_ale.name,Тёмный эль,Dark ale
+item.dark_ale.desc,"+25 энергии. Горький, как стихи Сигрид.",+25 energy. Bitter as Sigrid's poems.
+item.grog.name,Грог,Grog
+item.grog.desc,+35 энергии и немного тепла. Хедда пьёт его вместо воды.,+35 energy and some warmth. Hedda drinks it instead of water.
+item.ukha.name,Уха,Fish soup
+item.ukha.desc,+70 энергии. Три вида рыбы и один вид терпения.,+70 energy. Three kinds of fish and one kind of patience.
+item.fish_pie.name,Рыбник,Fish pie
+item.fish_pie.desc,"+110 энергии. Пирог, в котором рыба лежит целиком и смотрит.",+110 energy. A pie where the fish lies whole and stares back.
+item.aged_aquavit.name,Выдержанный аквавит,Aged aquavit
+item.aged_aquavit.desc,Магнус и Хальвдан сходятся только в одном — в нём.,Magnus and Halvdan agree on one thing only: this.
+item.sea_chart.name,Морская карта,Sea chart
+item.sea_chart.desc,Q — открыть на своей карте залив целиком. Олаф рисует их по старым лоциям.,Q — reveal the whole bay on your chart. Olaf copies them from old pilot books.
+item.old_sea_chart.name,Старая морская карта,Old sea chart
+item.old_sea_chart.desc,Олаф и Эрланд отдали бы за неё руку. Левую.,Olaf and Erland would give an arm for it. The left one.
+item.heather_tea.name,Вересковый чай,Heather tea
+item.heather_tea.desc,"+25 энергии. Хельга говорит, что лечит всё, кроме смерти.",+25 energy. Helga says it cures everything but death.
+item.rosehip_tea.name,Шиповниковый отвар,Rosehip brew
+item.rosehip_tea.desc,"+15 здоровья. Кислый, как погода.",+15 health. Sour as the weather.
+item.hay.name,Сено,Hay
+item.hay.desc,Корм для животных зимой. Пахнет летом.,Winter feed for animals. Smells of summer.
+item.yarn.name,Пряжа,Yarn
+item.yarn.desc,"Для свитеров и сетей. Маргит прядёт её быстрее, чем говорит.",For jumpers and nets. Margit spins faster than she talks.
+item.wool.name,Шерсть,Wool
+item.wool.desc,Сырьё для пряжи. Маргит ценит отличное качество.,Raw stuff for yarn. Margit prizes excellent quality.
+item.brass.name,Латунь,Brass
+item.brass.desc,"Для механизмов и оптики. Блестит дороже, чем стоит.",For clockwork and optics. Shines pricier than it is.
+item.zinc.name,Цинк,Zinc
+item.zinc.desc,"Для латуни и гальваники. Скучен, но надёжен.",For brass and plating. Dull but dependable.
+item.tin.name,Олово,Tin
+item.tin.desc,"Для пайки и бронзы. Мягкое, как совесть скупщика.",For solder and bronze. Soft as a trader's conscience.
+item.gas_mantle.name,Калильная сетка,Gas mantle
+item.gas_mantle.desc,"Деталь для лампы высшего разряда. Сандро клянётся, что настоящая.",A part for a top-grade lamp. Sandro swears it's genuine.
+item.clock_spring.name,Часовая пружина,Clock spring
+item.clock_spring.desc,Для механизма вращения линзы. Не заводите без нужды.,For the lens rotation clockwork. Don't wind it for fun.
+item.music_box.name,Музыкальная шкатулка,Music box
+item.music_box.desc,"Играет мелодию, которую знает только море. Туве и Ранн её обожают.",Plays a tune only the sea knows. Tuve and Rann adore it.
+item.amber_ring.name,Янтарное кольцо,Amber ring
+item.amber_ring.desc,Для предложения руки и сердца. Остальное — дело смелости.,For proposing. The rest is a matter of nerve.
+item.rare_book.name,Редкая книга,Rare book
+item.rare_book.desc,Ингрид мечтает о библиотеке. Начните с этой.,Ingrid dreams of a library. Start with this one.
+item.med_treatise.name,Медицинский трактат,Medical treatise
+item.med_treatise.desc,Магнус прочтёт его за ночь и поспорит с автором.,Magnus will read it overnight and argue with the author.
+item.stamp_pyostraya.name,Марка с «Пёстрой»,Pyostraya stamp
+item.stamp_pyostraya.desc,Олаф хранит их в альбоме с застёжкой.,Olaf keeps them in an album with a clasp.
+item.fake_kraken_tooth.name,«Настоящий зуб кракена»,"""Genuine kraken tooth"""
+item.fake_kraken_tooth.desc,"Декор. Лив смеётся, стоит на него взглянуть.",Decor. Liv laughs whenever she looks at it.
+item.star_amber.name,Звёздный янтарь,Star amber
+item.star_amber.desc,Q — навсегда +30 к максимуму энергии. Бывает раз в жизни.,Q — +30 maximum energy forever. Once in a lifetime.
+item.cloudberry_bush.name,Куст морошки,Cloudberry bush
+item.cloudberry_bush.desc,Сажать на торфе. Ягоды — через год.,Plant on peat. Berries in a year.
+item.heather_honey.name,Вересковый мёд,Heather honey
+item.heather_honey.desc,"+40 энергии. Тёмный, густой и немного дымный.","+40 energy. Dark, thick and a little smoky."
+item.cloudberry_pie.name,Пирог с морошкой,Cloudberry pie
+item.cloudberry_pie.desc,"+120 энергии. Его обожают все, даже Карл, хотя не признаётся.","+120 energy. Everyone loves it, even Karl, though he won't admit it."
+item.rhubarb_pie.name,Пирог с ревенем,Rhubarb pie
+item.rhubarb_pie.desc,+80 энергии. Сольвейг печёт его каждый день. Сигрид — сыта.,+80 energy. Solveig bakes one every day. Sigrid has had enough.
+item.salted_herring.name,Солёная сельдь,Salted herring
+item.salted_herring.desc,+40 энергии. Карл считает её лучшим изобретением человечества.,+40 energy. Karl calls it humanity's finest invention.
+item.smoked_mackerel.name,Копчёная скумбрия,Smoked mackerel
+item.smoked_mackerel.desc,+60 энергии. Эйнар и Сигрид сходятся хотя бы в этом.,+60 energy. Einar and Sigrid agree on this at least.
+item.lutefisk.name,Лютефиск,Lutefisk
+item.lutefisk.desc,"Треска, вымоченная в щёлоке. Блюдо, которое переживёт вас обоих.",Cod soaked in lye. A dish that will outlive you both.
+service.open_chest,Вскрыть обросший сундучок,Open an overgrown chest
+service.rumor,Слухи дня,Rumours of the day
+service.boat_blessing,Благословение лодки (на неделю),Boat blessing (one week)
+rumor.general.01,"Бьорн: «Говорят, у нового смотрителя огонь ровнее, чем у Агаты. Агата бы обиделась. Потом бы проверила.»","Bjorn: ""They say the new keeper's flame is steadier than Agatha's. Agatha would be offended. Then she'd check."""
+rumor.general.02,"Бьорн: «Сольвейг клянётся, что видела тебя разговаривающим с деревянной бабой. Я сказал — это Фортуна, она со всеми разговаривает.»","Bjorn: ""Solveig swears she saw you talking to a wooden woman. I said that's Fortuna, she talks to everyone."""
+rumor.general.03,Бьорн: «Олаф завёл на тебя отдельную страницу в неофициальном реестре. Пока там одни плюсы и одна клякса.»,"Bjorn: ""Olaf opened a page for you in his unofficial register. So far it's all pluses and one blot."""
+rumor.sea_burial.01,"Бьорн: «Говорят, смотритель отдаёт морю тех, кого море вернуло. Хедда сказала — честно. Карл сказал — дёшево.»","Bjorn: ""They say the keeper gives back to the sea those the sea returned. Hedda called it honest. Karl called it cheap."""
+rumor.sea_burial.02,Бьорн: «Рыбаки у Места Упокоения теперь снимают шапки. Раньше снимали только сети.»,"Bjorn: ""Fishermen take their caps off at the Resting Place now. Used to be only their nets."""
+rumor.burial.01,"Бьорн: «Говорят, смотритель зашил утопленнику нос. Традиция, а всё равно жутко.»","Bjorn: ""They say the keeper stitched a drowned man's nose. Tradition, but creepy all the same."""
+rumor.burial.02,"Бьорн: «Кнуд уверяет, что ты копаешь ровнее его отца. Ильм в ответ сказал одно слово. Не повторю.»","Bjorn: ""Knud swears you dig straighter than his father. Ilm answered with one word. I won't repeat it."""
+rumor.fisher.01,"Бьорн: «Эрланд говорит, ты вытащил рыбы больше, чем он за прошлую весну. Он врёт, конечно. Но злится по-настоящему.»","Bjorn: ""Erland says you've landed more fish than he did all last spring. He's lying, of course. But the anger is real."""
+rumor.fisher.02,"Бьорн: «Грим поднял цену на треску. Говорят, из-за тебя: боится, что ты скупку разоришь.»","Bjorn: ""Grim raised the price of cod. They say it's because of you: he's afraid you'll ruin his trade."""
+rumor.wreck.01,"Бьорн: «После крушения все молчат, а потом пьют. Сегодня пьют больше, чем молчат.»","Bjorn: ""After a wreck, everyone goes quiet and then drinks. Tonight they're drinking more than they're quiet."""
+rumor.wreck.02,Бьорн: «Хедда весь вечер смотрит на Зубы и не допивает грог. Это плохой знак. Для грога.»,"Bjorn: ""Hedda's been staring at the Teeth all evening and not finishing her grog. A bad sign. For the grog."""
+rumor.light.01,"Бьорн: «Капитан «Чайки» говорит, твой огонь видно от самого Кронвальда. Врёт, но приятно.»","Bjorn: ""The Chayka's skipper says your light shows all the way from Kronvald. A lie, but a nice one."""
+rumor.light.02,"Бьорн: «Инспектор Пальм, говорят, в прошлый раз улыбнулся. Никто не видел, но все говорят.»","Bjorn: ""They say Inspector Palm smiled last time. Nobody saw it, but everybody says so."""
+rumor.dishonor.01,"Бьорн: «Люди шепчутся, что смотритель берёт с разбитых судов больше своей трети. Я не верю. Пока.»","Bjorn: ""People whisper that the keeper takes more than a third from the wrecks. I don't believe it. Yet."""
+rumor.hearts.01,"Бьорн: «Говорят, у смотрителя сердце на несколько причалов сразу. Осторожнее: на острове все друг другу родня.»","Bjorn: ""They say the keeper's heart has more than one mooring. Careful: everyone on this island is somebody's cousin."""
+mail.gazette,"«Вестник Сольвика», воскресный выпуск. Погода на три дня: %s. На острове говорят: %s","The Solvik Herald, Sunday issue. Weather for three days: %s. The island is saying: %s"

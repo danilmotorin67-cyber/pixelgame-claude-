@@ -178,6 +178,26 @@ func max_health() -> float:
 	return float(Game.balance("health_max", 100)) + 5.0 * float(Skills.level("diving"))
 
 
+# Items with a "use": the sea chart reveals the bay, star amber adds 30 energy for good (21.3).
+func use_selected() -> String:
+	var index := Inventory.selected_hotbar
+	var id := str(Inventory.slots[index]["id"])
+	match str(Data.by_id("items", id).get("use", "")):
+		"reveal_sea":
+			var size: Array = Game.balance("sea", {}).get("size", [120, 90])
+			for y in range(0, int(size[1]), 8):
+				for x in range(0, int(size[0]), 8):
+					SeaChart.reveal(Vector2(x * 16 + 8, y * 16 + 8))
+			Inventory.take_slot(index, 1)
+			return "Карта залива перенесена на вашу: мели, рифы, течения."
+		"star_amber":
+			Inventory.take_slot(index, 1)
+			Game.counters["star_amber"] = int(Game.counters.get("star_amber", 0)) + 1
+			energy = minf(energy + 30.0, Game.max_energy())
+			return "Звёздный янтарь тёплый, как ладонь. Сил навсегда стало больше."
+	return ""
+
+
 # Food restores energy and health (8.6); returns the eaten item id or "".
 func eat_selected() -> String:
 	var index := Inventory.selected_hotbar
@@ -298,6 +318,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+		var used := use_selected()
+		if used != "":
+			if hint:
+				hint.text = used
+			return
 		if Data.by_id("items", Inventory.selected_id()).has("open"):
 			var loot := Lighthouse.open_crate(Inventory.selected_hotbar)
 			var names: Array[String] = []

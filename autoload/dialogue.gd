@@ -149,6 +149,30 @@ func gift_line(npc: String, reaction: String, birthday: bool) -> String:
 	return key
 
 
+# Rumours of the day in the tavern (22.5): what the island says about the keeper's latest deeds.
+func rumor() -> String:
+	var topics: Array = ["general"]
+	if int(Game.counters.get("sea_burials", 0)) > 0:
+		topics.append("sea_burial")
+	if Game.stat("burials") > 0:
+		topics.append("burial")
+	if int(Game.counters.get("fish_total", 0)) >= 30:
+		topics.append("fisher")
+	if int(Game.counters.get("event_wreck", -100)) >= Clock.day_index - 7:
+		topics.append("wreck")
+	if Lighthouse.fire_power >= 70.0:
+		topics.append("light")
+	if Game.honor < 0:
+		topics.append("dishonor")
+	if Relationships.dating.size() > 1:
+		topics.append("hearts")
+	var rng := _rng("rumor", Game.stat("rumors"))
+	Game.add_stat("rumors")
+	var topic: String = topics[rng.randi_range(0, topics.size() - 1)]
+	var key := pick_from("rumor", Loc.with_prefix("rumor.%s." % topic), rng)
+	return Loc.t(key) if key != "" else Loc.t("rumor.general.01")
+
+
 func greet(npc_id: String) -> String:
 	return Loc.t(talk_line(npc_id))
 

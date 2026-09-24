@@ -18,6 +18,18 @@ func send(text_key: String, args: Array = [], money: int = 0, items: Array = [])
 	return letter
 
 
+# 21.4: the Sunday paper — the week's forecast and what the island is talking about.
+func sunday_gazette() -> bool:
+	if Clock.weekday != "sun":
+		return false
+	var names := {"clear": "ясно", "cloud": "облачно", "rain": "дождь", "fog": "туман", "storm": "шторм", "snow": "снег", "blizzard": "метель"}
+	var days: Array[String] = []
+	for i in mini(3, Weather.forecast.size()):
+		days.append(str(names.get(str(Weather.forecast[i]), Weather.forecast[i])))
+	send("mail.gazette", [", ".join(days), Dialogue.rumor()])
+	return true
+
+
 func unread() -> int:
 	var n := 0
 	for letter in letters:

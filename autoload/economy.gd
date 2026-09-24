@@ -110,7 +110,18 @@ func shop_closed_reason(shop_id: String) -> String:
 
 func shop_stock(shop_id: String) -> Array:
 	var offer: Array = []
-	for entry in shop(shop_id).get("stock", []):
+	var stock: Array = shop(shop_id).get("stock", [])
+	if shop(shop_id).has("rotating"):
+		stock = rotating_stock(shop_id)
+	for entry in stock:
+		if entry.has("when") and not ConditionContext.check(str(entry["when"])):
+			continue
+		if bool(entry.get("once", false)) and Game.flag("bought_" + str(entry.get("item", ""))):
+			continue
+		if entry.has("days") and Clock.weekday not in entry["days"]:
+			continue
+		if entry.has("hours") and (Clock.hour < int(entry["hours"][0]) or Clock.hour >= int(entry["hours"][1])):
+			continue
 		if entry.has("seasons") and Clock.season not in entry["seasons"]:
 			continue
 		if Clock.day < int(entry.get("from_day", 1)):
@@ -126,6 +137,48 @@ func shop_stock(shop_id: String) -> Array:
 	return offer
 
 
+# Sandro's shebeka brings ten of its wares each week (21.3), chosen from the week and the world seed.
+func rotating_stock(shop_id: String) -> Array:
+	var pool: Array = shop(shop_id).get("stock", []).duplicate()
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 613 + (Clock.day_index / 7) * 7919 + shop_id.hash(), 2147483647)
+	var out: Array = []
+	while not pool.is_empty() and out.size() < int(shop(shop_id)["rotating"]):
+		out.append(pool.pop_at(rng.randi_range(0, pool.size() - 1)))
+	return out
+
+
+var last_service: String = ""
+
+
+func _service(entry: Dictionary) -> String:
+	match str(entry["service"]):
+		"open_chest":
+			var index := -1
+			for i in Inventory.slots.size():
+				if str(Inventory.slots[i]["id"]) == "overgrown_chest":
+					index = i
+			if index < 0:
+				return "nothing"
+			var rng := RandomNumberGenerator.new()
+			rng.seed = posmod(Game.world_seed * 17 + Clock.day_index * 131 + Clock.minutes + int(Game.counters.get("chests_opened", 0)) * 977, 2147483647)
+			Inventory.take_slot(index, 1)
+			Game.counters["chests_opened"] = int(Game.counters.get("chests_opened", 0)) + 1
+			var names: Array[String] = []
+			for loot in Lighthouse.roll_loot("overgrown_chest", rng):
+				Inventory.add(str(loot[0]), int(loot[1]))
+				names.append("%s ×%d" % [Loc.t(str(Data.by_id("items", str(loot[0])).get("name", loot[0]))), int(loot[1])])
+			last_service = "Тора вскрыла сундучок: " + ", ".join(names) + "."
+		"rumor":
+			last_service = Dialogue.rumor()
+		"boat_blessing":
+			if Sea.boat == "":
+				return "nothing"
+			Game.counters["boat_blessed_until"] = Clock.day_index + 7
+			last_service = "Бенедикт благословил лодку кистью на трёхметровом шесте. Корпус крепче на неделю."
+	return "ok"
+
+
 func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 	if shop_closed_reason(shop_id) != "":
 		return "closed"
@@ -134,6 +187,12 @@ func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 	var total := int(entry["price"]) * count
 	if not can_pay(total):
 		return "money"
+	if entry.has("service"):
+		last_service = ""
+		var done := _service(entry)
+		if done == "ok":
+			pay(int(entry["price"]))
+		return done
 	if str(entry.get("upgrade", "")) == "backpack":
 		pay(total)
 		Inventory.upgrade_capacity(int(entry["slots"]))
@@ -152,6 +211,8 @@ func buy(shop_id: String, entry: Dictionary, count: int = 1) -> String:
 		return "space"
 	pay(total)
 	Inventory.add(id, count)
+	if bool(entry.get("once", false)):
+		Game.set_flag("bought_" + id)
 	return "ok"
 
 

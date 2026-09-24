@@ -87,6 +87,8 @@ static func entry_name(entry: Dictionary) -> String:
 		return "Рюкзак на %d мест" % int(entry["slots"])
 	if str(entry.get("upgrade", "")) == "boathouse":
 		return "Лодочный сарай ур. 2 и шлюпка (200 досок)"
+	if entry.has("service"):
+		return Loc.t("service." + str(entry["service"]))
 	var id := str(entry["item"])
 	return Loc.t(str(Data.by_id("items", id).get("name", id)))
 
@@ -99,13 +101,15 @@ func buy_selected(count: int) -> String:
 	var result := Economy.buy(shop_id, entry, count)
 	match result:
 		"ok":
-			_status.text = "Куплено: %s ×%d. Осталось %d кр." % [entry_name(entry), count, Economy.money]
+			_status.text = Economy.last_service if entry.has("service") else "Куплено: %s ×%d. Осталось %d кр." % [entry_name(entry), count, Economy.money]
 		"money":
 			_status.text = "Не хватает крон."
 		"space":
 			_status.text = "Рюкзак полон."
 		"materials":
 			_status.text = "Не хватает материалов."
+		"nothing":
+			_status.text = "Для этой услуги нечего предъявить."
 		_:
 			_status.text = "Этого сейчас нет."
 	refresh()

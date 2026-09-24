@@ -938,7 +938,8 @@
    "dislike": [],
    "hate": []
   },
-  "visitor": true
+  "visitor": true,
+  "trades": "shop_sandro"
  },
  {
   "id": "npc_grump",

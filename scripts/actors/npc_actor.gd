@@ -133,7 +133,10 @@ func emote(kind: String) -> void:
 
 func interact(_player: Player) -> void:
 	var hud := get_tree().current_scene.get_node("HUD") as CanvasLayer
-	DialogueBox.talk(hud, npc_id)
+	var box := DialogueBox.talk(hud, npc_id)
+	var trades := str(NPCs.info(npc_id).get("trades", ""))
+	if trades != "" and Economy.shop_closed_reason(trades) == "":
+		box.finished.connect(func(_c: int) -> void: ShopPanel.open(hud, trades), CONNECT_ONE_SHOT)
 
 
 func receive_gift(_player: Player) -> void:

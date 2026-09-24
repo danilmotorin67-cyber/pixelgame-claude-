@@ -69,7 +69,9 @@ def main() -> int:
             errs.append(f"crop {crop.get('id')} has no growth days")
     for shop in rows(tables.get("shops", [])):
         for entry in shop.get("stock", []):
-            if "upgrade" not in entry and entry.get("item") not in item_ids:
+            if "service" in entry and entry["service"] not in ("open_chest", "rumor", "boat_blessing"):
+                errs.append(f"shop {shop.get('id')} offers unknown service {entry['service']}")
+            if "upgrade" not in entry and "service" not in entry and entry.get("item") not in item_ids:
                 errs.append(f"shop {shop.get('id')} sells unknown item {entry.get('item')}")
     tag_ids = set()
     for r in rows(tables.get("items", [])):

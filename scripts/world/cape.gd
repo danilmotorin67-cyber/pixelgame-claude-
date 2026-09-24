@@ -131,6 +131,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		SeaChartPanel.toggle(hud)
 		get_viewport().set_input_as_handled()
 		return
+	if event.is_action_pressed("open_calendar") and not console.visible:
+		CalendarPanel.toggle(hud)
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("open_quests") and not console.visible:
 		InfoPanel.open(hud, "Журнал: задания", func() -> String:
 			var lines := Quests.journal_lines()

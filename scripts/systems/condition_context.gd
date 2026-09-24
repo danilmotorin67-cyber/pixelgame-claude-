@@ -106,5 +106,12 @@ func evidence() -> int:
 	return n
 
 
+func best_hearts() -> int:
+	var best := 0
+	for npc in Relationships.points:
+		best = maxi(best, Relationships.hearts_of(str(npc)))
+	return best
+
+
 func dating(npc: String) -> bool:
 	return Relationships.dating.has(npc)
