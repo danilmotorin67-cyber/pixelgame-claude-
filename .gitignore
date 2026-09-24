@@ -17,3 +17,8 @@ __pycache__/
 /build/
 /dist/
 /saltlight-cape.png
+
+# Files Godot regenerates on import (CI imports the project from scratch)
+*.uid
+*.import
+*.translation
