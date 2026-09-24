@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/world/cape.gd" id="1_world"]
+[ext_resource type="PackedScene" path="res://scenes/actors/player.tscn" id="2_player"]
+[ext_resource type="Script" path="res://scripts/world/lighthouse_floor.gd" id="3_floor"]
+[ext_resource type="PackedScene" path="res://scenes/ui/world_hud.tscn" id="4_hud"]
+
+[node name="LighthouseInterior" type="Node2D"]
+script = ExtResource("1_world")
+map_id = ""
+y_sort_enabled = true
+
+[node name="Terrain" type="Node2D" parent="."]
+script = ExtResource("3_floor")
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(168, 152)
+
+[node name="HUD" parent="." instance=ExtResource("4_hud")]
+
+[connection signal="text_submitted" from="HUD/Console" to="." method="_on_console_submitted"]
+[connection signal="pressed" from="HUD/MorningPanel/MorningOk" to="." method="_on_morning_ok"]

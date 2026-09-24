@@ -124,6 +124,54 @@ func refill(id: String = "") -> int:
 	return poured
 
 
+const REPAIRS := {
+	"stairs": {"items": [["boards", 10]], "points": 2},
+	"masonry": {"items": [["stone", 20]], "points": 2},
+	"paint": {"items": [["shell_lime", 5], ["whale_oil", 1]], "points": 2},
+	"glass": {"items": [["glass", 3]], "flag": "lantern_glass_repaired"},
+}
+
+
+# Q1.8 repairs, available once node M5 is open: each part is paid for with materials.
+func repair(part: String) -> String:
+	if not Knowledge.has_unlock("tower_repair"):
+		return "locked"
+	var info: Dictionary = REPAIRS.get(part, {})
+	if info.is_empty():
+		return "unknown"
+	if (info.has("flag") and Game.flag(str(info["flag"]))) or (info.has("points") and int(tower.get(part, 0)) >= 2):
+		return "done"
+	for need in info["items"]:
+		if not Data.exists("items", str(need[0])) or Inventory.count_of(str(need[0])) < int(need[1]):
+			return "materials"
+	for need in info["items"]:
+		Inventory.take(str(need[0]), int(need[1]))
+	if info.has("flag"):
+		Game.set_flag(str(info["flag"]))
+	else:
+		tower[part] = int(info["points"])
+	if not Game.flag("tower_first_repair"):
+		Game.set_flag("tower_first_repair")
+	return "ok"
+
+
+# Fuel drained into the storeroom barrel goes back into an empty (or same-fuel) reservoir.
+func refill_from_barrel(id: String) -> float:
+	var stored := float(barrel.get(id, 0.0))
+	if lamp_on or stored <= 0.0 or (fuel_type != "" and fuel_type != id and fuel_nights > 0.0):
+		return 0.0
+	var room := float(reservoir_units()) * float(fuel_info(id)["nights"]) - (fuel_nights if fuel_type == id else 0.0)
+	var poured := minf(room, stored)
+	if poured <= 0.0:
+		return 0.0
+	fuel_type = id
+	fuel_nights += poured
+	barrel[id] = stored - poured
+	if float(barrel[id]) <= 0.0:
+		barrel.erase(id)
+	return poured
+
+
 func nights_of_fuel() -> float:
 	return fuel_nights
 

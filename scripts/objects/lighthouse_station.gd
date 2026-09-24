@@ -1,57 +1,9 @@
 extends Area2D
 
-const LIGHT_SECONDS := 2.0
-const STORM_SECONDS := 4.0
-const REACH := 38.0
-
-var _keeper: Player
-var _held: float = 0.0
+const INSIDE := Vector2(10 * 16 + 8, 10 * 16 + 8)
 
 
-func interact(player: Player) -> void:
+func interact(_player: Player) -> void:
 	if Clock.paused:
 		return
-	var hint: Label = get_parent().get_node("HUD/Hint")
-	if Lighthouse.lamp_on:
-		hint.text = "Маяк горит · сила огня %d" % int(Lighthouse.base_power())
-		return
-	if Lighthouse.fuel_nights <= 0.0:
-		if Lighthouse.refill() > 0:
-			hint.text = "Резервуар заправлен: ночей — %d · удерживайте E, чтобы зажечь" % int(Lighthouse.fuel_nights)
-		else:
-			hint.text = "Маяку нужно топливо · рыбий жир, ворвань или керосин"
-		return
-	_keeper = player
-	_held = 0.0
-	_show_progress()
-
-
-func _process(delta: float) -> void:
-	if _keeper == null:
-		return
-	if Clock.paused or not Input.is_action_pressed("interact") or \
-			_keeper.global_position.distance_to(global_position) > REACH:
-		_cancel_hold()
-		return
-	_held += delta
-	if _held >= hold_seconds():
-		if Lighthouse.light_lamp():
-			get_parent().get_node("HUD/Hint").text = "Огонь зажжён · сила %d" % int(Lighthouse.base_power())
-		_keeper = null
-		_held = 0.0
-	else:
-		_show_progress()
-
-
-func hold_seconds() -> float:
-	return STORM_SECONDS if Weather.current in ["storm", "blizzard"] else LIGHT_SECONDS
-
-
-func _show_progress() -> void:
-	get_parent().get_node("HUD/Hint").text = "Удерживайте E: зажечь огонь %.1f / %.0f с" % [_held, hold_seconds()]
-
-
-func _cancel_hold() -> void:
-	_keeper = null
-	_held = 0.0
-	get_parent().get_node("HUD/Hint").text = "Огонь не зажжён · удерживайте E у двери маяка"
+	Router.goto_map("lh_1", INSIDE)

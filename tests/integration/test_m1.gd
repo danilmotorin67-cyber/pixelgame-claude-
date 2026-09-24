@@ -254,9 +254,13 @@ func _run() -> void:
 	var dark_night := Lighthouse.resolve_night()
 	_check(int(dark_night["power"]) == 0 and is_equal_approx(Lighthouse.fire_power, 9.5),
 		"unlit night must count as zero in the seven-night Light average")
+	var lamp := TowerObject.new()
+	lamp.kind = "lamp"
 	Weather.set_weather("storm")
-	_check(is_equal_approx(float(station.call("hold_seconds")), 4.0), "storm must double the ignition hold")
+	_check(is_equal_approx(lamp.hold_seconds(), 4.0), "storm must double the ignition hold")
 	Weather.set_weather("clear")
+	_check(is_equal_approx(lamp.hold_seconds(), 2.0), "the lamp lights after a 2 s hold")
+	lamp.free()
 	Lighthouse.reset()
 	_check_calendar_rules()
 	_check_shipping()
@@ -393,7 +397,7 @@ func _run() -> void:
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
 	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
-		"lighthouse", "weather_tides", "farm", "stations", "sea", "mail", "sales", "luck", "skills", "autosave", "report"],
+		"lighthouse", "weather_tides", "farm", "stations", "sea", "mail", "sales", "quests", "luck", "skills", "autosave", "report"],
 		"night resolution must follow the order of spec 6.4")
 	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(

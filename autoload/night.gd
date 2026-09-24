@@ -6,6 +6,7 @@ const FAINT_MESSAGES := [
 	"Доктор Фальк: «Жить будете. Долго — не обещаю».",
 ]
 const HOME_SPAWN := Vector2(600, 360)
+const BUNK_SPAWN := Vector2(4 * 16 + 8, 10 * 16 + 8)
 
 var resolving: bool = false
 var pending_report: Dictionary = {}
@@ -45,6 +46,8 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["mail"] = Mail.unread())
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
+	_step(report, "quests", func() -> void:
+		report["quests_started"] = Quests.check_starts())
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))
 	_wake_hero(report, bedtime, fainted, night_index, player, watch_sleep)
@@ -58,9 +61,10 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	report["tide"] = Clock.tide_height()
 	report["moon"] = Clock.moon_name()
 	report["steps"].append("report")
-	if current_scene and current_scene.get("map_id") != "cape":
+	var wake_map := Router.current_map
+	if current_scene and current_scene.get("map_id") != wake_map:
 		pending_report = report
-		Router.goto_map("cape", HOME_SPAWN)
+		Router.goto_map(wake_map, Router.spawn)
 	else:
 		Events.night_resolved.emit(report)
 	resolving = false
@@ -94,11 +98,13 @@ func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: in
 		else float(Lighthouse.cfg("watch_sleep_energy"))
 	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted) * bunk
 	state["cold"] = 0.0
-	state["x"] = HOME_SPAWN.x
-	state["y"] = HOME_SPAWN.y
+	var wake_map := "lh_3" if watch_sleep and not fainted else "cape"
+	var wake_at := BUNK_SPAWN if wake_map == "lh_3" else HOME_SPAWN
+	state["x"] = wake_at.x
+	state["y"] = wake_at.y
 	Game.player_state = state
-	Router.current_map = "cape"
-	Router.spawn = HOME_SPAWN
+	Router.current_map = wake_map
+	Router.spawn = wake_at
 	if player:
 		player.restore_state(state)
 	Game.add_stat("days_survived")

@@ -29,6 +29,7 @@ func _fresh(day: int = 0) -> void:
 	Mail.reset()
 	Economy.reset()
 	Graveyard.reset()
+	Quests.reset()
 
 
 func _light(at_hour: int, at_minute: int = 0) -> void:
@@ -484,6 +485,133 @@ func _check_fuel_chain() -> void:
 	Farm.reset()
 
 
+func _object(scene: Node, kind: String) -> TowerObject:
+	for child in scene.get_node("Terrain").get_children():
+		if child is TowerObject and child.kind == kind:
+			return child
+	return null
+
+
+func _go(map_id: String, at: Vector2 = Vector2.ZERO) -> Node:
+	Router.goto_map(map_id, at)
+	await get_tree().process_frame
+	await get_tree().process_frame
+	return get_tree().current_scene
+
+
+func _check_tower() -> void:
+	_fresh(5)
+	Save.save_root = "user://saltlight_m3_test_saves"
+	Save.current_slot = 2
+	Crafting.reset()
+	Router.current_map = "cape"
+	Router.spawn = Vector2(724, 290)
+	Game.player_state = {}
+	get_tree().change_scene_to_file("res://scenes/world/cape.tscn")
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var cape := get_tree().current_scene
+	Clock.paused = false
+	Clock.set_time(18, 0)
+	cape.get_node("LighthouseStation").interact(cape.get_node("Player"))
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var hall := get_tree().current_scene
+	_check(Router.current_map == "lh_1" and _object(hall, "fortuna") != null, "the tower door leads to Fortuna's hall")
+	Clock.paused = false
+	_object(hall, "fortuna").interact(hall.get_node("Player"))
+	var panel: InfoPanel = hall.get_node_or_null("HUD/InfoPanel")
+	_check(panel != null and panel._body.text == Loc.t("fortuna.first"), "Fortuna's first words")
+	panel.close()
+	_check(Dialogue.fortuna_talk() == Loc.t("fortuna.again"), "Fortuna talks once a day")
+	Clock.day_index = 6
+	_check(Dialogue.fortuna_talk().length() > 10 and Dialogue.hint_of_the_day(6) != Dialogue.hint_of_the_day(7),
+		"then a hint of the day")
+	Clock.day_index = 5
+	var floors := [hall]
+	for n in 3:
+		_object(get_tree().current_scene, "stairs_up").interact(get_tree().current_scene.get_node("Player"))
+		await get_tree().process_frame
+		await get_tree().process_frame
+		floors.append(get_tree().current_scene)
+	_check(Router.current_map == "lh_4", "the spiral stairs climb to the lantern room")
+	var lantern := get_tree().current_scene
+	var player: Player = lantern.get_node("Player")
+	_check(lantern.get_node_or_null("HUD/RitualChecklist") != null, "the ritual checklist shows in the lantern room")
+	_check(RitualChecklist.lines()[0].begins_with("□"), "nothing is done yet")
+	Inventory.add("fish_oil", 1)
+	Inventory.add("rag", 1)
+	Clock.paused = false
+	Clock.set_time(19, 30)
+	var lamp := _object(lantern, "lamp")
+	player.global_position = lamp.global_position + Vector2(0, 12)
+	lamp.interact(player)
+	_check(Lighthouse.fuel_nights == 1.0, "the lamp takes fuel from the backpack")
+	Input.action_press("interact")
+	lamp.interact(player)
+	for frame in 2000:
+		await get_tree().process_frame
+		if Lighthouse.lamp_on:
+			break
+	Input.action_release("interact")
+	_check(Lighthouse.lamp_on, "holding E lights the lamp")
+	var mechanism := _object(lantern, "mechanism")
+	player.global_position = mechanism.global_position + Vector2(0, 12)
+	var energy := player.energy
+	mechanism.interact(player)
+	for step in 40:
+		mechanism.add_rotation(TAU / 12.0)
+	_check(Lighthouse.wound() and is_equal_approx(player.energy, energy - 3.0), "three circles wind the weights for 3 energy")
+	var glass := _object(lantern, "glass")
+	Lighthouse.cleanliness = 1.0
+	player.global_position = glass.global_position + Vector2(0, 12)
+	glass.interact(player)
+	_check(Lighthouse.cleanliness == 4.0 and is_equal_approx(player.energy, energy - 8.0), "wiping the glass costs 5 energy and a rag")
+	_check(TowerObject.spyglass_text().begins_with("Море"), "no spyglass, no view")
+	Inventory.add("spyglass", 1)
+	_check(TowerObject.spyglass_text().contains("Завтра"), "at sunset the spyglass shows tomorrow's weather")
+	_check(TowerObject.calendar_text().split("\n").size() == 7, "the pilot calendar lists seven nights")
+	_check(TowerObject.barometer_text().split("\n").size() == 8, "the barometer reads a week ahead")
+
+	_object(lantern, "stairs_down").interact(player)
+	await get_tree().process_frame
+	await get_tree().process_frame
+	var watch := get_tree().current_scene
+	_check(Router.current_map == "lh_3", "down to the watch room")
+	var reports: Array = []
+	var catcher := func(report: Dictionary) -> void: reports.append(report)
+	Events.night_resolved.connect(catcher)
+	Clock.set_time(22, 0)
+	_object(watch, "bunk").interact(watch.get_node("Player"))
+	await get_tree().process_frame
+	Events.night_resolved.disconnect(catcher)
+	_check(not reports.is_empty() and Router.current_map == "lh_3" and Clock.day_index == 6,
+		"sleeping in the bunk wakes the keeper in the watch room")
+	if not reports.is_empty():
+		var parts: Dictionary = reports[0]["lighthouse"]["parts"]
+		var total := 0
+		for key in parts:
+			total += int(parts[key])
+		_check(is_equal_approx(float(reports[0]["lighthouse"]["power"]), float(total) + 5.0),
+			"the watch-room bunk adds 5 to the night")
+		_check("q1_8_tower" in reports[0]["quests_started"] and Game.flag("q1_8"), "Q1.8 starts on Spring 6")
+	_check(is_equal_approx(float(Game.player_state.get("energy", 0.0)), Game.max_energy() * 0.9)
+		or is_equal_approx(watch.get_node("Player").energy, Game.max_energy() * 0.9),
+		"without the comfy bunk the watch room restores 90%")
+	_check(Lighthouse.repair("stairs") == "locked", "repairs need node M5")
+	_check(Knowledge.unlock_node("M5"), "M5 opens for free once Q1.8 has begun")
+	Inventory.add("boards", 10)
+	Inventory.add("glass", 3)
+	_check(Lighthouse.repair("stairs") == "ok" and Lighthouse.tower_points() == 3, "10 boards mend the stairs: +2 tower")
+	_check(Lighthouse.repair("glass") == "ok" and Lighthouse.glass_cap() == 10.0, "3 panes lift the glass limit to 10")
+	_check(Lighthouse.repair("masonry") == "materials", "masonry needs 20 stone")
+	for file_path in Save._candidate_paths(2):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(file_path))
+	Save.save_root = "user://saves"
+	Save.current_slot = 0
+	Clock.paused = true
+
+
 func _run() -> void:
 	await _check_world_objects()
 	_check_components()
@@ -496,6 +624,7 @@ func _run() -> void:
 	_check_inspections()
 	_check_knowledge()
 	_check_fuel_chain()
+	await _check_tower()
 	_fresh()
 	print("M3 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

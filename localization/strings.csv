@@ -322,3 +322,22 @@ station.cutting_table,Разделочный стол,Cutting table
 station.renderer,Жиротопка,Renderer
 station.settling_tank,Отстойник,Settling tank
 mail.station_delivery,"Лоцманская управа. Рюкзак переполнен, поэтому %s доставлен почтой. Распишитесь. Не там.","Pilot Directorate. Your backpack was full, so the %s came by post. Sign here. No, there."
+item.spyglass.name,Подзорная труба Агаты,Agatha's spyglass
+item.spyglass.desc,"Корабли, птицы и завтрашняя погода — с галереи на закате. Латунь помнит её руки.","Ships, birds and tomorrow's weather, from the gallery at sunset. The brass remembers her hands."
+q.q1_8.title,Башня,The Tower
+q.q1_8.s1,"Отремонтировать лестницу, кладку, покраску и стёкла фонарной","Repair the stairs, masonry, paint and lantern panes"
+fortuna.first,Ну наконец-то. Ещё одна ночь без огня — и я бы сама себя подожгла. От скуки.,Finally. One more night without fire and I would have set myself alight. Out of boredom.
+fortuna.again,"Мы уже беседовали сегодня. Я деревянная, а не бездонная.","We have already talked today. I am wooden, not bottomless."
+fortuna.reminder,"Фортуна: «Девять вечера, а огня нет. Корабли не умеют читать мысли. Я тоже, но я хотя бы стараюсь»","Fortuna: “Nine o'clock and no fire. Ships cannot read minds. Neither can I, but at least I try.”"
+fortuna.hint.1,Заводи механизм каждую ночь. Гири не умеют сами подниматься. Как и некоторые смотрители.,Wind the mechanism every night. The weights won't lift themselves. Neither do some keepers.
+fortuna.hint.2,Грязное стекло — это половина тьмы. Ветошь дешевле крушения.,Dirty glass is half the darkness. A rag is cheaper than a wreck.
+fortuna.hint.3,"В туман звони в колокол каждый час. Да, каждый. Море глухое, но не настолько.","Ring the bell every hour in fog. Yes, every hour. The sea is deaf, but not that deaf."
+fortuna.hint.4,Опоздал с огнём больше чем на час — ночь засчитают с урезом. Пальм это любит.,Light the fire more than an hour late and the night is docked. Palm loves that.
+fortuna.hint.5,"Спи в вахтенной, если ночь неспокойная. Механизм реже встаёт, когда за ним присматривают.",Sleep in the watch room on a restless night. The mechanism stalls less when watched.
+fortuna.hint.6,Потроха — не мусор. Жиротопка превращает их в свет. Это почти поэзия. Вонючая.,Guts are not rubbish. The renderer turns them into light. It's almost poetry. Smelly poetry.
+fortuna.hint.7,"Лоцманский календарь в вахтенной знает, кто пройдёт на неделе. Я тоже знаю, но календарь не язвит.","The pilot calendar knows who passes this week. So do I, but the calendar is less sarcastic."
+fortuna.hint.8,Каждый понедельник управа платит за вчерашний свет. Щедро — если свет был.,"Every Monday the directorate pays for last week's light. Generously, if there was light."
+fortuna.hint.9,Ящики с крушения: треть твоя. Остальное — чужое горе. Олаф примет.,Wreck crates: a third is yours. The rest is someone's grief. Olaf takes them.
+fortuna.hint.10,Двадцать восьмого приедет Пальм. Он измеряет свет линейкой. Не спрашивай как.,On the 28th Palm comes. He measures light with a ruler. Don't ask how.
+fortuna.hint.11,Двести лет я смотрела только вперёд. В основном там чайки.,For two hundred years I only looked ahead. Mostly at gulls.
+fortuna.hint.12,"Стол в вахтенной помнит всё, что ты ему покажешь. Изучай новое — пригодится.",The watch-room desk remembers everything you show it. Study new things; it pays off.

@@ -33,6 +33,10 @@ func _ready() -> void:
 	add_child(Pickups.new())
 	add_child(Stations.new())
 	if map_id == "cape":
+		var bell := TowerBell.new()
+		bell.name = "TowerBell"
+		bell.position = Vector2(748, 266)
+		add_child(bell)
 		var mailbox := Mailbox.new()
 		mailbox.name = "Mailbox"
 		mailbox.position = Vector2(664, 348)
@@ -46,15 +50,18 @@ func _ready() -> void:
 	Events.inventory_changed.connect(_refresh_inventory)
 	Events.night_resolved.connect(_on_night_resolved)
 	Events.lamp_lit.connect(_on_world_changed)
+	Events.hour_changed.connect(_on_hour_changed)
 	console.visible = false
 	console_out.visible = false
 	inventory_panel.visible = false
 	morning_panel.visible = false
-	if map_id != "cape":
+	if Router.TOWER_MAPS.has(map_id):
+		$HUD/Hint.text = str(preload("res://scripts/world/lighthouse_floor.gd").TITLES.get(map_id, map_id))
+	elif map_id != "cape":
 		var info: Dictionary = Data.tables.get("regions", {}).get(map_id, {})
 		$HUD/Hint.text = "%s   E: переход" % str(info.get("title", map_id))
 	else:
-		$HUD/Hint.text = "Маяк: E у двери — заправить, удержать — зажечь"
+		$HUD/Hint.text = "Маяк: E у двери — войти; огонь зажигают в фонарной"
 	_refresh_hud()
 	_refresh_inventory()
 	if not Night.pending_report.is_empty():
@@ -65,6 +72,11 @@ func _ready() -> void:
 
 func _deliver_report(report: Dictionary) -> void:
 	Events.night_resolved.emit(report)
+
+
+func _on_hour_changed(hour: int) -> void:
+	if hour == 21 and Settings.fortuna_reminder and not Lighthouse.lamp_on and Lighthouse.fire_needed():
+		$HUD/Hint.text = Dialogue.fortuna_reminder()
 
 
 func _on_world_changed(_value: Variant = null) -> void:

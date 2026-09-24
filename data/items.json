@@ -1225,5 +1225,13 @@
     "price": 0,
     "stack": 1,
     "place": "settling_tank"
+  },
+  {
+    "id": "spyglass",
+    "name": "item.spyglass.name",
+    "desc": "item.spyglass.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
   }
 ]
