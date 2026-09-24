@@ -561,6 +561,136 @@ func _check_farm_life() -> void:
 	_check(int(Sea.sea_garden[-1]["next"]) - Clock.day_index == 24, "in winter kelp grows half as fast")
 
 
+# Runs a process recipe `times` times on a station (placed if needed), lets the time pass and collects.
+func _work(station_id: String, recipe_id: String, times: int = 1) -> int:
+	var list := Crafting.objects("cape", station_id)
+	var obj: Dictionary = list[0] if not list.is_empty() else Crafting._add("cape", station_id, 64 + Crafting.placed["cape"].size() * 24, 1000)
+	var done := 0
+	for n in times:
+		var info := Crafting.station(station_id)
+		for fuel in info.get("fuel", []):
+			Inventory.add(str(fuel[0]) if fuel is Array else str(fuel), int(fuel[1]) if fuel is Array else 1)
+			break
+		if Crafting.start(obj, recipe_id) != "ok":
+			break
+		Clock.day_index += 6
+		done += Crafting.collect(obj)
+	return done
+
+
+# 19.3: the twelve production chains, from what the island gives to what the keeper uses.
+func _check_chains() -> void:
+	_fresh()
+	Inventory.upgrade_capacity(36)
+	Knowledge.sea_pts = 999
+	Knowledge.land_pts = 999
+	Knowledge.rest_pts = 999
+	for id in ["M2", "M3", "M4", "M7", "M8", "R2", "R17", "Z2", "R10", "R3", "R4", "R5", "R6", "R8", "R9", "P3", "P4", "P6", "P11",
+			"R11", "R12", "R13", "R14", "Z3", "Z5", "Z8", "Z6", "P5", "T4", "T5", "S7", "Z7"]:
+		Knowledge.unlock(id)
+	Skills.levels["fishing"] = 1
+	# 1. Light: fish -> guts -> fish oil -> whale oil -> the reservoir
+	Inventory.add("fish_cod", 10)
+	Crafting.make("cut_fillet", 10, "cutting_table")
+	_check(_work("renderer", "render_oil", 2) == 2 and _work("settling_tank", "settle_whale_oil") == 1, "chain 1: guts -> oil -> whale oil")
+	_check(Lighthouse.refill("whale_oil") == 1 and Lighthouse.fuel_type == "whale_oil", "chain 1: whale oil in the reservoir")
+	# 2. Lenses: kelp ash + sand -> glass; pumice -> abrasive; prisms; copper + zinc -> brass -> frame; the lens goes in
+	Inventory.add("kelp", 20)
+	_check(_work("drying_rack", "dry_kelp", 20) == 20 and _work("ash_kiln", "burn_kelp_ash", 4) == 4 and Inventory.count_of("kelp_ash") == 8,
+		"chain 2: 20 kelp -> dried -> 8 ash")
+	var row0 := Sea.first_row("seal_shore")
+	while Inventory.count_of("sand") < 16:
+		Crafting.dig_sand("seal_shore", Vector2(20 * 16 + 8, (row0 - 1) * 16 + 8))
+	_check(_work("glass_furnace", "melt_glass", 8) == 8 and Inventory.count_of("glass") == 8, "chain 2: sand + ash -> 8 glass")
+	Inventory.add("pumice", 8)
+	Crafting.make("craft_abrasive_pumice", 8, "workbench")
+	for n in 8:
+		Crafting.make("craft_abrasive_pumice")
+	_check(_work("optical_bench", "grind_prism", 8) == 8 and Inventory.count_of("prism") == 8, "chain 2: 8 prisms")
+	Inventory.add("copper_ingot", 6)
+	Inventory.add("zinc", 3)
+	_work("forge", "alloy_brass", 3)
+	_check(Inventory.count_of("brass") == 6 and _work("forge", "forge_frame_small") == 1, "chain 2: brass -> the small frame")
+	_check(_work("optical_bench", "assemble_fresnel_4") == 1 and Lighthouse.install_part("lens_fresnel_4") == "ok"
+		and Lighthouse.components()["lens"] == 15, "chain 2: the 4th-order Fresnel lens shines with 15")
+	# 3. Metal: wreck scrap -> ingots -> nails
+	Inventory.add("iron_scrap", 4)
+	_check(_work("forge", "smelt_iron", 2) == 2 and _work("forge", "forge_nails") == 1 and Inventory.count_of("nails") >= 20,
+		"chain 3: scrap -> ingots -> 20 nails")
+	# 4. Canvas: flax -> fibre -> thread -> canvas -> oiled canvas -> oilskin
+	Inventory.add("flax", 6)
+	_work("scutcher", "scutch_flax", 6)
+	_work("spinning_wheel", "spin_thread", 6)
+	_check(Inventory.count_of("thread") >= 6 and _work("loom", "weave_canvas", 2) == 2, "chain 4: flax -> thread -> canvas")
+	Inventory.add("whale_oil", 2)
+	Crafting.make("craft_oiled_canvas")
+	Crafting.make("craft_oiled_canvas")
+	_check(Crafting.make("craft_storm_coat") == "ok" and Inventory.count_of("storm_coat") == 1, "chain 4: oiled canvas -> oilskin")
+	# 5. Wood: driftwood -> boards -> a simple coffin
+	Inventory.add("driftwood", 12)
+	Crafting.make("saw_driftwood", 4, "sawhorse")
+	_check(Inventory.count_of("boards") >= 8 and _work("carpentry_table", "carpentry_coffin_simple") == 1
+		and Inventory.count_of("coffin_simple") == 1, "chain 5: driftwood -> boards -> coffin")
+	# 6. Stone: stones -> blocks -> slab and headstone
+	Inventory.add("stone", 50)
+	Inventory.add("fish_squid", 1)
+	Crafting.make("cut_squid", 1, "cutting_table")
+	_work("stonecutter_table", "cut_stone_block", 5)
+	_check(_work("stonecutter_table", "cut_stone_slab") == 1 and _work("stonecutter_table", "cut_headstone") == 1,
+		"chain 6: stone -> blocks -> slab and headstone (squid ink)")
+	# 7. Salt: seawater -> salt -> brined herring
+	Crafting.scoop_seawater("seal_shore", Vector2(20 * 16 + 8, (row0 + 8) * 16 + 8), 5)
+	_check(_work("salt_pan", "boil_salt") == 1 and Inventory.count_of("salt") >= 3, "chain 7: 5 buckets of sea -> 3 salt")
+	Inventory.add("fish_herring", 5)
+	_check(_work("brine_barrel", "brine_herring") == 1 and Inventory.count_of("salted_herring") == 5, "chain 7: salted herring")
+	# 8. Fish goods: fillet -> smoked fish; cod on the racks -> stockfish -> lutefisk
+	Inventory.add("salt", 2)
+	Inventory.add("fish_cod", 1)
+	_check(_work("smokehouse", "smoke_fillet") == 1 and _work("drying_rack", "dry_cod") == 1, "chain 8: smoked fish and stockfish")
+	Inventory.add("kelp_ash", 1)
+	Crafting.learn("cook_lutefisk")
+	_check(Crafting.make("cook_lutefisk", 1, "kitchen_stove") == "ok", "chain 8: Helga's lutefisk")
+	# 9. Milk and wool
+	Inventory.add("milk", 2)
+	Inventory.add("wool", 5)
+	_check(_work("butter_churn", "churn_butter") == 1 and _work("cheese_press", "press_cheese") == 1, "chain 9: butter and cheese")
+	_work("spinning_wheel", "spin_yarn", 5)
+	Crafting.learn("craft_keeper_sweater")
+	_check(Crafting.make("craft_keeper_sweater") == "ok", "chain 9: wool -> yarn -> the keeper's sweater")
+	# 10. Drinks: ale, wine, aquavit aged in the cellar
+	Inventory.add("barley", 3)
+	Inventory.add("hops", 1)
+	Inventory.add("cloudberry", 5)
+	Inventory.add("potato", 5)
+	Inventory.add("dill", 1)
+	_check(_work("brewery", "brew_ale") == 1 and _work("wine_vat", "vat_wine_cloudberry") == 1 and _work("still", "distill_aquavit") == 1,
+		"chain 10: ale, cloudberry wine, aquavit")
+	var cask := Crafting._add("cape", "cellar_barrel", 64, 64)
+	for i in Inventory.capacity:
+		if str(Inventory.slots[i]["id"]) == "aquavit":
+			Crafting.store(cask, i)
+	Clock.day_index += 56
+	Crafting.night("clear")
+	Crafting.retrieve(cask, 0)
+	_check(_quality_of("aquavit") == 3, "chain 10: 56 days in the cellar make flawless aquavit")
+	# 11. Candles: wax from the hive, tallow from fish oil
+	Inventory.add("beeswax", 1)
+	Inventory.add("fish_oil", 1)
+	Inventory.add("thread", 2)
+	_check(_work("candle_mold", "mold_wax_candles") == 1 and _work("candle_mold", "mold_tallow_candles") == 1
+		and Inventory.count_of("wax_candle") >= 2 and Inventory.count_of("tallow_candle") == 2, "chain 11: wax and tallow candles")
+	# 12. Light water: lightflower + glowing plankton + glass -> the herbalist's table -> lighthouse fuel
+	Knowledge.unlock("T6")
+	Knowledge.unlocked["T6"] = true
+	Inventory.add("lightflower", 2)
+	Inventory.add("glow_plankton", 1)
+	Inventory.add("glass", 1)
+	_check(_work("herbal_table", "brew_light_water") == 1, "chain 12: light water brewed")
+	Lighthouse.fuel_nights = 0.0
+	Lighthouse.fuel_type = ""
+	_check(Lighthouse.refill("light_water") == 1 and is_equal_approx(Lighthouse.fuel_nights, 4.0), "chain 12: light water burns 4 nights")
+
+
 func _quality_of(id: String) -> int:
 	for slot in Inventory.slots:
 		if str(slot["id"]) == id:
@@ -576,5 +706,6 @@ func _run() -> void:
 	_check_skills()
 	_check_buildings()
 	_check_farm_life()
+	_check_chains()
 	print("M7 integration: %d failure(s)" % failures.size())
 	get_tree().quit(1 if not failures.is_empty() else 0)

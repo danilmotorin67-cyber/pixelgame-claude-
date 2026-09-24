@@ -67,3 +67,9 @@ jobs:
           if grep -E 'SCRIPT ERROR:|ERROR:' godot-test-m6.log; then
             exit 1
           fi
+      - name: Test M7 crafting and knowledge
+        run: |
+          ./godot --headless --path . res://tests/integration/test_m7.tscn 2>&1 | tee godot-test-m7.log
+          if grep -E 'SCRIPT ERROR:|ERROR:' godot-test-m7.log; then
+            exit 1
+          fi
