@@ -60,7 +60,8 @@ func _ready() -> void:
 	_status.add_theme_font_size_override("font_size", 8)
 	_status.add_theme_color_override("font_color", Color("#dfe9ea"))
 	column.add_child(_status)
-	var buttons := HBoxContainer.new()
+	var buttons := HFlowContainer.new()
+	buttons.custom_minimum_size = Vector2(350, 0)
 	column.add_child(buttons)
 	for action in actions:
 		var button := Button.new()

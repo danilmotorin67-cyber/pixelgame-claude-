@@ -6,7 +6,9 @@
 и погоста (автотест `tests/integration/test_m2`). Готова основа M3 (огонь):
 маяк изнутри, ритуал, Сила Огня по формулам, корабли и крушения, жалованье,
 инспекции, цепочка топлива и Фортуна; неделя ночей проверяется автотестом
-`tests/integration/test_m3`. Полная
+`tests/integration/test_m3`. Готова основа M4 (покой): тела, покойницкая,
+похороны и знаки, шкала Покоя, реестр и опознание, письма семьям, призраки;
+квесты Q1.1 и Q1.5 проходятся целиком (`tests/integration/test_m4`). Полная
 спецификация игры — в [docs/full.md](docs/full.md). Игра ещё не готова.
 Визуальное направление и первый участок графической переработки описаны в
 [docs/ART_DIRECTION.md](docs/ART_DIRECTION.md).
@@ -19,4 +21,5 @@
 
 При каждом обновлении GitHub Actions проверяет таблицы данных, импорт проекта
 в Godot 4.4.1 и интеграционные сценарии `tests/integration/test_m1.gd`,
-`tests/integration/test_m2.gd` и `tests/integration/test_m3.gd`.
+`tests/integration/test_m2.gd`, `tests/integration/test_m3.gd` и
+`tests/integration/test_m4.gd`.

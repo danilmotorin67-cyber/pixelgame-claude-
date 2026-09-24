@@ -42,6 +42,12 @@ static func text(report: Dictionary) -> String:
 		lines.append("Прошли: " + ", ".join(passed))
 	if not wrecked.is_empty():
 		lines.append("Крушение: " + ", ".join(wrecked))
+	var arrived: Array = report.get("bodies_arrived", [])
+	if not arrived.is_empty():
+		lines.append("Море вернуло тел: %d. Над берегом кружат вороны." % arrived.size())
+	var started: Array = report.get("quests_started", [])
+	for id in started:
+		lines.append("Новое дело: " + Loc.t(str(Data.by_id("quests", str(id)).get("title", id))))
 	var sales: Dictionary = report.get("sales", {})
 	if int(sales.get("income", 0)) > 0:
 		lines.append("Выручка «Чайки»: %d кр" % int(sales["income"]))

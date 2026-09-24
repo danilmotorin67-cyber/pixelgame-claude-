@@ -9,7 +9,7 @@
       {"title": "Лавка Бергов", "at": [12, 23], "size": [7, 5], "kind": "house", "shop": "shop_berg"},
       {"title": "Кузня Торы", "at": [52, 16], "size": [7, 5], "kind": "smith"},
       {"title": "Сухой Утопленник", "at": [45, 33], "size": [10, 5], "kind": "tavern"},
-      {"title": "Часовня Эльма", "at": [14, 35], "size": [7, 7], "kind": "chapel"},
+      {"title": "Часовня Эльма", "at": [14, 35], "size": [7, 7], "kind": "chapel", "shop": "shop_chapel"},
       {"title": "Торговый дом Грима", "at": [61, 35], "size": [9, 5], "kind": "hall", "shop": "shop_grim"},
       {"title": "Гильдейский дом", "at": [8, 8], "size": [8, 5], "kind": "ruin"},
       {"title": "Доктор Фальк", "at": [60, 8], "size": [7, 5], "kind": "house"},

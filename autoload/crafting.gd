@@ -45,6 +45,13 @@ func _add(map_id: String, id: String, x: int, y: int) -> Dictionary:
 	return obj
 
 
+func add_prefilled(map_id: String, id: String, x: int, y: int, items: Array) -> Dictionary:
+	var obj := _add(map_id, id, x, y)
+	for index in mini(items.size(), obj.get("slots", []).size()):
+		obj["slots"][index] = {"id": str(items[index][0]), "count": int(items[index][1]), "quality": 0}
+	return obj
+
+
 func find(map_id: String, uid: int) -> Dictionary:
 	for obj in placed.get(map_id, []):
 		if int(obj["uid"]) == uid:

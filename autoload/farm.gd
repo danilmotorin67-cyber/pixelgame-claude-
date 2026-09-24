@@ -13,6 +13,8 @@ var last_harvest: Dictionary = {}
 var wild: Dictionary = {}
 # Peat bog tiles dug this season: "x,y" -> season key; each tile recovers once a season (13.13).
 var peat_dug: Dictionary = {}
+# Loose stones to clear with the pickaxe: map -> [{x, y, hp}] in tiles.
+var rocks: Dictionary = {}
 
 
 func _key(cell: Vector2i) -> String:
@@ -42,6 +44,7 @@ func reset() -> void:
 	tiles.clear()
 	wild.clear()
 	peat_dug.clear()
+	rocks.clear()
 	Events.farm_changed.emit()
 
 
@@ -243,6 +246,40 @@ func spawn_wild(index: int) -> void:
 		wild[map_id] = list
 
 
+func scatter_rocks() -> void:
+	var cfg_rocks: Dictionary = Game.balance("graveyard", {}).get("rocks", {})
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 7919 + 3, 2147483647)
+	for map_id in cfg_rocks.get("zones", {}):
+		var zones: Array = cfg_rocks["zones"][map_id]
+		var list: Array = []
+		var used := {}
+		for n in int(cfg_rocks.get(map_id, 20)):
+			var zone: Array = zones[rng.randi_range(0, zones.size() - 1)]
+			var cell := Vector2i(int(zone[0]) + rng.randi_range(0, int(zone[2]) - 1),
+				int(zone[1]) + rng.randi_range(0, int(zone[3]) - 1))
+			if used.has(cell):
+				continue
+			used[cell] = true
+			list.append({"x": cell.x, "y": cell.y, "hp": int(cfg_rocks.get("hp", 2))})
+		rocks[map_id] = list
+
+
+# A pickaxe hit; a broken stone gives 1-3 stone. Returns stone gained (0 while it holds).
+func hit_rock(map_id: String, rock: Dictionary) -> int:
+	var list: Array = rocks.get(map_id, [])
+	if not list.has(rock):
+		return -1
+	rock["hp"] = int(rock["hp"]) - 1
+	if int(rock["hp"]) > 0:
+		return 0
+	var amount: Array = Game.balance("graveyard", {}).get("rocks", {}).get("stone", [1, 3])
+	var n := _rng(Vector2i(int(rock["x"]), int(rock["y"])), 53).randi_range(int(amount[0]), int(amount[1]))
+	list.erase(rock)
+	Inventory.add("stone", n)
+	return n
+
+
 func in_peat_bog(map_id: String, cell: Vector2i) -> bool:
 	var bog: Dictionary = Data.tables.get("forage", {}).get("peat_bog", {})
 	var rect: Array = bog.get("rect", [0, 0, 0, 0])
@@ -274,12 +311,19 @@ func collect_wild(map_id: String, spot: Dictionary) -> bool:
 
 
 func serialize() -> Dictionary:
-	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug}
+	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug, "rocks": rocks}
 
 
 func deserialize(d: Dictionary) -> void:
 	tiles = d.get("tiles", {}).duplicate(true)
 	peat_dug.clear()
+	rocks.clear()
+	var saved_rocks: Dictionary = d.get("rocks", {})
+	for map_id in saved_rocks:
+		var list: Array = []
+		for rock in saved_rocks[map_id]:
+			list.append({"x": int(rock["x"]), "y": int(rock["y"]), "hp": int(rock["hp"])})
+		rocks[map_id] = list
 	var saved_peat: Dictionary = d.get("peat_dug", {})
 	for key in saved_peat:
 		peat_dug[str(key)] = int(saved_peat[key])

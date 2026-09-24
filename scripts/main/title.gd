@@ -25,6 +25,8 @@ func _on_new_game() -> void:
 	Mail.reset()
 	Knowledge.reset()
 	Quests.reset()
+	Farm.scatter_rocks()
+	Crafting.add_prefilled("cape", "chest", 664, 380, [["canvas", 1], ["thread", 2], ["rag", 3]])
 	Farm.spawn_wild(0)
 	Sea.generate_gifts(0, false)
 	Inventory.add("fish_oil", 1)
@@ -36,6 +38,7 @@ func _on_new_game() -> void:
 	Inventory.add("tool_pick", 1)
 	Inventory.add("tool_axe", 1)
 	Inventory.add("tool_shovel", 1)
+	Inventory.add("tool_scythe", 1)
 	Inventory.add("lantern_tin", 1)
 	Inventory.add("oar", 1)
 	Router.current_map = "cape"

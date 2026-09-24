@@ -47,3 +47,9 @@ jobs:
           if grep -E 'SCRIPT ERROR:|ERROR:' godot-test-m3.log; then
             exit 1
           fi
+      - name: Test M4 graveyard systems
+        run: |
+          ./godot --headless --path . res://tests/integration/test_m4.tscn 2>&1 | tee godot-test-m4.log
+          if grep -E 'SCRIPT ERROR:|ERROR:' godot-test-m4.log; then
+            exit 1
+          fi

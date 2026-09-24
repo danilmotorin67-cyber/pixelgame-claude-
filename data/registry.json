@@ -1,6 +1,224 @@
 [
-  {
-    "id": "reg_lars_ek",
-    "name": "Lars Ek"
+ {
+  "id": "reg_lars_ek",
+  "name": "Ларс Эк",
+  "ship": "Китобой «Сельма»",
+  "age": 27,
+  "clues": [
+   "tattoo:anchor_le",
+   "clothes:whaler_belt",
+   "body:scar_left_hand",
+   "initials:Л.Э."
+  ],
+  "family": {
+   "money": 200
   }
+ },
+ {
+  "id": "reg_pim",
+  "name": "Пим Ольсен",
+  "ship": "«Весёлая вдова»",
+  "age": 14,
+  "clues": [
+   "body:young",
+   "clothes:cabin_boy",
+   "item:tin_whistle"
+  ],
+  "family": {
+   "money": 100
+  }
+ },
+ {
+  "id": "reg_bartholomew",
+  "name": "Бартоломей Кросс",
+  "ship": "«Весёлая вдова»",
+  "age": 52,
+  "clues": [
+   "clothes:cook_apron",
+   "body:broad",
+   "tattoo:fish",
+   "item:spice_tin"
+  ],
+  "family": {
+   "money": 300
+  }
+ },
+ {
+  "id": "reg_ulrika",
+  "name": "Ульрика Брандт",
+  "ship": "—",
+  "age": 71,
+  "clues": [],
+  "story_only": true
+ },
+ {
+  "id": "reg_jan_holm",
+  "name": "Ян Хольм",
+  "ship": "Шхуна «Тюлень»",
+  "age": 31,
+  "clues": [
+   "tattoo:swallow",
+   "body:tall",
+   "initials:Я.Х."
+  ],
+  "family": {
+   "money": 300
+  },
+  "alive": true
+ },
+ {
+  "id": "reg_nils_berg",
+  "name": "Нильс Берг",
+  "ship": "Бот «Кайра»",
+  "age": 44,
+  "clues": [
+   "clothes:fisher_sweater",
+   "body:grey_beard",
+   "tattoo:fish"
+  ],
+  "family": {
+   "money": 200
+  }
+ },
+ {
+  "id": "reg_erik_strom",
+  "name": "Эрик Стрём",
+  "ship": "Бриг «Надежда»",
+  "age": 23,
+  "clues": [
+   "clothes:merchant_vest",
+   "papers:ticket_kronwald",
+   "initials:Э.С."
+  ],
+  "family": {
+   "money": 400
+  }
+ },
+ {
+  "id": "reg_gunnar_vik",
+  "name": "Гуннар Вик",
+  "ship": "Угольщик «Мира»",
+  "age": 38,
+  "clues": [
+   "clothes:stoker_apron",
+   "body:broken_nose",
+   "tattoo:heart"
+  ],
+  "family": {
+   "money": 250
+  }
+ },
+ {
+  "id": "reg_ivar_lind",
+  "name": "Ивар Линд",
+  "ship": "Китобой «Харальд»",
+  "age": 35,
+  "clues": [
+   "clothes:whaler_jacket",
+   "body:missing_finger",
+   "tattoo:mermaid"
+  ],
+  "family": {
+   "money": 350
+  }
+ },
+ {
+  "id": "reg_karin_dal",
+  "name": "Карин Даль",
+  "ship": "Паром «Сольвик»",
+  "age": 29,
+  "clues": [
+   "papers:letter_home",
+   "body:short",
+   "initials:К.Д."
+  ],
+  "family": {
+   "money": 500
+  }
+ },
+ {
+  "id": "reg_ulf_skog",
+  "name": "Ульф Ског",
+  "ship": "Бот «Треска»",
+  "age": 51,
+  "clues": [
+   "clothes:oilskin",
+   "body:scar_face",
+   "tattoo:compass"
+  ],
+  "family": {
+   "money": 150
+  }
+ },
+ {
+  "id": "reg_arvid_tofft",
+  "name": "Арвид Тофт",
+  "ship": "Барк «Звезда Севера»",
+  "age": 19,
+  "clues": [
+   "clothes:navy_coat",
+   "papers:pay_book",
+   "initials:А.Т."
+  ],
+  "family": {
+   "money": 450
+  }
+ },
+ {
+  "id": "reg_signe_ranud",
+  "name": "Сигне Ранд",
+  "ship": "Паром «Сольвик»",
+  "age": 62,
+  "clues": [
+   "body:short",
+   "item:rosary",
+   "papers:letter_home"
+  ],
+  "family": {
+   "money": 300
+  },
+  "alive": true
+ },
+ {
+  "id": "reg_halle_sund",
+  "name": "Халле Сунд",
+  "ship": "Шхуна «Серебряная сельдь»",
+  "age": 40,
+  "clues": [
+   "clothes:merchant_vest",
+   "tattoo:ship",
+   "body:broad"
+  ],
+  "family": {
+   "money": 350
+  }
+ },
+ {
+  "id": "reg_tord_edlund",
+  "name": "Торд Эдлунд",
+  "ship": "Бот «Прилежный»",
+  "age": 33,
+  "clues": [
+   "clothes:oilskin",
+   "body:tall",
+   "item:pipe"
+  ],
+  "family": {
+   "money": 200
+  }
+ },
+ {
+  "id": "reg_marta_hovde",
+  "name": "Марта Ховде",
+  "ship": "Бриг «Надежда»",
+  "age": 26,
+  "clues": [
+   "papers:ticket_kronwald",
+   "item:locket",
+   "initials:М.Х."
+  ],
+  "family": {
+   "money": 600
+  }
+ }
 ]

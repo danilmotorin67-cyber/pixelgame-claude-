@@ -14,7 +14,10 @@ var _dodge_t: float = 0.0
 var _walk_time: float = 0.0
 var tool_kind: String = ""
 var tool_time: float = 0.0
+var _carry_distance: float = 0.0
 const TOOL_DURATION := 0.34
+const CARRY_SPEED := 0.6
+const CARRY_TILES_PER_ENERGY := 10.0
 
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
@@ -46,8 +49,16 @@ func _physics_process(delta: float) -> void:
 	var spd := slow_speed if Input.is_action_pressed("walk_slow") else walk_speed
 	if is_tired():
 		spd *= float(Game.balance("fatigue_speed", 0.9))
+	if Graveyard.carried != "":
+		spd *= CARRY_SPEED
 	velocity = dir * spd
+	var before := global_position
 	move_and_slide()
+	if Graveyard.carried != "":
+		_carry_distance += global_position.distance_to(before)
+		if _carry_distance >= CARRY_TILES_PER_ENERGY * 16.0:
+			_carry_distance -= CARRY_TILES_PER_ENERGY * 16.0
+			energy = maxf(0.0, energy - 1.0)
 	if dir.length() > 0.1:
 		_walk_time += delta
 	else:
@@ -140,6 +151,13 @@ func _unhandled_input(event: InputEvent) -> void:
 		if event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			Inventory.select_hotbar(Inventory.selected_hotbar + 1)
 			return
+	if event.is_action_pressed("use_tool") and Graveyard.carried != "":
+		_say("С ношей на плечах инструменты не взять. E — положить.")
+		get_viewport().set_input_as_handled()
+		return
+	if event.is_action_pressed("use_tool") and _use_on_object(get_global_mouse_position()):
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("use_tool") and Inventory.selected_id() == "tool_shovel" \
 			and Router.current_map != "cape":
 		var at := get_global_mouse_position()
@@ -187,6 +205,35 @@ func _unhandled_input(event: InputEvent) -> void:
 		_try_interact()
 
 
+func _say(text: String) -> void:
+	var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+	if hint:
+		hint.text = text
+
+
+# Graves and stones answer to the selected tool under the mouse (48 px reach).
+func _use_on_object(at: Vector2) -> bool:
+	if global_position.distance_to(at) > 48.0:
+		return false
+	var query := PhysicsPointQueryParameters2D.new()
+	query.position = at
+	query.collide_with_areas = true
+	query.collide_with_bodies = false
+	query.collision_mask = 8
+	for hit in get_world_2d().direct_space_state.intersect_point(query, 8):
+		var node: Object = hit.get("collider")
+		if node and node.has_method("use_tool"):
+			if energy <= 0.0:
+				_say("Нужен отдых, сил на работу нет.")
+				return true
+			var result: String = node.use_tool(self, Inventory.selected_id())
+			if result != "":
+				play_tool("hoe", at)
+				_say(result)
+				return true
+	return false
+
+
 func _try_interact() -> void:
 	var space := get_world_2d().direct_space_state
 	var to := global_position + facing * 16.0
@@ -199,6 +246,13 @@ func _try_interact() -> void:
 		var n: Node = hit.get("collider")
 		if n and n.has_method("interact"):
 			n.interact(self)
+			return
+	if Graveyard.carried != "":
+		Graveyard.put_down(Router.current_map, global_position + facing * 12.0)
+		var layer := get_tree().current_scene.get_node_or_null("BodiesLayer") as BodiesLayer
+		if layer:
+			layer.rebuild()
+		_say("Тело положено на землю.")
 
 
 func _tint() -> void:

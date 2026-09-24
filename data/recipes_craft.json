@@ -116,5 +116,39 @@
     ],
     "minutes": 1440,
     "unlock": "start"
+  },
+  {
+    "id": "craft_wooden_cross",
+    "station": "workbench",
+    "in": [
+      [
+        "boards",
+        5
+      ]
+    ],
+    "out": [
+      "wooden_cross",
+      1
+    ],
+    "unlock": "start"
+  },
+  {
+    "id": "craft_carved_cross",
+    "station": "workbench",
+    "in": [
+      [
+        "boards",
+        5
+      ],
+      [
+        "bog_oak",
+        1
+      ]
+    ],
+    "out": [
+      "carved_cross",
+      1
+    ],
+    "unlock": "start"
   }
 ]

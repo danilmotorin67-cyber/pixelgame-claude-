@@ -41,13 +41,13 @@ item.thread.name,Нитки,Thread
 item.thread.desc,Последний стежок — через нос.,Last stitch through the nose.
 item.fish_cod.name,Треска,Cod
 item.fish_cod.desc,Остров стоит на ней.,The island stands on it.
-q.p2.title,Первый огонь,First fire
-q.p2.s1,Зажечь лампу маяка,Light the lighthouse lamp
-q.q1_1.title,Море возвращает,The sea returns
-q.q1_1.s1,Отнести тело в покойницкую,Carry the body to the morgue
-q.q1_1.s2,Осмотреть тело,Examine the body
-q.q1_1.s3,Похоронить,Bury
-body.lars.whisper,Якорь на руке. Буквы Л.Э.,Anchor on the arm. Letters L.E.
+q.p2.title,Первый огонь,First Fire
+q.p2.s1,Зажечь лампу в фонарной,Light the lamp in the lantern room
+q.q1_1.title,Море возвращает,The Sea Returns
+q.q1_1.s1,Отнести тело с берега в покойницкую,Carry the body from the shore to the morgue
+q.q1_1.s2,Осмотреть тело на секционном столе,Examine the body on the table
+q.q1_1.s3,Обмыть (ведро воды из колонки у дома),Wash it (a bucket from the pump by the house)
+body.lars.whisper,Шёпот: «Мама вязала мне носки. Эк. Ларс Эк…»,A whisper: “Mother knitted my socks. Ek. Lars Ek…”
 npc.fortuna.greet.generic,Ну наконец-то.,At last.
 npc.hedda.greet.generic,Я не боюсь моря. Это море меня побаивается.,I am not afraid of the sea. The sea is wary of me.
 npc.pet_cat.name,Фитиль,Wick
@@ -341,3 +341,112 @@ fortuna.hint.9,Ящики с крушения: треть твоя. Осталь
 fortuna.hint.10,Двадцать восьмого приедет Пальм. Он измеряет свет линейкой. Не спрашивай как.,On the 28th Palm comes. He measures light with a ruler. Don't ask how.
 fortuna.hint.11,Двести лет я смотрела только вперёд. В основном там чайки.,For two hundred years I only looked ahead. Mostly at gulls.
 fortuna.hint.12,"Стол в вахтенной помнит всё, что ты ему покажешь. Изучай новое — пригодится.",The watch-room desk remembers everything you show it. Study new things; it pays off.
+item.stone.name,Камень,Stone
+item.stone.desc,"Для насыпей, кладки и ремонта могил. Мыс им богат, как долгами.","For mounds, masonry and grave repairs. The cape is rich in it, like in debts."
+item.tool_scythe.name,Коса,Scythe
+item.tool_scythe.desc,"Трава в сено, бурьян с погоста. Жнёт не только траву — но это другая история.","Grass into hay, weeds off the graveyard. Reaps more than grass, but that's another story."
+item.wooden_cross.name,Деревянный крест,Wooden cross
+item.wooden_cross.desc,"Знак могилы, 10 очков. Простой и честный, как хорошая ложь.","A grave marker, 10 points. Plain and honest, like a good lie."
+item.carved_cross.name,Резной крест,Carved cross
+item.carved_cross.desc,"Знак могилы из морёного дуба, 20 очков. Ильм режет, пока море молчит.","A bog-oak grave marker, 20 points. Ilm carves while the sea is quiet."
+item.bog_oak.name,Морёный дуб,Bog oak
+item.bog_oak.desc,Для резных крестов и гробов. Пролежал в болоте сто лет и стал только лучше.,For carved crosses and coffins. A century in the bog only improved it.
+item.coffin_simple.name,Простой гроб,Plain coffin
+item.coffin_simple.desc,Подготовка +5. Сосна без претензий.,Preparation +5. Pine without pretensions.
+item.coffin_good.name,Добрый гроб,Good coffin
+item.coffin_good.desc,"Подготовка +10. Ильм говорит, в таком не стыдно.",Preparation +10. Ilm says there's no shame in this one.
+item.coffin_carved.name,Резной гроб,Carved coffin
+item.coffin_carved.desc,"Подготовка +15. Лучше, чем была жизнь у половины моряков.",Preparation +15. Better than half the sailors' lives were.
+item.wax_candle.name,Восковая свеча,Wax candle
+item.wax_candle.desc,"Для отпеваний и фонарей памяти. Тает тихо, как положено.","For funerals and memory lanterns. Melts quietly, as it should."
+item.fresh_water.name,Ведро пресной воды,Bucket of fresh water
+item.fresh_water.desc,Для обмывания тел и полива. Колонка у дома ещё качает.,For washing the dead and watering. The pump by the house still works.
+item.relatives_box.name,Ящик для родных,Box for the family
+item.relatives_box.desc,Вещи покойных ждут здесь опознания. Никто не торопится.,The belongings of the dead wait here to be identified. Nobody hurries.
+station.morgue,Покойницкая,Morgue
+item.knife_initials_le.name,Нож с инициалами «Л.Э.»,Knife marked “L.E.”
+item.knife_initials_le.desc,Вещь покойного. Место ей — у родных.,A dead man's belonging. It belongs with his family.
+item.tin_whistle.name,Жестяная дудочка,Tin whistle
+item.tin_whistle.desc,"Вещь покойного. Играет одну ноту, зато громко.","A dead boy's belonging. Plays one note, loudly."
+item.spice_tin.name,Жестянка со специями,Spice tin
+item.spice_tin.desc,"Вещь покойного. Пахнет кухней, которой больше нет.",A dead cook's belonging. Smells of a galley that is gone.
+item.mothers_socks.name,Вязаные носки матери,Mother's knitted socks
+item.mothers_socks.desc,"Тепло +10. Связаны для другого, но греют и вас.","Warmth +10. Knitted for someone else, yet they warm you too."
+item.bottle_13.name,Бутылка №13,Bottle No. 13
+item.bottle_13.desc,"Письмо Пима маме. Отнести Олафу, чтобы отправил.",Pim's letter to his mother. Take it to Olaf to post.
+item.pim_harmonica.name,Губная гармошка Пима,Pim's harmonica
+item.pim_harmonica.desc,Поиграть рядом с жителем — и дружба чуть теплее. Туве нравится.,Play it near a villager and friendship warms a little. Tuve likes it.
+clue.initials,Гравировка с инициалами «%s»,Engraved initials “%s”
+clue.tattoo,Татуировка: %s,Tattoo: %s
+clue.clothes,Одежда: %s,Clothes: %s
+clue.papers,Бумаги: %s,Papers: %s
+clue.body,Тело: %s,Body: %s
+clue.item,При себе: %s,Carrying: %s
+clue.tattoo.anchor_le,Татуировка: якорь с буквами «Л.Э.»,Tattoo: an anchor with “L.E.”
+clue.tattoo.anchor,Татуировка: якорь,Tattoo: an anchor
+clue.tattoo.swallow,Татуировка: ласточка,Tattoo: a swallow
+clue.tattoo.mermaid,Татуировка: русалка,Tattoo: a mermaid
+clue.tattoo.compass,Татуировка: роза ветров,Tattoo: a compass rose
+clue.tattoo.heart,Татуировка: сердце с именем,Tattoo: a heart with a name
+clue.tattoo.ship,Татуировка: парусник,Tattoo: a sailing ship
+clue.tattoo.fish,Татуировка: рыба,Tattoo: a fish
+clue.clothes.whaler_belt,Ремень с пряжкой китобойной компании,A whaling company belt buckle
+clue.clothes.whaler_jacket,Куртка китобоя,A whaler's jacket
+clue.clothes.fisher_sweater,Рыбацкий свитер,A fisherman's sweater
+clue.clothes.navy_coat,Форменный бушлат,A uniform pea coat
+clue.clothes.oilskin,Штормовка из промасленной парусины,An oilskin
+clue.clothes.merchant_vest,Жилет торгового моряка,A merchant sailor's waistcoat
+clue.clothes.stoker_apron,Фартук кочегара,A stoker's apron
+clue.clothes.cook_apron,Фартук кока,A ship's cook apron
+clue.clothes.cabin_boy,"Куртка юнги, велика на два размера","A cabin boy's jacket, two sizes too big"
+clue.papers.ticket_kronwald,Билет до Кронвальда,A ticket to Kronwald
+clue.papers.letter_home,Недописанное письмо домой,An unfinished letter home
+clue.papers.cargo_invoice,Накладная на груз,A cargo invoice
+clue.papers.pay_book,Расчётная книжка моряка,A seaman's pay book
+clue.body.tall,Высокий,Tall
+clue.body.short,Невысокий,Short
+clue.body.broad,Широкий в кости,Broad-boned
+clue.body.scar_left_hand,Шрам на левой руке,A scar on the left hand
+clue.body.scar_face,Шрам на лице,A scar on the face
+clue.body.missing_finger,Нет пальца,A missing finger
+clue.body.broken_nose,Сломанный нос,A broken nose
+clue.body.grey_beard,Седая борода,A grey beard
+clue.body.young,Совсем мальчишка,Just a boy
+clue.item.tin_whistle,При себе: жестяная дудочка,Carrying: a tin whistle
+clue.item.spice_tin,При себе: жестянка со специями,Carrying: a spice tin
+clue.item.pipe,При себе: трубка,Carrying: a pipe
+clue.item.rosary,При себе: чётки,Carrying: a rosary
+clue.item.locket,При себе: медальон,Carrying: a locket
+whisper.says,Шёпот: «%s»,A whisper: “%s”
+body.pim.whisper,"Шёпот: «Я не успел дописать маме. Дудочку не отдавайте, она моя…»",A whisper: “I never finished my letter to Mum. Don't give my whistle away…”
+body.bartholomew.whisper,Шёпот: «Специи в жестянке — не выбрасывай. Лапскаус без них — просто каша»,A whisper: “Keep the spices in the tin. Lapskaus without them is just porridge.”
+mail.burial_pay,Лоцманская управа. Похоронные: %d кр. Устав благодарит вас за порядок. Устав вообще редко благодарит.,Pilot Directorate. Burial allowance: %d kr. The charter thanks you for your order. The charter rarely thanks anyone.
+mail.family_thanks,"Семья %s благодарит вас. Вложили, сколько смогли. Теперь у них есть куда приходить.",The family of %s thank you. They enclosed what they could. Now they have somewhere to visit.
+mail.family_wrong,«Вы ошиблись: %s жив и пишет нам из Кронвальда. Кого же вы тогда похоронили?» Табличку придётся заменить.,“You are mistaken: %s is alive and writes to us from Kronwald. So whom did you bury?” The plaque must be replaced.
+mail.lars_family,"Мать %s. «Спасибо, что не оставили его морю. Посылаю носки — вязала ему, пусть согреют того, кто его похоронил»",The mother of %s: “Thank you for not leaving him to the sea. I send the socks I knitted for him; let them warm the one who buried him.”
+ghost.pim.name,Юнга Пим,Cabin boy Pim
+ghost.ulrika.name,Смотрительница Ульрика,Keeper Ulrika
+ghost.pim.greet,Пим: «Я написал маме письмо и бросил в море в бутылке. Номер тринадцать — на счастье. Найди её? Олаф отправит»,"Pim: “I wrote Mum a letter and threw it into the sea in a bottle. Number thirteen, for luck. Find it? Olaf will post it.”"
+ghost.pim.waiting,Пим: «Бутылки любят Бухту Разбитых Кораблей. Там всё тонет и всё возвращается»,Pim: “Bottles love Wreck Bay. Everything sinks there and everything comes back.”
+ghost.pim.done,"Пим: «Она получит! Вот, держи гармошку. Играй кому-нибудь, кому грустно. Мне уже не грустно»","Pim: “She'll get it! Here, take my harmonica. Play for someone who's sad. I'm not sad any more.”"
+ghost.ulrika.greet,"Ульрика: «Я держала этот огонь сорок лет. Покажи, что ты не хуже: семь ночей подряд — сила пятьдесят и выше»",Ulrika: “I kept this fire forty years. Show me you're no worse: seven nights running at fifty or more.”
+ghost.ulrika.waiting,"Ульрика: «Семь ночей подряд. Подряд — это значит без перерывов, если в Кронвальде забыли»","Ulrika: “Seven nights running. Running means without a break, in case Kronwald forgot.”"
+ghost.ulrika.done,"Ульрика: «Хорошо горит. Можно и отдохнуть. Слово смотрителя теперь твоё — провожай их сам, когда некому»",Ulrika: “It burns well. I can rest now. The Keeper's Word is yours — see them off yourself when nobody else can.”
+q.q1_1.s4,Зашить в парусину (обрез Агаты — в сундуке у дома),Sew it into canvas (Agatha's offcut is in the chest by the house)
+q.q1_1.s5,Выкопать могилу и похоронить,Dig a grave and bury him
+q.q1_1.s6,Сложить каменную насыпь (10 камня),Raise a stone mound (10 stone)
+q.q1_5.title,Реестр пропавших,The Registry of the Missing
+q.q1_5.s1,Опознать утопленника по реестру,Identify the drowned man by the registry
+q.q1_5.s2,Отправить письмо семье через Олафа,Send a letter to the family through Olaf
+q.q1_5.s3,Дождаться ответа,Wait for the reply
+q.q1_8.stairs,Лестница: 10 досок,Stairs: 10 boards
+q.q1_8.masonry,Кладка: 20 камня,Masonry: 20 stone
+q.q1_8.paint,Покраска: 5 ракушечной извести и ворвань,Paint: 5 shell lime and whale oil
+q.q1_8.glass,Стёкла фонарной: 3 стекла,Lantern panes: 3 glass
+q.g2.title,Письмо маме,A Letter to Mum
+q.g2.s1,Найти бутылку №13 (Бухта Разбитых Кораблей),Find bottle No. 13 (Wreck Bay)
+q.g2.s2,Отправить письмо через Олафа,Post the letter through Olaf
+q.g13.title,Проверь огонь,Check the Fire
+q.g13.s1,Семь ночей подряд — Сила Огня 50 и выше,Seven nights running with fire power 50+
+mail.quest_parcel,Лоцманская управа. Ваша посылка не поместилась в руки и пришла почтой.,Pilot Directorate. Your parcel did not fit in your hands and came by post.
+mail.ghost_gift,"На пороге покойницкой — свёрток без подписи. Вы знаете, от кого.",On the morgue step lies an unsigned parcel. You know who from.

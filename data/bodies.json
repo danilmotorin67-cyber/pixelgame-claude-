@@ -1,25 +1,78 @@
 [
-  {
-    "id": "body_lars_ek",
-    "story": true,
-    "arrive": {
-      "date": "y1.spring.2",
-      "beach": "cape"
-    },
-    "clues_visible": [
-      "tattoo_anchor_LE",
-      "belt_whaling_co"
-    ],
-    "clues_hidden": [
-      "scar_left_hand"
-    ],
-    "whisper": {
-      "text": "body.lars.whisper",
-      "false": false
-    },
-    "items": [
-      "knife_initials_LE"
-    ],
-    "registry": "reg_lars_ek"
+ {
+  "id": "body_lars_ek",
+  "story": true,
+  "registry": "reg_lars_ek",
+  "arrive": {
+   "date": "y1.spring.2",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "tattoo:anchor_le",
+   "clothes:whaler_belt"
+  ],
+  "clues_hidden": [
+   "body:scar_left_hand"
+  ],
+  "whisper": {
+   "text": "body.lars.whisper",
+   "clue": "initials:Л.Э."
+  },
+  "items": [
+   "knife_initials_le"
+  ],
+  "family_reply": {
+   "date": "y1.spring.9",
+   "money": 200,
+   "item": "mothers_socks",
+   "text": "mail.lars_family"
   }
+ },
+ {
+  "id": "body_bartholomew",
+  "story": true,
+  "registry": "reg_bartholomew",
+  "arrive": {
+   "date": "y1.spring.10",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:cook_apron",
+   "body:broad"
+  ],
+  "clues_hidden": [
+   "tattoo:fish"
+  ],
+  "items": [
+   "spice_tin"
+  ],
+  "whisper": {
+   "text": "body.bartholomew.whisper",
+   "clue": "item:spice_tin"
+  }
+ },
+ {
+  "id": "body_pim",
+  "story": true,
+  "registry": "reg_pim",
+  "arrive": {
+   "date": "y1.spring.10",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "body:young",
+   "clothes:cabin_boy"
+  ],
+  "clues_hidden": [
+   "item:tin_whistle"
+  ],
+  "items": [
+   "tin_whistle"
+  ],
+  "whisper": {
+   "text": "body.pim.whisper",
+   "clue": "item:tin_whistle"
+  },
+  "ghost": "ghost_pim"
+ }
 ]

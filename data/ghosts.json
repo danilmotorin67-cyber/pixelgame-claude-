@@ -1,1 +1,31 @@
-[]
+[
+ {
+  "id": "ghost_pim",
+  "name": "ghost.pim.name",
+  "body": "body_pim",
+  "quest": "g2_letter_home",
+  "lines": {
+   "greet": "ghost.pim.greet",
+   "waiting": "ghost.pim.waiting",
+   "done": "ghost.pim.done"
+  },
+  "gift": [
+   [
+    "pim_harmonica",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "ghost_ulrika",
+  "name": "ghost.ulrika.name",
+  "old_grave": 0,
+  "quest": "g13_check_fire",
+  "lines": {
+   "greet": "ghost.ulrika.greet",
+   "waiting": "ghost.ulrika.waiting",
+   "done": "ghost.ulrika.done"
+  },
+  "gift": []
+ }
+]

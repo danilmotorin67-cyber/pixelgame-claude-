@@ -73,6 +73,15 @@ func advance(mins: int) -> void:
 			return
 
 
+# Work that takes game time (examining a body, sewing) runs the clock even while a panel is open.
+func pass_time(mins: int) -> void:
+	var was := paused
+	paused = false
+	advance(mins)
+	if not Night.resolving:
+		paused = was
+
+
 func start_next_day() -> void:
 	Events.day_ending.emit()
 	day_index += 1

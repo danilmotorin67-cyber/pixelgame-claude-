@@ -33,6 +33,9 @@ func _ready() -> void:
 	add_child(Pickups.new())
 	add_child(Stations.new())
 	if map_id == "cape":
+		add_child(GraveyardWorld.new())
+	add_child(BodiesLayer.new())
+	if map_id == "cape":
 		var bell := TowerBell.new()
 		bell.name = "TowerBell"
 		bell.position = Vector2(748, 266)
@@ -110,6 +113,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			Clock.paused = _was_paused_before_console
 			console.release_focus()
 		get_viewport().set_input_as_handled()
+	if event.is_action_pressed("open_quests") and not console.visible:
+		InfoPanel.open(hud, "Журнал: задания", func() -> String:
+			var lines := Quests.journal_lines()
+			return "\n".join(lines) if not lines.is_empty() else "Пока никаких поручений. Наслаждайтесь.")
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("pause") and not console.visible:
 		Clock.paused = not Clock.paused
 

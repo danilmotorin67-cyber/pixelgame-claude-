@@ -1,1 +1,202 @@
-[{"id": "p2_first_fire", "type": "main", "title": "q.p2.title", "start": "day_index == 0 and hour >= 19", "steps": [{"id": "light", "text": "q.p2.s1", "on": "lamp_lit"}], "rewards": [["xp", "keeping", 10], ["points", "sea", 1]]}, {"id": "q1_1_sea_returns", "type": "main", "title": "q.q1_1.title", "start": "day_index == 1 and hour >= 6", "steps": [{"id": "carry", "text": "q.q1_1.s1", "on": "body_moved", "arg": "body_lars_ek"}, {"id": "examine", "text": "q.q1_1.s2", "on": "body_examined", "arg": "body_lars_ek"}, {"id": "bury", "text": "q.q1_1.s3", "on": "body_buried", "arg": "body_lars_ek"}], "rewards": [["mail", "letter_directorate_burial_pay"], ["points", "rest", 3], ["xp", "keeping", 25]]}, {"id": "q1_8_tower", "type": "main", "title": "q.q1_8.title", "start": "day_index >= 5", "flags": ["q1_8"], "steps": [{"id": "repair", "text": "q.q1_8.s1", "on": "tower_repaired"}], "rewards": [["item", "spyglass", 1], ["money", 200]]}]
+[
+ {
+  "id": "p2_first_fire",
+  "type": "main",
+  "title": "q.p2.title",
+  "start": "day_index == 0 and hour >= 19",
+  "steps": [
+   {
+    "id": "light",
+    "text": "q.p2.s1",
+    "on": "lamp_lit"
+   }
+  ],
+  "rewards": [
+   [
+    "xp",
+    "keeping",
+    10
+   ],
+   [
+    "points",
+    "sea",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "q1_1_sea_returns",
+  "type": "main",
+  "title": "q.q1_1.title",
+  "start": "day_index >= 1",
+  "steps": [
+   {
+    "id": "carry",
+    "text": "q.q1_1.s1",
+    "on": "body_moved",
+    "arg": "body_lars_ek",
+    "where": "morgue"
+   },
+   {
+    "id": "examine",
+    "text": "q.q1_1.s2",
+    "on": "body_examined",
+    "arg": "body_lars_ek"
+   },
+   {
+    "id": "wash",
+    "text": "q.q1_1.s3",
+    "on": "body_washed",
+    "arg": "body_lars_ek"
+   },
+   {
+    "id": "sew",
+    "text": "q.q1_1.s4",
+    "on": "body_sewn",
+    "arg": "body_lars_ek"
+   },
+   {
+    "id": "bury",
+    "text": "q.q1_1.s5",
+    "on": "body_buried",
+    "arg": "body_lars_ek"
+   },
+   {
+    "id": "mound",
+    "text": "q.q1_1.s6",
+    "on": "grave_marked",
+    "arg": "body_lars_ek"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    3
+   ],
+   [
+    "xp",
+    "keeping",
+    25
+   ]
+  ]
+ },
+ {
+  "id": "q1_5_registry",
+  "type": "main",
+  "title": "q.q1_5.title",
+  "start": "day_index >= 4",
+  "flags": [
+   "registry_copy"
+  ],
+  "steps": [
+   {
+    "id": "identify",
+    "text": "q.q1_5.s1",
+    "on": "body_identified",
+    "arg": "body_lars_ek",
+    "correct": true
+   },
+   {
+    "id": "letter",
+    "text": "q.q1_5.s2",
+    "on": "family_letter_sent",
+    "arg": "body_lars_ek"
+   },
+   {
+    "id": "answer",
+    "text": "q.q1_5.s3",
+    "on": "family_answered",
+    "arg": "body_lars_ek"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q1_8_tower",
+  "type": "main",
+  "title": "q.q1_8.title",
+  "start": "day_index >= 5",
+  "flags": [
+   "q1_8"
+  ],
+  "steps": [
+   {
+    "id": "stairs",
+    "text": "q.q1_8.stairs",
+    "on": "tower_part_repaired",
+    "arg": "stairs"
+   },
+   {
+    "id": "masonry",
+    "text": "q.q1_8.masonry",
+    "on": "tower_part_repaired",
+    "arg": "masonry"
+   },
+   {
+    "id": "paint",
+    "text": "q.q1_8.paint",
+    "on": "tower_part_repaired",
+    "arg": "paint"
+   },
+   {
+    "id": "glass",
+    "text": "q.q1_8.glass",
+    "on": "tower_part_repaired",
+    "arg": "glass"
+   }
+  ],
+  "rewards": [
+   [
+    "item",
+    "spyglass",
+    1
+   ],
+   [
+    "money",
+    200
+   ]
+  ]
+ },
+ {
+  "id": "g2_letter_home",
+  "type": "ghost",
+  "title": "q.g2.title",
+  "on_start": [
+   [
+    "shore",
+    "bottle_13",
+    "wreck_bay",
+    3
+   ]
+  ],
+  "steps": [
+   {
+    "id": "find",
+    "text": "q.g2.s1",
+    "on": "item_added",
+    "arg": "bottle_13"
+   },
+   {
+    "id": "send",
+    "text": "q.g2.s2",
+    "on": "bottle_sent",
+    "arg": "bottle_13"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g13_check_fire",
+  "type": "ghost",
+  "title": "q.g13.title",
+  "steps": [
+   {
+    "id": "streak",
+    "text": "q.g13.s1",
+    "on": "fire_streak_7"
+   }
+  ],
+  "rewards": []
+ }
+]

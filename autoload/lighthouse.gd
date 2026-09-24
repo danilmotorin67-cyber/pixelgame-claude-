@@ -34,6 +34,7 @@ var retake_day: int = -1
 var inspected_day: int = -1
 var log_day: int = -1
 var blueprints_given: int = 0
+var strong_streak: int = 0
 
 
 func cfg(key: String) -> Variant:
@@ -74,6 +75,7 @@ func reset() -> void:
 	inspected_day = -1
 	log_day = -1
 	blueprints_given = 0
+	strong_streak = 0
 
 
 func _ready() -> void:
@@ -150,8 +152,7 @@ func repair(part: String) -> String:
 		Game.set_flag(str(info["flag"]))
 	else:
 		tower[part] = int(info["points"])
-	if not Game.flag("tower_first_repair"):
-		Game.set_flag("tower_first_repair")
+	Events.quest_event.emit("tower_part_repaired", part)
 	return "ok"
 
 
@@ -367,6 +368,9 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 	if needed:
 		week_powers.append(power)
 		season_powers.append(power)
+		strong_streak = strong_streak + 1 if power >= 50.0 else 0
+		if strong_streak >= 7:
+			Events.quest_event.emit("fire_streak_7", "")
 		year_powers.append(power)
 		week_dark = week_dark or not burning
 		nightly_powers.append(power)
@@ -427,8 +431,9 @@ func _wreck(entry: Dictionary, info: Dictionary, rng: RandomNumberGenerator) -> 
 	week_wrecked = true
 	wrecks.append({"day": Clock.day_index, "ship": entry["name"], "type": entry["type"], "bodies": bodies})
 	for n in bodies:
+		var sailor: Dictionary = Graveyard._person(rng, str(entry["type"]), str(entry["name"]))
 		Graveyard.incoming.append({"ship": str(entry["name"]), "arrive": Clock.day_index + rng.randi_range(1, 3),
-			"beach": ShipTraffic.pick_beach(rng)})
+			"beach": ShipTraffic.pick_beach(rng), "registry": str(sailor["id"]), "type": str(entry["type"])})
 	for n in crates:
 		var beach := ShipTraffic.pick_beach(rng)
 		pending_shore.append({"item": str(info["crate"]), "beach": "cape" if beach == "lagoon" else beach})
@@ -590,7 +595,7 @@ func serialize() -> Dictionary:
 		"week_dark": week_dark, "week_wrecked": week_wrecked, "wrecks": wrecks, "pending_shore": pending_shore,
 		"season_powers": season_powers, "year_powers": year_powers, "inspections": inspections,
 		"retake_day": retake_day, "inspected_day": inspected_day, "log_day": log_day,
-		"blueprints_given": blueprints_given}
+		"blueprints_given": blueprints_given, "strong_streak": strong_streak}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -643,5 +648,6 @@ func deserialize(d: Dictionary) -> void:
 	inspected_day = int(d.get("inspected_day", -1))
 	log_day = int(d.get("log_day", -1))
 	blueprints_given = int(d.get("blueprints_given", 0))
+	strong_streak = int(d.get("strong_streak", 0))
 	for entry in d.get("pending_shore", []):
 		pending_shore.append({"item": str(entry["item"]), "beach": str(entry["beach"])})

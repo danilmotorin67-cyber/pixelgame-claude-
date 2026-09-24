@@ -301,6 +301,22 @@
       {
         "item": "boards",
         "price": 50
+      },
+      {
+        "item": "bog_oak",
+        "price": 400
+      },
+      {
+        "item": "coffin_simple",
+        "price": 400
+      },
+      {
+        "item": "coffin_good",
+        "price": 900
+      },
+      {
+        "item": "coffin_carved",
+        "price": 2500
       }
     ]
   },
@@ -333,6 +349,21 @@
       {
         "item": "rum",
         "price": 200
+      }
+    ]
+  },
+  {
+    "id": "shop_chapel",
+    "name": "Часовня Святого Эльма",
+    "open": 9,
+    "close": 17,
+    "closed": [],
+    "region": "village",
+    "buys": [],
+    "stock": [
+      {
+        "item": "wax_candle",
+        "price": 40
       }
     ]
   }

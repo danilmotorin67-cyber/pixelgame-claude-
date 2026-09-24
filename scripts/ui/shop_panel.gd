@@ -48,6 +48,10 @@ func _ready() -> void:
 	buttons.add_child(_button("×5", func() -> void: buy_selected(5)))
 	if not info.get("buys", []).is_empty():
 		buttons.add_child(_button("Продать с панели", sell_selected_hotbar))
+	if shop_id == "shop_chapel":
+		buttons.add_child(_button("Отпевание", func() -> void:
+			_status.text = {"ok": "Бенедикт отпел тело из покойницкой.", "hours": "Отпевания — по воскресеньям с 10 до 12.",
+				"nobody": "В покойницкой некого отпевать.", "cost": "Нужно 50 кр и 2 свечи."}.get(Graveyard.chapel_funeral(), "")))
 	buttons.add_child(_button("Закрыть", close))
 	refresh()
 	if _list.item_count > 0:

@@ -1233,5 +1233,147 @@
     "category": "tool",
     "price": 0,
     "stack": 1
+  },
+  {
+    "id": "stone",
+    "name": "item.stone.name",
+    "desc": "item.stone.desc",
+    "category": "material",
+    "price": 2,
+    "stack": 999
+  },
+  {
+    "id": "tool_scythe",
+    "name": "item.tool_scythe.name",
+    "desc": "item.tool_scythe.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "wooden_cross",
+    "name": "item.wooden_cross.name",
+    "desc": "item.wooden_cross.desc",
+    "category": "marker",
+    "price": 25,
+    "stack": 20,
+    "marker": 10
+  },
+  {
+    "id": "carved_cross",
+    "name": "item.carved_cross.name",
+    "desc": "item.carved_cross.desc",
+    "category": "marker",
+    "price": 200,
+    "stack": 20,
+    "marker": 20
+  },
+  {
+    "id": "bog_oak",
+    "name": "item.bog_oak.name",
+    "desc": "item.bog_oak.desc",
+    "category": "material",
+    "price": 200,
+    "stack": 99
+  },
+  {
+    "id": "coffin_simple",
+    "name": "item.coffin_simple.name",
+    "desc": "item.coffin_simple.desc",
+    "category": "coffin",
+    "price": 200,
+    "stack": 5,
+    "coffin": 5
+  },
+  {
+    "id": "coffin_good",
+    "name": "item.coffin_good.name",
+    "desc": "item.coffin_good.desc",
+    "category": "coffin",
+    "price": 450,
+    "stack": 5,
+    "coffin": 10
+  },
+  {
+    "id": "coffin_carved",
+    "name": "item.coffin_carved.name",
+    "desc": "item.coffin_carved.desc",
+    "category": "coffin",
+    "price": 1250,
+    "stack": 5,
+    "coffin": 15
+  },
+  {
+    "id": "wax_candle",
+    "name": "item.wax_candle.name",
+    "desc": "item.wax_candle.desc",
+    "category": "candle",
+    "price": 20,
+    "stack": 99
+  },
+  {
+    "id": "fresh_water",
+    "name": "item.fresh_water.name",
+    "desc": "item.fresh_water.desc",
+    "category": "material",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "relatives_box",
+    "name": "item.relatives_box.name",
+    "desc": "item.relatives_box.desc",
+    "category": "keepsake_box",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "knife_initials_le",
+    "name": "item.knife_initials_le.name",
+    "desc": "item.knife_initials_le.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tin_whistle",
+    "name": "item.tin_whistle.name",
+    "desc": "item.tin_whistle.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "spice_tin",
+    "name": "item.spice_tin.name",
+    "desc": "item.spice_tin.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "mothers_socks",
+    "name": "item.mothers_socks.name",
+    "desc": "item.mothers_socks.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "warmth": 10
+  },
+  {
+    "id": "bottle_13",
+    "name": "item.bottle_13.name",
+    "desc": "item.bottle_13.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "pim_harmonica",
+    "name": "item.pim_harmonica.name",
+    "desc": "item.pim_harmonica.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
   }
 ]

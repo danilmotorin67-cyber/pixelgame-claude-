@@ -411,6 +411,10 @@ func _check_world_objects() -> void:
 	Inventory.add("cargo_fishing", 2)
 	if desk:
 		desk.interact(village.get_node("Player"))
+		var desk_panel: InfoPanel = village.get_node_or_null("HUD/InfoPanel")
+		if desk_panel:
+			desk_panel.press("Сдать ящики")
+			desk_panel.close()
 	_check(desk != null and Game.honor == 6 and Inventory.count_of("cargo_fishing") == 0,
 		"the directorate takes wreck crates for honour")
 	village.queue_free()

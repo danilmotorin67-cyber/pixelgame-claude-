@@ -11,6 +11,8 @@ var revealed: Dictionary = {}
 # Beach gifts per map: [{item, x, row}], `row` counts from the high-water line (0) seaward (5).
 var gifts: Dictionary = {}
 var trash_mercy_today: float = 0.0
+# Gifts promised by the story: {item, beach, day}.
+var scheduled: Array = []
 
 
 func reset() -> void:
@@ -20,6 +22,11 @@ func reset() -> void:
 	revealed.clear()
 	gifts.clear()
 	trash_mercy_today = 0.0
+	scheduled.clear()
+
+
+func schedule_gift(item: String, beach: String, day: int) -> void:
+	scheduled.append({"item": item, "beach": beach, "day": day})
 
 
 func add_mercy(n: float) -> void:
@@ -90,6 +97,17 @@ func generate_gifts(index: int, storm: bool) -> void:
 			gifts[beach_id] = []
 		_place(gifts[beach_id], {}, rng, columns, rng.randi_range(0, FAR_ROW - 1), str(entry["item"]))
 	Lighthouse.pending_shore.clear()
+	var waiting: Array = []
+	for entry in scheduled:
+		if int(entry["day"]) <= index:
+			var beach_id := str(entry["beach"])
+			var columns: Array = config.get("beaches", {}).get(beach_id, {}).get("columns", [2, 60])
+			if not gifts.has(beach_id):
+				gifts[beach_id] = []
+			_place(gifts[beach_id], {}, rng, columns, 0, str(entry["item"]))
+		else:
+			waiting.append(entry)
+	scheduled = waiting
 
 
 func _place(placed: Array, used: Dictionary, rng: RandomNumberGenerator, columns: Array,
@@ -123,7 +141,7 @@ func collect_gift(map_id: String, gift: Dictionary) -> bool:
 
 func serialize() -> Dictionary:
 	return {"mercy": mercy, "blessings": blessings, "boat": boat, "revealed": revealed,
-		"gifts": gifts, "trash_mercy_today": trash_mercy_today}
+		"gifts": gifts, "trash_mercy_today": trash_mercy_today, "scheduled": scheduled}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -132,6 +150,9 @@ func deserialize(d: Dictionary) -> void:
 	boat = str(d.get("boat", ""))
 	revealed = d.get("revealed", {})
 	trash_mercy_today = float(d.get("trash_mercy_today", 0.0))
+	scheduled.clear()
+	for entry in d.get("scheduled", []):
+		scheduled.append({"item": str(entry["item"]), "beach": str(entry["beach"]), "day": int(entry["day"])})
 	gifts.clear()
 	var saved: Dictionary = d.get("gifts", {})
 	for map_id in saved:
