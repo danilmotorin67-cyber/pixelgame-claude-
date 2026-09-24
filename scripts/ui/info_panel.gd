@@ -90,6 +90,11 @@ func refresh() -> void:
 			_list.select(mini(picked[0], _list.item_count - 1))
 
 
+func set_status(text: String) -> void:
+	if _status:
+		_status.text = text
+
+
 func selected_index() -> int:
 	if _list == null:
 		return -1

@@ -6404,5 +6404,861 @@
     "effect": {
       "gills": 1
     }
+  },
+  {
+    "id": "porthole_glass",
+    "name": "item.porthole_glass.name",
+    "desc": "item.porthole_glass.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "hand_pump",
+    "name": "item.hand_pump.name",
+    "desc": "item.hand_pump.desc",
+    "category": "part",
+    "price": 400,
+    "stack": 1
+  },
+  {
+    "id": "berta_crate_stones",
+    "name": "item.berta_crate_stones.name",
+    "desc": "item.berta_crate_stones.desc",
+    "category": "cargo",
+    "price": 0,
+    "stack": 5,
+    "open": "berta_stones"
+  },
+  {
+    "id": "agatha_chest",
+    "name": "item.agatha_chest.name",
+    "desc": "item.agatha_chest.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "lantern_agatha",
+    "name": "item.lantern_agatha.name",
+    "desc": "item.lantern_agatha.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "agatha_tin_box",
+    "name": "item.agatha_tin_box.name",
+    "desc": "item.agatha_tin_box.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "page_19",
+    "name": "item.page_19.name",
+    "desc": "item.page_19.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "page_20",
+    "name": "item.page_20.name",
+    "desc": "item.page_20.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "page_21",
+    "name": "item.page_21.name",
+    "desc": "item.page_21.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "page_23",
+    "name": "item.page_23.name",
+    "desc": "item.page_23.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "agatha_letter",
+    "name": "item.agatha_letter.name",
+    "desc": "item.agatha_letter.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fragment_f1",
+    "name": "item.fragment_f1.name",
+    "desc": "item.fragment_f1.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fragment_f3",
+    "name": "item.fragment_f3.name",
+    "desc": "item.fragment_f3.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "black_book",
+    "name": "item.black_book.name",
+    "desc": "item.black_book.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tuve_skin",
+    "name": "item.tuve_skin.name",
+    "desc": "item.tuve_skin.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "safe_key",
+    "name": "item.safe_key.name",
+    "desc": "item.safe_key.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "death_certificates",
+    "name": "item.death_certificates.name",
+    "desc": "item.death_certificates.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "pennington_pen",
+    "name": "item.pennington_pen.name",
+    "desc": "item.pennington_pen.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "vera_notebooks",
+    "name": "item.vera_notebooks.name",
+    "desc": "item.vera_notebooks.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "paper",
+    "name": "item.paper.name",
+    "desc": "item.paper.desc",
+    "category": "material",
+    "price": 15,
+    "stack": 99
+  },
+  {
+    "id": "skau_lantern",
+    "name": "item.skau_lantern.name",
+    "desc": "item.skau_lantern.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "drag_sledge",
+    "name": "item.drag_sledge.name",
+    "desc": "item.drag_sledge.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fortuna_bones",
+    "name": "item.fortuna_bones.name",
+    "desc": "item.fortuna_bones.desc",
+    "category": "remains",
+    "price": 0,
+    "stack": 5
+  },
+  {
+    "id": "thanks_letter",
+    "name": "item.thanks_letter.name",
+    "desc": "item.thanks_letter.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 20
+  },
+  {
+    "id": "labskaus",
+    "name": "item.labskaus.name",
+    "desc": "item.labskaus.desc",
+    "category": "food",
+    "price": 180,
+    "stack": 20,
+    "edible": {
+      "energy": 70,
+      "health": 20
+    }
+  },
+  {
+    "id": "labskaus_cook",
+    "name": "item.labskaus_cook.name",
+    "desc": "item.labskaus_cook.desc",
+    "category": "food",
+    "price": 420,
+    "stack": 20,
+    "edible": {
+      "energy": 110,
+      "health": 40
+    },
+    "buff": {
+      "hours": 6,
+      "fishing": 1
+    }
+  },
+  {
+    "id": "bartholomew_ladle",
+    "name": "item.bartholomew_ladle.name",
+    "desc": "item.bartholomew_ladle.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ],
+    "place": "decor"
+  },
+  {
+    "id": "pearl_necklace",
+    "name": "item.pearl_necklace.name",
+    "desc": "item.pearl_necklace.desc",
+    "category": "keepsake",
+    "price": 3000,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "sextant",
+    "name": "item.sextant.name",
+    "desc": "item.sextant.desc",
+    "category": "tool",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "martin_ember",
+    "name": "item.martin_ember.name",
+    "desc": "item.martin_ember.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "cold_resist": 0.5
+    },
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "ion_violin",
+    "name": "item.ion_violin.name",
+    "desc": "item.ion_violin.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "violin_decor",
+    "name": "item.violin_decor.name",
+    "desc": "item.violin_decor.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ],
+    "place": "decor"
+  },
+  {
+    "id": "twin_medallion",
+    "name": "item.twin_medallion.name",
+    "desc": "item.twin_medallion.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ],
+    "place": "decor"
+  },
+  {
+    "id": "lotta_ring",
+    "name": "item.lotta_ring.name",
+    "desc": "item.lotta_ring.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "captain_cap",
+    "name": "item.captain_cap.name",
+    "desc": "item.captain_cap.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "head",
+    "effect": {
+      "skill_seafaring": 1
+    },
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "signal_flare",
+    "name": "item.signal_flare.name",
+    "desc": "item.signal_flare.desc",
+    "category": "tool",
+    "price": 150,
+    "stack": 10
+  },
+  {
+    "id": "pennington_portfolio",
+    "name": "item.pennington_portfolio.name",
+    "desc": "item.pennington_portfolio.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "gudmund_bones",
+    "name": "item.gudmund_bones.name",
+    "desc": "item.gudmund_bones.desc",
+    "category": "remains",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "gudmund_hammer",
+    "name": "item.gudmund_hammer.name",
+    "desc": "item.gudmund_hammer.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ],
+    "place": "decor"
+  },
+  {
+    "id": "tobias_remains",
+    "name": "item.tobias_remains.name",
+    "desc": "item.tobias_remains.desc",
+    "category": "remains",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "tobias_helmet",
+    "name": "item.tobias_helmet.name",
+    "desc": "item.tobias_helmet.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "helmet_porthole_plus",
+    "name": "item.helmet_porthole_plus.name",
+    "desc": "item.helmet_porthole_plus.desc",
+    "category": "clothes",
+    "price": 0,
+    "stack": 1,
+    "slot": "head",
+    "effect": {
+      "air": 0.2
+    },
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "full_skerry_map",
+    "name": "item.full_skerry_map.name",
+    "desc": "item.full_skerry_map.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "solvik_bell",
+    "name": "item.solvik_bell.name",
+    "desc": "item.solvik_bell.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "brigi_skull",
+    "name": "item.brigi_skull.name",
+    "desc": "item.brigi_skull.desc",
+    "category": "remains",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "vera_pointer",
+    "name": "item.vera_pointer.name",
+    "desc": "item.vera_pointer.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ],
+    "place": "decor"
+  },
+  {
+    "id": "grim_drawing",
+    "name": "item.grim_drawing.name",
+    "desc": "item.grim_drawing.desc",
+    "category": "artifact",
+    "price": 0,
+    "stack": 1,
+    "tags": [
+      "ghost_gift"
+    ]
+  },
+  {
+    "id": "brass_badge",
+    "name": "item.brass_badge.name",
+    "desc": "item.brass_badge.desc",
+    "category": "material",
+    "price": 0,
+    "stack": 10
+  },
+  {
+    "id": "message_bottle",
+    "name": "item.message_bottle.name",
+    "desc": "item.message_bottle.desc",
+    "category": "gift",
+    "price": 30,
+    "stack": 20
+  },
+  {
+    "id": "empty_bottle",
+    "name": "item.empty_bottle.name",
+    "desc": "item.empty_bottle.desc",
+    "category": "material",
+    "price": 5,
+    "stack": 99
+  },
+  {
+    "id": "unopened_letter",
+    "name": "item.unopened_letter.name",
+    "desc": "item.unopened_letter.desc",
+    "category": "gift",
+    "price": 60,
+    "stack": 20
+  },
+  {
+    "id": "letter_hedda",
+    "name": "item.letter_hedda.name",
+    "desc": "item.letter_hedda.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "letter_margit",
+    "name": "item.letter_margit.name",
+    "desc": "item.letter_margit.desc",
+    "category": "quest",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "old_sea_map",
+    "name": "item.old_sea_map.name",
+    "desc": "item.old_sea_map.desc",
+    "category": "artifact",
+    "price": 300,
+    "stack": 5
+  },
+  {
+    "id": "crab_pot",
+    "name": "item.crab_pot.name",
+    "desc": "item.crab_pot.desc",
+    "category": "tool",
+    "price": 80,
+    "stack": 10
+  },
+  {
+    "id": "boat_paint",
+    "name": "item.boat_paint.name",
+    "desc": "item.boat_paint.desc",
+    "category": "decor",
+    "price": 300,
+    "stack": 5,
+    "tags": [
+      "boat_decor"
+    ]
+  },
+  {
+    "id": "solvik_pennant",
+    "name": "item.solvik_pennant.name",
+    "desc": "item.solvik_pennant.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "place": "decor",
+    "tags": [
+      "boat_decor"
+    ]
+  },
+  {
+    "id": "regatta_cup",
+    "name": "item.regatta_cup.name",
+    "desc": "item.regatta_cup.desc",
+    "category": "decor",
+    "price": 0,
+    "stack": 1,
+    "place": "decor"
+  },
+  {
+    "id": "nest_box",
+    "name": "item.nest_box.name",
+    "desc": "item.nest_box.desc",
+    "category": "decor",
+    "price": 200,
+    "stack": 5,
+    "place": "decor"
+  },
+  {
+    "id": "fair_token",
+    "name": "item.fair_token.name",
+    "desc": "item.fair_token.desc",
+    "category": "material",
+    "price": 0,
+    "stack": 9999
+  },
+  {
+    "id": "paper_lantern",
+    "name": "item.paper_lantern.name",
+    "desc": "item.paper_lantern.desc",
+    "category": "gift",
+    "price": 20,
+    "stack": 20
+  },
+  {
+    "id": "garland",
+    "name": "item.garland.name",
+    "desc": "item.garland.desc",
+    "category": "decor",
+    "price": 100,
+    "stack": 5
+  },
+  {
+    "id": "halvdan_hat",
+    "name": "item.halvdan_hat.name",
+    "desc": "item.halvdan_hat.desc",
+    "category": "keepsake",
+    "price": 0,
+    "stack": 1
+  },
+  {
+    "id": "fish_codger_son",
+    "name": "item.fish_codger_son.name",
+    "desc": "item.fish_codger_son.desc",
+    "category": "fish",
+    "price": 1200,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_herring_princess",
+    "name": "item.fish_herring_princess.name",
+    "desc": "item.fish_herring_princess.desc",
+    "category": "fish",
+    "price": 1400,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_golden_calf",
+    "name": "item.fish_golden_calf.name",
+    "desc": "item.fish_golden_calf.desc",
+    "category": "fish",
+    "price": 1300,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_granddaughter",
+    "name": "item.fish_granddaughter.name",
+    "desc": "item.fish_granddaughter.desc",
+    "category": "fish",
+    "price": 1600,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "fish_lantern_fry",
+    "name": "item.fish_lantern_fry.name",
+    "desc": "item.fish_lantern_fry.desc",
+    "category": "fish",
+    "price": 1500,
+    "stack": 99,
+    "quality": true,
+    "tags": [
+      "fish",
+      "sea",
+      "legendary"
+    ]
+  },
+  {
+    "id": "ship_bell_small",
+    "name": "item.ship_bell_small.name",
+    "desc": "item.ship_bell_small.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "walrus_pipe",
+    "name": "item.walrus_pipe.name",
+    "desc": "item.walrus_pipe.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "rune_stone",
+    "name": "item.rune_stone.name",
+    "desc": "item.rune_stone.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "cloak_clasp",
+    "name": "item.cloak_clasp.name",
+    "desc": "item.cloak_clasp.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "clay_lamp",
+    "name": "item.clay_lamp.name",
+    "desc": "item.clay_lamp.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "horseshoe_rusty",
+    "name": "item.horseshoe_rusty.name",
+    "desc": "item.horseshoe_rusty.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "tortoise_comb",
+    "name": "item.tortoise_comb.name",
+    "desc": "item.tortoise_comb.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "pilot_badge",
+    "name": "item.pilot_badge.name",
+    "desc": "item.pilot_badge.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "bone_hook",
+    "name": "item.bone_hook.name",
+    "desc": "item.bone_hook.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "offering_bowl",
+    "name": "item.offering_bowl.name",
+    "desc": "item.offering_bowl.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "southern_coin",
+    "name": "item.southern_coin.name",
+    "desc": "item.southern_coin.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "amber_rook",
+    "name": "item.amber_rook.name",
+    "desc": "item.amber_rook.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "ship_in_bottle",
+    "name": "item.ship_in_bottle.name",
+    "desc": "item.ship_in_bottle.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "drowned_doll",
+    "name": "item.drowned_doll.name",
+    "desc": "item.drowned_doll.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "amber_fly",
+    "name": "item.amber_fly.name",
+    "desc": "item.amber_fly.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "sea_glass_brown",
+    "name": "item.sea_glass_brown.name",
+    "desc": "item.sea_glass_brown.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "sea_glass_blue",
+    "name": "item.sea_glass_blue.name",
+    "desc": "item.sea_glass_blue.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "sea_glass_red",
+    "name": "item.sea_glass_red.name",
+    "desc": "item.sea_glass_red.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "sea_glass_green",
+    "name": "item.sea_glass_green.name",
+    "desc": "item.sea_glass_green.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "lophelia",
+    "name": "item.lophelia.name",
+    "desc": "item.lophelia.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "whale_bone",
+    "name": "item.whale_bone.name",
+    "desc": "item.whale_bone.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "ammonite",
+    "name": "item.ammonite.name",
+    "desc": "item.ammonite.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "belemnite",
+    "name": "item.belemnite.name",
+    "desc": "item.belemnite.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "hag_stone",
+    "name": "item.hag_stone.name",
+    "desc": "item.hag_stone.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "fools_gold",
+    "name": "item.fools_gold.name",
+    "desc": "item.fools_gold.desc",
+    "category": "artifact",
+    "price": 150,
+    "stack": 5
+  },
+  {
+    "id": "fortuna_model",
+    "name": "item.fortuna_model.name",
+    "desc": "item.fortuna_model.desc",
+    "category": "decor",
+    "price": 150,
+    "stack": 5
   }
 ]

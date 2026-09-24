@@ -1,0 +1,627 @@
+[
+ {
+  "id": "agatha_desk",
+  "map": "lh_3",
+  "at": [
+   13,
+   7
+  ],
+  "kind": "code_lock",
+  "title": "story.spot.agatha_desk",
+  "when": "not flag('journal_open')",
+  "text": "story.spot.agatha_desk.text"
+ },
+ {
+  "id": "agatha_log",
+  "map": "lh_3",
+  "at": [
+   13,
+   7
+  ],
+  "kind": "journal",
+  "title": "story.spot.agatha_log",
+  "when": "flag('journal_open')"
+ },
+ {
+  "id": "evidence_board",
+  "map": "lh_3",
+  "at": [
+   16,
+   6
+  ],
+  "kind": "board",
+  "title": "story.spot.board",
+  "when": "flag('board_open')"
+ },
+ {
+  "id": "bonfire_1",
+  "map": "village",
+  "at": [
+   10,
+   20
+  ],
+  "kind": "bonfire",
+  "index": 1,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "bonfire_2",
+  "map": "village",
+  "at": [
+   30,
+   12
+  ],
+  "kind": "bonfire",
+  "index": 2,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "bonfire_3",
+  "map": "village",
+  "at": [
+   56,
+   12
+  ],
+  "kind": "bonfire",
+  "index": 3,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "bonfire_4",
+  "map": "village",
+  "at": [
+   70,
+   30
+  ],
+  "kind": "bonfire",
+  "index": 4,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "bonfire_5",
+  "map": "village",
+  "at": [
+   60,
+   44
+  ],
+  "kind": "bonfire",
+  "index": 5,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "bonfire_6",
+  "map": "village",
+  "at": [
+   8,
+   36
+  ],
+  "kind": "bonfire",
+  "index": 6,
+  "title": "story.spot.bonfire",
+  "when": "siege() and (hour >= 20 or hour < 3)"
+ },
+ {
+  "id": "glow_water",
+  "map": "cape",
+  "at": [
+   52,
+   50
+  ],
+  "kind": "glow_water",
+  "title": "story.spot.glow_water",
+  "text": "story.spot.glow_water.text",
+  "when": "quest_state('q2_3_guest') == 'active' and flag('liv_gallery') and season == 'summer' and day >= 26 and (hour >= 21 or hour < 4)"
+ },
+ {
+  "id": "berta_wreck",
+  "map": "sea",
+  "at": [
+   60,
+   72
+  ],
+  "kind": "berta_wreck",
+  "title": "story.spot.berta_wreck",
+  "text": "story.spot.berta_wreck.text",
+  "when": "act >= 3 and flag('diving_bell') and not flag('evidence_berta_hold')"
+ },
+ {
+  "id": "dead_fire_crypt",
+  "map": "sea",
+  "at": [
+   20,
+   80
+  ],
+  "kind": "crypt",
+  "title": "story.spot.crypt",
+  "text": "story.spot.crypt.text",
+  "when": "flag('crypt_open') and not has_item('fragment_f1') and not fragment(1)"
+ },
+ {
+  "id": "treska",
+  "map": "seal_shore",
+  "at": [
+   30,
+   34
+  ],
+  "kind": "treska",
+  "title": "story.spot.treska",
+  "text": "story.spot.treska.text",
+  "when": "quest_state('sq_treska_aground') == 'active' and not flag('treska_refloated')"
+ },
+ {
+  "id": "office_archive",
+  "map": "village_office",
+  "at": [
+   3,
+   3
+  ],
+  "kind": "archive",
+  "title": "story.spot.archive",
+  "text": "story.spot.archive.text",
+  "when": "quest_state('sq_doctor_signature') == 'active' and not has_item('death_certificates') and not flag('certificates_taken')"
+ },
+ {
+  "id": "telegraph",
+  "map": "village_office",
+  "at": [
+   8,
+   3
+  ],
+  "kind": "telegraph",
+  "title": "story.spot.telegraph",
+  "text": "story.spot.telegraph.text",
+  "when": "flag('telegraph_working')"
+ },
+ {
+  "id": "grim_safe",
+  "map": "village_grim",
+  "at": [
+   3,
+   3
+  ],
+  "kind": "safe",
+  "title": "story.spot.safe",
+  "text": "story.spot.safe.text",
+  "when": "quest_state('q3_8_safe') == 'active' and not flag('safe_opened')"
+ },
+ {
+  "id": "teeth_ambush",
+  "map": "sea",
+  "at": [
+   64,
+   68
+  ],
+  "kind": "ambush",
+  "title": "story.spot.ambush",
+  "text": "story.spot.ambush.text",
+  "when": "day_index == 157 and (hour >= 21 or hour < 4) and not flag('ambush_done')"
+ },
+ {
+  "id": "teeth_lantern",
+  "map": "sea",
+  "at": [
+   64,
+   70
+  ],
+  "kind": "lantern_dive",
+  "title": "story.spot.lantern_dive",
+  "text": "story.spot.lantern_dive.text",
+  "when": "flag('lantern_in_water') and not flag('evidence_lantern') and day_index > 157"
+ },
+ {
+  "id": "maidens_cairn",
+  "map": "moor",
+  "at": [
+   33,
+   25
+  ],
+  "kind": "cairn",
+  "title": "story.spot.cairn",
+  "text": "story.spot.cairn.text",
+  "when": "not page(3)"
+ },
+ {
+  "id": "raven_mark",
+  "map": "wreck_bay",
+  "at": [
+   26,
+   30
+  ],
+  "kind": "raven_mark",
+  "title": "story.spot.raven_mark",
+  "text": "story.spot.raven_mark.text",
+  "when": "act >= 2 and not page(12) and counter('last_storm_day') == day_index - 1"
+ },
+ {
+  "id": "rann_ritual",
+  "map": "cape",
+  "at": [
+   58,
+   50
+  ],
+  "kind": "ritual",
+  "title": "story.spot.ritual",
+  "text": "story.spot.ritual.text",
+  "when": "(quest_state('q2_12_drowned_night') == 'active' or quest_state('q4_4_drowned_night_2') == 'active') and ((season == 'autumn' and day == 27 and hour >= 23) or (season == 'autumn' and day == 27 and hour < 2))"
+ },
+ {
+  "id": "cat_1",
+  "map": "cape",
+  "at": [
+   34,
+   21
+  ],
+  "kind": "cat",
+  "index": 1,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_1')"
+ },
+ {
+  "id": "cat_2",
+  "map": "village",
+  "at": [
+   12,
+   41
+  ],
+  "kind": "cat",
+  "index": 2,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_2')"
+ },
+ {
+  "id": "cat_3",
+  "map": "village",
+  "at": [
+   73,
+   13
+  ],
+  "kind": "cat",
+  "index": 3,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_3')"
+ },
+ {
+  "id": "cat_4",
+  "map": "birch",
+  "at": [
+   21,
+   21
+  ],
+  "kind": "cat",
+  "index": 4,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_4')"
+ },
+ {
+  "id": "cat_5",
+  "map": "moor",
+  "at": [
+   55,
+   49
+  ],
+  "kind": "cat",
+  "index": 5,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_5')"
+ },
+ {
+  "id": "cat_6",
+  "map": "seal_shore",
+  "at": [
+   54,
+   29
+  ],
+  "kind": "cat",
+  "index": 6,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_6') and tide() <= -0.4"
+ },
+ {
+  "id": "cat_8",
+  "map": "sea",
+  "at": [
+   100,
+   71
+  ],
+  "kind": "cat",
+  "index": 8,
+  "title": "story.spot.cat",
+  "when": "not flag('cat_grave_8')"
+ },
+ {
+  "id": "ghost_dog",
+  "map": "cape",
+  "at": [
+   30,
+   30
+  ],
+  "kind": "ghost",
+  "ghost": "ghost_dog",
+  "when": "hmar_tonight() and not ghost_laid('ghost_dog')"
+ },
+ {
+  "id": "ghost_nilsen",
+  "map": "village",
+  "at": [
+   19,
+   44
+  ],
+  "kind": "ghost",
+  "ghost": "ghost_nilsen",
+  "when": "flag('ghost_nilsen') and (hour >= 21 or hour < 5) and not ghost_laid('ghost_nilsen')"
+ },
+ {
+  "id": "ghost_grim",
+  "map": "sea",
+  "at": [
+   24,
+   80
+  ],
+  "kind": "ghost",
+  "ghost": "ghost_grim",
+  "when": "act >= 4 and not ghost_laid('ghost_grim')"
+ },
+ {
+  "id": "mill_owl",
+  "map": "moor",
+  "at": [
+   54,
+   50
+  ],
+  "kind": "owl",
+  "when": "quest_state('club_1_owl') == 'active' and (hour >= 21 or hour < 2)",
+  "title": "story.spot.mill_owl",
+  "text": "story.spot.mill_owl.text"
+ },
+ {
+  "id": "treasure_7",
+  "map": "seal_shore",
+  "at": [
+   42,
+   30
+  ],
+  "kind": "dig",
+  "when": "flag('treasure_7') and not flag('treasure_7_dug')",
+  "title": "story.spot.treasure_7",
+  "text": "story.spot.treasure_7.text"
+ },
+ {
+  "id": "treasure_15",
+  "map": "sea",
+  "at": [
+   104,
+   124
+  ],
+  "kind": "dig",
+  "when": "flag('treasure_15') and flag('nameless_isle_open') and not flag('treasure_15_dug')",
+  "title": "story.spot.treasure_15",
+  "text": "story.spot.treasure_15.text"
+ },
+ {
+  "id": "sketch_teeth",
+  "map": "sea",
+  "at": [
+   62,
+   66
+  ],
+  "kind": "sketch",
+  "when": "quest_state('g16_map') == 'active' and not step('g16_map', 'teeth')",
+  "title": "story.spot.sketch_teeth",
+  "text": "story.spot.sketch_teeth.text"
+ },
+ {
+  "id": "sketch_eider_isle",
+  "map": "sea",
+  "at": [
+   98,
+   64
+  ],
+  "kind": "sketch",
+  "when": "quest_state('g16_map') == 'active' and not step('g16_map', 'eider')",
+  "title": "story.spot.sketch_eider_isle",
+  "text": "story.spot.sketch_eider_isle.text"
+ },
+ {
+  "id": "sketch_dead_fire",
+  "map": "sea",
+  "at": [
+   26,
+   74
+  ],
+  "kind": "sketch",
+  "when": "quest_state('g16_map') == 'active' and not step('g16_map', 'dead_fire')",
+  "title": "story.spot.sketch_dead_fire",
+  "text": "story.spot.sketch_dead_fire.text"
+ },
+ {
+  "id": "guild_house",
+  "map": "village",
+  "at": [
+   12,
+   15
+  ],
+  "kind": "guild",
+  "when": "flag('community_open')",
+  "title": "story.spot.guild_house",
+  "text": "story.spot.guild_house.text"
+ },
+ {
+  "id": "neptune_counter",
+  "map": "village_grim",
+  "at": [
+   6,
+   3
+  ],
+  "kind": "neptune_counter",
+  "when": "neptune() == 'signed' or neptune() == 'offer'",
+  "title": "story.spot.neptune_counter",
+  "text": "story.spot.neptune_counter.text"
+ },
+ {
+  "id": "cannery",
+  "map": "wreck_bay",
+  "at": [
+   40,
+   18
+  ],
+  "kind": "cannery",
+  "when": "neptune() == 'signed'",
+  "title": "story.spot.cannery",
+  "text": "story.spot.cannery.text"
+ },
+ {
+  "id": "chapel_crypt",
+  "map": "village_chapel",
+  "at": [
+   3,
+   2
+  ],
+  "kind": "chapel_crypt",
+  "when": "flag('chapel_crypt')",
+  "title": "story.spot.chapel_crypt",
+  "text": "story.spot.chapel_crypt.text"
+ },
+ {
+  "id": "nine_maidens",
+  "map": "moor",
+  "at": [
+   30,
+   27
+  ],
+  "kind": "circle",
+  "when": "true",
+  "title": "story.spot.nine_maidens",
+  "text": "story.spot.nine_maidens.text"
+ },
+ {
+  "id": "daughter_zyb",
+  "map": "sea",
+  "at": [
+   46,
+   12
+  ],
+  "kind": "daughter",
+  "when": "day_index >= 28 and calm() and not blessing('zyb')",
+  "title": "story.spot.daughter_zyb",
+  "text": "story.spot.daughter_zyb.text",
+  "daughter": "zyb"
+ },
+ {
+  "id": "daughter_pena",
+  "map": "seal_shore",
+  "at": [
+   36,
+   27
+  ],
+  "kind": "daughter",
+  "when": "counter('last_storm_day') == day_index - 1 and hour >= 5 and hour < 7 and not blessing('pena')",
+  "title": "story.spot.daughter_pena",
+  "text": "story.spot.daughter_pena.text",
+  "daughter": "pena"
+ },
+ {
+  "id": "daughter_burun",
+  "map": "sea",
+  "at": [
+   62,
+   64
+  ],
+  "kind": "daughter",
+  "when": "(weather == 'storm' or weather == 'blizzard') and not blessing('burun')",
+  "title": "story.spot.daughter_burun",
+  "text": "story.spot.daughter_burun.text",
+  "daughter": "burun"
+ },
+ {
+  "id": "daughter_stuzha",
+  "map": "sea",
+  "at": [
+   22,
+   122
+  ],
+  "kind": "daughter",
+  "when": "season == 'winter' and aurora() and (hour >= 20 or hour < 4) and not blessing('stuzha')",
+  "title": "story.spot.daughter_stuzha",
+  "text": "story.spot.daughter_stuzha.text",
+  "daughter": "stuzha"
+ },
+ {
+  "id": "daughter_tish",
+  "map": "sea",
+  "at": [
+   70,
+   26
+  ],
+  "kind": "daughter",
+  "when": "counter('sea_burials') >= 10 and not blessing('tish')",
+  "title": "story.spot.daughter_tish",
+  "text": "story.spot.daughter_tish.text",
+  "daughter": "tish"
+ },
+ {
+  "id": "daughter_svetla",
+  "map": "cape",
+  "at": [
+   54,
+   50
+  ],
+  "kind": "daughter",
+  "when": "season == 'summer' and day >= 26 and (hour >= 21 or hour < 4) and (not blessing('svetla') or counter('svetla_year') < year)",
+  "title": "story.spot.daughter_svetla",
+  "text": "story.spot.daughter_svetla.text",
+  "daughter": "svetla"
+ },
+ {
+  "id": "kronvald_steamer",
+  "map": "village",
+  "at": [
+   31,
+   45
+  ],
+  "kind": "kronvald",
+  "when": "act >= 5 and hour >= 7 and hour < 12",
+  "title": "story.spot.kronvald",
+  "text": "story.spot.kronvald.text"
+ },
+ {
+  "id": "cabinet",
+  "map": "lh_1",
+  "at": [
+   4,
+   4
+  ],
+  "kind": "cabinet",
+  "when": "true",
+  "title": "cabinet.title",
+  "text": "story.spot.cabinet.text"
+ },
+ {
+  "id": "agatha_home",
+  "map": "lh_3",
+  "at": [
+   6,
+   4
+  ],
+  "kind": "agatha",
+  "when": "flag('agatha_alive')",
+  "title": "story.spot.agatha",
+  "text": "story.spot.agatha.text"
+ },
+ {
+  "id": "cat_key",
+  "map": "cape",
+  "at": [
+   37,
+   24
+  ],
+  "kind": "cat_key",
+  "when": "not flag('house_key')",
+  "title": "story.spot.cat_key",
+  "text": "story.spot.cat_key.text"
+ }
+]

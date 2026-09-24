@@ -32,6 +32,14 @@ func _draw() -> void:
 func interact(_player: Player) -> void:
 	var name := Loc.t(str(Data.by_id("ghosts", ghost_id).get("name", ghost_id)))
 	var line := Graveyard.talk_ghost(ghost_id)
-	InfoPanel.open(get_tree().current_scene.get_node("HUD"), name, func() -> String: return line)
+	var buttons: Array = []
+	for pair in Ghosts.actions(ghost_id):
+		var action := str(pair[0])
+		buttons.append([str(pair[1]), func(_p: InfoPanel) -> String:
+			var answer := Ghosts.act(ghost_id, action)
+			if Graveyard.laid_ghosts.has(ghost_id):
+				queue_free()
+			return answer])
+	InfoPanel.open(get_tree().current_scene.get_node("HUD"), name, func() -> String: return line, buttons)
 	if Graveyard.laid_ghosts.has(ghost_id):
 		queue_free()

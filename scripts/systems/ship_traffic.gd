@@ -63,6 +63,9 @@ static func base_chance(weather: String, hmar: bool) -> float:
 # P = base × (1 − power/100) × 2 × moon; a dark night: base × 3 + 10% (10.11).
 static func wreck_chance(weather: String, hmar: bool, burning: bool, power: float, new_moon: bool) -> float:
 	var base := base_chance(weather, hmar)
+	# Burun, the breaker-daughter: storms wreck a fifth fewer ships (12.4).
+	if weather in ["storm", "blizzard"] and Sea.blessings.has("burun"):
+		base *= 0.8
 	if not burning:
 		return base * 3.0 + 0.10
 	return base * (1.0 - clampf(power, 0.0, 100.0) / 100.0) * 2.0 * (1.2 if new_moon else 1.0)

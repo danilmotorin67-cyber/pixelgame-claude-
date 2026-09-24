@@ -220,5 +220,474 @@
   "family": {
    "money": 600
   }
+ },
+ {
+  "id": "reg_pennington",
+  "name": "Артур Пеннингтон",
+  "ship": "Бриг «Святая Берта»",
+  "age": 51,
+  "clues": [
+   "clothes:navy_coat",
+   "papers:neptune_card",
+   "body:grey_beard"
+  ],
+  "family": {
+   "money": 300
+  },
+  "story": true
+ },
+ {
+  "id": "reg_martin",
+  "name": "Мартин Кольт",
+  "ship": "Бриг «Святая Берта»",
+  "age": 44,
+  "clues": [
+   "clothes:stoker_apron",
+   "body:broad",
+   "tattoo:anchor"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_vera",
+  "name": "Вера Сольм",
+  "ship": "Бриг «Святая Берта»",
+  "age": 36,
+  "clues": [
+   "body:short",
+   "papers:ticket_kronwald",
+   "item:chalk"
+  ],
+  "family": {
+   "money": 250
+  },
+  "story": true
+ },
+ {
+  "id": "reg_t20_01",
+  "name": "Август Вальд",
+  "ship": "Бриг «Фортуна»",
+  "age": 45,
+  "clues": [
+   "build:tall",
+   "bone:collarbone",
+   "item:compass_e"
+  ],
+  "fortuna": true,
+  "role": "капитан",
+  "desc": "Высокий, 45 лет, ломал правую ключицу"
+ },
+ {
+  "id": "reg_t20_02",
+  "name": "Ларс Хёгг",
+  "ship": "Бриг «Фортуна»",
+  "age": 38,
+  "clues": [
+   "build:medium",
+   "item:dividers"
+  ],
+  "fortuna": true,
+  "role": "штурман",
+  "desc": "Средний рост, 38 лет"
+ },
+ {
+  "id": "reg_t20_03",
+  "name": "Бьярне Сколд",
+  "ship": "Бриг «Фортуна»",
+  "age": 41,
+  "clues": [
+   "build:large",
+   "bone:nose",
+   "item:bosun_whistle"
+  ],
+  "fortuna": true,
+  "role": "боцман",
+  "desc": "Крупный, сломанный нос"
+ },
+ {
+  "id": "reg_t20_04",
+  "name": "Тиль Моргенштерн",
+  "ship": "Бриг «Фортуна»",
+  "age": 50,
+  "clues": [
+   "build:broad",
+   "item:notched_spoon"
+  ],
+  "fortuna": true,
+  "role": "кок",
+  "desc": "Широкий в кости"
+ },
+ {
+  "id": "reg_t20_05",
+  "name": "Йенс Аск",
+  "ship": "Бриг «Фортуна»",
+  "age": 39,
+  "clues": [
+   "bone:left_hand",
+   "item:chisel"
+  ],
+  "fortuna": true,
+  "role": "плотник",
+  "desc": "Нет двух пальцев на левой руке"
+ },
+ {
+  "id": "reg_t20_06",
+  "name": "Мика Лунд",
+  "ship": "Бриг «Фортуна»",
+  "age": 16,
+  "clues": [
+   "build:small",
+   "item:slingshot"
+  ],
+  "fortuna": true,
+  "role": "юнга",
+  "desc": "16 лет, самый маленький"
+ },
+ {
+  "id": "reg_t20_07",
+  "name": "Оле Бранд",
+  "ship": "Бриг «Фортуна»",
+  "age": 27,
+  "clues": [
+   "item:dice",
+   "ear:left_ring"
+  ],
+  "fortuna": true,
+  "role": "матрос",
+  "desc": "Близнец, серьга в левом ухе"
+ },
+ {
+  "id": "reg_t20_08",
+  "name": "Свен Бранд",
+  "ship": "Бриг «Фортуна»",
+  "age": 27,
+  "clues": [
+   "item:dice",
+   "ear:right_ring"
+  ],
+  "fortuna": true,
+  "role": "матрос",
+  "desc": "Близнец, серьга в правом ухе"
+ },
+ {
+  "id": "reg_t20_09",
+  "name": "Хакон Ульвен",
+  "ship": "Бриг «Фортуна»",
+  "age": 33,
+  "clues": [
+   "bone:shin",
+   "item:walrus_pipe"
+  ],
+  "fortuna": true,
+  "role": "матрос",
+  "desc": "Хромал"
+ },
+ {
+  "id": "reg_t20_10",
+  "name": "Пер Эстлунд",
+  "ship": "Бриг «Фортуна»",
+  "age": 29,
+  "clues": [
+   "build:tall",
+   "item:knife_pe"
+  ],
+  "fortuna": true,
+  "role": "матрос",
+  "desc": "Высокий"
+ },
+ {
+  "id": "reg_t20_11",
+  "name": "Грета Холм",
+  "ship": "Бриг «Фортуна»",
+  "age": 50,
+  "clues": [
+   "build:short",
+   "item:midwife_bag"
+  ],
+  "fortuna": true,
+  "role": "повитуха (пассажир)",
+  "desc": "Невысокая, 50 лет"
+ },
+ {
+  "id": "reg_t20_12",
+  "name": "Эрик Холм",
+  "ship": "Бриг «Фортуна»",
+  "age": 20,
+  "clues": [
+   "build:medium",
+   "item:flute"
+  ],
+  "fortuna": true,
+  "role": "сын Греты (пассажир)",
+  "desc": "20 лет"
+ },
+ {
+  "id": "reg_t20_13",
+  "name": "Даниэль Кросс",
+  "ship": "Бриг «Фортуна»",
+  "age": 44,
+  "clues": [
+   "item:sail_needle"
+  ],
+  "fortuna": true,
+  "role": "парусный мастер",
+  "desc": "—"
+ },
+ {
+  "id": "reg_t20_14",
+  "name": "Юхан Вик",
+  "ship": "Бриг «Фортуна»",
+  "age": 31,
+  "clues": [
+   "bone:ribs",
+   "item:shell_amulet"
+  ],
+  "fortuna": true,
+  "role": "матрос",
+  "desc": "Ломал рёбра"
+ },
+ {
+  "id": "reg_t20_15",
+  "name": "Томас Фирт",
+  "ship": "Бриг «Фортуна»",
+  "age": 47,
+  "clues": [
+   "item:cooper_hammer"
+  ],
+  "fortuna": true,
+  "role": "бондарь",
+  "desc": "—"
+ },
+ {
+  "id": "reg_t20_16",
+  "name": "Рагнар Сёль",
+  "ship": "Бриг «Фортуна»",
+  "age": 60,
+  "clues": [
+   "bone:no_teeth",
+   "item:fish_rosary"
+  ],
+  "fortuna": true,
+  "role": "старый матрос",
+  "desc": "60 лет, без зубов"
+ },
+ {
+  "id": "reg_t20_17",
+  "name": "Николас Бер",
+  "ship": "Бриг «Фортуна»",
+  "age": 52,
+  "clues": [
+   "item:spectacles"
+  ],
+  "fortuna": true,
+  "role": "корабельный лекарь",
+  "desc": "Носил очки"
+ },
+ {
+  "id": "reg_t20_18",
+  "name": "Исаак Тённ",
+  "ship": "Бриг «Фортуна»",
+  "age": 55,
+  "clues": [
+   "bone:gold_teeth",
+   "item:merchant_seal"
+  ],
+  "fortuna": true,
+  "role": "купец (пассажир)",
+  "desc": "Золотые зубы"
+ },
+ {
+  "id": "reg_t20_19",
+  "name": "Анна Тённ",
+  "ship": "Бриг «Фортуна»",
+  "age": 48,
+  "clues": [
+   "item:locket_husband"
+  ],
+  "fortuna": true,
+  "role": "жена купца",
+  "desc": "—"
+ },
+ {
+  "id": "reg_t20_20",
+  "name": "Элеонора",
+  "ship": "Бриг «Фортуна»",
+  "age": 0,
+  "clues": [
+   "item:figurehead_ribbon"
+  ],
+  "fortuna": true,
+  "role": "носовая фигура и хозяйка «Фортуны»",
+  "desc": "Её имя вырезано на крышке ниши"
+ },
+ {
+  "id": "reg_odile",
+  "name": "Одиль Монтар",
+  "ship": "Яхта «Каприз»",
+  "age": 58,
+  "clues": [
+   "clothes:silk_dress",
+   "body:short",
+   "item:opera_glasses"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_grunwald",
+  "name": "Отто Грюнвальд",
+  "ship": "Барк «Звезда Севера»",
+  "age": 49,
+  "clues": [
+   "clothes:navy_coat",
+   "body:grey_beard",
+   "item:log_tables"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_ion",
+  "name": "Ион Барбу",
+  "ship": "Пароход «Граф Эльмсторп»",
+  "age": 33,
+  "clues": [
+   "body:tall",
+   "item:rosin",
+   "clothes:merchant_vest"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_aaro",
+  "name": "Ааро Линд",
+  "ship": "Бот «Треска-2»",
+  "age": 19,
+  "clues": [
+   "body:young",
+   "tattoo:swallow",
+   "item:twin_half_a"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_elna",
+  "name": "Эльна Линд",
+  "ship": "Бот «Треска-2»",
+  "age": 19,
+  "clues": [
+   "body:young",
+   "tattoo:swallow",
+   "item:twin_half_e"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_dog_sailor",
+  "name": "Сигурд Брун",
+  "ship": "Китобой «Харальд»",
+  "age": 41,
+  "clues": [
+   "tattoo:dog",
+   "clothes:whaler_jacket",
+   "body:broad"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_lotta",
+  "name": "Лотта Вийк",
+  "ship": "Почтовый «Чайка»",
+  "age": 22,
+  "clues": [
+   "clothes:wedding_dress",
+   "item:ring_forever"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_horn",
+  "name": "Эрик Хорн",
+  "ship": "Бриг «Надежда»",
+  "age": 63,
+  "clues": [
+   "clothes:navy_coat",
+   "body:scar_face",
+   "tattoo:compass"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_emmerich",
+  "name": "Эммерих Штайн",
+  "ship": "Лоцманский бот «Прилежный»",
+  "age": 47,
+  "clues": [
+   "item:pencil_case",
+   "body:short",
+   "clothes:oilskin"
+  ],
+  "family": {
+   "money": 200
+  },
+  "story": true
+ },
+ {
+  "id": "reg_gudmund",
+  "name": "Гудмунд Эйнарссон",
+  "ship": "Лодка «Эльса»",
+  "age": 44,
+  "clues": [
+   "item:hammer_g",
+   "body:broad"
+  ],
+  "story": true
+ },
+ {
+  "id": "reg_tobias",
+  "name": "Тобиас Кляйн",
+  "ship": "Водолазная партия «Нептуна»",
+  "age": 36,
+  "clues": [
+   "clothes:diving_suit",
+   "body:tall"
+  ],
+  "story": true
+ },
+ {
+  "id": "reg_brigi",
+  "name": "Бригитта Ольсен",
+  "ship": "Старый Сольвик",
+  "age": 77,
+  "clues": [
+   "body:no_teeth",
+   "item:gossip_comb"
+  ],
+  "story": true
  }
 ]

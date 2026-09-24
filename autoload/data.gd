@@ -11,7 +11,8 @@ const DATA_FILES: PackedStringArray = [
 	"npcs", "gifts", "quests", "bodies", "registry", "ghosts", "the_twenty", "evidence",
 	"weather", "tides", "festivals", "bundles", "neptune", "regions",
 	"skills", "knowledge_tree", "achievements", "collections",
-	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage", "interiors", "places"
+	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage", "interiors", "places",
+	"story", "story_spots"
 ]
 const DATA_DIRS: PackedStringArray = ["schedules", "events", "dialogue"]
 

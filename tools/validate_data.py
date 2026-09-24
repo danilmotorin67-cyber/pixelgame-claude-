@@ -13,7 +13,7 @@ REQUIRED = [
     "weather", "tides", "festivals", "bundles", "neptune", "regions",
     "skills", "knowledge_tree", "achievements", "collections",
     "bottles", "pages", "tales", "shops", "buildings", "balance", "forage",
-    "interiors", "places",
+    "interiors", "places", "story", "story_spots",
 ]
 
 
@@ -298,7 +298,7 @@ def check_people(tables, npc_ids) -> list:
     interiors = tables.get("interiors", {})
     places = tables.get("places", {})
     regions = tables.get("regions", {})
-    maps = set(regions) | set(interiors) | {"cape", "sea"}
+    maps = set(regions) | set(interiors) | {"cape", "sea", "lh_1", "lh_2", "lh_3", "lh_4", "grotto", "deep"}
     for name, room in interiors.items():
         w, h = room.get("size", [0, 0])
         for spot, at in room.get("spots", {}).items():
@@ -339,6 +339,8 @@ def check_people(tables, npc_ids) -> list:
                 if map_id not in maps or not spot_ok(map_id, spot):
                     errs.append(f"schedule {path.name} unknown place {map_id}:{spot}")
     errs.extend(check_scenes(tables, npc_ids, maps))
+    items_known = {r["id"] for r in rows(tables.get("items", [])) if isinstance(r, dict) and "id" in r}
+    errs.extend(check_story(tables, items_known, npc_ids, maps))
     errs.extend(check_tags())
     return errs
 
@@ -355,7 +357,7 @@ def check_tags() -> list:
                 if text.count("{") != text.count("}"):
                     errs.append(f"string {row[0]} has unbalanced braces")
                 for tag in re.findall(r"\{([^{}]*)\}", text):
-                    if tag != "name" and tag.count("|") != 1:
+                    if tag not in ("name", "phrase") and tag.count("|") != 1:
                         errs.append(f"string {row[0]} has an unknown tag {{{tag}}}")
     return errs
 
@@ -365,7 +367,91 @@ SCENE_COMMANDS = {"fade_out", "fade_in", "place", "move", "face", "wait", "emote
                   "set_weather", "effects", "end", "branch"}
 EFFECTS = {"friendship", "flag", "give", "item", "take", "money", "honor", "points", "xp", "start_quest", "step_quest",
            "mail", "unlock_recipe", "recipe", "set_weather_tomorrow", "play_music", "achievement", "stat", "mercy",
-           "shore_gift", "collect"}
+           "shore_gift", "collect", "page", "evidence", "card", "fragment", "neptune", "boat", "counter_days", "counter",
+           "blessing", "call", "scene"}
+
+
+SPOT_KINDS = {"code_lock", "journal", "board", "bonfire", "glow_water", "berta_wreck", "crypt", "treska", "archive", "telegraph",
+              "safe", "ambush", "lantern_dive", "cairn", "raven_mark", "ritual", "cat", "ghost", "owl", "dig", "sketch", "guild",
+              "neptune_counter", "cannery", "chapel_crypt", "circle", "daughter", "kronvald", "cabinet", "agatha", "cat_key"}
+
+
+def check_story(tables, item_ids, npc_ids, maps) -> list:
+    """Section 5 and around it: quests, spots, ghosts, rooms, festivals and the collections are complete and consistent."""
+    errs = []
+    keys = loc_keys()
+    quests = {q["id"]: q for q in rows(tables.get("quests", []))}
+    ghost_ids = {g["id"] for g in rows(tables.get("ghosts", []))}
+    tags = set()
+    for r in rows(tables.get("items", [])):
+        tags.update(r.get("tags", []))
+
+    def item_ok(pattern):
+        for alt in str(pattern).split("|"):
+            name = alt.split("@")[0]
+            if name.startswith("tag:"):
+                if name[4:] not in tags:
+                    return False
+            elif name not in item_ids and name != "money":
+                return False
+        return True
+
+    for q in quests.values():
+        if q.get("title") not in keys:
+            errs.append(f"quest {q['id']} has no title text")
+        for st in q.get("steps", []):
+            if not any(k in st for k in ("on", "check", "deliver")):
+                errs.append(f"quest {q['id']} step {st.get('id')} finishes on nothing")
+            if st.get("text") not in keys:
+                errs.append(f"quest {q['id']} step {st.get('id')} has no text")
+            if "deliver" in st and st["deliver"] not in npc_ids and st["deliver"] not in ghost_ids:
+                errs.append(f"quest {q['id']} delivers to unknown {st['deliver']}")
+            for need in st.get("items", []):
+                if not item_ok(need[0]):
+                    errs.append(f"quest {q['id']} step {st.get('id')} needs unknown {need[0]}")
+            if "after" in st and st["after"] not in {x["id"] for x in q["steps"]}:
+                errs.append(f"quest {q['id']} step {st.get('id')} waits for an unknown step")
+    for g in rows(tables.get("ghosts", [])):
+        if g.get("quest") not in quests:
+            errs.append(f"ghost {g['id']} has an unknown quest")
+    if len(rows(tables.get("ghosts", []))) != 20:
+        errs.append("there must be 20 named ghosts (11.8)")
+    for s_ in rows(tables.get("story_spots", [])):
+        if s_.get("map") not in maps:
+            errs.append(f"spot {s_.get('id')} on unknown map {s_.get('map')}")
+        if s_.get("kind") not in SPOT_KINDS:
+            errs.append(f"spot {s_.get('id')} of unknown kind {s_.get('kind')}")
+    counts = {"pages": 24, "bottles": 40, "tales": 12, "the_twenty": 20, "bundles": 6, "festivals": 8}
+    for name, n in counts.items():
+        if len(rows(tables.get(name, []))) != n:
+            errs.append(f"{name} must have {n} entries")
+    for room in rows(tables.get("bundles", [])):
+        for slot in room.get("slots", []):
+            for need in slot.get("items", []):
+                if not item_ok(need[0]):
+                    errs.append(f"room {room['id']} slot {slot['id']} needs unknown {need[0]}")
+    for f in rows(tables.get("festivals", [])):
+        if f.get("map") not in maps:
+            errs.append(f"festival {f['id']} on unknown map")
+        if not f.get("activities"):
+            errs.append(f"festival {f['id']} has no activities")
+    story = tables.get("story", {})
+    for item in story.get("pickups", {}):
+        if item not in item_ids:
+            errs.append(f"story pickup {item} unknown")
+    for chest in story.get("deep_chests", []):
+        if chest["item"] not in item_ids:
+            errs.append(f"deep chest {chest['item']} unknown")
+    for npc in story.get("allies", {}):
+        if npc not in npc_ids:
+            errs.append(f"ally {npc} unknown")
+    for option in story.get("npc_options", []):
+        if option["npc"] not in npc_ids:
+            errs.append(f"npc option {option['id']} for unknown npc")
+    for item in story.get("cabinet", []):
+        if item not in item_ids:
+            errs.append(f"cabinet exhibit {item} unknown")
+    return errs
 
 
 def loc_keys():

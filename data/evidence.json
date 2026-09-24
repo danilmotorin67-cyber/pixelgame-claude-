@@ -1,1 +1,34 @@
-[]
+[
+ {
+  "id": "portfolio",
+  "found": "evidence.portfolio.found"
+ },
+ {
+  "id": "berta_hold",
+  "found": "evidence.berta_hold.found"
+ },
+ {
+  "id": "tin_box",
+  "found": "evidence.tin_box.found"
+ },
+ {
+  "id": "hedda",
+  "found": "evidence.hedda.found"
+ },
+ {
+  "id": "doctor",
+  "found": "evidence.doctor.found"
+ },
+ {
+  "id": "telegram",
+  "found": "evidence.telegram.found"
+ },
+ {
+  "id": "lantern",
+  "found": "evidence.lantern.found"
+ },
+ {
+  "id": "black_book",
+  "found": "evidence.black_book.found"
+ }
+]

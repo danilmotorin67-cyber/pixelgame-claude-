@@ -1,0 +1,626 @@
+{
+ "allies": {
+  "npc_einar": {
+   "hearts": 6,
+   "bonus": "shutters",
+   "line": "Железные ставни на фонарную. Саботажникам придётся постараться."
+  },
+  "npc_hedda": {
+   "hearts": 6,
+   "bonus": "pier_guard",
+   "line": "Я поставлю «Треску» у твоего причала. Ни одна лодка не пристанет."
+  },
+  "npc_magnus": {
+   "hearts": 6,
+   "bonus": "medic",
+   "line": "В полночь я поднимусь к тебе с сумкой. И трезвый."
+  },
+  "npc_olaf": {
+   "hearts": 6,
+   "bonus": "telegraph",
+   "line": "Я предупрежу «Королеву». Шесть минут без огня она выдержит."
+  },
+  "npc_liv": {
+   "hearts": 6,
+   "bonus": "light_water",
+   "line": "Три склянки «Светлой воды». Науке нужен эксперимент."
+  },
+  "npc_knud": {
+   "hearts": 6,
+   "bonus": "barricade",
+   "line": "Нижнюю дверь я заколочу так, что сам не открою."
+  },
+  "npc_ingrid": {
+   "hearts": 6,
+   "bonus": "hold_father",
+   "line": "Я удержу отца дома до полуночи. Как — не спрашивай."
+  },
+  "npc_sigrid": {
+   "hearts": 6,
+   "bonus": "bell_warning",
+   "line": "Колокол часовни скажет тебе, откуда идут."
+  },
+  "npc_tuve": {
+   "hearts": 6,
+   "bonus": "calm_sea",
+   "line": "Я поговорю с морем. Оно меня слушает."
+  },
+  "npc_tora": {
+   "hearts": 4,
+   "bonus": "mechanism",
+   "line": "Механизм заест — я рядом. Починю за вдох."
+  },
+  "npc_erland": {
+   "hearts": 4,
+   "bonus": "retreat_boat",
+   "line": "Лодка для отступления будет у скал. Надеюсь, не понадобится."
+  },
+  "npc_kai": {
+   "hearts": 4,
+   "bonus": "kills_false_fire",
+   "line": "Ложный огонь я погашу сам. Сорок лет ждал."
+  },
+  "npc_rud": {
+   "hearts": 4,
+   "bonus": "distracts_brother",
+   "line": "Нута я отвлеку. Он мне брат, но не хозяин."
+  },
+  "npc_benedict": {
+   "hearts": 4,
+   "bonus": "blessing",
+   "line": "Благословлю твой фонарь. Встану подальше от окна, но благословлю."
+  }
+ },
+ "npc_options": [
+  {
+   "id": "liv_glass",
+   "npc": "npc_liv",
+   "label": "Попросить стекло иллюминатора",
+   "when": "quest_state('q2_4_bell') == 'active' and not has_item('porthole_glass') and not flag('porthole_given')",
+   "effects": [
+    [
+     "item",
+     "porthole_glass",
+     1
+    ],
+    [
+     "flag",
+     "porthole_given"
+    ]
+   ],
+   "reply": "Держи. Везла через три моря — не разбей на одном заливе."
+  },
+  {
+   "id": "kai_visit",
+   "npc": "npc_kai",
+   "label": "Оставить керосин или грог",
+   "when": "quest_state('q2_7_hermit') == 'active'",
+   "call": "visit_kai"
+  },
+  {
+   "id": "ingrid_key",
+   "npc": "npc_ingrid",
+   "label": "Попросить ключ от сейфа",
+   "when": "quest_state('q3_8_safe') == 'active' and hearts('npc_ingrid') >= 6 and not has_item('safe_key') and not flag('safe_opened')",
+   "effects": [
+    [
+     "item",
+     "safe_key",
+     1
+    ],
+    [
+     "flag",
+     "safe_key_given"
+    ]
+   ],
+   "reply": "Возьми. Я… я хочу знать, кто мой отец. Даже если ответ плохой."
+  },
+  {
+   "id": "olaf_page",
+   "npc": "npc_olaf",
+   "label": "Спросить про коллекцию писем",
+   "when": "hearts('npc_olaf') >= 6 and not page(17)",
+   "effects": [
+    [
+     "page",
+     17
+    ]
+   ],
+   "reply": "Эту страницу Агата оставила мне. Про морзянку. Забирай — ей место в журнале."
+  },
+  {
+   "id": "olaf_trade",
+   "npc": "npc_olaf",
+   "label": "Обменять 3 письма в бутылках на страницу",
+   "when": "hearts('npc_olaf') < 6 and not page(17) and has_item('message_bottle', 3)",
+   "effects": [
+    [
+     "take",
+     "message_bottle",
+     3
+    ],
+    [
+     "page",
+     17
+    ]
+   ],
+   "reply": "Три письма! По рукам. Страница Агаты — твоя."
+  },
+  {
+   "id": "margit_page",
+   "npc": "npc_margit",
+   "label": "Заглянуть в корзинку с пряжей",
+   "when": "hearts('npc_margit') >= 4 and not page(18)",
+   "effects": [
+    [
+     "page",
+     18
+    ]
+   ],
+   "reply": "Ой, это её схема свитера. А на обороте… «Прости за сковородку». Ах она!.."
+  },
+  {
+   "id": "hedda_letter",
+   "npc": "npc_hedda",
+   "label": "Отдать письмо из бутылки",
+   "when": "has_item('letter_hedda')",
+   "effects": [
+    [
+     "take",
+     "letter_hedda",
+     1
+    ],
+    [
+     "friendship",
+     "npc_hedda",
+     250
+    ]
+   ],
+   "reply": "«…Огонь был ненастоящий». Кто-то видел. Кто-то знал. Спасибо тебе."
+  },
+  {
+   "id": "margit_letter",
+   "npc": "npc_margit",
+   "label": "Отдать письмо из бутылки",
+   "when": "has_item('letter_margit')",
+   "effects": [
+    [
+     "take",
+     "letter_margit",
+     1
+    ],
+    [
+     "friendship",
+     "npc_margit",
+     250
+    ]
+   ],
+   "reply": "Сковородка! У него! Ах ты ж… (смеётся и плачет) Спасибо, золотко."
+  },
+  {
+   "id": "jacques_customs",
+   "npc": "npc_olaf",
+   "label": "Сдать тайник Жака таможне",
+   "when": "quest_state('g7_rum') == 'active'",
+   "effects": [
+    [
+     "honor",
+     5
+    ],
+    [
+     "money",
+     800
+    ],
+    [
+     "step_quest",
+     "jacques_cache",
+     "customs"
+    ]
+   ],
+   "reply": "Таможня благодарит. Премия — восемьсот. И не говори Жаку, что я смеялся."
+  },
+  {
+   "id": "knud_twenty",
+   "npc": "npc_knud",
+   "label": "Попросить помочь вынести кости «Фортуны»",
+   "when": "twenty_help('npc_knud')",
+   "call": "twenty_help"
+  },
+  {
+   "id": "einar_twenty",
+   "npc": "npc_einar",
+   "label": "Попросить помочь вынести кости «Фортуны»",
+   "when": "twenty_help('npc_einar')",
+   "call": "twenty_help"
+  }
+ ],
+ "pickups": {
+  "agatha_chest": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     5
+    ],
+    [
+     "page",
+     6
+    ],
+    [
+     "item",
+     "lantern_agatha",
+     1
+    ],
+    [
+     "step_quest",
+     "agatha_chest"
+    ]
+   ]
+  },
+  "agatha_tin_box": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     13
+    ],
+    [
+     "page",
+     14
+    ],
+    [
+     "page",
+     15
+    ],
+    [
+     "page",
+     16
+    ]
+   ]
+  },
+  "page_19": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     19
+    ]
+   ]
+  },
+  "page_20": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     20
+    ]
+   ]
+  },
+  "page_21": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     21
+    ]
+   ]
+  },
+  "page_23": {
+   "consume": true,
+   "effects": [
+    [
+     "page",
+     23
+    ]
+   ]
+  },
+  "fragment_f1": {
+   "effects": [
+    [
+     "fragment",
+     1
+    ]
+   ]
+  },
+  "fragment_f2": {
+   "effects": [
+    [
+     "fragment",
+     2
+    ]
+   ]
+  },
+  "fragment_f3": {
+   "effects": [
+    [
+     "fragment",
+     3
+    ]
+   ]
+  },
+  "black_book": {
+   "effects": [
+    [
+     "evidence",
+     "black_book"
+    ]
+   ]
+  },
+  "skau_lantern": {
+   "effects": [
+    [
+     "evidence",
+     "lantern"
+    ]
+   ]
+  },
+  "gudmund_bones": {
+   "consume": true,
+   "effects": [
+    [
+     "flag",
+     "gudmund_found"
+    ],
+    [
+     "call",
+     "remains:body_gudmund"
+    ]
+   ]
+  },
+  "tobias_remains": {
+   "consume": true,
+   "effects": [
+    [
+     "flag",
+     "tobias_found"
+    ],
+    [
+     "call",
+     "remains:body_tobias"
+    ]
+   ]
+  },
+  "brigi_skull": {
+   "consume": true,
+   "effects": [
+    [
+     "flag",
+     "brigi_found"
+    ],
+    [
+     "call",
+     "remains:body_brigi"
+    ]
+   ]
+  },
+  "solvik_bell": {
+   "effects": [
+    [
+     "flag",
+     "solvik_bell_found"
+    ]
+   ]
+  }
+ },
+ "deep_chests": [
+  {
+   "level": 10,
+   "item": "agatha_chest",
+   "unless": "flag('page_5')"
+  },
+  {
+   "level": 15,
+   "item": "agatha_tin_box",
+   "unless": "flag('page_13')"
+  },
+  {
+   "level": 25,
+   "item": "page_19",
+   "unless": "flag('page_19')"
+  },
+  {
+   "level": 33,
+   "item": "page_20",
+   "unless": "flag('page_20')"
+  },
+  {
+   "level": 45,
+   "item": "page_21",
+   "unless": "flag('page_21')"
+  },
+  {
+   "level": 8,
+   "item": "gudmund_bones",
+   "unless": "flag('gudmund_found')"
+  },
+  {
+   "level": 12,
+   "item": "ion_violin",
+   "when": "quest_state('g6_violin') == 'active' and not has_item('ion_violin')"
+  },
+  {
+   "level": 17,
+   "item": "pennington_portfolio",
+   "when": "quest_state('g11_portfolio') == 'active' and not has_item('pennington_portfolio')"
+  },
+  {
+   "level": 24,
+   "item": "brigi_skull",
+   "unless": "flag('brigi_found')"
+  },
+  {
+   "level": 25,
+   "item": "solvik_bell",
+   "when": "flag('ghost_nilsen') and not flag('solvik_bell_found')"
+  },
+  {
+   "level": 30,
+   "item": "tobias_remains",
+   "unless": "flag('tobias_found')"
+  },
+  {
+   "level": 38,
+   "item": "tobias_helmet",
+   "when": "quest_state('g15_helmet') == 'active' and not has_item('tobias_helmet')"
+  }
+ ],
+ "minigames": {
+  "break_in": {
+   "type": "lanes",
+   "title": "Двор Торгового дома",
+   "distance": 90,
+   "speed": 9,
+   "gap": 1.3,
+   "allowed": 1
+  },
+  "teeth_stealth": {
+   "type": "lanes",
+   "title": "Луч ложного огня",
+   "distance": 120,
+   "speed": 10,
+   "gap": 1.1,
+   "allowed": 1
+  },
+  "zyb_rhythm": {
+   "type": "timing",
+   "title": "Грести в ритм Зыби",
+   "rounds": 12,
+   "speed": 0.8,
+   "width": 0.2,
+   "need": 9,
+   "limit": 120
+  },
+  "burun_race": {
+   "type": "lanes",
+   "title": "Гонка бурунов",
+   "distance": 140,
+   "speed": 12,
+   "gap": 0.9,
+   "allowed": 2
+  }
+ },
+ "token_shop": [
+  [
+   "decor_stuffed_herring_king",
+   400
+  ],
+  [
+   "seed_lightflower",
+   300
+  ],
+  [
+   "fish_herring_king",
+   800
+  ],
+  [
+   "star_amber",
+   2000
+  ]
+ ],
+ "cabinet": [
+  "old_crown",
+  "false_lantern",
+  "ship_bell_small",
+  "sextant_cracked",
+  "walrus_pipe",
+  "rune_stone",
+  "medallion_portrait",
+  "scrimshaw",
+  "old_sea_map",
+  "cloak_clasp",
+  "clay_lamp",
+  "solvik_nail",
+  "toy_boat",
+  "fortuna_wheel",
+  "street_sign",
+  "chapel_bell_cracked",
+  "horseshoe_rusty",
+  "tortoise_comb",
+  "pilot_badge",
+  "fresco_fragment",
+  "bone_hook",
+  "offering_bowl",
+  "southern_coin",
+  "captain_glasses",
+  "amber_rook",
+  "ship_in_bottle",
+  "squid_beak",
+  "drowned_doll",
+  "grim_drawing",
+  "smuggler_flask",
+  "amber",
+  "amber_fly",
+  "pearl",
+  "black_pearl",
+  "sea_glass",
+  "sea_glass_green",
+  "sea_glass_brown",
+  "sea_glass_blue",
+  "sea_glass_red",
+  "deep_quartz",
+  "moon_slate",
+  "salt_crystal",
+  "lophelia",
+  "whalebone",
+  "whale_bone",
+  "pumice",
+  "ammonite",
+  "belemnite",
+  "hag_stone",
+  "fools_gold"
+ ],
+ "cabinet_rewards": {
+  "5": [
+   [
+    "money",
+    500
+   ]
+  ],
+  "10": [
+   [
+    "flag",
+    "cabinet_aquarium"
+   ]
+  ],
+  "15": [
+   [
+    "item",
+    "seed_lightflower",
+    10
+   ]
+  ],
+  "20": [
+   [
+    "recipe",
+    "craft_scrimshaw"
+   ]
+  ],
+  "25": [
+   [
+    "money",
+    5000
+   ]
+  ],
+  "30": [
+   [
+    "item",
+    "amber_pendant",
+    1
+   ]
+  ],
+  "40": [
+   [
+    "item",
+    "fortuna_model",
+    1
+   ]
+  ],
+  "50": [
+   [
+    "item",
+    "star_amber",
+    1
+   ]
+  ]
+ }
+}

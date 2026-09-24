@@ -1,0 +1,673 @@
+{
+ "events": [
+  {
+   "id": "ev_story_gathering",
+   "trigger": {
+    "map": "village_tavern",
+    "hours": [
+     17,
+     23
+    ],
+    "when": "quest_state('q1_9_mistfolk') == 'active'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_halvdan",
+     [
+      10,
+      3
+     ],
+     "down"
+    ],
+    [
+     "place",
+     "hero",
+     [
+      10,
+      9
+     ]
+    ],
+    [
+     "face",
+     "hero",
+     "up"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_halvdan",
+     "happy",
+     "ev.ev_story_gathering.l01"
+    ],
+    [
+     "say",
+     "npc_halvdan",
+     "neutral",
+     "ev.ev_story_gathering.l02"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "angry",
+     "ev.ev_story_gathering.l03"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.ev_story_gathering.c01",
+       [
+        [
+         "flag",
+         "guild_volunteer"
+        ]
+       ],
+       ""
+      ],
+      [
+       "ev.ev_story_gathering.c02",
+       [
+        [
+         "flag",
+         "guild_volunteer"
+        ],
+        [
+         "honor",
+         1
+        ]
+       ],
+       ""
+      ]
+     ]
+    ],
+    [
+     "say",
+     "npc_halvdan",
+     "neutral",
+     "ev.ev_story_gathering.l04"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "community_open"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_story_stern_offer",
+   "trigger": {
+    "map": "cape",
+    "hours": [
+     9,
+     19
+    ],
+    "when": "quest_state('q1_11_neptune') == 'active'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_stern",
+     [
+      40,
+      25
+     ],
+     "left"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_stern",
+     "happy",
+     "ev.ev_story_stern_offer.l01"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "neutral",
+     "ev.ev_story_stern_offer.l02"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.ev_story_stern_offer.c01",
+       [
+        [
+         "neptune",
+         "sign"
+        ]
+       ],
+       "signed"
+      ],
+      [
+       "ev.ev_story_stern_offer.c02",
+       [
+        [
+         "neptune",
+         "think"
+        ]
+       ],
+       "think"
+      ],
+      [
+       "ev.ev_story_stern_offer.c03",
+       [
+        [
+         "neptune",
+         "tear"
+        ]
+       ],
+       "torn"
+      ]
+     ]
+    ],
+    [
+     "label",
+     "signed"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "happy",
+     "ev.ev_story_stern_offer.l03"
+    ],
+    [
+     "goto",
+     "end"
+    ],
+    [
+     "label",
+     "think"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "neutral",
+     "ev.ev_story_stern_offer.l04"
+    ],
+    [
+     "goto",
+     "end"
+    ],
+    [
+     "label",
+     "torn"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "angry",
+     "ev.ev_story_stern_offer.l05"
+    ],
+    [
+     "label",
+     "end"
+    ],
+    [
+     "despawn",
+     "npc_stern"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_story_false_fire",
+   "trigger": {
+    "hours": [
+     23,
+     24
+    ],
+    "when": "day_index == 27 and not flag('berta_wrecked')"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ev_story_false_fire.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ev_story_false_fire.l02"
+    ],
+    [
+     "say",
+     "narrator",
+     "sad",
+     "ev.ev_story_false_fire.l03"
+    ],
+    [
+     "say",
+     "npc_fortuna",
+     "sad",
+     "ev.ev_story_false_fire.l04"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "false_fire_seen"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_story_helga_grief",
+   "trigger": {
+    "map": "moor",
+    "hours": [
+     8,
+     18
+    ],
+    "when": "flag('q2_2_done')"
+   },
+   "script": [
+    [
+     "say",
+     "npc_helga",
+     "sad",
+     "ev.ev_story_helga_grief.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_helga_grief.l02"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_helga_grief.l03"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_story_fortuna_truth",
+   "trigger": {
+    "map": "lh_1",
+    "when": "quest_state('q3_1_truth') == 'active'"
+   },
+   "script": [
+    [
+     "say",
+     "npc_fortuna",
+     "neutral",
+     "ev.ev_story_fortuna_truth.l01"
+    ],
+    [
+     "say",
+     "npc_fortuna",
+     "neutral",
+     "ev.ev_story_fortuna_truth.l02"
+    ],
+    [
+     "say",
+     "npc_fortuna",
+     "sad",
+     "ev.ev_story_fortuna_truth.l03"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_fortuna_truth.l04"
+    ],
+    [
+     "say",
+     "npc_fortuna",
+     "neutral",
+     "ev.ev_story_fortuna_truth.l05"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "board_open"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ],
+   "manual": true
+  },
+  {
+   "id": "ev_story_stern_returns",
+   "trigger": {
+    "map": "village",
+    "hours": [
+     10,
+     18
+    ],
+    "when": "quest_state('q3_7_stern_returns') == 'active'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_stern",
+     "square",
+     "down"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "branch",
+     "neptune() == 'signed'",
+     "partner"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "neutral",
+     "ev.ev_story_stern_returns.l01"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "neutral",
+     "ev.ev_story_stern_returns.l02"
+    ],
+    [
+     "goto",
+     "end"
+    ],
+    [
+     "label",
+     "partner"
+    ],
+    [
+     "say",
+     "npc_stern",
+     "happy",
+     "ev.ev_story_stern_returns.l03"
+    ],
+    [
+     "choice",
+     [
+      [
+       "ev.ev_story_stern_returns.c01",
+       [
+        [
+         "honor",
+         -20
+        ],
+        [
+         "flag",
+         "stern_teeth_deal"
+        ]
+       ],
+       ""
+      ],
+      [
+       "ev.ev_story_stern_returns.c02",
+       [
+        [
+         "flag",
+         "stern_teeth_refused"
+        ]
+       ],
+       ""
+      ]
+     ]
+    ],
+    [
+     "label",
+     "end"
+    ],
+    [
+     "despawn",
+     "npc_stern"
+    ],
+    [
+     "end"
+    ]
+   ]
+  },
+  {
+   "id": "ev_story_rann_gills",
+   "trigger": {
+    "map": "cape",
+    "when": "quest_state('q3_11_gills') == 'active'"
+   },
+   "script": [
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ev_story_rann_gills.l01"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ev_story_rann_gills.l02"
+    ],
+    [
+     "say",
+     "narrator",
+     "happy",
+     "ev.ev_story_rann_gills.l03"
+    ],
+    [
+     "end"
+    ]
+   ],
+   "manual": true
+  },
+  {
+   "id": "ev_story_ritual_1",
+   "trigger": {
+    "map": "cape",
+    "when": "quest_state('q2_12_drowned_night') == 'active'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "cliff_edge",
+     "down"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_ritual_1.l01"
+    ],
+    [
+     "say",
+     "hero",
+     "neutral",
+     "ev.ev_story_ritual_1.l02"
+    ],
+    [
+     "say",
+     "narrator",
+     "neutral",
+     "ev.ev_story_ritual_1.l03"
+    ],
+    [
+     "say",
+     "narrator",
+     "sad",
+     "ev.ev_story_ritual_1.l04"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_ritual_1.l05"
+    ],
+    [
+     "end"
+    ]
+   ],
+   "manual": true
+  },
+  {
+   "id": "ev_story_ritual_2",
+   "trigger": {
+    "map": "cape",
+    "when": "quest_state('q4_4_drowned_night_2') == 'active'"
+   },
+   "script": [
+    [
+     "fade_out",
+     0.5
+    ],
+    [
+     "place",
+     "npc_helga",
+     "cliff_edge",
+     "down"
+    ],
+    [
+     "fade_in",
+     0.5
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_ritual_2.l01"
+    ],
+    [
+     "say",
+     "hero",
+     "neutral",
+     "ev.ev_story_ritual_2.l02"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "neutral",
+     "ev.ev_story_ritual_2.l03"
+    ],
+    [
+     "end"
+    ]
+   ],
+   "manual": true
+  },
+  {
+   "id": "ev_story_fortuna_voice",
+   "trigger": {
+    "map": "lh_1",
+    "when": "twenty_buried() >= 10 and not flag('fortuna_voice')"
+   },
+   "script": [
+    [
+     "say",
+     "npc_fortuna",
+     "sad",
+     "ev.ev_story_fortuna_voice.l01"
+    ],
+    [
+     "say",
+     "npc_fortuna",
+     "sad",
+     "ev.ev_story_fortuna_voice.l02"
+    ],
+    [
+     "effects",
+     [
+      [
+       "flag",
+       "fortuna_voice"
+      ]
+     ]
+    ],
+    [
+     "end"
+    ]
+   ],
+   "manual": true
+  },
+  {
+   "id": "ev_story_great_hmar_won",
+   "trigger": {
+    "map": "village",
+    "hours": [
+     6,
+     14
+    ],
+    "when": "flag('great_hmar_won')"
+   },
+   "script": [
+    [
+     "say",
+     "npc_halvdan",
+     "neutral",
+     "ev.ev_story_great_hmar_won.l01"
+    ],
+    [
+     "say",
+     "npc_helga",
+     "happy",
+     "ev.ev_story_great_hmar_won.l02"
+    ],
+    [
+     "end"
+    ]
+   ]
+  }
+ ]
+}

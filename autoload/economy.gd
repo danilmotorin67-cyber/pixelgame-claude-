@@ -35,7 +35,14 @@ func sell_price(id: String, quality: int = 0) -> int:
 	var item := Data.by_id("items", id)
 	if item.is_empty() or str(item.get("category", "")) in UNSELLABLE:
 		return 0
-	return int(round(float(item.get("price", 0)) * QUALITY_MULT[clampi(quality, 0, 3)] * Skills.price_mult(item)))
+	var mult := 1.0
+	# 23.2: the mended fish market pays a tenth more for fish (not Neptune's pier).
+	if str(item.get("category", "")) in ["fish", "shellfish"] and Game.flag("fish_market") and not Community.paid.has("fishers"):
+		mult = 1.1
+	# 5.6: after the trial Grim's house is the Solvik Artel and buys 15% dearer.
+	if Game.flag("artel"):
+		mult *= 1.15
+	return int(round(float(item.get("price", 0)) * QUALITY_MULT[clampi(quality, 0, 3)] * Skills.price_mult(item) * mult))
 
 
 func ship_slot(index: int) -> bool:

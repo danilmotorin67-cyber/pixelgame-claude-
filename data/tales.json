@@ -1,5 +1,86 @@
 [
-  {
-    "id": "tale_1"
-  }
+ {
+  "id": "tale_1",
+  "n": 1,
+  "title": "tale.1.title",
+  "text": "tale.1.text",
+  "when": "true"
+ },
+ {
+  "id": "tale_2",
+  "n": 2,
+  "title": "tale.2.title",
+  "text": "tale.2.text",
+  "when": "hearts('npc_helga') >= 2"
+ },
+ {
+  "id": "tale_3",
+  "n": 3,
+  "title": "tale.3.title",
+  "text": "tale.3.text",
+  "when": "quest_state('q2_2_white_hmar') == 'done'"
+ },
+ {
+  "id": "tale_4",
+  "n": 4,
+  "title": "tale.4.title",
+  "text": "tale.4.text",
+  "when": "hearts('npc_helga') >= 4"
+ },
+ {
+  "id": "tale_5",
+  "n": 5,
+  "title": "tale.5.title",
+  "text": "tale.5.text",
+  "when": "counter('deep_max') >= 10"
+ },
+ {
+  "id": "tale_6",
+  "n": 6,
+  "title": "tale.6.title",
+  "text": "tale.6.text",
+  "when": "hearts('npc_helga') >= 6 or quest_state('q2_10_twenty') != 'none' or day_index >= 75"
+ },
+ {
+  "id": "tale_7",
+  "n": 7,
+  "title": "tale.7.title",
+  "text": "tale.7.text",
+  "when": "cats() >= 3"
+ },
+ {
+  "id": "tale_8",
+  "n": 8,
+  "title": "tale.8.title",
+  "text": "tale.8.text",
+  "when": "stat('seal_feed_days') >= 3"
+ },
+ {
+  "id": "tale_9",
+  "n": 9,
+  "title": "tale.9.title",
+  "text": "tale.9.text",
+  "when": "counter('deep_max') >= 21"
+ },
+ {
+  "id": "tale_10",
+  "n": 10,
+  "title": "tale.10.title",
+  "text": "tale.10.text",
+  "when": "flag('hmar_open') and hearts('npc_helga') >= 5"
+ },
+ {
+  "id": "tale_11",
+  "n": 11,
+  "title": "tale.11.title",
+  "text": "tale.11.text",
+  "when": "quest_state('q3_1_truth') == 'done'"
+ },
+ {
+  "id": "tale_12",
+  "n": 12,
+  "title": "tale.12.title",
+  "text": "tale.12.text",
+  "when": "hearts('npc_helga') >= 10"
+ }
 ]

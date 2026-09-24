@@ -47,6 +47,7 @@ func format(text: String) -> String:
 	if not text.contains("{"):
 		return text
 	text = text.replace("{name}", str(Game.hero.get("name", "Смотритель")))
+	text = text.replace("{phrase}", Story.stern_phrase if Story.stern_phrase != "" else "Я увольняюсь")
 	var female := str(Game.hero.get("gender", "m")) == "f"
 	return _gender.sub(text, "$2" if female else "$1", true)
 

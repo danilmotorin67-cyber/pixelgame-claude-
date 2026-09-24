@@ -1,3 +1,10 @@
 {
-  "contract": true
+ "sign_money": 5000,
+ "sign_mercy": -20,
+ "weekly_mercy": -1,
+ "bay_fish": 0.85,
+ "cannery": 0.9,
+ "cannery_pier": 0.95,
+ "offer_until": 111,
+ "annul_mercy": 10
 }

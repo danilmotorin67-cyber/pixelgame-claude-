@@ -41,6 +41,7 @@ func _ready() -> void:
 	else:
 		restore_state(Game.player_state)
 	_update_sprite(false)
+	Events.time_tick.connect(warm_or_chill)
 
 
 func _physics_process(delta: float) -> void:
@@ -133,7 +134,7 @@ func _boat_physics(delta: float) -> void:
 			_towed()
 			return
 		_say("Удар о камни! Корпус %d%%." % int(Sea.hull))
-	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails"):
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") and not Daughters.storm_hull_safe():
 		_storm_clock += delta
 		if _storm_clock >= float(SeaChart.cfg("storm_damage_every")):
 			_storm_clock = 0.0
@@ -252,6 +253,17 @@ func eat_selected() -> String:
 		if bool(buff.get("warm_now", false)):
 			cold = 0.0
 	return id
+
+
+# Winter cold builds outdoors (one point per ten minutes, less with Stuzha's blessing and Martin's ember) and
+# leaves indoors; at 50 and above every action costs a quarter more (8.1).
+func warm_or_chill(minutes: int) -> void:
+	var map_id := Router.current_map
+	var indoors := map_id.begins_with("lh_") or MapInfo.is_interior(map_id) or map_id == "deep"
+	if Clock.season == "winter" and not indoors:
+		cold = minf(100.0, cold + float(minutes) * 0.1 * Daughters.cold_mult())
+	else:
+		cold = maxf(0.0, cold - float(minutes) * 0.5)
 
 
 func spend_raw(amount: float) -> void:
@@ -443,6 +455,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+		# Story things read or used by hand: bottles, the sextant, a flare (18.6, 11.8).
+		var story := Story.use_item(Inventory.selected_id(), global_position)
+		if story != "":
+			var hud := get_tree().current_scene.get_node_or_null("HUD") as CanvasLayer
+			if hud and story.length() > 60:
+				InfoPanel.open(hud, Crafting.item_name(Inventory.selected_id()) if Inventory.selected_id() != "" else "", func() -> String: return story)
+			elif hint:
+				hint.text = story
+			return
 		var used := use_selected()
 		if used != "":
 			if hint:

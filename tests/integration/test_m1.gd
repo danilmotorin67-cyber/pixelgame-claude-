@@ -43,6 +43,8 @@ func _check_calendar_rules() -> void:
 	Weather.last_hmar_day = -100
 	_check(Weather.hmar_chance(28 + 1) == 0.0, "no Hmar nights before Act II")
 	Game.act = 2
+	_check(Weather.hmar_chance(28 + 1) == 0.0, "random Hmar nights wait for the first White Hmar (Q2.2)")
+	Game.set_flag("hmar_open")
 	_check(is_equal_approx(Weather.hmar_chance(28 + 1), 0.2), "Hmar: 5% + (100-Peace)/10% + 5% new moon")
 	_check(is_equal_approx(Weather.hmar_chance(28 + 9), 0.15), "Hmar chance without new moon")
 	_check(Weather.hmar_chance(spring_13) == 0.0, "no Hmar on festival nights")
@@ -56,6 +58,7 @@ func _check_calendar_rules() -> void:
 	Game.act = 0
 	Game.flags.erase("twenty_buried")
 	Game.flags.erase("guild_house_restored")
+	Game.flags.erase("hmar_open")
 	Weather.last_hmar_day = -100
 
 	var right := 0

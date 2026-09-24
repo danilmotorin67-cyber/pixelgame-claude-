@@ -16,6 +16,10 @@ var pending_report: Dictionary = {}
 func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	if resolving:
 		return
+	# The Great Tide is not slept through (Q4.5).
+	if not fainted and Finale.finale_today():
+		Events.debug_message.emit(Loc.t("finale.no_sleep"))
+		return
 	resolving = true
 	Clock.paused = true
 	var current_scene := get_tree().current_scene
@@ -29,7 +33,10 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	var night_index := Clock.day_index
 	var aurora_tonight := Weather.aurora
 	var storm_today := Weather.current in ["storm", "blizzard"]
+	if storm_today:
+		Game.counters["last_storm_day"] = Clock.day_index
 	var weather_today := Weather.current
+	var hmar_tonight := Weather.hmar_night
 	var compass_before := [Lighthouse.fire_power, Graveyard.peace, Sea.mercy]
 	_step(report, "lighthouse", func() -> void:
 		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted))
@@ -73,6 +80,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	_step(report, "friendship", func() -> void:
 		Relationships.night())
 	_step(report, "quests", func() -> void:
+		report["story"] = Story.night(night_index, hmar_tonight)
 		report["quests_started"] = Quests.check_starts())
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))

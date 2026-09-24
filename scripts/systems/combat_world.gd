@@ -362,13 +362,35 @@ func _return_stolen(e: Dictionary) -> void:
 	enemies.erase(e)
 
 
-# The lantern (17.4): 5 a second within 3 tiles, ×4 against the Hmar.
+# The lantern (17.4): 5 a second within 3 tiles, ×4 against the Hmar. Agatha's lantern (Q2.5) reaches a tile
+# further and burns half again as hot; the ghost dog Bury walks by the keeper at night (+2 tiles, 11.8).
+static func lantern_tiles() -> float:
+	var tiles := 3.0
+	if Inventory.count_of("lantern_agatha") > 0:
+		tiles += 1.0
+	if Game.flag("ghost_dog") and Clock.is_night():
+		tiles += 2.0
+	# Svetla gives the keeper eyes under water.
+	if Sea.blessings.has("svetla") and Router.current_map == "deep":
+		tiles += 1.0
+	return tiles
+
+
+static func lantern_power() -> float:
+	var power := 7.5 if Inventory.count_of("lantern_agatha") > 0 else 5.0
+	if Game.flag("finale_blessing"):
+		power *= 1.2
+	return power
+
+
 func _light(delta: float) -> void:
+	var reach := lantern_tiles() * TILE
+	var power := lantern_power()
 	for e in alive():
-		if (e["pos"] as Vector2).distance_to(player["pos"]) <= 3.0 * TILE:
+		if (e["pos"] as Vector2).distance_to(player["pos"]) <= reach:
 			var mult := float(enemy_info(str(e["kind"])).get("light_mult", 0.0))
 			if mult > 0.0:
-				e["hp"] = float(e["hp"]) - 5.0 * mult * delta
+				e["hp"] = float(e["hp"]) - power * mult * delta
 				if float(e["hp"]) <= 0.0:
 					_kill(e)
 	if not boss.is_empty() and str(boss["id"]) == "bone_whale":
@@ -562,6 +584,7 @@ func boss_reward() -> Dictionary:
 	if reward.has("flag"):
 		Game.set_flag(str(reward["flag"]))
 	Game.set_flag("boss_" + str(boss["id"]))
+	Events.boss_defeated.emit(str(boss["id"]))
 	Skills.add_xp("diving", int(info.get("xp", 200)))
 	Knowledge.add_points("sea", 10)
 	return reward

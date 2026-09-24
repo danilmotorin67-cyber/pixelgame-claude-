@@ -63,6 +63,9 @@ func _ready() -> void:
 	var npcs := NpcLayer.new()
 	npcs.map_id = map_id
 	add_child(npcs)
+	var story := StorySpots.new()
+	story.map_id = map_id
+	add_child(story)
 	if map_id == "cape":
 		var bell := TowerBell.new()
 		bell.name = "TowerBell"

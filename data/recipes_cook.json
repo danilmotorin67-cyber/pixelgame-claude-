@@ -1075,5 +1075,55 @@
    1
   ],
   "unlock": "start"
+ },
+ {
+  "id": "cook_labskaus",
+  "station": "hearth",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ],
+   [
+    "potato",
+    2
+   ],
+   [
+    "beet",
+    1
+   ]
+  ],
+  "out": [
+   "labskaus",
+   1
+  ],
+  "unlock": "learn"
+ },
+ {
+  "id": "cook_labskaus_cook",
+  "station": "hearth",
+  "in": [
+   [
+    "tag:fish",
+    1
+   ],
+   [
+    "potato",
+    2
+   ],
+   [
+    "beet",
+    1
+   ],
+   [
+    "spice_tin",
+    1
+   ]
+  ],
+  "out": [
+   "labskaus_cook",
+   1
+  ],
+  "unlock": "learn"
  }
 ]

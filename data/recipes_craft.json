@@ -5205,5 +5205,104 @@
    3
   ],
   "unlock": "start"
+ },
+ {
+  "id": "craft_drag_sledge",
+  "station": "workbench",
+  "in": [
+   [
+    "boards",
+    8
+   ],
+   [
+    "yarn",
+    4
+   ]
+  ],
+  "out": [
+   "drag_sledge",
+   1
+  ],
+  "unlock": "flag:twenty_found"
+ },
+ {
+  "id": "forge_hand_pump",
+  "station": "forge",
+  "in": [
+   [
+    "iron_ingot",
+    5
+   ],
+   [
+    "brass",
+    2
+   ],
+   [
+    "moray_skin",
+    1
+   ]
+  ],
+  "out": [
+   "hand_pump",
+   1
+  ],
+  "unlock": "flag:q3_2_started"
+ },
+ {
+  "id": "forge_brass_badge",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    1
+   ]
+  ],
+  "out": [
+   "brass_badge",
+   2
+  ],
+  "unlock": "flag:club_badges"
+ },
+ {
+  "id": "forge_helmet_plus",
+  "station": "forge",
+  "in": [
+   [
+    "brass",
+    3
+   ],
+   [
+    "glass",
+    2
+   ],
+   [
+    "copper_ingot",
+    5
+   ]
+  ],
+  "out": [
+   "helmet_porthole_plus",
+   1
+  ],
+  "unlock": "flag:tobias_blueprint"
+ },
+ {
+  "id": "craft_scrimshaw",
+  "station": "workbench",
+  "in": [
+   [
+    "whalebone",
+    1
+   ],
+   [
+    "cuttlefish_ink",
+    1
+   ]
+  ],
+  "out": [
+   "scrimshaw",
+   1
+  ],
+  "unlock": "learn"
  }
 ]

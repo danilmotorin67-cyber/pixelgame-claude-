@@ -210,7 +210,7 @@ func _check_all_scenes() -> void:
 	for e in Cutscenes.all():
 		var id := str(e["id"])
 		_check(ConditionContext.valid(str(e.get("trigger", {}).get("when", ""))), id + " has a broken trigger")
-		_check(MapInfo.exists(str(e["trigger"].get("map", "cape"))) or str(e["trigger"].get("map", "")) in ["cape", "sea"], id + " is on an unknown map")
+		_check(MapInfo.exists(str(e["trigger"].get("map", "cape"))) or str(e["trigger"].get("map", "")) in ["cape", "sea", "lh_1", "lh_2", "lh_3", "lh_4"], id + " is on an unknown map")
 		for pick in 3:
 			_fresh()
 			var said := Cutscenes.simulate(id, [pick, pick, pick])

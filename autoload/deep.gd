@@ -92,6 +92,10 @@ func begin(from_level: int = 1) -> String:
 
 func _enter() -> void:
 	data = DeepGen.generate(level, Game.world_seed + Clock.day_index * 7919)
+	# Story things lie on their levels until found (5.8, 11.8): Agatha's chest, pages, a violin, remains.
+	for chest in Story.deep_chests(level):
+		var cell := DeepGen.story_cell(data, (data["chests"] as Array).size())
+		data["chests"].append({"x": cell.x, "y": cell.y, "item": chest})
 	world = CombatWorld.new(Game.world_seed * 31 + level, func(p: Vector2) -> bool: return DeepGen.walkable(data, p))
 	world.underwater = true
 	world.player["pos"] = cell_center(data["entry"])

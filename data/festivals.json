@@ -1,10 +1,390 @@
 [
-  {"id": "boat_blessing", "name": "Спуск лодок", "season": "spring", "day": 13, "start": 9, "end": 14, "place": "harbor", "night": false},
-  {"id": "bird_day", "name": "Птичий день", "season": "spring", "day": 24, "start": 8, "end": 13, "place": "eider_isle", "night": false},
-  {"id": "white_sun", "name": "Ночь Белого Солнца", "season": "summer", "day": 11, "start": 21, "end": 1, "place": "nine_maidens", "night": true, "no_fire": true},
-  {"id": "regatta", "name": "Регата", "season": "summer", "day": 25, "start": 9, "end": 15, "place": "harbor", "night": false},
-  {"id": "herring_fair", "name": "Сельдяная ярмарка", "season": "autumn", "day": 16, "start": 9, "end": 15, "place": "harbor", "night": false},
-  {"id": "drowned_night", "name": "Ночь Утопленников", "season": "autumn", "day": 27, "start": 18, "end": 24, "place": "harbor", "night": true, "story": true},
-  {"id": "ice_festival", "name": "Праздник льда", "season": "winter", "day": 8, "start": 9, "end": 14, "place": "still_pool", "night": false},
-  {"id": "long_night", "name": "Долгая ночь", "season": "winter", "day": 25, "start": 16, "end": 22, "place": "chapel_square", "night": true, "aurora": true}
+ {
+  "id": "boat_blessing",
+  "name": "Спуск лодок",
+  "season": "spring",
+  "day": 13,
+  "start": 9,
+  "end": 14,
+  "place": "harbor",
+  "night": false,
+  "map": "village",
+  "stand": [
+   36,
+   44
+  ],
+  "title": "festival.boat_blessing.name",
+  "activities": [
+   {
+    "id": "blessing",
+    "label": "festival.boat_blessing.blessing",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "decor",
+    "label": "festival.boat_blessing.decor",
+    "kind": "contest",
+    "params": {
+     "rivals": [
+      28,
+      36,
+      44
+     ]
+    }
+   },
+   {
+    "id": "oar_run",
+    "label": "festival.boat_blessing.oar_run",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 8,
+     "speed": 0.9,
+     "width": 0.2,
+     "need": 6,
+     "limit": 90
+    }
+   },
+   {
+    "id": "shop",
+    "label": "festival.boat_blessing.shop",
+    "kind": "shop",
+    "params": {
+     "shop": "shop_fest_spring"
+    }
+   }
+  ]
+ },
+ {
+  "id": "bird_day",
+  "name": "Птичий день",
+  "season": "spring",
+  "day": 24,
+  "start": 8,
+  "end": 13,
+  "place": "eider_isle",
+  "night": false,
+  "map": "bird_cliffs",
+  "stand": [
+   12,
+   18
+  ],
+  "title": "festival.bird_day.name",
+  "activities": [
+   {
+    "id": "eggs",
+    "label": "festival.bird_day.eggs",
+    "kind": "minigame",
+    "params": {
+     "type": "lanes",
+     "collect": true,
+     "distance": 9999,
+     "speed": 12,
+     "gap": 0.8,
+     "need": 15,
+     "limit": 180
+    }
+   },
+   {
+    "id": "birds",
+    "label": "festival.bird_day.birds",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 5,
+     "speed": 0.7,
+     "width": 0.22,
+     "need": 5,
+     "limit": 90
+    }
+   }
+  ]
+ },
+ {
+  "id": "white_sun",
+  "name": "Ночь Белого Солнца",
+  "season": "summer",
+  "day": 11,
+  "start": 21,
+  "end": 1,
+  "place": "nine_maidens",
+  "night": true,
+  "no_fire": true,
+  "map": "moor",
+  "stand": [
+   30,
+   29
+  ],
+  "title": "festival.white_sun.name",
+  "activities": [
+   {
+    "id": "songs",
+    "label": "festival.white_sun.songs",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "dance",
+    "label": "festival.white_sun.dance",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 6,
+     "speed": 0.75,
+     "width": 0.24,
+     "need": 4,
+     "limit": 60
+    }
+   }
+  ]
+ },
+ {
+  "id": "regatta",
+  "name": "Регата",
+  "season": "summer",
+  "day": 25,
+  "start": 9,
+  "end": 15,
+  "place": "harbor",
+  "night": false,
+  "map": "village",
+  "stand": [
+   44,
+   44
+  ],
+  "title": "festival.regatta.name",
+  "activities": [
+   {
+    "id": "race",
+    "label": "festival.regatta.race",
+    "kind": "minigame",
+    "params": {
+     "type": "race",
+     "length": 100,
+     "limit": 120
+    }
+   },
+   {
+    "id": "bet",
+    "label": "festival.regatta.bet",
+    "kind": "special",
+    "params": {}
+   }
+  ]
+ },
+ {
+  "id": "herring_fair",
+  "name": "Сельдяная ярмарка",
+  "season": "autumn",
+  "day": 16,
+  "start": 9,
+  "end": 15,
+  "place": "harbor",
+  "night": false,
+  "map": "village",
+  "stand": [
+   38,
+   32
+  ],
+  "title": "festival.herring_fair.name",
+  "activities": [
+   {
+    "id": "exhibit",
+    "label": "festival.herring_fair.exhibit",
+    "kind": "contest",
+    "params": {}
+   },
+   {
+    "id": "herring",
+    "label": "festival.herring_fair.herring",
+    "kind": "minigame",
+    "params": {
+     "type": "mash",
+     "per": 4,
+     "limit": 20,
+     "need": 12
+    }
+   },
+   {
+    "id": "boot",
+    "label": "festival.herring_fair.boot",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 3,
+     "speed": 1.1,
+     "width": 0.16,
+     "need": 2,
+     "limit": 30
+    }
+   },
+   {
+    "id": "cod",
+    "label": "festival.herring_fair.cod",
+    "kind": "minigame",
+    "params": {
+     "type": "guess",
+     "lo": 1,
+     "hi": 12,
+     "step": 0.1,
+     "limit": 30
+    }
+   },
+   {
+    "id": "gulls",
+    "label": "festival.herring_fair.gulls",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 10,
+     "speed": 1.2,
+     "width": 0.14,
+     "need": 6,
+     "limit": 60
+    }
+   },
+   {
+    "id": "speech",
+    "label": "festival.herring_fair.speech",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "tokens",
+    "label": "festival.herring_fair.tokens",
+    "kind": "special",
+    "params": {}
+   }
+  ]
+ },
+ {
+  "id": "drowned_night",
+  "name": "Ночь Утопленников",
+  "season": "autumn",
+  "day": 27,
+  "start": 18,
+  "end": 24,
+  "place": "harbor",
+  "night": true,
+  "story": true,
+  "map": "village",
+  "stand": [
+   30,
+   44
+  ],
+  "title": "festival.drowned_night.name",
+  "activities": [
+   {
+    "id": "lanterns",
+    "label": "festival.drowned_night.lanterns",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "shadow_fair",
+    "label": "festival.drowned_night.shadow_fair",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "ghosts",
+    "label": "festival.drowned_night.ghosts",
+    "kind": "special",
+    "params": {}
+   }
+  ]
+ },
+ {
+  "id": "ice_festival",
+  "name": "Праздник льда",
+  "season": "winter",
+  "day": 8,
+  "start": 9,
+  "end": 14,
+  "place": "still_pool",
+  "night": false,
+  "map": "lagoon",
+  "stand": [
+   25,
+   14
+  ],
+  "title": "festival.ice_festival.name",
+  "activities": [
+   {
+    "id": "ice_fishing",
+    "label": "festival.ice_festival.ice_fishing",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 14,
+     "speed": 1.0,
+     "width": 0.18,
+     "need": 8,
+     "limit": 180
+    }
+   },
+   {
+    "id": "sculpture",
+    "label": "festival.ice_festival.sculpture",
+    "kind": "contest",
+    "params": {
+     "rivals": [
+      30,
+      38
+     ]
+    }
+   },
+   {
+    "id": "skating",
+    "label": "festival.ice_festival.skating",
+    "kind": "minigame",
+    "params": {
+     "type": "timing",
+     "rounds": 6,
+     "speed": 0.8,
+     "width": 0.22,
+     "need": 4,
+     "limit": 60
+    }
+   }
+  ]
+ },
+ {
+  "id": "long_night",
+  "name": "Долгая ночь",
+  "season": "winter",
+  "day": 25,
+  "start": 16,
+  "end": 22,
+  "place": "chapel_square",
+  "night": true,
+  "aurora": true,
+  "map": "village",
+  "stand": [
+   21,
+   41
+  ],
+  "title": "festival.long_night.name",
+  "activities": [
+   {
+    "id": "secret_gift",
+    "label": "festival.long_night.secret_gift",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "dinner",
+    "label": "festival.long_night.dinner",
+    "kind": "special",
+    "params": {}
+   },
+   {
+    "id": "garlands",
+    "label": "festival.long_night.garlands",
+    "kind": "special",
+    "params": {}
+   }
+  ]
+ }
 ]

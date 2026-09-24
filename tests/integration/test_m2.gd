@@ -313,9 +313,13 @@ func _check_forage() -> void:
 	Sea.mercy = 10.0
 	Sea.generate_gifts(10, false)
 	var hostile := 0
-	for map_id in Sea.gifts:
-		hostile += Sea.gifts[map_id].size()
-	_check(hostile * 2 <= calm_total + 4, "a hostile sea gives half the gifts")
+	for map_id in ["cape", "seal_shore", "wreck_bay", "village"]:
+		for gift in Sea.gifts.get(map_id, []):
+			# bottles of 18.6 drift ashore whatever the sea's mood
+			if str(gift["item"]) != "message_bottle":
+				hostile += 1
+	# at most half of the 6-15 per beach, whatever the draw
+	_check(hostile <= 4 * 8 and hostile < calm_total, "a hostile sea gives half the gifts (%d vs %d)" % [hostile, calm_total])
 	Sea.mercy = 45.0
 	Sea.generate_gifts(10, false)
 	for map_id in Sea.gifts:

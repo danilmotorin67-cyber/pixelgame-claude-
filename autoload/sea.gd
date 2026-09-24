@@ -109,7 +109,7 @@ func generate_gifts(index: int, storm: bool) -> void:
 	for map_id in config.get("beaches", {}):
 		var beach: Dictionary = config["beaches"][map_id]
 		var columns: Array = beach.get("columns", [2, 60])
-		var count := rng.randi_range(int(bounds[0]), int(bounds[1]))
+		var count := int(round(float(rng.randi_range(int(bounds[0]), int(bounds[1]))) * Daughters.gift_mult()))
 		if storm:
 			count *= int(config.get("storm_mult", 3))
 		if mercy < 20.0:
@@ -127,6 +127,12 @@ func generate_gifts(index: int, storm: bool) -> void:
 		for _n in (2 if mercy >= 60.0 else 1) if mercy >= 40.0 else 0:
 			_place(placed, used, rng, columns, rng.randi_range(FAR_ROW, SHORE_ROWS - 1),
 				str(rare[rng.randi_range(0, rare.size() - 1)]))
+		# 18.6: bottles wash up — a tenth of days in Wreck Bay, three in a hundred elsewhere.
+		if rng.randf() < Bottles.beach_chance(str(map_id)):
+			_place(placed, used, rng, columns, rng.randi_range(0, SHORE_ROWS - 1), "message_bottle")
+		# Pena: a pearl in the foam now and then.
+		if Sea.blessings.has("pena") and rng.randf() < 0.1:
+			_place(placed, used, rng, columns, rng.randi_range(0, SHORE_ROWS - 1), "pearl")
 		gifts[map_id] = placed
 	for entry in Lighthouse.pending_shore:
 		var beach_id := str(entry["beach"])

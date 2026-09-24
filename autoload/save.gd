@@ -91,6 +91,12 @@ func save_game(slot: int = -1) -> bool:
 		"crafting": Crafting.serialize(),
 		"mail": Mail.serialize(),
 		"collections": Collections.serialize(),
+		"achievements": Achievements.serialize(),
+		"story": Story.serialize(),
+		"twenty": Twenty.serialize(),
+		"community": Community.serialize(),
+		"festivals": Festivals.serialize(),
+		"finale": Finale.serialize(),
 		"settings": Settings.serialize(),
 	}
 	if DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(save_root)) != OK:
@@ -154,6 +160,12 @@ func load_game(slot: int) -> bool:
 	Crafting.deserialize(payload.get("crafting", {}))
 	Mail.deserialize(payload.get("mail", {}))
 	Collections.deserialize(payload.get("collections", {}))
+	Achievements.deserialize(payload.get("achievements", {}))
+	Story.deserialize(payload.get("story", {}))
+	Twenty.deserialize(payload.get("twenty", {}))
+	Community.deserialize(payload.get("community", {}))
+	Festivals.deserialize(payload.get("festivals", {}))
+	Finale.deserialize(payload.get("finale", {}))
 	Settings.deserialize(payload.get("settings", {}))
 	current_slot = slot
 	NPCs.deserialize(payload.get("npcs", {}))

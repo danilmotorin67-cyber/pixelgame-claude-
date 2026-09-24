@@ -65,6 +65,7 @@ static func offer(index: int) -> Dictionary:
 	if offers_left() <= 0:
 		return {"ok": false, "text": "Сегодня Камень уже принял дар. Вода ровная, как стол."}
 	var name := Loc.t(str(Data.by_id("items", id).get("name", id)))
+	var quality := int(slot["quality"])
 	Inventory.take_slot(index, 1)
 	var mercy := float(cfg().get("mercy", {}).get(kind, 0))
 	Sea.add_mercy(mercy)
@@ -73,7 +74,11 @@ static func offer(index: int) -> Dictionary:
 	Game.counters["rann_total"] = int(Game.counters.get("rann_total", 0)) + 1
 	Events.quest_event.emit("rann_offering", id)
 	var act := "Вы кладёте %s на мокрый чёрный камень." if dry() else "Вы бросаете %s в волну над камнем."
-	return {"ok": true, "kind": kind, "mercy": mercy, "text": "%s\n«%s»" % [act % name, line]}
+	var text := "%s\n«%s»" % [act % name, line]
+	# 12.4: at the peak of a spring tide Priliva rises for a flawless fish.
+	if Daughters.priliva_offering(id, quality):
+		text += "\n" + Loc.t("daughter.priliva")
+	return {"ok": true, "kind": kind, "mercy": mercy, "text": text}
 
 
 # "Calm tomorrow" (12.3): mercy >= 60, once a week; costs 5 mercy unless beloved (>= 80) or blessed by Tish.

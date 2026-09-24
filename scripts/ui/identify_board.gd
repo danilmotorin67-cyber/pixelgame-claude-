@@ -15,6 +15,10 @@ static func open(hud: CanvasLayer, body_id: String) -> InfoPanel:
 	var lines := func() -> Array:
 		var out: Array = []
 		for reg in candidates.call():
+			# The Fortuna's crew list gives the role and the list's description, not the clues (5.9).
+			if bool(reg.get("fortuna", false)):
+				out.append("%s, %s · %s" % [reg["name"], reg.get("role", ""), reg.get("desc", "")])
+				continue
 			var clue_names: Array[String] = []
 			for clue in reg.get("clues", []):
 				clue_names.append(Graveyard.clue_text(str(clue)))
@@ -33,4 +37,5 @@ static func open(hud: CanvasLayer, body_id: String) -> InfoPanel:
 		return "Нельзя: имя уже отправлено семье или занято."
 	if b.is_empty():
 		return null
-	return InfoPanel.open(hud, "Доска опознания", body_text, [["Фильтр", toggle], ["Подтвердить", confirm]], lines)
+	var title := Loc.t("twenty.board.title") if b.has("twenty") else "Доска опознания"
+	return InfoPanel.open(hud, title, body_text, [["Фильтр", toggle], ["Подтвердить", confirm]], lines)

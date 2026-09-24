@@ -234,6 +234,24 @@
       {
         "item": "bucket",
         "price": 150
+      },
+      {
+        "item": "paper",
+        "price": 15
+      },
+      {
+        "item": "garland",
+        "price": 100,
+        "seasons": [
+          "winter"
+        ]
+      },
+      {
+        "item": "paper_lantern",
+        "price": 20,
+        "seasons": [
+          "autumn"
+        ]
       }
     ],
     "keepers": [
@@ -434,6 +452,10 @@
       {
         "item": "harpoon_bolts",
         "price": 15
+      },
+      {
+        "item": "signal_flare",
+        "price": 150
       }
     ],
     "keepers": [
@@ -755,6 +777,69 @@
         "recipe": "cook_steamed_lobster",
         "price": 1000,
         "once": true
+      }
+    ]
+  },
+  {
+    "id": "shop_fest_spring",
+    "name": "Весенняя лавка праздника",
+    "open": 0,
+    "close": 24,
+    "keepers": [],
+    "festival": "boat_blessing",
+    "stock": [
+      {
+        "item": "seed_strawberry",
+        "price": 60
+      },
+      {
+        "item": "seed_rhubarb",
+        "price": 80
+      },
+      {
+        "item": "seed_lightflower",
+        "price": 400
+      },
+      {
+        "item": "boat_paint",
+        "price": 300
+      },
+      {
+        "item": "solvik_pennant",
+        "price": 1500
+      }
+    ]
+  },
+  {
+    "id": "shop_kronvald",
+    "name": "Рынок редкостей Кронвальда",
+    "open": 0,
+    "close": 24,
+    "keepers": [],
+    "stock": [
+      {
+        "item": "old_sea_map",
+        "price": 900
+      },
+      {
+        "item": "sextant_cracked",
+        "price": 1500
+      },
+      {
+        "item": "stained_glass",
+        "price": 800
+      },
+      {
+        "item": "decor_brass_telescope",
+        "price": 3000
+      },
+      {
+        "item": "seed_lightflower",
+        "price": 500
+      },
+      {
+        "item": "garland",
+        "price": 120
       }
     ]
   }

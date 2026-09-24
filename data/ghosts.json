@@ -1,5 +1,22 @@
 [
  {
+  "id": "ghost_bartholomew",
+  "name": "ghost.bartholomew.name",
+  "lines": {
+   "greet": "ghost.bartholomew.greet",
+   "waiting": "ghost.bartholomew.waiting",
+   "done": "ghost.bartholomew.done"
+  },
+  "gift": [
+   [
+    "bartholomew_ladle",
+    1
+   ]
+  ],
+  "body": "body_bartholomew",
+  "quest": "g1_labskaus"
+ },
+ {
   "id": "ghost_pim",
   "name": "ghost.pim.name",
   "body": "body_pim",
@@ -17,6 +34,170 @@
   ]
  },
  {
+  "id": "ghost_odile",
+  "name": "ghost.odile.name",
+  "lines": {
+   "greet": "ghost.odile.greet",
+   "waiting": "ghost.odile.waiting",
+   "done": "ghost.odile.done"
+  },
+  "gift": [
+   [
+    "pearl_necklace",
+    1
+   ]
+  ],
+  "body": "body_odile",
+  "quest": "g3_best_grave"
+ },
+ {
+  "id": "ghost_grunwald",
+  "name": "ghost.grunwald.name",
+  "lines": {
+   "greet": "ghost.grunwald.greet",
+   "waiting": "ghost.grunwald.waiting",
+   "done": "ghost.grunwald.done"
+  },
+  "gift": [
+   [
+    "sextant",
+    1
+   ]
+  ],
+  "body": "body_grunwald",
+  "quest": "g4_reckoning"
+ },
+ {
+  "id": "ghost_martin",
+  "name": "ghost.martin.name",
+  "lines": {
+   "greet": "ghost.martin.greet",
+   "waiting": "ghost.martin.waiting",
+   "done": "ghost.martin.done"
+  },
+  "gift": [
+   [
+    "martin_ember",
+    1
+   ]
+  ],
+  "body": "body_martin",
+  "quest": "g5_cold"
+ },
+ {
+  "id": "ghost_ion",
+  "name": "ghost.ion.name",
+  "lines": {
+   "greet": "ghost.ion.greet",
+   "waiting": "ghost.ion.waiting",
+   "done": "ghost.ion.done"
+  },
+  "gift": [
+   [
+    "violin_decor",
+    1
+   ]
+  ],
+  "body": "body_ion",
+  "quest": "g6_violin"
+ },
+ {
+  "id": "ghost_jacques",
+  "name": "ghost.jacques.name",
+  "lines": {
+   "greet": "ghost.jacques.greet",
+   "waiting": "ghost.jacques.waiting",
+   "done": "ghost.jacques.done"
+  },
+  "gift": [],
+  "place": {
+   "map": "grotto"
+  },
+  "quest": "g7_rum",
+  "auto_lay": true
+ },
+ {
+  "id": "ghost_twins",
+  "name": "ghost.twins.name",
+  "lines": {
+   "greet": "ghost.twins.greet",
+   "waiting": "ghost.twins.waiting",
+   "done": "ghost.twins.done"
+  },
+  "gift": [
+   [
+    "twin_medallion",
+    1
+   ]
+  ],
+  "body": "body_aaro",
+  "quest": "g8_closer"
+ },
+ {
+  "id": "ghost_lotta",
+  "name": "ghost.lotta.name",
+  "lines": {
+   "greet": "ghost.lotta.greet",
+   "waiting": "ghost.lotta.waiting",
+   "done": "ghost.lotta.done"
+  },
+  "gift": [],
+  "body": "body_lotta",
+  "quest": "g9_ring"
+ },
+ {
+  "id": "ghost_horn",
+  "name": "ghost.horn.name",
+  "lines": {
+   "greet": "ghost.horn.greet",
+   "waiting": "ghost.horn.waiting",
+   "done": "ghost.horn.done"
+  },
+  "gift": [
+   [
+    "captain_cap",
+    1
+   ]
+  ],
+  "body": "body_horn",
+  "quest": "g10_wrong_burial",
+  "auto_lay": true
+ },
+ {
+  "id": "ghost_pennington",
+  "name": "ghost.pennington.name",
+  "lines": {
+   "greet": "ghost.pennington.greet",
+   "waiting": "ghost.pennington.waiting",
+   "done": "ghost.pennington.done"
+  },
+  "gift": [
+   [
+    "pennington_pen",
+    1
+   ]
+  ],
+  "body": "body_pennington",
+  "quest": "g11_portfolio"
+ },
+ {
+  "id": "ghost_gudmund",
+  "name": "ghost.gudmund.name",
+  "lines": {
+   "greet": "ghost.gudmund.greet",
+   "waiting": "ghost.gudmund.waiting",
+   "done": "ghost.gudmund.done"
+  },
+  "gift": [
+   [
+    "gudmund_hammer",
+    1
+   ]
+  ],
+  "body": "body_gudmund",
+  "quest": "g12_tell_my_son"
+ },
+ {
   "id": "ghost_ulrika",
   "name": "ghost.ulrika.name",
   "old_grave": 0,
@@ -27,5 +208,132 @@
    "done": "ghost.ulrika.done"
   },
   "gift": []
+ },
+ {
+  "id": "ghost_dog",
+  "name": "ghost.dog.name",
+  "lines": {
+   "greet": "ghost.dog.greet",
+   "waiting": "ghost.dog.waiting",
+   "done": "ghost.dog.done"
+  },
+  "gift": [],
+  "place": {
+   "map": "cape",
+   "at": [
+    30,
+    30
+   ],
+   "hmar": true
+  },
+  "quest": "g14_where_master",
+  "auto_lay": true
+ },
+ {
+  "id": "ghost_tobias",
+  "name": "ghost.tobias.name",
+  "lines": {
+   "greet": "ghost.tobias.greet",
+   "waiting": "ghost.tobias.waiting",
+   "done": "ghost.tobias.done"
+  },
+  "gift": [
+   [
+    "helmet_porthole_plus",
+    1
+   ]
+  ],
+  "body": "body_tobias",
+  "quest": "g15_helmet"
+ },
+ {
+  "id": "ghost_emmerich",
+  "name": "ghost.emmerich.name",
+  "lines": {
+   "greet": "ghost.emmerich.greet",
+   "waiting": "ghost.emmerich.waiting",
+   "done": "ghost.emmerich.done"
+  },
+  "gift": [
+   [
+    "full_skerry_map",
+    1
+   ]
+  ],
+  "body": "body_emmerich",
+  "quest": "g16_map"
+ },
+ {
+  "id": "ghost_nilsen",
+  "name": "ghost.nilsen.name",
+  "lines": {
+   "greet": "ghost.nilsen.greet",
+   "waiting": "ghost.nilsen.waiting",
+   "done": "ghost.nilsen.done"
+  },
+  "gift": [],
+  "place": {
+   "map": "village",
+   "at": [
+    19,
+    44
+   ]
+  },
+  "quest": "g17_bell",
+  "auto_lay": true
+ },
+ {
+  "id": "ghost_brigi",
+  "name": "ghost.brigi.name",
+  "lines": {
+   "greet": "ghost.brigi.greet",
+   "waiting": "ghost.brigi.waiting",
+   "done": "ghost.brigi.done"
+  },
+  "gift": [],
+  "body": "body_brigi",
+  "quest": "g18_flowers"
+ },
+ {
+  "id": "ghost_vera",
+  "name": "ghost.vera.name",
+  "lines": {
+   "greet": "ghost.vera.greet",
+   "waiting": "ghost.vera.waiting",
+   "done": "ghost.vera.done"
+  },
+  "gift": [
+   [
+    "vera_pointer",
+    1
+   ]
+  ],
+  "body": "body_vera",
+  "quest": "g19_pupils"
+ },
+ {
+  "id": "ghost_grim",
+  "name": "ghost.grim.name",
+  "lines": {
+   "greet": "ghost.grim.greet",
+   "waiting": "ghost.grim.waiting",
+   "done": "ghost.grim.done"
+  },
+  "gift": [
+   [
+    "grim_drawing",
+    1
+   ]
+  ],
+  "place": {
+   "map": "sea",
+   "at": [
+    24,
+    80
+   ],
+   "act": 4
+  },
+  "quest": "g20_redemption",
+  "auto_lay": true
  }
 ]

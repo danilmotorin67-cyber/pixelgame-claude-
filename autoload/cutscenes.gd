@@ -8,6 +8,8 @@ var playing: bool = false
 var current: String = ""
 var seen: Dictionary = {}
 var history: Array = []
+# Manual story scenes waiting for the next quiet moment on a world map.
+var queued: Array = []
 var _overlay: ColorRect
 var _was_paused: bool = false
 
@@ -22,6 +24,14 @@ func reset() -> void:
 	current = ""
 	seen.clear()
 	history.clear()
+	queued.clear()
+
+
+# A story beat asks for a scene: it plays at the next check (or at once when nothing else is on screen).
+func queue(id: String) -> void:
+	if not seen.has(id) and not queued.has(id):
+		queued.append(id)
+	call_deferred("check")
 
 
 func all() -> Array:
@@ -81,6 +91,9 @@ func check() -> void:
 	if scene == null or scene.get_node_or_null("HUD") == null or scene.get_node_or_null("Player") == null:
 		return
 	if DialogueBox.is_open(scene.get_node("HUD")):
+		return
+	if not queued.is_empty():
+		play(str(queued.pop_front()))
 		return
 	var id := pending(Router.current_map, (scene.get_node("Player") as Node2D).global_position)
 	if id != "":

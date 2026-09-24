@@ -49,7 +49,8 @@
   "whisper": {
    "text": "body.bartholomew.whisper",
    "clue": "item:spice_tin"
-  }
+  },
+  "ghost": "ghost_bartholomew"
  },
  {
   "id": "body_pim",
@@ -74,5 +75,268 @@
    "clue": "item:tin_whistle"
   },
   "ghost": "ghost_pim"
+ },
+ {
+  "id": "body_pennington",
+  "story": true,
+  "known": true,
+  "registry": "reg_pennington",
+  "arrive": {
+   "date": "y1.summer.1",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:navy_coat",
+   "papers:neptune_card"
+  ],
+  "clues_hidden": [
+   "body:grey_beard"
+  ],
+  "items": [
+   "pennington_pen"
+  ],
+  "ghost": "ghost_pennington"
+ },
+ {
+  "id": "body_martin",
+  "story": true,
+  "known": true,
+  "registry": "reg_martin",
+  "arrive": {
+   "date": "y1.summer.1",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:stoker_apron",
+   "body:broad"
+  ],
+  "clues_hidden": [
+   "tattoo:anchor"
+  ],
+  "items": [],
+  "ghost": "ghost_martin"
+ },
+ {
+  "id": "body_vera",
+  "story": true,
+  "registry": "reg_vera",
+  "arrive": {
+   "date": "y1.summer.1",
+   "beach": "wreck_bay"
+  },
+  "clues_visible": [
+   "body:short",
+   "papers:ticket_kronwald"
+  ],
+  "clues_hidden": [
+   "item:chalk"
+  ],
+  "items": [
+   "vera_notebooks"
+  ],
+  "ghost": "ghost_vera",
+  "whisper": {
+   "text": "body.vera.whisper",
+   "clue": "item:chalk"
+  }
+ },
+ {
+  "id": "body_odile",
+  "story": true,
+  "registry": "reg_odile",
+  "arrive": {
+   "date": "y1.summer.16",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:silk_dress"
+  ],
+  "clues_hidden": [
+   "item:opera_glasses"
+  ],
+  "items": [],
+  "ghost": "ghost_odile"
+ },
+ {
+  "id": "body_grunwald",
+  "story": true,
+  "registry": "reg_grunwald",
+  "arrive": {
+   "date": "y1.summer.22",
+   "beach": "wreck_bay"
+  },
+  "clues_visible": [
+   "clothes:navy_coat",
+   "body:grey_beard"
+  ],
+  "clues_hidden": [
+   "item:log_tables"
+  ],
+  "items": [],
+  "ghost": "ghost_grunwald"
+ },
+ {
+  "id": "body_ion",
+  "story": true,
+  "registry": "reg_ion",
+  "arrive": {
+   "date": "y1.autumn.3",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "body:tall"
+  ],
+  "clues_hidden": [
+   "item:rosin"
+  ],
+  "items": [],
+  "ghost": "ghost_ion"
+ },
+ {
+  "id": "body_aaro",
+  "story": true,
+  "registry": "reg_aaro",
+  "arrive": {
+   "date": "y1.autumn.10",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "body:young",
+   "tattoo:swallow"
+  ],
+  "clues_hidden": [
+   "item:twin_half_a"
+  ],
+  "items": [],
+  "ghost": "ghost_twins"
+ },
+ {
+  "id": "body_elna",
+  "story": true,
+  "registry": "reg_elna",
+  "arrive": {
+   "date": "y1.autumn.10",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "body:young",
+   "tattoo:swallow"
+  ],
+  "clues_hidden": [
+   "item:twin_half_e"
+  ],
+  "items": []
+ },
+ {
+  "id": "body_dog_sailor",
+  "story": true,
+  "registry": "reg_dog_sailor",
+  "arrive": {
+   "date": "y1.autumn.12",
+   "beach": "seal_shore"
+  },
+  "clues_visible": [
+   "clothes:whaler_jacket"
+  ],
+  "clues_hidden": [
+   "tattoo:dog"
+  ],
+  "items": []
+ },
+ {
+  "id": "body_lotta",
+  "story": true,
+  "registry": "reg_lotta",
+  "arrive": {
+   "date": "y1.autumn.20",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:wedding_dress"
+  ],
+  "clues_hidden": [
+   "item:ring_forever"
+  ],
+  "items": [
+   "lotta_ring"
+  ],
+  "ghost": "ghost_lotta"
+ },
+ {
+  "id": "body_horn",
+  "story": true,
+  "registry": "reg_horn",
+  "arrive": {
+   "date": "y1.winter.4",
+   "beach": "cape"
+  },
+  "clues_visible": [
+   "clothes:navy_coat",
+   "body:scar_face"
+  ],
+  "clues_hidden": [
+   "tattoo:compass"
+  ],
+  "items": [],
+  "ghost": "ghost_horn"
+ },
+ {
+  "id": "body_emmerich",
+  "story": true,
+  "registry": "reg_emmerich",
+  "arrive": {
+   "date": "y2.spring.12",
+   "beach": "wreck_bay"
+  },
+  "clues_visible": [
+   "clothes:oilskin"
+  ],
+  "clues_hidden": [
+   "item:pencil_case"
+  ],
+  "items": [],
+  "ghost": "ghost_emmerich"
+ },
+ {
+  "id": "body_gudmund",
+  "story": true,
+  "registry": "reg_gudmund",
+  "remains": true,
+  "clues_visible": [
+   "item:hammer_g",
+   "body:broad"
+  ],
+  "clues_hidden": [],
+  "items": [],
+  "ghost": "ghost_gudmund",
+  "known": true
+ },
+ {
+  "id": "body_tobias",
+  "story": true,
+  "registry": "reg_tobias",
+  "remains": true,
+  "clues_visible": [
+   "clothes:diving_suit",
+   "body:tall"
+  ],
+  "clues_hidden": [],
+  "items": [],
+  "ghost": "ghost_tobias",
+  "known": true
+ },
+ {
+  "id": "body_brigi",
+  "story": true,
+  "registry": "reg_brigi",
+  "remains": true,
+  "clues_visible": [
+   "body:no_teeth",
+   "item:gossip_comb"
+  ],
+  "clues_hidden": [],
+  "items": [],
+  "ghost": "ghost_brigi",
+  "known": true
  }
 ]

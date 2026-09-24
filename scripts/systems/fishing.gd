@@ -116,6 +116,9 @@ static func bites(fish: Dictionary, ctx: Dictionary) -> bool:
 		return false
 	if bool(fish.get("legendary", false)) and Game.flag("caught_" + str(fish["id"])):
 		return false
+	# 5.7: the children of the legends swim only in the postgame.
+	if bool(fish.get("postgame", false)) and not Game.flag("children_of_legends"):
+		return false
 	return true
 
 
@@ -131,6 +134,13 @@ static func available(ctx: Dictionary) -> Array:
 static func pick(ctx: Dictionary, rng: RandomNumberGenerator, legend_lure: bool = false) -> Dictionary:
 	var pool := available(ctx)
 	if pool.is_empty() or rng.randf() < TRASH_CHANCE:
+		var junk: String = TRASH[rng.randi_range(0, TRASH.size() - 1)]
+		# 18.6: one catch of rubbish in fifty is a message in a bottle.
+		if rng.randf() < 0.02:
+			junk = "message_bottle"
+		return {"id": junk, "trash": true}
+	# 23.3: the cannery's waste — fish in the bay bite 15% less while Neptune's contract stands.
+	if (ctx["tags"].has("sea_z1") or ctx["tags"].has("coast")) and rng.randf() > Community.bay_fish_mult():
 		return {"id": TRASH[rng.randi_range(0, TRASH.size() - 1)], "trash": true}
 	var legends: Array = []
 	var common: Array = []
@@ -223,7 +233,16 @@ static func land(fish: Dictionary, perfect: bool, tackles: Array, bait: String, 
 	var quality := 1 if fraction > 0.66 else 0
 	if perfect:
 		quality = mini(quality + 1, 2)
+		# A perfect catch of the biggest tenth is flawless — what Priliva waits for (12.4).
+		if fraction > 0.9:
+			quality = 3
+	# Priliva: at high water a better fish 15% more often.
+	if Sea.blessings.has("priliva") and quality < 3 and Clock.tide_height() > 0.3 and rng.randf() < 0.15:
+		quality += 1
 	var count := 1 + extra
+	# Stuzha: under the ice, a second fish a quarter of the time.
+	if Sea.blessings.has("stuzha") and Clock.season == "winter" and Router.current_map == "lagoon" and rng.randf() < 0.25:
+		count += 1
 	if Inventory.add(id, count, quality) <= 0:
 		return {}
 	var xp := 3 + int(fish.get("difficulty", 30)) / 2

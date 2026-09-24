@@ -57,8 +57,8 @@ func entry_for(id: String) -> Dictionary:
 	var key := "%s@%d" % [id, Clock.day_index]
 	if _entry_cache.has(key):
 		return _entry_cache[key]
-	var best: Dictionary = {}
-	var best_priority := -1000000
+	var best: Dictionary = Festivals.schedule_entry(id)
+	var best_priority := int(best.get("priority", -1000000))
 	for e in schedule(id):
 		if e.has("days") and Clock.weekday not in e["days"]:
 			continue

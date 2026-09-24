@@ -207,6 +207,9 @@ func install_part(item_id: String) -> String:
 	if old != "":
 		Inventory.add(old, 1)
 	Events.quest_event.emit("lighthouse_part", item_id)
+	# 5.8 №10: behind the old lens, once the fourth-order Fresnel goes in, a page of Agatha's notes.
+	if item_id == "lens_fresnel_4":
+		Story.add_page(10)
 	return "ok"
 
 
@@ -436,6 +439,8 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 			events.append("lightning_" + hit)
 	var needed := fire_needed()
 	var ships := _resolve_ships(needed, burning, power)
+	if power >= 100.0:
+		Game.set_flag("fire_100")
 	if needed:
 		week_powers.append(power)
 		season_powers.append(power)
@@ -531,7 +536,7 @@ func weekly_salary() -> int:
 		return 0
 	var average := _average(week_powers)
 	var bonus := 0 if week_wrecked else week_bonus
-	var salary := 150 + int(round(5.0 * average)) + bonus
+	var salary := 150 + int(round(5.0 * average)) + bonus + (100 if Game.flag("two_fires") else 0)
 	if Skills.has_profession("night_pilot"):
 		salary = int(round(float(salary) * 1.5))
 	Mail.send("mail.salary_wreck" if week_wrecked else "mail.salary", [salary, int(round(average)), bonus], salary)
@@ -553,7 +558,9 @@ func night_mail(night_index: int) -> void:
 
 
 func _on_hour_changed(hour: int) -> void:
-	if hour == 10 and (Clock.day == 28 or Clock.day_index == retake_day) and inspected_day != Clock.day_index:
+	# On the Great Tide Palm sails on the Queen; his grade comes the morning after the finale (Q4.5).
+	if hour == 10 and (Clock.day == 28 or Clock.day_index == retake_day) and inspected_day != Clock.day_index \
+			and not (Clock.day_index == Story.finale_day and Story.ending in ["", "D"]):
 		inspect()
 
 
@@ -572,6 +579,7 @@ func inspect() -> Dictionary:
 				break
 		inspections += 1
 		retake_day = -1
+		Events.quest_event.emit("inspection_passed", str(result["grade"]))
 		Knowledge.add_points("sea", int(result["notes"]))
 		var items: Array = []
 		if result["grade"] == "excellent" and blueprints_given < BLUEPRINTS.size():

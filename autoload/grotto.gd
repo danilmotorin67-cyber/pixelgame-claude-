@@ -95,6 +95,7 @@ func break_entrance(tool_id: String) -> bool:
 	if Game.flag("grotto_open") or tool_id != "tool_pick" or Clock.day_index < 14 or not band_open(1):
 		return false
 	Game.set_flag("grotto_open")
+	Events.quest_event.emit("grotto_opened", "")
 	return true
 
 
@@ -182,10 +183,12 @@ func previous_hall() -> String:
 	return "ok"
 
 
-func leave() -> void:
+func leave() -> String:
+	var out := Twenty.on_left_grotto() if active else ""
 	active = false
 	world = null
 	_visit_reset()
+	return out
 
 
 # ---- the water returns ----
@@ -206,6 +209,12 @@ func check_water() -> String:
 
 func flood() -> String:
 	var lost := ""
+	Twenty.on_flood()
+	# 12.4: whoever stays in the tenth hall when the water comes back meets Otliva; she holds the water.
+	if hall == 9 and not blessed():
+		Daughters.grant("otliva")
+		leave()
+		return "otliva"
 	if not blessed():
 		var candidates: Array = []
 		for i in Inventory.capacity:
@@ -301,14 +310,14 @@ func interact(cell: Vector2i, tool_id: String = "") -> String:
 		"X":
 			if not _once("page_2"):
 				return "Ниша с вырезанной «Ф» пуста."
-			Knowledge.add_points("rest", 3)
+			Knowledge.add_points("rest", 2)
+			Story.add_page(2)
 			return "Страница журнала Агаты №2 — за нишей с буквой «Ф»."
 		"F":
 			return "Пустой постамент носовой фигуры. Кто-то стоял здесь двести лет."
 		"G":
-			if not _once("cat_grave_7"):
+			if not Cats.find(7):
 				return "«Фитиль VII. Прожил 23 года из вредности.»"
-			Knowledge.add_points("rest", 1)
 			return "Кошачья могила: «Фитиль VII. Прожил 23 года из вредности.»"
 		"C":
 			if not _once(key):
@@ -316,7 +325,9 @@ func interact(cell: Vector2i, tool_id: String = "") -> String:
 			Inventory.add("smuggler_crate", 1)
 			return "Ящик контрабандистов — Q, чтобы вскрыть."
 		"K":
-			return "Останки Жака «Две Бочки». Рядом — пустая фляга." if hall == 4 else "Скелеты в истлевшей парусине. Двадцать безымянных ждут погребения."
+			if hall == Twenty.HALL:
+				return Twenty.take_from_hall()
+			return Ghosts.jacques_remains()
 		"R":
 			if Game.flag("grotto_rubble"):
 				return "Проход открыт."
@@ -325,7 +336,7 @@ func interact(cell: Vector2i, tool_id: String = "") -> String:
 			Game.set_flag("grotto_rubble")
 			return "Завал рухнул. За ним — тишина Зала Двадцати."
 		"E":
-			return "Запертая ниша. На крышке — «Элеонора»."
+			return Twenty.take_eleonora()
 		"$":
 			if not _once(key):
 				return "Пусто."

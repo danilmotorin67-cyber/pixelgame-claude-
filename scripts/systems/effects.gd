@@ -48,5 +48,30 @@ static func apply_one(e: Array) -> void:
 			Collections.mark(str(e[1]), str(e[2]))
 		"shore_gift":
 			Sea.schedule_gift(str(e[1]), str(e[2]), Clock.day_index + int(e[3]))
+		"page":
+			Story.add_page(int(e[1]))
+		"evidence":
+			Story.add_evidence(str(e[1]))
+		"card":
+			Story.add_card(str(e[1]))
+		"fragment":
+			Story.add_fragment(int(e[1]))
+		"neptune":
+			Community.neptune_choice(str(e[1]))
+		"boat":
+			# A boat only ever gets better: the dinghy, the sloop, the bot.
+			var order := ["", "yalik", "sloop", "bot"]
+			if order.find(str(e[1])) > order.find(Sea.boat):
+				Sea.set_boat(str(e[1]))
+		"counter_days":
+			Game.counters[str(e[1])] = Clock.day_index + int(e[2])
+		"counter":
+			Game.counters[str(e[1])] = int(Game.counters.get(str(e[1]), 0)) + (int(e[2]) if e.size() > 2 else 1)
+		"blessing":
+			Daughters.grant(str(e[1]))
+		"call":
+			Story.call_named(str(e[1]))
+		"scene":
+			Cutscenes.queue(str(e[1]))
 		_:
 			push_warning("Unknown effect: %s" % str(e))

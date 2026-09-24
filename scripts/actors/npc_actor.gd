@@ -135,8 +135,29 @@ func interact(_player: Player) -> void:
 	var hud := get_tree().current_scene.get_node("HUD") as CanvasLayer
 	var box := DialogueBox.talk(hud, npc_id)
 	var trades := str(NPCs.info(npc_id).get("trades", ""))
+	# Story business after the day's line: hand-ins, asking for help, Helga's tales (5, 27.3).
+	var options := Story.npc_options(npc_id)
+	if not options.is_empty():
+		var labels: Array = []
+		for o in options:
+			labels.append(str(o[1]))
+		labels.append(Loc.t("story.opt.nothing"))
+		box.say(npc_id, "neutral", Loc.t("story.opt.prompt"), labels)
+		box.finished.connect(func(choice: int) -> void: _story_option(hud, options, choice, trades), CONNECT_ONE_SHOT)
+		return
 	if trades != "" and Economy.shop_closed_reason(trades) == "":
 		box.finished.connect(func(_c: int) -> void: ShopPanel.open(hud, trades), CONNECT_ONE_SHOT)
+
+
+func _story_option(hud: CanvasLayer, options: Array, choice: int, trades: String) -> void:
+	if choice >= 0 and choice < options.size():
+		var answer := Story.npc_action(npc_id, str(options[choice][0]))
+		if answer != "":
+			var reply := DialogueBox.of(hud)
+			reply.say(npc_id, "neutral", answer)
+		return
+	if trades != "" and Economy.shop_closed_reason(trades) == "":
+		ShopPanel.open(hud, trades)
 
 
 func receive_gift(_player: Player) -> void:

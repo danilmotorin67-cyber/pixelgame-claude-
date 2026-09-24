@@ -1,1 +1,785 @@
-[]
+[
+ {
+  "id": "fishers",
+  "name": "room.fishers.name",
+  "slots": [
+   {
+    "id": "coastal",
+    "name": "room.fishers.coastal",
+    "need": 5,
+    "items": [
+     [
+      "fish_cod",
+      1
+     ],
+     [
+      "fish_saithe",
+      1
+     ],
+     [
+      "fish_herring",
+      1
+     ],
+     [
+      "fish_flounder",
+      1
+     ],
+     [
+      "fish_sea_scorpion",
+      1
+     ],
+     [
+      "fish_capelin",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "night",
+    "name": "room.fishers.night",
+    "need": 3,
+    "items": [
+     [
+      "fish_squid",
+      1
+     ],
+     [
+      "fish_eel",
+      1
+     ],
+     [
+      "fish_burbot",
+      1
+     ],
+     [
+      "fish_monkfish",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "fresh",
+    "name": "room.fishers.fresh",
+    "need": 4,
+    "items": [
+     [
+      "fish_sea_trout",
+      1
+     ],
+     [
+      "fish_grayling",
+      1
+     ],
+     [
+      "fish_char",
+      1
+     ],
+     [
+      "fish_perch",
+      1
+     ],
+     [
+      "fish_pike",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "traps",
+    "name": "room.fishers.traps",
+    "need": 5,
+    "items": [
+     [
+      "rock_crab",
+      1
+     ],
+     [
+      "snow_crab",
+      1
+     ],
+     [
+      "lobster",
+      1
+     ],
+     [
+      "shrimp",
+      1
+     ],
+     [
+      "whelk",
+      1
+     ],
+     [
+      "mussels",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "winter",
+    "name": "room.fishers.winter",
+    "need": 4,
+    "items": [
+     [
+      "fish_navaga",
+      1
+     ],
+     [
+      "fish_smelt",
+      1
+     ],
+     [
+      "fish_burbot",
+      1
+     ],
+     [
+      "fish_eelpout",
+      1
+     ],
+     [
+      "fish_wolffish",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "hard",
+    "name": "room.fishers.hard",
+    "need": 3,
+    "items": [
+     [
+      "fish_halibut",
+      1
+     ],
+     [
+      "fish_salmon",
+      1
+     ],
+     [
+      "fish_skate",
+      1
+     ],
+     [
+      "fish_porbeagle",
+      1
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "flag",
+    "fish_market"
+   ],
+   [
+    "flag",
+    "village_pier_fixed"
+   ],
+   [
+    "item",
+    "crab_pot",
+    5
+   ]
+  ],
+  "done": "room.fishers.done",
+  "neptune_price": 20000,
+  "neptune": "room.fishers.neptune"
+ },
+ {
+  "id": "pantry",
+  "name": "room.pantry.name",
+  "slots": [
+   {
+    "id": "spring",
+    "name": "room.pantry.spring",
+    "need": 5,
+    "items": [
+     [
+      "turnip",
+      1
+     ],
+     [
+      "potato",
+      1
+     ],
+     [
+      "pea",
+      1
+     ],
+     [
+      "rhubarb",
+      1
+     ],
+     [
+      "scurvygrass",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "summer",
+    "name": "room.pantry.summer",
+    "need": 5,
+    "items": [
+     [
+      "carrot",
+      1
+     ],
+     [
+      "cabbage",
+      1
+     ],
+     [
+      "rutabaga",
+      1
+     ],
+     [
+      "strawberry",
+      1
+     ],
+     [
+      "samphire",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "autumn",
+    "name": "room.pantry.autumn",
+    "need": 5,
+    "items": [
+     [
+      "pumpkin",
+      1
+     ],
+     [
+      "beet",
+      1
+     ],
+     [
+      "kale",
+      1
+     ],
+     [
+      "leek",
+      1
+     ],
+     [
+      "parsnip",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "excellent",
+    "name": "room.pantry.excellent",
+    "need": 4,
+    "items": [
+     [
+      "potato@2",
+      5
+     ],
+     [
+      "cabbage@2",
+      5
+     ],
+     [
+      "pumpkin@2",
+      5
+     ],
+     [
+      "beet@2",
+      5
+     ]
+    ]
+   },
+   {
+    "id": "barn",
+    "name": "room.pantry.barn",
+    "need": 5,
+    "items": [
+     [
+      "egg",
+      1
+     ],
+     [
+      "duck_egg",
+      1
+     ],
+     [
+      "milk",
+      1
+     ],
+     [
+      "goat_milk",
+      1
+     ],
+     [
+      "wool",
+      1
+     ],
+     [
+      "eider_down",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "shelf",
+    "name": "room.pantry.shelf",
+    "need": 4,
+    "items": [
+     [
+      "cheese",
+      1
+     ],
+     [
+      "heather_honey",
+      1
+     ],
+     [
+      "jam",
+      1
+     ],
+     [
+      "salted_herring",
+      1
+     ],
+     [
+      "smoked_mackerel",
+      1
+     ],
+     [
+      "aquavit",
+      1
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "call",
+    "greenhouse"
+   ]
+  ],
+  "done": "room.pantry.done",
+  "neptune_price": 35000,
+  "neptune": "room.pantry.neptune"
+ },
+ {
+  "id": "workshop",
+  "name": "room.workshop.name",
+  "slots": [
+   {
+    "id": "wood_stone",
+    "name": "room.workshop.wood_stone",
+    "need": 2,
+    "items": [
+     [
+      "driftwood",
+      99
+     ],
+     [
+      "stone",
+      99
+     ]
+    ]
+   },
+   {
+    "id": "metal",
+    "name": "room.workshop.metal",
+    "need": 3,
+    "items": [
+     [
+      "iron_ingot",
+      10
+     ],
+     [
+      "copper_ingot",
+      10
+     ],
+     [
+      "brass",
+      5
+     ]
+    ]
+   },
+   {
+    "id": "glass",
+    "name": "room.workshop.glass",
+    "need": 3,
+    "items": [
+     [
+      "glass",
+      10
+     ],
+     [
+      "resin",
+      10
+     ],
+     [
+      "kelp_ash",
+      20
+     ]
+    ]
+   },
+   {
+    "id": "cloth",
+    "name": "room.workshop.cloth",
+    "need": 3,
+    "items": [
+     [
+      "canvas",
+      10
+     ],
+     [
+      "yarn",
+      10
+     ],
+     [
+      "flax_fiber",
+      5
+     ]
+    ]
+   },
+   {
+    "id": "fuel",
+    "name": "room.workshop.fuel",
+    "need": 2,
+    "items": [
+     [
+      "peat",
+      50
+     ],
+     [
+      "salt",
+      30
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "flag",
+    "mill_open"
+   ],
+   [
+    "flag",
+    "bridge_north"
+   ]
+  ],
+  "done": "room.workshop.done",
+  "neptune_price": 25000,
+  "neptune": "room.workshop.neptune"
+ },
+ {
+  "id": "memorial",
+  "name": "room.memorial.name",
+  "slots": [
+   {
+    "id": "light",
+    "name": "room.memorial.light",
+    "need": 2,
+    "items": [
+     [
+      "wax_candle|tallow_candle",
+      20
+     ],
+     [
+      "memory_lantern",
+      5
+     ]
+    ]
+   },
+   {
+    "id": "flowers",
+    "name": "room.memorial.flowers",
+    "need": 5,
+    "items": [
+     [
+      "armeria",
+      1
+     ],
+     [
+      "heather",
+      1
+     ],
+     [
+      "rosehip",
+      1
+     ],
+     [
+      "beach_pea",
+      1
+     ],
+     [
+      "cottongrass",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "stone",
+    "name": "room.memorial.stone",
+    "need": 3,
+    "items": [
+     [
+      "stone_slab",
+      1
+     ],
+     [
+      "carved_cross",
+      1
+     ],
+     [
+      "cuttlefish_ink",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "letters",
+    "name": "room.memorial.letters",
+    "need": 1,
+    "items": [
+     [
+      "thanks_letter",
+      3
+     ]
+    ]
+   },
+   {
+    "id": "gifts",
+    "name": "room.memorial.gifts",
+    "need": 1,
+    "items": [
+     [
+      "tag:ghost_gift",
+      3
+     ]
+    ]
+   },
+   {
+    "id": "bell",
+    "name": "room.memorial.bell",
+    "need": 1,
+    "items": [
+     [
+      "solvik_bell",
+      1
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "flag",
+    "elmo_bell"
+   ],
+   [
+    "flag",
+    "free_funerals"
+   ],
+   [
+    "flag",
+    "chapel_crypt"
+   ]
+  ],
+  "done": "room.memorial.done",
+  "neptune_price": 0,
+  "neptune": "room.memorial.neptune"
+ },
+ {
+  "id": "navigator",
+  "name": "room.navigator.name",
+  "slots": [
+   {
+    "id": "sea_gifts",
+    "name": "room.navigator.sea_gifts",
+    "need": 4,
+    "items": [
+     [
+      "amber",
+      1
+     ],
+     [
+      "pearl",
+      1
+     ],
+     [
+      "sea_glass",
+      3
+     ],
+     [
+      "whalebone",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "navigation",
+    "name": "room.navigator.navigation",
+    "need": 4,
+    "items": [
+     [
+      "brass",
+      5
+     ],
+     [
+      "old_sea_map",
+      1
+     ],
+     [
+      "stern_lantern",
+      1
+     ],
+     [
+      "buoy_marker",
+      1
+     ]
+    ]
+   },
+   {
+    "id": "shore",
+    "name": "room.navigator.shore",
+    "need": 5,
+    "items": [
+     [
+      "kelp",
+      20
+     ],
+     [
+      "mussels",
+      10
+     ],
+     [
+      "periwinkle",
+      20
+     ],
+     [
+      "sea_urchin",
+      5
+     ],
+     [
+      "samphire",
+      10
+     ]
+    ]
+   },
+   {
+    "id": "cliff",
+    "name": "room.navigator.cliff",
+    "need": 4,
+    "items": [
+     [
+      "eider_down",
+      1
+     ],
+     [
+      "puffin_feather",
+      1
+     ],
+     [
+      "egg_large",
+      1
+     ],
+     [
+      "guano",
+      10
+     ]
+    ]
+   },
+   {
+    "id": "bottles",
+    "name": "room.navigator.bottles",
+    "need": 1,
+    "items": [
+     [
+      "empty_bottle",
+      10
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "flag",
+    "rescue_station"
+   ]
+  ],
+  "done": "room.navigator.done",
+  "neptune_price": 30000,
+  "neptune": "room.navigator.neptune"
+ },
+ {
+  "id": "chest",
+  "name": "room.chest.name",
+  "slots": [
+   {
+    "id": "c2500",
+    "name": "room.chest.c2500",
+    "need": 1,
+    "items": [
+     [
+      "money",
+      2500
+     ]
+    ]
+   },
+   {
+    "id": "c5000",
+    "name": "room.chest.c5000",
+    "need": 1,
+    "items": [
+     [
+      "money",
+      5000
+     ]
+    ]
+   },
+   {
+    "id": "c10000",
+    "name": "room.chest.c10000",
+    "need": 1,
+    "items": [
+     [
+      "money",
+      10000
+     ]
+    ]
+   },
+   {
+    "id": "c25000",
+    "name": "room.chest.c25000",
+    "need": 1,
+    "items": [
+     [
+      "money",
+      25000
+     ]
+    ]
+   }
+  ],
+  "reward": [
+   [
+    "flag",
+    "ferry_saturdays"
+   ],
+   [
+    "flag",
+    "souvenir_shop"
+   ],
+   [
+    "flag",
+    "kronvald_catalog"
+   ],
+   [
+    "flag",
+    "school_open"
+   ]
+  ],
+  "done": "room.chest.done",
+  "neptune_price": 50000,
+  "neptune": "room.chest.neptune"
+ }
+]

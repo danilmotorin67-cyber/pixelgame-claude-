@@ -35,6 +35,9 @@ func _season_of(index: int) -> int:
 func weather_for_day(index: int) -> String:
 	if index < 3 or index == requested_calm:
 		return "clear"
+	var story := Story.weather_on(index)
+	if story != "":
+		return story
 	if forced.has(str(index)):
 		return str(forced[str(index)])
 	var season_idx := _season_of(index)
@@ -78,7 +81,12 @@ func aurora_on(index: int) -> bool:
 
 
 func hmar_chance(index: int) -> float:
-	if Game.act < 2 or index - last_hmar_day < HMAR_MIN_GAP_DAYS:
+	if Story.hmar_on(index):
+		return 1.0
+	# Random Hmar Nights begin after the first White Hmar (Q2.2) — or with Act III whatever happened.
+	if Game.act < 2 or (Game.act < 3 and not Game.flag("hmar_open")) or index - last_hmar_day < HMAR_MIN_GAP_DAYS:
+		return 0.0
+	if Finale.hmar_mult() <= 0.0:
 		return 0.0
 	var festival := Clock.festival_on(index)
 	if not festival.is_empty() and not bool(festival.get("story", false)):
@@ -89,8 +97,7 @@ func hmar_chance(index: int) -> float:
 		chance += 0.05
 	if Game.flag("twenty_buried"):
 		chance *= 0.7
-	if Game.flag("guild_house_restored"):
-		chance *= 0.5
+	chance *= Community.hmar_mult() * Finale.hmar_mult()
 	return chance
 
 

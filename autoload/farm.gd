@@ -142,6 +142,7 @@ func plant(cell: Vector2i, seed_id: String, plot: String = "beds") -> bool:
 		tile["growth"] = 0.0
 		tile["ready"] = false
 		Events.farm_changed.emit()
+		Events.quest_event.emit("planted", seed_id)
 		return true
 	return false
 
@@ -164,6 +165,7 @@ func amend(cell: Vector2i, item_id: String, plot: String = "beds") -> String:
 		tile["guano_season"] = _season_key()
 	tile["flawless_bonus"] = float(tile["flawless_bonus"]) + float(soil.get("flawless", 0.0))
 	Events.farm_changed.emit()
+	Events.quest_event.emit("soil_improved", item_id)
 	return "ok"
 
 
@@ -288,6 +290,27 @@ func guarded(at: Vector2) -> bool:
 		if radius > 0.0 and at.distance_to(Vector2(float(obj["x"]), float(obj["y"]))) <= radius * 16.0 + 8.0:
 			return true
 	return false
+
+
+# Q2.13 failed: the Hmar spoils the cape's crops by `stages` stages (the first stage dies back to seed).
+func setback(stages: int) -> int:
+	var hit := 0
+	for key in tiles:
+		var tile: Dictionary = tiles[key]
+		var plot: String = parse_key(key)[0]
+		if str(tile["crop"]) == "" or indoor(plot):
+			continue
+		var crop := Data.by_id("crops", str(tile["crop"]))
+		var lengths: Array = crop.get("stage_days", [])
+		var target := maxi(0, stage(tile) - stages)
+		var boundary := 0.0
+		for i in mini(target, lengths.size()):
+			boundary += float(lengths[i])
+		tile["growth"] = minf(float(tile["growth"]), boundary)
+		tile["ready"] = false
+		hit += 1
+	Events.farm_changed.emit()
+	return hit
 
 
 # Night step 3: growth, reset watering, storm damage, rain on the new day.

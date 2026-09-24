@@ -254,5 +254,2084 @@
    }
   ],
   "rewards": []
+ },
+ {
+  "id": "q1_2_salt_land",
+  "type": "main",
+  "title": "q.q1_2_salt_land.title",
+  "start": "day_index >= 1",
+  "note": "q.q1_2_salt_land.note",
+  "steps": [
+   {
+    "id": "plant",
+    "text": "q.q1_2_salt_land.plant",
+    "on": "planted",
+    "arg": "seed_turnip",
+    "count": 15
+   },
+   {
+    "id": "kelp",
+    "text": "q.q1_2_salt_land.kelp",
+    "on": "item_added",
+    "arg": "kelp",
+    "count": 10,
+    "count_n": true
+   },
+   {
+    "id": "compost",
+    "text": "q.q1_2_salt_land.compost",
+    "on": "soil_improved",
+    "arg": "compost"
+   },
+   {
+    "id": "harvest",
+    "text": "q.q1_2_salt_land.harvest",
+    "on": "crop_harvested",
+    "arg": "turnip",
+    "count": 5
+   }
+  ],
+  "rewards": [
+   [
+    "money",
+    100
+   ],
+   [
+    "points",
+    "land",
+    3
+   ]
+  ]
+ },
+ {
+  "id": "q1_4_neighbours",
+  "type": "main",
+  "title": "q.q1_4_neighbours.title",
+  "start": "day_index >= 1",
+  "steps": [
+   {
+    "id": "meet",
+    "text": "q.q1_4_neighbours.meet",
+    "on": "npc_met",
+    "count": 16
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "land",
+    5
+   ],
+   [
+    "recipe",
+    "cook_fried_flounder"
+   ]
+  ]
+ },
+ {
+  "id": "q1_7_logbook",
+  "type": "main",
+  "title": "q.q1_7_logbook.title",
+  "start": "day_index >= 3",
+  "steps": [
+   {
+    "id": "open",
+    "text": "q.q1_7_logbook.open",
+    "on": "journal_opened"
+   }
+  ],
+  "rewards": [
+   [
+    "xp",
+    "keeping",
+    20
+   ],
+   [
+    "flag",
+    "pages_collection"
+   ]
+  ]
+ },
+ {
+  "id": "q1_9_mistfolk",
+  "type": "main",
+  "title": "q.q1_9_mistfolk.title",
+  "start": "day_index >= 8",
+  "steps": [
+   {
+    "id": "gathering",
+    "text": "q.q1_9_mistfolk.gathering",
+    "on": "scene",
+    "arg": "ev_story_gathering"
+   },
+   {
+    "id": "guild",
+    "text": "q.q1_9_mistfolk.guild",
+    "on": "guild_opened",
+    "after": "gathering"
+   },
+   {
+    "id": "offering",
+    "text": "q.q1_9_mistfolk.offering",
+    "on": "community_offering",
+    "after": "guild"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    2
+   ]
+  ]
+ },
+ {
+  "id": "q1_10_ebb",
+  "type": "main",
+  "title": "q.q1_10_ebb.title",
+  "start": "day_index >= 14",
+  "note": "q.q1_10_ebb.note",
+  "steps": [
+   {
+    "id": "open",
+    "text": "q.q1_10_ebb.open",
+    "on": "grotto_opened"
+   },
+   {
+    "id": "hall3",
+    "text": "q.q1_10_ebb.hall3",
+    "check": "counter('grotto_deepest') >= 3"
+   },
+   {
+    "id": "page",
+    "text": "q.q1_10_ebb.page",
+    "check": "page(2)"
+   }
+  ],
+  "rewards": [
+   [
+    "xp",
+    "foraging",
+    30
+   ]
+  ]
+ },
+ {
+  "id": "q1_11_neptune",
+  "type": "main",
+  "title": "q.q1_11_neptune.title",
+  "start": "day_index >= 19",
+  "steps": [
+   {
+    "id": "talk",
+    "text": "q.q1_11_neptune.talk",
+    "on": "scene",
+    "arg": "ev_story_stern_offer"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q1_12_inspection",
+  "type": "main",
+  "title": "q.q1_12_inspection.title",
+  "start": "day_index >= 21",
+  "steps": [
+   {
+    "id": "pass",
+    "text": "q.q1_12_inspection.pass",
+    "on": "inspection_passed"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q1_13_false_fire",
+  "type": "main",
+  "title": "q.q1_13_false_fire.title",
+  "start": "day_index >= 27",
+  "steps": [
+   {
+    "id": "watch",
+    "text": "q.q1_13_false_fire.watch",
+    "check": "flag('berta_wrecked')"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "act1_done"
+   ]
+  ]
+ },
+ {
+  "id": "q2_1_morning_after",
+  "type": "main",
+  "title": "q.q2_1_morning_after.title",
+  "start": "day_index >= 28",
+  "note": "q.q2_1_morning_after.note",
+  "steps": [
+   {
+    "id": "bury_pennington",
+    "text": "q.q2_1_morning_after.bury_pennington",
+    "on": "body_buried",
+    "arg": "body_pennington"
+   },
+   {
+    "id": "bury_martin",
+    "text": "q.q2_1_morning_after.bury_martin",
+    "on": "body_buried",
+    "arg": "body_martin"
+   },
+   {
+    "id": "identify_vera",
+    "text": "q.q2_1_morning_after.identify_vera",
+    "on": "body_identified",
+    "arg": "body_vera",
+    "correct": true
+   },
+   {
+    "id": "bury_vera",
+    "text": "q.q2_1_morning_after.bury_vera",
+    "on": "body_buried",
+    "arg": "body_vera"
+   }
+  ],
+  "rewards": [
+   [
+    "page",
+    4
+   ],
+   [
+    "xp",
+    "keeping",
+    50
+   ],
+   [
+    "points",
+    "rest",
+    3
+   ]
+  ]
+ },
+ {
+  "id": "q2_2_white_hmar",
+  "type": "main",
+  "title": "q.q2_2_white_hmar.title",
+  "start": "day_index >= 30",
+  "steps": [
+   {
+    "id": "survive",
+    "text": "q.q2_2_white_hmar.survive",
+    "on": "hmar_survived"
+   }
+  ],
+  "rewards": [
+   [
+    "recipe",
+    "craft_rowan_amulet"
+   ],
+   [
+    "flag",
+    "q2_2_done"
+   ],
+   [
+    "flag",
+    "hmar_open"
+   ],
+   [
+    "points",
+    "rest",
+    3
+   ]
+  ]
+ },
+ {
+  "id": "q2_3_guest",
+  "type": "main",
+  "title": "q.q2_3_guest.title",
+  "start": "day_index >= 32",
+  "steps": [
+   {
+    "id": "gallery",
+    "text": "q.q2_3_guest.gallery",
+    "deliver": "npc_liv",
+    "label": "q.q2_3_guest.gallery.label",
+    "reply": "q.q2_3_guest.gallery.reply",
+    "effects": [
+     [
+      "item",
+      "seed_lightflower",
+      10
+     ],
+     [
+      "flag",
+      "liv_gallery"
+     ]
+    ]
+   },
+   {
+    "id": "plankton",
+    "text": "q.q2_3_guest.plankton",
+    "on": "plankton_sampled",
+    "after": "gallery"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_liv",
+    250
+   ],
+   [
+    "flag",
+    "q2_3_done"
+   ]
+  ]
+ },
+ {
+  "id": "q2_4_bell",
+  "type": "main",
+  "title": "q.q2_4_bell.title",
+  "start": "day_index >= 35",
+  "steps": [
+   {
+    "id": "glass",
+    "text": "q.q2_4_bell.glass",
+    "on": "item_added",
+    "arg": "porthole_glass"
+   },
+   {
+    "id": "tora",
+    "text": "q.q2_4_bell.tora",
+    "deliver": "npc_tora",
+    "items": [
+     [
+      "copper_ingot",
+      10
+     ],
+     [
+      "boards",
+      20
+     ],
+     [
+      "resin",
+      5
+     ],
+     [
+      "porthole_glass",
+      1
+     ]
+    ],
+    "after": "glass",
+    "label": "q.q2_4_bell.tora.label",
+    "reply": "q.q2_4_bell.tora.reply"
+   },
+   {
+    "id": "winch",
+    "text": "q.q2_4_bell.winch",
+    "deliver": "npc_ilm",
+    "items": [
+     [
+      "boards",
+      10
+     ],
+     [
+      "iron_ingot",
+      2
+     ]
+    ],
+    "money": 500,
+    "after": "tora",
+    "effects": [
+     [
+      "counter_days",
+      "bell_ready",
+      2
+     ]
+    ],
+    "label": "q.q2_4_bell.winch.label",
+    "reply": "q.q2_4_bell.winch.reply"
+   },
+   {
+    "id": "ready",
+    "text": "q.q2_4_bell.ready",
+    "check": "counter('bell_ready') > 0 and day_index >= counter('bell_ready')",
+    "after": "winch"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "diving_bell"
+   ],
+   [
+    "flag",
+    "q2_4_done"
+   ],
+   [
+    "mail",
+    "mail.bell_ready"
+   ]
+  ],
+  "flags": [
+   "q2_4_started"
+  ],
+  "mail_on_start": "mail.q2_4"
+ },
+ {
+  "id": "q2_5_kelp",
+  "type": "main",
+  "title": "q.q2_5_kelp.title",
+  "start": "flag('diving_bell')",
+  "steps": [
+   {
+    "id": "level10",
+    "text": "q.q2_5_kelp.level10",
+    "check": "counter('deep_max') >= 10"
+   },
+   {
+    "id": "chest",
+    "text": "q.q2_5_kelp.chest",
+    "on": "agatha_chest"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q2_6_sail",
+  "type": "main",
+  "title": "q.q2_6_sail.title",
+  "start": "day_index >= 39",
+  "steps": [
+   {
+    "id": "order",
+    "text": "q.q2_6_sail.order",
+    "deliver": "npc_erland",
+    "items": [
+     [
+      "boards",
+      40
+     ],
+     [
+      "canvas",
+      3
+     ]
+    ],
+    "money": 1500,
+    "effects": [
+     [
+      "boat",
+      "sloop"
+     ]
+    ],
+    "label": "q.q2_6_sail.order.label",
+    "reply": "q.q2_6_sail.order.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "xp",
+    "seafaring",
+    50
+   ]
+  ],
+  "flags": [
+   "q2_6_started"
+  ],
+  "mail_on_start": "mail.q2_6"
+ },
+ {
+  "id": "q2_7_hermit",
+  "type": "main",
+  "title": "q.q2_7_hermit.title",
+  "start": "boat() == 'sloop' or boat() == 'bot'",
+  "steps": [
+   {
+    "id": "visits",
+    "text": "q.q2_7_hermit.visits",
+    "on": "kai_visit",
+    "count": 3
+   }
+  ],
+  "rewards": [
+   [
+    "page",
+    7
+   ],
+   [
+    "friendship",
+    "npc_kai",
+    150
+   ]
+  ]
+ },
+ {
+  "id": "q2_8_tales",
+  "type": "main",
+  "title": "q.q2_8_tales.title",
+  "start": "day_index >= 28",
+  "note": "q.q2_8_tales.note",
+  "steps": [
+   {
+    "id": "tale1",
+    "text": "q.q2_8_tales.tale1",
+    "check": "tale(1)"
+   },
+   {
+    "id": "tale2",
+    "text": "q.q2_8_tales.tale2",
+    "check": "tale(2)"
+   },
+   {
+    "id": "tale3",
+    "text": "q.q2_8_tales.tale3",
+    "check": "tale(3)"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    3
+   ]
+  ]
+ },
+ {
+  "id": "q2_9_telegraph",
+  "type": "side",
+  "title": "q.q2_9_telegraph.title",
+  "start": "day_index >= 42",
+  "steps": [
+   {
+    "id": "parts",
+    "text": "q.q2_9_telegraph.parts",
+    "deliver": "npc_olaf",
+    "items": [
+     [
+      "copper_wire",
+      10
+     ],
+     [
+      "glass_insulator",
+      5
+     ],
+     [
+      "boards",
+      30
+     ]
+    ],
+    "label": "q.q2_9_telegraph.parts.label",
+    "reply": "q.q2_9_telegraph.parts.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "telegraph_working"
+   ],
+   [
+    "friendship",
+    "npc_olaf",
+    250
+   ]
+  ],
+  "mail_on_start": "mail.q2_9"
+ },
+ {
+  "id": "q2_12_drowned_night",
+  "type": "main",
+  "title": "q.q2_12_drowned_night.title",
+  "start": "day_index >= 81 and year == 1",
+  "steps": [
+   {
+    "id": "ritual",
+    "text": "q.q2_12_drowned_night.ritual",
+    "on": "ritual",
+    "arg": "1"
+   }
+  ],
+  "rewards": [
+   [
+    "mercy",
+    10
+   ],
+   [
+    "shore_gift",
+    "page_23",
+    "cape",
+    1
+   ]
+  ],
+  "mail_on_start": "mail.helga_invite"
+ },
+ {
+  "id": "q2_13_great_hmar",
+  "type": "main",
+  "title": "q.q2_13_great_hmar.title",
+  "start": "day_index >= 83",
+  "note": "q.q2_13_great_hmar.note",
+  "steps": [
+   {
+    "id": "hold",
+    "text": "q.q2_13_great_hmar.hold",
+    "on": "great_hmar",
+    "arg": "won"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "sea",
+    20
+   ],
+   [
+    "points",
+    "rest",
+    20
+   ],
+   [
+    "achievement",
+    "ach_white_hmar"
+   ],
+   [
+    "flag",
+    "act2_done"
+   ]
+  ]
+ },
+ {
+  "id": "q3_1_truth",
+  "type": "main",
+  "title": "q.q3_1_truth.title",
+  "start": "day_index >= 84",
+  "steps": [
+   {
+    "id": "listen",
+    "text": "q.q3_1_truth.listen",
+    "on": "scene",
+    "arg": "ev_story_fortuna_truth"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "board_open"
+   ]
+  ]
+ },
+ {
+  "id": "q3_2_suit",
+  "type": "main",
+  "title": "q.q3_2_suit.title",
+  "start": "day_index >= 84",
+  "steps": [
+   {
+    "id": "pump",
+    "text": "q.q3_2_suit.pump",
+    "on": "item_added",
+    "arg": "hand_pump"
+   },
+   {
+    "id": "tora",
+    "text": "q.q3_2_suit.tora",
+    "deliver": "npc_tora",
+    "items": [
+     [
+      "iron_ingot",
+      15
+     ],
+     [
+      "copper_ingot",
+      10
+     ],
+     [
+      "brass",
+      5
+     ],
+     [
+      "glass",
+      3
+     ],
+     [
+      "oiled_canvas",
+      4
+     ],
+     [
+      "hand_pump",
+      1
+     ]
+    ],
+    "after": "pump",
+    "effects": [
+     [
+      "counter_days",
+      "suit_ready",
+      3
+     ]
+    ],
+    "label": "q.q3_2_suit.tora.label",
+    "reply": "q.q3_2_suit.tora.reply"
+   },
+   {
+    "id": "ready",
+    "text": "q.q3_2_suit.ready",
+    "check": "counter('suit_ready') > 0 and day_index >= counter('suit_ready')",
+    "after": "tora"
+   }
+  ],
+  "rewards": [
+   [
+    "item",
+    "diving_suit",
+    1
+   ],
+   [
+    "flag",
+    "q3_2_done"
+   ]
+  ],
+  "flags": [
+   "q3_2_started"
+  ],
+  "mail_on_start": "mail.q3_2"
+ },
+ {
+  "id": "q3_3_old_solvik",
+  "type": "main",
+  "title": "q.q3_3_old_solvik.title",
+  "start": "flag('q3_2_done')",
+  "steps": [
+   {
+    "id": "reach",
+    "text": "q.q3_3_old_solvik.reach",
+    "check": "counter('deep_max') >= 21"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    5
+   ],
+   [
+    "xp",
+    "diving",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "q3_4_stone",
+  "type": "main",
+  "title": "q.q3_4_stone.title",
+  "start": "day_index >= 84",
+  "steps": [
+   {
+    "id": "f1",
+    "text": "q.q3_4_stone.f1",
+    "check": "fragment(1)"
+   },
+   {
+    "id": "f2",
+    "text": "q.q3_4_stone.f2",
+    "check": "fragment(2)"
+   },
+   {
+    "id": "f3",
+    "text": "q.q3_4_stone.f3",
+    "check": "fragment(3)"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    5
+   ]
+  ]
+ },
+ {
+  "id": "q3_5_case",
+  "type": "main",
+  "title": "q.q3_5_case.title",
+  "start": "flag('board_open')",
+  "steps": [
+   {
+    "id": "all",
+    "text": "q.q3_5_case.all",
+    "check": "evidence() >= 7"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "q3_7_stern_returns",
+  "type": "main",
+  "title": "q.q3_7_stern_returns.title",
+  "start": "day_index >= 131",
+  "steps": [
+   {
+    "id": "talk",
+    "text": "q.q3_7_stern_returns.talk",
+    "on": "scene",
+    "arg": "ev_story_stern_returns"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q3_8_safe",
+  "type": "main",
+  "title": "q.q3_8_safe.title",
+  "start": "evidence() >= 4 and day_index >= 84",
+  "steps": [
+   {
+    "id": "open",
+    "text": "q.q3_8_safe.open",
+    "on": "safe_opened"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q3_9_ambush",
+  "type": "main",
+  "title": "q.q3_9_ambush.title",
+  "start": "day_index >= 150",
+  "steps": [
+   {
+    "id": "ambush",
+    "text": "q.q3_9_ambush.ambush",
+    "on": "evidence",
+    "arg": "lantern"
+   }
+  ],
+  "rewards": [],
+  "mail_on_start": "mail.q3_9"
+ },
+ {
+  "id": "q3_10_bell_ringer",
+  "type": "main",
+  "title": "q.q3_10_bell_ringer.title",
+  "start": "flag('q3_2_done')",
+  "steps": [
+   {
+    "id": "boss",
+    "text": "q.q3_10_bell_ringer.boss",
+    "on": "boss",
+    "arg": "bell_ringer"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q3_11_gills",
+  "type": "main",
+  "title": "q.q3_11_gills.title",
+  "start": "blessings() >= 5",
+  "steps": [
+   {
+    "id": "stone",
+    "text": "q.q3_11_gills.stone",
+    "on": "scene",
+    "arg": "ev_story_rann_gills"
+   }
+  ],
+  "rewards": [
+   [
+    "item",
+    "rann_gills",
+    1
+   ],
+   [
+    "flag",
+    "gills_of_rann"
+   ]
+  ]
+ },
+ {
+  "id": "sq_treska_aground",
+  "type": "side",
+  "title": "q.sq_treska_aground.title",
+  "start": "flag('quest_ready_treska_aground')",
+  "steps": [
+   {
+    "id": "refloat",
+    "text": "q.sq_treska_aground.refloat",
+    "on": "treska_refloated"
+   },
+   {
+    "id": "chest",
+    "text": "q.sq_treska_aground.chest",
+    "deliver": "npc_hedda",
+    "after": "refloat",
+    "label": "q.sq_treska_aground.chest.label",
+    "reply": "q.sq_treska_aground.chest.reply",
+    "effects": [
+     [
+      "page",
+      9
+     ],
+     [
+      "evidence",
+      "hedda"
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_hedda",
+    150
+   ]
+  ]
+ },
+ {
+  "id": "sq_doctor_signature",
+  "type": "side",
+  "title": "q.sq_doctor_signature.title",
+  "start": "flag('evidence_doctor_ready')",
+  "steps": [
+   {
+    "id": "copies",
+    "text": "q.sq_doctor_signature.copies",
+    "on": "certificates_taken"
+   },
+   {
+    "id": "sign",
+    "text": "q.sq_doctor_signature.sign",
+    "deliver": "npc_magnus",
+    "items": [
+     [
+      "death_certificates",
+      1
+     ]
+    ],
+    "after": "copies",
+    "label": "q.sq_doctor_signature.sign.label",
+    "reply": "q.sq_doctor_signature.sign.reply",
+    "effects": [
+     [
+      "evidence",
+      "doctor"
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_magnus",
+    150
+   ]
+  ]
+ },
+ {
+  "id": "sq_death_archive",
+  "type": "side",
+  "title": "q.sq_death_archive.title",
+  "start": "hearts('npc_olaf') >= 4 and act >= 3",
+  "steps": [
+   {
+    "id": "copies",
+    "text": "q.sq_death_archive.copies",
+    "deliver": "npc_olaf",
+    "items": [
+     [
+      "paper",
+      5
+     ],
+     [
+      "cuttlefish_ink",
+      1
+     ]
+    ],
+    "label": "q.sq_death_archive.copies.label",
+    "reply": "q.sq_death_archive.copies.reply",
+    "effects": [
+     [
+      "evidence",
+      "doctor"
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_olaf",
+    150
+   ]
+  ]
+ },
+ {
+  "id": "sq_intercept",
+  "type": "side",
+  "title": "q.sq_intercept.title",
+  "start": "hearts('npc_olaf') >= 4 and flag('telegraph_working') and act >= 3",
+  "steps": [
+   {
+    "id": "night",
+    "text": "q.sq_intercept.night",
+    "on": "telegram_caught"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_olaf",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "sq_kerosene_kai",
+  "type": "side",
+  "title": "q.sq_kerosene_kai.title",
+  "start": "act >= 3 and hearts('npc_kai') >= 2 and not flag('crypt_open')",
+  "steps": [
+   {
+    "id": "cans",
+    "text": "q.sq_kerosene_kai.cans",
+    "deliver": "npc_kai",
+    "items": [
+     [
+      "kerosene",
+      5
+     ]
+    ],
+    "label": "q.sq_kerosene_kai.cans.label",
+    "reply": "q.sq_kerosene_kai.cans.reply",
+    "effects": [
+     [
+      "flag",
+      "crypt_open"
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_kai",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "sq_berta_hold",
+  "type": "side",
+  "title": "q.sq_berta_hold.title",
+  "start": "act >= 3 and flag('diving_bell') and (boat() == 'sloop' or boat() == 'bot')",
+  "steps": [
+   {
+    "id": "dive",
+    "text": "q.sq_berta_hold.dive",
+    "on": "evidence",
+    "arg": "berta_hold"
+   }
+  ],
+  "rewards": [
+   [
+    "xp",
+    "diving",
+    50
+   ]
+  ]
+ },
+ {
+  "id": "q3_6_tuve",
+  "type": "side",
+  "title": "q.q3_6_tuve.title",
+  "start": "flag('tuve_skin_quest')",
+  "steps": [
+   {
+    "id": "skin",
+    "text": "q.q3_6_tuve.skin",
+    "deliver": "npc_tuve",
+    "items": [
+     [
+      "tuve_skin",
+      1
+     ]
+    ],
+    "label": "q.q3_6_tuve.skin.label",
+    "reply": "q.q3_6_tuve.skin.reply",
+    "effects": [
+     [
+      "call",
+      "tuve_choice"
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_tuve",
+    300
+   ]
+  ]
+ },
+ {
+  "id": "q4_1_letter",
+  "type": "main",
+  "title": "q.q4_1_letter.title",
+  "start": "day_index >= 168",
+  "steps": [
+   {
+    "id": "find",
+    "text": "q.q4_1_letter.find",
+    "on": "item_added",
+    "arg": "agatha_letter"
+   }
+  ],
+  "rewards": [
+   [
+    "mail",
+    "mail.agatha_letter"
+   ]
+  ],
+  "on_start": [
+   [
+    "shore",
+    "agatha_letter",
+    "cape",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "q4_2_team",
+  "type": "main",
+  "title": "q.q4_2_team.title",
+  "start": "quest_state('q4_1_letter') == 'done'",
+  "steps": [
+   {
+    "id": "ask",
+    "text": "q.q4_2_team.ask",
+    "on": "ally"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q4_3_stone",
+  "type": "main",
+  "title": "q.q4_3_stone.title",
+  "start": "day_index >= 168",
+  "steps": [
+   {
+    "id": "join",
+    "text": "q.q4_3_stone.join",
+    "on": "stone_whole"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "sea",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "q4_4_drowned_night_2",
+  "type": "main",
+  "title": "q.q4_4_drowned_night_2.title",
+  "start": "day_index >= 193 and year >= 2",
+  "steps": [
+   {
+    "id": "ritual",
+    "text": "q.q4_4_drowned_night_2.ritual",
+    "on": "ritual",
+    "arg": "2"
+   }
+  ],
+  "rewards": [
+   [
+    "mercy",
+    10
+   ]
+  ]
+ },
+ {
+  "id": "q4_5_great_tide",
+  "type": "main",
+  "title": "q.q4_5_great_tide.title",
+  "start": "day_index >= 195",
+  "steps": [
+   {
+    "id": "hold",
+    "text": "q.q4_5_great_tide.hold",
+    "on": "finale",
+    "arg": "fire"
+   },
+   {
+    "id": "path",
+    "text": "q.q4_5_great_tide.path",
+    "on": "finale",
+    "arg": "path",
+    "after": "hold"
+   },
+   {
+    "id": "halls",
+    "text": "q.q4_5_great_tide.halls",
+    "on": "finale",
+    "arg": "choice",
+    "after": "path"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "finale_done"
+   ]
+  ]
+ },
+ {
+  "id": "q4_6_court",
+  "type": "main",
+  "title": "q.q4_6_court.title",
+  "start": "flag('finale_done')",
+  "steps": [
+   {
+    "id": "morning",
+    "text": "q.q4_6_court.morning",
+    "on": "court"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q2_10_twenty",
+  "type": "main",
+  "title": "q.q2_10_twenty.title",
+  "start": "day_index >= 56",
+  "note": "q.q2_10_twenty.note",
+  "steps": [
+   {
+    "id": "rubble",
+    "text": "q.q2_10_twenty.rubble",
+    "check": "flag('grotto_rubble')"
+   },
+   {
+    "id": "found",
+    "text": "q.q2_10_twenty.found",
+    "check": "flag('twenty_found')",
+    "after": "rubble"
+   },
+   {
+    "id": "carry",
+    "text": "q.q2_10_twenty.carry",
+    "check": "twenty_out() >= 19",
+    "after": "found"
+   },
+   {
+    "id": "bury",
+    "text": "q.q2_10_twenty.bury",
+    "check": "twenty_buried() >= 20",
+    "after": "found"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "q2_11_fortuna_voice",
+  "type": "main",
+  "title": "q.q2_11_fortuna_voice.title",
+  "start": "twenty_buried() >= 10",
+  "steps": [
+   {
+    "id": "hear",
+    "text": "q.q2_11_fortuna_voice.hear",
+    "check": "flag('fortuna_voice')"
+   },
+   {
+    "id": "eleonora",
+    "text": "q.q2_11_fortuna_voice.eleonora",
+    "check": "flag('eleonora_buried')"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g1_labskaus",
+  "type": "ghost",
+  "title": "q.g1_labskaus.title",
+  "steps": [
+   {
+    "id": "cook",
+    "text": "q.g1_labskaus.cook",
+    "deliver": "ghost_bartholomew",
+    "items": [
+     [
+      "labskaus@2",
+      1
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "recipe",
+    "cook_labskaus_cook"
+   ],
+   [
+    "money",
+    500
+   ]
+  ],
+  "start_effects": [
+   [
+    "recipe",
+    "cook_labskaus"
+   ]
+  ]
+ },
+ {
+  "id": "g3_best_grave",
+  "type": "ghost",
+  "title": "q.g3_best_grave.title",
+  "steps": [
+   {
+    "id": "grave",
+    "text": "q.g3_best_grave.grave",
+    "check": "grave_quality('body_odile') >= 100 and near_grave('body_odile', 'fence') >= 1 and near_grave('body_odile', 'decor_flower_box') >= 3"
+   }
+  ],
+  "rewards": [
+   [
+    "money",
+    1000
+   ]
+  ]
+ },
+ {
+  "id": "g4_reckoning",
+  "type": "ghost",
+  "title": "q.g4_reckoning.title",
+  "steps": [
+   {
+    "id": "fix",
+    "text": "q.g4_reckoning.fix",
+    "on": "sextant_fix"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g5_cold",
+  "type": "ghost",
+  "title": "q.g5_cold.title",
+  "steps": [
+   {
+    "id": "fire",
+    "text": "q.g5_cold.fire",
+    "on": "martin_fire"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g6_violin",
+  "type": "ghost",
+  "title": "q.g6_violin.title",
+  "steps": [
+   {
+    "id": "violin",
+    "text": "q.g6_violin.violin",
+    "deliver": "ghost_ion",
+    "items": [
+     [
+      "ion_violin",
+      1
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "tavern_music_ion"
+   ],
+   [
+    "flag",
+    "festival_friend_bonus"
+   ]
+  ]
+ },
+ {
+  "id": "g7_rum",
+  "type": "ghost",
+  "title": "q.g7_rum.title",
+  "steps": [
+   {
+    "id": "cache",
+    "text": "q.g7_rum.cache",
+    "on": "jacques_cache"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "shadow_fair"
+   ]
+  ]
+ },
+ {
+  "id": "g8_closer",
+  "type": "ghost",
+  "title": "q.g8_closer.title",
+  "steps": [
+   {
+    "id": "together",
+    "text": "q.g8_closer.together",
+    "check": "twins_together()"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "twins_peace"
+   ]
+  ]
+ },
+ {
+  "id": "g9_ring",
+  "type": "ghost",
+  "title": "q.g9_ring.title",
+  "steps": [
+   {
+    "id": "ring",
+    "text": "q.g9_ring.ring",
+    "deliver": "npc_olaf",
+    "items": [
+     [
+      "lotta_ring",
+      1
+     ]
+    ],
+    "label": "q.g9_ring.ring.label",
+    "reply": "q.g9_ring.ring.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "recipe",
+    "cook_last_supper_pie"
+   ]
+  ]
+ },
+ {
+  "id": "g10_wrong_burial",
+  "type": "ghost",
+  "title": "q.g10_wrong_burial.title",
+  "steps": [
+   {
+    "id": "exhume",
+    "text": "q.g10_wrong_burial.exhume",
+    "on": "exhumed",
+    "arg": "body_horn"
+   },
+   {
+    "id": "salute",
+    "text": "q.g10_wrong_burial.salute",
+    "on": "horn_salute",
+    "after": "exhume"
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g11_portfolio",
+  "type": "ghost",
+  "title": "q.g11_portfolio.title",
+  "steps": [
+   {
+    "id": "portfolio",
+    "text": "q.g11_portfolio.portfolio",
+    "deliver": "ghost_pennington",
+    "items": [
+     [
+      "pennington_portfolio",
+      1
+     ]
+    ],
+    "effects": [
+     [
+      "evidence",
+      "portfolio"
+     ]
+    ]
+   }
+  ],
+  "rewards": []
+ },
+ {
+  "id": "g12_tell_my_son",
+  "type": "ghost",
+  "title": "q.g12_tell_my_son.title",
+  "steps": [
+   {
+    "id": "einar",
+    "text": "q.g12_tell_my_son.einar",
+    "check": "flag('gudmund_truth')"
+   }
+  ],
+  "rewards": [
+   [
+    "card",
+    "gudmund_truth"
+   ]
+  ]
+ },
+ {
+  "id": "g14_where_master",
+  "type": "ghost",
+  "title": "q.g14_where_master.title",
+  "steps": [
+   {
+    "id": "grave",
+    "text": "q.g14_where_master.grave",
+    "check": "dog_master_buried()"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "ghost_dog"
+   ]
+  ]
+ },
+ {
+  "id": "g15_helmet",
+  "type": "ghost",
+  "title": "q.g15_helmet.title",
+  "steps": [
+   {
+    "id": "helmet",
+    "text": "q.g15_helmet.helmet",
+    "deliver": "ghost_tobias",
+    "items": [
+     [
+      "tobias_helmet",
+      1
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "tobias_blueprint"
+   ]
+  ]
+ },
+ {
+  "id": "g16_map",
+  "type": "ghost",
+  "title": "q.g16_map.title",
+  "steps": [
+   {
+    "id": "teeth",
+    "text": "q.g16_map.teeth",
+    "on": "sketch",
+    "arg": "teeth"
+   },
+   {
+    "id": "eider",
+    "text": "q.g16_map.eider",
+    "on": "sketch",
+    "arg": "eider_isle"
+   },
+   {
+    "id": "dead_fire",
+    "text": "q.g16_map.dead_fire",
+    "on": "sketch",
+    "arg": "dead_fire"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "nameless_isle_open"
+   ]
+  ]
+ },
+ {
+  "id": "g17_bell",
+  "type": "ghost",
+  "title": "q.g17_bell.title",
+  "steps": [
+   {
+    "id": "bell",
+    "text": "q.g17_bell.bell",
+    "check": "room_slot('memorial', 'bell')"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "rest",
+    10
+   ],
+   [
+    "flag",
+    "crypt_fresco"
+   ]
+  ]
+ },
+ {
+  "id": "g18_flowers",
+  "type": "ghost",
+  "title": "q.g18_flowers.title",
+  "steps": [
+   {
+    "id": "flower",
+    "text": "q.g18_flowers.flower",
+    "deliver": "ghost_brigi",
+    "items": [
+     [
+      "armeria|heather|rosehip|cottongrass|beach_pea",
+      1
+     ]
+    ]
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "gift_journal"
+   ]
+  ]
+ },
+ {
+  "id": "g19_pupils",
+  "type": "ghost",
+  "title": "q.g19_pupils.title",
+  "steps": [
+   {
+    "id": "notebooks",
+    "text": "q.g19_pupils.notebooks",
+    "deliver": "npc_ingrid",
+    "items": [
+     [
+      "vera_notebooks",
+      1
+     ]
+    ],
+    "label": "q.g19_pupils.notebooks.label",
+    "reply": "q.g19_pupils.notebooks.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_ingrid",
+    250
+   ]
+  ]
+ },
+ {
+  "id": "g20_redemption",
+  "type": "ghost",
+  "title": "q.g20_redemption.title",
+  "steps": [
+   {
+    "id": "court",
+    "text": "q.g20_redemption.court",
+    "check": "resolution() == 'trial' or resolution() == 'pardon' or resolution() == 'arrest'"
+   }
+  ],
+  "rewards": [
+   [
+    "achievement",
+    "ach_grim_redeemed"
+   ]
+  ]
+ },
+ {
+  "id": "club_1_owl",
+  "type": "club",
+  "title": "q.club_1_owl.title",
+  "start": "hearts('npc_nils') >= 2 or hearts('npc_freya') >= 2",
+  "steps": [
+   {
+    "id": "owl",
+    "text": "q.club_1_owl.owl",
+    "on": "owl_seen"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "club_2_watch",
+  "type": "club",
+  "title": "q.club_2_watch.title",
+  "start": "quest_state('club_1_owl') == 'done'",
+  "steps": [
+   {
+    "id": "watch",
+    "text": "q.club_2_watch.watch",
+    "on": "night_watch"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "club_3_cats",
+  "type": "club",
+  "title": "q.club_3_cats.title",
+  "start": "quest_state('club_2_watch') == 'done'",
+  "steps": [
+   {
+    "id": "cats",
+    "text": "q.club_3_cats.cats",
+    "check": "cats() >= 3"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "club_4_real",
+  "type": "club",
+  "title": "q.club_4_real.title",
+  "start": "quest_state('club_3_cats') == 'done'",
+  "steps": [
+   {
+    "id": "ghost",
+    "text": "q.club_4_real.ghost",
+    "on": "ghost_talk"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "club_5_seal",
+  "type": "club",
+  "title": "q.club_5_seal.title",
+  "start": "quest_state('club_4_real') == 'done'",
+  "steps": [
+   {
+    "id": "out",
+    "text": "q.club_5_seal.out",
+    "on": "seal_expedition"
+   },
+   {
+    "id": "back",
+    "text": "q.club_5_seal.back",
+    "on": "map",
+    "arg": "village",
+    "after": "out"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ]
+  ]
+ },
+ {
+  "id": "club_6_badges",
+  "type": "club",
+  "title": "q.club_6_badges.title",
+  "start": "quest_state('club_5_seal') == 'done'",
+  "steps": [
+   {
+    "id": "badges",
+    "text": "q.club_6_badges.badges",
+    "deliver": "npc_nils",
+    "items": [
+     [
+      "brass_badge",
+      2
+     ]
+    ],
+    "label": "q.club_6_badges.badges.label",
+    "reply": "q.club_6_badges.badges.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "friendship",
+    "npc_nils",
+    100
+   ],
+   [
+    "friendship",
+    "npc_freya",
+    100
+   ],
+   [
+    "item",
+    "ghost_club_badge",
+    1
+   ],
+   [
+    "flag",
+    "club_official"
+   ]
+  ],
+  "flags": [
+   "club_badges"
+  ]
+ },
+ {
+  "id": "sq_clause_47",
+  "type": "side",
+  "title": "q.sq_clause_47.title",
+  "start": "neptune() == 'signed' and has_evidence('portfolio')",
+  "note": "q.sq_clause_47.note",
+  "steps": [
+   {
+    "id": "coffin",
+    "text": "q.sq_clause_47.coffin",
+    "deliver": "npc_knud",
+    "items": [
+     [
+      "boards",
+      10
+     ]
+    ],
+    "label": "q.sq_clause_47.coffin.label",
+    "reply": "q.sq_clause_47.coffin.reply"
+   },
+   {
+    "id": "certificate",
+    "text": "q.sq_clause_47.certificate",
+    "deliver": "npc_magnus",
+    "after": "coffin",
+    "label": "q.sq_clause_47.certificate.label",
+    "reply": "q.sq_clause_47.certificate.reply"
+   },
+   {
+    "id": "service",
+    "text": "q.sq_clause_47.service",
+    "deliver": "npc_benedict",
+    "after": "certificate",
+    "label": "q.sq_clause_47.service.label",
+    "reply": "q.sq_clause_47.service.reply"
+   },
+   {
+    "id": "epitaph",
+    "text": "q.sq_clause_47.epitaph",
+    "deliver": "npc_sigrid",
+    "after": "service",
+    "label": "q.sq_clause_47.epitaph.label",
+    "reply": "q.sq_clause_47.epitaph.reply"
+   },
+   {
+    "id": "wake",
+    "text": "q.sq_clause_47.wake",
+    "on": "scene",
+    "arg": "ev_story_own_funeral",
+    "after": "epitaph"
+   }
+  ],
+  "rewards": [
+   [
+    "achievement",
+    "ach_own_funeral"
+   ]
+  ]
+ },
+ {
+  "id": "pg_two_fires",
+  "type": "main",
+  "title": "q.pg_two_fires.title",
+  "start": "act >= 5",
+  "steps": [
+   {
+    "id": "build",
+    "text": "q.pg_two_fires.build",
+    "deliver": "npc_ilm",
+    "items": [
+     [
+      "stone",
+      500
+     ],
+     [
+      "boards",
+      200
+     ],
+     [
+      "iron_ingot",
+      50
+     ],
+     [
+      "brass",
+      20
+     ],
+     [
+      "lens_fresnel_2",
+      1
+     ]
+    ],
+    "label": "q.pg_two_fires.build.label",
+    "reply": "q.pg_two_fires.build.reply"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "two_fires"
+   ],
+   [
+    "achievement",
+    "ach_two_fires"
+   ]
+  ]
+ },
+ {
+  "id": "pg_children_of_legends",
+  "type": "main",
+  "title": "q.pg_children_of_legends.title",
+  "start": "act >= 5 and year >= 3",
+  "steps": [
+   {
+    "id": "codger",
+    "text": "q.pg_children_of_legends.codger",
+    "on": "fish_caught",
+    "arg": "fish_codger_son"
+   },
+   {
+    "id": "herring",
+    "text": "q.pg_children_of_legends.herring",
+    "on": "fish_caught",
+    "arg": "fish_herring_princess"
+   },
+   {
+    "id": "halibut",
+    "text": "q.pg_children_of_legends.halibut",
+    "on": "fish_caught",
+    "arg": "fish_golden_calf"
+   },
+   {
+    "id": "grandchild",
+    "text": "q.pg_children_of_legends.grandchild",
+    "on": "fish_caught",
+    "arg": "fish_granddaughter"
+   },
+   {
+    "id": "lantern",
+    "text": "q.pg_children_of_legends.lantern",
+    "on": "fish_caught",
+    "arg": "fish_lantern_fry"
+   }
+  ],
+  "rewards": [
+   [
+    "points",
+    "sea",
+    30
+   ],
+   [
+    "achievement",
+    "ach_children_of_legends"
+   ]
+  ],
+  "start_effects": [
+   [
+    "flag",
+    "children_of_legends"
+   ]
+  ]
+ },
+ {
+  "id": "pg_poseidon",
+  "type": "main",
+  "title": "q.pg_poseidon.title",
+  "start": "flag('poseidon_open')",
+  "steps": [
+   {
+    "id": "evidence",
+    "text": "q.pg_poseidon.evidence",
+    "check": "evidence() >= 5"
+   },
+   {
+    "id": "palm",
+    "text": "q.pg_poseidon.palm",
+    "check": "day == 28",
+    "after": "evidence"
+   }
+  ],
+  "rewards": [
+   [
+    "flag",
+    "neptune_ruined"
+   ],
+   [
+    "flag",
+    "stern_arrested"
+   ],
+   [
+    "mail",
+    "mail.poseidon_sunk"
+   ],
+   [
+    "achievement",
+    "ach_poseidon"
+   ]
+  ]
  }
 ]

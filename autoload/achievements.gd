@@ -8,6 +8,10 @@ func unlock(id: String) -> void:
 	unlocked[id] = true
 	Events.achievement_unlocked.emit(id)
 
+func reset() -> void:
+	unlocked.clear()
+
+
 func serialize() -> Dictionary:
 	return {"unlocked": unlocked}
 

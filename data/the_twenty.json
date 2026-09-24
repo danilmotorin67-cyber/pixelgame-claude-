@@ -1,7 +1,259 @@
 [
-  {
-    "id": "t20_01",
-    "name": "August Wald",
-    "role": "captain"
-  }
+ {
+  "id": "t20_01",
+  "key": "august",
+  "name": "Август Вальд",
+  "role": "twenty.august.role",
+  "desc": "twenty.august.desc",
+  "age": 45,
+  "clues": [
+   "build:tall",
+   "bone:collarbone",
+   "item:compass_e"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_02",
+  "key": "lars",
+  "name": "Ларс Хёгг",
+  "role": "twenty.lars.role",
+  "desc": "twenty.lars.desc",
+  "age": 38,
+  "clues": [
+   "build:medium",
+   "item:dividers"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_03",
+  "key": "bjarne",
+  "name": "Бьярне Сколд",
+  "role": "twenty.bjarne.role",
+  "desc": "twenty.bjarne.desc",
+  "age": 41,
+  "clues": [
+   "build:large",
+   "bone:nose",
+   "item:bosun_whistle"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_04",
+  "key": "til",
+  "name": "Тиль Моргенштерн",
+  "role": "twenty.til.role",
+  "desc": "twenty.til.desc",
+  "age": 50,
+  "clues": [
+   "build:broad",
+   "item:notched_spoon"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_05",
+  "key": "jens",
+  "name": "Йенс Аск",
+  "role": "twenty.jens.role",
+  "desc": "twenty.jens.desc",
+  "age": 39,
+  "clues": [
+   "bone:left_hand",
+   "item:chisel"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_06",
+  "key": "mika",
+  "name": "Мика Лунд",
+  "role": "twenty.mika.role",
+  "desc": "twenty.mika.desc",
+  "age": 16,
+  "clues": [
+   "build:small",
+   "item:slingshot"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_07",
+  "key": "ole",
+  "name": "Оле Бранд",
+  "role": "twenty.ole.role",
+  "desc": "twenty.ole.desc",
+  "age": 27,
+  "clues": [
+   "item:dice",
+   "ear:left_ring"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_08",
+  "key": "sven",
+  "name": "Свен Бранд",
+  "role": "twenty.sven.role",
+  "desc": "twenty.sven.desc",
+  "age": 27,
+  "clues": [
+   "item:dice",
+   "ear:right_ring"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_09",
+  "key": "hakon",
+  "name": "Хакон Ульвен",
+  "role": "twenty.hakon.role",
+  "desc": "twenty.hakon.desc",
+  "age": 33,
+  "clues": [
+   "bone:shin",
+   "item:walrus_pipe"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_10",
+  "key": "per",
+  "name": "Пер Эстлунд",
+  "role": "twenty.per.role",
+  "desc": "twenty.per.desc",
+  "age": 29,
+  "clues": [
+   "build:tall",
+   "item:knife_pe"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_11",
+  "key": "greta",
+  "name": "Грета Холм",
+  "role": "twenty.greta.role",
+  "desc": "twenty.greta.desc",
+  "age": 50,
+  "clues": [
+   "build:short",
+   "item:midwife_bag"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_12",
+  "key": "erik",
+  "name": "Эрик Холм",
+  "role": "twenty.erik.role",
+  "desc": "twenty.erik.desc",
+  "age": 20,
+  "clues": [
+   "build:medium",
+   "item:flute"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_13",
+  "key": "daniel",
+  "name": "Даниэль Кросс",
+  "role": "twenty.daniel.role",
+  "desc": "twenty.daniel.desc",
+  "age": 44,
+  "clues": [
+   "item:sail_needle"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_14",
+  "key": "juhan",
+  "name": "Юхан Вик",
+  "role": "twenty.juhan.role",
+  "desc": "twenty.juhan.desc",
+  "age": 31,
+  "clues": [
+   "bone:ribs",
+   "item:shell_amulet"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_15",
+  "key": "thomas",
+  "name": "Томас Фирт",
+  "role": "twenty.thomas.role",
+  "desc": "twenty.thomas.desc",
+  "age": 47,
+  "clues": [
+   "item:cooper_hammer"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_16",
+  "key": "ragnar",
+  "name": "Рагнар Сёль",
+  "role": "twenty.ragnar.role",
+  "desc": "twenty.ragnar.desc",
+  "age": 60,
+  "clues": [
+   "bone:no_teeth",
+   "item:fish_rosary"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_17",
+  "key": "nicolas",
+  "name": "Николас Бер",
+  "role": "twenty.nicolas.role",
+  "desc": "twenty.nicolas.desc",
+  "age": 52,
+  "clues": [
+   "item:spectacles"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_18",
+  "key": "isaac",
+  "name": "Исаак Тённ",
+  "role": "twenty.isaac.role",
+  "desc": "twenty.isaac.desc",
+  "age": 55,
+  "clues": [
+   "bone:gold_teeth",
+   "item:merchant_seal"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_19",
+  "key": "anna",
+  "name": "Анна Тённ",
+  "role": "twenty.anna.role",
+  "desc": "twenty.anna.desc",
+  "age": 48,
+  "clues": [
+   "item:locket_husband"
+  ],
+  "last": false
+ },
+ {
+  "id": "t20_20",
+  "key": "eleonora",
+  "name": "Элеонора",
+  "role": "twenty.eleonora.role",
+  "desc": "twenty.eleonora.desc",
+  "age": 0,
+  "clues": [
+   "item:figurehead_ribbon"
+  ],
+  "last": true
+ }
 ]

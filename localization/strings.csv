@@ -5190,7 +5190,7 @@ item.buoy_marker.desc,Отмечает место на карте.,Marks a spot 
 item.stern_lantern.name,Кормовой фонарь,Stern lantern
 item.stern_lantern.desc,Свет на лодке ночью.,A light on the boat at night.
 item.storm_sails.name,Штормовые паруса,Storm sails
-item.storm_sails.desc,Ход под парусом в шторм.,Sailing in a storm.
+item.storm_sails.desc,Чертёж с регаты: в них шлюпка ходит в шторм.,A regatta blueprint: with these the sloop sails in storms.
 item.icebreaker_bow.name,Ледокольный форштевень,Icebreaker bow
 item.icebreaker_bow.desc,Лодка проходит тонкий лёд.,The boat passes thin ice.
 item.harpoon_bolts.name,Гарпунные стрелы,Harpoon bolts
@@ -5924,3 +5924,1312 @@ place.ice_field,Ледяное поле,Ice field
 place.nameless_isle,Остров Без Имени,The Nameless Isle
 place.fairway,Кронвальдский фарватер,Kronvald fairway
 mail.tool_ready,Тора: «%s готов. Забирай — и не роняй в море».,Tora: '%s is ready. Take it — and don't drop it in the sea.'
+page.1.text,"Первый день вахты, сорок три года назад. «Огонь зажжён. Кот уже был.» Ниже, подчёркнуто дважды: «Ночь Утопленников — самая важная ночь года. Об остальном потом».","The first day of her watch, forty-three years ago. 'The fire is lit. The cat was already here.' Below, underlined twice: 'The Night of the Drowned is the most important night of the year. The rest later.'"
+page.2.text,"«Там, где «Ф», есть ещё двадцать. Не сейчас. Я не готова».","'Where the F is, there are twenty more. Not now. I am not ready.'"
+page.3.text,"«Девять дочерей у Ранн, девять камней на пустоши. Камень светится, когда дочь довольна тобой. Я зажгла три. Мама — четыре. Никто — все».","'Rann has nine daughters, the moor has nine stones. A stone glows when a daughter is pleased with you. I lit three. Mother lit four. Nobody lit them all.'"
+page.4.text,"Список кораблей, погибших за пять лет, — все в ясные ночи. «Ясная ночь, исправный огонь, опытный шкипер. И всё равно Зубы. Почему?»","A list of ships lost over five years — all on clear nights. 'Clear night, a sound fire, a seasoned skipper. And still the Teeth. Why?'"
+page.5.text,"Записки о нырянии: «Кельп помнит улицы Старого Сольвика. Он растёт рядами, как дома».","Diving notes: 'The kelp remembers the streets of Old Solvik. It grows in rows, like houses.'"
+page.6.text,«Х. снова уплывал ночью. Без фонаря. Вернулся к рассвету с пустой лодкой и полными карманами». Имя Гримов — впервые.,"'H. went out at night again. No lantern. Came back at dawn with an empty boat and full pockets.' The Grims' name, for the first time."
+page.7.text,"«Кай видел огонь. Кай испугался. Я не виню. Страх — тоже огонь, просто греет не тех».","'Kai saw the fire. Kai was afraid. I do not blame him. Fear is a fire too, it just warms the wrong people.'"
+page.8.text,"Слова Уговора целиком: «Я держу огонь для живых. Ты держишь воду для мёртвых. Пусть свет не спорит с глубиной, а глубина — со светом. Пока горит — помню».","The words of the Pact in full: 'I keep the fire for the living. You keep the water for the dead. Let light not quarrel with the deep, nor the deep with light. While it burns, I remember.'"
+page.9.text,"Ночь гибели команды Хедды глазами Агаты: «На Зубах горел второй огонь. Я погасила свой, чтобы они поняли, что второй — ложный. Не поняли».","The night Hedda's crew died, through Agatha's eyes: 'A second fire burned on the Teeth. I put mine out so they would know the other was false. They did not.'"
+page.10.text,Технические заметки за линзой: «Большое око» может жечь туман. Красный сектор над Зубами — чтобы никто больше не шёл на чужой свет.,Technical notes behind the lens: the Great Eye can burn fog. A red sector over the Teeth — so no one follows a stranger's light again.
+page.11.text,"Описание фрески Уговора в крипте: смотритель с фонарём, женщина из волн, между ними — камень, разломанный на три части.","The fresco of the Pact in the crypt: a keeper with a lantern, a woman of waves, and between them a stone broken in three."
+page.12.text,"«Люди «Нептуна» снова на острове. Страхуют то, что ещё не утонуло. Щедро. Слишком щедро».",'Neptune's men on the island again. Insuring what has not sunk yet. Generously. Too generously.'
+page.13.text,"Даты и погода: «Весна 3 — ясно, огонь исправен, шхуна «Ласточка» — Зубы».","Dates and weather: 'Spring 3 — clear, fire sound, the schooner Swallow — the Teeth.'"
+page.14.text,"«Лето 19 — ясно, огонь исправен, бриг «Верность» — Зубы. Застрахован за неделю до выхода».","'Summer 19 — clear, fire sound, the brig Fidelity — the Teeth. Insured a week before sailing.'"
+page.15.text,"«Осень 2 — ясно, огонь исправен, «Надежда Кронвальда» — Зубы. Страховщик — «Нептун». Опять».","'Autumn 2 — clear, fire sound, the Hope of Kronvald — the Teeth. Insurer — Neptune. Again.'"
+page.16.text,"Расчёты на полях: «Крушения только в ясные ночи и только при моём исправном огне. Значит, кто-то светит ярче меня. И ему за это платят».",Sums in the margin: 'Wrecks only on clear nights and only while my fire is sound. So someone shines brighter than me. And is paid for it.'
+page.17.text,"«Олаф выучил морзянку за зиму. Точка — это я, тире — это он. Иначе не запоминал».","'Olaf learned Morse in one winter. The dot is me, the dash is him. He would not remember it any other way.'"
+page.18.text,"Схема вязки свитера смотрителя. На обороте: «Маргит, прости за сковородку. Я знаю, где она».","A pattern for the keeper's sweater. On the back: 'Margit, sorry about the frying pan. I know where it is.'"
+page.19.text,"«Колокол Старого Сольвика звонил, пока вода не сомкнулась над колокольней. Звонарь не ушёл. Говорят, звонит до сих пор — только теперь зовёт».",'The bell of Old Solvik rang until the water closed over the belfry. The ringer did not leave. They say he still rings — only now he calls.'
+page.20.text,«Камень. Третья часть у них. Всегда была у них».,'The stone. The third part is theirs. It always was.'
+page.21.text,"Её спуск: «Здесь холодно, но я слышу её. Ранн считает. Считает всех, кого море взяло. Я — следующая цифра».","Her descent: 'It is cold here, but I hear her. Rann is counting. Counting everyone the sea has taken. I am the next number.'"
+page.22.text,"Письмо Агаты к Фортуне: «Ты была права, а я боялась. Если он найдёт тебя — отдай ему мой голос. Он справится».","Agatha's letter to Fortuna: 'You were right, and I was afraid. If he finds you, give him my voice. He will manage.'"
+page.23.text,"«Я жива, если это можно так назвать. Держу дверь. Держи огонь».","'I am alive, if you can call it that. I am holding the door. Hold the fire.'"
+page.24.a,"Последнее письмо: «Ты переписал то, что мы все боялись тронуть. Теперь я могу просто прийти в гости. Поставь чайник».",The last letter: 'You rewrote what we were all afraid to touch. Now I can simply come to visit. Put the kettle on.'
+page.24.b,"Последнее письмо: «За меня заплатили. Я знаю цену и буду помнить её каждый день, который ты мне вернул».",The last letter: 'Someone paid for me. I know the price and I will remember it every day you gave back to me.'
+page.24.c,Последнее письмо: «Свет победил. Я растворяюсь в нём — и это не страшно. Наконец-то высплюсь».,The last letter: 'The light won. I dissolve in it — and it is not frightening. At last I will sleep.'
+page.24.d,Последнее письмо: «Ещё год. Я держусь. Ты держись тоже».,The last letter: 'One more year. I am holding on. You hold on too.'
+page.24.text,Последнее письмо: «Ещё год. Я держусь. Ты держись тоже».,The last letter: 'One more year. I am holding on. You hold on too.'
+evidence.portfolio.found,Портфель Пеннингтона: полис «Святой Берты» вчетверо дороже корабля.,Pennington's portfolio: the Saint Berta insured for four times her worth.
+evidence.portfolio.hint,"? Портфель следователя «Нептуна» — Глубь, уровень 17 (его призрак подскажет).","? The Neptune investigator's portfolio — the Deep, level 17 (his ghost will tell you)."
+evidence.berta_hold.found,"Трюм «Святой Берты»: балластные камни вместо сукна, подложная накладная.","The Saint Berta's hold: ballast stones instead of cloth, a forged bill of lading."
+evidence.berta_hold.hint,? Трюм «Святой Берты» — нырнуть у Зубов с колоколом.,? The Saint Berta's hold — dive at the Teeth with the bell.
+evidence.tin_box.found,Страницы 13–16: крушения только в ясные ночи и при исправном огне.,Pages 13-16: wrecks only on clear nights with a sound fire.
+evidence.tin_box.hint,"? Жестяная коробка Агаты — обломки её лодки, Глубь 15.","? Agatha's tin box — the wreck of her boat, the Deep, level 15."
+evidence.hedda.found,Показания Хедды: второй огонь на Зубах в ночь гибели её команды.,Hedda's testimony: a second fire on the Teeth the night her crew died.
+evidence.hedda.hint,? Хедда что-то видела. Нужно её доверие (4 сердца).,? Hedda saw something. She needs to trust you (4 hearts).
+evidence.doctor.found,"Подпись доктора: свидетельства о смерти, подписанные не глядя.",The doctor's signature: death certificates signed without looking.
+evidence.doctor.hint,? Кто подписывает «несчастные случаи»? Доктор Фальк или архив Олафа.,"? Who signs the 'accidents'? Doctor Falk, or Olaf's archive."
+evidence.telegram.found,Телеграмма Штерна: «ОГОНЬ 28 ТЧК ТРЮМ ГОТОВ ТЧК».,Stern's telegram: 'FIRE 28 STOP HOLD READY STOP'.
+evidence.telegram.hint,? Телеграф Олафа слышит всё. Нужен работающий телеграф и доверие Олафа.,"? Olaf's telegraph hears everything. It needs to work, and Olaf needs to trust you."
+evidence.lantern.found,"Фонарь ложного огня — с Зубов, из рук братьев Скау.","The false fire's lantern — from the Teeth, out of the Skau brothers' hands."
+evidence.lantern.hint,? Сам ложный огонь. Его зажигают на Зубах в туманные ночи.,? The false fire itself. It is lit on the Teeth on foggy nights.
+evidence.black_book.found,Чёрная книга Гримов: двести лет учёта — заменяет любую недостающую улику.,The Grims' black book: two hundred years of accounts — stands in for any missing evidence.
+evidence.card.evidence_kai_witness,"Кай: «Я видел, кто разбил её лодку». Имени не называет.",Kai: 'I saw who broke her boat.' He names no one.
+evidence.card.evidence_false_fire_schedule,Расписание «ночных рейсов» из конторы Грима.,A timetable of 'night runs' from Grim's office.
+evidence.card.olaf_old_false_fire_letter,Старое письмо в управу о ложном огне — без ответа.,An old letter to the office about a false fire — never answered.
+evidence.card.gudmund_truth,Гудмунд: дата и место давнего ложного огня.,Gudmund: the date and place of an old false fire.
+evidence.card.mercy_hold,"Журнал «Милосердия»: трюм — балласт, груз по накладной — сукно.","The Mercy's log: hold — ballast, cargo per bill — cloth."
+story.board.head,ДОСКА УЛИК (%d из %d),EVIDENCE BOARD (%d of %d)
+story.board.threads.0,Нитки пока ни к чему не ведут.,The threads lead nowhere yet.
+story.board.threads.1,Нитка тянется от Зубов к Торговому дому Грима.,A thread runs from the Teeth to Grim's trading house.
+story.board.threads.2,Нитки сходятся: Грим — Скау — «Нептун».,The threads meet: Grim — the Skaus — Neptune.
+story.board.threads.3,Все нитки в одном узле: Хальвдан Грим и Штерн. Этого хватит для суда.,All threads in one knot: Halvdan Grim and Stern. Enough for a court.
+story.journal.empty,Журнал Агаты. 24 страницы вырваны.,Agatha's log. 24 pages torn out.
+story.journal.head,ЖУРНАЛ АГАТЫ — найдено страниц: %d из 24,AGATHA'S LOG — pages found: %d of 24
+story.lock.try,Набрать код,Enter the code
+story.lock.open,Ящик открыт.,The drawer is open.
+story.lock.click,"Щёлк. Журнал Агаты. Двадцать четыре страницы вырваны, одна застряла в переплёте.",Click. Agatha's log. Twenty-four pages torn out; one is stuck in the binding.
+story.lock.wrong,Замок не поддаётся. «Сезон и число».,The lock does not give. 'Season and day.'
+story.lock.hint,"Фортуна снизу: «Ты же сам ставил на этом печать. Бриг «Милосердие», помнишь?»","Fortuna from below: 'You stamped it yourself. The brig Mercy, remember?'"
+story.bonfire.dark,Сложенный костёр. Нужен торф или плавник.,A laid bonfire. It needs peat or driftwood.
+story.bonfire.lit,Костёр горит. Хмарь держится поодаль.,The bonfire burns. The Hmar keeps its distance.
+story.bonfire.light,Зажечь,Light it
+story.bonfire.done,Костёр вспыхнул. Горит: %d из 6.,The bonfire flares up. Burning: %d of 6.
+story.bonfire.fuel,Нечем разжечь: нужен торф или плавник.,Nothing to light it with: peat or driftwood.
+story.opt.deliver,Отдать для дела,Hand over
+story.opt.ally,Попросить помощи в ночь Великого Прилива,Ask for help on the night of the Great Tide
+story.opt.tale,Попросить сказ,Ask for a tale
+story.opt.prompt,Что-то ещё?,Anything else?
+story.opt.nothing,"Нет, ничего.","No, nothing."
+story.deliver.missing,Пока не хватает:,Still missing:
+story.deliver.thanks,Спасибо. Дальше — моя забота.,Thank you. The rest is up to me.
+story.ally.yes,Я буду там. Можешь на меня рассчитывать.,I will be there. You can count on me.
+story.ally.no,Не сейчас.,Not now.
+story.kai.nothing,Кай щурится: «С пустыми руками к огню не ходят».,Kai squints: 'You don't come to a fire empty-handed.'
+story.kai.visit_1,Кай пускает сигнальную ракету в небо: «Уходи! Огни не для тебя!» Но банку забирает.,Kai fires a flare into the sky: 'Go away! The fires are not for you!' But he takes the can.
+story.kai.visit_2,"Кай молчит, но ставит второй стакан.","Kai says nothing, but sets out a second cup."
+story.kai.visit_3,"«Я видел, как её лодку разбили. Я видел, кто. Нет. Я не видел. Уходи». И суёт тебе страницу.",'I saw them break her boat. I saw who. No. I did not see. Go.' And he pushes a page into your hand.
+q.q1_2_salt_land.title,Солёная земля,Salt Earth
+q.q1_2_salt_land.note,"Фортуна: «Там, где ты копаешь, море было раньше тебя».","Fortuna: 'Where you dig, the sea was before you.'"
+q.q1_2_salt_land.plant,Посадить 15 семян репы из корзины Хальвдана,Plant the 15 turnip seeds from Halvdan's basket
+q.q1_2_salt_land.kelp,Собрать 10 водорослей на берегу,Gather 10 kelp on the shore
+q.q1_2_salt_land.compost,Заложить водоросли в компостную яму и внести компост в грядку,Put the kelp in the compost pit and work compost into a bed
+q.q1_2_salt_land.harvest,Собрать 5 реп,Harvest 5 turnips
+q.q1_4_neighbours.title,Соседи,Neighbours
+q.q1_4_neighbours.meet,Познакомиться с 16 жителями до конца Весны,Meet 16 islanders before the end of Spring
+q.q1_7_logbook.title,Вахтенный журнал,The Watch Log
+q.q1_7_logbook.open,Открыть стол в вахтенной: кодовый замок «сезон + число»,Open the desk in the watch room: a 'season + day' code lock
+q.q1_9_mistfolk.title,Туманники,The Mistfolk
+q.q1_9_mistfolk.gathering,Прийти на сход в таверну вечером,Come to the village meeting at the tavern in the evening
+q.q1_9_mistfolk.guild,Осмотреть Гильдейский дом,Look inside the Guild House
+q.q1_9_mistfolk.offering,Сделать первое подношение Туманникам,Make the first offering to the Mistfolk
+q.q1_10_ebb.title,Отлив,The Ebb
+q.q1_10_ebb.note,Фортуна: «Сегодня море отойдёт дальше обычного. Иди к Тюленьему берегу».,Fortuna: 'Today the sea will go further out than usual. Go to the shore.'
+q.q1_10_ebb.open,На большом отливе разбить киркой камень у входа в гроты (Бухта),"At the great ebb, break the stone over the grotto mouth with a pickaxe (the Bay)"
+q.q1_10_ebb.hall3,Дойти до третьего зала,Reach the third hall
+q.q1_10_ebb.page,Найти нишу с буквой «Ф»,Find the niche marked 'F'
+q.q1_11_neptune.title,Предложение Нептуна,Neptune's Offer
+q.q1_11_neptune.talk,Выслушать гостя с «Чайки»,Hear out the visitor from the Gull
+q.q1_12_inspection.title,Первая инспекция,The First Inspection
+q.q1_12_inspection.pass,Средняя Сила Огня за 7 ночей ≥ 25 к Весне 28 (пересдача — Лето 7),Average Fire Strength over 7 nights ≥ 25 by Spring 28 (retake — Summer 7)
+q.q1_13_false_fire.title,Ложный огонь,The False Fire
+q.q1_13_false_fire.watch,"Весна 28, 23:00 — смотреть на Зубы","Spring 28, 23:00 — watch the Teeth"
+q.q2_1_morning_after.title,Утро после,The Morning After
+q.q2_1_morning_after.note,По береговому праву треть груза — твоя. Остальное — в управу (+Честь) или себе (−2 Чести за ящик).,By shore right a third of the cargo is yours. The rest goes to the office (+Honour) or to you (−2 Honour a crate).
+q.q2_1_morning_after.bury_pennington,Похоронить Пеннингтона,Bury Pennington
+q.q2_1_morning_after.bury_martin,Похоронить кочегара Мартина,Bury Martin the stoker
+q.q2_1_morning_after.identify_vera,Опознать пассажирку по реестру,Identify the passenger from the registry
+q.q2_1_morning_after.bury_vera,Похоронить пассажирку,Bury the passenger
+q.q2_2_white_hmar.title,Белая Хмарь,The White Hmar
+q.q2_2_white_hmar.survive,"Пережить Ночь Хмари, не уходя с мыса",Survive the Hmar Night without leaving the cape
+q.q2_3_guest.title,Гостья с материка,The Guest from the Mainland
+q.q2_3_guest.gallery,Пустить Лив на галерею маяка,Let Liv up to the lighthouse gallery
+q.q2_3_guest.gallery.label,Проводить на галерею,Take her up to the gallery
+q.q2_3_guest.gallery.reply,Какой вид! Держи — десять семян светоцвета. Посади у маяка.,What a view! Here — ten lightflower seeds. Plant them by the tower.
+q.q2_3_guest.plankton,"Новолуние, Лето 26–28: набрать сачком светящийся планктон в банку","New moon, Summer 26-28: net glowing plankton into a jar"
+q.q2_4_bell.title,Колокол для живых,A Bell for the Living
+q.q2_4_bell.glass,Взять у Лив стекло иллюминатора,Get the porthole glass from Liv
+q.q2_4_bell.tora,"Отнести Торе: 10 медных слитков, 20 досок, 5 смолы, стекло","Bring Tora 10 copper ingots, 20 boards, 5 resin and the glass"
+q.q2_4_bell.tora.label,Отдать материалы для колокола,Hand over the bell materials
+q.q2_4_bell.tora.reply,Колокол будет. Теперь лебёдка — это к Ильму.,You'll have your bell. Now the winch — that's Ilm's job.
+q.q2_4_bell.winch,"Заказать лебёдку у Ильма: 500 кр, 10 досок, 2 железных слитка","Order the winch from Ilm: 500 kr, 10 boards, 2 iron ingots"
+q.q2_4_bell.winch.label,Заказать лебёдку на ялик,Order a winch for the dinghy
+q.q2_4_bell.winch.reply,Через два дня колокол будет висеть на ялике. Не утопи.,In two days the bell hangs off your dinghy. Don't drown it.
+q.q2_4_bell.ready,"Дождаться, пока колокол подвесят (2 дня)",Wait for the bell to be rigged (2 days)
+q.q2_5_kelp.title,Кельповый лес,The Kelp Forest
+q.q2_5_kelp.level10,Спуститься в Колодец Утопленников до уровня 10,Descend the Drowned Well to level 10
+q.q2_5_kelp.chest,Открыть сундук Агаты,Open Agatha's chest
+q.q2_6_sail.title,Парус,The Sail
+q.q2_6_sail.order,"Заказать у Эрланда шлюпку: 40 досок, 3 парусины, 1 500 кр","Order a sloop from Erland: 40 boards, 3 canvas, 1,500 kr"
+q.q2_6_sail.order.label,Заказать парусную шлюпку,Order the sailing sloop
+q.q2_6_sail.order.reply,"Готово! Парус держи по ветру, а язык — за зубами. Зона 2 твоя.",Done! Keep the sail to the wind and your tongue behind your teeth. Zone 2 is yours.
+q.q2_7_hermit.title,Отшельник Мёртвого Огня,The Hermit of the Dead Fire
+q.q2_7_hermit.visits,Навестить Кая три раза в разные дни с керосином или грогом,Visit Kai three times on different days with kerosene or grog
+q.q2_8_tales.title,Сказы Хельги,Helga's Tales
+q.q2_8_tales.note,"Хельга рассказывает после подарка, который ей понравился.",Helga tells a tale after a gift she likes.
+q.q2_8_tales.tale1,Сказ «Как Ранн пришла за солью»,The tale 'How Rann Came for the Salt'
+q.q2_8_tales.tale2,Сказ «Девять Дев»,The tale 'The Nine Maidens'
+q.q2_8_tales.tale3,Сказ «Первый огонь»,The tale 'The First Fire'
+q.q2_9_telegraph.title,Телеграф,The Telegraph
+q.q2_9_telegraph.parts,"Принести Олафу 10 медной проволоки, 5 стеклянных изоляторов, 30 досок","Bring Olaf 10 copper wire, 5 glass insulators, 30 boards"
+q.q2_9_telegraph.parts.label,Отдать детали для телеграфа,Hand over the telegraph parts
+q.q2_9_telegraph.parts.reply,Точка-тире-точка! Он жив! Теперь я слышу весь материк.,Dot-dash-dot! It lives! Now I can hear the whole mainland.
+q.q2_12_drowned_night.title,Ночь Утопленников,The Night of the Drowned
+q.q2_12_drowned_night.ritual,"В полночь у Камня Ранн: подношение, фонарь и слова Уговора","At midnight by Rann's Stone: an offering, a lantern and the words of the Pact"
+q.q2_13_great_hmar.title,Большая Хмарь,The Great Hmar
+q.q2_13_great_hmar.note,Не вышло — Хмарь ломает причал и губит посевы; осада повторится в следующую Ночь Хмари.,"If it fails, the Hmar breaks the pier and spoils the crops; the siege comes again on the next Hmar Night."
+q.q2_13_great_hmar.hold,"Ночь Осени 28: огонь ≥ 50, Покой ≥ 35, шесть костров вокруг деревни до 00:30","Autumn 28 night: fire ≥ 50, Peace ≥ 35, six bonfires round the village by 00:30"
+q.q3_1_truth.title,Правда Фортуны,Fortuna's Truth
+q.q3_1_truth.listen,Поговорить с Фортуной в прихожей маяка,Talk to Fortuna in the lighthouse hall
+q.q3_2_suit.title,Скафандр,The Diving Suit
+q.q3_2_suit.pump,"Сделать ручной насос (горн: 5 железа, 2 латуни, кожа мурены)","Make a hand pump (forge: 5 iron, 2 brass, a moray skin)"
+q.q3_2_suit.tora,"Отнести Торе: 15 железа, 10 меди, 5 латуни, 3 стекла, 4 промасленной парусины, насос","Bring Tora 15 iron, 10 copper, 5 brass, 3 glass, 4 oiled canvas and the pump"
+q.q3_2_suit.tora.label,Отдать всё для скафандра,Hand over everything for the suit
+q.q3_2_suit.tora.reply,"Три дня. Лив проверит швы, я — клёпки. Ты — нервы.","Three days. Liv checks the seams, I check the rivets. You check your nerves."
+q.q3_2_suit.ready,Дождаться скафандра (3 дня),Wait for the suit (3 days)
+q.q3_3_old_solvik.title,Старый Сольвик,Old Solvik
+q.q3_3_old_solvik.reach,Достичь уровня 21 — затонувшей деревни,Reach level 21 — the drowned village
+q.q3_4_stone.title,Камень Уговора,The Pact Stone
+q.q3_4_stone.f1,Ф1 — крипта Мёртвого Огня (Кай: 6 сердец или «Керосин для Кая»),F1 — the crypt of the Dead Fire (Kai: 6 hearts or 'Kerosene for Kai')
+q.q3_4_stone.f2,"Ф2 — у Звонаря, уровень 40","F2 — with the Bell Ringer, level 40"
+q.q3_4_stone.f3,Ф3 — в сейфе Гримов,F3 — in the Grims' safe
+q.q3_5_case.title,Дело о плавучих гробах,The Case of the Floating Coffins
+q.q3_5_case.all,Собрать 7 улик на доске в вахтенной (чёрная книга заменяет одну),Pin 7 evidences on the board in the watch room (the black book stands in for one)
+q.q3_7_stern_returns.title,Штерн возвращается,Stern Returns
+q.q3_7_stern_returns.talk,Встретить Штерна в деревне,Meet Stern in the village
+q.q3_8_safe.title,Сейф Гримов,The Grims' Safe
+q.q3_8_safe.open,Открыть сейф в Торговом доме: ключ от Ингрид (6 сердец) или ночной взлом 23:00–03:00,Open the safe in the trading house: Ingrid's key (6 hearts) or a night break-in 23:00-03:00
+q.q3_9_ambush.title,Засада на Зубах,Ambush at the Teeth
+q.q3_9_ambush.ambush,"Лето 18, туманная ночь: подплыть к Зубам и взять ложный огонь","Summer 18, a foggy night: sail to the Teeth and take the false fire"
+q.q3_10_bell_ringer.title,Звонарь,The Bell Ringer
+q.q3_10_bell_ringer.boss,Одолеть Звонаря на уровне 40,Defeat the Bell Ringer on level 40
+q.q3_11_gills.title,Жабры Ранн,Rann's Gills
+q.q3_11_gills.stone,Прийти к Камню Ранн: она говорит голосом прибоя,Go to Rann's Stone: she speaks in the voice of the surf
+q.sq_treska_aground.title,Треска на мели,The Treska Aground
+q.sq_treska_aground.refloat,На отливе снять «Треску» с мели у Тюленьего берега (5 досок под киль),At low tide get the Treska off the shoal by the Seal Shore (5 boards under the keel)
+q.sq_treska_aground.chest,Открыть с Хеддой её рундук,Open Hedda's sea chest with her
+q.sq_treska_aground.chest.label,Открыть рундук,Open the sea chest
+q.sq_treska_aground.chest.reply,"Здесь всё, что я видела в ту ночь. И страница Агаты — она оставила её мне. Бери. Пусть Грим подавится.",Everything I saw that night is here. And Agatha's page — she left it to me. Take it. Let Grim choke on it.
+q.sq_doctor_signature.title,Подпись доктора,The Doctor's Signature
+q.sq_doctor_signature.copies,Снять копии свидетельств в архиве управы,Copy the certificates in the office archive
+q.sq_doctor_signature.sign,Отнести копии Магнусу,Bring the copies to Magnus
+q.sq_doctor_signature.sign.label,Показать копии свидетельств,Show the copies
+q.sq_doctor_signature.sign.reply,Да. Это моя подпись. Я подпишу и признание. Трезвым.,Yes. That is my signature. I will sign a confession too. Sober.
+q.sq_death_archive.title,Архив смертей,The Archive of Deaths
+q.sq_death_archive.copies,Принести Олафу 5 бумаги и чернила каракатицы для копий,Bring Olaf 5 paper and cuttlefish ink for the copies
+q.sq_death_archive.copies.label,Отдать бумагу и чернила,Hand over the paper and ink
+q.sq_death_archive.copies.reply,Копии свидетельств за двадцать лет. Подпись одна и та же. Держи.,Copies of twenty years of certificates. Always the same signature. Here.
+q.sq_intercept.title,Перехват,The Interception
+q.sq_intercept.night,Ночью (22:00–02:00) дежурить у телеграфа в управе,Keep watch by the telegraph in the office at night (22:00-02:00)
+q.sq_kerosene_kai.title,Керосин для Кая,Kerosene for Kai
+q.sq_kerosene_kai.cans,Отвезти Каю 5 банок керосина,Bring Kai 5 cans of kerosene
+q.sq_kerosene_kai.cans.label,Отдать керосин,Give the kerosene
+q.sq_kerosene_kai.cans.reply,Хватит на зиму. Ладно. Крипта открыта. Не трогай кости — только камень.,Enough for the winter. Fine. The crypt is open. Don't touch the bones — only the stone.
+q.sq_berta_hold.title,Трюм «Святой Берты»,The Saint Berta's Hold
+q.sq_berta_hold.dive,Нырнуть с колоколом к обломкам у Зубов,Dive with the bell to the wreck at the Teeth
+q.q3_6_tuve.title,Шкура Туве,Tuve's Skin
+q.q3_6_tuve.skin,Вернуть Туве её шкуру,Return Tuve her skin
+q.q3_6_tuve.skin.label,Отдать шкуру,Give her the skin
+q.q3_6_tuve.skin.reply,…Теперь я могу уйти. Или остаться. Я выбираю сама — впервые.,…Now I can leave. Or stay. I choose for myself — for the first time.
+q.q4_1_letter.title,Письмо без обратного адреса,Letter with No Return Address
+q.q4_1_letter.find,Забрать бутылку у причала мыса,Pick up the bottle at the cape's landing
+q.q4_2_team.title,Команда,The Crew
+q.q4_2_team.ask,"Попросить друзей (6+ сердец, некоторых — 4+) помочь в ночь Великого Прилива","Ask friends (6+ hearts, some 4+) to help on the night of the Great Tide"
+q.q4_3_stone.title,Камень целиком,The Whole Stone
+q.q4_3_stone.join,"Сложить Ф1, Ф2 и Ф3 на Камне Ранн (до Осени 27)","Join F1, F2 and F3 on Rann's Stone (by Autumn 27)"
+q.q4_4_drowned_night_2.title,Ночь Утопленников II,The Night of the Drowned II
+q.q4_4_drowned_night_2.ritual,Обряд у Камня Ранн в полночь,The rite by Rann's Stone at midnight
+q.q4_5_great_tide.title,Великий Прилив,The Great Tide
+q.q4_5_great_tide.hold,"Держать огонь, пока не пройдёт «Королева» (21:00–01:00)",Hold the fire until the Queen passes (21:00-01:00)
+q.q4_5_great_tide.path,Пройти по дну к Вратам Глуби,Walk the seabed to the Gates of the Deep
+q.q4_5_great_tide.halls,Чертоги Ранн: сделать выбор,Rann's Halls: make the choice
+q.q4_6_court.title,Суд моря,The Sea's Judgement
+q.q4_6_court.morning,Утро после Прилива,The morning after the Tide
+ev.ev_story_gathering.l01,"Дорогие мои! Спасибо, что пришли. Дело простое: Гильдейский дом — развалина. Нечист, говорят. Скрипит по ночам, туман в окнах.","My dears! Thank you for coming. It's simple: the Guild House is a ruin. Unclean, they say. Creaks at night, fog in the windows."
+ev.ev_story_gathering.l02,"Я предлагаю снести. На его месте поставим склад. Море даёт, море берёт — а мы ведём учёт.","I propose we pull it down. We'll put a warehouse there. The sea gives, the sea takes — and we keep the books."
+ev.ev_story_gathering.l03,"Снести дом Туманников? Хальвдан, ты бы ещё маяк на дрова пустил.","Pull down the Mistfolk's house? Halvdan, you'd burn the lighthouse for firewood next."
+ev.ev_story_gathering.c01,"Я посмотрю, что там, прежде чем что-то сносить.",I'll look inside before anything is pulled down.
+ev.ev_story_gathering.c02,Смотритель проверит. Это моя работа — смотреть.,The keeper will check. Looking is my job.
+ev.ev_story_gathering.l04,"Как скажешь, дорогой. Только не задерживайся там. Туман, знаешь ли, бывает цепким.","As you say, my dear. Just don't linger there. Fog can be clingy, you know."
+ev.ev_story_stern_offer.l01,"А, наш лучший штамп! Смотритель маяка — кто бы мог подумать. Люди — это цифры, помните? А цифры не тонут.","Ah, our best stamp! A lighthouse keeper — who would have thought. People are numbers, remember? And numbers don't drown."
+ev.ev_story_stern_offer.l02,У «Нептуна» к вам предложение. Пять тысяч крон сейчас. Консервный завод в Бухте — скупает рыбу без ограничений. А Туманники… им можно просто заплатить.,Neptune has an offer for you. Five thousand crowns now. A cannery in the Bay — buys fish with no limit. And the Mistfolk… they can simply be paid.
+ev.ev_story_stern_offer.c01,Подписать сейчас.,Sign now.
+ev.ev_story_stern_offer.c02,Я подумаю.,I'll think about it.
+ev.ev_story_stern_offer.c03,Порвать договор.,Tear up the contract.
+ev.ev_story_stern_offer.l03,Прекрасно. Подпись у вас по-прежнему уверенная.,Splendid. Your signature is as confident as ever.
+ev.ev_story_stern_offer.l04,Думайте. Предложение лежит в Торговом доме Грима до Зимы 28. Потом — лежит в другом месте.,Think. The offer waits at Grim's trading house until Winter 28. After that it waits somewhere else.
+ev.ev_story_stern_offer.l05,Порванный договор — тоже договор. Просто короче.,A torn contract is still a contract. Just shorter.
+ev.ev_story_false_fire.l01,"Голос Фортуны — через всю темноту, будто она стоит рядом: «Смотри на Зубы».","Fortuna's voice — across all the dark, as if she stood beside you: 'Look at the Teeth.'"
+ev.ev_story_false_fire.l02,"На скалах загорается второй огонь. Ярче твоего. Бриг «Святая Берта» поворачивает к нему — медленно, послушно, как во сне.","A second fire lights up on the rocks. Brighter than yours. The brig Saint Berta turns towards it — slowly, obediently, as in a dream."
+ev.ev_story_false_fire.l03,"Треск. Твой луч проходит над мачтами и ничего не меняет. Второй огонь гаснет, будто его и не было.",A crack. Your beam sweeps over the masts and changes nothing. The second fire goes out as if it never was.
+ev.ev_story_false_fire.l04,"Утром море вернёт их. Всех, кого сможет.",In the morning the sea will return them. All it can.
+ev.ev_story_helga_grief.l01,"Пережил? Хорошо. Запомни, смотритель: это не туман. Это горе.","You made it through? Good. Remember, keeper: that is not fog. It is grief."
+ev.ev_story_helga_grief.l02,"Хмарь — дочь Ранн. Младшая. Она плачет по всем, кого не похоронили. Свет её ранит, но не лечит.","The Hmar is Rann's daughter. The youngest. She weeps for everyone left unburied. Light wounds her, but does not heal her."
+ev.ev_story_helga_grief.l03,Держи рябину у порога. И фонарь — поярче.,Keep rowan at the door. And a brighter lantern.
+ev.ev_story_fortuna_truth.l01,"Садись. Сегодня я скажу правду, а правда длинная, как зима.","Sit down. Today I tell the truth, and the truth is long, like winter."
+ev.ev_story_fortuna_truth.l02,"Двести лет назад первый смотритель заключил с Ранн Уговор: огонь — живым, вода — мёртвым. Камень Уговора разбили на три части, когда Уговор стали нарушать.","Two hundred years ago the first keeper made a Pact with Rann: fire for the living, water for the dead. The Pact Stone was broken in three when the Pact began to be broken."
+ev.ev_story_fortuna_truth.l03,"Агата не утонула. Она ушла в Глубь и держит Хмарь, чтобы та не вышла на остров вся сразу. Но долго ей не продержаться.","Agatha did not drown. She went into the Deep and holds the Hmar back, so it does not come ashore all at once. But she cannot hold for long."
+ev.ev_story_fortuna_truth.l04,"Раз в полвека, в ночь Великого Прилива, вода уходит так далеко, что открываются Врата Глуби. Осень 28, следующий год.","Once in fifty years, on the night of the Great Tide, the water draws back so far that the Gates of the Deep open. Autumn 28, next year."
+ev.ev_story_fortuna_truth.l05,"Собери три части камня. И собери правду о тех, кто зажигает второй огонь. Доска в вахтенной — твоя.",Gather the three pieces of the stone. And gather the truth about whoever lights the second fire. The board in the watch room is yours.
+ev.ev_story_stern_returns.l01,"Вы всё ещё здесь. Трогательно. Знаете, несчастные случаи у нас в отчётности называются статистикой.","You are still here. Touching. You know, in our accounts accidents are called statistics."
+ev.ev_story_stern_returns.l02,Вы ведь тогда сказали: «{phrase}». Я запомнил. Я всё запоминаю.,You said back then: '{phrase}'. I remembered. I remember everything.
+ev.ev_story_stern_returns.l03,"Партнёр! Маленькая просьба между друзьями: присмотрите за Зубами. Вернее, не присматривайте. Особенно в туман.","Partner! A small favour between friends: keep an eye on the Teeth. Or rather, don't. Especially in fog."
+ev.ev_story_stern_returns.c01,Согласиться.,Agree.
+ev.ev_story_stern_returns.c02,Отказаться.,Refuse.
+ev.ev_story_rann_gills.l01,"Прибой затихает. Потом говорит — голосом, в котором сразу все волны.",The surf falls quiet. Then it speaks — in a voice made of every wave at once.
+ev.ev_story_rann_gills.l02,"«Пять моих дочерей довольны тобой. Возьми. Дыши там, где дышу я».",'Five of my daughters are pleased with you. Take this. Breathe where I breathe.'
+ev.ev_story_rann_gills.l03,"На камне лежит амулет — холодный, с прорезями, как жабры.","An amulet lies on the stone — cold, slotted like gills."
+ev.ev_story_ritual_1.l01,Клади дар. Держи фонарь выше. Теперь — слова.,Lay the gift down. Hold the lantern higher. Now — the words.
+ev.ev_story_ritual_1.l02,«Я держу огонь для живых. Ты держишь воду для мёртвых. Пока горит — помню».,"'I keep the fire for the living. You keep the water for the dead. While it burns, I remember.'"
+ev.ev_story_ritual_1.l03,"Вода на миг расступается. Под ней — Агата, светлая, как рыбья чешуя в луне.","For a moment the water parts. Beneath it is Agatha, pale as a fish scale in moonlight."
+ev.ev_story_ritual_1.l04,«Ты зажёг огонь. Теперь держи его. Он идёт за тобой».,'You lit the fire. Now hold it. He is coming for you.'
+ev.ev_story_ritual_1.l05,"Она жива. По-своему. Иди спать, смотритель. Утром море кое-что принесёт.","She lives. In her way. Go to bed, keeper. In the morning the sea will bring something."
+ev.ev_story_ritual_2.l01,Второй раз легче? Нет. Второй раз честнее.,Is it easier the second time? No. The second time is more honest.
+ev.ev_story_ritual_2.l02,«Я держу огонь для живых. Ты держишь воду для мёртвых. Пока горит — помню».,"'I keep the fire for the living. You keep the water for the dead. While it burns, I remember.'"
+ev.ev_story_ritual_2.l03,"Путь открыт. Завтра. Держи огонь, пока не пройдёт корабль. Потом иди по дну.",The way is open. Tomorrow. Hold the fire until the ship has passed. Then walk the seabed.
+ev.ev_story_fortuna_voice.l01,…Смотритель. Тихо. Меня звали Элеонора.,…Keeper. Quietly. My name was Eleonora.
+ev.ev_story_fortuna_voice.l02,Среди них — мои кости. Найди меня последней. Пусть сначала ребята.,My bones are among them. Find me last. Let the lads go first.
+ev.ev_story_great_hmar_won.l01,"Шесть костров, смотритель. Весь остров видел. Ты, дорогой, теперь — легенда. Легенды долго не живут, знаешь ли.","Six bonfires, keeper. The whole island saw. You're a legend now, my dear. Legends don't live long, you know."
+ev.ev_story_great_hmar_won.l02,Не слушай его. Хмарь отступила. Первый раз за сорок лет — отступила сама.,Don't listen to him. The Hmar drew back. For the first time in forty years it drew back on its own.
+mail.q2_4,"Эрланд и Тора: «Для Колодца нужен водолазный колокол. Материалы — Торе, лебёдку — Ильму. Стекло иллюминатора есть у Лив».","Erland and Tora: 'For the Well you need a diving bell. Materials to Tora, the winch to Ilm. Liv has a porthole glass.'"
+mail.bell_ready,Тора: «Колокол висит на ялике. Колодец Утопленников ждёт — уровни 1–20».,Tora: 'The bell hangs off your dinghy. The Drowned Well awaits — levels 1-20.'
+mail.q2_6,"Эрланд: «Хочешь дальше залива — нужен парус. Сорок досок, три парусины, полторы тысячи. Не торгуйся, я старый».","Erland: 'Want to go beyond the bay — you need a sail. Forty boards, three canvas, fifteen hundred. Don't haggle, I'm old.'"
+mail.q2_9,"Олаф: «Телеграф молчит третий год. 10 медной проволоки, 5 изоляторов, 30 досок — и мы снова услышим мир».","Olaf: 'The telegraph has been silent for three years. 10 copper wire, 5 insulators, 30 boards — and we'll hear the world again.'"
+mail.helga_invite,"Хельга: «Приходи, пора. В полночь Ночи Утопленников — к Камню Ранн. Дар, фонарь, слова. Слова я дам».","Helga: 'Come, it is time. At midnight on the Night of the Drowned — to Rann's Stone. A gift, a lantern, the words. I will give you the words.'"
+mail.q3_2,Лив и Тора: «Колокол — детская игрушка. Нужен скафандр. Список прилагаем. Насос сделаешь в горне сам».,Liv and Tora: 'The bell is a toy. You need a suit. The list is attached. Make the pump yourself at the forge.'
+mail.q3_9,"Хедда: «Лето 18 будет туман. Я знаю эту погоду. На Зубах опять зажгут. Возьми с собой, кому веришь. Не больше двоих».",Hedda: 'Summer 18 will be fog. I know that weather. They'll light it on the Teeth again. Take whoever you trust. No more than two.'
+mail.agatha_letter,«Двадцать восьмого пойдёт «Королева». Он погасит тебя. Держи огонь — я открою дверь». — А.,'On the twenty-eighth the Queen sails. He will put you out. Hold the fire — I will open the door.' — A.
+story.spot.agatha_desk,Стол Агаты,Agatha's desk
+story.spot.agatha_desk.text,Ящик заперт на кодовый замок: четыре колёсика — сезон и число.,The drawer has a code lock: four little wheels — season and day.
+story.spot.agatha_log,Журнал Агаты,Agatha's log
+story.spot.board,Доска улик,Evidence board
+story.spot.bonfire,Сигнальный костёр,Signal bonfire
+story.spot.glow_water,Светящаяся вода,Glowing water
+story.spot.glow_water.text,Вода у берега светится голубым. Лив говорила: сачок и банка.,The water by the shore glows blue. Liv said: a net and a jar.
+story.spot.berta_wreck,Обломки «Святой Берты»,Wreck of the Saint Berta
+story.spot.berta_wreck.text,"Под тобой, на глубине, лежит бриг. С колоколом можно спуститься к трюму.","Below you, in the deep, lies the brig. With the bell you can go down to the hold."
+story.spot.crypt,Крипта Мёртвого Огня,The crypt of the Dead Fire
+story.spot.crypt.text,Кай отпер решётку. Внизу — фреска и камень на полке.,Kai has unlocked the grate. Below — a fresco and a stone on a shelf.
+story.spot.treska,«Треска» на мели,The Treska aground
+story.spot.treska.text,Бот Хедды сидит на банке. В отлив можно подложить доски под киль.,Hedda's boat sits on the bank. At low tide you can put boards under the keel.
+story.spot.archive,Архив управы,The office archive
+story.spot.archive.text,Полки со свидетельствами о смерти. Олаф отвернулся — нарочно.,Shelves of death certificates. Olaf has turned away — on purpose.
+story.spot.telegraph,Телеграф,The telegraph
+story.spot.telegraph.text,"Ключ, катушка, лента. По ночам по проводу ходят чужие слова.","A key, a coil, a tape. At night strangers' words run along the wire."
+story.spot.safe,Сейф Гримов,The Grims' safe
+story.spot.safe.text,"Чугунный, с медным гербом: фонарь, перечёркнутый волной.","Cast iron, with a brass crest: a lantern crossed by a wave."
+story.spot.ambush,Зубы в тумане,The Teeth in fog
+story.spot.ambush.text,"Где-то на скалах мигает красный огонь. Шторка, свет, шторка.","Somewhere on the rocks a red light blinks. Shutter, light, shutter."
+story.spot.lantern_dive,"Место, где утонул фонарь",Where the lantern sank
+story.spot.lantern_dive.text,Братья бросили фонарь в воду. Он лежит неглубоко.,The brothers threw the lantern in the water. It is not deep.
+story.spot.cairn,Каменная пирамидка,A stone cairn
+story.spot.cairn.text,У Девяти Дев кто-то сложил пирамидку. Верхний камень шатается.,By the Nine Maidens someone built a cairn. The top stone wobbles.
+story.spot.raven_mark,Воронья метка,A raven's mark
+story.spot.raven_mark.text,После шторма вороны кружат над одним местом и кричат. Копать?,After the storm ravens circle one spot and cry. Dig?
+story.spot.ritual,Камень Ранн в полночь,Rann's Stone at midnight
+story.spot.ritual.text,"Хельга ждёт у воды. Дар, фонарь, слова.","Helga waits by the water. A gift, a lantern, the words."
+item.porthole_glass.name,Стекло иллюминатора,Porthole glass
+item.porthole_glass.desc,"Толстое, чуть зеленоватое. Лив везла его с материка «на всякий случай».",Thick and faintly green. Liv brought it from the mainland 'just in case'.
+item.hand_pump.name,Ручной насос,Hand pump
+item.hand_pump.desc,"Качает воздух в шланг скафандра. Скрипит, как Кнуд по утрам.",Pumps air down the suit's hose. Creaks like Knud in the mornings.
+item.berta_crate_stones.name,Ящик со «Святой Берты»,Crate from the Saint Berta
+item.berta_crate_stones.desc,На крышке — «Сукно. Кронвальд». Тяжёлый. Слишком тяжёлый для сукна.,The lid says 'Broadcloth. Kronvald'. Heavy. Too heavy for cloth.
+item.agatha_chest.name,Водолазный сундук Агаты,Agatha's diving chest
+item.agatha_chest.desc,Её инициалы на медной бляхе.,Her initials on a brass plate.
+item.lantern_agatha.name,Фонарь Агаты,Agatha's lantern
+item.lantern_agatha.desc,Фонарь четвёртого уровня: светит на тайл дальше и жжёт Хмарь в полтора раза сильнее.,A fourth-tier lantern: reaches a tile further and burns the Hmar half again as hot.
+item.agatha_tin_box.name,Жестяная коробка Агаты,Agatha's tin box
+item.agatha_tin_box.desc,"Нашлась в обломках её лодки. Внутри — страницы, сухие, как будто море их берегло.","Found in the wreck of her boat. The pages inside are dry, as if the sea kept them."
+item.page_19.name,Страница журнала Агаты,A page of Agatha's log
+item.page_19.desc,"Мокрая, но читаемая.","Wet, but readable."
+item.page_20.name,Страница журнала Агаты,A page of Agatha's log
+item.page_20.desc,Сложена вчетверо.,Folded in four.
+item.page_21.name,Страница журнала Агаты,A page of Agatha's log
+item.page_21.desc,Почерк неровный — писала в холоде.,Uneven hand — written in the cold.
+item.page_23.name,Бутылка с запиской,A bottle with a note
+item.page_23.desc,Почерк Агаты.,Agatha's hand.
+item.agatha_letter.name,Письмо без обратного адреса,Letter with no return address
+item.agatha_letter.desc,Бутылка у причала мыса. Почерк Агаты.,A bottle at the cape's landing. Agatha's hand.
+item.fragment_f1.name,Камень Уговора: первый фрагмент,Pact Stone: first fragment
+item.fragment_f1.desc,"Из крипты Мёртвого Огня. Тёплый, как ладонь.",From the crypt of the Dead Fire. Warm as a palm.
+item.fragment_f3.name,Камень Уговора: третий фрагмент,Pact Stone: third fragment
+item.fragment_f3.desc,Из сейфа Гримов. «Всегда была у них».,From the Grims' safe. 'It was always theirs'.
+item.black_book.name,Чёрная книга Гримов,The Grims' black book
+item.black_book.desc,"Двести лет учёта: корабли, суммы, ночи без луны.","Two hundred years of accounts: ships, sums, moonless nights."
+item.tuve_skin.name,Тюленья шкура,A sealskin
+item.tuve_skin.desc,"Серая, мягкая, пахнет морем. Она чья-то.","Grey, soft, smelling of the sea. It is someone's."
+item.safe_key.name,Ключ от сейфа Гримов,Key to the Grims' safe
+item.safe_key.desc,Ингрид сняла его с отцовской связки. Руки у неё дрожали.,Ingrid took it off her father's ring. Her hands shook.
+item.death_certificates.name,Копии свидетельств о смерти,Copies of death certificates
+item.death_certificates.desc,"Три свидетельства, три разных почерка, одна подпись.","Three certificates, three hands, one signature."
+item.pennington_pen.name,Перо Пеннингтона,Pennington's pen
+item.pennington_pen.desc,"Стальное перо следователя. Писало «несчастный случай» слишком редко, чтобы жить долго.",The investigator's steel nib. It wrote 'accident' too rarely to live long.
+item.vera_notebooks.name,Тетради Веры Сольм,Vera Solm's notebooks
+item.vera_notebooks.desc,"Планы уроков на год вперёд. Почерк круглый, учительский.","Lesson plans a year ahead. A round, teacher's hand."
+item.paper.name,Бумага,Paper
+item.paper.desc,Пачка писчей бумаги. На острове её берегут.,A ream of writing paper. On the island it is used sparingly.
+item.skau_lantern.name,Фонарь ложного огня,The false fire's lantern
+item.skau_lantern.desc,"Большой, с красным стеклом и шторкой. Им заманивали корабли на Зубы.","Large, with red glass and a shutter. It lured ships onto the Teeth."
+body.vera.whisper,«Мел… у меня в кармане мел. Дети ждут урок».,'Chalk… there is chalk in my pocket. The children are waiting for a lesson.'
+clue.papers.neptune_card,Визитка «Нептун и партнёры»,A 'Neptune & Partners' card
+clue.item.chalk,Кусочек школьного мела,A stick of school chalk
+ship.saint_berta,бриг «Святая Берта»,the brig Saint Berta
+item.drag_sledge.name,Волокуша,Drag sledge
+item.drag_sledge.desc,Две доски и верёвка. На ней за раз выносят двоих.,Two boards and a rope. It carries two at a time.
+item.fortuna_bones.name,Кости с «Фортуны»,Bones from the Fortuna
+item.fortuna_bones.desc,В истлевшей парусине. Лёгкие — двести лет всё-таки.,"In rotten canvas. Light — two hundred years, after all."
+item.thanks_letter.name,Благодарственное письмо,A letter of thanks
+item.thanks_letter.desc,"От семьи, которая наконец знает, где лежит их моряк.",From a family that finally knows where their sailor lies.
+clue.build.tall,Высокий скелет,A tall skeleton
+clue.build.medium,Средний рост,Medium height
+clue.build.large,Крупные кости,Large bones
+clue.build.broad,Широкая кость,Broad bones
+clue.build.small,"Маленький, почти детский","Small, nearly a child's"
+clue.build.short,"Невысокий, женский таз","Short, a woman's pelvis"
+clue.bone.collarbone,Сросшийся перелом правой ключицы,A healed break of the right collarbone
+clue.bone.nose,Кривая носовая кость,A crooked nose bone
+clue.bone.left_hand,Неполная левая кисть,An incomplete left hand
+clue.bone.shin,Сросшаяся голень,A healed shin
+clue.bone.ribs,Сросшиеся рёбра,Healed ribs
+clue.bone.no_teeth,Ни одного зуба,Not a single tooth
+clue.bone.gold_teeth,Золотые зубы,Gold teeth
+clue.ear.left_ring,Кольцо у левой стороны черепа,A ring by the left side of the skull
+clue.ear.right_ring,Кольцо у правой стороны черепа,A ring by the right side of the skull
+clue.item.compass_e,Компас с гравировкой «Э. — навсегда»,A compass engraved 'E. — for ever'
+clue.item.dividers,Латунный циркуль,Brass dividers
+clue.item.bosun_whistle,Боцманский свисток,A bosun's whistle
+clue.item.notched_spoon,Деревянная ложка с зарубками,A wooden spoon with notches
+clue.item.chisel,Стамеска,A chisel
+clue.item.slingshot,Рогатка,A slingshot
+clue.item.dice,Игральные кости,Dice
+clue.item.walrus_pipe,Трубка из моржовой кости,A walrus-ivory pipe
+clue.item.knife_pe,Нож с инициалами «П.Э.»,A knife initialled 'P.E.'
+clue.item.midwife_bag,Сумка с ножницами и нитками,A bag with scissors and thread
+clue.item.flute,Флейта,A flute
+clue.item.sail_needle,Парусная игла и гардаман,A sail needle and palm
+clue.item.shell_amulet,Амулет-ракушка,A shell amulet
+clue.item.cooper_hammer,Бондарный молоток,A cooper's hammer
+clue.item.fish_rosary,Чётки из рыбьих позвонков,A rosary of fish vertebrae
+clue.item.spectacles,Очки в оправе и ланцет в футляре,Spectacles and a lancet in a case
+clue.item.merchant_seal,Печать «Тённ и сын»,A seal of 'Tonn & Son'
+clue.item.locket_husband,Медальон с портретом мужа,A locket with a husband's portrait
+clue.item.figurehead_ribbon,Резная лента носовой фигуры,A carved ribbon from a figurehead
+twenty.august.role,капитан,капитан
+twenty.august.desc,"Высокий, 45 лет, ломал правую ключицу","Tall, 45, once broke his right collarbone"
+twenty.lars.role,штурман,штурман
+twenty.lars.desc,"Средний рост, 38 лет","Medium height, 38"
+twenty.bjarne.role,боцман,боцман
+twenty.bjarne.desc,"Крупный, сломанный нос","Big, broken nose"
+twenty.til.role,кок,кок
+twenty.til.desc,Широкий в кости,Broad-boned
+twenty.jens.role,плотник,плотник
+twenty.jens.desc,Нет двух пальцев на левой руке,Missing two fingers on the left hand
+twenty.mika.role,юнга,юнга
+twenty.mika.desc,"16 лет, самый маленький","16, the smallest aboard"
+twenty.ole.role,матрос,матрос
+twenty.ole.desc,"Близнец, серьга в левом ухе","A twin, earring in the left ear"
+twenty.sven.role,матрос,матрос
+twenty.sven.desc,"Близнец, серьга в правом ухе","A twin, earring in the right ear"
+twenty.hakon.role,матрос,матрос
+twenty.hakon.desc,Хромал,Walked with a limp
+twenty.per.role,матрос,матрос
+twenty.per.desc,Высокий,Tall
+twenty.greta.role,повитуха (пассажир),повитуха (пассажир)
+twenty.greta.desc,"Невысокая, 50 лет","Short, 50"
+twenty.erik.role,сын Греты (пассажир),сын Греты (пассажир)
+twenty.erik.desc,20 лет,20 years old
+twenty.daniel.role,парусный мастер,парусный мастер
+twenty.daniel.desc,—,—
+twenty.juhan.role,матрос,матрос
+twenty.juhan.desc,Ломал рёбра,Once broke his ribs
+twenty.thomas.role,бондарь,бондарь
+twenty.thomas.desc,—,—
+twenty.ragnar.role,старый матрос,старый матрос
+twenty.ragnar.desc,"60 лет, без зубов","60, toothless"
+twenty.nicolas.role,корабельный лекарь,корабельный лекарь
+twenty.nicolas.desc,Носил очки,Wore spectacles
+twenty.isaac.role,купец (пассажир),купец (пассажир)
+twenty.isaac.desc,Золотые зубы,Gold teeth
+twenty.anna.role,жена купца,жена купца
+twenty.anna.desc,—,—
+twenty.eleonora.role,носовая фигура и хозяйка «Фортуны»,носовая фигура и хозяйка «Фортуны»
+twenty.eleonora.desc,Её имя вырезано на крышке ниши,Her name is carved on the niche lid
+q.q2_10_twenty.title,Двадцать безымянных,The Twenty Nameless
+q.q2_10_twenty.note,"Фортуна: «В гротах есть стена, за которой слишком тихо».",Fortuna: 'In the grottoes there is a wall with too much quiet behind it.'
+q.q2_10_twenty.rubble,Разобрать завал в восьмом зале гротов (железная кирка),Clear the rubble in the eighth grotto hall (iron pickaxe)
+q.q2_10_twenty.found,Найти Зал Двадцати и судовую роль «Фортуны»,Find the Hall of the Twenty and the Fortuna's crew list
+q.q2_10_twenty.carry,"Вынести всех на отливе (на плечах — 1, на волокуше — 2; Кнуд и Эйнар помогут)","Carry them all out at low tide (1 on your shoulders, 2 on a sledge; Knud and Einar will help)"
+q.q2_10_twenty.bury,Опознать по судовой роли и похоронить всех двадцать,Identify them by the crew list and bury all twenty
+q.q2_11_fortuna_voice.title,Голос Фортуны,Fortuna's Voice
+q.q2_11_fortuna_voice.hear,Выслушать Фортуну,Listen to Fortuna
+q.q2_11_fortuna_voice.eleonora,Когда похоронены девятнадцать — вынести из ниши Элеонору и похоронить последней,"When nineteen are buried, bring Eleonora out of the niche and bury her last"
+twenty.hall.found,"Зал Двадцати. Девятнадцать скелетов в истлевшей парусине, жестяной футляр с судовой ролью «Фортуны» и запертая ниша с именем «Элеонора».","The Hall of the Twenty. Nineteen skeletons in rotten canvas, a tin case with the Fortuna's crew list, and a locked niche with the name 'Eleonora'."
+twenty.hall.take,Вы берёте останки (%d). Выносите до прилива: на плечах %d из %d.,You take the remains (%d). Get out before the tide: carrying %d of %d.
+twenty.hall.full,"Больше не унести. На волокуше — двое, на плечах — один.","You cannot carry more. Two on a sledge, one on your shoulders."
+twenty.hall.empty,Здесь никого не осталось. Только футляр и ниша.,Nobody is left here. Only the case and the niche.
+twenty.niche.locked,Ниша заперта. «Найди меня последней».,The niche is locked. 'Find me last.'
+twenty.niche.open,"Ниша открылась сама. Внутри — Элеонора. Лёгкая, как дерево.",The niche opened by itself. Inside is Eleonora. Light as wood.
+twenty.out,Вынесено в покойницкую: %d. Всего вынесено %d из 19.,Brought to the morgue: %d. %d of 19 carried out in all.
+twenty.flood,"Вода вернулась — кости остались в зале. Море их не заберёт: оно ждало двести лет, подождёт и отлив.","The water came back — the bones stay in the hall. The sea will not take them: it waited two hundred years, it can wait for an ebb."
+twenty.help.knud,Кнуд: «Пятерых вынесу. Гробы сделаю потом — бесплатно. Хорошие люди заслужили».,Knud: 'I'll carry five. Coffins later — free. Good folk deserve it.'
+twenty.help.einar,Эйнар: «Пятеро. Отец бы тоже пошёл».,Einar: 'Five. Father would have gone too.'
+twenty.opt.help,Попросить помочь вынести кости «Фортуны»,Ask for help carrying out the Fortuna's bones
+twenty.done,Все двадцать в земле. Остров выдыхает. Где-то в тумане стало на двадцать голосов тише.,All twenty are in the earth. The island breathes out. Somewhere in the fog it has grown twenty voices quieter.
+twenty.board.title,Судовая роль «Фортуны»,The Fortuna's crew list
+item.labskaus.name,Лапскаус,Labskaus
+item.labskaus.desc,"Моряцкое месиво из рыбы, картошки и свёклы. Красное, как закат в шторм.","A sailor's mash of fish, potato and beet. Red as a storm sunset."
+item.labskaus_cook.name,Лапскаус кока,The cook's labskaus
+item.labskaus_cook.desc,По рецепту Бартоломея: щепоть пряностей из жестянки — и море становится ласковее.,Bartholomew's recipe: a pinch from the spice tin and the sea turns kind.
+item.bartholomew_ladle.name,Поварёшка Бартоломея,Bartholomew's ladle
+item.bartholomew_ladle.desc,"Медная, с вмятиной — ею когда-то учили юнгу вежливости.","Copper, dented — once used to teach a cabin boy manners."
+item.pearl_necklace.name,Жемчужное ожерелье,Pearl necklace
+item.pearl_necklace.desc,Мадам Одиль носила его в каюте первого класса. Теперь — ты.,Madame Odile wore it in first class. Now you do.
+item.sextant.name,Секстант,Sextant
+item.sextant.desc,"Исправный, выверенный Грюнвальдом. Показывает клады из бутылочных карт.","Sound, trued by Grunwald. Shows the treasure from bottle maps."
+item.martin_ember.name,Уголёк Мартина,Martin's ember
+item.martin_ember.desc,"Тёплый, сколько ни держи на ветру. Холод копится вдвое медленнее.",Warm however long you hold it in the wind. Cold builds half as fast.
+item.ion_violin.name,Скрипка Иона,Ion's violin
+item.ion_violin.desc,"Мокрая, но струны целы. Ион ждёт её на погосте.","Wet, but the strings are whole. Ion waits for it at the graveyard."
+item.violin_decor.name,Скрипка на стене,A violin on the wall
+item.violin_decor.desc,Ион оставил её тебе. По субботам в таверне — его мелодии.,Ion left it to you. On Saturdays the tavern plays his tunes.
+item.twin_medallion.name,Парный медальон,Twin medallion
+item.twin_medallion.desc,Две половинки: «Ааро» и «Эльна». Одна без другой не открывается.,Two halves: 'Aaro' and 'Elna'. Neither opens without the other.
+item.lotta_ring.name,Кольцо Лотты,Lotta's ring
+item.lotta_ring.desc,"Тонкое, с гравировкой «Навсегда». Навсегда оказалось коротким.","Thin, engraved 'For ever'. For ever turned out short."
+item.captain_cap.name,Капитанская фуражка,Captain's cap
+item.captain_cap.desc,Фуражка капитана Хорна. +1 к Мореходству.,Captain Horn's cap. +1 Seafaring.
+item.signal_flare.name,Сигнальная ракета,Signal flare
+item.signal_flare.desc,Красная ракета. Для салюта и для беды.,A red flare. For a salute and for trouble.
+item.pennington_portfolio.name,Портфель Пеннингтона,Pennington's portfolio
+item.pennington_portfolio.desc,"Кожаный, раздутый от воды. Внутри — полисы «Нептуна».","Leather, swollen with water. Neptune's policies inside."
+item.gudmund_bones.name,Кости у обломков лодки,Bones by a boat wreck
+item.gudmund_bones.desc,Рыбак. Рядом — молот с клеймом «Г.».,A fisherman. Beside him a hammer stamped 'G.'
+item.gudmund_hammer.name,Молот Гудмунда,Gudmund's hammer
+item.gudmund_hammer.desc,Эйнар узнал бы его из тысячи.,Einar would know it among a thousand.
+item.tobias_remains.name,Останки водолаза,A diver's remains
+item.tobias_remains.desc,Медный скафандр без шлема.,A copper suit without its helmet.
+item.tobias_helmet.name,Медный шлем Тобиаса,Tobias's copper helmet
+item.tobias_helmet.desc,С иллюминатором. Тобиас просил вернуть.,With a porthole. Tobias asked for it back.
+item.helmet_porthole_plus.name,Шлем с иллюминатором+,Porthole helmet+
+item.helmet_porthole_plus.desc,Чертёж Тобиаса: воздуха под водой на 20% больше.,Tobias's design: 20% more air underwater.
+item.full_skerry_map.name,Полная карта шхер,The full skerry map
+item.full_skerry_map.desc,Эммерих дорисовал её. На юго-востоке — остров без имени.,Emmerich finished it. In the south-east — an island with no name.
+item.solvik_bell.name,Колокол Старого Сольвика,The bell of Old Solvik
+item.solvik_bell.desc,"Бронзовый, с водорослями в языке. Его ждёт Поминальная.","Bronze, with weed in its tongue. The Memorial room awaits it."
+item.brigi_skull.name,Череп сплетницы,A gossip's skull
+item.brigi_skull.desc,"Челюсть сомкнута так, будто она не договорила.",The jaw is shut as though she had not finished.
+item.vera_pointer.name,Указка Веры,Vera's pointer
+item.vera_pointer.desc,Для школы. Ингрид повесит её над доской.,For the school. Ingrid will hang it over the blackboard.
+item.grim_drawing.name,Рисунок «Фонарь Грима»,Drawing: 'Grim's Lantern'
+item.grim_drawing.desc,Углём на обрывке паруса: фонарь и волна. Для кунсткамеры.,Charcoal on a scrap of sail: a lantern and a wave. For the cabinet.
+item.brass_badge.name,Латунный значок клуба,Brass club badge
+item.brass_badge.desc,"«Клуб охотников за привидениями». Буквы кривые, но гордые.","'Ghost Hunters' Club'. Crooked letters, proud ones."
+item.message_bottle.name,Письмо в бутылке,Message in a bottle
+item.message_bottle.desc,Запечатано. Q — открыть и прочитать.,Sealed. Q — open and read.
+item.empty_bottle.name,Пустая бутылка,Empty bottle
+item.empty_bottle.desc,Остаётся после чтения. Туманники их собирают.,Left after reading. The Mistfolk collect them.
+item.unopened_letter.name,Нераспечатанное письмо в бутылке,Unopened message in a bottle
+item.unopened_letter.desc,Все сорок ты уже читал. Это — для Олафа.,You have read all forty. This one is for Olaf.
+item.letter_hedda.name,Письмо для Хедды,A letter for Hedda
+item.letter_hedda.desc,"«Скажите Хедде Сторм, что она была права».",'Tell Hedda Storm she was right.'
+item.letter_margit.name,Письмо для Маргит,A letter for Margit
+item.letter_margit.desc,"«Маргит, сковородка у меня. Прости».","'Margit, I have the frying pan. Sorry.'"
+ghost.bartholomew.name,Кок Бартоломей,Cook Bartholomew
+ghost.bartholomew.greet,"«Сорок лет кормил матросов. Лапскаус — моя гордость. Сделай отличный — и я пойму, что остров в хороших руках. Рецепт шепну».",'Forty years I fed sailors. Labskaus is my pride. Make an excellent one and I'll know the island's in good hands. I'll whisper the recipe.'
+ghost.bartholomew.waiting,"«Свёкла, картошка, рыба. И любовь. Без любви — просто каша».","'Beet, potato, fish. And love. Without love it's just mush.'"
+ghost.bartholomew.done,"«Вот это лапскаус! Держи мою поварёшку и настоящий рецепт — с пряностями. И на чай тебе, повар».","'Now that is labskaus! Take my ladle and the real recipe — with the spices. And something for your trouble, cook.'"
+q.g1_labskaus.title,Мой лапскаус,My Labskaus
+q.g1_labskaus.cook,Приготовить лапскаус отличного качества и принести коку,Cook an excellent labskaus and bring it to the cook
+ghost.odile.name,Мадам Одиль,Madame Odile
+ghost.odile.greet,"«Милочка, эта могила — позор. Качество сто, ограда и три цветка рядом. Я привыкла к лучшему».","'Darling, this grave is a disgrace. Quality one hundred, a fence and three flowers beside it. I am used to the best.'"
+ghost.odile.waiting,"«Цветы. Ограда. Сто. Я умею считать, даже мёртвой».","'Flowers. A fence. One hundred. I can count, even dead.'"
+ghost.odile.done,«Лучшая могила на острове. Держи ожерелье и немного «на чай». Не трать на глупости. Трать на красивые глупости».,'The best grave on the island. Take the necklace and a little something. Don't spend it on nonsense. Spend it on beautiful nonsense.'
+q.g3_best_grave.title,Лучшая могила на острове,The Best Grave on the Island
+q.g3_best_grave.grave,"Качество могилы 100, ограда и 3 ящика цветов рядом","Grave quality 100, a fence and 3 flower boxes beside it"
+ghost.grunwald.name,Штурман Грюнвальд,Navigator Grunwald
+ghost.grunwald.greet,«Я ошибся в счислении. Сними за меня полдень в зоне 2 — секстантом. Хоть треснутым».,'I erred in my reckoning. Take the noon sight for me in zone 2 — with a sextant. Even a cracked one.'
+ghost.grunwald.waiting,"«Полдень, зона 2. Солнце не ждёт».","'Noon, zone 2. The sun does not wait.'"
+ghost.grunwald.done,«Сорок две минуты северной широты. Я был прав наполовину. Возьми мой секстант — он покажет клады с бутылочных карт».,'Forty-two minutes north. I was half right. Take my sextant — it will show the treasure on bottle maps.'
+q.g4_reckoning.title,Я ошибся в счислении,I Erred in My Reckoning
+q.g4_reckoning.fix,В полдень снять секстантом точку в зоне 2,Take a noon sight with a sextant in zone 2
+ghost.martin.name,Кочегар Мартин,Stoker Martin
+ghost.martin.greet,«Мне холодно. Всю жизнь у топки — и холодно. Разведи зимней ночью костёр у моей могилы и посиди до полуночи».,'I'm cold. All my life by a furnace and I'm cold. On a winter night light a fire by my grave and sit till midnight.'
+ghost.martin.waiting,"«Зима. Ночь. Костёр. Полночь. Я подожду, я терпеливый. Кочегары все такие».","'Winter. Night. A fire. Midnight. I'll wait, I'm patient. Stokers are.'"
+ghost.martin.done,"«Тепло… Возьми уголёк. Он не гаснет. Как и я, только наоборот».","'Warm… Take this ember. It never goes out. Like me, only the other way round.'"
+q.g5_cold.title,Мне холодно,I'm Cold
+q.g5_cold.fire,Зимней ночью развести костёр у его могилы и просидеть до полуночи,On a winter night light a fire by his grave and sit till midnight
+ghost.ion.name,Скрипач Ион,Ion the Fiddler
+ghost.ion.greet,«Моя скрипка осталась на дне — уровень двенадцать Колодца. Без неё я не слышу себя».,'My violin stayed on the bottom — level twelve of the Well. Without it I cannot hear myself.'
+ghost.ion.waiting,«Двенадцать. Колодец. Скрипка. Три слова — как три струны».,'Twelve. The Well. The violin. Three words — like three strings.'
+ghost.ion.done,«Слышишь? Я снова слышу. Оставь её на стене — а по субботам я буду играть в таверне».,'Hear that? I can hear again. Hang it on the wall — and on Saturdays I'll play in the tavern.'
+q.g6_violin.title,Моя скрипка,My Violin
+q.g6_violin.violin,Достать скрипку с уровня 12 Колодца и отдать Иону,Bring the violin up from level 12 of the Well and give it to Ion
+ghost.jacques.name,Жак «Две Бочки»,Jacques 'Two Barrels'
+ghost.jacques.greet,"«Эй, живой! В тайнике рома на десятерых. Забери себе — или сдай таможне через Олафа, если совесть чешется».","'Hey, living one! There's rum for ten in the cache. Take it — or turn it in to customs through Olaf, if your conscience itches.'"
+ghost.jacques.waiting,"«Ром или таможня. Третьего не дано. Ну, дано, но скучно».","'Rum or customs. There's no third way. Well, there is, but it's dull.'"
+ghost.jacques.done,"«Сделано! На Ночи Утопленников ищи мою «Ярмарку теней». Жемчуг принимаю, совесть — нет».","'Done! On the Night of the Drowned look for my Shadow Fair. I take pearls, not consciences.'"
+q.g7_rum.title,Мой ром,My Rum
+q.g7_rum.cache,"Забрать ром из тайника (−3 Чести) или сдать тайник таможне через Олафа (+5 Чести, 800 кр)","Take the rum from the cache (−3 Honour) or report it to customs through Olaf (+5 Honour, 800 kr)"
+ghost.twins.name,Близнецы Ааро и Эльна,The twins Aaro and Elna
+ghost.twins.greet,"«Чья могила ближе к морю? — Моя! — Нет, моя! — Похорони нас рядом и поставь скамью между нами, тогда не будем спорить».","'Whose grave is closer to the sea? — Mine! — No, mine! — Bury us side by side and put a bench between us, then we won't argue.'"
+ghost.twins.waiting,«Рядом. И скамья. — Он опять толкается. — Это не я!»,'Side by side. And a bench. — He's pushing again. — It's not me!'
+ghost.twins.done,"«Одинаково близко! Держи медальон. Одна половинка — моя. — Нет, моя!»","'Equally close! Take the medallion. One half is mine. — No, mine!'"
+q.g8_closer.title,Чья могила ближе к морю?,Whose Grave Is Closer to the Sea?
+q.g8_closer.together,Похоронить близнецов рядом и поставить скамью между ними,Bury the twins side by side and put a bench between them
+ghost.lotta.name,Невеста Лотта,Lotta the Bride
+ghost.lotta.greet,«Отправь кольцо жениху на материк. Олаф знает адрес. Он ждёт меня. Наверное».,'Send the ring to my groom on the mainland. Olaf knows the address. He's waiting for me. Probably.'
+ghost.lotta.waiting,«Олаф. Кольцо. Материк. Он ждёт!»,'Olaf. The ring. The mainland. He's waiting!'
+ghost.lotta.done,«Женат? Давно? Ха! Ну и пусть. Зато я была красивой невестой. Держи рецепт пирога — я пекла его на свадьбу».,'Married? For years? Ha! So be it. At least I was a beautiful bride. Here's the pie recipe — I baked it for the wedding.'
+q.g9_ring.title,Кольцо жениху,A Ring for the Groom
+q.g9_ring.ring,Отправить кольцо Лотты на материк через Олафа,Send Lotta's ring to the mainland through Olaf
+q.g9_ring.ring.label,Отправить кольцо Лотты на материк,Send Lotta's ring to the mainland
+q.g9_ring.ring.reply,Адрес есть. Жених… кхм… давно женат. Но кольцо дойдёт. Почта не судит.,I have the address. The groom… ahem… has long been married. But the ring will arrive. The post does not judge.
+ghost.horn.name,Капитан Хорн,Captain Horn
+ghost.horn.greet,"«Похоронили не так! Капитана — в землю?! Выкопай и отдай морю, с салютом. Сигнальной ракетой, как положено».","'Buried wrong! A captain — in the earth?! Dig me up and give me to the sea, with a salute. A signal flare, as is proper.'"
+ghost.horn.waiting,"«Лопата, лодка, Место Упокоения, ракета. Шевелись, юнга!»","'Shovel, boat, the Resting Place, a flare. Look lively, lad!'"
+ghost.horn.done,"«Вот это похороны! Фуражку — тебе. Носи с достоинством, а не набекрень».","'Now that's a funeral! The cap's yours. Wear it with dignity, not askew.'"
+q.g10_wrong_burial.title,Похоронили не так!,Buried Wrong!
+q.g10_wrong_burial.exhume,Ночью эксгумировать капитана (без штрафа — по квесту),Exhume the captain at night (no penalty — it's his wish)
+q.g10_wrong_burial.salute,Похоронить его в море у Места Упокоения с сигнальной ракетой,Bury him at sea at the Resting Place with a signal flare
+ghost.pennington.name,Пеннингтон,Pennington
+ghost.pennington.greet,«Коллега! Мой портфель — уровень семнадцать Колодца. Там полис «Святой Берты». Вчетверо дороже корабля. Понимаешь?»,'Colleague! My portfolio — level seventeen of the Well. The Saint Berta's policy is in it. Four times her worth. Do you see?'
+ghost.pennington.waiting,"«Семнадцать. Портфель. Я всегда говорил, что в море надо ездить лично».",'Seventeen. The portfolio. I always said one should go to sea in person.'
+ghost.pennington.done,«Вот. Приколи на доску. И возьми моё перо — пусть напишет что-нибудь правдивое».,'There. Pin it on the board. And take my pen — let it write something true.'
+q.g11_portfolio.title,Мой портфель,My Portfolio
+q.g11_portfolio.portfolio,Достать портфель с уровня 17 и отдать Пеннингтону,Bring the portfolio up from level 17 and give it to Pennington
+ghost.gudmund.name,Рыбак Гудмунд,Gudmund the Fisherman
+ghost.gudmund.greet,"«Эйнар… мой мальчик. Приведи его сюда. Скажи ему, что я не бросил их. Меня бросили на Зубы».",'Einar… my boy. Bring him here. Tell him I did not abandon them. I was thrown onto the Teeth.'
+ghost.gudmund.waiting,"«Эйнар не ходит на погост. Он боится. Приведи его, когда он будет готов».",'Einar doesn't come to the graveyard. He's afraid. Bring him when he's ready.'
+ghost.gudmund.done,"«Он знает. Спасибо. Возьми мой молот и запомни: Весна 9, сорок лет назад, второй огонь у Зубов».","'He knows. Thank you. Take my hammer and remember: Spring 9, forty years ago, a second fire at the Teeth.'"
+q.g12_tell_my_son.title,Скажи сыну,Tell My Son
+q.g12_tell_my_son.einar,Привести Эйнара на погост (сцена 8 сердец),Bring Einar to the graveyard (his 8-heart scene)
+ghost.dog.name,Пёс Бурый,Brown the Dog
+ghost.dog.greet,"Призрачный пёс скулит и смотрит в сторону погоста. На ошейнике — «Бурый». Хозяин где-то там, без имени.","A ghost dog whines and looks towards the graveyard. The collar says 'Brown'. His master is somewhere there, nameless."
+ghost.dog.waiting,Бурый нюхает могилы и скулит. Ищи моряка с татуировкой собаки.,Brown sniffs the graves and whines. Look for a sailor with a dog tattoo.
+ghost.dog.done,Бурый ложится у могилы хозяина — и больше не скулит. Теперь по ночам он ходит рядом с тобой.,Brown lies down by his master's grave — and whines no more. Now he walks beside you at night.
+q.g14_where_master.title,Где хозяин?,Where's My Master?
+q.g14_where_master.grave,Опознать и похоронить моряка с татуировкой собаки,Identify and bury the sailor with the dog tattoo
+ghost.tobias.name,Водолаз Тобиас,Tobias the Diver
+ghost.tobias.greet,«Мой шлем остался на уровне тридцать восемь. Верни — и получишь чертёж получше».,'My helmet stayed on level thirty-eight. Bring it back and you'll get a better design.'
+ghost.tobias.waiting,"«Тридцать восемь. Медный, с иллюминатором. Не перепутай с чужими — их там много».","'Thirty-eight. Copper, with a porthole. Don't mix it up with others — there are many.'"
+ghost.tobias.done,«Мой старичок. Держи чертёж — воздуха станет на пятую часть больше».,'My old friend. Here's the design — a fifth more air.'
+q.g15_helmet.title,Мой шлем,My Helmet
+q.g15_helmet.helmet,Достать медный шлем с уровня 38,Bring up the copper helmet from level 38
+ghost.emmerich.name,Картограф Эммерих,Emmerich the Cartographer
+ghost.emmerich.greet,"«Моя карта не закончена. Зарисуй три точки моря: Зубы, остров Гаг и Мёртвый Огонь».","'My map is unfinished. Sketch three points of the sea: the Teeth, Eider Isle and the Dead Fire.'"
+ghost.emmerich.waiting,«Три точки. Карандаш держи мягко — море не любит нажима».,'Three points. Hold the pencil lightly — the sea dislikes pressure.'
+ghost.emmerich.done,"«Готово. Смотри, на юго-востоке — остров без имени. Теперь ты знаешь дорогу».","'Done. Look, in the south-east — an island with no name. Now you know the way.'"
+q.g16_map.title,Закончи карту,Finish the Map
+q.g16_map.teeth,Зарисовать Зубы,Sketch the Teeth
+q.g16_map.eider,Зарисовать остров Гаг,Sketch Eider Isle
+q.g16_map.dead_fire,Зарисовать Мёртвый Огонь,Sketch the Dead Fire
+ghost.nilsen.name,Пастор Нильсен,Pastor Nilsen
+ghost.nilsen.greet,"«Звонаря больше нет. Верни колокол Старого Сольвика наверх — в Поминальную, к живым».","'The Ringer is gone. Bring the bell of Old Solvik back up — to the Memorial room, to the living.'"
+ghost.nilsen.waiting,"«Колокол ждёт на двадцать пятом уровне. Он тяжёлый, но нести его — честь».","'The bell waits on level twenty-five. It is heavy, but carrying it is an honour.'"
+ghost.nilsen.done,«Слышишь? Святой Эльм снова звонит. Под часовней — фреска. Сходи».,'Hear it? Saint Elmo rings again. There is a fresco beneath the chapel. Go and see.'
+q.g17_bell.title,Верни колокол,Bring the Bell Back
+q.g17_bell.bell,Поднять колокол Старого Сольвика (уровень 25) и поднести его в Поминальную,Raise the bell of Old Solvik (level 25) and offer it in the Memorial room
+ghost.brigi.name,Старуха Бриги,Old Brigi
+ghost.brigi.greet,"«Цветочек за секрет, милок. Раз в неделю. Я знаю, кто что любит. Все знают, что я знаю».","'A flower for a secret, dearie. Once a week. I know who likes what. Everyone knows I know.'"
+ghost.brigi.waiting,"«Цветочек! Армерия, вереск, шиповник — я не привередлива. Почти».","'A flower! Thrift, heather, rosehip — I'm not fussy. Almost.'"
+ghost.brigi.done,«Вот теперь слушай: в журнале у тебя будут любимые подарки каждого. Не благодари — неси цветы».,'Now listen: your journal will have everyone's favourite gifts. Don't thank me — bring flowers.'
+q.g18_flowers.title,Цветы за секреты,Flowers for Secrets
+q.g18_flowers.flower,Принести Бриги цветок,Bring Brigi a flower
+ghost.vera.name,Вера Сольм,Vera Solm
+ghost.vera.greet,"«Мои тетради… планы уроков. Отдай их Ингрид. Дети не должны ждать учителя, который не приедет».",'My notebooks… lesson plans. Give them to Ingrid. Children shouldn't wait for a teacher who won't come.'
+ghost.vera.waiting,«Ингрид. Школа. Тетради. Она справится — я видела её глаза на пристани».,'Ingrid. The school. The notebooks. She'll manage — I saw her eyes on the pier.'
+ghost.vera.done,«Спасибо. Вот моя указка — для её класса. Пусть показывает только на хорошее».,'Thank you. Here's my pointer — for her classroom. Let it point only at good things.'
+q.g19_pupils.title,Мои ученики,My Pupils
+q.g19_pupils.notebooks,Передать тетради Веры Ингрид,Give Vera's notebooks to Ingrid
+q.g19_pupils.notebooks.label,Отдать тетради Веры Сольм,Give her Vera Solm's notebooks
+q.g19_pupils.notebooks.reply,Планы уроков… на целый год. Я… я попробую. Нет — я сделаю.,Lesson plans… for a whole year. I… I'll try. No — I'll do it.
+ghost.grim.name,Грим Кривой Фонарь,Grim Crooked Lantern
+ghost.grim.greet,"«Двести лет я держу на Зубах фонарь, которого нет. Мои потомки держат настоящий. Если их осудят — я уйду. Если море заберёт — останусь ворчать».","'For two hundred years I've held a lantern on the Teeth that isn't there. My descendants hold a real one. If they're judged, I'll go. If the sea takes them, I'll stay and grumble.'"
+ghost.grim.waiting,«Суд или милость. Иначе — вечность на этих камнях».,'A court or mercy. Otherwise — eternity on these rocks.'
+ghost.grim.done,«Суд людей — это хорошо. Лучше суда моря. Держи мой рисунок. Фонарь больше не горит».,'A human court is good. Better than the sea's. Take my drawing. The lantern burns no more.'
+q.g20_redemption.title,Искупление,Redemption
+q.g20_redemption.court,Суд или помилование для Хальвдана,A court or a pardon for Halvdan
+clue.clothes.silk_dress,Шёлковое платье,A silk dress
+clue.item.opera_glasses,Театральный бинокль,Opera glasses
+clue.item.log_tables,Таблицы логарифмов,Logarithm tables
+clue.item.rosin,Канифоль в кармане,Rosin in a pocket
+clue.item.twin_half_a,Половинка медальона «Ааро»,Half a medallion: 'Aaro'
+clue.item.twin_half_e,Половинка медальона «Эльна»,Half a medallion: 'Elna'
+clue.tattoo.dog,Татуировка собаки,A dog tattoo
+clue.clothes.wedding_dress,Свадебное платье,A wedding dress
+clue.item.ring_forever,Кольцо «Навсегда»,A ring: 'For ever'
+clue.item.pencil_case,Пенал с карандашами,A pencil case
+clue.item.hammer_g,Молот с клеймом «Г.»,A hammer stamped 'G.'
+clue.clothes.diving_suit,Медный скафандр,A copper diving suit
+clue.item.gossip_comb,Черепаховый гребень,A tortoiseshell comb
+q.club_1_owl.title,Привидение на мельнице,The Ghost at the Mill
+q.club_1_owl.owl,Ночью (21:00–02:00) проверить мельницу на пустоши,At night (21:00-02:00) check the mill on the moor
+q.club_2_watch.title,Ночной дозор,The Night Watch
+q.club_2_watch.watch,Провести с близнецами час на погосте (23:00),Spend an hour at the graveyard with the twins (23:00)
+q.club_3_cats.title,Кошачьи тайны,Cat Secrets
+q.club_3_cats.cats,Найти 3 из 8 кошачьих могил,Find 3 of the 8 cat graves
+q.club_4_real.title,Настоящий призрак,A Real Ghost
+q.club_4_real.ghost,Познакомить близнецов с призраком (поговорить с любым именным призраком),Introduce the twins to a ghost (talk to any named ghost)
+q.club_5_seal.title,Экспедиция на Тюлений камень,The Seal Rock Expedition
+q.club_5_seal.out,Вывести детей на Тюлений берег в отлив,Take the children to the Seal Shore at low tide
+q.club_5_seal.back,Вернуться в деревню до прилива,Come back to the village before the tide
+q.club_6_badges.title,Клуб становится официальным,The Club Goes Official
+q.club_6_badges.badges,Сделать в горне 2 латунных значка и отдать Нильсу,Make 2 brass badges at the forge and give them to Nils
+q.club_6_badges.badges.label,Вручить значки клуба,Hand over the club badges
+q.club_6_badges.badges.reply,"Официально! Фрейя, мы официальные! …Она сказала «ура» шёпотом, это у неё высшая форма.","Official! Freya, we're official! …She said 'hooray' in a whisper, that's her highest form."
+bottle.1,«Кто найдёт — знайте: я не утонул. Я просто очень далеко уплыл от жены». — Х.,'Whoever finds this — know I did not drown. I just sailed very far from my wife.' — H.
+bottle.2,"«Дорогая Марта, если это письмо доплыло, значит, море честнее почты».","'Dear Marta, if this letter arrived, the sea is more honest than the post.'"
+bottle.3,"«Бабушкин рыбник: мука, масло, треска и немного лжи о том, сколько там масла».","'Grandma's fish pie: flour, butter, cod and a little lie about how much butter.'"
+bottle.4,"«Капитан снова пьян. Штурман снова трезв. Не знаю, что из этого страшнее».",'The captain is drunk again. The navigator is sober again. I don't know which is scarier.'
+bottle.5,"«Я поспорил, что бутылка доплывёт до Кронвальда. Если вы в Кронвальде — я выиграл. Если нет — не говорите Свену».","'I bet this bottle would reach Kronvald. If you're in Kronvald, I won. If not, don't tell Sven.'"
+bottle.6,"«Здесь, на льдине, очень тихо. Ребята поют. Мы, кажется, дрейфуем к дому. Кажется».",'It is very quiet here on the floe. The lads are singing. We seem to be drifting home. Seem to.'
+bottle.7,«От камня с тремя чайками — двенадцать шагов к морю. Копай».,'From the stone with three gulls — twelve steps towards the sea. Dig.'
+bottle.8,«Список дел: 1. Выжить. 2. Вернуть Олле три кроны. Пункт 2 под угрозой».,'To do: 1. Survive. 2. Pay Olle back three crowns. Item 2 is at risk.'
+bottle.9,"«Любовь моя, я считаю волны вместо дней. Их больше».","'My love, I count waves instead of days. There are more of them.'"
+bottle.10,"«Если вы нашли это письмо, вы нашли мою последнюю пустую бутылку. Остальные я выпил. Счастливо».","'If you found this letter, you found my last empty bottle. I drank the others. Cheers.'"
+bottle.11,"«Слышал, на Сольвике маяк светит так ярко, что чайки летают в тёмных очках. Проверьте».",'I hear the Solvik light is so bright the gulls fly in dark glasses. Check.'
+bottle.12,"«Устав морской почты, пункт 1: не открывать чужие письма. Пункт 2: вы уже открыли. Пункт 3: читайте дальше, раз так».","'Sea post rules, item 1: do not open others' letters. Item 2: you already did. Item 3: then read on.'"
+bottle.13,"«Мам, это Пим. Корабль тонет, но капитан говорит, что всё под контролем. Я ему верю наполовину».","'Mum, it's Pim. The ship is sinking but the captain says it's under control. I half believe him.'"
+bottle.14,"«Дорогой я из будущего, ты всё ещё боишься глубины? Я — да».","'Dear future me, are you still afraid of the deep? I am.'"
+bottle.15,"«Я закопал сундук на острове, у которого нет имени. Если его нашли вы — купите себе лодку получше».","'I buried a chest on the island with no name. If you found it, buy yourself a better boat.'"
+bottle.16,«Мы поймали рыбу величиной с дверь. Она нас тоже».,'We caught a fish the size of a door. It caught us too.'
+bottle.17,"«Тому, кто держит огонь на Вороньем мысу: спасибо. Мы видели твой свет в ту ночь. Все двенадцать».",'To whoever keeps the fire on Raven Cape: thank you. We saw your light that night. All twelve of us.'
+bottle.18,"«Не верьте Гримам». Без подписи, почерк двухсотлетней давности.","'Do not trust the Grims.' Unsigned, in a hand two hundred years old."
+bottle.19,"«Этот пустой лист — моё завещание. Всё, что у меня было, было в этой бутылке. То есть ром».","'This blank sheet is my will. Everything I had was in this bottle. That is, rum.'"
+bottle.20,"«Если меня найдут, передайте доктору Фальку, что он был прав насчёт печени».","'If they find me, tell Doctor Falk he was right about the liver.'"
+bottle.21,"«Отсюда видно северное сияние. Ради этого можно было и замёрзнуть. Ну, почти».","'You can see the northern lights from here. Worth freezing for. Well, almost.'"
+bottle.22,«В страховое общество «Нептун»: прошу считать мою жизнь застрахованной задним числом».,'To the Neptune insurance society: please consider my life insured retroactively.'
+bottle.23,"«Грог капитана Эрланда: ром, горячий чай, мёд — и ни в коем случае не рассказывать Эрланду».","'Captain Erland's grog: rum, hot tea, honey — and on no account tell Erland.'"
+bottle.24,"«Сегодня тюлень смотрел на меня так, будто знает мою мать. Может, и знает».",'Today a seal looked at me as if it knew my mother. Maybe it does.'
+bottle.25,"«Кто-нибудь, скажите Хедде Сторм, что она была права. Огонь был ненастоящий».",'Someone tell Hedda Storm she was right. The fire was false.'
+bottle.26,«Я учил попугая говорить «земля». Он научился говорить «опять вода»».,"'I taught the parrot to say ""land"". It learned to say ""water again"".'"
+bottle.27,"«Ветер северо-северо-восток, семь баллов. Настроение — девять».","'Wind north-north-east, force seven. Mood — nine.'"
+bottle.28,"«Это письмо — репетиция. Настоящее будет, когда я наберусь смелости».",'This letter is a rehearsal. The real one comes when I find the courage.'
+bottle.29,"«Маргит, если ты это читаешь, это твой второй муж. Сковородка у меня. Прости».","'Margit, if you're reading this, it's your second husband. I have the frying pan. Sorry.'"
+bottle.30,"«Ранн, Хозяйка, возьми этот стакан вина и отдай мне сына».","'Rann, Mistress, take this glass of wine and give me back my son.'"
+bottle.31,«Детям: не играйте на Тюленьем камне в прилив. Вообще нигде не играйте в прилив. Прилив не играет».,'Children: don't play on Seal Rock at high tide. Don't play anywhere at high tide. The tide doesn't play.'
+bottle.32,"«Кочегар Мартин просит передать: в аду не так уж жарко, если сравнивать с нашей кочегаркой».","'Stoker Martin asks me to say: hell isn't that hot, compared to our stokehold.'"
+bottle.33,"«Если найдёте мою ногу — она деревянная, не пугайтесь. Настоящую я оставил в другом море».","'If you find my leg — it's wooden, don't be scared. I left the real one in another sea.'"
+bottle.34,"«Мы голосовали, кто напишет прощальное письмо. Проиграл я. Прощайте».",'We voted on who would write the farewell letter. I lost. Farewell.'
+bottle.35,«Звёзды над морем — это чьи-то фонари. Кто-то всё-таки держит огонь».,'Stars over the sea are someone's lanterns. Someone is keeping the fire after all.'
+bottle.36,"Из журнала «Милосердия»: «Трюм — балласт, 200 тонн. Груз по накладной — сукно. Капитан велел не спрашивать».","From the Mercy's log: 'Hold — ballast, 200 tons. Cargo per bill — cloth. The captain said not to ask.'"
+bottle.37,«Привет из первого года после Большой Воды. Деревни больше нет. Мы начали строить выше».,'Greetings from the first year after the Great Water. The village is gone. We started building higher.'
+bottle.38,"«Жене: я выучил все созвездия, чтобы найти дорогу домой. Оказалось, дорогу знает только маяк».",'To my wife: I learned every constellation to find my way home. It turned out only the lighthouse knows the way.'
+bottle.39,"«Внукам: всё, что у меня есть, — ваше. Кроме кота. Кот — сам по себе». — А. Л.",'To my grandchildren: all I have is yours. Except the cat. The cat is his own.' — A. L.
+bottle.40,"«Тому, кто собрал все сорок бутылок: у вас слишком много свободного времени. Мне это нравится». — Олаф",'To whoever collected all forty bottles: you have too much free time. I like that.' — Olaf
+cat.1,Фитиль I. Ловил мышей 14 лет. Поймал одну. Гордился всю жизнь.,Wick I. Hunted mice for 14 years. Caught one. Proud all his life.
+cat.2,Фитиль II. Спал на линзе. Свет ему не мешал.,Wick II. Slept on the lens. The light never bothered him.
+cat.3,Фитиль III. Ушёл в море за селёдкой. Вернулся с селёдкой. Ушёл снова.,Wick III. Went to sea for herring. Came back with herring. Went again.
+cat.4,Фитиль IV. Съел ужин смотрителя. Смотритель простил. Не сразу.,Wick IV. Ate the keeper's supper. The keeper forgave him. Not at once.
+cat.5,"Фитиль V. Был рыжим. Мы не знаем, как так вышло.",Wick V. Was ginger. We don't know how that happened.
+cat.6,Фитиль VI. Дружил с призраками. Призраки его побаивались.,Wick VI. Was friends with ghosts. The ghosts were a bit afraid of him.
+cat.7,Фитиль VII. Прожил 23 года из вредности.,Wick VII. Lived 23 years out of spite.
+cat.8,Фитиль VIII. Если ты это читаешь — погладь девятого.,Wick VIII. If you're reading this — pet the ninth.
+story.spot.cat,Кошачья могила,A cat's grave
+cat.found,Кошачья могила №%d: «%s»,Cat grave no. %d: '%s'
+story.spot.mill_owl,Мельница ночью,The mill at night
+story.spot.mill_owl.text,Что-то белое шевелится на крыше и ухает.,Something white moves on the roof and hoots.
+story.spot.treasure_7,Камень с тремя чайками,The stone with three gulls
+story.spot.treasure_7.text,"Двенадцать шагов к морю от камня, где сидят три чайки.",Twelve steps towards the sea from the stone where three gulls sit.
+story.spot.treasure_15,Остров Без Имени,The Nameless Isle
+story.spot.treasure_15.text,Песок у одинокой сосны. Здесь кто-то копал до тебя — и закопал.,Sand by a lone pine. Someone dug here before you — and filled it in.
+story.spot.sketch_teeth,Зубы,The Teeth
+story.spot.sketch_teeth.text,Отсюда видны все Зубы.,All the Teeth can be seen from here.
+story.spot.sketch_eider_isle,Остров Гаг,Eider Isle
+story.spot.sketch_eider_isle.text,Гаги сидят на гнёздах.,Eiders sit on their nests.
+story.spot.sketch_dead_fire,Мёртвый Огонь,The Dead Fire
+story.spot.sketch_dead_fire.text,Башня без огня.,A tower without a fire.
+tale.1.title,Как Ранн пришла за солью,How Rann Came for the Salt
+tale.1.text,"Давным-давно море было пресным, как озеро за мельницей.
+Долго ли, коротко — у Ранн утонули дочери, все девять разом, в одну бурю.
+Она плакала сто лет. Слёзы у Хозяйки глубины солёные. Вот и всё море — её слёзы.
+Потому и не плюют в воду. В чужое горе не плюют.","Long ago the sea was fresh, like the lake behind the mill.
+One day Rann lost her daughters, all nine at once, in a single storm.
+She wept for a hundred years. The Mistress of the deep weeps salt. That's all the sea is — her tears.
+That's why you don't spit in the water. You don't spit into another's grief."
+tale.2.title,Девять Дев,The Nine Maidens
+tale.2.text,"Дочери Ранн вернулись к ней — но не людьми, а погодой: зыбью, пеной, буруном, стужей…
+Девять камней на пустоши — их стулья. Когда дочь довольна тобой, её камень светится.
+Девятая, младшая — Хмарь. Её камень не светится никогда. Пока.","Rann's daughters came back to her — not as people but as weather: swell, foam, breaker, frost…
+The nine stones on the moor are their chairs. When a daughter is pleased with you, her stone glows.
+The ninth, the youngest, is the Hmar. Her stone never glows. Not yet."
+tale.3.title,Первый огонь,The First Fire
+tale.3.text,"Первый смотритель пришёл на мыс с одним фонарём. Хмарь стояла стеной.
+Он не стал с ней драться. Он спросил у Ранн: «Чего ты хочешь?»
+«Помни моих», — сказала Ранн. Так появился Уговор: огонь — живым, вода — мёртвым, память — всем.","The first keeper came to the cape with a single lantern. The Hmar stood like a wall.
+He didn't fight her. He asked Rann: 'What do you want?'
+'Remember mine,' said Rann. So the Pact was made: fire for the living, water for the dead, memory for all."
+tale.4.title,Грим Кривой Фонарь,Grim Crooked Lantern
+tale.4.text,"Жил на острове человек с кривым фонарём. Корабли шли на свет — и шли на камни.
+Грузы делил с купцами, горе — ни с кем. Так и разбогател.
+Бриг «Фортуна» он заманил последним. Двадцать душ. Море не простило: его самого нашли на Зубах, с фонарём в руке.","There was a man on the island with a crooked lantern. Ships followed the light — onto the rocks.
+He shared the cargo with merchants and the grief with no one. So he grew rich.
+The brig Fortuna was the last he lured. Twenty souls. The sea didn't forgive: they found him on the Teeth, lantern in hand."
+tale.5.title,Ночь Большой Воды,The Night of the Great Water
+tale.5.text,"Старый Сольвик стоял там, где теперь колодец. Уговор нарушили — и Ранн перестала держать воду.
+За одну ночь море поднялось на три дома. Колокол звонил до последнего.
+Кто успел — ушёл на холм. Там и построили новый Сольвик. Выше. И с маяком.","Old Solvik stood where the well is now. The Pact was broken — and Rann stopped holding back the water.
+In one night the sea rose three houses high. The bell rang to the last.
+Whoever could, fled to the hill. That's where they built the new Solvik. Higher. And with a lighthouse."
+tale.6.title,Слова Уговора,The Words of the Pact
+tale.6.text,"Слова короткие. Короткие слова труднее всего сказать честно.
+«Я держу огонь для живых. Ты держишь воду для мёртвых. Пусть свет не спорит с глубиной, а глубина — со светом. Пока горит — помню».
+Запиши. Агата тоже записывала — у неё была страница с ними. На обряде слова говорят вслух.","The words are short. Short words are the hardest to say honestly.
+'I keep the fire for the living. You keep the water for the dead. Let light not quarrel with the deep, nor the deep with light. While it burns, I remember.'
+Write it down. Agatha did too — she had a page with them. At the rite you say them aloud."
+tale.7.title,"Кот, который не утонул",The Cat Who Didn't Drown
+tale.7.text,"На маяке всегда живёт кот. Всегда один и тот же — так говорят.
+В Ночь Большой Воды кот уплыл на двери. Доплыл до мыса и сел ждать смотрителя.
+С тех пор ни один смотритель не приходил первым. Кот уже был.","There's always a cat at the lighthouse. Always the same one, they say.
+On the Night of the Great Water the cat sailed away on a door. It reached the cape and sat down to wait for the keeper.
+Since then no keeper has ever arrived first. The cat was already there."
+tale.8.title,Селки с Тюленьего камня,The Selkies of Seal Rock
+tale.8.text,"Тюлени у камня — не все тюлени. Некоторые снимают шкуру в полнолуние и сидят на камне девушками.
+Украдёшь шкуру — девушка останется с тобой. Но море будет звать её каждую ночь.
+Вернёшь — может, останется сама. Это и называется любовью.","Not all the seals by the rock are seals. Some shed their skins at full moon and sit on the rock as girls.
+Steal a skin and the girl stays with you. But the sea will call her every night.
+Give it back — and maybe she'll stay of her own will. That's what they call love."
+tale.9.title,Звонарь,The Bell Ringer
+tale.9.text,"Звонарь Старого Сольвика звонил, пока вода не сомкнулась над колокольней.
+Люди спаслись по его звону. Сам он не ушёл: «Кто-то же должен звонить».
+Теперь он звонит под водой. Только колокол его теперь зовёт вниз, а не наверх.","The ringer of Old Solvik rang until the water closed over the belfry.
+People escaped by his ringing. He himself didn't leave: 'Someone has to ring.'
+Now he rings under the water. Only now his bell calls down, not up."
+tale.10.title,Почему туман плачет,Why the Fog Weeps
+tale.10.text,"Хмарь — младшая дочь. Она не утонула с сёстрами, её просто не нашли.
+Она ищет до сих пор — всех, кого не похоронили. И плачет по каждому.
+Похорони одного — ей станет чуть легче. Похорони всех — может, она перестанет плакать.","The Hmar is the youngest daughter. She didn't drown with her sisters — she simply was never found.
+She searches still — for everyone left unburied. And weeps for each one.
+Bury one and she feels a little lighter. Bury them all — maybe she'll stop weeping."
+tale.11.title,Большой Прилив,The Great Tide
+tale.11.text,"Раз в полвека Ранн вдыхает. Вода уходит так далеко, что видно дно до самых Зубов.
+Тогда открываются Врата Глуби. Кто пройдёт по дну — дойдёт до Чертогов.
+Последний раз так было, когда Агата была девчонкой. Следующий — следующей осенью.","Once in fifty years Rann breathes in. The water goes so far out you can see the bottom all the way to the Teeth.
+Then the Gates of the Deep open. Whoever walks the seabed will reach the Halls.
+The last time was when Agatha was a girl. The next — next autumn."
+tale.12.title,Последний сказ,The Last Tale
+tale.12.text,"Агате было двадцать. Первая ночь вахты. Шторм, Хмарь и никого рядом.
+Она зажгла огонь и всю ночь пела, чтобы не бояться. Фальшиво — я слышала с пустоши.
+Утром на пороге сидел кот. Она сказала: «Ну, значит, остаёмся». И осталась на сорок три года.","Agatha was twenty. Her first night on watch. Storm, the Hmar and no one near.
+She lit the fire and sang all night so as not to be afraid. Off-key — I could hear it from the moor.
+In the morning a cat sat on the doorstep. She said: 'Well, then, we're staying.' And she stayed forty-three years."
+mail.helga_tale6,"Хельга: «Приходи, пора. Есть сказ, который ты должен услышать до Ночи Утопленников»","Helga: 'Come, it is time. There is a tale you must hear before the Night of the Drowned.'"
+mail.bottle_40,"Олаф: «Тому, кто собрал все сорок бутылок…» — и к письму приложен Звёздный янтарь.",Olaf: 'To whoever collected all forty bottles…' — and a Star Amber is enclosed.
+bottle.opened,"Письмо в бутылке №%d:
+%s","Message in a bottle no. %d:
+%s"
+bottle.all,Все сорок писем прочитаны. Это — нераспечатанное; Олаф будет счастлив.,All forty letters read. This one stays sealed; Olaf will be delighted.
+bottle.none,Письма в бутылке нет.,No message in a bottle.
+tale.told,"Сказ Хельги №%d «%s»
+
+%s","Helga's tale no. %d, '%s'
+
+%s"
+tale.none,"Хельга: «Сказы не раздают даром. Принеси что-нибудь, что мне по душе, и приходи»","Helga: 'Tales aren't free. Bring me something I like, then come back.'"
+ghost.jacques.rum,Жак: «Вот это по-нашему!» Ром ×10 — ваш. Честь −3.,Jacques: 'That's the spirit!' Rum ×10 is yours. Honour −3.
+ghost.jacques.customs,"Олаф записывает тайник в журнал таможни. Честь +5, 800 кр премии. Жак где-то в гротах хохочет.","Olaf enters the cache in the customs log. Honour +5, an 800 kr reward. Somewhere in the grottoes Jacques laughs."
+ghost.jacques.remains,Останки Жака «Две Бочки». Рядом — пустая фляга.,The remains of Jacques 'Two Barrels'. An empty flask beside them.
+ghost.martin.fire,Костёр разгорается у могилы. Мартин садится ближе. До полуночи — рядом.,A fire flares up by the grave. Martin sits closer. Stay near until midnight.
+ghost.martin.no_fire,"Нужно 5 плавника, зимняя ночь и могила Мартина рядом.","You need 5 driftwood, a winter night and Martin's grave close by."
+ghost.sextant.fix,"Солнце в зените, горизонт чистый. Точка снята — Грюнвальд будет доволен.","The sun at its height, the horizon clear. The sight is taken — Grunwald will be pleased."
+ghost.sextant.no,"Точку снимают в полдень (11:30–12:30), в зоне 2 моря.","A noon sight is taken at noon (11:30-12:30), in zone 2 of the sea."
+ghost.sextant.treasure,Секстант указывает: клад отмечен на карте.,The sextant points: the treasure is marked on the map.
+ghost.flare.fired,Красная ракета уходит в небо.,A red flare climbs into the sky.
+ghost.opt.fire,Развести костёр (5 плавника),Light a fire (5 driftwood)
+ghost.opt.give,Отдать,Give
+story.opt.letter_hedda,Отдать письмо из бутылки,Give her the letter from the bottle
+story.opt.letter_margit,Отдать письмо из бутылки,Give her the letter from the bottle
+story.opt.jacques,Сдать тайник Жака таможне,Report Jacques's cache to customs
+story.opt.twenty,Попросить помочь вынести кости «Фортуны»,Ask for help carrying out the Fortuna's bones
+story.dig.found,Лопата стукается о дерево. Сундучок: %s и 500 кр.,The shovel hits wood. A small chest: %s and 500 kr.
+story.dig.no_shovel,Нужна лопата.,You need a shovel.
+story.owl,"Сова! Белая, огромная, недовольная. Привидение на мельнице раскрыто.","An owl! White, huge, displeased. The ghost of the mill is unmasked."
+story.sketch,Ты зарисовываешь %s. Эммерих бы одобрил.,You sketch %s. Emmerich would approve.
+item.old_sea_map.name,Старая морская карта,An old sea chart
+item.old_sea_map.desc,"Пятна соли, стёртые мели, чьи-то пометки карандашом.","Salt stains, faded shoals, someone's pencil marks."
+item.crab_pot.name,Ловушка,Crab pot
+item.crab_pot.desc,Ловушка для крабов и омаров. Подарок Туманников.,A pot for crabs and lobsters. A gift of the Mistfolk.
+room.fishers.name,Рыбацкая горница,The Fishers' Room
+room.fishers.done,Починены причал деревни и рыбный рынок: рыба в лавках +10%. И пять ловушек в подарок.,The village pier and fish market are mended: fish sells for 10% more. And five traps as a gift.
+room.fishers.neptune,"«Причал Нептуна»: завод платит 95%, рыбный рынок — без надбавки.","'Neptune's Pier': the cannery pays 95%, the fish market gets no premium."
+room.fishers.coastal,Прибрежный улов,Coastal catch
+room.fishers.night,Ночной улов,Night catch
+room.fishers.fresh,Пресные воды,Fresh waters
+room.fishers.traps,Ловушки,Traps
+room.fishers.winter,Зимний лов,Winter fishing
+room.fishers.hard,Трудный улов,Hard catch
+room.pantry.name,Кладовая,The Pantry
+room.pantry.done,Туманники стеклят теплицу на мысу.,The Mistfolk glaze a greenhouse on the cape.
+room.pantry.neptune,"«Теплица Нептуна» — та же теплица, но с вывеской.","'Neptune's Greenhouse' — the same greenhouse, with a sign."
+room.pantry.spring,Весенний урожай,Spring harvest
+room.pantry.summer,Летний урожай,Summer harvest
+room.pantry.autumn,Осенний урожай,Autumn harvest
+room.pantry.excellent,Отличный урожай,Excellent harvest
+room.pantry.barn,Хлев и курятник,Barn and coop
+room.pantry.shelf,Полка мастера,The master's shelf
+room.workshop.name,Мастерская,The Workshop
+room.workshop.done,"Мельница на пустоши снова мелет, а на север к Птичьему утёсу перекинут мост.","The moor mill grinds again, and a bridge crosses north to the Bird Cliffs."
+room.workshop.neptune,«Мост и мельница Нептуна».,'Neptune's Bridge and Mill'.
+room.workshop.wood_stone,Плавник и камень,Driftwood and stone
+room.workshop.metal,Металл,Metal
+room.workshop.glass,Стекло и смола,Glass and resin
+room.workshop.cloth,Ткани,Cloth
+room.workshop.fuel,Топливо и соль,Fuel and salt
+room.memorial.name,Поминальная,The Memorial Room
+room.memorial.done,"Колокол Старого Сольвика висит на часовне: это снова колокол Святого Эльма. Отпевание бесплатно, под часовней открыта крипта.","The bell of Old Solvik hangs on the chapel: Saint Elmo's bell again. Funerals are free, and the crypt beneath the chapel is open."
+room.memorial.neptune,«Мы не инвестируем в мёртвых». Только подношениями.,'We do not invest in the dead.' Offerings only.
+room.memorial.light,Свет памяти,Light of memory
+room.memorial.flowers,Цветы берега,Flowers of the shore
+room.memorial.stone,Камень и слово,Stone and word
+room.memorial.letters,Письма семей,Families' letters
+room.memorial.gifts,Дары упокоенных,Gifts of the laid
+room.memorial.bell,Колокол,The bell
+room.navigator.name,Штурманская,The Navigator's Room
+room.navigator.done,В гавани открыта Спасательная станция.,A lifeboat station opens in the harbour.
+room.navigator.neptune,"«Береговая охрана Нептуна»: спасение платное, 200 кр за человека из жалованья.","'Neptune's Coastguard': rescue is paid, 200 kr a head from your wages."
+room.navigator.sea_gifts,Дары моря,Gifts of the sea
+room.navigator.navigation,Навигация,Navigation
+room.navigator.shore,Прибрежный сбор,Shore gathering
+room.navigator.cliff,Птичий утёс,The Bird Cliffs
+room.navigator.bottles,Пустые бутылки,Empty bottles
+room.chest.name,Сундук Туманников,The Mistfolk's Chest
+room.chest.done,"По субботам ходит паром с туристами, на мысу — сувенирная лавка смотрителя, в управе — «Каталог Кронвальда», и школа официально открыта (учительница — Ингрид).","A ferry brings tourists on Saturdays, the keeper's souvenir stall opens on the cape, the office gets the Kronvald Catalogue, and the school officially opens (Ingrid teaches)."
+room.chest.neptune,"«Расширение завода»: рабочие вместо туристов, без сувенирной лавки.","'Cannery Expansion': workers instead of tourists, no souvenir stall."
+room.chest.c2500,2 500 кр,"2,500 kr"
+room.chest.c5000,5 000 кр,"5,000 kr"
+room.chest.c10000,10 000 кр,"10,000 kr"
+room.chest.c25000,25 000 кр,"25,000 kr"
+story.spot.guild_house,Гильдейский дом,The Guild House
+story.spot.guild_house.text,"Шесть комнат, в каждой — кладка Туманников. Клочки тумана ждут подношений.","Six rooms, each with a Mistfolk nest. Wisps of fog wait for offerings."
+story.spot.neptune_counter,Стойка «Нептуна»,Neptune's counter
+story.spot.neptune_counter.text,Лакированная стойка с гербом: трезубец поверх якоря.,A varnished counter with a crest: a trident over an anchor.
+story.spot.cannery,Консервный завод «Нептуна»,Neptune's cannery
+story.spot.cannery.text,Скупает рыбу и морепродукты без ограничений — по 90% цены.,Buys fish and seafood without limit — at 90% of the price.
+story.spot.chapel_crypt,Крипта часовни,The chapel crypt
+story.spot.chapel_crypt.text,Под колоколом — ступени вниз. На стене фреска Уговора.,"Under the bell, steps go down. On the wall — the fresco of the Pact."
+story.spot.nine_maidens,Круг «Девять Дев»,The Nine Maidens
+story.spot.nine_maidens.text,"Девять камней. Горят те, чьи дочери довольны тобой.",Nine stones. Those whose daughters are pleased with you glow.
+story.spot.daughter_zyb,Волна-женщина,A woman of the swell
+story.spot.daughter_zyb.text,Рядом с лодкой встаёт волна и протягивает руку: «Греби в мой ритм».,A wave rises beside the boat and holds out a hand: 'Row to my rhythm.'
+story.spot.daughter_pena,Девочка из пены,A girl of foam
+story.spot.daughter_pena.text,«Я потеряла пузырьки. Семь. Они твёрдые и блестят». Она имеет в виду морское стекло.,'I lost my bubbles. Seven. They're hard and they shine.' She means sea glass.
+story.spot.daughter_burun,Волна-конь,A horse of the breakers
+story.spot.daughter_burun.text,Белогривый вал встаёт на дыбы: «Обгони меня!»,A white-maned breaker rears: 'Outrun me!'
+story.spot.daughter_stuzha,Девушка на айсберге,A girl on an iceberg
+story.spot.daughter_stuzha.text,"«Никогда не пробовала тепло. Говорят, оно бывает в кружках».",'I've never tasted warmth. They say it comes in mugs.'
+story.spot.daughter_tish,Зеркальная вода,Mirror water
+story.spot.daughter_tish.text,Вода у Места Упокоения становится зеркалом. В нём — не ты.,The water at the Resting Place turns into a mirror. It isn't you in it.
+story.spot.daughter_svetla,Светящаяся вода,Glowing water
+story.spot.daughter_svetla.text,В голубом свечении кто-то танцует.,Someone dances in the blue glow.
+community.head,Гильдейский дом — собрано комнат: %d из 6,The Guild House — rooms restored: %d of 6
+community.offer,Поднести,Offer
+community.pay,Оплатить у «Нептуна»,Pay Neptune
+community.offered,Туман обнимает %s и уносит в кладку.,The fog embraces %s and carries it into the nest.
+community.nothing,"Туманникам это не нужно. Выберите на панели то, что просит комната.",The Mistfolk don't need that. Select on the hotbar what the room asks for.
+community.room_done,Туманники за работой: комната «%s» собрана. %s,The Mistfolk at work: the room '%s' is complete. %s
+community.all_done,Праздник возвращения! Весь остров у Гильдейского дома. Туманники поднимаются светлячками над мысом.,The Homecoming! The whole island at the Guild House. The Mistfolk rise as fireflies over the cape.
+community.paid,«Нептун» строит: %s,Neptune builds: %s
+community.refused,«Мы не инвестируем в мёртвых».,'We do not invest in the dead.'
+community.returned,Туманники запоминают дар призрака и возвращают его.,The Mistfolk remember the ghost's gift and give it back.
+neptune.signed,Договор подписан. 5 000 кр. Море помрачнело.,"The contract is signed. 5,000 kr. The sea darkens."
+neptune.sign,Подписать договор (5 000 кр),"Sign the contract (5,000 kr)"
+neptune.cannery,Сдать рыбу на завод,Sell fish to the cannery
+neptune.sold,Завод берёт %s ×%d за %d кр.,The cannery takes %s ×%d for %d kr.
+neptune.not_fish,Завод берёт только рыбу и морепродукты.,The cannery only takes fish and seafood.
+story.crypt.fresco,"Фреска: смотритель с фонарём, женщина из волн и камень, разломанный на три части. За фреской — страница Агаты.","The fresco: a keeper with a lantern, a woman of waves and a stone broken in three. Behind it — a page of Agatha's."
+story.circle,Горят камни: %d из 9.,Stones glowing: %d of 9.
+daughter.granted,Благословение: %s.,A blessing: %s.
+daughter.need_glass,Нужно 7 морских стёкол.,You need 7 pieces of sea glass.
+daughter.need_grog,Нужен горячий грог.,You need a hot grog.
+daughter.need_net,Нужен сачок (или Лив рядом — 4 сердца).,You need a hand net (or Liv beside you — 4 hearts).
+daughter.spark,Светла оставляет на ладони ещё одну искру.,Svetla leaves another spark in your palm.
+daughter.failed,Дочь смеётся и уходит в воду. Попробуй в другой раз.,The daughter laughs and slips into the water. Try another time.
+daughter.try,Принять вызов,Take up the challenge
+daughter.give,Отдать,Give
+daughter.dance,Войти в светящуюся воду,Step into the glowing water
+daughter.listen,Слушать,Listen
+daughter.zyb,Зыбь,Swell
+daughter.pena,Пена,Foam
+daughter.burun,Бурун,Breaker
+daughter.stuzha,Стужа,Frost
+daughter.tish,Тишь,Stillness
+daughter.svetla,Светла,Glimmer
+daughter.priliva,Из воды поднимается по колено девушка и смеётся: благословение Приливы.,"A girl rises knee-deep from the water, laughing: Priliva's blessing."
+daughter.otliva,Отлива,Ebb Tide
+daughter.hmar,Хмарь,The Hmar
+q.sq_clause_47.title,Пункт 47.3,Clause 47.3
+q.sq_clause_47.note,Мелким шрифтом: «договор недействителен в случае смерти подписанта».,In small print: 'the contract is void upon the signatory's death.'
+q.sq_clause_47.coffin,Кнуд: гроб с дырочками (10 досок),Knud: a coffin with air holes (10 boards)
+q.sq_clause_47.coffin.label,Заказать гроб для собственных похорон,Order a coffin for your own funeral
+q.sq_clause_47.coffin.reply,"Дырочки — для воздуха. Крышку не заколачиваю, не бойся. Почти.","The holes are for air. I won't nail the lid, don't worry. Almost."
+q.sq_clause_47.certificate,Магнус: свидетельство о смерти,Magnus: a death certificate
+q.sq_clause_47.certificate.label,Попросить свидетельство о своей смерти,Ask for a certificate of your own death
+q.sq_clause_47.certificate.reply,Причина смерти… «договор». Подписываю. Впервые — с удовольствием.,Cause of death… 'contract'. I sign. For once with pleasure.
+q.sq_clause_47.service,Бенедикт: отпевание,Benedict: the service
+q.sq_clause_47.service.label,Договориться об отпевании,Arrange the service
+q.sq_clause_47.service.reply,Я буду очень серьёзен. Это очень трудно.,I will be very serious. It will be very hard.
+q.sq_clause_47.epitaph,Сигрид: эпитафия,Sigrid: the epitaph
+q.sq_clause_47.epitaph.label,Попросить эпитафию,Ask for an epitaph
+q.sq_clause_47.epitaph.reply,«Здесь лежит смотритель. Недолго». Годится?,'Here lies the keeper. Not for long.' Will that do?
+q.sq_clause_47.wake,Поминки в таверне,The wake at the tavern
+ev.ev_story_own_funeral.l01,"Мы собрались проводить смотрителя. Он… она… в общем, держал огонь. И держал его хорошо.",We are gathered to see off the keeper. Who kept the fire. And kept it well.
+ev.ev_story_own_funeral.l02,«Здесь лежит смотритель. Недолго».,'Here lies the keeper. Not for long.'
+ev.ev_story_own_funeral.l03,Свидетельство подписано. «Нептун» уведомлён телеграммой. Договор расторгнут в связи со смертью.,The certificate is signed. Neptune has been telegraphed. The contract is void on account of death.
+ev.ev_story_own_funeral.c01,Сесть в гробу: «Я что-то пропустил?»,Sit up in the coffin: 'Did I miss something?'
+ev.ev_story_own_funeral.c02,«Воскреснуть» с поклоном: «Слухи о моей смерти…»,Rise with a bow: 'Rumours of my death…'
+ev.ev_story_own_funeral.c03,Молча взять пирог со стола.,Silently take a pie from the table.
+ev.ev_story_own_funeral.l04,"Ну вот, опять живой. Наливаю за счёт заведения!","Well, alive again. Drinks on the house!"
+item.boat_paint.name,Краска для лодки,Boat paint
+item.boat_paint.desc,"Синяя, с блёстками соли. Лодка станет красивее и чуть крепче.","Blue, glittering with salt. The boat looks finer and a little tougher."
+item.solvik_pennant.name,Вымпел Сольвика,The Solvik pennant
+item.solvik_pennant.desc,Первое место на Спуске лодок. Вешается на мачту — все видят.,First place at the Boat Blessing. It flies from the mast — everyone sees.
+item.regatta_cup.name,Кубок регаты,The regatta cup
+item.regatta_cup.desc,"Серебряный, с вмятиной от Эрланда.","Silver, dented by Erland."
+item.nest_box.name,Гнездовой ящик,Nest box
+item.nest_box.desc,Для гаг. Маргит продаёт их птиц после Птичьего дня.,For eiders. Margit sells the birds after Bird Day.
+item.fair_token.name,Жетон ярмарки,Fair token
+item.fair_token.desc,Медный кружок с селёдкой. На ярмарке — валюта.,A copper disc with a herring. At the fair it's money.
+item.paper_lantern.name,Бумажный фонарик,Paper lantern
+item.paper_lantern.desc,Пускают по воде за погибших.,Set on the water for the dead.
+item.garland.name,Гирлянда,Garland
+item.garland.desc,«Неуставные огни» для маяка на Долгую ночь.,'Irregular lights' for the lighthouse on the Long Night.
+festival.boat_blessing.blessing,Благословение лодки,The boat blessing
+festival.boat_blessing.decor,Конкурс украшения лодок (3 предмета декора),The boat decoration contest (3 decor items)
+festival.boat_blessing.oar_run,«Бег с веслом» по причалу,The oar run along the pier
+festival.boat_blessing.shop,Лавка редких весенних семян и красок,Rare spring seeds and boat paint
+festival.bird_day.eggs,Сбор яиц на верёвках (3 минуты),Egg gathering on ropes (3 minutes)
+festival.bird_day.birds,Лив: найти в трубу 5 видов птиц,Liv: find 5 kinds of birds in the spyglass
+festival.white_sun.songs,Костры и песни,Bonfires and songs
+festival.white_sun.dance,Танец в полночь,The midnight dance
+festival.regatta.race,Регата: гонка под парусом вокруг Тюленьего камня,The regatta: a sailing race round Seal Rock
+festival.regatta.bet,Ставка у Бьорна (100 кр),A bet with Bjorn (100 kr)
+festival.herring_fair.exhibit,Выставка: 9 предметов,The exhibition: 9 items
+festival.herring_fair.herring,Чистка сельди на скорость,Herring cleaning race
+festival.herring_fair.boot,Метание сапога,Boot throwing
+festival.herring_fair.cod,«Угадай вес трески»,'Guess the cod's weight'
+festival.herring_fair.gulls,Тир «Сбей чайку» (картонную),Shooting gallery: 'Down the gull' (cardboard)
+festival.herring_fair.speech,Речь Хальвдана,Halvdan's speech
+festival.herring_fair.tokens,Лавка жетонов,The token stall
+festival.drowned_night.lanterns,Пустить бумажный фонарик по воде (бумага),Set a paper lantern on the water (paper)
+festival.drowned_night.shadow_fair,«Ярмарка теней» Жака (за жемчуг),Jacques's Shadow Fair (for pearls)
+festival.drowned_night.ghosts,Поговорить с призраками года,Talk to the year's ghosts
+festival.ice_festival.ice_fishing,Состязание подлёдного лова (3 минуты),The ice fishing contest (3 minutes)
+festival.ice_festival.sculpture,Ледяная скульптура (выставить предмет),The ice sculpture (show an item)
+festival.ice_festival.skating,Катание на коньках,Skating
+festival.long_night.secret_gift,«Тайный даритель»,The Secret Giver
+festival.long_night.dinner,Общий ужин: принести блюдо,The shared supper: bring a dish
+festival.long_night.garlands,Гирлянды на маяке,Garlands on the lighthouse
+festival.boat_blessing.name,Спуск лодок,Boat Blessing
+festival.bird_day.name,Птичий день,Bird Day
+festival.white_sun.name,Ночь Белого Солнца,White Sun Night
+festival.regatta.name,Регата,The Regatta
+festival.herring_fair.name,Сельдяная ярмарка,The Herring Fair
+festival.drowned_night.name,Ночь Утопленников,The Night of the Drowned
+festival.ice_festival.name,Праздник льда,The Ice Festival
+festival.long_night.name,Долгая ночь,The Long Night
+fest.started,%s! Время на празднике стоит.,%s! Time stands still at the festival.
+fest.ended,Праздник закончился. На часах %02d:00.,The festival is over. The clock says %02d:00.
+fest.done_already,Уже было.,Already done.
+fest.blessing,Бенедикт кропит ялик кистью на трёхметровом шесте. Неделю корпус крепче.,Benedict sprinkles the dinghy from a brush on a ten-foot pole. The hull is tougher for a week.
+fest.decor_need,Нужно 3 предмета декора в рюкзаке.,You need 3 decor items in your backpack.
+fest.decor_win,Первое место! 1 000 кр и «Вымпел Сольвика».,"First place! 1,000 kr and the Solvik pennant."
+fest.decor_lose,"Судьи хвалят, но первое место у другого ялика (%d против %d).","The judges praise it, but first place goes to another boat (%d to %d)."
+fest.win,Победа! %s,Victory! %s
+fest.lose,Не в этот раз. %s,Not this time. %s
+fest.eggs,Яиц: %d.,Eggs: %d.
+fest.birds,"Лив записывает: тупик, кайра, гагара, гага, баклан. «Ты зоркий!»","Liv writes down: puffin, guillemot, loon, eider, cormorant. 'You've sharp eyes!'"
+fest.songs,"Костры, песни, запах вереска. Фортуна обижена, что её не позвали.","Bonfires, songs, the smell of heather. Fortuna sulks that she wasn't invited."
+fest.dance_nobody,Пригласить некого: нужен кандидат с 4+ сердцами.,Nobody to invite: you need a candidate at 4+ hearts.
+fest.dance,Танец с %s.,A dance with %s.
+fest.no_sloop,Для гонки нужна парусная шлюпка. Можно сделать ставку у Бьорна.,The race needs a sailing sloop. You can place a bet with Bjorn.
+fest.bet_won,Ставка на %s сыграла: +300 кр.,Your bet on %s won: +300 kr.
+fest.bet_lost,Ставка на %s сгорела. Бьорн сочувственно наливает.,Your bet on %s is lost. Bjorn pours you one out of sympathy.
+fest.exhibit_need,Для выставки нужно 9 разных предметов в рюкзаке.,The exhibition needs 9 different items in your backpack.
+fest.exhibit,Судьи оценили выставку: %d жетонов.,The judges scored your exhibition: %d tokens.
+fest.tokens_got,Жетонов: +%d.,Tokens: +%d.
+fest.speech_1,"Хальвдан: «Дорогие мои! Море даёт, море берёт — а Сольвик стоит!» Аплодисменты.","Halvdan: 'My dears! The sea gives, the sea takes — and Solvik stands!' Applause."
+fest.speech_2,"Хальвдан: «…и пусть каждый держит свой огонь. Особенно те, кому он не по карману». Тишина. Кто-то кашляет.",Halvdan: '…and let everyone keep their own fire. Especially those who can't afford it.' Silence. Someone coughs.
+fest.token_bought,Куплено за жетоны: %s.,Bought with tokens: %s.
+fest.token_short,Жетонов не хватает.,Not enough tokens.
+fest.lantern,Фонарик уплывает к Зубам. Покой чуть глубже.,The lantern drifts towards the Teeth. The Peace a little deeper.
+fest.lantern_need,Нужна бумага (или готовый фонарик).,You need paper (or a ready lantern).
+fest.shadow_closed,Жак ещё не открыл свою ярмарку (квест «Мой ром»).,Jacques hasn't opened his fair yet (the quest 'My Rum').
+fest.shadow,Жак: «Жемчужина — и эта редкость твоя». %s,Jacques: 'A pearl — and this rarity is yours.' %s
+fest.shadow_need,Жак: «Без жемчуга не торгую».,"Jacques: 'No pearls, no trade.'"
+fest.ghosts,"В эту ночь призраков видят все. Бартоломей спорит с Бьорном о рецептах, Пим играет на гармошке.","Tonight everyone sees the ghosts. Bartholomew argues recipes with Bjorn, Pim plays the harmonica."
+fest.sculpture_need,Выберите на панели предмет для скульптуры.,Select an item on the hotbar for the sculpture.
+fest.sculpture_win,Лив и Сигрид единодушны: лучшая скульптура!,Liv and Sigrid agree: the best sculpture!
+fest.sculpture_lose,"Лив и Сигрид спорят, но первое место не твоё (%d против %d).","Liv and Sigrid argue, but first place isn't yours (%d to %d)."
+fest.fishing_win,Рыб: %d. Победа! «Замороженная меч-рыба» и 1 500 кр.,"Fish: %d. Victory! A frozen swordfish and 1,500 kr."
+fest.fishing_lose,"Рыб: %d. Победил Эрланд — как всегда, говорит он.","Fish: %d. Erland won — as always, he says."
+fest.skating,Круг по льду под аплодисменты.,A lap of the ice to applause.
+fest.gift_none,Письмо «Тайного дарителя» пришло неделю назад: подари что-нибудь хорошее %s.,The Secret Giver's letter came a week ago: give something nice to %s.
+fest.gift_done,%s в восторге от подарка. А под ёлкой лежит свёрток и для тебя.,%s is delighted with the gift. And under the tree there's a parcel for you too.
+fest.dinner,Общий ужин: %s идёт по кругу. Каждый житель чуть теплее к тебе.,The shared supper: the %s goes round the table. Every islander warms to you.
+fest.dinner_need,Выберите блюдо на панели.,Select a dish on the hotbar.
+fest.garlands,"Гирлянды на маяке — единственная ночь, когда Пальм разрешает неуставные огни.",Garlands on the lighthouse — the one night Palm allows irregular lights.
+fest.garlands_need,Нужна гирлянда (Лавка Бергов).,You need a garland (Berg's shop).
+mail.secret_giver,«Тайный даритель»: в этом году вы дарите подарок на Долгую ночь — %s. Никому ни слова!,'Secret Giver': this year you give a Long Night present to %s. Not a word to anyone!
+fest.jealous,Сельдяная ярмарка. Ваши избранники стоят вместе: «Мы тут посовещались и решили тебя похоронить. Вместе». — «Шучу. Наполовину».,The Herring Fair. Your sweethearts stand together: 'We talked it over and decided to bury you. Together.' — 'Joking. Half.'
+item.halvdan_hat.name,Шляпа Хальвдана,Halvdan's hat
+item.halvdan_hat.desc,Прилив принёс её через неделю. «Море не читает протоколов».,The tide brought it a week later. 'The sea does not read reports.'
+item.fish_codger_son.name,Сын Старого Хрыча,The Old Codger's Son
+item.fish_codger_son.desc,"Весь в отца: так же ворчит, только тише.","Just like his father: grumbles the same, only quieter."
+item.fish_herring_princess.name,Сельдяная принцесса,The Herring Princess
+item.fish_herring_princess.desc,Корона из чешуи и характер из стали.,A crown of scales and a will of steel.
+item.fish_golden_calf.name,Золотой палтусёнок,The Golden Halibut Calf
+item.fish_golden_calf.desc,"Маленький, но уже блестит, как отец.","Small, but already shines like his father."
+item.fish_granddaughter.name,Внучка Бабушки,Grandmother's Granddaughter
+item.fish_granddaughter.desc,Бабушка бы гордилась. Она и гордится — из-подо льда.,Grandmother would be proud. She is — from under the ice.
+item.fish_lantern_fry.name,Малёк-фонарщик,The Lantern Fry
+item.fish_lantern_fry.desc,Светится только в Ночи Хмари. Или когда захочет.,Glows only on Hmar Nights. Or when it feels like it.
+item.ship_bell_small.name,Судовой колокольчик,A ship's handbell
+item.ship_bell_small.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.walrus_pipe.name,Трубка из моржовой кости,A walrus-ivory pipe
+item.walrus_pipe.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.rune_stone.name,Рунный камень с девятью знаками,A rune stone with nine signs
+item.rune_stone.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.cloak_clasp.name,Бронзовая застёжка плаща,A bronze cloak clasp
+item.cloak_clasp.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.clay_lamp.name,Глиняная лампа поселенцев,A settlers' clay lamp
+item.clay_lamp.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.horseshoe_rusty.name,Ржавая подкова,A rusty horseshoe
+item.horseshoe_rusty.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.tortoise_comb.name,Черепаховый гребень,A tortoiseshell comb
+item.tortoise_comb.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.pilot_badge.name,Лоцманский значок,A pilot's badge
+item.pilot_badge.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.bone_hook.name,Костяной рыболовный крючок,A bone fish hook
+item.bone_hook.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.offering_bowl.name,Жертвенная чаша,An offering bowl
+item.offering_bowl.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.southern_coin.name,Монета южных морей,A coin of the southern seas
+item.southern_coin.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.amber_rook.name,Янтарная шахматная ладья,An amber chess rook
+item.amber_rook.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.ship_in_bottle.name,Корабль в бутылке,A ship in a bottle
+item.ship_in_bottle.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.drowned_doll.name,Кукла-оберег «Утопленница»,The 'Drowned Girl' charm doll
+item.drowned_doll.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.amber_fly.name,Янтарь с мушкой,Amber with a fly
+item.amber_fly.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.sea_glass_brown.name,"Морское стекло, коричневое",Brown sea glass
+item.sea_glass_brown.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.sea_glass_blue.name,"Морское стекло, голубое",Blue sea glass
+item.sea_glass_blue.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.sea_glass_red.name,"Морское стекло, красное",Red sea glass
+item.sea_glass_red.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.sea_glass_green.name,"Морское стекло, зелёное",Green sea glass
+item.sea_glass_green.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.lophelia.name,Коралл лофелия,Lophelia coral
+item.lophelia.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.whale_bone.name,Кость кита,Whale bone
+item.whale_bone.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.ammonite.name,Аммонит,An ammonite
+item.ammonite.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.belemnite.name,«Громовая стрела» (белемнит),A 'thunderbolt' (belemnite)
+item.belemnite.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.hag_stone.name,«Куриный бог»,A hag stone
+item.hag_stone.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.fools_gold.name,Серный колчедан,Fool's gold
+item.fools_gold.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+item.fortuna_model.name,Модель брига «Фортуна»,A model of the brig Fortuna
+item.fortuna_model.desc,Экспонат для кунсткамеры.,An exhibit for the cabinet.
+ev.ev_story_tide_path.l01,"01:00. Море уходит. Ты спускаешься с мыса прямо на дно — мокрый песок, лужи, в них бьются рыбы.","01:00. The sea draws back. You step off the cape straight onto the seabed — wet sand, pools, fish thrashing in them."
+ev.ev_story_tide_path.l02,"Из ила торчат остовы кораблей. Над всем кружит Хмарь. Впереди, у Врат Глуби, горит фонарь.","Ribs of ships stick out of the silt. The Hmar circles over everything. Ahead, at the Gates of the Deep, a lantern burns."
+ev.ev_story_tide_path.l03,Ингрид сдержала слово: отец вышел из дома только после полуночи. Путь короче.,Ingrid kept her word: her father left the house only after midnight. The way is shorter.
+ev.ev_story_tide_path.l04,"А, дорогой. Ты всё-таки пришёл. Море даёт, море берёт — я лишь веду учёт.","Ah, my dear. You came after all. The sea gives, the sea takes — I only keep the books."
+ev.ev_story_tide_path.l05,Улики? У тебя ничего нет. Слова утопленников и сказки старухи.,Evidence? You have nothing. Drowned men's words and an old woman's tales.
+ev.ev_story_tide_path.l06,"Ты кое-что собрал. Кое-что. Суду этого мало, а морю — много.","You've gathered something. Something. Too little for a court, too much for the sea."
+ev.ev_story_tide_path.l07,"Портфель, трюм, телеграмма… Ты знаешь всё. Тогда ты знаешь, почему я здесь с фонарём.","The portfolio, the hold, the telegram… You know everything. Then you know why I'm here with a lantern."
+ev.ev_story_tide_path.l08,"Ингрид… она говорит о тебе. Как о брате. Как о ком-то, кто не лжёт. Я не знаю, что с этим делать.",Ingrid… she speaks of you. Like a brother. Like someone who doesn't lie. I don't know what to do with that.
+ev.ev_story_tide_path.l09,"Он бросается вперёд, чтобы столкнуть тебя во Врата. Волна вырывает у него фонарь — и Хальвдан падает вслед за тобой.",He lunges to push you into the Gates. A wave tears the lantern from his hand — and Halvdan falls in after you.
+ev.ev_story_halls.l01,Чертоги Ранн: дворец из сетей и колоколов. Здесь можно дышать — Жабры Ранн тёплые на шее.,Rann's Halls: a palace of nets and bells. You can breathe here — Rann's Gills are warm at your throat.
+ev.ev_story_halls.l02,"Агата — слабая, светится, как фонарь, в котором кончается масло. «Ты пришёл. Я знала».","Agatha — weak, glowing like a lantern running out of oil. 'You came. I knew.'"
+ev.ev_story_halls.l03,Хмарь — плачущая девочка из тумана. Она прячется за Агату.,The Hmar is a weeping girl made of fog. She hides behind Agatha.
+ev.ev_story_halls.l04,"Ранн поднимается из глубины — огромная, спокойная. «Выбирай, смотритель. Я покажу, что возможно, а что — нет».","Rann rises from the deep — vast, calm. 'Choose, keeper. I will show you what can be and what cannot.'"
+ev.ev_story_court.l01,"Инспектор Пальм, «Королева Кронвальда». Ночью я видел ваш огонь. Всю ночь. Отметим.","Inspector Palm, the Queen of Kronvald. Last night I saw your fire. All night. Duly noted."
+ev.ev_story_court.l02,Хальвдан Грим ушёл на своей лодке в шторм. Море не читает протоколов.,Halvdan Grim put out in his boat into the storm. The sea does not read reports.
+ev.ev_story_court.l03,Улик достаточно. Хальвдан Грим арестован. По телеграфу — и господин Штерн. «Нептун» утонул.,The evidence suffices. Halvdan Grim is under arrest. By telegraph — Mr Stern too. Neptune has sunk.
+ev.ev_story_court.l04,Я признаюсь. Всё — Артели и школе. А Мёртвый Огонь… я зажгу его. Настоящий. Если позволите.,I confess. Everything to the Artel and the school. And the Dead Fire… I'll light it. A true one. If you'll let me.
+ev.ev_story_court.l05,Хальвдан Грим арестован за нападение на смотрителя. Штерн… ушёл от ответа. Пока.,Halvdan Grim is arrested for assaulting the keeper. Stern… slipped away. For now.
+ev.ev_story_court.l06,"Хальвдана Грима не нашли. Говорят, море собирало коллекцию Гримов. Не хватало последнего.",Halvdan Grim was not found. They say the sea was collecting Grims. It was missing the last one.
+ev.ev_story_agatha_day.l01,"На пороге сидит кот. Рядом — Агата, живая, в своём старом свитере. «Ну, значит, остаёмся. На день».","A cat sits on the doorstep. Beside it — Agatha, alive, in her old sweater. 'Well, then, we're staying. For a day.'"
+ev.ev_story_agatha_day.l02,"Вы обходите остров. Она ругает твой огород, хвалит погост, пьёт чай у Олафа и учит тебя ухе по-своему.","You walk the island. She scolds your garden, praises the graveyard, has tea with Olaf and teaches you her own fish soup."
+ev.ev_story_agatha_day.l03,"На закате она поднимается в фонарную, в последний раз зажигает лампу — и уходит в море с улыбкой.","At sunset she climbs to the lantern room, lights the lamp one last time — and walks into the sea smiling."
+ending.missing.stone,Камень Уговора не собран,The Pact Stone is not whole
+ending.missing.twenty,Не все Двадцать похоронены,Not all of the Twenty are buried
+ending.missing.light80,Свет ниже 80,Light below 80
+ending.missing.light70,Свет ниже 70,Light below 70
+ending.missing.peace70,Покой ниже 70,Peace below 70
+ending.missing.sea60,Море ниже 60,Sea below 60
+ending.missing.sea40,Море ниже 40,Sea below 40
+ending.missing.honor,Честь ниже нуля,Honour below zero
+ending.missing.gills,Нет «Жабр Ранн»,No Rann's Gills
+ending.missing.neptune,Действует договор «Нептуна»,Neptune's contract stands
+ending.missing.great_eye,«Большое око» не установлено,The Great Eye is not installed
+ending.a.title,A. «Новый Уговор»,A. 'The New Pact'
+ending.a.desc,"Переписать Уговор: маяк светит и живым, и мёртвым. Хмарь станет «Утренней дымкой», Агата вернётся на один день.","Rewrite the Pact: the light shines for the living and the dead. The Hmar becomes the Morning Haze, Agatha returns for one day."
+ending.b.title,B. «Цена света»,B. 'The Price of Light'
+ending.b.desc,"«Душа за душу»: море забирает Хальвдана, Агата возвращается живой навсегда. Хмарь слабеет.","'A soul for a soul': the sea takes Halvdan, Agatha returns alive for good. The Hmar weakens."
+ending.c.title,C. «Разорванный уговор»,C. 'The Broken Pact'
+ending.c.desc,"Сжечь Хмарь «Большим оком». Никаких уговоров — только свет. Призраки уйдут, милость моря замрёт на нуле.","Burn the Hmar with the Great Eye. No pacts — only light. The ghosts will leave, the sea's mercy freezes at zero."
+ending.d.title,D. «Отложенный уговор»,D. 'The Postponed Pact'
+ending.d.desc,Ранн даёт ещё год. Агата держится. Финал повторится следующей осенью.,Rann grants another year. Agatha holds on. The finale comes again next autumn.
+ending.head,Ранн показывает все пути. Серые — закрыты.,Rann shows every path. The grey ones are closed.
+ending.warn_c,Внимание: невыполненные призрачные квесты будут потеряны.,Warning: unfinished ghost quests will be lost.
+ending.chosen,Выбор сделан.,The choice is made.
+ending.closed,Этот путь закрыт: %s.,This path is closed: %s.
+finale.title,Великий Прилив — держать огонь,The Great Tide — hold the fire
+finale.keys,1 зажечь · 2 долить · 3 протереть · 4 чинить · 5 оглушить · 6 фонарь · 7 колокол · 8 «Светлая вода» · Q пропустить,1 relight · 2 refill · 3 wipe · 4 repair · 5 stun · 6 lantern · 7 bell · 8 Light Water · Q skip
+finale.lost,"Фортуна: «Давай сделаем вид, что этого не было. Я умею забывать — у меня деревянная голова». Снова 21:00.",Fortuna: 'Let's pretend that never happened. I'm good at forgetting — I've a wooden head.' 21:00 again.
+finale.kept,«Королева Кронвальда» прошла. Огонь держался. Море уходит.,The Queen of Kronvald has passed. The fire held. The sea goes out.
+court.trial,«Сольвикский вестник»: «НЕПТУН УТОНУЛ». Хальвдан Грим и Штерн под судом. Торговый дом Грима становится Артелью Сольвика.,The Solvik Herald: 'NEPTUNE HAS SUNK'. Halvdan Grim and Stern on trial. Grim's trading house becomes the Solvik Artel.
+court.arrest,«Сольвикский вестник»: Хальвдан Грим арестован за нападение на смотрителя. Штерн открыл в Кронвальде «Посейдон и партнёры».,The Solvik Herald: Halvdan Grim arrested for assaulting the keeper. Stern has opened 'Poseidon & Partners' in Kronvald.
+court.fled,Хальвдан ушёл на лодке в шторм. Через неделю прилив принесёт его шляпу. Штерн безнаказан — пока.,Halvdan put out into the storm. In a week the tide will bring his hat. Stern goes unpunished — for now.
+court.pardon,"Хальвдан публично признался на причале, отдал состояние Артели и школе и стал смотрителем Мёртвого Огня — настоящего.","Halvdan confessed publicly on the pier, gave his fortune to the Artel and the school and became keeper of the Dead Fire — a true one."
+court.taken,Хальвдана забрало море. «Мы давно собирали коллекцию Гримов».,The sea took Halvdan. 'We have long collected Grims.'
+fortuna.stay,Фортуна: «Кто-то же должен тебя воспитывать». Она остаётся голосом маяка.,Fortuna: 'Someone has to bring you up.' She stays the voice of the lighthouse.
+fortuna.release,"Ты просишь её уйти. Фигура замолкает навсегда, а на деревянном лице появляется улыбка.","You ask her to go. The figure falls silent for ever, and a smile appears on the wooden face."
+fortuna.rest,"Фортуна молчит. Кажется, она наконец спит.","Fortuna is silent. She seems, at last, to sleep."
+epilogue.title,Эпилог,Epilogue
+epilogue.ending.a,"Новый Уговор. Над мысом по утрам — «Утренняя дымка»; рыбаки говорят, она на удачу. Ночей Хмари больше нет. Тебя зовут Хранителем Двух Морей.",The New Pact. Mornings over the cape bring the Morning Haze; fishermen say it's lucky. There are no more Hmar Nights. They call you the Keeper of Two Seas.
+epilogue.ending.b,"Цена света. Агата живёт в вахтенной, критикует огород и обыгрывает тебя в рыбалке. Хмарь приходит редко и тихо.","The Price of Light. Agatha lives in the watch room, criticises your garden and beats you at fishing. The Hmar comes rarely, and quietly."
+epilogue.ending.c,"Разорванный уговор. Туманов нет. Призраков нет. Море молчит — ни милости, ни гнева. Лив пишет об этом статью.","The Broken Pact. No fogs. No ghosts. The sea is silent — no mercy, no anger. Liv writes a paper about it."
+epilogue.ending.d,Отложенный уговор. Агата держит дверь ещё год. Ты держишь огонь.,The Postponed Pact. Agatha holds the door one more year. You hold the fire.
+epilogue.court.trial,"Суд. «Нептун» разорён, Артель Сольвика платит честно, керосин подешевел.","The court. Neptune is bankrupt, the Solvik Artel pays fairly, kerosene is cheaper."
+epilogue.court.arrest,Хальвдан в тюрьме. Штерн где-то в Кронвальде открывает новую контору.,Halvdan is in prison. Stern is somewhere in Kronvald opening a new office.
+epilogue.court.fled,Шляпа Хальвдана лежит на полке в таверне. Никто её не трогает.,Halvdan's hat sits on a shelf in the tavern. Nobody touches it.
+epilogue.court.pardon,На Мёртвом Огне горит свет. Настоящий. Хальвдан протирает стёкла по утрам.,A light burns on the Dead Fire. A true one. Halvdan wipes the glass every morning.
+epilogue.court.taken,Коллекция Гримов у Ранн полна. Ингрид ставит отцу камень на погосте — без тела.,Rann's collection of Grims is complete. Ingrid sets a stone for her father in the graveyard — without a body.
+epilogue.court.none,Остров живёт дальше.,The island goes on.
+epilogue.fortuna.stays,Фортуна остаётся голосом маяка и по-прежнему напоминает про 19:30.,Fortuna stays the voice of the lighthouse and still reminds you about 19:30.
+epilogue.fortuna.released,Фортуна молчит и улыбается.,"Fortuna is silent, and smiling."
+epilogue.fortuna.rests,Фортуна спит. Иногда во сне она поскрипывает.,Fortuna sleeps. Sometimes she creaks in her sleep.
+epilogue.fortuna.silent,"Фортуна ворчит, что Элеонору так и не нашли.",Fortuna grumbles that Eleonora was never found.
+epilogue.tuve.stays,Туве осталась. В полнолуние она уходит в море — и всегда возвращается к утру.,Tuve stayed. At full moon she goes into the sea — and always comes back by morning.
+epilogue.tuve.left,Туве уплыла. Иногда на Тюленьем камне сидит серая тюлениха и смотрит на маяк.,Tuve swam away. Sometimes a grey seal sits on Seal Rock and watches the lighthouse.
+epilogue.tuve.sea,Тюлени у камня ждут свою девушку в сером.,The seals by the rock wait for their girl in grey.
+epilogue.community.all,Над мысом летними ночами светятся светлячки — бывшие Туманники.,On summer nights fireflies glow over the cape — the Mistfolk that were.
+epilogue.community.some,"Туманники чинят то, что им доверили, и ждут остального.",The Mistfolk mend what they were trusted with and wait for the rest.
+epilogue.community.none,Гильдейский дом стоит пустой. Туман в окнах.,The Guild House stands empty. Fog in the windows.
+epilogue.neptune.signed,Консервный завод дымит в Бухте. Море хмурится.,The cannery smokes in the Bay. The sea frowns.
+epilogue.neptune.annulled,Завод закрыт после твоих «похорон». Остров до сих пор смеётся.,The cannery closed after your 'funeral'. The island still laughs about it.
+epilogue.neptune.torn,Порванный договор висит в рамке в таверне.,The torn contract hangs framed in the tavern.
+epilogue.neptune.never,«Нептун» так и не пустил корней на острове.,Neptune never took root on the island.
+epilogue.spouse,Твой супруг держит огонь вместе с тобой.,Your spouse keeps the fire with you.
+epilogue.children,Дети спрашивают на погосте: «А мы тоже станем знаками?»,At the graveyard the children ask: 'Will we become markers too?'
+epilogue.next,Далее,Next
+epilogue.free,Свободная игра. Год продолжается.,Free play. The year goes on.
+q.pg_two_fires.title,Два огня,Two Fires
+q.pg_two_fires.build,"Восстановить Мёртвый Огонь: 500 камня, 200 досок, 50 железа, 20 латуни и линза 2-го разряда — Ильму","Restore the Dead Fire: 500 stone, 200 boards, 50 iron, 20 brass and a 2nd-order lens — to Ilm"
+q.pg_two_fires.build.label,Заказать второй маяк на Мёртвом Огне,Order the second lighthouse on the Dead Fire
+q.pg_two_fires.build.reply,"Два огня на одном острове. Ради такого я даже скидку не спрошу. Шучу, спрошу.","Two fires on one island. For that I won't even ask for a discount. Joking, I will."
+q.pg_children_of_legends.title,Дети легенд,Children of Legends
+q.pg_children_of_legends.codger,Сын Старого Хрыча,The Old Codger's son
+q.pg_children_of_legends.herring,Сельдяная принцесса,The Herring Princess
+q.pg_children_of_legends.halibut,Золотой палтусёнок,The golden halibut calf
+q.pg_children_of_legends.grandchild,Внучка Бабушки,Grandmother's granddaughter
+q.pg_children_of_legends.lantern,Малёк-фонарщик,The lantern fry
+q.pg_poseidon.title,Посейдон,Poseidon
+q.pg_poseidon.evidence,Довезти недостающие улики: всего нужно 5,Bring the missing evidence: five in all
+q.pg_poseidon.palm,"Отдать дело инспектору Пальму (в управе, 28-го)","Hand the case to Inspector Palm (at the office, on the 28th)"
+mail.poseidon_sunk,«Сольвикский вестник»: «ПОСЕЙДОН ТОЖЕ ТОНЕТ». Штерн арестован в Кронвальде.,The Solvik Herald: 'POSEIDON SINKS TOO'. Stern arrested in Kronvald.
+kronvald.title,Поездка в Кронвальд,A trip to Kronvald
+kronvald.go,Сесть на «Чайку» (день в Кронвальде),Board the Gull (a day in Kronvald)
+kronvald.office.ruins,Контора «Нептуна» заколочена. На двери мелом: «Люди — не цифры».,Neptune's office is boarded up. Chalked on the door: 'People are not numbers.'
+kronvald.office.open,Контора «Нептуна» работает. Твой старый стол занят. Штамп на нём — всё тот же.,Neptune's office is open. Your old desk is taken. The stamp on it is the same.
+kronvald.colleagues,Бывшие коллеги угощают кофе и не верят ни одному твоему слову про призраков.,Your former colleagues buy you coffee and don't believe a word about the ghosts.
+kronvald.market,Рынок редкостей,The market of rarities
+kronvald.done,В этом сезоне ты уже был в Кронвальде.,You have already been to Kronvald this season.
+perfection.title,Совершенство смотрителя: %d%%,The Keeper's Perfection: %d%%
+perfection.golden,"На мысу стоит Золотой фонарь, на нём сидит Фитиль IX. Фортуна: «Ну всё. Можешь наконец отдохнуть. Шучу. Огонь в 19:30».","A Golden Lantern stands on the cape, Wick IX sitting on it. Fortuna: 'That's it. You can finally rest. Joking. Fire at 19:30.'"
+cabinet.title,Кунсткамера,The Cabinet of Curiosities
+cabinet.head,Экспонатов: %d из 50.,Exhibits: %d of 50.
+cabinet.give,Передать экспонат,Donate an exhibit
+cabinet.not,Фортуна: «Это не экспонат. Это хлам. Я разбираюсь».,Fortuna: 'That is not an exhibit. That is junk. I know the difference.'
+cabinet.have,Фортуна: «Такое у нас уже есть».,Fortuna: 'We already have one.'
+cabinet.took,Фортуна: «%s. %s»,Fortuna: '%s. %s'
+cabinet.reward,Награда кунсткамеры: %s,Cabinet reward: %s
+cabinet.c1,Недурно. Поставь повыше.,Not bad. Put it higher up.
+cabinet.c2,"О, это я помню. Не спрашивай откуда.","Oh, I remember this. Don't ask how."
+cabinet.c3,"Если это продать, Хальвдан бы удавился. Оставим.",Sell this and Halvdan would choke. We'll keep it.
+cabinet.c4,Пыль с него не стирай. Пыль — тоже история.,Don't dust it. Dust is history too.
+story.spot.kronvald,«Чайка» до Кронвальда,The Gull to Kronvald
+story.spot.kronvald.text,Раз в сезон — день в Кронвальде.,Once a season — a day in Kronvald.
+story.spot.cabinet.text,Полки первого этажа. Фортуна комментирует каждый экспонат.,The shelves of the ground floor. Fortuna comments on every exhibit.
+story.spot.agatha,Агата,Agatha
+story.spot.agatha.text,Агата пьёт чай и смотрит на тебя поверх очков.,Agatha drinks tea and looks at you over her spectacles.
+agatha.line.1,Огород у тебя кривой. Но солерос хорош.,Your garden's crooked. But the samphire's good.
+agatha.line.2,"Спорим, я поймаю больше? Уже поймала.",Bet I catch more? I already have.
+agatha.line.3,Кот тебя признал. Это важнее инспекции.,The cat has accepted you. That matters more than inspections.
+agatha.line.4,Иногда я слышу Ранн. Она считает теперь медленнее.,Sometimes I hear Rann. She counts more slowly now.
+spot.act.sample,Набрать сачком,Net a sample
+spot.act.dive,Нырнуть,Dive
+spot.act.take,Взять,Take
+spot.act.refloat,Подложить доски под киль (5),Put boards under the keel (5)
+spot.act.copy,Снять копии,Make copies
+spot.act.listen,Слушать,Listen
+spot.act.open_key,Открыть ключом,Open with the key
+spot.act.break,Взломать (−15 Чести),Break in (−15 Honour)
+spot.act.take_ally,Взять с собой: %s,Take along: %s
+spot.act.drop,Не брать: %s,Leave behind: %s
+spot.act.approach,Плыть к огню,Row towards the fire
+spot.act.dig,Копать,Dig
+spot.act.rite,Совершить обряд,Perform the rite
+spot.act.read,Прочитать,Read
+spot.act.look,Посветить фонарём,Shine the lantern
+spot.act.sketch,Зарисовать,Sketch
+spot.act.fresco,Рассмотреть фреску,Study the fresco
+spot.act.talk,Поговорить,Talk
+spot.act.lift_cat,Поднять кота,Pick up the cat
+spot.tide,Вода: %.1f (нужен отлив ≤ −0.4).,Water: %.1f (needs an ebb ≤ −0.4).
+spot.tide_high,Вода ещё высоко. Ждите отлива.,The water is still high. Wait for the ebb.
+spot.sampled,В банке светится планктон. Лив будет в восторге.,Plankton glows in the jar. Liv will be thrilled.
+spot.fragment_1,"Камень тёплый, как ладонь. Первая часть Камня Уговора.",The stone is warm as a palm. The first part of the Pact Stone.
+spot.page_3,"Под верхним камнем — страница, завёрнутая в промасленную ткань.",Under the top stone — a page wrapped in oiled cloth.
+spot.page_12,Лопата выворачивает жестянку. В ней — страница Агаты.,The spade turns up a tin. Inside — a page of Agatha's.
+spot.refloated,«Треска» скрипит и сползает на воду. Хедда смотрит на тебя по-новому.,The Treska creaks and slides into the water. Hedda looks at you differently.
+spot.copied,"Три свидетельства, три разных почерка, одна подпись: «Фальк».","Three certificates, three hands, one signature: 'Falk'."
+spot.telegram,Лента ползёт: «ОГОНЬ 28 ТЧК ТРЮМ ГОТОВ ТЧК». Олаф бледнеет и снимает копию.,The tape crawls: 'FIRE 28 STOP HOLD READY STOP'. Olaf goes pale and makes a copy.
+spot.telegraph_quiet,Телеграф молчит. Прогноз с материка на завтра: %s.,The telegraph is quiet. The mainland's forecast for tomorrow: %s.
+spot.safe_open,"Сейф открыт: третий фрагмент Камня, тюленья шкура и чёрная книга Гримов.","The safe is open: the third fragment of the Stone, a sealskin and the Grims' black book."
+spot.caught,"Пёс залаял, фонари братьев Скау уже во дворе. Ты уходишь через забор. Честь −5.","The dog barks, the Skau brothers' lanterns are already in the yard. You leave over the fence. Honour −5."
+spot.crew,С тобой: %s (до двух; лучше всех — Хедда и Кай).,With you: %s (up to two; Hedda and Kai are best).
+spot.ambush_won,Ты выныриваешь из тумана у самых скал. Нут Скау пойман с фонарём в руках.,You come out of the fog right by the rocks. Nut Skau is caught with the lantern in his hands.
+spot.ambush_won_rud,Нут пойман. Руд Скау сам поднимает руки: «Я расскажу всё. Хватит».,Nut is caught. Rud Skau raises his hands himself: 'I'll tell everything. Enough.'
+spot.ambush_lost,"Луч скользит по тебе — заметили! Братья уплывают, фонарь летит в воду. Он лежит неглубоко: завтра можно нырнуть.","The beam slides over you — seen! The brothers row off, the lantern goes into the water. It isn't deep: you can dive tomorrow."
+spot.need_bell,Без колокола или скафандра туда не нырнуть.,You can't dive there without the bell or the suit.
+spot.berta_hold,"В трюме «Святой Берты» — балластные камни вместо сукна и накладная, подписанная «Нептуном».",In the Saint Berta's hold — ballast stones instead of cloth and a bill of lading signed by Neptune.
+spot.lantern_found,"Фонарь ложного огня — в иле, красное стекло цело.","The false fire's lantern — in the silt, the red glass unbroken."
+spot.rite_words,Хельга: «А слова? Без слов это просто мокрый камень». (Страница №8 или сказ 6),Helga: 'And the words? Without them it's just a wet stone.' (Page 8 or tale 6)
+spot.rite_lantern,Нужен фонарь в руках.,You need a lantern.
+spot.rite_gift,"Выберите на панели дар, который Ранн понравится.",Select a gift Rann will like on the hotbar.
+spot.rite_done,Дар принят. Слова сказаны.,The gift is taken. The words are said.
+spot.cat_key,Кот не возражает. Под ним — ключ и записка: «Ключ — под кошкой. Я же писала». — А.,The cat doesn't object. Under it — a key and a note: 'The key is under the cat. I did write.' — A.
+story.spot.cat_key,Кот на коврике,The cat on the doormat
+story.spot.cat_key.text,На коврике у двери спит кот. Не рыжий. Кажется.,A cat sleeps on the doormat. Not ginger. Probably.
+story.stone_joined,Три части ложатся на Камень Ранн и срастаются без шва. Камень Уговора цел.,The three parts settle on Rann's Stone and join without a seam. The Pact Stone is whole.
+evidence.card.rud_testimony,"Показания Руда Скау: кто, когда и за сколько зажигал второй огонь.","Rud Skau's testimony: who lit the second fire, when, and for how much."
+finale.no_sleep,Не сегодня. Сегодня Великий Прилив.,Not tonight. Tonight is the Great Tide.
+weather.clear,ясно,clear
+weather.cloud,облачно,cloudy
+weather.rain,дождь,rain
+weather.fog,туман,fog
+weather.storm,шторм,storm
+weather.snow,снег,snow
+weather.blizzard,метель,blizzard
+prologue.office,Кронвальд. Контора «Нептун и партнёры». Дождь стучит в окно. На столе — три страховых дела и штамп «ВЫПЛАТИТЬ».,Kronvald. The office of Neptune & Partners. Rain drums on the window. Three insurance files on the desk and a stamp: 'PAY OUT'.
+prologue.stamp,Поставить печать (%d из 3),Stamp it (%d of 3)
+prologue.case.1,Дело №1: шхуна «Ласточка». Груз — треска. «Выплатить 3 000 кр». Шлёп.,"File no. 1: the schooner Swallow. Cargo — cod. 'Pay 3,000 kr'. Thump."
+prologue.case.2,Дело №2: бот «Сельма». Потеря снастей. «Выплатить 400 кр». Шлёп.,File no. 2: the boat Selma. Gear lost. 'Pay 400 kr'. Thump.
+prologue.case.3,"Дело №3: «Бриг «Милосердие». Полная гибель у о. Сольвик, Осень 14. Экипаж 14 чел. Выплатить 48 000 кр». Шлёп.","File no. 3: 'The brig Mercy. Total loss off Solvik Island, Autumn 14. Crew of 14. Pay 48,000 kr'. Thump."
+prologue.stern_passes,"Мимо проходит Штерн: «Отличная скорость. Люди — это цифры, а цифры не тонут».","Stern walks past: 'Excellent speed. People are numbers, and numbers don't drown.'"
+prologue.letter.office,"Курьер приносит два письма. Первое — от Лоцманской управы: «Смотрительница маяка «Вороний Глаз» А. Линд пропала в море Осенью 14 и признана погибшей. Согласно уставу пост может занять родственник, иначе маяк будет закрыт с 1-го числа Весны».","A courier brings two letters. The first is from the Pilotage Office: 'The keeper of the Raven's Eye light, A. Lind, was lost at sea in Autumn 14 and is presumed dead. By statute a relative may take the post; otherwise the light closes on the 1st of Spring.'"
+prologue.letter.agatha,"Второе — от самой Агаты, написанное за месяц до исчезновения: «Если ты это читаешь, я не вернулась. Зажги огонь. Не верь туману. И не верь тому, что утопленники говорят в первую ночь. Ключ — под кошкой».","The second is from Agatha herself, written a month before she vanished: 'If you are reading this, I did not come back. Light the fire. Do not trust the fog. And do not trust what the drowned say on the first night. The key is under the cat.'"
+prologue.stern_talk,Штерн поднимает бровь: «Вы куда-то собрались?»,Stern raises an eyebrow: 'Going somewhere?'
+prologue.phrase.1,Я увольняюсь.,I resign.
+prologue.phrase.2,Беру бессрочный отпуск.,I'm taking indefinite leave.
+prologue.phrase.3,Считайте меня пропавшим без вести.,Consider me missing at sea.
+prologue.form,"«Анкета смотрителя» Лоцманской управы. Имя, родство с А. Линд и одна странная графа: «Что вы любите больше всего?»","The Pilotage Office's 'Keeper's Form'. Name, relation to A. Lind, and one odd box: 'What do you love most?'"
+prologue.form.name,Имя,Name
+prologue.form.love,Что вы любите больше всего?,What do you love most?
+prologue.grandson,Внук — подписать,Grandson — sign
+prologue.granddaughter,Внучка — подписать,Granddaughter — sign
+prologue.steamer,"Пароход «Чайка» в тумане. Кэп Ворчун ворчит. Весна 1, 17:00 — причал Сольвика. Хальвдан Грим протягивает корзину: «Семена, хлеб, чай. Добро пожаловать, дорогой». Олаф вручает «Устав смотрителя». Путь на Вороний мыс — по карте.","The steamer Gull in the fog. Cap'n Grump grumbles. Spring 1, 17:00 — Solvik pier. Halvdan Grim hands you a basket: 'Seeds, bread, tea. Welcome, my dear.' Olaf gives you the Keeper's Statute. The way to Raven Cape — by the map."
+prologue.next,Далее,Next
+prologue.arrive,Сойти на берег,Go ashore
+q.hint.board,Доска улик — в вахтенной (3-й этаж маяка).,The evidence board is in the watch room (3rd floor).

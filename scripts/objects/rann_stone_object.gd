@@ -40,6 +40,15 @@ func interact(_player: Player) -> void:
 	var calm := func(_panel: InfoPanel) -> String:
 		return str(RannStone.request_calm()["text"])
 	var buttons: Array = [["Поднести", give]]
+	# Q4.3: the three fragments are joined on the Stone; Q3.11: Rann speaks here with five blessings.
+	if Story.can_join_stone():
+		buttons.append(["Сложить Камень Уговора", func(_p: InfoPanel) -> String:
+			return Loc.t("story.stone_joined") if Story.join_stone() else ""])
+	if Quests.state("q3_11_gills") == "active" and not Cutscenes.seen.has("ev_story_rann_gills"):
+		buttons.append(["Слушать прибой", func(p: InfoPanel) -> String:
+			p.close()
+			Cutscenes.play("ev_story_rann_gills")
+			return ""])
 	if Sea.mercy >= float(RannStone.cfg().get("calm_min_mercy", 60)):
 		buttons.append(["Просить штиль", calm])
 	InfoPanel.open(hud, "Камень Ранн", body, buttons)

@@ -59,8 +59,10 @@ func _reachable_tags() -> Dictionary:
 func _check_every_fish() -> void:
 	_fresh()
 	var fish_list := Data.all("fish")
-	_check(fish_list.size() == 38, "33 rod fish and 5 legends (15.4)")
+	_check(fish_list.size() == 43, "33 rod fish, 5 legends (15.4) and their 5 children for the postgame (5.7)")
 	var reachable := _reachable_tags()
+	# the legends' children (5.7) swim once the postgame begins
+	Game.set_flag("children_of_legends")
 	for tag in ["coast", "rocky", "pier", "sand", "lagoon", "ice", "lake", "stream", "estuary", "seal_rock"]:
 		_check(reachable.has(tag), "some island water must count as " + tag)
 	for fish in fish_list:

@@ -186,6 +186,21 @@ static func _bfs(rows: Array, from: Vector2i) -> Dictionary:
 	return dist
 
 
+# A reachable open cell halfway between the entry and the way down, for a story chest (n-th one shifts along).
+static func story_cell(level_data: Dictionary, n: int) -> Vector2i:
+	var dist := _bfs(level_data["rows"], level_data["entry"])
+	var far := int(dist.get(level_data["exit"], 1))
+	var want := maxi(2, far / 2 + n * 3)
+	var best: Vector2i = level_data["exit"]
+	var best_gap := 1 << 30
+	for cell in dist:
+		var gap := absi(int(dist[cell]) - want)
+		if gap < best_gap and cell != level_data["exit"] and cell != level_data["entry"]:
+			best = cell
+			best_gap = gap
+	return best
+
+
 # "No dead ends": the exit, every resource, chest and foe can be reached from the entry.
 static func check(level_data: Dictionary) -> Array:
 	var problems: Array = []

@@ -952,5 +952,133 @@
   ],
   "legendary": true,
   "hmar": true
+ },
+ {
+  "id": "fish_codger_son",
+  "where": [
+   "sea_teeth"
+  ],
+  "seasons": [
+   "spring"
+  ],
+  "hours": [
+   [
+    6,
+    10
+   ]
+  ],
+  "weather": "any",
+  "tide": "high",
+  "difficulty": 95,
+  "behavior": "legendary",
+  "size_cm": [
+   90,
+   130
+  ],
+  "legendary": true,
+  "postgame": true
+ },
+ {
+  "id": "fish_herring_princess",
+  "where": [
+   "sea_z3"
+  ],
+  "seasons": [
+   "summer"
+  ],
+  "hours": [
+   [
+    20,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 100,
+  "behavior": "legendary",
+  "size_cm": [
+   150,
+   250
+  ],
+  "legendary": true,
+  "postgame": true
+ },
+ {
+  "id": "fish_golden_calf",
+  "where": [
+   "seal_rock"
+  ],
+  "seasons": [
+   "autumn"
+  ],
+  "hours": [
+   [
+    6,
+    14
+   ]
+  ],
+  "weather": "any",
+  "tide": "low",
+  "difficulty": 100,
+  "behavior": "legendary",
+  "size_cm": [
+   60,
+   100
+  ],
+  "legendary": true,
+  "postgame": true
+ },
+ {
+  "id": "fish_granddaughter",
+  "where": [
+   "ice_field"
+  ],
+  "seasons": [
+   "winter"
+  ],
+  "hours": [
+   [
+    18,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 110,
+  "behavior": "legendary",
+  "size_cm": [
+   200,
+   300
+  ],
+  "legendary": true,
+  "postgame": true
+ },
+ {
+  "id": "fish_lantern_fry",
+  "where": [
+   "dead_fire"
+  ],
+  "seasons": [
+   "spring",
+   "summer",
+   "autumn",
+   "winter"
+  ],
+  "hours": [
+   [
+    21,
+    26
+   ]
+  ],
+  "weather": "any",
+  "tide": "any",
+  "difficulty": 115,
+  "behavior": "legendary",
+  "size_cm": [
+   20,
+   40
+  ],
+  "legendary": true,
+  "postgame": true
  }
 ]

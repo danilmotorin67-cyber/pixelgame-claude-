@@ -97,7 +97,13 @@ func interact(player: Player) -> void:
 		"exit_door":
 			Router.goto_map("cape", Vector2(724, 290))
 		"fortuna":
-			InfoPanel.open(_hud(), "Фортуна", func() -> String: return Dialogue.fortuna_talk())
+			var scene := Story.fortuna_scene()
+			if scene != "":
+				Cutscenes.play(scene)
+			elif Story.fortuna_fate == "released":
+				InfoPanel.open(_hud(), "Фортуна", func() -> String: return Loc.t("fortuna.release"))
+			else:
+				InfoPanel.open(_hud(), "Фортуна", func() -> String: return Dialogue.fortuna_talk())
 		"barrel":
 			_open_barrel()
 		"repair":

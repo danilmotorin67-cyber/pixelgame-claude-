@@ -203,7 +203,7 @@ func advance_night(storm: bool) -> Array:
 	var arrived: Array = []
 	var decay: Dictionary = cfg("decay")
 	for b in bodies:
-		if is_buried(b):
+		if is_buried(b) or b.has("twenty"):
 			continue
 		var place := "morgue" if str(b["where"]) == "morgue" else "shore"
 		if place == "morgue" and Buildings.level("ice_house") > 0:
@@ -234,6 +234,8 @@ func advance_night(storm: bool) -> Array:
 				if story.has(key):
 					merged[key] = story[key]
 			var b := spawn_body(merged, str(story["arrive"].get("beach", "cape")), true, str(story["id"]))
+			if bool(story.get("known", false)):
+				b["identified_as"] = str(reg.get("id", ""))
 			arrived.append(b["id"])
 	if storm and _rng(29).randf() < float(cfg("storm_body")):
 		var missing: Array = []
@@ -449,9 +451,11 @@ func take_from_morgue(b: Dictionary) -> bool:
 # ---- identification (11.7) ----
 
 func candidates(b: Dictionary, use_filter: bool) -> Array:
+	if b.has("twenty"):
+		return Twenty.roll_candidates(b)
 	var out: Array = []
 	for reg in registry():
-		if reg.has("story_only") or (_assigned_elsewhere(str(reg["id"]), str(b["id"]))):
+		if reg.has("story_only") or reg.has("fortuna") or (_assigned_elsewhere(str(reg["id"]), str(b["id"]))):
 			continue
 		var fits := true
 		if use_filter:
@@ -504,7 +508,9 @@ func _pay_plaque(b: Dictionary) -> bool:
 
 # The directorate posts a letter to the family for 20 kr; the answer comes in 3-7 days.
 func send_family_letter(b: Dictionary) -> bool:
-	if str(b["identified_as"]) == "" or bool(b["letter_sent"]) or not Economy.pay(int(cfg("family_letter"))):
+	if str(b["identified_as"]) == "" or bool(b["letter_sent"]) or b.has("twenty"):
+		return false
+	if not Economy.pay(int(cfg("family_letter"))):
 		return false
 	b["letter_sent"] = true
 	var story := Data.by_id("bodies", str(b["id"]))
@@ -535,6 +541,7 @@ func deliver_replies(night_index: int) -> void:
 			var items: Array = []
 			if reply.has("item"):
 				items.append([str(reply["item"]), 1])
+			items.append(["thanks_letter", 1])
 			Mail.send(str(reply.get("text", "mail.family_thanks")), [str(reg["name"])], money, items)
 			Game.add_honor(5)
 			Knowledge.add_points("rest", 1)
@@ -711,8 +718,12 @@ func exhume(plot: int, by_quest: bool = false) -> bool:
 	b.erase("plot")
 	carried = str(b["id"])
 	graves[plot] = _empty_grave(plot)
+	# Captain Horn wants the sea (11.8 №10): digging him up for that is no sin.
+	if str(b.get("ghost", "")) == "ghost_horn" and Quests.state("g10_wrong_burial") == "active":
+		by_quest = true
 	if not by_quest:
 		Game.add_honor(-10)
+	Events.quest_event.emit("exhumed", str(b["id"]))
 	recalc_peace()
 	return true
 
@@ -750,6 +761,8 @@ func recalc_peace() -> float:
 		bonus += 20.0
 	if Game.flag("elmo_bell"):
 		bonus += 10.0
+	if Game.flag("twins_peace"):
+		bonus += 2.0
 	bonus += minf(10.0, 5.0 * float(Game.counters.get("drowned_rites", 0)))
 	penalties = {"unburied": mini(30, 3 * unburied), "shore": 10 * on_shore, "neglect": 2 * neglect,
 		"restless": 5 * restless}
@@ -795,8 +808,10 @@ func ghost_plot(ghost: Dictionary) -> int:
 # Ghosts rise at night by their graves once buried (or, for the old keepers, once the grave is tended).
 func present_ghosts() -> Array:
 	var out: Array = []
+	if Game.flag("ghosts_gone"):
+		return out
 	for ghost in Data.all("ghosts"):
-		if laid_ghosts.has(str(ghost["id"])):
+		if laid_ghosts.has(str(ghost["id"])) or ghost.has("place"):
 			continue
 		var plot := ghost_plot(ghost)
 		if plot < 0:
@@ -814,12 +829,22 @@ func talk_ghost(ghost_id: String) -> String:
 		return ""
 	var quest := str(ghost["quest"])
 	var lines: Dictionary = ghost["lines"]
+	Events.quest_event.emit("ghost_talk", ghost_id)
 	match Quests.state(quest):
 		"none":
 			Quests.start(quest)
 			return Loc.t(str(lines["greet"]))
 		"active":
 			return Loc.t(str(lines["waiting"]))
+	return lay_ghost(ghost_id)
+
+
+# A ghost whose wish is done rests: +1 Peace for ever, candles, its gift (11.8).
+func lay_ghost(ghost_id: String) -> String:
+	var ghost := Data.by_id("ghosts", ghost_id)
+	if ghost.is_empty() or laid_ghosts.has(ghost_id):
+		return ""
+	var lines: Dictionary = ghost["lines"]
 	laid_ghosts.append(ghost_id)
 	Knowledge.add_points("rest", 5)
 	Skills.add_xp("keeping", 50)

@@ -14,7 +14,10 @@ static func perform() -> String:
 	var need := 1 if weight == "iron_ingot" else 3
 	if Inventory.count_of(weight) < need:
 		return "Нужен груз: 3 камня или железный слиток."
-	if (bool(b.get("story", false)) or str(b.get("ghost", "")) != "") and warned != str(b["id"]):
+	var horn := str(b.get("ghost", "")) == "ghost_horn" and Quests.state("g10_wrong_burial") == "active"
+	if horn and Inventory.count_of("signal_flare") <= 0:
+		return "Капитан Хорн хочет салюта: нужна сигнальная ракета."
+	if not horn and (bool(b.get("story", false)) or str(b.get("ghost", "")) != "") and warned != str(b["id"]):
 		warned = str(b["id"])
 		return "Этот человек хотел бы лежать в земле. Нажмите ещё раз, если всё же отдать морю."
 	Inventory.take(weight, need)
@@ -30,4 +33,8 @@ static func perform() -> String:
 	Skills.add_xp("keeping", 25)
 	Graveyard.recalc_peace()
 	Events.quest_event.emit("sea_burial", str(b["id"]))
+	if horn:
+		Inventory.take("signal_flare", 1)
+		Events.quest_event.emit("horn_salute", str(b["id"]))
+		return "Ракета уходит в небо — салют капитану Хорну. Море приняло его. Милость +%d." % int(round(mercy))
 	return "Море приняло его. Милость +%d." % int(round(mercy))

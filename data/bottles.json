@@ -1,1 +1,253 @@
-[]
+[
+ {
+  "id": "bottle_1",
+  "n": 1,
+  "text": "bottle.1"
+ },
+ {
+  "id": "bottle_2",
+  "n": 2,
+  "text": "bottle.2"
+ },
+ {
+  "id": "bottle_3",
+  "n": 3,
+  "text": "bottle.3",
+  "effects": [
+   [
+    "recipe",
+    "cook_fish_pie"
+   ]
+  ]
+ },
+ {
+  "id": "bottle_4",
+  "n": 4,
+  "text": "bottle.4"
+ },
+ {
+  "id": "bottle_5",
+  "n": 5,
+  "text": "bottle.5"
+ },
+ {
+  "id": "bottle_6",
+  "n": 6,
+  "text": "bottle.6"
+ },
+ {
+  "id": "bottle_7",
+  "n": 7,
+  "text": "bottle.7",
+  "effects": [
+   [
+    "flag",
+    "treasure_7"
+   ]
+  ]
+ },
+ {
+  "id": "bottle_8",
+  "n": 8,
+  "text": "bottle.8"
+ },
+ {
+  "id": "bottle_9",
+  "n": 9,
+  "text": "bottle.9"
+ },
+ {
+  "id": "bottle_10",
+  "n": 10,
+  "text": "bottle.10"
+ },
+ {
+  "id": "bottle_11",
+  "n": 11,
+  "text": "bottle.11"
+ },
+ {
+  "id": "bottle_12",
+  "n": 12,
+  "text": "bottle.12"
+ },
+ {
+  "id": "bottle_13",
+  "n": 13,
+  "text": "bottle.13"
+ },
+ {
+  "id": "bottle_14",
+  "n": 14,
+  "text": "bottle.14"
+ },
+ {
+  "id": "bottle_15",
+  "n": 15,
+  "text": "bottle.15",
+  "effects": [
+   [
+    "flag",
+    "treasure_15"
+   ]
+  ]
+ },
+ {
+  "id": "bottle_16",
+  "n": 16,
+  "text": "bottle.16"
+ },
+ {
+  "id": "bottle_17",
+  "n": 17,
+  "text": "bottle.17"
+ },
+ {
+  "id": "bottle_18",
+  "n": 18,
+  "text": "bottle.18"
+ },
+ {
+  "id": "bottle_19",
+  "n": 19,
+  "text": "bottle.19"
+ },
+ {
+  "id": "bottle_20",
+  "n": 20,
+  "text": "bottle.20"
+ },
+ {
+  "id": "bottle_21",
+  "n": 21,
+  "text": "bottle.21"
+ },
+ {
+  "id": "bottle_22",
+  "n": 22,
+  "text": "bottle.22"
+ },
+ {
+  "id": "bottle_23",
+  "n": 23,
+  "text": "bottle.23",
+  "effects": [
+   [
+    "recipe",
+    "cook_erland_grog"
+   ]
+  ]
+ },
+ {
+  "id": "bottle_24",
+  "n": 24,
+  "text": "bottle.24"
+ },
+ {
+  "id": "bottle_25",
+  "n": 25,
+  "text": "bottle.25",
+  "effects": [
+   [
+    "item",
+    "letter_hedda",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "bottle_26",
+  "n": 26,
+  "text": "bottle.26"
+ },
+ {
+  "id": "bottle_27",
+  "n": 27,
+  "text": "bottle.27"
+ },
+ {
+  "id": "bottle_28",
+  "n": 28,
+  "text": "bottle.28"
+ },
+ {
+  "id": "bottle_29",
+  "n": 29,
+  "text": "bottle.29",
+  "effects": [
+   [
+    "item",
+    "letter_margit",
+    1
+   ]
+  ]
+ },
+ {
+  "id": "bottle_30",
+  "n": 30,
+  "text": "bottle.30"
+ },
+ {
+  "id": "bottle_31",
+  "n": 31,
+  "text": "bottle.31"
+ },
+ {
+  "id": "bottle_32",
+  "n": 32,
+  "text": "bottle.32"
+ },
+ {
+  "id": "bottle_33",
+  "n": 33,
+  "text": "bottle.33"
+ },
+ {
+  "id": "bottle_34",
+  "n": 34,
+  "text": "bottle.34"
+ },
+ {
+  "id": "bottle_35",
+  "n": 35,
+  "text": "bottle.35"
+ },
+ {
+  "id": "bottle_36",
+  "n": 36,
+  "text": "bottle.36",
+  "effects": [
+   [
+    "card",
+    "mercy_hold"
+   ]
+  ]
+ },
+ {
+  "id": "bottle_37",
+  "n": 37,
+  "text": "bottle.37"
+ },
+ {
+  "id": "bottle_38",
+  "n": 38,
+  "text": "bottle.38"
+ },
+ {
+  "id": "bottle_39",
+  "n": 39,
+  "text": "bottle.39"
+ },
+ {
+  "id": "bottle_40",
+  "n": 40,
+  "text": "bottle.40",
+  "effects": [
+   [
+    "item",
+    "star_amber",
+    1
+   ]
+  ]
+ }
+]

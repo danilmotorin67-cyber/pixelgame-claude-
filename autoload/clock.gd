@@ -48,7 +48,8 @@ var minute: int:
 
 
 func _process(delta: float) -> void:
-	if paused:
+	# 24.1: inside a festival the clock stands still.
+	if paused or Festivals.running():
 		return
 	_acc += delta
 	while _acc >= seconds_per_10min and not paused:

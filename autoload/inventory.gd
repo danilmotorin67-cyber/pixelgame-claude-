@@ -110,10 +110,20 @@ func matches(id: String, need: String) -> bool:
 	return id == need
 
 
+# A slot fits `need`: alternatives split by "|", each an id or tag with an optional "@quality" floor.
+func slot_matches(index: int, need: String) -> bool:
+	var id := str(slots[index]["id"])
+	for alt in need.split("|"):
+		var parts := alt.split("@")
+		if matches(id, parts[0]) and (parts.size() < 2 or int(slots[index]["quality"]) >= int(parts[1])):
+			return true
+	return false
+
+
 func count_matching(need: String) -> int:
 	var n := 0
 	for index in capacity:
-		if matches(str(slots[index]["id"]), need):
+		if slot_matches(index, need):
 			n += int(slots[index]["count"])
 	return n
 
@@ -125,7 +135,7 @@ func take_matching(need: String, count: int) -> bool:
 	for index in capacity:
 		if left <= 0:
 			break
-		if matches(str(slots[index]["id"]), need):
+		if slot_matches(index, need):
 			var n := mini(int(slots[index]["count"]), left)
 			take_slot(index, n)
 			left -= n
@@ -141,7 +151,7 @@ func take_matching_best(need: String, count: int) -> int:
 	while left > 0:
 		var best := -1
 		for index in capacity:
-			if matches(str(slots[index]["id"]), need) and (best < 0 or int(slots[index]["quality"]) > int(slots[best]["quality"])):
+			if slot_matches(index, need) and (best < 0 or int(slots[index]["quality"]) > int(slots[best]["quality"])):
 				best = index
 		var n := mini(int(slots[best]["count"]), left)
 		lowest = mini(lowest, int(slots[best]["quality"]))
