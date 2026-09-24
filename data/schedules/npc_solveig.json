@@ -1,0 +1,328 @@
+{
+ "npc": "npc_solveig",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:30",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "11:00",
+     "village",
+     "gossip",
+     "down",
+     "gossip"
+    ],
+    [
+     "14:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "17:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "wed"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "gossip",
+     "down",
+     "gossip"
+    ],
+    [
+     "15:00",
+     "village",
+     "berg_porch",
+     "down",
+     ""
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_4",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village",
+     "gossip",
+     "down",
+     "gossip"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "wed"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "gossip",
+     "down",
+     "gossip"
+    ],
+    [
+     "15:00",
+     "village",
+     "berg_porch",
+     "down",
+     ""
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "06:30",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "11:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "14:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "17:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "wed"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "15:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_4",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "06:30",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "11:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "14:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "17:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "wed"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "15:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_4",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village_berg",
+     "floor",
+     "up",
+     "bake"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

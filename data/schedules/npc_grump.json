@@ -1,0 +1,37 @@
+{
+ "npc": "npc_grump",
+ "entries": [
+  {
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather != 'storm' and weather != 'blizzard'",
+   "priority": 50,
+   "path": [
+    [
+     "17:40",
+     "village",
+     "steamer",
+     "down",
+     "load"
+    ],
+    [
+     "18:20",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  }
+ ]
+}

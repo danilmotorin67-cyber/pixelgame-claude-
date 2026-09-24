@@ -1,0 +1,207 @@
+{
+ "npc": "npc_tora",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "15:00",
+     "village",
+     "smithy_yard",
+     "down",
+     "watch"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "19:00",
+     "village_tavern",
+     "table_4",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "15:00",
+     "village",
+     "smithy_yard",
+     "down",
+     "watch"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "fri"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "fri"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

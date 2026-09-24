@@ -1,0 +1,172 @@
+{
+ "npc": "npc_olaf",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "07:50",
+     "village_office",
+     "clerk",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "cape",
+     "mailbox",
+     "up",
+     "deliver"
+    ],
+    [
+     "18:05",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "wreck_bay",
+     "beach",
+     "down",
+     "search"
+    ],
+    [
+     "12:00",
+     "wreck_bay",
+     "tideline",
+     "down",
+     "search"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "wreck_bay",
+     "beach",
+     "down",
+     "search"
+    ],
+    [
+     "12:00",
+     "wreck_bay",
+     "tideline",
+     "down",
+     "search"
+    ],
+    [
+     "15:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "07:50",
+     "village_office",
+     "clerk",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "village_office",
+     "telegraph",
+     "up",
+     "work"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

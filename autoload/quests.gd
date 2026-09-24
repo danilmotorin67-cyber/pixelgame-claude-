@@ -107,12 +107,7 @@ func check_starts() -> Array:
 		var id := str(info.get("id", ""))
 		if id == "" or states.has(id) or not info.has("start"):
 			continue
-		var expression := Expression.new()
-		if expression.parse(str(info["start"]), ["day_index", "hour", "day", "season", "act", "year"]) != OK:
-			continue
-		var result: Variant = expression.execute([Clock.day_index, Clock.hour, Clock.day, Clock.season,
-			Game.act, Clock.year], null, false)
-		if not expression.has_execute_failed() and bool(result):
+		if ConditionContext.check(str(info["start"])):
 			start(id)
 			started.append(id)
 	return started

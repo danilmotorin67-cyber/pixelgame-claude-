@@ -1,0 +1,303 @@
+{
+ "npc": "npc_sigrid",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:10",
+     "village",
+     "bench_chapel",
+     "down",
+     "write"
+    ],
+    [
+     "20:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "wed"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "guild_ruin",
+     "up",
+     "write"
+    ],
+    [
+     "13:00",
+     "village",
+     "beach_walk",
+     "down",
+     "walk"
+    ],
+    [
+     "16:00",
+     "village",
+     "bench_chapel",
+     "down",
+     "write"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:10",
+     "village_tavern",
+     "table_2",
+     "up",
+     "drink"
+    ],
+    [
+     "22:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:10",
+     "village",
+     "bench_chapel",
+     "down",
+     "write"
+    ],
+    [
+     "19:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "wed"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "guild_ruin",
+     "up",
+     "write"
+    ],
+    [
+     "13:00",
+     "village",
+     "beach_walk",
+     "down",
+     "walk"
+    ],
+    [
+     "16:00",
+     "village",
+     "bench_chapel",
+     "down",
+     "write"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "wed"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "wed"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "flag('graveyard_bench') and weekday != 'fri' and weather == 'clear'",
+   "priority": 12,
+   "path": [
+    [
+     "08:40",
+     "village_berg",
+     "counter_2",
+     "down",
+     "work"
+    ],
+    [
+     "17:10",
+     "cape",
+     "graveyard_bench",
+     "down",
+     "write"
+    ],
+    [
+     "20:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

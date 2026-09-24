@@ -1,0 +1,58 @@
+{
+ "npc": "npc_palm",
+ "entries": [
+  {
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "day == 28",
+   "priority": 50,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "steamer",
+     "up",
+     ""
+    ],
+    [
+     "10:00",
+     "cape",
+     "lighthouse_door",
+     "up",
+     "inspect"
+    ],
+    [
+     "12:00",
+     "village_office",
+     "visitor",
+     "up",
+     "write"
+    ],
+    [
+     "17:00",
+     "village",
+     "steamer",
+     "down",
+     ""
+    ],
+    [
+     "18:10",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  }
+ ]
+}

@@ -619,3 +619,32 @@ rann.dislikes_1,Это нам не нужно. Заберите.,We have no use 
 rann.dislikes_2,Этого у нас и так полно.,We have plenty of this already.
 rann.hates_1,Жесть и отрава. Мы запомним и это.,Tin and poison. We will remember this too.
 rann.hates_2,"Ты принёс нам то, чем нас убивают.",You bring us the things that kill us.
+npc.fortuna.name,Фортуна,Fortuna
+npc.sigrid.name,Сигрид Берг,Sigrid Berg
+npc.liv.name,Лив Хокон,Liv Hakon
+npc.hedda.name,Хедда Сторм,Hedda Storm
+npc.ingrid.name,Ингрид Грим,Ingrid Grim
+npc.einar.name,Эйнар,Einar
+npc.knud.name,Кнуд Ильмсон,Knud Ilmsson
+npc.magnus.name,Магнус Фальк,Magnus Falk
+npc.olaf.name,Олаф Линдквист,Olaf Lindqvist
+npc.tuve.name,Туве,Tuve
+npc.halvdan.name,Хальвдан Грим,Halvdan Grim
+npc.stern.name,Аркадий Штерн,Arkady Stern
+npc.tora.name,Тора,Tora
+npc.ilm.name,Ильм,Ilm
+npc.karl.name,Карл Берг,Karl Berg
+npc.solveig.name,Сольвейг Берг,Solveig Berg
+npc.bjorn.name,Бьорн «Бочка»,"Bjorn ""Barrel"""
+npc.margit.name,Маргит,Margit
+npc.benedict.name,Отец Бенедикт,Father Benedict
+npc.helga.name,Бабушка Хельга,Granny Helga
+npc.erland.name,Капитан Эрланд,Captain Erland
+npc.kai.name,Кай-отшельник,Kai the Hermit
+npc.nils.name,Нильс,Nils
+npc.freya.name,Фрейя,Freya
+npc.palm.name,Инспектор Пальм,Inspector Palm
+npc.nut.name,Нут Скау,Nut Skau
+npc.rud.name,Руд Скау,Rud Skau
+npc.sandro.name,Сандро,Sandro
+npc.grump.name,Кэп Ворчун,Cap'n Grump

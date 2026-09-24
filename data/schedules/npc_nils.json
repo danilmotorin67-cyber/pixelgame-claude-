@@ -1,0 +1,418 @@
+{
+ "npc": "npc_nils",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "school_yard",
+     "up",
+     "learn"
+    ],
+    [
+     "13:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "14:00",
+     "village",
+     "kids_play",
+     "down",
+     "play"
+    ],
+    [
+     "18:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "school_yard",
+     "up",
+     "learn"
+    ],
+    [
+     "13:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "14:00",
+     "village",
+     "guild_ruin",
+     "up",
+     "ghost_hunt"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "kids_play",
+     "down",
+     "play"
+    ],
+    [
+     "14:00",
+     "lagoon",
+     "bank",
+     "down",
+     "play"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_7",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village",
+     "kids_play",
+     "down",
+     "play"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "school_yard",
+     "up",
+     "learn"
+    ],
+    [
+     "13:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "14:00",
+     "village",
+     "kids_play",
+     "down",
+     "play"
+    ],
+    [
+     "17:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "school_yard",
+     "up",
+     "learn"
+    ],
+    [
+     "13:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "14:00",
+     "village",
+     "guild_ruin",
+     "up",
+     "ghost_hunt"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "kids_play",
+     "down",
+     "play"
+    ],
+    [
+     "14:00",
+     "lagoon",
+     "bank",
+     "down",
+     "play"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "village",
+     "school_yard",
+     "up",
+     "learn"
+    ],
+    [
+     "13:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "14:00",
+     "village_margit",
+     "table",
+     "up",
+     "play"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "sat"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "10:00",
+     "village_margit",
+     "table",
+     "up",
+     "play"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_7",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village_margit",
+     "table",
+     "up",
+     "play"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "10:00",
+     "village_margit",
+     "table",
+     "up",
+     "play"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_7",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village_margit",
+     "table",
+     "up",
+     "play"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

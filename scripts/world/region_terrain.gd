@@ -26,11 +26,7 @@ var _deep_shape: CollisionShape2D
 
 
 func _ready() -> void:
-	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string("res://data/regions.json"))
-	if not (parsed is Dictionary):
-		push_error("Island region data is invalid")
-		return
-	region = parsed.get(Router.current_map, {})
+	region = MapInfo.region(Router.current_map)
 	if region.is_empty():
 		push_error("Unknown island region: %s" % Router.current_map)
 		return
@@ -50,6 +46,8 @@ func _ready() -> void:
 	_add_wall(Vector2(width * TILE - 8, height * TILE / 2), Vector2(16, height * TILE))
 	_build_coast()
 	_build_landmarks()
+	if bool(region.get("interior", false)):
+		_build_furniture()
 	_build_exits()
 	Events.tide_changed.connect(_on_tide_changed)
 	_on_tide_changed(Clock.tide_height())
@@ -115,27 +113,8 @@ func _build_landmarks() -> void:
 			_add_wall(Vector2((float(pos[0]) + float(dimensions[0]) / 2.0) * TILE,
 				(float(pos[1]) + float(dimensions[1]) / 2.0) * TILE),
 				Vector2(int(dimensions[0]) * TILE, int(dimensions[1]) * TILE))
-		if item.has("shop"):
-			var shop_size: Array = item["size"]
-			var counter := ShopCounter.new()
-			counter.name = "Shop_" + str(item["shop"])
-			counter.shop_id = str(item["shop"])
-			counter.position = Vector2((float(pos[0]) + float(shop_size[0]) / 2.0) * TILE,
-				(float(pos[1]) + float(shop_size[1])) * TILE + 8.0)
-			var sign := Label.new()
-			sign.text = "E · лавка"
-			sign.position = Vector2(-18, 13)
-			sign.z_index = 2
-			sign.add_theme_font_size_override("font_size", 8)
-			counter.add_child(sign)
-			add_child(counter)
-		if str(item["title"]) == "Лоцманская управа":
-			var size_hall: Array = item["size"]
-			var desk := DirectorateDesk.new()
-			desk.name = "Directorate"
-			desk.position = Vector2((float(pos[0]) + float(size_hall[0]) / 2.0) * TILE,
-				(float(pos[1]) + float(size_hall[1])) * TILE + 8.0)
-			add_child(desk)
+		if item.has("interior") or bool(item.get("home", false)):
+			_add_door(item)
 	if biome == "village" and coast_row > 0:
 		var box := ShippingBox.new()
 		box.name = "ShippingBox"
@@ -145,6 +124,55 @@ func _build_landmarks() -> void:
 		# A narrow plank crossing at y=20 keeps both sides of the grove connected.
 		_add_wall(Vector2(14 * TILE, 9 * TILE), Vector2(5 * TILE, 18 * TILE))
 		_add_wall(Vector2(14 * TILE, 31 * TILE), Vector2(5 * TILE, 18 * TILE))
+
+
+# Doors of 33.7: a building with an interior leads inside; a home stays locked.
+func _add_door(item: Dictionary) -> void:
+	var door := MapInfo.door_of(item)
+	var exit_node := RegionExit.new()
+	exit_node.position = Vector2((door.x + 0.5) * TILE, (door.y + 0.5) * TILE - 4.0)
+	exit_node.display_name = str(item["title"])
+	exit_node.collision_layer = 8
+	exit_node.collision_mask = 0
+	if item.has("interior"):
+		var inside := MapInfo.size(str(item["interior"]))
+		exit_node.destination = str(item["interior"])
+		exit_node.arrival = Vector2((inside.x / 2 + 0.5) * TILE, (inside.y - 2 + 0.5) * TILE)
+		exit_node.name = "Door_" + exit_node.destination
+	else:
+		exit_node.name = "Home_" + str(item["title"]).replace(" ", "_")
+	var collision := CollisionShape2D.new()
+	var shape := RectangleShape2D.new()
+	shape.size = Vector2(20, 20)
+	collision.shape = shape
+	exit_node.add_child(collision)
+	add_child(exit_node)
+
+
+const FURNITURE_COLORS := {"bar": "#5b3a26", "counter": "#6e4b33", "table": "#7a5a3c", "pew": "#5a4030", "altar": "#d8d0bc",
+	"shelf": "#4e3a2a", "barrel": "#6a4a2e", "fireplace": "#3a302c", "forge": "#2e2624", "anvil": "#3d4146", "desk": "#6a4c34",
+	"bed": "#8c7a6a", "workbench": "#7a5a3a", "coffin": "#4a3426", "boat": "#5c4a3a", "nets": "#8a8466", "loom": "#7a5c44",
+	"hay": "#c9ad5a", "herbs": "#5d7a4a", "safe": "#3a3a40", "crates": "#8a6a44", "telegraph": "#4a4a4a", "stairs": "#5e4a3a",
+	"candles": "#e8d8a0", "board": "#8a7050"}
+
+
+func _build_furniture() -> void:
+	for f in region.get("furniture", []):
+		var at := Vector2(float(f["at"][0]), float(f["at"][1])) * TILE
+		var dims := Vector2(float(f["size"][0]), float(f["size"][1])) * TILE
+		if not bool(f.get("walk", false)) and not bool(f.get("hidden", false)):
+			_add_wall(at + dims / 2.0, dims - Vector2(2, 2))
+		if f.has("shop"):
+			var counter := ShopCounter.new()
+			counter.name = "Shop_" + str(f["shop"])
+			counter.shop_id = str(f["shop"])
+			counter.position = at + Vector2(dims.x / 2.0, dims.y + 8.0)
+			add_child(counter)
+		if bool(f.get("directorate", false)):
+			var desk := DirectorateDesk.new()
+			desk.name = "Directorate"
+			desk.position = at + Vector2(dims.x / 2.0, dims.y + 8.0)
+			add_child(desk)
 
 
 func _build_exits() -> void:
@@ -173,7 +201,7 @@ func _build_exits() -> void:
 		marker.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		exit_node.add_child(marker)
 		var nameplate := Label.new()
-		nameplate.text = str(info["label"])
+		nameplate.text = str(MapInfo.region(str(info["to"])).get("title", info["label"])) if bool(region.get("interior", false)) else str(info["label"])
 		nameplate.position = Vector2(-38, -32)
 		nameplate.add_theme_font_size_override("font_size", 9)
 		nameplate.add_theme_color_override("font_color", Color("#f0e7cc"))
@@ -207,6 +235,10 @@ func _on_tide_changed(level: float) -> void:
 
 
 func _tile_color(x: int, y: int) -> Color:
+	if bool(region.get("interior", false)):
+		if y == 0 or x == 0 or x == width - 1 or (y == height - 1 and x != width / 2):
+			return Color(str(region.get("wall", "#4a3e3c")))
+		return Color(str(region.get("floor", "#6b5646"))).darkened(0.06 if (x + y) % 2 == 0 else 0.0)
 	if coast_row >= 0:
 		if y >= coast_row + 6:
 			return ICE if _lagoon_frozen() else WATER
@@ -262,6 +294,15 @@ func _draw() -> void:
 				draw_rect(Rect2(px + 2, py + 4, 7, 1), Color("#a4a1a1"))
 	for item in region.get("landmarks", []):
 		_draw_landmark(item)
+	for f in region.get("furniture", []):
+		if bool(f.get("hidden", false)):
+			continue
+		var color := Color(str(FURNITURE_COLORS.get(str(f["kind"]), "#6b5040")))
+		var rect := Rect2(float(f["at"][0]) * TILE + 1, float(f["at"][1]) * TILE + 1, float(f["size"][0]) * TILE - 2, float(f["size"][1]) * TILE - 2)
+		draw_rect(rect, color)
+		draw_rect(Rect2(rect.position, Vector2(rect.size.x, 2)), color.lightened(0.2))
+		if str(f["kind"]) in ["fireplace", "forge"]:
+			draw_rect(Rect2(rect.position + Vector2(3, rect.size.y - 8), Vector2(rect.size.x - 6, 5)), Color("#e07a2e"))
 
 
 func _draw_landmark(item: Dictionary) -> void:

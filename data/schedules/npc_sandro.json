@@ -1,0 +1,37 @@
+{
+ "npc": "npc_sandro",
+ "entries": [
+  {
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weekday == 'fri' and weather != 'storm' and weather != 'blizzard'",
+   "priority": 50,
+   "path": [
+    [
+     "09:30",
+     "village",
+     "shebeka",
+     "down",
+     "trade"
+    ],
+    [
+     "18:10",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  }
+ ]
+}

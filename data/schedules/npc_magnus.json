@@ -1,0 +1,198 @@
+{
+ "npc": "npc_magnus",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_doctor",
+     "desk",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "village",
+     "square",
+     "down",
+     "walk"
+    ],
+    [
+     "18:00",
+     "village_tavern",
+     "bar_3",
+     "up",
+     "drink"
+    ],
+    [
+     "23:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "tue"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "beach_walk",
+     "down",
+     "walk"
+    ],
+    [
+     "14:00",
+     "village_tavern",
+     "bar_3",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:50",
+     "village_doctor",
+     "desk",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "village_doctor",
+     "table",
+     "up",
+     "read"
+    ],
+    [
+     "19:00",
+     "village_tavern",
+     "bar_3",
+     "up",
+     "drink"
+    ],
+    [
+     "23:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "tue"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "14:00",
+     "village_tavern",
+     "bar_3",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:50",
+     "village_doctor",
+     "desk",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "village_doctor",
+     "table",
+     "up",
+     "read"
+    ],
+    [
+     "21:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "tue"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "14:00",
+     "village_tavern",
+     "bar_3",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

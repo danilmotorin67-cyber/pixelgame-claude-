@@ -11,8 +11,9 @@ const DATA_FILES: PackedStringArray = [
 	"npcs", "gifts", "quests", "bodies", "registry", "ghosts", "the_twenty", "evidence",
 	"weather", "tides", "festivals", "bundles", "neptune", "regions",
 	"skills", "knowledge_tree", "achievements", "collections",
-	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage"
+	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage", "interiors", "places"
 ]
+const DATA_DIRS: PackedStringArray = ["schedules", "events", "dialogue"]
 
 func _ready() -> void:
 	_load_all()
@@ -39,7 +40,24 @@ func _load_all() -> void:
 			tables[name] = []
 			continue
 		tables[name] = parsed
+	for dir_name in DATA_DIRS:
+		tables[dir_name] = _load_dir(dir_name)
 	_validate_ids()
+
+
+# Folders of per-NPC files (33.3): schedules/*.json, events/*.json, dialogue/*.json, keyed by file name.
+func _load_dir(dir_name: String) -> Dictionary:
+	var out := {}
+	var path := "res://data/%s" % dir_name
+	for file in DirAccess.get_files_at(path):
+		if not file.ends_with(".json"):
+			continue
+		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(path + "/" + file))
+		if parsed == null:
+			errors.append("json:%s/%s" % [path, file])
+			continue
+		out[file.get_basename()] = parsed
+	return out
 
 
 func _as_array(v: Variant) -> Array:

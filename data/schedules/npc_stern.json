@@ -1,0 +1,65 @@
+{
+ "npc": "npc_stern",
+ "entries": [
+  {
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "(year == 1 and season == 'spring' and day == 20) or (year == 1 and season == 'summer' and day == 14) or (year == 2 and season == 'spring' and day == 20)",
+   "priority": 50,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "steamer",
+     "up",
+     ""
+    ],
+    [
+     "10:30",
+     "village_grim",
+     "visitor",
+     "up",
+     "talk"
+    ],
+    [
+     "13:00",
+     "cape",
+     "lighthouse_door",
+     "up",
+     "inspect"
+    ],
+    [
+     "15:00",
+     "village_tavern",
+     "table_6",
+     "up",
+     "drink"
+    ],
+    [
+     "17:30",
+     "village",
+     "steamer",
+     "down",
+     ""
+    ],
+    [
+     "18:10",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  }
+ ]
+}

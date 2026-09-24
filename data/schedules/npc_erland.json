@@ -1,0 +1,133 @@
+{
+ "npc": "npc_erland",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "07:50",
+     "village_erland",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "village",
+     "pier",
+     "down",
+     "watch"
+    ],
+    [
+     "19:00",
+     "village_tavern",
+     "bar_2",
+     "up",
+     "drink"
+    ],
+    [
+     "22:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "village",
+     "pier",
+     "down",
+     "watch"
+    ],
+    [
+     "12:00",
+     "lagoon",
+     "pier",
+     "down",
+     "fish"
+    ],
+    [
+     "17:00",
+     "village_tavern",
+     "bar_2",
+     "up",
+     "drink"
+    ],
+    [
+     "22:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "07:50",
+     "village_erland",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "12:00",
+     "village_tavern",
+     "bar_2",
+     "up",
+     "drink"
+    ],
+    [
+     "22:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,1 +1,27 @@
-[]
+{
+ "universal": {
+  "love": ["pearl", "cloudberry_pie"],
+  "like": ["tag:dish", "tag:jam", "tag:flower"],
+  "dislike": ["kelp", "red_kelp", "peat", "fish_guts"],
+  "hate": ["tag:trash", "neptune_can", "lutefisk"]
+ },
+ "not_giftable": ["tool", "weapon", "quest", "cargo", "furniture", "marker", "coffin", "keepsake_box", "fertilizer", "bait", "tackle", "seed"],
+ "groups": {
+  "dish": ["cat:food", "keeper_soup", "drowned_stew", "barley_porridge", "eggs_onion", "fish_pie", "cloudberry_pie", "rhubarb_pie", "fried_smelt", "stroganina", "smoked_mackerel", "salted_herring"],
+  "sweet": ["cloudberry_pie", "rhubarb_pie", "sugar", "heather_honey", "tag:jam"],
+  "jam": ["jam_cloudberry", "jam_lingonberry", "jam_blueberry"],
+  "flower": ["armeria", "heather", "heather_bouquet", "cottongrass", "bouquet_armeria"],
+  "smoked": ["smoked_mackerel", "smoked_fish"],
+  "seaweed": ["kelp", "red_kelp"],
+  "raw_fish": ["cat:fish"],
+  "shells": ["scallop_shell", "cat:shellfish"],
+  "book": ["rare_book", "med_treatise"],
+  "ingot": ["iron_ingot", "copper_ingot", "silver_ingot", "gold_ingot", "moon_silver_ingot"],
+  "ore": ["iron_scrap", "copper_ore", "iron_ore"],
+  "canned": ["neptune_can"],
+  "forage": ["cat:forage"],
+  "deep_fish": ["tag:deep"],
+  "expensive": ["gold_ingot", "amber", "pearl", "black_pearl", "aged_aquavit", "rare_book", "music_box"],
+  "cheap": ["cat:trash", "fish_guts", "kelp", "peat", "stone"]
+ }
+}

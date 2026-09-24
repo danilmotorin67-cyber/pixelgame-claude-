@@ -11,6 +11,9 @@ class_name RegionExit
 func interact(_player: Player) -> void:
 	if Clock.paused:
 		return
+	if destination == "":
+		_message("%s. Заперто: хозяева не ждут гостей." % display_name)
+		return
 	if Clock.day_index < gate_day_index:
 		_message("Тропа откроется 5 Весны.")
 		return

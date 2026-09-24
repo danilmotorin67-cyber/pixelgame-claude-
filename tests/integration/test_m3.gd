@@ -401,7 +401,7 @@ func _check_world_objects() -> void:
 		panel.close()
 	cape.queue_free()
 	await get_tree().process_frame
-	Router.current_map = "village"
+	Router.current_map = "village_office"
 	var village: Node2D = load("res://scenes/world/island_region.tscn").instantiate()
 	get_tree().root.add_child(village)
 	get_tree().current_scene = village

@@ -1,0 +1,101 @@
+{
+ "npc": "npc_bjorn",
+ "entries": [
+  {
+   "days": [
+    "mon"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "lagoon",
+     "bank",
+     "down",
+     "gather"
+    ],
+    [
+     "11:00",
+     "village_tavern",
+     "bar_keeper",
+     "down",
+     "work"
+    ],
+    [
+     "00:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village_tavern",
+     "bar_keeper",
+     "down",
+     "work"
+    ],
+    [
+     "00:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "priority": 20,
+   "path": [
+    [
+     "10:00",
+     "village_tavern",
+     "bar_keeper",
+     "down",
+     "work"
+    ],
+    [
+     "00:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "priority": 30,
+   "path": [
+    [
+     "10:00",
+     "village_tavern",
+     "bar_keeper",
+     "down",
+     "work"
+    ],
+    [
+     "00:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

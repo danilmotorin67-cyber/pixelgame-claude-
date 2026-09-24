@@ -55,6 +55,8 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["mail"] = Mail.unread())
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
+	_step(report, "friendship", func() -> void:
+		Relationships.night())
 	_step(report, "quests", func() -> void:
 		report["quests_started"] = Quests.check_starts())
 	_step(report, "luck", func() -> void:

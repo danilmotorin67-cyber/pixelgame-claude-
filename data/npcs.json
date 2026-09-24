@@ -1,229 +1,966 @@
 [
-  {
-    "id": "npc_fortuna",
-    "romance": false,
-    "home": {
-      "map": "cape",
-      "tile": [
-        44,
-        20
-      ]
-    }
+ {
+  "id": "npc_fortuna",
+  "name": "npc.fortuna.name",
+  "romance": false,
+  "home": {
+   "map": "lh_1",
+   "spot": "figurehead"
   },
-  {
-    "id": "npc_sigrid",
-    "romance": true,
-    "birthday": {
-      "season": "winter",
-      "day": 3
-    },
-    "home": {
-      "map": "village",
-      "tile": [
-        20,
-        22
-      ]
-    },
-    "gifts": {
-      "love": [
-        "black_pearl",
-        "ink_squid",
-        "dark_ale",
-        "coffee",
-        "bouquet_heather"
-      ]
-    }
+  "look": {
+   "skin": "#b89262",
+   "hair": "#8a6a3a",
+   "coat": "#c9a24a"
   },
-  {
-    "id": "npc_liv",
-    "romance": true,
-    "birthday": {
-      "season": "summer",
-      "day": 5
-    }
+  "gifts": {
+   "love": [
+    "wood_lacquer"
+   ],
+   "like": [
+    "tag:flower"
+   ],
+   "dislike": [],
+   "hate": []
   },
-  {
-    "id": "npc_hedda",
-    "romance": true,
-    "birthday": {
-      "season": "autumn",
-      "day": 21
-    }
+  "static": true,
+  "max_hearts": 10
+ },
+ {
+  "id": "npc_sigrid",
+  "name": "npc.sigrid.name",
+  "romance": true,
+  "birthday": {
+   "season": "winter",
+   "day": 3
   },
-  {
-    "id": "npc_ingrid",
-    "romance": true,
-    "birthday": {
-      "season": "spring",
-      "day": 18
-    }
+  "home": {
+   "map": "village_berg",
+   "spot": "stairs"
   },
-  {
-    "id": "npc_einar",
-    "romance": true,
-    "birthday": {
-      "season": "summer",
-      "day": 20
-    }
+  "look": {
+   "skin": "#e6c7a8",
+   "hair": "#2b2622",
+   "coat": "#3d3a4a"
   },
-  {
-    "id": "npc_knud",
-    "romance": true,
-    "birthday": {
-      "season": "spring",
-      "day": 7
-    }
-  },
-  {
-    "id": "npc_magnus",
-    "romance": true,
-    "birthday": {
-      "season": "winter",
-      "day": 16
-    }
-  },
-  {
-    "id": "npc_olaf",
-    "romance": true,
-    "birthday": {
-      "season": "spring",
-      "day": 26
-    }
-  },
-  {
-    "id": "npc_tuve",
-    "romance": true,
-    "birthday": {
-      "season": "winter",
-      "day": 15
-    }
-  },
-  {
-    "id": "npc_halvdan",
-    "romance": false,
-    "birthday": {
-      "season": "autumn",
-      "day": 9
-    }
-  },
-  {
-    "id": "npc_stern",
-    "romance": false
-  },
-  {
-    "id": "npc_tora",
-    "romance": false,
-    "birthday": {
-      "season": "summer",
-      "day": 14
-    }
-  },
-  {
-    "id": "npc_ilm",
-    "romance": false,
-    "birthday": {
-      "season": "autumn",
-      "day": 3
-    }
-  },
-  {
-    "id": "npc_karl",
-    "romance": false,
-    "birthday": {
-      "season": "winter",
-      "day": 20
-    }
-  },
-  {
-    "id": "npc_solveig",
-    "romance": false,
-    "birthday": {
-      "season": "spring",
-      "day": 11
-    }
-  },
-  {
-    "id": "npc_bjorn",
-    "romance": false,
-    "birthday": {
-      "season": "summer",
-      "day": 27
-    }
-  },
-  {
-    "id": "npc_margit",
-    "romance": false,
-    "birthday": {
-      "season": "spring",
-      "day": 3
-    }
-  },
-  {
-    "id": "npc_benedict",
-    "romance": false,
-    "birthday": {
-      "season": "autumn",
-      "day": 13
-    }
-  },
-  {
-    "id": "npc_helga",
-    "romance": false,
-    "birthday": {
-      "season": "autumn",
-      "day": 1
-    }
-  },
-  {
-    "id": "npc_erland",
-    "romance": false,
-    "birthday": {
-      "season": "summer",
-      "day": 2
-    }
-  },
-  {
-    "id": "npc_kai",
-    "romance": false,
-    "birthday": {
-      "season": "winter",
-      "day": 5
-    }
-  },
-  {
-    "id": "npc_nils",
-    "romance": false,
-    "birthday": {
-      "season": "summer",
-      "day": 17
-    }
-  },
-  {
-    "id": "npc_freya",
-    "romance": false,
-    "birthday": {
-      "season": "summer",
-      "day": 17
-    }
-  },
-  {
-    "id": "npc_palm",
-    "romance": false
-  },
-  {
-    "id": "npc_nut",
-    "romance": false
-  },
-  {
-    "id": "npc_rud",
-    "romance": false
-  },
-  {
-    "id": "npc_sandro",
-    "romance": false
-  },
-  {
-    "id": "npc_grump",
-    "romance": false
+  "gifts": {
+   "love": [
+    "black_pearl",
+    "ink_squid",
+    "dark_ale",
+    "coffee",
+    "heather_bouquet"
+   ],
+   "like": [
+    "wax_candle",
+    "sea_glass",
+    "smoked_mackerel"
+   ],
+   "dislike": [
+    "tag:sweet"
+   ],
+   "hate": [
+    "rhubarb_pie",
+    "lutefisk"
+   ]
   }
+ },
+ {
+  "id": "npc_liv",
+  "name": "npc.liv.name",
+  "romance": true,
+  "birthday": {
+   "season": "summer",
+   "day": 5
+  },
+  "home": {
+   "map": "village_office",
+   "spot": "stairs"
+  },
+  "look": {
+   "skin": "#f0d2b4",
+   "hair": "#c7874a",
+   "coat": "#5f7a52"
+  },
+  "gifts": {
+   "love": [
+    "glow_plankton",
+    "puffin_feather",
+    "fish_squid",
+    "coffee",
+    "deep_quartz"
+   ],
+   "like": [
+    "tag:shellfish",
+    "scallop_shell",
+    "tag:deep_fish",
+    "egg"
+   ],
+   "dislike": [
+    "peat",
+    "tag:seaweed"
+   ],
+   "hate": [
+    "neptune_can",
+    "fly_agaric"
+   ]
+  },
+  "arrives": "day_index >= 32"
+ },
+ {
+  "id": "npc_hedda",
+  "name": "npc.hedda.name",
+  "romance": true,
+  "birthday": {
+   "season": "autumn",
+   "day": 21
+  },
+  "home": {
+   "map": "village",
+   "spot": "home:Дом Хедды"
+  },
+  "look": {
+   "skin": "#d9ae8c",
+   "hair": "#b0442e",
+   "coat": "#2f4a5c"
+  },
+  "gifts": {
+   "love": [
+    "grog",
+    "fish_halibut@2",
+    "amber",
+    "storm_jacket",
+    "fish_porbeagle"
+   ],
+   "like": [
+    "tag:fish@1",
+    "tag:smoked",
+    "ale"
+   ],
+   "dislike": [
+    "tag:flower",
+    "tag:sweet"
+   ],
+   "hate": [
+    "bouquet_armeria",
+    "heather_tea"
+   ]
+  }
+ },
+ {
+  "id": "npc_ingrid",
+  "name": "npc.ingrid.name",
+  "romance": true,
+  "birthday": {
+   "season": "spring",
+   "day": 18
+  },
+  "home": {
+   "map": "village",
+   "spot": "home:Дом Гримов"
+  },
+  "look": {
+   "skin": "#f2dcc4",
+   "hair": "#d9c07a",
+   "coat": "#6d5a82"
+  },
+  "gifts": {
+   "love": [
+    "rare_book",
+    "cloudberry_pie",
+    "sea_glass_blue",
+    "heather_bouquet"
+   ],
+   "like": [
+    "tea",
+    "tag:jam",
+    "tag:flower"
+   ],
+   "dislike": [
+    "fish_guts",
+    "peat"
+   ],
+   "hate": [
+    "fish_oil",
+    "tag:seaweed"
+   ]
+  }
+ },
+ {
+  "id": "npc_einar",
+  "name": "npc.einar.name",
+  "romance": true,
+  "birthday": {
+   "season": "summer",
+   "day": 20
+  },
+  "home": {
+   "map": "village_smithy",
+   "spot": "corner"
+  },
+  "look": {
+   "skin": "#c99a78",
+   "hair": "#5a3a26",
+   "coat": "#4b4038"
+  },
+  "gifts": {
+   "love": [
+    "moon_silver_ingot",
+    "smoked_mackerel",
+    "coffee",
+    "fish_pie"
+   ],
+   "like": [
+    "tag:ingot",
+    "tag:ore",
+    "ale"
+   ],
+   "dislike": [
+    "tag:raw_fish",
+    "starfish"
+   ],
+   "hate": [
+    "tag:seaweed",
+    "bouquet_armeria"
+   ]
+  }
+ },
+ {
+  "id": "npc_knud",
+  "name": "npc.knud.name",
+  "romance": true,
+  "birthday": {
+   "season": "spring",
+   "day": 7
+  },
+  "home": {
+   "map": "village_ilm",
+   "spot": "workshop"
+  },
+  "look": {
+   "skin": "#e2b995",
+   "hair": "#9a6b3c",
+   "coat": "#7a5a3a"
+  },
+  "gifts": {
+   "love": [
+    "bog_oak",
+    "fish_pie",
+    "carved_trinket",
+    "dark_ale"
+   ],
+   "like": [
+    "boards",
+    "resin",
+    "tag:smoked"
+   ],
+   "dislike": [
+    "rotten_boards"
+   ],
+   "hate": [
+    "lutefisk",
+    "tag:trash"
+   ]
+  }
+ },
+ {
+  "id": "npc_magnus",
+  "name": "npc.magnus.name",
+  "romance": true,
+  "birthday": {
+   "season": "winter",
+   "day": 16
+  },
+  "home": {
+   "map": "village_doctor",
+   "spot": "cabinet"
+  },
+  "look": {
+   "skin": "#e0c2a6",
+   "hair": "#6e6a66",
+   "coat": "#2e3440"
+  },
+  "gifts": {
+   "love": [
+    "aged_aquavit",
+    "coffee",
+    "med_treatise",
+    "stroganina"
+   ],
+   "like": [
+    "tea",
+    "tag:smoked",
+    "tag:book"
+   ],
+   "dislike": [
+    "tag:sweet",
+    "tag:flower"
+   ],
+   "hate": [
+    "lutefisk",
+    "neptune_can"
+   ]
+  }
+ },
+ {
+  "id": "npc_olaf",
+  "name": "npc.olaf.name",
+  "romance": true,
+  "birthday": {
+   "season": "spring",
+   "day": 26
+  },
+  "home": {
+   "map": "village",
+   "spot": "home:Дом Олафа"
+  },
+  "look": {
+   "skin": "#f0d0b0",
+   "hair": "#c8a86a",
+   "coat": "#3f5a7a"
+  },
+  "gifts": {
+   "love": [
+    "sealed_bottle_letter",
+    "stamp_pyostraya",
+    "old_sea_chart",
+    "fried_smelt"
+   ],
+   "like": [
+    "soggy_paper",
+    "ink_squid",
+    "tea"
+   ],
+   "dislike": [
+    "peat"
+   ],
+   "hate": [
+    "fish_oil",
+    "tag:trash"
+   ]
+  }
+ },
+ {
+  "id": "npc_tuve",
+  "name": "npc.tuve.name",
+  "romance": true,
+  "birthday": {
+   "season": "winter",
+   "day": 15
+  },
+  "home": {
+   "map": "away",
+   "spot": ""
+  },
+  "look": {
+   "skin": "#d8d6d0",
+   "hair": "#5c6166",
+   "coat": "#8a8f94"
+  },
+  "gifts": {
+   "love": [
+    "fish_herring",
+    "pearl",
+    "music_box",
+    "pim_harmonica"
+   ],
+   "like": [
+    "starfish",
+    "scallop_shell",
+    "tag:raw_fish"
+   ],
+   "dislike": [
+    "tag:smoked"
+   ],
+   "hate": [
+    "harpoon",
+    "neptune_can",
+    "tag:canned"
+   ]
+  },
+  "secret": true,
+  "arrive": {
+   "map": "seal_shore",
+   "spot": "seal_rock"
+  }
+ },
+ {
+  "id": "npc_halvdan",
+  "name": "npc.halvdan.name",
+  "romance": false,
+  "birthday": {
+   "season": "autumn",
+   "day": 9
+  },
+  "home": {
+   "map": "village",
+   "spot": "home:Дом Гримов"
+  },
+  "look": {
+   "skin": "#e8c9a9",
+   "hair": "#b9b4ad",
+   "coat": "#5a2e2e"
+  },
+  "gifts": {
+   "love": [
+    "gold_ingot",
+    "aged_aquavit",
+    "lumpfish_roe"
+   ],
+   "like": [
+    "tag:expensive"
+   ],
+   "dislike": [
+    "tag:cheap"
+   ],
+   "hate": [
+    "fish_oil",
+    "tag:shells"
+   ]
+  },
+  "max_hearts": 6
+ },
+ {
+  "id": "npc_stern",
+  "name": "npc.stern.name",
+  "romance": false,
+  "home": {
+   "map": "away",
+   "spot": ""
+  },
+  "look": {
+   "skin": "#e6d0bc",
+   "hair": "#2a2a2a",
+   "coat": "#1f2a36"
+  },
+  "gifts": {
+   "love": [],
+   "like": [
+    "coffee"
+   ],
+   "dislike": [],
+   "hate": []
+  },
+  "visitor": true
+ },
+ {
+  "id": "npc_tora",
+  "name": "npc.tora.name",
+  "romance": false,
+  "birthday": {
+   "season": "summer",
+   "day": 14
+  },
+  "home": {
+   "map": "village_smithy",
+   "spot": "corner"
+  },
+  "look": {
+   "skin": "#c79a7a",
+   "hair": "#8c8c8c",
+   "coat": "#5b4a3a"
+  },
+  "gifts": {
+   "love": [
+    "iron_ingot",
+    "ale"
+   ],
+   "like": [
+    "tag:ingot",
+    "coal"
+   ],
+   "dislike": [
+    "tag:sweet"
+   ],
+   "hate": [
+    "tag:flower"
+   ]
+  }
+ },
+ {
+  "id": "npc_ilm",
+  "name": "npc.ilm.name",
+  "romance": false,
+  "birthday": {
+   "season": "autumn",
+   "day": 3
+  },
+  "home": {
+   "map": "village_ilm",
+   "spot": "workshop"
+  },
+  "look": {
+   "skin": "#d7b08c",
+   "hair": "#e0ddd6",
+   "coat": "#6b5236"
+  },
+  "gifts": {
+   "love": [
+    "bog_oak",
+    "resin"
+   ],
+   "like": [
+    "boards",
+    "driftwood"
+   ],
+   "dislike": [
+    "tag:trash"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_karl",
+  "name": "npc.karl.name",
+  "romance": false,
+  "birthday": {
+   "season": "winter",
+   "day": 20
+  },
+  "home": {
+   "map": "village_berg",
+   "spot": "stairs"
+  },
+  "look": {
+   "skin": "#e4c4a6",
+   "hair": "#8d7a66",
+   "coat": "#4a4f3a"
+  },
+  "gifts": {
+   "love": [
+    "salted_herring",
+    "coffee"
+   ],
+   "like": [
+    "tag:fish"
+   ],
+   "dislike": [
+    "tag:flower"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_solveig",
+  "name": "npc.solveig.name",
+  "romance": false,
+  "birthday": {
+   "season": "spring",
+   "day": 11
+  },
+  "home": {
+   "map": "village_berg",
+   "spot": "stairs"
+  },
+  "look": {
+   "skin": "#f0cfb0",
+   "hair": "#c9a060",
+   "coat": "#9a5a4a"
+  },
+  "gifts": {
+   "love": [
+    "rhubarb",
+    "heather_honey"
+   ],
+   "like": [
+    "tag:sweet",
+    "tag:flower"
+   ],
+   "dislike": [
+    "tag:raw_fish"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_bjorn",
+  "name": "npc.bjorn.name",
+  "romance": false,
+  "birthday": {
+   "season": "summer",
+   "day": 27
+  },
+  "home": {
+   "map": "village_tavern",
+   "spot": "fire"
+  },
+  "look": {
+   "skin": "#e0a988",
+   "hair": "#a4532a",
+   "coat": "#6a4a2a"
+  },
+  "gifts": {
+   "love": [
+    "hops",
+    "heather_honey",
+    "ale@2"
+   ],
+   "like": [
+    "ale",
+    "grog",
+    "dark_ale"
+   ],
+   "dislike": [
+    "tea"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_margit",
+  "name": "npc.margit.name",
+  "romance": false,
+  "birthday": {
+   "season": "spring",
+   "day": 3
+  },
+  "home": {
+   "map": "village_margit",
+   "spot": "loom"
+  },
+  "look": {
+   "skin": "#e8c8ac",
+   "hair": "#dcdcdc",
+   "coat": "#7a4a5a"
+  },
+  "gifts": {
+   "love": [
+    "wool@2",
+    "heather_honey",
+    "cloudberry_pie"
+   ],
+   "like": [
+    "tag:dish",
+    "egg"
+   ],
+   "dislike": [],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_benedict",
+  "name": "npc.benedict.name",
+  "romance": false,
+  "birthday": {
+   "season": "autumn",
+   "day": 13
+  },
+  "home": {
+   "map": "village_chapel",
+   "spot": "candles"
+  },
+  "look": {
+   "skin": "#ecd2b8",
+   "hair": "#4a3a2a",
+   "coat": "#1e1e24"
+  },
+  "gifts": {
+   "love": [
+    "wax_candle",
+    "heather_honey",
+    "keeper_rusks"
+   ],
+   "like": [
+    "bread_rye",
+    "tea"
+   ],
+   "dislike": [],
+   "hate": [
+    "tag:fish"
+   ]
+  }
+ },
+ {
+  "id": "npc_helga",
+  "name": "npc.helga.name",
+  "romance": false,
+  "birthday": {
+   "season": "autumn",
+   "day": 1
+  },
+  "home": {
+   "map": "moor_helga",
+   "spot": "fire"
+  },
+  "look": {
+   "skin": "#d9bba0",
+   "hair": "#f2f2f2",
+   "coat": "#4f5a3a"
+  },
+  "gifts": {
+   "love": [
+    "lutefisk",
+    "cloudberry",
+    "dried_heather"
+   ],
+   "like": [
+    "tag:forage",
+    "tag:flower",
+    "tea"
+   ],
+   "dislike": [],
+   "hate": [
+    "neptune_can"
+   ]
+  }
+ },
+ {
+  "id": "npc_erland",
+  "name": "npc.erland.name",
+  "romance": false,
+  "birthday": {
+   "season": "summer",
+   "day": 2
+  },
+  "home": {
+   "map": "village_erland",
+   "spot": "boat"
+  },
+  "look": {
+   "skin": "#d4a584",
+   "hair": "#eeeeee",
+   "coat": "#243650"
+  },
+  "gifts": {
+   "love": [
+    "grog",
+    "fish_halibut",
+    "old_sea_chart"
+   ],
+   "like": [
+    "tag:fish",
+    "rum"
+   ],
+   "dislike": [
+    "tag:sweet"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_kai",
+  "name": "npc.kai.name",
+  "romance": false,
+  "birthday": {
+   "season": "winter",
+   "day": 5
+  },
+  "home": {
+   "map": "sea",
+   "spot": "dead_fire"
+  },
+  "look": {
+   "skin": "#b98f70",
+   "hair": "#6b6b6b",
+   "coat": "#4a4a3a"
+  },
+  "gifts": {
+   "love": [
+    "kerosene",
+    "grog"
+   ],
+   "like": [
+    "tag:fish",
+    "rum"
+   ],
+   "dislike": [
+    "tag:flower"
+   ],
+   "hate": []
+  },
+  "static": true
+ },
+ {
+  "id": "npc_nils",
+  "name": "npc.nils.name",
+  "romance": false,
+  "birthday": {
+   "season": "summer",
+   "day": 17
+  },
+  "home": {
+   "map": "village_margit",
+   "spot": "kids"
+  },
+  "look": {
+   "skin": "#f2d6bc",
+   "hair": "#e2c27a",
+   "coat": "#4a6a8a"
+  },
+  "gifts": {
+   "love": [
+    "tag:sweet",
+    "sea_glass"
+   ],
+   "like": [
+    "egg",
+    "starfish",
+    "amber"
+   ],
+   "dislike": [
+    "tag:raw_fish"
+   ],
+   "hate": [
+    "lutefisk"
+   ]
+  },
+  "child": true
+ },
+ {
+  "id": "npc_freya",
+  "name": "npc.freya.name",
+  "romance": false,
+  "birthday": {
+   "season": "summer",
+   "day": 17
+  },
+  "home": {
+   "map": "village_margit",
+   "spot": "kids"
+  },
+  "look": {
+   "skin": "#f2d6bc",
+   "hair": "#e2c27a",
+   "coat": "#8a4a6a"
+  },
+  "gifts": {
+   "love": [
+    "tag:sweet",
+    "amber"
+   ],
+   "like": [
+    "sea_glass",
+    "starfish",
+    "tag:flower"
+   ],
+   "dislike": [
+    "tag:raw_fish"
+   ],
+   "hate": [
+    "lutefisk"
+   ]
+  },
+  "child": true
+ },
+ {
+  "id": "npc_palm",
+  "name": "npc.palm.name",
+  "romance": false,
+  "home": {
+   "map": "away",
+   "spot": ""
+  },
+  "look": {
+   "skin": "#e6d2c0",
+   "hair": "#555555",
+   "coat": "#2a3a2a"
+  },
+  "gifts": {
+   "love": [],
+   "like": [
+    "tea"
+   ],
+   "dislike": [],
+   "hate": []
+  },
+  "visitor": true
+ },
+ {
+  "id": "npc_nut",
+  "name": "npc.nut.name",
+  "romance": false,
+  "home": {
+   "map": "village",
+   "spot": "home:Хижина Скау"
+  },
+  "look": {
+   "skin": "#c8946e",
+   "hair": "#3a2a1e",
+   "coat": "#3a3a2a"
+  },
+  "gifts": {
+   "love": [
+    "rum"
+   ],
+   "like": [
+    "ale",
+    "tag:smoked"
+   ],
+   "dislike": [
+    "tag:flower"
+   ],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_rud",
+  "name": "npc.rud.name",
+  "romance": false,
+  "home": {
+   "map": "village",
+   "spot": "home:Хижина Скау"
+  },
+  "look": {
+   "skin": "#c8946e",
+   "hair": "#5a3a1e",
+   "coat": "#4a4030"
+  },
+  "gifts": {
+   "love": [
+    "grog"
+   ],
+   "like": [
+    "ale",
+    "tag:dish"
+   ],
+   "dislike": [],
+   "hate": []
+  }
+ },
+ {
+  "id": "npc_sandro",
+  "name": "npc.sandro.name",
+  "romance": false,
+  "home": {
+   "map": "away",
+   "spot": ""
+  },
+  "look": {
+   "skin": "#b7825c",
+   "hair": "#1e1a18",
+   "coat": "#a0402a"
+  },
+  "gifts": {
+   "love": [],
+   "like": [
+    "coffee",
+    "amber"
+   ],
+   "dislike": [],
+   "hate": []
+  },
+  "visitor": true
+ },
+ {
+  "id": "npc_grump",
+  "name": "npc.grump.name",
+  "romance": false,
+  "home": {
+   "map": "away",
+   "spot": ""
+  },
+  "look": {
+   "skin": "#d4a88a",
+   "hair": "#9a9a9a",
+   "coat": "#2a2a3a"
+  },
+  "gifts": {
+   "love": [],
+   "like": [
+    "tag:dish"
+   ],
+   "dislike": [],
+   "hate": []
+  },
+  "visitor": true
+ }
 ]

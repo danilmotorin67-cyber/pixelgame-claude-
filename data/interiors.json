@@ -1,0 +1,1227 @@
+{
+ "village_tavern": {
+  "title": "Сухой Утопленник",
+  "size": [
+   16,
+   11
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#6e5642",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     8,
+     10
+    ],
+    "to": "village",
+    "spawn": [
+     50,
+     38
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "bar",
+    "at": [
+     3,
+     3
+    ],
+    "size": [
+     10,
+     1
+    ]
+   },
+   {
+    "kind": "barrel",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "barrel",
+    "at": [
+     13,
+     1
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     2,
+     6
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     7,
+     6
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     12,
+     6
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     4,
+     8
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     10,
+     8
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "fireplace",
+    "at": [
+     14,
+     4
+    ],
+    "size": [
+     1,
+     2
+    ]
+   },
+   {
+    "kind": "board",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     1,
+     1
+    ],
+    "walk": true
+   },
+   {
+    "kind": "counter",
+    "at": [
+     7,
+     3
+    ],
+    "size": [
+     2,
+     1
+    ],
+    "shop": "shop_tavern",
+    "hidden": true
+   }
+  ],
+  "spots": {
+   "bar_keeper": [
+    8,
+    2
+   ],
+   "bar_1": [
+    4,
+    4
+   ],
+   "bar_2": [
+    6,
+    4
+   ],
+   "bar_3": [
+    10,
+    4
+   ],
+   "bar_4": [
+    12,
+    4
+   ],
+   "table_1": [
+    2,
+    7
+   ],
+   "table_2": [
+    3,
+    7
+   ],
+   "table_3": [
+    7,
+    7
+   ],
+   "table_4": [
+    8,
+    7
+   ],
+   "table_5": [
+    12,
+    7
+   ],
+   "table_6": [
+    13,
+    7
+   ],
+   "table_7": [
+    4,
+    9
+   ],
+   "table_8": [
+    11,
+    9
+   ],
+   "fire": [
+    13,
+    5
+   ],
+   "stage": [
+    8,
+    5
+   ]
+  }
+ },
+ "village_berg": {
+  "title": "Лавка Бергов",
+  "size": [
+   11,
+   8
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#7a634d",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     7
+    ],
+    "to": "village",
+    "spawn": [
+     15,
+     28
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     3,
+     2
+    ],
+    "size": [
+     5,
+     1
+    ],
+    "shop": "shop_berg"
+   },
+   {
+    "kind": "shelf",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     1,
+     4
+    ]
+   },
+   {
+    "kind": "shelf",
+    "at": [
+     9,
+     1
+    ],
+    "size": [
+     1,
+     4
+    ]
+   },
+   {
+    "kind": "barrel",
+    "at": [
+     8,
+     5
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "stairs",
+    "at": [
+     9,
+     6
+    ],
+    "size": [
+     1,
+     1
+    ],
+    "walk": true
+   }
+  ],
+  "spots": {
+   "counter_1": [
+    4,
+    1
+   ],
+   "counter_2": [
+    6,
+    1
+   ],
+   "floor": [
+    3,
+    5
+   ],
+   "stairs": [
+    8,
+    6
+   ]
+  }
+ },
+ "village_smithy": {
+  "title": "Кузня Торы",
+  "size": [
+   11,
+   8
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#57504b",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     7
+    ],
+    "to": "village",
+    "spawn": [
+     55,
+     21
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "forge",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     3,
+     2
+    ]
+   },
+   {
+    "kind": "anvil",
+    "at": [
+     5,
+     3
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "counter",
+    "at": [
+     7,
+     2
+    ],
+    "size": [
+     3,
+     1
+    ],
+    "shop": "shop_smith"
+   },
+   {
+    "kind": "shelf",
+    "at": [
+     9,
+     4
+    ],
+    "size": [
+     1,
+     2
+    ]
+   }
+  ],
+  "spots": {
+   "anvil": [
+    5,
+    4
+   ],
+   "counter": [
+    8,
+    1
+   ],
+   "forge": [
+    2,
+    3
+   ],
+   "corner": [
+    2,
+    6
+   ]
+  }
+ },
+ "village_office": {
+  "title": "Лоцманская управа",
+  "size": [
+   13,
+   9
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#6d6053",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     6,
+     8
+    ],
+    "to": "village",
+    "spawn": [
+     33,
+     19
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     2,
+     2
+    ],
+    "size": [
+     5,
+     1
+    ],
+    "shop": "shop_office"
+   },
+   {
+    "kind": "desk",
+    "at": [
+     9,
+     2
+    ],
+    "size": [
+     2,
+     1
+    ],
+    "directorate": true
+   },
+   {
+    "kind": "shelf",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     1,
+     5
+    ]
+   },
+   {
+    "kind": "telegraph",
+    "at": [
+     11,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "stairs",
+    "at": [
+     11,
+     6
+    ],
+    "size": [
+     1,
+     1
+    ],
+    "walk": true
+   },
+   {
+    "kind": "table",
+    "at": [
+     8,
+     5
+    ],
+    "size": [
+     2,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "clerk": [
+    4,
+    1
+   ],
+   "telegraph": [
+    11,
+    2
+   ],
+   "desk": [
+    9,
+    3
+   ],
+   "notes": [
+    8,
+    6
+   ],
+   "stairs": [
+    11,
+    7
+   ],
+   "visitor": [
+    5,
+    4
+   ]
+  }
+ },
+ "village_chapel": {
+  "title": "Часовня Святого Эльма",
+  "size": [
+   11,
+   13
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#6f6a66",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     12
+    ],
+    "to": "village",
+    "spawn": [
+     17,
+     42
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "altar",
+    "at": [
+     4,
+     1
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     7,
+     4
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     1,
+     6
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     7,
+     6
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     1,
+     8
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "pew",
+    "at": [
+     7,
+     8
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "candles",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "counter",
+    "at": [
+     8,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ],
+    "shop": "shop_chapel",
+    "hidden": true
+   }
+  ],
+  "spots": {
+   "pulpit": [
+    5,
+    2
+   ],
+   "pew_1": [
+    2,
+    3
+   ],
+   "pew_2": [
+    8,
+    3
+   ],
+   "pew_3": [
+    2,
+    5
+   ],
+   "pew_4": [
+    8,
+    5
+   ],
+   "pew_5": [
+    2,
+    7
+   ],
+   "pew_6": [
+    8,
+    7
+   ],
+   "pew_7": [
+    2,
+    9
+   ],
+   "pew_8": [
+    8,
+    9
+   ],
+   "candles": [
+    2,
+    2
+   ]
+  }
+ },
+ "village_grim": {
+  "title": "Торговый дом Грима",
+  "size": [
+   13,
+   8
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#6a5040",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     6,
+     7
+    ],
+    "to": "village",
+    "spawn": [
+     65,
+     40
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     3,
+     2
+    ],
+    "size": [
+     6,
+     1
+    ],
+    "shop": "shop_grim"
+   },
+   {
+    "kind": "crates",
+    "at": [
+     10,
+     1
+    ],
+    "size": [
+     2,
+     2
+    ]
+   },
+   {
+    "kind": "safe",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "desk",
+    "at": [
+     10,
+     5
+    ],
+    "size": [
+     2,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "clerk": [
+    6,
+    1
+   ],
+   "office": [
+    10,
+    6
+   ],
+   "crates": [
+    9,
+    3
+   ],
+   "visitor": [
+    5,
+    4
+   ]
+  }
+ },
+ "village_doctor": {
+  "title": "Доктор Фальк",
+  "size": [
+   10,
+   8
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#747068",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     7
+    ],
+    "to": "village",
+    "spawn": [
+     63,
+     13
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "desk",
+    "at": [
+     2,
+     2
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "bed",
+    "at": [
+     7,
+     1
+    ],
+    "size": [
+     2,
+     2
+    ]
+   },
+   {
+    "kind": "shelf",
+    "at": [
+     1,
+     5
+    ],
+    "size": [
+     1,
+     2
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     5,
+     5
+    ],
+    "size": [
+     2,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "desk": [
+    3,
+    1
+   ],
+   "patient": [
+    6,
+    3
+   ],
+   "cabinet": [
+    2,
+    6
+   ],
+   "table": [
+    5,
+    6
+   ]
+  }
+ },
+ "village_ilm": {
+  "title": "Гробы и колыбели",
+  "size": [
+   11,
+   7
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#7b6247",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     6
+    ],
+    "to": "village",
+    "spawn": [
+     25,
+     38
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     2,
+     2
+    ],
+    "size": [
+     4,
+     1
+    ],
+    "shop": "shop_ilm"
+   },
+   {
+    "kind": "workbench",
+    "at": [
+     7,
+     1
+    ],
+    "size": [
+     3,
+     1
+    ]
+   },
+   {
+    "kind": "coffin",
+    "at": [
+     7,
+     4
+    ],
+    "size": [
+     2,
+     1
+    ]
+   },
+   {
+    "kind": "crates",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     1,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "counter": [
+    3,
+    1
+   ],
+   "bench": [
+    8,
+    2
+   ],
+   "workshop": [
+    6,
+    5
+   ],
+   "visitor": [
+    4,
+    4
+   ]
+  }
+ },
+ "village_erland": {
+  "title": "Лодочная лавка",
+  "size": [
+   10,
+   7
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#6b5c4c",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     6
+    ],
+    "to": "village",
+    "spawn": [
+     12,
+     47
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     2,
+     2
+    ],
+    "size": [
+     4,
+     1
+    ],
+    "shop": "shop_erland"
+   },
+   {
+    "kind": "boat",
+    "at": [
+     7,
+     1
+    ],
+    "size": [
+     2,
+     3
+    ]
+   },
+   {
+    "kind": "nets",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     1,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "counter": [
+    3,
+    1
+   ],
+   "boat": [
+    6,
+    4
+   ],
+   "visitor": [
+    4,
+    4
+   ]
+  }
+ },
+ "village_margit": {
+  "title": "Шерсть и кости",
+  "size": [
+   11,
+   8
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#7a6a52",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     5,
+     7
+    ],
+    "to": "village",
+    "spawn": [
+     33,
+     41
+    ],
+    "label": "village"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     3,
+     2
+    ],
+    "size": [
+     4,
+     1
+    ],
+    "shop": "shop_margit"
+   },
+   {
+    "kind": "loom",
+    "at": [
+     8,
+     1
+    ],
+    "size": [
+     2,
+     2
+    ]
+   },
+   {
+    "kind": "hay",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     2,
+     2
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     7,
+     5
+    ],
+    "size": [
+     2,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "counter": [
+    4,
+    1
+   ],
+   "loom": [
+    8,
+    3
+   ],
+   "hay": [
+    3,
+    5
+   ],
+   "table": [
+    7,
+    6
+   ],
+   "kids": [
+    5,
+    5
+   ]
+  }
+ },
+ "moor_helga": {
+  "title": "Хижина Хельги",
+  "size": [
+   9,
+   7
+  ],
+  "interior": true,
+  "biome": "interior",
+  "floor": "#655343",
+  "wall": "#4a3e3c",
+  "exits": [
+   {
+    "at": [
+     4,
+     6
+    ],
+    "to": "moor",
+    "spawn": [
+     13,
+     16
+    ],
+    "label": "moor"
+   }
+  ],
+  "furniture": [
+   {
+    "kind": "counter",
+    "at": [
+     2,
+     2
+    ],
+    "size": [
+     3,
+     1
+    ],
+    "shop": "shop_helga"
+   },
+   {
+    "kind": "fireplace",
+    "at": [
+     7,
+     1
+    ],
+    "size": [
+     1,
+     2
+    ]
+   },
+   {
+    "kind": "herbs",
+    "at": [
+     1,
+     1
+    ],
+    "size": [
+     1,
+     1
+    ]
+   },
+   {
+    "kind": "table",
+    "at": [
+     5,
+     4
+    ],
+    "size": [
+     2,
+     1
+    ]
+   }
+  ],
+  "spots": {
+   "counter": [
+    3,
+    1
+   ],
+   "fire": [
+    6,
+    2
+   ],
+   "table": [
+    5,
+    5
+   ],
+   "visitor": [
+    3,
+    4
+   ]
+  }
+ }
+}

@@ -1,0 +1,165 @@
+{
+ "npc": "npc_nut",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "away",
+     null,
+     "down",
+     ""
+    ],
+    [
+     "13:20",
+     "village",
+     "pier",
+     "up",
+     ""
+    ],
+    [
+     "14:00",
+     "village_grim",
+     "crates",
+     "up",
+     "haul"
+    ],
+    [
+     "17:00",
+     "village_tavern",
+     "table_7",
+     "up",
+     "drink"
+    ],
+    [
+     "23:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "11:00",
+     "village",
+     "harbour_view",
+     "down",
+     ""
+    ],
+    [
+     "15:00",
+     "village_tavern",
+     "table_7",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:30",
+     "village",
+     "pier",
+     "down",
+     ""
+    ],
+    [
+     "07:00",
+     "away",
+     null,
+     "down",
+     ""
+    ],
+    [
+     "13:20",
+     "village",
+     "pier",
+     "up",
+     ""
+    ],
+    [
+     "14:00",
+     "village_grim",
+     "crates",
+     "up",
+     "haul"
+    ],
+    [
+     "17:00",
+     "village_tavern",
+     "table_7",
+     "up",
+     "drink"
+    ],
+    [
+     "23:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "priority": 30,
+   "path": [
+    [
+     "11:00",
+     "village_tavern",
+     "table_7",
+     "up",
+     "drink"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

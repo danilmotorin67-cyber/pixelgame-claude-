@@ -24,6 +24,9 @@ func _default_spawn(id: String) -> Vector2:
 		return Vector2(600, 360)
 	if TOWER_MAPS.has(id):
 		return Vector2(10 * 16 + 8, 9 * 16 + 8)
+	if MapInfo.is_interior(id):
+		var inside := MapInfo.size(id)
+		return Vector2((inside.x / 2 + 0.5) * 16, (inside.y - 2 + 0.5) * 16)
 	if id == "sea":
 		var dock: Array = Game.balance("sea", {}).get("dock", [45, 7])
 		return Vector2(int(dock[0]) * 16 + 8, int(dock[1]) * 16 + 8)
@@ -33,7 +36,7 @@ func _default_spawn(id: String) -> Vector2:
 
 
 func goto_map(id: String, pos: Vector2 = Vector2.ZERO) -> bool:
-	if not ISLAND_MAPS.has(id) and not TOWER_MAPS.has(id) and id != "sea":
+	if not ISLAND_MAPS.has(id) and not TOWER_MAPS.has(id) and id != "sea" and not MapInfo.is_interior(id):
 		return false
 	var path := "res://scenes/world/island_region.tscn"
 	if id == "cape":

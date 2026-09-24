@@ -1,0 +1,44 @@
+{
+ "npc": "npc_tuve",
+ "entries": [
+  {
+   "priority": 10,
+   "path": [
+    [
+     "06:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "act >= 2 and day >= 11 and day <= 18 and flag('tuve_met')",
+   "priority": 50,
+   "path": [
+    [
+     "06:00",
+     "away",
+     null,
+     "down",
+     ""
+    ],
+    [
+     "20:00",
+     "seal_shore",
+     "seal_rock",
+     "down",
+     "sit"
+    ],
+    [
+     "26:00",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  }
+ ]
+}

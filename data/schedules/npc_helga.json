@@ -1,0 +1,263 @@
+{
+ "npc": "npc_helga",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "07:00",
+     "moor",
+     "heather",
+     "down",
+     "gather"
+    ],
+    [
+     "10:00",
+     "moor_helga",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "moor",
+     "helga_garden",
+     "down",
+     "garden"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "moor",
+     "stones",
+     "down",
+     "remember"
+    ],
+    [
+     "14:00",
+     "moor",
+     "heather",
+     "down",
+     "gather"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "07:00",
+     "moor",
+     "heather",
+     "down",
+     "gather"
+    ],
+    [
+     "10:00",
+     "moor_helga",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "moor",
+     "helga_garden",
+     "down",
+     "garden"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "09:00",
+     "moor",
+     "stones",
+     "down",
+     "remember"
+    ],
+    [
+     "14:00",
+     "moor",
+     "heather",
+     "down",
+     "gather"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "10:00",
+     "moor_helga",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "moor_helga",
+     "table",
+     "up",
+     "brew"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "10:00",
+     "moor_helga",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "15:00",
+     "moor_helga",
+     "table",
+     "up",
+     "brew"
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

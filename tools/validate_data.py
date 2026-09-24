@@ -13,6 +13,7 @@ REQUIRED = [
     "weather", "tides", "festivals", "bundles", "neptune", "regions",
     "skills", "knowledge_tree", "achievements", "collections",
     "bottles", "pages", "tales", "shops", "buildings", "balance", "forage",
+    "interiors", "places",
 ]
 
 
@@ -146,6 +147,7 @@ def main() -> int:
             errs.append(f"disconnected island regions: {sorted(set(sizes) - reachable)}")
     else:
         errs.append("regions data must be an object")
+    errs.extend(check_people(tables, npc_ids))
     if errs:
         print("FAIL")
         for e in errs:
@@ -153,6 +155,55 @@ def main() -> int:
         return 1
     print("OK tables", len(tables), "npcs", len(npc_ids), "items", len(item_ids))
     return 0
+
+
+def check_people(tables, npc_ids) -> list:
+    """Interiors, named places and schedules (33.3, 33.7) refer only to things that exist."""
+    errs = []
+    interiors = tables.get("interiors", {})
+    places = tables.get("places", {})
+    regions = tables.get("regions", {})
+    maps = set(regions) | set(interiors) | {"cape", "sea"}
+    for name, room in interiors.items():
+        w, h = room.get("size", [0, 0])
+        for spot, at in room.get("spots", {}).items():
+            if not (0 < at[0] < w - 1 and 0 < at[1] < h - 1):
+                errs.append(f"interior {name} spot {spot} outside")
+        for exit_ in room.get("exits", []):
+            if exit_.get("to") not in maps:
+                errs.append(f"interior {name} leads nowhere")
+    for region in regions.values():
+        for lm in region.get("landmarks", []):
+            if "interior" in lm and lm["interior"] not in interiors:
+                errs.append(f"landmark {lm.get('title')} has unknown interior")
+    for name in places:
+        if name not in maps:
+            errs.append(f"places for unknown map {name}")
+    def spot_ok(map_id, spot):
+        if isinstance(spot, list):
+            return True
+        if isinstance(spot, str) and (spot.startswith("door:") or spot.startswith("home:")):
+            return True
+        return spot in places.get(map_id, {}) or spot in interiors.get(map_id, {}).get("spots", {})
+    for npc in rows(tables.get("npcs", [])):
+        home = npc.get("home", {})
+        if home.get("map") not in maps | {"away", "lh_1"}:
+            errs.append(f"{npc['id']} home on unknown map")
+    sched_dir = DATA / "schedules"
+    for path in sorted(sched_dir.glob("*.json")) if sched_dir.exists() else []:
+        data = json.loads(path.read_text(encoding="utf-8"))
+        if data.get("npc") not in npc_ids:
+            errs.append(f"schedule {path.name} for unknown npc")
+        for entry in data.get("entries", []):
+            for step in entry.get("path", []):
+                t, map_id, spot = step[0], step[1], step[2]
+                if len(t) != 5 or t[2] != ":":
+                    errs.append(f"schedule {path.name} bad time {t}")
+                if map_id in ("home", "away"):
+                    continue
+                if map_id not in maps or not spot_ok(map_id, spot):
+                    errs.append(f"schedule {path.name} unknown place {map_id}:{spot}")
+    return errs
 
 
 if __name__ == "__main__":

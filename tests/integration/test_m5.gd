@@ -175,7 +175,7 @@ func _check_q1_3() -> void:
 	Clock.day_index = 1
 	_check("q1_3_rod" in Quests.check_starts() and str(Mail.letters[-1]["text"]) == "mail.q1_3_erland",
 		"Erland writes on Spring 2 about Agatha's rod")
-	Router.current_map = "village"
+	Router.current_map = "village_erland"
 	var village: Node = load("res://scenes/world/island_region.tscn").instantiate()
 	get_tree().root.add_child(village)
 	get_tree().current_scene = village

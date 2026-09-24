@@ -1,0 +1,289 @@
+{
+ "npc": "npc_einar",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:00",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "16:10",
+     "village",
+     "hill",
+     "down",
+     "watch"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "fri"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "hill",
+     "down",
+     "watch"
+    ],
+    [
+     "13:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "17:00",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "21:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:00",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "16:10",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:00",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "16:10",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "fri"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "11:00",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "sat",
+    "sun"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:50",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "12:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:00",
+     "village_smithy",
+     "anvil",
+     "up",
+     "hammer"
+    ],
+    [
+     "16:10",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "fri"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "11:00",
+     "village_tavern",
+     "table_3",
+     "up",
+     "drink"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

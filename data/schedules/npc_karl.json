@@ -1,0 +1,114 @@
+{
+ "npc": "npc_karl",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_berg",
+     "counter_1",
+     "down",
+     "work"
+    ],
+    [
+     "17:10",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "wed"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "pier",
+     "down",
+     "count"
+    ],
+    [
+     "14:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_3",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "village_berg",
+     "counter_1",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "wed"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "wed"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

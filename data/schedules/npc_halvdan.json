@@ -1,0 +1,110 @@
+{
+ "npc": "npc_halvdan",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_grim",
+     "office",
+     "up",
+     "work"
+    ],
+    [
+     "12:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:30",
+     "village_grim",
+     "office",
+     "up",
+     "work"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "thu"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_grim",
+     "office",
+     "up",
+     "work"
+    ],
+    [
+     "12:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ],
+    [
+     "13:30",
+     "village_grim",
+     "office",
+     "up",
+     "work"
+    ],
+    [
+     "17:30",
+     "village_tavern",
+     "stage",
+     "down",
+     "toast"
+    ],
+    [
+     "23:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_1",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

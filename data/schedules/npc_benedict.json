@@ -1,0 +1,152 @@
+{
+ "npc": "npc_benedict",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "village_chapel",
+     "pulpit",
+     "down",
+     "pray"
+    ],
+    [
+     "12:00",
+     "village",
+     "chapel_yard",
+     "down",
+     ""
+    ],
+    [
+     "14:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "17:00",
+     "village_chapel",
+     "pew_3",
+     "up",
+     "read"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:00",
+     "village_chapel",
+     "pulpit",
+     "down",
+     "preach"
+    ],
+    [
+     "12:30",
+     "village",
+     "chapel_yard",
+     "down",
+     ""
+    ],
+    [
+     "19:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "08:00",
+     "village_chapel",
+     "pulpit",
+     "down",
+     "pray"
+    ],
+    [
+     "14:00",
+     "village_chapel",
+     "pew_3",
+     "up",
+     "read"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue",
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "08:00",
+     "village_chapel",
+     "pulpit",
+     "down",
+     "pray"
+    ],
+    [
+     "14:00",
+     "village_chapel",
+     "pew_3",
+     "up",
+     "read"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

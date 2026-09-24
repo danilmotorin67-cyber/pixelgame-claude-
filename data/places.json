@@ -1,0 +1,16 @@
+{
+  "cape": {"entry": [5, 30], "mailbox": [41, 23], "lighthouse_door": [45, 18], "house_door": [37, 23],
+    "graveyard_bench": [20, 39], "graveyard_gate": [26, 33], "landing": [56, 51], "cliff_edge": [60, 40], "garden": [44, 24]},
+  "village": {"square": [40, 30], "pier": [36, 46], "harbour_nets": [24, 46], "box": [30, 45], "shebeka": [44, 46],
+    "steamer": [31, 46], "hill": [74, 12], "school_porch": [25, 28], "school_yard": [27, 29], "bench_chapel": [21, 43],
+    "chapel_yard": [19, 44], "beach_walk": [58, 46], "guild_ruin": [12, 14], "kids_play": [36, 25], "well": [42, 27],
+    "tavern_porch": [52, 39], "smithy_yard": [58, 22], "gossip": [38, 28], "harbour_view": [66, 45], "berg_porch": [17, 29]},
+  "moor": {"helga_garden": [15, 18], "stones": [30, 27], "lake_shore": [50, 39], "peat": [18, 51], "mill": [54, 51],
+    "path": [35, 40], "heather": [22, 32]},
+  "bird_cliffs": {"nests_watch": [12, 16], "cliff_top": [20, 31], "ledge": [30, 40]},
+  "birch": {"clearing": [31, 16], "stream_bank": [20, 20], "grove": [38, 30]},
+  "seal_shore": {"seal_rock": [55, 27], "beach": [30, 20], "cave_mouth": [50, 15]},
+  "wreck_bay": {"wreck": [16, 23], "beach": [40, 20], "tideline": [30, 26]},
+  "lagoon": {"pier": [33, 24], "reeds": [14, 24], "bank": [25, 12]},
+  "sea": {"dead_fire": [24, 76], "rest_place": [70, 24]}
+}

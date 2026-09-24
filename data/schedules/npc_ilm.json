@@ -1,0 +1,130 @@
+{
+ "npc": "npc_ilm",
+ "entries": [
+  {
+   "days": [
+    "mon",
+    "wed",
+    "thu",
+    "fri",
+    "sat",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "07:50",
+     "village_ilm",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "tue"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "14:00",
+     "village",
+     "harbour_view",
+     "down",
+     "watch"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "tue"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "14:00",
+     "village",
+     "harbour_view",
+     "down",
+     "watch"
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "tue"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "tue"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

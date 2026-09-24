@@ -324,6 +324,9 @@ func _run() -> void:
 		"village return portal is missing")
 	_check(tree.current_scene.get_node("Player").global_position == Vector2(1224, 488),
 		"player arrived at wrong village entrance")
+	_check(tree.current_scene.get_node_or_null("Terrain/Door_village_berg") is RegionExit, "the Bergs' shop needs a door")
+	_check(Router.goto_map("village_berg"), "the shop interior must load")
+	await tree.process_frame
 	var berg_shop: ShopCounter = tree.current_scene.get_node("Terrain/Shop_shop_berg")
 	_check(berg_shop.collision_layer == 8, "the Bergs' counter cannot be reached")
 	var saved_minutes := Clock.minutes
@@ -352,6 +355,8 @@ func _run() -> void:
 		"the Bergs' shop must be closed on Wednesdays")
 	Clock.minutes = saved_minutes
 	Clock.day_index = 0
+	_check(Router.goto_map("village", Vector2(15 * 16 + 8, 28 * 16 + 8)), "back out of the shop")
+	await tree.process_frame
 	var village_box: ShippingBox = tree.current_scene.get_node_or_null("Terrain/ShippingBox")
 	_check(village_box != null and village_box.collision_layer == 8, "the village harbor needs a shipping box")
 	if village_box:
@@ -397,7 +402,7 @@ func _run() -> void:
 	_check(Save.has_save(2), "night must create a save")
 	_check(morning_scene.get_node("HUD/MorningPanel").visible, "night report must be shown")
 	_check(not night_reports.is_empty() and night_reports[-1]["steps"] == [
-		"lighthouse", "weather_tides", "farm", "stations", "bodies", "peace", "sea", "mail", "sales", "quests", "luck", "skills", "autosave", "report"],
+		"lighthouse", "weather_tides", "farm", "stations", "bodies", "peace", "sea", "mail", "sales", "friendship", "quests", "luck", "skills", "autosave", "report"],
 		"night resolution must follow the order of spec 6.4")
 	_check(not night_reports.is_empty() and str(night_reports[-1].get("faint_message", "")) in Night.FAINT_MESSAGES
 		and morning_scene.get_node("HUD/MorningPanel/MorningText").text.contains(

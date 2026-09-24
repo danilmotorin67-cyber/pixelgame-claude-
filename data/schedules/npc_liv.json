@@ -1,0 +1,222 @@
+{
+ "npc": "npc_liv",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "wed",
+    "fri",
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:30",
+     "bird_cliffs",
+     "nests_watch",
+     "up",
+     "observe"
+    ],
+    [
+     "12:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "18:00",
+     "cape",
+     "cliff_edge",
+     "down",
+     "observe"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "tue",
+    "thu",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:30",
+     "seal_shore",
+     "beach",
+     "up",
+     "observe"
+    ],
+    [
+     "12:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "18:00",
+     "cape",
+     "cliff_edge",
+     "down",
+     "observe"
+    ],
+    [
+     "22:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "06:30",
+     "seal_shore",
+     "beach",
+     "up",
+     "observe"
+    ],
+    [
+     "12:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "18:00",
+     "cape",
+     "cliff_edge",
+     "down",
+     "observe"
+    ],
+    [
+     "21:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "priority": 20,
+   "path": [
+    [
+     "08:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "15:00",
+     "village_office",
+     "visitor",
+     "up",
+     "read"
+    ],
+    [
+     "20:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "priority": 30,
+   "path": [
+    [
+     "09:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "day_index < 32",
+   "priority": 100,
+   "path": [
+    [
+     "06:00",
+     "away",
+     null,
+     "down",
+     ""
+    ]
+   ]
+  },
+  {
+   "when": "hearts('npc_liv') >= 4 and weather != 'rain' and weather != 'storm' and weather != 'snow' and weather != 'blizzard'",
+   "priority": 15,
+   "path": [
+    [
+     "06:30",
+     "seal_shore",
+     "beach",
+     "up",
+     "observe"
+    ],
+    [
+     "12:00",
+     "village_office",
+     "notes",
+     "up",
+     "write"
+    ],
+    [
+     "18:00",
+     "cape",
+     "lighthouse_door",
+     "up",
+     "observe"
+    ],
+    [
+     "22:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}

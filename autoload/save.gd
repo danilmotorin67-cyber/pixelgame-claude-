@@ -78,6 +78,8 @@ func save_game(slot: int = -1) -> bool:
 		"skills": Skills.serialize(),
 		"knowledge": Knowledge.serialize(),
 		"relationships": Relationships.serialize(),
+		"npcs": NPCs.serialize(),
+		"cutscenes": Cutscenes.serialize(),
 		"quests": Quests.serialize(),
 		"lighthouse": Lighthouse.serialize(),
 		"graveyard": Graveyard.serialize(),
@@ -138,6 +140,7 @@ func load_game(slot: int) -> bool:
 	Skills.deserialize(payload.get("skills", {}))
 	Knowledge.deserialize(payload.get("knowledge", {}))
 	Relationships.deserialize(payload.get("relationships", {}))
+	Cutscenes.deserialize(payload.get("cutscenes", {}))
 	Quests.deserialize(payload.get("quests", {}))
 	Lighthouse.deserialize(payload.get("lighthouse", {}))
 	Graveyard.deserialize(payload.get("graveyard", {}))
@@ -149,5 +152,6 @@ func load_game(slot: int) -> bool:
 	Collections.deserialize(payload.get("collections", {}))
 	Settings.deserialize(payload.get("settings", {}))
 	current_slot = slot
+	NPCs.deserialize(payload.get("npcs", {}))
 	Events.tide_changed.emit(Clock.tide_height())
 	return true

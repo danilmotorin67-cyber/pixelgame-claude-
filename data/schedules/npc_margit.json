@@ -1,0 +1,168 @@
+{
+ "npc": "npc_margit",
+ "entries": [
+  {
+   "seasons": [
+    "spring",
+    "summer",
+    "autumn"
+   ],
+   "days": [
+    "mon",
+    "tue"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "chapel_yard",
+     "down",
+     "visit"
+    ],
+    [
+     "13:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "17:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "wed",
+    "thu",
+    "fri",
+    "sat"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:50",
+     "village_margit",
+     "counter",
+     "down",
+     "work"
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "days": [
+    "sun"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "08:30",
+     "village_chapel",
+     "pew_5",
+     "up",
+     "sit"
+    ],
+    [
+     "12:30",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "seasons": [
+    "winter"
+   ],
+   "days": [
+    "mon",
+    "tue"
+   ],
+   "priority": 10,
+   "path": [
+    [
+     "10:00",
+     "village",
+     "chapel_yard",
+     "down",
+     "visit"
+    ],
+    [
+     "13:00",
+     "village",
+     "square",
+     "down",
+     ""
+    ],
+    [
+     "16:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'rain' or weather == 'snow'",
+   "days": [
+    "mon",
+    "tue"
+   ],
+   "priority": 20,
+   "path": [
+    [
+     "10:00",
+     "village_margit",
+     "table",
+     "up",
+     "knit"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  },
+  {
+   "when": "weather == 'storm' or weather == 'blizzard'",
+   "days": [
+    "mon",
+    "tue"
+   ],
+   "priority": 30,
+   "path": [
+    [
+     "10:00",
+     "village_margit",
+     "table",
+     "up",
+     "knit"
+    ],
+    [
+     "18:00",
+     "home",
+     null,
+     "down",
+     "sleep"
+    ]
+   ]
+  }
+ ]
+}
