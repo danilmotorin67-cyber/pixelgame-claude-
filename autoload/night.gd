@@ -139,14 +139,21 @@ func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: in
 	var state := Game.player_state.duplicate(true)
 	var bunk := 1.0 if Game.flag("comfy_bunk") or not watch_sleep or fainted \
 		else float(Lighthouse.cfg("watch_sleep_energy"))
-	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted) * bunk
-	# 11.6: a quiet graveyard (Peace 40-59) gives "Quiet sleep" now and then: +10% energy.
+	# 11.6: a quiet graveyard (Peace 40-59) gives "Quiet sleep" now and then: +10% energy for the day.
 	if not fainted and Graveyard.quiet_sleep(night_index):
-		state["energy"] = float(state["energy"]) * 1.1
+		Game.add_buff({"energy_share": 0.1, "until_night": true})
 		report["quiet_sleep"] = true
+	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted) * bunk
 	state["cold"] = 0.0
 	var wake_map := "lh_3" if watch_sleep and not fainted else "cape"
 	var wake_at := BUNK_SPAWN if wake_map == "lh_3" else HOME_SPAWN
+	# 8.4: asleep in the bot's cabin the keeper wakes at sea where the boat lies.
+	if Game.flag("cabin_sleep"):
+		Game.set_flag("cabin_sleep", false)
+		if not fainted:
+			wake_map = "sea"
+			wake_at = Vector2(float(state.get("x", 0.0)), float(state.get("y", 0.0)))
+			report["cabin"] = true
 	state["x"] = wake_at.x
 	state["y"] = wake_at.y
 	Game.player_state = state

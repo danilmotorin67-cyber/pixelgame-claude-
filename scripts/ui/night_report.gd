@@ -49,6 +49,8 @@ static func text(report: Dictionary) -> String:
 		lines.append("На рассвете звонил колокол погоста.")
 	if int(report.get("unrest", 0)) > 0:
 		lines.append("Беспокойство: в покойницкой всё сдвинуто, у погоста вянут посевы (%d)." % int(report["unrest"]))
+	if bool(report.get("cabin", false)):
+		lines.append("Ночь в каюте бота: проснулись в море, там же, где бросили якорь.")
 	if bool(report.get("quiet_sleep", false)):
 		lines.append("Тихий сон: погост спокоен, сил на 10% больше.")
 	var started: Array = report.get("quests_started", [])

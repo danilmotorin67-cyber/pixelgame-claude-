@@ -54,7 +54,20 @@ func max_level() -> int:
 func hose_radius() -> float:
 	var hoses: Array = cfg("hose")
 	var index := 2 if Knowledge.unlocked.has("S12b") else (1 if Knowledge.unlocked.has("S12") else 0)
-	return float(hoses[index])
+	return float(hoses[index]) + (bot_pump_bonus() if bot_pump() else 0.0)
+
+
+# 16.1: the bot carries the suit's pump — the hose reaches 15 tiles further and holds air 90 s off it.
+func bot_pump() -> bool:
+	return bool(SeaChart.boat_info().get("pump", false))
+
+
+func bot_pump_bonus() -> float:
+	return 15.0
+
+
+func detach_seconds() -> float:
+	return 90.0 if bot_pump() else float(cfg("detach_seconds"))
 
 
 func air_max() -> float:
@@ -215,7 +228,7 @@ func breathe(delta: float) -> void:
 				detached = 0.0
 			else:
 				detached += delta
-				air = maxf(0.0, air_max() * (1.0 - detached / float(cfg("detach_seconds"))))
+				air = maxf(0.0, air_max() * (1.0 - detached / detach_seconds()))
 		_:
 			if from_entry <= BELL_RADIUS:
 				air = minf(air_max(), air + 20.0 * delta)

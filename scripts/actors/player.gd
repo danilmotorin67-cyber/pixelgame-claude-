@@ -620,6 +620,9 @@ func _try_interact() -> void:
 		if n and n.has_method("interact"):
 			n.interact(self)
 			return
+	if Router.current_map == "sea" and bool(SeaChart.boat_info().get("cabin", false)):
+		_offer_cabin()
+		return
 	if Graveyard.carried != "":
 		Graveyard.put_down(Router.current_map, global_position + facing * 12.0)
 		var layer := get_tree().current_scene.get_node_or_null("BodiesLayer") as BodiesLayer
@@ -649,3 +652,19 @@ func restore_state(state: Dictionary) -> void:
 	velocity = Vector2.ZERO
 	_update_sprite(false)
 	_tint()
+
+
+# 8.4: the bot's cabin — sleep at sea (from 18:00) and wake where the boat lies.
+func _offer_cabin() -> void:
+	var hud := get_tree().current_scene.get_node_or_null("HUD") as CanvasLayer
+	if hud == null:
+		return
+	if Clock.hour >= 2 and Clock.hour < 18:
+		_say("Каюта бота: койка, фонарь, пахнет смолой. Спать — с 18:00.")
+		return
+	InfoPanel.open(hud, "Каюта бота", func() -> String:
+		return "Лечь в каюте? Проснётесь здесь же, в море.", [["Спать", func(p: InfoPanel) -> String:
+			p.close()
+			Game.set_flag("cabin_sleep")
+			Night.end_day()
+			return ""]])

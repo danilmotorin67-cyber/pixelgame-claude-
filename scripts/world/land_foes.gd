@@ -9,10 +9,32 @@ static var current: CombatWorld
 var map_id: String = ""
 var world: CombatWorld
 var _spawned_night: int = -1
+# By day the gull marauders (17.7) work the shores; the key keeps one flock a day per map.
+var _spawned_day: int = -1
+const GULL_MAPS := ["cape", "village", "seal_shore", "wreck_bay", "lagoon"]
 
 
 static func active_now() -> bool:
 	return Weather.hmar_night and (Clock.hour >= 21 or Clock.hour < 5)
+
+
+static func day_active() -> bool:
+	return Clock.hour >= 8 and Clock.hour < 18 and Weather.current not in ["storm", "blizzard"]
+
+
+# 1-2 gull marauders over the beach by day (0-2 in the village), none in storms.
+static func day_spawns(map_id: String, rng: RandomNumberGenerator) -> Array:
+	var out: Array = []
+	if map_id not in GULL_MAPS:
+		return out
+	var row0 := Sea.first_row(map_id) if map_id != "cape" else 54
+	var n := rng.randi_range(0, 2) if map_id == "village" else rng.randi_range(1, 2)
+	for i in n:
+		var at := Vector2(rng.randi_range(6, 60) * 16 + 8, (row0 - 3) * 16 + 8)
+		if map_id == "village":
+			at = Vector2(rng.randi_range(40, 70) * 16 + 8, rng.randi_range(38, 46) * 16 + 8)
+		out.append(["gull_marauder", at])
+	return out
 
 
 static func rowan_cut() -> float:
@@ -70,12 +92,22 @@ func _process(delta: float) -> void:
 	var player := get_parent().get_node_or_null("Player") as Player
 	if player == null:
 		return
-	if not active_now():
+	var night := active_now()
+	if not night and not day_active():
 		if not world.enemies.is_empty():
 			world.enemies.clear()
 			queue_redraw()
 		return
-	if _spawned_night != Clock.day_index:
+	if not night and _spawned_day != Clock.day_index:
+		_spawned_day = Clock.day_index
+		world.enemies.clear()
+		var day_rng := RandomNumberGenerator.new()
+		day_rng.seed = posmod(Game.world_seed * 313 + Clock.day_index * 11 + map_id.hash(), 2147483647)
+		for s in day_spawns(map_id, day_rng):
+			world.spawn(str(s[0]), s[1])
+		world.player["max_hp"] = player.max_health()
+	if night and _spawned_night != Clock.day_index:
+		world.enemies.clear()
 		_spawned_night = Clock.day_index
 		var rng := RandomNumberGenerator.new()
 		rng.seed = posmod(Game.world_seed * 101 + Clock.day_index * 7 + map_id.hash(), 2147483647)
@@ -88,7 +120,13 @@ func _process(delta: float) -> void:
 	world.player["hp"] = player.health
 	if map_id == "cape" and Lighthouse.lamp_on:
 		_beam(delta)
+	var seen := world.events.size()
 	world.step(delta)
+	for ev in world.events.slice(seen):
+		if str(ev.get("event", "")) == "snatched":
+			var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
+			if hint:
+				hint.text = "Чайка выхватила из рук: %s! Догоните — бросит." % Crafting.item_name(str(ev["item"]))
 	player.health = float(world.player["hp"])
 	player.velocity += world.player["push"] as Vector2
 	world.player["push"] = Vector2.ZERO
@@ -118,6 +156,16 @@ func _beam(delta: float) -> void:
 
 func _draw() -> void:
 	for e in world.alive():
+		if str(e["kind"]) == "gull_marauder":
+			var p: Vector2 = e["pos"]
+			var flap := 2.0 if int(Time.get_ticks_msec() / 150) % 2 == 0 else -1.0
+			draw_rect(Rect2(p + Vector2(-2, -2), Vector2(5, 3)), Color("#eeeeea"))
+			draw_line(p + Vector2(-2, -1), p + Vector2(-7, -1 - flap), Color("#c9c8c2"), 1.0)
+			draw_line(p + Vector2(3, -1), p + Vector2(8, -1 - flap), Color("#c9c8c2"), 1.0)
+			draw_rect(Rect2(p + Vector2(3, -2), Vector2(2, 1)), Color("#e9a64a"))
+			if str(e.get("carry", "")) != "":
+				draw_rect(Rect2(p + Vector2(0, 1), Vector2(3, 2)), Color("#b08f6c"))
+			continue
 		var c := Color(0.7, 0.8, 0.9, 0.6) if str(e["kind"]).begins_with("hmar") else (Color("#3a4a3a") if str(e["kind"]) == "drowned" else Color("#4a4038"))
 		draw_circle(e["pos"], 6.0, c)
 	for d in world.drops:

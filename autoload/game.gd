@@ -59,8 +59,8 @@ func balance(key: String, fallback: Variant) -> Variant:
 
 
 func max_energy() -> float:
-	return float(balance("energy_max", 270)) + float(balance("energy_star_amber", 30)) \
-		* float(clampi(int(counters.get("star_amber", 0)), 0, 7))
+	return (float(balance("energy_max", 270)) + float(balance("energy_star_amber", 30)) \
+		* float(clampi(int(counters.get("star_amber", 0)), 0, 7))) * (1.0 + effect("energy_share"))
 
 
 # Energy for one action of spec 8.1, reduced by the linked skill down to 1.

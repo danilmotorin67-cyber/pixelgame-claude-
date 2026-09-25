@@ -151,6 +151,9 @@ func _kill(e: Dictionary) -> void:
 	for entry in info.get("loot", []):
 		if rng.randf() < float(entry[3]):
 			drops.append({"item": str(entry[0]), "count": rng.randi_range(int(entry[1]), int(entry[2])), "pos": e["pos"]})
+	# A downed snatcher drops what it carried.
+	if str(e.get("carry", "")) != "" and str(info.get("behavior", "")) == "snatcher":
+		drops.append({"item": str(e["carry"]), "count": 1, "pos": e["pos"]})
 	enemies.erase(e)
 
 
@@ -336,8 +339,24 @@ func _think(e: Dictionary, delta: float) -> void:
 				e["timer"] = 1.0
 			return
 		"snatcher":
+			# 17.7: a gull marauder dives for the food in the keeper's hands and makes off with it.
+			if str(e["state"]) == "flee":
+				_move(e, (pos - ppos).normalized() * speed * 1.5 + Vector2(0, -speed * 0.5), delta, true)
+				if float(e["timer"]) <= 0.0:
+					events.append({"t": time, "event": "flew_off", "item": e["carry"]})
+					enemies.erase(e)
+				return
 			if dist < 8.0 * TILE:
 				_move(e, to.normalized() * speed, delta, true)
+			if touching and float(e["cool"]) <= 0.0:
+				e["cool"] = 1.5
+				var food := _snatch_food()
+				if food != "":
+					e["carry"] = food
+					e["state"] = "flee"
+					e["timer"] = 4.0
+					events.append({"t": time, "event": "snatched", "item": food})
+					return
 	if touching and str(info.get("behavior", "")) not in ["thief", "snare", "vent", "subdue", "pulser", "inker"]:
 		hurt_player(float(e["damage"]), pos)
 
@@ -351,6 +370,16 @@ func _steal(e: Dictionary) -> void:
 			e["timer"] = 6.0
 			events.append({"t": time, "event": "stolen", "item": e["carry"]})
 			return
+
+
+# The food the keeper holds (the selected slot), one piece of it.
+func _snatch_food() -> String:
+	var index := Inventory.selected_hotbar
+	var id := str(Inventory.slots[index]["id"])
+	if id == "" or Data.by_id("items", id).get("edible", {}).is_empty():
+		return ""
+	Inventory.take_slot(index, 1)
+	return id
 
 
 func _return_stolen(e: Dictionary) -> void:

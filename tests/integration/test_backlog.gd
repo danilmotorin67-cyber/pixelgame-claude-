@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -549,3 +549,68 @@ func _check_professions() -> void:
 	var back: Dictionary = JSON.parse_string(JSON.stringify(Relationships.serialize()))
 	Relationships.deserialize(back)
 	_check(Relationships.ex_spouse == "" and Relationships.ex_cold_until == -1, "saved")
+
+
+# 8.4/16.1: the bot's cabin and the suit's pump; 17.7: gull marauders snatch food by day.
+func _check_sea_and_gulls() -> void:
+	_fresh()
+	var hose := Deep.hose_radius()
+	Sea.boat = "bot"
+	_check(is_equal_approx(Deep.hose_radius(), hose + 15.0) and is_equal_approx(Deep.detach_seconds(), 90.0), "the bot's pump: a longer hose, 90 s off it")
+	Sea.boat = "yalik"
+	_check(is_equal_approx(Deep.hose_radius(), hose) and is_equal_approx(Deep.detach_seconds(), 60.0), "not from the yalik")
+	# Asleep in the cabin: wake at sea where the boat lay.
+	Sea.boat = "bot"
+	Game.player_state = {"x": 900.0, "y": 700.0, "energy": 10.0}
+	Router.current_map = "sea"
+	map_id = "sea"
+	Clock.set_time(22, 0)
+	Game.set_flag("cabin_sleep")
+	Night.end_day()
+	map_id = "cape"
+	_check(Router.current_map == "sea" and Router.spawn == Vector2(900, 700) and not Game.flag("cabin_sleep"), "asleep in the cabin, awake at sea")
+	_check(float(Game.player_state["energy"]) >= Game.max_energy() * 0.99, "rested")
+	Router.current_map = "cape"
+	# Gulls by day on the shores, not in storms.
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 4
+	var n := LandFoes.day_spawns("cape", rng).size()
+	_check(n >= 1 and n <= 2 and LandFoes.day_spawns("moor", rng).is_empty(), "1-2 gulls over the cape's beach, none on the moor")
+	Clock.set_time(12, 0)
+	Weather.current = "clear"
+	_check(LandFoes.day_active(), "by day")
+	Weather.current = "storm"
+	_check(not LandFoes.day_active(), "not in a storm")
+	Weather.current = "clear"
+	# A gull takes the food in the keeper's hands and flies off; downed, it drops it.
+	var world := CombatWorld.new(3, func(_p: Vector2) -> bool: return true)
+	world.underwater = false
+	world.player["pos"] = Vector2(100, 100)
+	Inventory.add("bread_rye", 2)
+	for i in Inventory.capacity:
+		if str(Inventory.slots[i]["id"]) == "bread_rye":
+			var tmp: Dictionary = Inventory.slots[0]
+			Inventory.slots[0] = Inventory.slots[i]
+			Inventory.slots[i] = tmp
+			Inventory.select_hotbar(0)
+			break
+	var bread := Inventory.count_of("bread_rye")
+	var gull := world.spawn("gull_marauder", Vector2(104, 100))
+	for t in 10:
+		world.step(0.05)
+	_check(str(gull["carry"]) == "bread_rye" and Inventory.count_of("bread_rye") == bread - 1 and str(gull["state"]) == "flee", "the gull snatches the bread")
+	for t in 120:
+		world.step(0.05)
+	_check(not world.enemies.has(gull), "and flies off with it")
+	var second := world.spawn("gull_marauder", Vector2(104, 100))
+	for t in 10:
+		world.step(0.05)
+	world._kill(second)
+	_check(world.drops.any(func(d: Dictionary) -> bool: return str(d["item"]) == "bread_rye"), "a downed gull drops what it took")
+	Inventory.select_hotbar(1)
+	var third := world.spawn("gull_marauder", Vector2(104, 100))
+	var slot1 := str(Inventory.slots[1]["id"])
+	if Data.by_id("items", slot1).get("edible", {}).is_empty():
+		for t in 10:
+			world.step(0.05)
+		_check(str(third["carry"]) == "", "no food in hand, nothing to snatch")
