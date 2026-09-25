@@ -1,0 +1,13 @@
+{
+ "id": "pier_cape",
+ "method": "map-objects",
+ "prompt": "small wooden landing, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "a9b50e36-ecc6-418c-8e18-1e7def769c42",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

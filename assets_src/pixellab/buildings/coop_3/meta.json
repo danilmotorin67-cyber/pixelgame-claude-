@@ -1,0 +1,13 @@
+{
+ "id": "coop_3",
+ "method": "map-objects",
+ "prompt": "large hen house with run, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "64fbf04b-39da-4d23-bd76-5fe9ce228a8c",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

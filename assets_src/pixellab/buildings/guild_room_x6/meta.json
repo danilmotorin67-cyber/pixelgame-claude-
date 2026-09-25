@@ -1,0 +1,13 @@
+{
+ "id": "guild_room_x6",
+ "method": "map-objects",
+ "prompt": "guild hall with one restored wing, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  256,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "9cf0f5c8-fc23-498a-b7a8-f97230ade6c5",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

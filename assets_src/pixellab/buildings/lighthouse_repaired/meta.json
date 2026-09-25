@@ -1,0 +1,13 @@
+{
+ "id": "lighthouse_repaired",
+ "method": "map-objects",
+ "prompt": "restored white-and-red lighthouse with brass lantern room, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  288
+ ],
+ "view": "high top-down",
+ "object_id": "9ccb339c-d8b1-4e06-bef5-03400eeeba45",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

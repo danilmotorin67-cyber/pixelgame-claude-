@@ -1,0 +1,13 @@
+{
+ "id": "village_02",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Кузня Торы, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "463ebf9b-978c-4b4f-8fae-74ba55de7796",
+ "generations": 3.0,
+ "date": "2026-09-25"
+}

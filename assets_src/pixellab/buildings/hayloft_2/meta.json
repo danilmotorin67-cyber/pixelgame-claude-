@@ -1,0 +1,13 @@
+{
+ "id": "hayloft_2",
+ "method": "map-objects",
+ "prompt": "bigger hay barn, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  112,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "6444c861-bc76-42f7-b00d-43c603287ad0",
+ "generations": 2.0,
+ "date": "2026-09-25"
+}

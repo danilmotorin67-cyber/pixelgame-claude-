@@ -1,0 +1,13 @@
+{
+ "id": "house_2",
+ "method": "map-objects",
+ "prompt": "enlarged keeper's cottage with a new wing, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  224,
+  176
+ ],
+ "view": "high top-down",
+ "object_id": "4b992d15-3e6c-493a-b49d-0617b6d9874c",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

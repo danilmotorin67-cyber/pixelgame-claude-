@@ -1,0 +1,10 @@
+{
+ "id": "tiles_floor_plaster",
+ "method": "create-tileset",
+ "lower": "painted floorboards",
+ "upper": "plaster wall",
+ "tile": 32,
+ "tileset_id": "4a0931bb-51cb-4589-82e3-164d178b8c66",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

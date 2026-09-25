@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_bog_spring",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "dark wet peat bog with pools",
+ "tile": 32,
+ "tileset_id": "be125c76-ef11-44c6-908f-ef8cb5e20719",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

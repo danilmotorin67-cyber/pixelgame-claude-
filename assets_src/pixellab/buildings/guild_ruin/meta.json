@@ -1,0 +1,13 @@
+{
+ "id": "guild_ruin",
+ "method": "map-objects",
+ "prompt": "ruined guild hall of fog folk, broken roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  256,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "9a18e06d-2a73-410a-87e2-12aa5d64cf10",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

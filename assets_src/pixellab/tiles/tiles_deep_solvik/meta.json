@@ -1,0 +1,10 @@
+{
+ "id": "tiles_deep_solvik",
+ "method": "create-tileset",
+ "lower": "sunken cobble street",
+ "upper": "drowned stone house walls",
+ "tile": 32,
+ "tileset_id": "51d1538f-b3d4-4104-a45f-cf3fb444fabf",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

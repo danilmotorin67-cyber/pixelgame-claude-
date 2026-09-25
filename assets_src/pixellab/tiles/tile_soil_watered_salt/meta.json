@@ -1,0 +1,11 @@
+{
+ "id": "tile_soil_watered_salt",
+ "method": "create-image-pixflux",
+ "prompt": "seamless top-down ground texture tile, Политая солёная земля, pixel art, farming game, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

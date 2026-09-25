@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_forest_autumn",
+ "method": "create-tileset",
+ "lower": "short grass in autumn colours",
+ "upper": "birch forest floor with leaves in autumn colours",
+ "tile": 32,
+ "tileset_id": "02a1dc6b-2e00-4d59-ae2e-ce1ac39b7565",
+ "generations": 20.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "tiles_deep_bone",
+ "method": "create-tileset",
+ "lower": "dark abyss silt",
+ "upper": "walls of giant whale bones",
+ "tile": 32,
+ "tileset_id": "a440a153-8d94-4f90-ae45-bf0f17ea9b09",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "tiles_reeds_water",
+ "method": "create-tileset",
+ "lower": "reed bed",
+ "upper": "still pond water",
+ "tile": 32,
+ "tileset_id": "db50a17d-a9e1-4f49-bfb8-586a4cf7d2a1",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

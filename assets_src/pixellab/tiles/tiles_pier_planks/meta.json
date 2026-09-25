@@ -1,0 +1,10 @@
+{
+ "id": "tiles_pier_planks",
+ "method": "create-tileset",
+ "lower": "wooden pier planks",
+ "upper": "sea water between piles",
+ "tile": 32,
+ "tileset_id": "f8897fc4-f36b-4991-8df6-00c208ef5786",
+ "generations": 29.0,
+ "date": "2026-09-25"
+}

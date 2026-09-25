@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_graveyard_spring",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "trodden graveyard earth with gravel",
+ "tile": 32,
+ "tileset_id": "465c2630-4769-4226-9964-9f784e3a3368",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

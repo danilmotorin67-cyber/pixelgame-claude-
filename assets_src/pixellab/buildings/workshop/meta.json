@@ -1,0 +1,13 @@
+{
+ "id": "workshop",
+ "method": "map-objects",
+ "prompt": "stone workshop with wide doors, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "fe8ea960-82dc-4a16-bb3b-3a5160ea2ddd",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

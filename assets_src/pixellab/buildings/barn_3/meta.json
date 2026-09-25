@@ -1,0 +1,13 @@
+{
+ "id": "barn_3",
+ "method": "map-objects",
+ "prompt": "large barn with hayloft door, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  160,
+  112
+ ],
+ "view": "high top-down",
+ "object_id": "f9a73424-620d-4dfa-8f5f-af18d4a1c98e",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

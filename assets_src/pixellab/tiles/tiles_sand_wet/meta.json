@@ -1,0 +1,10 @@
+{
+ "id": "tiles_sand_wet",
+ "method": "create-tileset",
+ "lower": "dry pale sand",
+ "upper": "dark wet sand with foam lines",
+ "tile": 32,
+ "tileset_id": "ce2b2325-0ae0-47ee-bc49-577c62f246aa",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "tiles_lagoon_ice",
+ "method": "create-tileset",
+ "lower": "calm lagoon water",
+ "upper": "frozen lagoon ice with snow",
+ "tile": 32,
+ "tileset_id": "24d5b672-b9bd-4635-89f1-087051aa6236",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

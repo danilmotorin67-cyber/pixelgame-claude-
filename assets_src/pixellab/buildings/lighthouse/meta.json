@@ -1,0 +1,13 @@
+{
+ "id": "lighthouse",
+ "method": "map-objects",
+ "prompt": "tall white-and-red stone lighthouse, peeling paint, cracked lantern glass, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  288
+ ],
+ "view": "high top-down",
+ "object_id": "75908f25-b5f0-446c-931f-3d101664da57",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

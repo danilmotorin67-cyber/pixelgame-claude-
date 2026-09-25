@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_forest_spring",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "birch forest floor with leaves",
+ "tile": 32,
+ "tileset_id": "58d37fb9-37d1-4a1f-b8ea-66ec0dcaa1d3",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

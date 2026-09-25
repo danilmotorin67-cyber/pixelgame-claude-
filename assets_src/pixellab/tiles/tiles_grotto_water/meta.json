@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grotto_water",
+ "method": "create-tileset",
+ "lower": "wet cave floor",
+ "upper": "rising tidal water",
+ "tile": 32,
+ "tileset_id": "7d4a5fae-3c1a-45da-b42b-881e09dff5d8",
+ "generations": 17.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grotto_floor",
+ "method": "create-tileset",
+ "lower": "wet cave floor",
+ "upper": "tidal cave rock wall",
+ "tile": 32,
+ "tileset_id": "31bd94f0-234e-4dc1-810e-ff0d0ac66617",
+ "generations": 12.0,
+ "date": "2026-09-25"
+}

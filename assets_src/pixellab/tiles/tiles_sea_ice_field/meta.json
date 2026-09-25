@@ -1,0 +1,10 @@
+{
+ "id": "tiles_sea_ice_field",
+ "method": "create-tileset",
+ "lower": "cold open sea",
+ "upper": "broken ice field",
+ "tile": 32,
+ "tileset_id": "2d9adb52-635e-40a8-a924-f72cadaac0db",
+ "generations": 24.0,
+ "date": "2026-09-25"
+}

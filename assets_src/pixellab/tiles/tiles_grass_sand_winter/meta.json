@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_sand_winter",
+ "method": "create-tileset",
+ "lower": "short northern grass covered with snow",
+ "upper": "pale dry beach sand with shells covered with snow",
+ "tile": 32,
+ "tileset_id": "8542b311-8245-4d56-ae51-c96c9f056682",
+ "generations": 20.0,
+ "date": "2026-09-25"
+}

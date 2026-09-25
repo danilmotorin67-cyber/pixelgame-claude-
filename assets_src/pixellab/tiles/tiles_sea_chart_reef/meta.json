@@ -1,0 +1,10 @@
+{
+ "id": "tiles_sea_chart_reef",
+ "method": "create-tileset",
+ "lower": "open sea",
+ "upper": "reef rocks and breakers",
+ "tile": 32,
+ "tileset_id": "c010745c-1ebe-412a-a416-b071a33aa12d",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

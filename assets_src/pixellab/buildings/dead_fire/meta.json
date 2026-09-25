@@ -1,0 +1,13 @@
+{
+ "id": "dead_fire",
+ "method": "map-objects",
+ "prompt": "ruined dark lighthouse on a sea rock, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  224
+ ],
+ "view": "high top-down",
+ "object_id": "bbef1445-019e-4405-b1d4-cb0725dc4b0d",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

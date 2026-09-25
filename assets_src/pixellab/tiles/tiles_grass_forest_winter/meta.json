@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_forest_winter",
+ "method": "create-tileset",
+ "lower": "short grass covered with snow",
+ "upper": "birch forest floor with leaves covered with snow",
+ "tile": 32,
+ "tileset_id": "0e0ca283-1087-444a-ac09-b829a85c010c",
+ "generations": 20.0,
+ "date": "2026-09-25"
+}

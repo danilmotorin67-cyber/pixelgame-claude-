@@ -1,0 +1,13 @@
+{
+ "id": "hearse",
+ "method": "map-objects",
+ "prompt": "black funeral cart, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ebf8cabb-3a96-4ed3-823f-363b8cc47587",
+ "generations": 3.0,
+ "date": "2026-09-25"
+}

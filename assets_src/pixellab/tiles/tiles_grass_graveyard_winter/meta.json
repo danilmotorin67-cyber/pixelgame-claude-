@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_graveyard_winter",
+ "method": "create-tileset",
+ "lower": "short grass covered with snow",
+ "upper": "trodden graveyard earth with gravel covered with snow",
+ "tile": 32,
+ "tileset_id": "59ba14e6-1784-4f42-a0e2-2df170b7003f",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

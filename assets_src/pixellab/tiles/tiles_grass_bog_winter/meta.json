@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_bog_winter",
+ "method": "create-tileset",
+ "lower": "short grass covered with snow",
+ "upper": "dark wet peat bog with pools covered with snow",
+ "tile": 32,
+ "tileset_id": "10e0a686-8083-41da-ba7f-d4476410d906",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

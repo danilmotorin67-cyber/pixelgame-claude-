@@ -1,0 +1,13 @@
+{
+ "id": "village_03",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Лоцманская управа, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "52d68818-23a4-435e-a05e-2e2f73621506",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

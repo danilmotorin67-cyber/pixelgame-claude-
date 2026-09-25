@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_soil_summer",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "bare farm soil",
+ "tile": 32,
+ "tileset_id": "89cf01ab-82b3-4b3a-833a-a484680bf2b2",
+ "generations": 20.0,
+ "date": "2026-09-25"
+}

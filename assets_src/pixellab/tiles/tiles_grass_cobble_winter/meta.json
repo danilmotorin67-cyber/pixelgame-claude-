@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_cobble_winter",
+ "method": "create-tileset",
+ "lower": "short grass covered with snow",
+ "upper": "grey cobblestone street covered with snow",
+ "tile": 32,
+ "tileset_id": "3a3d86c3-2120-4882-a795-c5665914716f",
+ "generations": 12.0,
+ "date": "2026-09-25"
+}

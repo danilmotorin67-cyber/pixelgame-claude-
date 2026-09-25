@@ -1,0 +1,13 @@
+{
+ "id": "greenhouse",
+ "method": "map-objects",
+ "prompt": "large glass greenhouse, top-down, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  320,
+  384
+ ],
+ "view": "high top-down",
+ "object_id": "8911c4c9-66d2-459f-8cf4-7f5d261cf3dc",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

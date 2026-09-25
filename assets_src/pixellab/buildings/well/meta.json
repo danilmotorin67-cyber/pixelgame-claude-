@@ -1,0 +1,13 @@
+{
+ "id": "well",
+ "method": "map-objects",
+ "prompt": "stone well with bucket, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "35c5108e-95dd-4f90-a870-05f3b6e9c78b",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

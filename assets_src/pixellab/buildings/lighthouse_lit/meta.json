@@ -1,0 +1,13 @@
+{
+ "id": "lighthouse_lit",
+ "method": "map-objects",
+ "prompt": "lighthouse at night, lantern room glowing amber, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  288
+ ],
+ "view": "high top-down",
+ "object_id": "bc6513d3-3d04-4d91-83f7-985f073bf597",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

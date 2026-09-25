@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_cliff_spring",
+ "method": "create-tileset",
+ "lower": "short northern grass",
+ "upper": "dark basalt cliff rock",
+ "tile": 32,
+ "tileset_id": "c0612d17-7c3d-403b-afb7-d214630a2a47",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

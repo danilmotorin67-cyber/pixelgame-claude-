@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_path_autumn",
+ "method": "create-tileset",
+ "lower": "short northern grass with moss in autumn colours",
+ "upper": "packed dirt footpath in autumn colours",
+ "tile": 32,
+ "tileset_id": "6966b03a-825a-4568-9e2a-5224ebec66df",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "cannery",
+ "method": "map-objects",
+ "prompt": "grim modern cannery with chimney, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  256,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "26e9a1fa-eaf8-4279-b01b-64645665da60",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

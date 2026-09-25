@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_heather_spring",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "lilac heather moorland",
+ "tile": 32,
+ "tileset_id": "fa88eeae-aeef-4bd8-9e58-92acffbf69ed",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

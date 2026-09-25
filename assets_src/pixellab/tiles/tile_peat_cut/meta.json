@@ -1,0 +1,11 @@
+{
+ "id": "tile_peat_cut",
+ "method": "create-image-pixflux",
+ "prompt": "seamless top-down ground texture tile, Срезанный торф, pixel art, farming game, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "boathouse_1",
+ "method": "map-objects",
+ "prompt": "wooden boathouse on the shore, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "afed2c8b-ca38-4353-92b6-a8c8f28a522d",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

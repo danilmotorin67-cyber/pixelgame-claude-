@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_path_winter",
+ "method": "create-tileset",
+ "lower": "short northern grass with moss covered with snow",
+ "upper": "packed dirt footpath covered with snow",
+ "tile": 32,
+ "tileset_id": "7a133836-96ea-4d22-bc5f-c488027a4358",
+ "generations": 12.0,
+ "date": "2026-09-25"
+}

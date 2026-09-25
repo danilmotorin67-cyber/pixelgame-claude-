@@ -1,0 +1,13 @@
+{
+ "id": "village_01",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Лавка Бергов, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "a705d921-98fe-4df9-89e2-e85328f85d18",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

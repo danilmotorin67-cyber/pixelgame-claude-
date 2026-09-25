@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_graveyard_summer",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "trodden graveyard earth with gravel",
+ "tile": 32,
+ "tileset_id": "fc5dc5ec-8d2d-4c83-bf61-45b53af63a03",
+ "generations": 20.0,
+ "date": "2026-09-25"
+}

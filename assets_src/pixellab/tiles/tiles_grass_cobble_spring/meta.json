@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_cobble_spring",
+ "method": "create-tileset",
+ "lower": "short grass",
+ "upper": "grey cobblestone street",
+ "tile": 32,
+ "tileset_id": "1cf11f40-3d18-4ac1-9190-564223d9447e",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

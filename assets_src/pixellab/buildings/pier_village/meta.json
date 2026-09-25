@@ -1,0 +1,13 @@
+{
+ "id": "pier_village",
+ "method": "map-objects",
+ "prompt": "wooden harbour pier, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  192,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "0f83aaf5-0e4c-4028-9a80-78669b87f0e6",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

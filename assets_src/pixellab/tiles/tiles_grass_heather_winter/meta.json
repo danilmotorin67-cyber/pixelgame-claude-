@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_heather_winter",
+ "method": "create-tileset",
+ "lower": "short grass covered with snow",
+ "upper": "lilac heather moorland covered with snow",
+ "tile": 32,
+ "tileset_id": "d232fefb-b47c-4c3e-bf10-a66c1b222a79",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

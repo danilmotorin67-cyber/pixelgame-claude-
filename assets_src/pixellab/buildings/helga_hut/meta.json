@@ -1,0 +1,13 @@
+{
+ "id": "helga_hut",
+ "method": "map-objects",
+ "prompt": "old herbalist's turf hut, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  112,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "4e6c490a-5695-4911-874f-86e49332f406",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

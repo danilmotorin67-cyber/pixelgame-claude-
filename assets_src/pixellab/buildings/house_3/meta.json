@@ -1,0 +1,13 @@
+{
+ "id": "house_3",
+ "method": "map-objects",
+ "prompt": "keeper's house with cellar door and porch, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  224,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "3a227b67-5482-424e-ad65-0685e2adf0cc",
+ "generations": 6.0,
+ "date": "2026-09-25"
+}

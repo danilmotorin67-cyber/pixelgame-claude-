@@ -1,0 +1,10 @@
+{
+ "id": "tiles_lighthouse_round",
+ "method": "create-tileset",
+ "lower": "worn stone floor",
+ "upper": "curved lighthouse wall",
+ "tile": 32,
+ "tileset_id": "3526f312-e83b-42e2-8d40-840f5983f858",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

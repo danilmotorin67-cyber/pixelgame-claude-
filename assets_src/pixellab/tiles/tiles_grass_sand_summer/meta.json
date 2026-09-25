@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_sand_summer",
+ "method": "create-tileset",
+ "lower": "short northern grass",
+ "upper": "pale dry beach sand with shells",
+ "tile": 32,
+ "tileset_id": "3012fc6d-f547-4290-a5a7-bdc44ed89f51",
+ "generations": 12.0,
+ "date": "2026-09-25"
+}

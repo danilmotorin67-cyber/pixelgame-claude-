@@ -1,0 +1,10 @@
+{
+ "id": "tiles_rann_halls",
+ "method": "create-tileset",
+ "lower": "mother-of-pearl floor",
+ "upper": "coral and pearl walls",
+ "tile": 32,
+ "tileset_id": "ac319d07-5d70-4a0f-9a84-49f6a3d6bf08",
+ "generations": 19.0,
+ "date": "2026-09-25"
+}

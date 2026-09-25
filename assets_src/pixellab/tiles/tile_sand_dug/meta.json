@@ -1,0 +1,11 @@
+{
+ "id": "tile_sand_dug",
+ "method": "create-image-pixflux",
+ "prompt": "seamless top-down ground texture tile, Вскопанный песок, pixel art, farming game, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "generations": 2.0,
+ "date": "2026-09-25"
+}

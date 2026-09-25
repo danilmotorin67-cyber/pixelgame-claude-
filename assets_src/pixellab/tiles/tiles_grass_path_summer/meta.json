@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_path_summer",
+ "method": "create-tileset",
+ "lower": "short northern grass with moss",
+ "upper": "packed dirt footpath",
+ "tile": 32,
+ "tileset_id": "99b83029-9621-4c86-ba33-eb6da9dcc3d6",
+ "generations": 8.0,
+ "date": "2026-09-25"
+}

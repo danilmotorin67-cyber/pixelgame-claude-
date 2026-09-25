@@ -1,0 +1,13 @@
+{
+ "id": "erland_boat_house",
+ "method": "map-objects",
+ "prompt": "upturned boat used as a house, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  112,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "75a4c47a-23b0-42c1-a2f5-8d7bc4951d9a",
+ "generations": 2.0,
+ "date": "2026-09-25"
+}

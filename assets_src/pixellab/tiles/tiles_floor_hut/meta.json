@@ -1,0 +1,10 @@
+{
+ "id": "tiles_floor_hut",
+ "method": "create-tileset",
+ "lower": "earthen floor with rugs",
+ "upper": "turf and log wall",
+ "tile": 32,
+ "tileset_id": "48e3dc2c-2c6d-49a6-99d4-65a977430bef",
+ "generations": 24.0,
+ "date": "2026-09-25"
+}

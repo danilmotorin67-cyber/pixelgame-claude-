@@ -1,0 +1,10 @@
+{
+ "id": "tiles_wet_shallow",
+ "method": "create-tileset",
+ "lower": "wet sand",
+ "upper": "shallow turquoise sea water",
+ "tile": 32,
+ "tileset_id": "6d461747-ef3b-4144-9fd1-ae76d45c4c7d",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

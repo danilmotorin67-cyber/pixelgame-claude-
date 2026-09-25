@@ -1,0 +1,13 @@
+{
+ "id": "cannery_ruin",
+ "method": "map-objects",
+ "prompt": "burnt-out cannery, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  256,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "9db12aa4-dede-462f-a04c-6282a966ac1d",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

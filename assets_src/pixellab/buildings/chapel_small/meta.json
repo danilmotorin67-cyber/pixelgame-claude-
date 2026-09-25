@@ -1,0 +1,13 @@
+{
+ "id": "chapel_small",
+ "method": "map-objects",
+ "prompt": "tiny white chapel with bell, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  112
+ ],
+ "view": "high top-down",
+ "object_id": "79cd9415-f4d6-4f19-8d03-fcfbb692b4e6",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}
