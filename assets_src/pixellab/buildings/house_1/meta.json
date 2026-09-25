@@ -1,0 +1,13 @@
+{
+ "id": "house_1",
+ "method": "map-objects",
+ "prompt": "small stone keeper's cottage, straight front view facade facing the camera, orthographic, no perspective, roof seen from slightly above, dark blue slate roof, chimney, two warm lit windows, wooden door in the middle, cozy farming game building like Stardew Valley",
+ "size": [
+  192,
+  160
+ ],
+ "view": "high top-down",
+ "object_id": "542ed386-2c7f-4ca1-a03c-3e434d602886",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

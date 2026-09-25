@@ -1,0 +1,10 @@
+{
+ "id": "tiles_grass_path_spring",
+ "method": "create-tileset",
+ "lower": "short green northern grass with moss and tiny flowers",
+ "upper": "packed brown dirt footpath",
+ "tile": 32,
+ "tileset_id": "8a2e7adc-d3dc-41ec-8e3f-b60b33fd7886",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

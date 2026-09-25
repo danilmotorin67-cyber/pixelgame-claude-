@@ -44,12 +44,15 @@ def generations_left():
     return float(request("GET", "/balance")["subscription"]["generations"])
 
 
-def palette_image():
-    """The 48 colours as an 8×6 PNG, for color_image/force_colors."""
+def palette_image(size=8):
+    """The 48 colours as an 8×8 grid of `size`-px squares (tilesets want 64×64: size=8)."""
     from PIL import Image
-    img = Image.new("RGB", (8, 6))
+    img = Image.new("RGB", (8 * size, 8 * size), tuple(int(PALETTE[0][k:k + 2], 16) for k in (0, 2, 4)))
     for i, h in enumerate(PALETTE):
-        img.putpixel((i % 8, i // 8), tuple(int(h[k:k + 2], 16) for k in (0, 2, 4)))
+        col = tuple(int(h[k:k + 2], 16) for k in (0, 2, 4))
+        for y in range(size):
+            for x in range(size):
+                img.putpixel(((i % 8) * size + x, (i // 8) * size + y), col)
     buf = io.BytesIO()
     img.save(buf, "PNG")
     return {"type": "base64", "base64": base64.b64encode(buf.getvalue()).decode(), "format": "png"}
@@ -114,6 +117,77 @@ def animate_character(group, aid, character_id, template, directions=("south", "
     meta.setdefault("animations", {})[template] = {"generations": before - generations_left(), "group": res.get("animation_group_id")}
     save_meta(folder, meta)
     return meta, detail
+
+
+def _save_b64(path, image):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "wb") as f:
+        f.write(base64.b64decode(image["base64"]))
+
+
+def create_tileset(group, aid, lower, upper, tile=32, extra=None):
+    """A Wang (corner) tileset: 16 tiles; each tile saved as <name>.png plus tileset.json with the corners."""
+    folder = os.path.join(RAW, group, aid)
+    before = generations_left()
+    body = {"lower_description": lower, "upper_description": upper, "tile_size": {"width": tile, "height": tile},
+            "view": "high top-down", "outline": "lineless", "shading": "basic shading", "detail": "medium detail",
+            "transition_size": 0.25, "color_image": palette_image(8)}
+    body.update(extra or {})
+    res = request("POST", "/create-tileset", body)
+    tileset_id = res.get("tileset_id") or res.get("id")
+    job_id = res.get("background_job_id")
+    if job_id:
+        job = wait_job(job_id)
+        if job["status"] != "completed":
+            raise RuntimeError(json.dumps(job)[:800])
+    data = request("GET", f"/tilesets/{tileset_id}")
+    tiles = data["tileset"]["tiles"]
+    os.makedirs(folder, exist_ok=True)
+    index = []
+    for i, t in enumerate(tiles):
+        name = f"tile_{i:02d}.png"
+        _save_b64(os.path.join(folder, name), t["image"])
+        index.append({"file": name, "corners": t.get("corners"), "pattern_4x4": t.get("pattern_4x4")})
+    with open(os.path.join(folder, "tileset.json"), "w", encoding="utf-8") as f:
+        json.dump({"tile_size": tile, "tiles": index}, f, ensure_ascii=False, indent=1)
+    meta = {"id": aid, "method": "create-tileset", "lower": lower, "upper": upper, "tile": tile, "tileset_id": tileset_id,
+            "generations": before - generations_left(), "date": time.strftime("%Y-%m-%d")}
+    save_meta(folder, meta)
+    return meta
+
+
+def create_map_object(group, aid, description, width, height, view="low top-down", extra=None):
+    folder = os.path.join(RAW, group, aid)
+    before = generations_left()
+    body = {"description": description, "image_size": {"width": width, "height": height}, "view": view,
+            "outline": "single color outline", "shading": "medium shading", "detail": "medium detail",
+            "color_image": palette_image()}
+    body.update(extra or {})
+    res = request("POST", "/map-objects", body)
+    object_id = res["object_id"]
+    t0 = time.time()
+    while True:
+        try:
+            info = request("GET", f"/map-objects/{object_id}")
+        except RuntimeError as e:
+            if " 423 " in str(e) and time.time() - t0 < 900:
+                time.sleep(8)
+                continue
+            raise
+        if info.get("status") == "completed":
+            break
+        if info.get("status") == "failed":
+            raise RuntimeError(json.dumps(info)[:500])
+        time.sleep(8)
+    os.makedirs(folder, exist_ok=True)
+    with urllib.request.urlopen(info["download_url"], timeout=120) as r:
+        png = r.read()
+    with open(os.path.join(folder, aid + ".png"), "wb") as f:
+        f.write(png)
+    meta = {"id": aid, "method": "map-objects", "prompt": description, "size": [width, height], "view": view,
+            "object_id": object_id, "generations": before - generations_left(), "date": time.strftime("%Y-%m-%d")}
+    save_meta(folder, meta)
+    return meta
 
 
 if __name__ == "__main__":
