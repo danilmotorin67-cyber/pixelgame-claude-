@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_cliff_autumn",
  "method": "create-tileset",
- "lower": "dull olive-yellow autumn grass",
- "upper": "dark grey basalt cliff rock",
+ "lower": "muted olive-green and ochre autumn grass with small tufts",
+ "upper": "dark slate-grey basalt cliff rock with cracks",
  "tile": 32,
- "tileset_id": "1b0b1be0-f594-43f2-a7f5-f291c959ca27",
- "generations": 16.0,
+ "tileset_id": "445f5520-cc82-46b4-977e-3c147d014b5b",
+ "generations": 2.0,
  "date": "2026-09-25"
 }

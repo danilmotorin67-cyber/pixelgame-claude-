@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_forest_autumn",
  "method": "create-tileset",
- "lower": "dull olive-yellow autumn grass",
- "upper": "forest floor covered with yellow birch leaves",
+ "lower": "muted olive-green and ochre autumn grass",
+ "upper": "brown forest floor with fallen ochre and brown leaves and pine needles, not red",
  "tile": 32,
- "tileset_id": "23061118-0b33-4926-832c-6c3c9aa3c7eb",
- "generations": 8.0,
+ "tileset_id": "43e07a50-0c7d-4235-9883-9b4e5001390a",
+ "generations": 6.0,
  "date": "2026-09-25"
 }

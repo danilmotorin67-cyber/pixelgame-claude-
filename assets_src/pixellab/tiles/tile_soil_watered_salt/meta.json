@@ -1,5 +1,6 @@
 {
  "id": "tile_soil_watered_salt",
- "method": "create-image-pixflux",
- "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: wet tilled soil with white salt crust, top-down pixel art"
+ "method": "derived",
+ "source": "tiles_grass_soil_summer full soil tile, darkened, salt",
+ "generations": 0
 }

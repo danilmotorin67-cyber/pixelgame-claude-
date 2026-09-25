@@ -1,13 +1,13 @@
 {
  "id": "house_3",
  "method": "map-objects",
- "prompt": "keeper's stone house with porch and cellar door, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "keeper's stone house with porch and cellar door, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light, plain transparent background",
  "size": [
   224,
   192
  ],
  "view": "side",
- "object_id": "039d9fcd-3db6-4674-807a-9b713856e2fe",
+ "object_id": "9db1554a-e9f0-4b9d-94cd-b23ae5d001ee",
  "generations": 2.0,
  "date": "2026-09-25"
 }

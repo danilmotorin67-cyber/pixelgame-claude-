@@ -1,13 +1,8 @@
 {
  "id": "cannery_ruin",
- "method": "map-objects",
- "prompt": "burnt-out ruined cannery, broken walls, soot, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
- "size": [
-  256,
-  192
- ],
- "view": "side",
- "object_id": "fc0f2f39-2306-41c2-9b58-6a2d1f0ac39a",
- "generations": 3.0,
+ "method": "edit-image-pro-flash",
+ "source": "cannery",
+ "prompt": "Turn this building into a burnt-out ruin after a big fire: the roof has collapsed and is gone, walls are broken and jagged at the top, windows are empty black holes, black soot marks, piles of rubble at the base, chimney broken off halfway, no smoke, no sign. Keep the same front view, size and pixel art style.",
+ "generations": 9,
  "date": "2026-09-25"
 }

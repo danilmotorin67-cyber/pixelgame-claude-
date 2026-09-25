@@ -75,9 +75,10 @@ def job(kind, aid):
             return aid
     except Exception as e:
         return f"FAIL {aid} {str(e)[:200]}"
-start = pl.generations_left()
-jobs = [("b", k) for k in B] + [("o", k) for k in OTHER] + [("t", k) for k in TS] + [("s", k) for k in SINGLE]
-with cf.ThreadPoolExecutor(4) as ex:
-    for r in ex.map(lambda j: job(*j), jobs):
-        print(str(r)[:160], flush=True)
-print("spent", start - pl.generations_left())
+if __name__ == "__main__":
+    start = pl.generations_left()
+    jobs = [("b", k) for k in B] + [("o", k) for k in OTHER] + [("t", k) for k in TS] + [("s", k) for k in SINGLE]
+    with cf.ThreadPoolExecutor(4) as ex:
+        for r in ex.map(lambda j: job(*j), jobs):
+            print(str(r)[:160], flush=True)
+    print("spent", start - pl.generations_left())

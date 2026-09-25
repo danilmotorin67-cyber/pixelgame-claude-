@@ -1,5 +1,6 @@
 {
  "id": "tile_soil_salt1",
- "method": "create-image-pixflux",
- "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: tilled farm soil with a few white salt crystals, top-down pixel art"
+ "method": "derived",
+ "source": "tiles_grass_soil_summer full soil tile, salt crystals",
+ "generations": 0
 }

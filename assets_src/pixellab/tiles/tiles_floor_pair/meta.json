@@ -1,0 +1,10 @@
+{
+ "id": "tiles_floor_pair",
+ "method": "create-tileset",
+ "lower": "weathered wooden plank floor, planks running horizontally",
+ "upper": "dark cut peat ground with straight spade cuts",
+ "tile": 32,
+ "tileset_id": "1ae88837-4487-47d7-9da9-bca9634d48a5",
+ "generations": 16.0,
+ "date": "2026-09-25"
+}

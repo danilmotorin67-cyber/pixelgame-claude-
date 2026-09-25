@@ -1,5 +1,6 @@
 {
  "id": "tile_snow_trampled",
- "method": "create-image-pixflux",
- "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: trampled snow with footprints, top-down pixel art"
+ "method": "derived",
+ "source": "tiles_snow_pair full lower tile",
+ "generations": 0
 }

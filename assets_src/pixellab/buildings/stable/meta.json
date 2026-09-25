@@ -1,13 +1,13 @@
 {
  "id": "stable",
  "method": "map-objects",
- "prompt": "small pony stable, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "small pony stable, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light, plain transparent background",
  "size": [
   96,
   80
  ],
  "view": "side",
- "object_id": "6e3fe19a-8913-4e72-bfca-5a65c0573374",
- "generations": 3.0,
+ "object_id": "9071a048-9c64-4de7-85d7-ff03d4477eb8",
+ "generations": 5.0,
  "date": "2026-09-25"
 }

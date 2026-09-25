@@ -1,13 +1,13 @@
 {
  "id": "kai_hut",
  "method": "map-objects",
- "prompt": "hermit hut built of driftwood, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "hermit hut built of driftwood, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light, plain transparent background",
  "size": [
   96,
   80
  ],
  "view": "side",
- "object_id": "ea895716-ac19-4d34-aef7-8794df7033fe",
- "generations": 4.0,
+ "object_id": "95ca0078-0fec-407f-8781-5aee76276fce",
+ "generations": 3.0,
  "date": "2026-09-25"
 }

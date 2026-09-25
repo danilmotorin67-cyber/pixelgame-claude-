@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_forest_summer",
  "method": "create-tileset",
- "lower": "short grass",
- "upper": "birch forest floor with leaves",
+ "lower": "short green grass",
+ "upper": "shady forest floor with brown pine needles and moss",
  "tile": 32,
- "tileset_id": "74b13fd1-94d0-4c65-ab34-9d76ed6ba8e5",
+ "tileset_id": "f0a9b8f6-c552-4f45-8578-5e3f7f7128d2",
  "generations": 16.0,
  "date": "2026-09-25"
 }

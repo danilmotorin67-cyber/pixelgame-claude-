@@ -1,5 +1,6 @@
 {
  "id": "tile_peat_cut",
- "method": "create-image-pixflux",
- "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: dark cut peat ground with spade marks, top-down pixel art"
+ "method": "derived",
+ "source": "tiles_floor_pair full upper tile",
+ "generations": 0
 }

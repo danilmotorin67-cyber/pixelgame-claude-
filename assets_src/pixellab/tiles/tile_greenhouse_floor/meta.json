@@ -1,5 +1,6 @@
 {
  "id": "tile_greenhouse_floor",
- "method": "create-image-pixflux",
- "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: wooden plank greenhouse floor, top-down pixel art"
+ "method": "derived",
+ "source": "tiles_floor_pair full lower tile",
+ "generations": 0
 }
