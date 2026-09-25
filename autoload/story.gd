@@ -339,6 +339,8 @@ func npc_options(npc: String) -> Array:
 	if can_ask(npc):
 		out.append(["ally", Loc.t("story.opt.ally")])
 	out.append_array(Boards.npc_options(npc))
+	if npc == Relationships.married_to and Family.can_ask_children():
+		out.append(["family:children", "Поговорить о детях"])
 	if npc == "npc_helga" and Tales.next_tale() > 0:
 		out.append(["tale", Loc.t("story.opt.tale")])
 	for option in cfg("npc_options", []):
@@ -362,6 +364,8 @@ func npc_action(npc: String, id: String) -> String:
 		return Loc.t("story.ally.no")
 	if id == "tale":
 		return Tales.tell()
+	if id == "family:children":
+		return "«Я думал(а) о том же. Дом теперь большой… Давай?» Через две недели в доме станет шумнее." if Family.agree() else ""
 	if id.begins_with("errand:"):
 		return Boards.deliver(int(id.get_slice(":", 1)))
 	if id.begins_with("opt:"):

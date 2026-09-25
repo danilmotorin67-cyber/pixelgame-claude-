@@ -417,6 +417,9 @@ func resolve_night(bedtime: int = 23 * 60, watch_sleep: bool = false) -> Diction
 		parts["mechanism"] = 0
 		events.append("mechanism_stopped")
 	var power := effective_power(bedtime, watch_sleep, parts) if burning else 0.0
+	# 22.3: the spouse lit it — "not as thorough with the glass as you. But loves you more than the glass."
+	if burning and Family.spouse_lit_tonight():
+		power *= 0.9
 	if burning:
 		fuel_nights = maxf(0.0, fuel_nights - (0.75 if Skills.has_profession("fire_keeper") else 1.0))
 		if fuel_nights <= 0.0:
@@ -563,6 +566,9 @@ func night_mail(night_index: int) -> void:
 
 
 func _on_hour_changed(hour: int) -> void:
+	# 22.3: at 21:00, with the keeper away from the tower, a devoted spouse may light the fire.
+	if hour == 21 and not Router.current_map.begins_with("lh_"):
+		Family.evening_fire()
 	# On the Great Tide Palm sails on the Queen; his grade comes the morning after the finale (Q4.5).
 	if hour == 10 and (Clock.day == 28 or Clock.day_index == retake_day) and inspected_day != Clock.day_index \
 			and not (Clock.day_index == Story.finale_day and Story.ending in ["", "D"]):

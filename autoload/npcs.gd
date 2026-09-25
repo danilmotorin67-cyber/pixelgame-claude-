@@ -70,11 +70,16 @@ func entry_for(id: String) -> Dictionary:
 		if priority > best_priority:
 			best = e
 			best_priority = priority
+	# 22.3: the spouse moved to the cape (festival days keep the festival's schedule).
+	if id == Relationships.married_to and id != "" and Festivals.schedule_entry(id).is_empty():
+		best = Family.spouse_entry(best)
 	_entry_cache[key] = best
 	return best
 
 
 func _home(id: String) -> Dictionary:
+	if id != "" and id == Relationships.married_to:
+		return {"map": "cape", "tile": MapInfo.spot("cape", "house_door"), "hidden": true, "face": "down", "anim": "sleep"}
 	var home: Dictionary = info(id).get("home", {})
 	var map_id := str(home.get("map", "away"))
 	if map_id == "away":

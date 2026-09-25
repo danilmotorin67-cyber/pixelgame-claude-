@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -667,3 +667,72 @@ func _check_spyglass() -> void:
 	_check(not Game.flag("house_key"), "the house starts locked")
 	Spots.act(Story.spot("cat_key"), "lift")
 	_check(Game.flag("house_key"), "lifting the cat finds the key")
+
+
+# 22.3: the spouse at the cape, morning help, the evening fire, children.
+func _check_family() -> void:
+	_fresh()
+	Relationships.married_to = "npc_liv"
+	Relationships.set_hearts("npc_liv", 12)
+	Game.counters["event_wedding"] = 7
+	_goto(9, 8)
+	NPCs._entry_cache.clear()
+	var entry := NPCs.entry_for("npc_liv")
+	var path: Array = entry.get("path", [])
+	_check(not path.is_empty() and str(path[0][1]) == "cape" and str(path[-1][1]) == "cape", "the spouse starts and ends the day at the cape")
+	_check(str(NPCs._home("npc_liv").get("map", "")) == "cape", "and sleeps there")
+	_goto(5, 8)
+	NPCs._entry_cache.clear()
+	var weekend: Array = NPCs.entry_for("npc_liv").get("path", [])
+	var all_cape := true
+	for step in weekend:
+		all_cape = all_cape and str(step[1]) == "cape"
+	_check(Clock.weekday in ["sat", "sun"] and all_cape, "at the weekend the spouse stays at the cape (%s)" % Clock.weekday)
+	# Morning help on about 40% of mornings.
+	var helped := 0
+	var kinds := {}
+	for day in 100:
+		_goto(20 + day, 7)
+		var chore := Family.morning_help()
+		if chore != "":
+			helped += 1
+			kinds[chore] = true
+	_check(helped > 25 and helped < 55 and kinds.size() == 5, "a chore on ~40%% of mornings (%d/100, %d kinds)" % [helped, kinds.size()])
+	# The evening fire: 12+ hearts, the keeper away, 70%.
+	var lit := 0
+	for day in 50:
+		_goto(200 + day, 20)
+		Lighthouse.lamp_on = false
+		Lighthouse.fuel_nights = 5.0
+		if Family.evening_fire():
+			lit += 1
+			_check(Family.spouse_lit_tonight(), "the night knows who lit it")
+	_check(lit > 25 and lit < 45, "the spouse lights the fire about 70%% of evenings (%d/50)" % lit)
+	Relationships.set_hearts("npc_liv", 10)
+	Lighthouse.lamp_on = false
+	_check(not Family.evening_fire(), "not below 12 hearts")
+	Relationships.set_hearts("npc_liv", 12)
+	# Children: house level 2, 14 days married, 12+ hearts.
+	_goto(30, 10)
+	_check(not Family.can_ask_children(), "not in a small house")
+	Buildings.levels["house"] = 2
+	_check(Family.can_ask_children() and Story.npc_options("npc_liv").has(["family:children", "Поговорить о детях"]), "the spouse raises the question")
+	_check(Story.npc_action("npc_liv", "family:children") != "" and not Family.can_ask_children(), "yes: a baby is on the way")
+	_goto(43, 6)
+	_check(not Family.night(), "not yet")
+	_goto(44, 6)
+	_check(Family.night() and Family.children().size() == 1 and int(Game.counters["children"]) == 1, "a baby in 14 days")
+	var child: Dictionary = Family.children()[0]
+	_check(Family.stage(child) == "baby", "a baby")
+	_goto(44 + 14, 6)
+	_check(Family.stage(child) == "toddler", "a toddler after 14 days")
+	_goto(44 + 28, 6)
+	_check(Family.stage(child) == "child", "a child after 28")
+	Family.agree()
+	_goto(44 + 28 + 14, 6)
+	Family.night()
+	_check(Family.children().size() == 2 and not Family.can_ask_children(), "two at most")
+	_check(Finale.epilogue_slides().has("epilogue.children"), "the epilogue remembers them")
+	var back: Dictionary = JSON.parse_string(JSON.stringify(Relationships.serialize()))
+	Relationships.deserialize(back)
+	_check(Relationships.children.size() == 2, "saved")

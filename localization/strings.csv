@@ -7252,3 +7252,5 @@ ship.eleonora.name,Корабль-призрак «Элеонора»,The ghost 
 ship.neptune_1.name,«Нептун-1»,Neptune-1
 ship.mercy_2.name,«Милосердие II»,Mercy II
 mail.olaf_archive,"Олаф: «Раз уж вы собираете корабли — вот из архива управы то, что вы пропустили: %s. Не благодарите. Ладно, благодарите».","Olaf: ""Since you collect ships — here is what you missed, from the Directorate's archive: %s. Don't thank me. All right, thank me."""
+mail.spouse_breakfast,"Записка: «Ты опять ушёл до рассвета. Поешь. — %s»","A note: ""You left before dawn again. Eat. — %s"""
+mail.baby,"Сольвик поздравляет: в доме смотрителя родилась(ся) %s. Бенедикт обещает крестить подальше от окна с видом на море.","Solvik congratulates you: %s was born in the keeper's house. Benedict promises to christen them well away from the sea window."

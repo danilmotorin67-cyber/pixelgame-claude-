@@ -67,6 +67,17 @@ func _ready() -> void:
 	story.map_id = map_id
 	add_child(story)
 	if map_id == "cape":
+		# 22.3: the children at play — the yard, the hen-house, and by day the graveyard gate.
+		for i in Family.children().size():
+			var child: Dictionary = Family.children()[i]
+			if Family.stage(child) == "baby":
+				continue
+			var kid := KidObject.new()
+			kid.child = child
+			kid.index = i
+			var by_graves := Family.stage(child) == "child" and Clock.hour >= 14 and Clock.hour < 16
+			kid.position = Vector2(420, 540) if by_graves else (Vector2(880, 360) if i == 1 else Vector2(640, 380))
+			add_child(kid)
 		var bell := TowerBell.new()
 		bell.name = "TowerBell"
 		bell.position = Vector2(748, 266)

@@ -84,7 +84,9 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	_step(report, "sales", func() -> void:
 		report["sales"] = Economy.collect_shipping(night_index, storm_today))
 	_step(report, "friendship", func() -> void:
-		Relationships.night())
+		Relationships.night()
+		report["spouse_help"] = Family.morning_help()
+		report["baby"] = Family.night())
 	_step(report, "quests", func() -> void:
 		report["story"] = Story.night(night_index, hmar_tonight)
 		Boards.night()

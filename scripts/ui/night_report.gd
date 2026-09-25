@@ -49,6 +49,12 @@ static func text(report: Dictionary) -> String:
 		lines.append("На рассвете звонил колокол погоста.")
 	if int(report.get("unrest", 0)) > 0:
 		lines.append("Беспокойство: в покойницкой всё сдвинуто, у погоста вянут посевы (%d)." % int(report["unrest"]))
+	var chores := {"water": "полил(а) грядки", "animals": "покормил(а) животных", "fences": "починил(а) ограду",
+		"breakfast": "оставил(а) завтрак в почтовом ящике", "glass": "протёр(ла) стёкла фонарной"}
+	if str(report.get("spouse_help", "")) != "":
+		lines.append("Супруг(а) с утра %s." % str(chores.get(str(report["spouse_help"]), "помог(ла) по хозяйству")))
+	if bool(report.get("baby", false)):
+		lines.append("В доме новый житель. Кричит громче чаек.")
 	if bool(report.get("cabin", false)):
 		lines.append("Ночь в каюте бота: проснулись в море, там же, где бросили якорь.")
 	if bool(report.get("quiet_sleep", false)):
