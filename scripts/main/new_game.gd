@@ -15,6 +15,7 @@ static func start(hero: Dictionary = {}) -> void:
 	Story.stern_phrase = str(hero.get("stern_phrase", ""))
 	Game.set_flag("prologue_done", hero.has("stern_phrase"))
 	Farm.scatter_rocks()
+	Farm.scatter_field()
 	Crafting.add_prefilled("cape", "chest", 664, 380, [["canvas", 1], ["thread", 2], ["rag", 3], ["agatha_hat", 1]])
 	Farm.spawn_wild(0)
 	Sea.generate_gifts(0, false)

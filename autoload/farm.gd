@@ -15,8 +15,20 @@ const PLOTS := {
 	"beds": {"origin": Vector2(672, 304), "size": Vector2i(10, 6), "indoor": false},
 	"greenhouse_small": {"origin": Vector2(1040, 304), "size": Vector2i(6, 6), "indoor": true},
 	"greenhouse": {"origin": Vector2(1040, 440), "size": Vector2i(10, 12), "indoor": true},
+	# 13.1: the rest of the cape's ≈900 tiles, overgrown — stones (pickaxe), snags (axe), weeds (scythe);
+	# the soil is salty: 60% Salt 2, 40% Salt 1. The southern field lies within reach of storm spray.
+	"field_nw": {"origin": Vector2(96, 96), "size": Vector2i(36, 9), "indoor": false, "field": true},
+	"field_ne": {"origin": Vector2(784, 96), "size": Vector2i(30, 9), "indoor": false, "field": true},
+	"field_s": {"origin": Vector2(400, 672), "size": Vector2i(30, 10), "indoor": false, "field": true},
 }
-var opened: Dictionary = {"beds": true}
+const FIELDS := ["field_nw", "field_ne", "field_s"]
+# What overgrows the field and which tool clears it.
+const CLUTTER_TOOLS := {"weed": "tool_scythe", "rock": "tool_pick", "snag": "tool_axe"}
+const CLUTTER_ENERGY := {"weed": "scythe", "rock": "pick", "snag": "axe"}
+var opened: Dictionary = {"beds": true, "field_nw": true, "field_ne": true, "field_s": true}
+# Field tiles still overgrown: key -> {"k": weed|rock|snag, "hp": hits left}.
+var clutter: Dictionary = {}
+var field_ready: bool = false
 var tiles: Dictionary = {}
 var last_harvest: Dictionary = {}
 # Seasonal wild finds per map: [{item, x, y}] in tiles.
@@ -47,6 +59,86 @@ func _valid(cell: Vector2i, plot: String = "beds") -> bool:
 	return cell.x >= 0 and cell.x < size.x and cell.y >= 0 and cell.y < size.y
 
 
+func is_field(plot: String) -> bool:
+	return bool(PLOTS.get(plot, {}).get("field", false))
+
+
+# The field's own salt before any care: 60% Salt 2, 40% Salt 1 (fixed per world).
+func base_salt(cell: Vector2i, plot: String) -> int:
+	if not is_field(plot):
+		return 0
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 6089 + plot.hash() + cell.x * 257 + cell.y * 31, 2147483647)
+	return 2 if rng.randf() < 0.6 else 1
+
+
+# Overgrows the whole field at the start of a world: most tiles hold weeds, stones or snags.
+func scatter_field() -> void:
+	clutter.clear()
+	var cfg: Dictionary = Game.balance("garden", {}).get("field", {})
+	var shares: Dictionary = cfg.get("clutter", {"weed": 0.45, "rock": 0.15, "snag": 0.1})
+	var hp: Dictionary = cfg.get("hp", {"weed": 1, "rock": 2, "snag": 2})
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 3571 + 17, 2147483647)
+	for plot in FIELDS:
+		var size: Vector2i = PLOTS[plot]["size"]
+		for y in size.y:
+			for x in size.x:
+				var roll := rng.randf()
+				for kind in ["weed", "rock", "snag"]:
+					roll -= float(shares.get(kind, 0.0))
+					if roll < 0.0:
+						clutter[_key(Vector2i(x, y), plot)] = {"k": kind, "hp": int(hp.get(kind, 1))}
+						break
+	field_ready = true
+	Events.farm_changed.emit()
+
+
+func clutter_at(cell: Vector2i, plot: String) -> String:
+	return str(clutter.get(_key(cell, plot), {}).get("k", ""))
+
+
+func field_clear_count() -> int:
+	var total := 0
+	for plot in FIELDS:
+		var size: Vector2i = PLOTS[plot]["size"]
+		total += size.x * size.y
+	return total - clutter.size()
+
+
+# One blow of the right tool: "wrong" for the wrong tool, "" while it holds, else what fell off it.
+func clear_clutter(cell: Vector2i, plot: String, tool: String) -> String:
+	var key := _key(cell, plot)
+	if not clutter.has(key):
+		return "none"
+	var entry: Dictionary = clutter[key]
+	var kind := str(entry["k"])
+	if str(CLUTTER_TOOLS[kind]) != tool:
+		return "wrong"
+	entry["hp"] = int(entry["hp"]) - 1 - Buildings.tool_level(tool)
+	if int(entry["hp"]) > 0:
+		return ""
+	clutter.erase(key)
+	var got := ""
+	match kind:
+		"rock":
+			Inventory.add("stone", 1)
+			got = "stone"
+		"snag":
+			Inventory.add("driftwood", 1)
+			got = "driftwood"
+		"weed":
+			if Buildings.level("hayloft") > 0 and _rng(cell, 719).randf() < 0.5 and Buildings.mow(0.0) > 0:
+				got = "hay"
+			else:
+				got = "weed"
+	Skills.add_xp("foraging", 1)
+	Game.add_stat("field_cleared")
+	Events.quest_event.emit("field_cleared", kind)
+	Events.farm_changed.emit()
+	return got
+
+
 func indoor(plot: String) -> bool:
 	return bool(PLOTS.get(plot, {}).get("indoor", false))
 
@@ -74,17 +166,19 @@ func get_tile(cell: Vector2i, plot: String = "beds") -> Dictionary:
 
 func reset() -> void:
 	tiles.clear()
-	opened = {"beds": true}
+	opened = {"beds": true, "field_nw": true, "field_ne": true, "field_s": true}
 	wild.clear()
 	peat_dug.clear()
 	rocks.clear()
+	clutter.clear()
+	field_ready = false
 	Events.farm_changed.emit()
 
 
 func till(cell: Vector2i, plot: String = "beds") -> bool:
-	if not _valid(cell, plot) or not get_tile(cell, plot).is_empty():
+	if not _valid(cell, plot) or not get_tile(cell, plot).is_empty() or clutter.has(_key(cell, plot)):
 		return false
-	tiles[_key(cell, plot)] = {"salt": 0, "fertility": 1, "watered": false, "crop": "", "days": 0,
+	tiles[_key(cell, plot)] = {"salt": base_salt(cell, plot), "fertility": 1, "watered": false, "crop": "", "days": 0,
 		"growth": 0.0, "ready": false, "amended": {}, "guano_season": -1, "flawless_bonus": 0.0}
 	Events.farm_changed.emit()
 	return true
@@ -332,7 +426,7 @@ func advance_day(storm_night: bool = false) -> void:
 					tile["watered"] = false
 					tile["gulls"] = Clock.day_index
 					continue
-				if storm_night and not inside and not bool(tile["ready"]) and not Crafting.sheltered("cape", tile_center(cell)) \
+				if storm_night and not inside and not bool(tile["ready"]) and not Crafting.sheltered("cape", tile_center(cell, plot)) \
 						and _rng(cell, 911).randf() < STORM_STAGE_LOSS:
 					if stage(tile) <= 1:
 						_clear_crop(tile)
@@ -349,9 +443,26 @@ func advance_day(storm_night: bool = false) -> void:
 					tile["days"] = int(tile["days"]) + 1
 					tile["growth"] = float(tile["growth"]) + speed
 					tile["ready"] = float(tile["growth"]) >= float(total_days(crop)) - 0.001
+		if storm_night and not inside:
+			salinize(tile, cell, plot)
 		tile["watered"] = Weather.current in ["rain", "storm"] and not inside
 	_auto_water()
 	Events.farm_changed.emit()
+
+
+# 13.3: after a storm, unsheltered tiles within 12 tiles of the shore turn saltier (25%).
+func near_shore(cell: Vector2i, plot: String) -> bool:
+	var cfg: Dictionary = Game.balance("garden", {})
+	return float(cfg.get("shore_y", 864)) - tile_center(cell, plot).y <= float(cfg.get("salt_shore_tiles", 12)) * 16.0
+
+
+func salinize(tile: Dictionary, cell: Vector2i, plot: String) -> bool:
+	if int(tile["salt"]) >= MAX_SALT or not near_shore(cell, plot) or Crafting.sheltered("cape", tile_center(cell, plot)):
+		return false
+	if _rng(cell + Vector2i(0, plot.length() * 100), 1301).randf() >= float(Game.balance("garden", {}).get("salt_chance", 0.25)):
+		return false
+	tile["salt"] = int(tile["salt"]) + 1
+	return true
 
 
 # Seasonal foraging spots of 18.1 appear each morning inside the open zones of each region.
@@ -449,12 +560,13 @@ func collect_wild(map_id: String, spot: Dictionary) -> bool:
 
 
 func serialize() -> Dictionary:
-	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug, "rocks": rocks, "opened": opened}
+	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug, "rocks": rocks, "opened": opened, "clutter": clutter,
+		"field_ready": field_ready}
 
 
 func deserialize(d: Dictionary) -> void:
 	tiles = d.get("tiles", {}).duplicate(true)
-	opened = {"beds": true}
+	opened = {"beds": true, "field_nw": true, "field_ne": true, "field_s": true}
 	for plot in d.get("opened", {}):
 		if PLOTS.has(str(plot)):
 			opened[str(plot)] = true
@@ -466,6 +578,14 @@ func deserialize(d: Dictionary) -> void:
 		for rock in saved_rocks[map_id]:
 			list.append({"x": int(rock["x"]), "y": int(rock["y"]), "hp": int(rock["hp"])})
 		rocks[map_id] = list
+	clutter.clear()
+	field_ready = bool(d.get("field_ready", false))
+	var saved_clutter: Dictionary = d.get("clutter", {})
+	for key in saved_clutter:
+		clutter[str(key)] = {"k": str(saved_clutter[key]["k"]), "hp": int(saved_clutter[key]["hp"])}
+	# A save from before the field existed gets it overgrown.
+	if not d.has("field_ready"):
+		scatter_field()
 	var saved_peat: Dictionary = d.get("peat_dug", {})
 	for key in saved_peat:
 		peat_dug[str(key)] = int(saved_peat[key])

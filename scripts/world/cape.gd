@@ -37,7 +37,7 @@ func _ready() -> void:
 		if Sea.towing:
 			var honour := Sea.finish_tow()
 			call_deferred("_tow_hint", honour)
-		for plot_id in ["greenhouse_small", "greenhouse"]:
+		for plot_id in ["greenhouse_small", "greenhouse", "field_nw", "field_ne", "field_s"]:
 			var house := preload("res://scripts/world/garden.gd").new()
 			house.name = "Garden_" + plot_id
 			house.plot = plot_id

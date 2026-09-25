@@ -573,7 +573,20 @@
       360
     ],
     "salt_shore_tiles": 12,
-    "salt_chance": 0.25
+    "salt_chance": 0.25,
+    "shore_y": 864,
+    "field": {
+      "clutter": {
+        "weed": 0.45,
+        "rock": 0.15,
+        "snag": 0.1
+      },
+      "hp": {
+        "weed": 1,
+        "rock": 2,
+        "snag": 2
+      }
+    }
   },
   "deep": {
     "size": [
