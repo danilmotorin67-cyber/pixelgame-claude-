@@ -77,6 +77,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		Graveyard.deliver_replies(Clock.day_index)
 		Relationships.night_letters()
 		Rescue.guests_night()
+		Spyglass.night()
 		Crafting.recipe_letters()
 		Mail.sunday_gazette()
 		report["mail"] = Mail.unread())

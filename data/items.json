@@ -1320,7 +1320,8 @@
     "desc": "item.spyglass.desc",
     "category": "tool",
     "price": 0,
-    "stack": 1
+    "stack": 1,
+    "use": "spyglass"
   },
   {
     "id": "stone",

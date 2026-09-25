@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -614,3 +614,56 @@ func _check_sea_and_gulls() -> void:
 		for t in 10:
 			world.step(0.05)
 		_check(str(third["carry"]) == "", "no food in hand, nothing to snatch")
+
+
+# 27.4: fifteen birds and twenty ships through the spyglass (hold 2 s); Olaf's archive; 5.1 the key under the cat.
+func _check_spyglass() -> void:
+	_fresh()
+	_check(Spyglass.total("birds") == 15 and Spyglass.total("ships") == 20, "15 birds and 20 ships")
+	_goto(3, 12)
+	Weather.current = "clear"
+	var sight := Spyglass.targets("cape")
+	var gull := {}
+	for t in sight:
+		if str(t["id"]) == "gull":
+			gull = t
+	_check(not gull.is_empty(), "the mail steamer Chayka passes the cape by day")
+	_check(not Spyglass.observe(gull, 2.5), "no glass, no record")
+	Inventory.add("spyglass", 1)
+	_check(not Spyglass.observe(gull, 1.0), "a glance is not enough")
+	_check(Spyglass.observe(gull, 2.0) and Collections.has("ships", "gull") and not Spyglass.observe(gull, 2.0), "two seconds: noted once")
+	_check(not Spyglass.observe({"kind": "ships", "id": "eleonora"}, 3.0), "only what is in sight")
+	# Birds keep to their shores and seasons.
+	var seen := {}
+	for day in 60:
+		_goto(day, 10)
+		for map_id in ["cape", "bird_cliffs", "seal_shore", "lagoon", "moor", "sea"]:
+			for t in Spyglass.targets(map_id):
+				if str(t["kind"]) == "birds":
+					seen[str(t["id"])] = true
+	_check(seen.has("puffin") and seen.has("herring_gull") and not seen.has("snowy_owl") and not seen.has("snow_bunting"), "spring and summer birds, no winter ones (%d kinds)" % seen.size())
+	_goto(3 * 28 + 5, 10)
+	var winter := {}
+	for day in 20:
+		_goto(3 * 28 + day, 11)
+		for t in Spyglass.targets("moor"):
+			winter[str(t["id"])] = true
+	_check(winter.has("snow_bunting"), "the snow bunting in winter")
+	# Ships of the night pass at dusk on the pilot calendar.
+	var found_traffic := false
+	for day in 20:
+		_goto(day, 19)
+		for t in Spyglass.targets("lh_4"):
+			if str(t["kind"]) == "ships" and str(t["id"]) not in ["gull", "pyostraya", "vigilant"]:
+				found_traffic = true
+	_check(found_traffic, "night traffic is seen from the gallery at dusk")
+	# Olaf's archive for the ships no one can see any more.
+	_goto(Clock.DAYS_PER_YEAR + 5, 8)
+	Relationships.set_hearts("npc_olaf", 10)
+	var letters := Mail.letters.size()
+	_check(Spyglass.night() and Collections.has("ships", "berta") and Collections.has("ships", "kapriz") and Mail.letters.size() == letters + 1, "Olaf's archive fills in the Berta and the Caprice")
+	_check(not Spyglass.night(), "once")
+	# The key under the cat.
+	_check(not Game.flag("house_key"), "the house starts locked")
+	Spots.act(Story.spot("cat_key"), "lift")
+	_check(Game.flag("house_key"), "lifting the cat finds the key")

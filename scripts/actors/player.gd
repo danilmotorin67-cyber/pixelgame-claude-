@@ -221,6 +221,11 @@ func use_selected() -> String:
 			Game.counters["star_amber"] = int(Game.counters.get("star_amber", 0)) + 1
 			energy = minf(energy + 30.0, Game.max_energy())
 			return "Звёздный янтарь тёплый, как ладонь. Сил навсегда стало больше."
+		"spyglass":
+			var hud := get_tree().current_scene.get_node_or_null("HUD") as CanvasLayer
+			if hud:
+				SpyglassView.open(hud)
+			return "Подзорная труба: A/D — цель, держать Пробел две секунды."
 		"calm_tomorrow":
 			if Weather.requested_calm == Clock.day_index + 1:
 				return "Штиль на завтра уже обещан."

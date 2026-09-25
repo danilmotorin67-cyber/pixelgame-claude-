@@ -131,7 +131,12 @@ func interact(player: Player) -> void:
 			else:
 				_hint("Нужна ветошь.")
 		"gallery":
-			InfoPanel.open(_hud(), "Галерея", spyglass_text)
+			InfoPanel.open(_hud(), "Галерея", spyglass_text, [["Смотреть в трубу", func(p: InfoPanel) -> String:
+				if not Spyglass.has_glass():
+					return "Без трубы видно только море."
+				p.close()
+				SpyglassView.open(_hud())
+				return ""]])
 
 
 static func barometer_text() -> String:

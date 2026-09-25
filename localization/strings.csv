@@ -7242,3 +7242,13 @@ mail.rescue_recipe,"%s, из спасённых: «Кок наш, царство
 mail.graveyard_bell,"На рассвете звонил колокол погоста: море вернуло тел — %d (%s). Их нужно забрать с берега.","The graveyard bell rang at dawn: the sea has returned %d (%s). They must be fetched from the shore."
 item.crow_eye.name,Глаз ворона,Raven's Eye
 item.crow_eye.desc,"Чёрный камешек с белой крапинкой. Надень — и на карте видно, где кружат вороны.","A black pebble with a white fleck. Wear it and the map shows where the ravens circle."
+ship.pyostraya.name,Шебека «Пёстрая»,The xebec Pyostraya
+ship.berta.name,Бриг «Святая Берта»,The brig Saint Berta
+ship.icebreaker.name,Ледокол «Упрямый»,The icebreaker Stubborn
+ship.kapriz.name,Яхта «Каприз»,The yacht Caprice
+ship.vigilant.name,Военный шлюп «Бдительный»,The naval sloop Vigilant
+ship.st_elmo.name,Плавучая часовня «Святой Эльм»,The floating chapel Saint Elmo
+ship.eleonora.name,Корабль-призрак «Элеонора»,The ghost ship Eleonora
+ship.neptune_1.name,«Нептун-1»,Neptune-1
+ship.mercy_2.name,«Милосердие II»,Mercy II
+mail.olaf_archive,"Олаф: «Раз уж вы собираете корабли — вот из архива управы то, что вы пропустили: %s. Не благодарите. Ладно, благодарите».","Olaf: ""Since you collect ships — here is what you missed, from the Directorate's archive: %s. Don't thank me. All right, thank me."""
