@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -415,3 +415,38 @@ func _check_graveyard() -> void:
 	back = JSON.parse_string(JSON.stringify(Graveyard.serialize()))
 	Graveyard.deserialize(back)
 	_check(Graveyard.graves.size() == 24, "an extended graveyard survives a load")
+
+
+# 8.3: the Cold from season, rain, blizzard, the sea and the water; clothes, blessings, fire and warm food.
+func _check_cold() -> void:
+	_fresh()
+	_check(is_equal_approx(Cold.gain("cape", "clear", "winter"), 1.0), "winter outdoors: +1 per 10 minutes")
+	_check(is_equal_approx(Cold.gain("cape", "rain", "summer"), 1.0) and is_equal_approx(Cold.gain("cape", "clear", "summer"), 0.0), "rain without a storm jacket: +1")
+	_check(is_equal_approx(Cold.gain("cape", "blizzard", "winter"), 4.0), "a blizzard: +3 more")
+	_check(is_equal_approx(Cold.gain("sea", "storm", "summer"), 4.0) and is_equal_approx(Cold.gain("cape", "storm", "summer"), 1.0), "a storm at sea: +3")
+	_check(is_equal_approx(Cold.gain("deep", "clear", "summer"), 2.0), "underwater without the suit: +2")
+	_check(is_equal_approx(Cold.gain("village_tavern", "blizzard", "winter"), 0.0), "not indoors")
+	Inventory.add("storm_jacket", 1)
+	Game.equip("storm_jacket")
+	_check(is_equal_approx(Cold.gain("cape", "rain", "summer"), 0.0), "the storm jacket keeps the rain out")
+	Game.equipment.clear()
+	Inventory.add("keeper_sweater", 1)
+	Game.equip("keeper_sweater")
+	_check(is_equal_approx(Cold.gain("cape", "clear", "winter"), 0.6), "the sweater: 40% less")
+	Game.equipment.clear()
+	Sea.blessings.append("stuzha")
+	_check(is_equal_approx(Cold.gain("cape", "clear", "winter"), 0.5), "Stuzha's blessing halves it")
+	Sea.blessings.erase("stuzha")
+	Skills.professions["diving"] = ["whale_lungs"]
+	_check(is_equal_approx(Cold.gain("deep", "clear", "summer"), 0.0), "Whale Lungs: no cold underwater")
+	Skills.professions.erase("diving")
+	# Over time: an hour in a blizzard, then the hearth.
+	var cold := Cold.step(0.0, 60, "cape", Vector2(1200, 800), "blizzard", "winter")
+	_check(is_equal_approx(cold, 24.0), "an hour in a blizzard: 24 (%.1f)" % cold)
+	var hearth := Vector2(536, 330)
+	_check(Cold.near_fire("cape", hearth) and is_equal_approx(Cold.step(cold, 20, "cape", hearth, "blizzard", "winter"), 14.0), "the hearth: -5 per 10 minutes")
+	_check(is_equal_approx(Cold.step(cold, 30, "lh_1", Vector2.ZERO, "blizzard", "winter"), 9.0), "a warm room too")
+	_check(is_equal_approx(Cold.step(100.0, 600, "cape", Vector2(1200, 800), "blizzard", "winter"), 100.0), "capped at 100")
+	_check(Cold.is_warm_food("grog") and Cold.is_warm_food("tea") and not Cold.is_warm_food("bread_rye"), "warm food and drink")
+	_check(Cold.shivering(100.0) and not Cold.shivering(99.0), "the Shivers at 100")
+	_check(Game.action_cost("hoe", 60.0) > Game.action_cost("hoe", 10.0), "at 50+ everything costs more")

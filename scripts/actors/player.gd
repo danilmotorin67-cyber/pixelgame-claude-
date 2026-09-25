@@ -193,7 +193,8 @@ func play_tool(kind: String, target: Vector2) -> void:
 	if toward.length() > 4.0:
 		facing = toward.normalized()
 	tool_kind = kind
-	tool_time = TOOL_DURATION * (float(Game.balance("fatigue_tool_time", 1.25)) if is_tired() else 1.0)
+	tool_time = TOOL_DURATION * (float(Game.balance("fatigue_tool_time", 1.25)) if is_tired() else 1.0) \
+		* (1.2 if Cold.shivering(cold) else 1.0)
 	_update_sprite(false)
 	tool_art.queue_redraw()
 
@@ -262,18 +263,17 @@ func eat_selected() -> String:
 		Game.add_buff(buff)
 		if bool(buff.get("warm_now", false)):
 			cold = 0.0
+	if Cold.is_warm_food(id):
+		cold = maxf(0.0, cold - float(Cold.cfg("warm_food_relief", 20)))
 	return id
 
 
-# Winter cold builds outdoors (one point per ten minutes, less with Stuzha's blessing and Martin's ember) and
-# leaves indoors; at 50 and above every action costs a quarter more (8.1).
+# 8.3: Cold builds by the weather, the season and the water, and leaves by the fire (Cold). At 50 and above every
+# action costs a quarter more (8.1); at 100 the Shivers take a point of energy a minute.
 func warm_or_chill(minutes: int) -> void:
-	var map_id := Router.current_map
-	var indoors := map_id.begins_with("lh_") or MapInfo.is_interior(map_id) or map_id == "deep"
-	if Clock.season == "winter" and not indoors:
-		cold = minf(100.0, cold + float(minutes) * 0.1 * Daughters.cold_mult())
-	else:
-		cold = maxf(0.0, cold - float(minutes) * 0.5)
+	cold = Cold.step(cold, minutes, Router.current_map, global_position, Weather.current, Clock.season)
+	if Cold.shivering(cold):
+		energy = maxf(0.0, energy - float(minutes))
 
 
 func spend_raw(amount: float) -> void:

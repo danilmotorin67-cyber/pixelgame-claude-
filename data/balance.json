@@ -964,5 +964,23 @@
     "coffee",
     "salted_herring",
     "old_sea_chart"
-  ]
+  ],
+  "cold": {
+    "thaw": 1.0,
+    "warm_food_relief": 20,
+    "warm_food": [
+      "tea",
+      "heather_tea",
+      "rosehip_tea",
+      "buckthorn_tea",
+      "grog",
+      "ukha",
+      "keeper_soup",
+      "kale_soup",
+      "pumpkin_soup",
+      "sea_kale_soup",
+      "barley_porridge",
+      "steamed_lobster"
+    ]
+  }
 }

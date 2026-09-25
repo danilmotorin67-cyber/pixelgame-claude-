@@ -21,3 +21,5 @@ func _process(delta: float) -> void:
 	if player != null and not is_equal_approx(_last_energy, player.energy):
 		_last_energy = player.energy
 		energy_bar.set_energy(_last_energy, Game.max_energy())
+	if player != null and not is_equal_approx(energy_bar.cold, player.cold):
+		energy_bar.set_cold(player.cold)
