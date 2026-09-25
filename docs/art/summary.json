@@ -1,0 +1,149 @@
+{
+ "groups": {
+  "tiles": {
+   "entries": 66,
+   "images": 66
+  },
+  "buildings": {
+   "entries": 63,
+   "images": 63
+  },
+  "props": {
+   "entries": 39,
+   "images": 100
+  },
+  "graveyard": {
+   "entries": 18,
+   "images": 28
+  },
+  "crops": {
+   "entries": 27,
+   "images": 128
+  },
+  "trees": {
+   "entries": 7,
+   "images": 41
+  },
+  "stations": {
+   "entries": 44,
+   "images": 44
+  },
+  "decor": {
+   "entries": 132,
+   "images": 132
+  },
+  "interiors": {
+   "entries": 36,
+   "images": 47
+  },
+  "characters": {
+   "entries": 42,
+   "images": 274
+  },
+  "spirits": {
+   "entries": 31,
+   "images": 38
+  },
+  "portraits": {
+   "entries": 32,
+   "images": 194
+  },
+  "animals": {
+   "entries": 17,
+   "images": 52
+  },
+  "enemies": {
+   "entries": 24,
+   "images": 63
+  },
+  "sea": {
+   "entries": 15,
+   "images": 67
+  },
+  "spyglass": {
+   "entries": 35,
+   "images": 35
+  },
+  "deep": {
+   "entries": 8,
+   "images": 33
+  },
+  "story": {
+   "entries": 28,
+   "images": 28
+  },
+  "icons": {
+   "entries": 571,
+   "images": 571
+  },
+  "ui": {
+   "entries": 50,
+   "images": 186
+  },
+  "illustrations": {
+   "entries": 11,
+   "images": 96
+  }
+ },
+ "anim_groups": {
+  "hero": {
+   "entries": 60,
+   "dirs": 162
+  },
+  "npcs": {
+   "entries": 93,
+   "dirs": 201
+  },
+  "spirits": {
+   "entries": 34,
+   "dirs": 34
+  },
+  "animals": {
+   "entries": 24,
+   "dirs": 48
+  },
+  "enemies": {
+   "entries": 78,
+   "dirs": 114
+  },
+  "stations": {
+   "entries": 31,
+   "dirs": 31
+  },
+  "environment": {
+   "entries": 40,
+   "dirs": 40
+  },
+  "effects": {
+   "entries": 15,
+   "dirs": 15
+  }
+ },
+ "images": 2286,
+ "animations": 645,
+ "cost_art": 11430,
+ "cost_anim": 12900,
+ "by_priority": {
+  "P1": [
+   114,
+   36
+  ],
+  "P2": [
+   1468,
+   326
+  ],
+  "P3": [
+   560,
+   283
+  ],
+  "P4": [
+   144,
+   0
+  ]
+ },
+ "batch_small_calls": 19,
+ "batch_mid_calls": 18,
+ "single_images": 798,
+ "template_dirs": 284,
+ "custom_dirs": 361
+}
