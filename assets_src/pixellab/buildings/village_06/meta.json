@@ -1,0 +1,13 @@
+{
+ "id": "village_06",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Торговый дом Грима, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "5d899c37-66d0-45a9-8a15-26d31241a86a",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

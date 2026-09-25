@@ -1,0 +1,13 @@
+{
+ "id": "village_19",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Рыбацкий дом 2, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "1c68f5db-5999-4d06-95c6-205bde2f0f78",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

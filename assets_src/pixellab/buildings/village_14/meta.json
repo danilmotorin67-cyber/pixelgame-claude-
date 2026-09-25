@@ -1,0 +1,13 @@
+{
+ "id": "village_14",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Хижина Скау, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "b235be14-98c3-4468-a8fe-1adc8deba372",
+ "generations": 2.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "village_12",
+ "method": "map-objects",
+ "prompt": "northern fishing village building: Дом Гримов, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  128,
+  192
+ ],
+ "view": "high top-down",
+ "object_id": "87ea7b40-9c83-4c80-9dc8-56d0383b1d34",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}
