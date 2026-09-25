@@ -1,0 +1,12 @@
+{
+ "id": "sheep",
+ "method": "create-character-with-4-directions",
+ "prompt": "fluffy cream island sheep with dark face, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "e3ce2e4d-3396-4f43-a20e-5bdb5c5f71da",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

@@ -158,6 +158,11 @@ func _draw() -> void:
 	for e in world.alive():
 		if str(e["kind"]) == "gull_marauder":
 			var p: Vector2 = e["pos"]
+			var t := Time.get_ticks_msec() / 1000.0
+			if CastSprite.draw(self, "gull_fly", "fly", "south", t, p + Vector2(0, 6)):
+				if str(e.get("carry", "")) != "":
+					draw_rect(Rect2(p + Vector2(0, 3), Vector2(3, 2)), Color("#b08f6c"))
+				continue
 			var flap := 2.0 if int(Time.get_ticks_msec() / 150) % 2 == 0 else -1.0
 			draw_rect(Rect2(p + Vector2(-2, -2), Vector2(5, 3)), Color("#eeeeea"))
 			draw_line(p + Vector2(-2, -1), p + Vector2(-7, -1 - flap), Color("#c9c8c2"), 1.0)

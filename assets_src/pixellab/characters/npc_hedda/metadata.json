@@ -1,0 +1,32 @@
+{
+  "group_id": "b0ceb9fc-0c81-4468-a792-07306762c906",
+  "states": [
+    {
+      "character": {
+        "id": "2f190d29-7d02-4c90-9ea1-1c3b0c53b55b",
+        "name": "Idle",
+        "prompt": "woman 31, fishing boat captain, weathered face, yellow oilskin coat, blue knit cap, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 4,
+        "view": "low top-down",
+        "created_at": "2026-09-25T13:09:15.048069+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "west": "Idle/rotations/west.png",
+          "east": "Idle/rotations/east.png",
+          "north": "Idle/rotations/north.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-25T13:10:13.529214"
+}

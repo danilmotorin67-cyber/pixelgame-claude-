@@ -8,6 +8,14 @@ const SIZES := {"chicken": Vector2(8, 7), "duck": Vector2(9, 7), "eider": Vector
 	"goat": Vector2(14, 11), "cow": Vector2(20, 13), "pony": Vector2(18, 14)}
 
 var animal_id: int = 0
+# A little life for the PixelLab sprites: stand, graze or peck, now and then amble a few steps.
+var _home := Vector2.ZERO
+var _target := Vector2.ZERO
+var _state := "idle"
+var _left := 0.0
+var _clock := 0.0
+var _facing := "down"
+var _rng := RandomNumberGenerator.new()
 
 
 func _ready() -> void:
@@ -18,6 +26,35 @@ func _ready() -> void:
 	var collision := CollisionShape2D.new()
 	collision.shape = shape
 	add_child(collision)
+	_home = position
+	_target = position
+	_rng.seed = animal_id * 7919 + 17
+	_left = _rng.randf_range(0.5, 3.0)
+
+
+func _process(delta: float) -> void:
+	_clock += delta
+	_left -= delta
+	if _state == "walk":
+		var d := _target - position
+		if d.length() < 1.0:
+			_state = "idle"
+		else:
+			position += d.normalized() * minf(d.length(), 12.0 * delta)
+			_facing = ("right" if d.x > 0 else "left") if absf(d.x) > absf(d.y) else ("down" if d.y > 0 else "up")
+	if _left <= 0.0 and _state != "walk":
+		var roll := _rng.randf()
+		if roll < 0.35:
+			_state = "walk"
+			_target = _home + Vector2(_rng.randf_range(-18, 18), _rng.randf_range(-10, 10))
+		elif roll < 0.7 and (CastSprite.has_anim(kind(), "graze") or CastSprite.has_anim(kind(), "idle")):
+			_state = "graze" if CastSprite.has_anim(kind(), "graze") else "idle"
+			_facing = "down" if _rng.randf() < 0.5 else "right"
+		else:
+			_state = "rest"
+		_clock = 0.0
+		_left = _rng.randf_range(2.0, 5.0)
+	queue_redraw()
 
 
 func kind() -> String:
@@ -25,6 +62,12 @@ func kind() -> String:
 
 
 func _draw() -> void:
+	if CastSprite.has(kind()):
+		draw_rect(Rect2(-5, -1, 10, 2), Color(0, 0, 0, 0.2))
+		var anim := {"walk": "walk", "graze": "graze", "idle": "idle"}.get(_state, "rot")
+		# Birds peck only facing south; the rest shows the still pose.
+		CastSprite.draw(self, kind(), anim, _facing, _clock)
+		return
 	var size: Vector2 = SIZES.get(kind(), Vector2(10, 8))
 	draw_rect(Rect2(-size / 2.0, size), Color(str(COLORS.get(kind(), "#f0e7cc"))))
 	draw_rect(Rect2(Vector2(size.x / 2.0 - 3, -size.y / 2.0 - 3), Vector2(5, 5)), Color(str(COLORS.get(kind(), "#f0e7cc"))).darkened(0.1))

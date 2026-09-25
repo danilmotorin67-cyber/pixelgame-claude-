@@ -44,10 +44,40 @@ func interact(_player: Player) -> void:
 	queue_redraw()
 
 
+# PixelLab creatures for the living events; false leaves the primitive drawing.
+func _draw_creatures(id: String, bob: float) -> bool:
+	match id:
+		"bird_frenzy":
+			if not CastSprite.has("gull_fly"):
+				return false
+			for i in 5:
+				var at := Vector2.from_angle(_t * 0.8 + i * 1.26) * 16.0 + Vector2(0, -6)
+				CastSprite.draw(self, "gull_fly", "fly", "south", _t + i * 0.3, at, at.x < 0)
+			CastSprite.draw(self, "herring_school", "shimmer", "south", _t, Vector2(0, 14))
+			return true
+		"seals":
+			if not CastSprite.has("seal_swim"):
+				return false
+			CastSprite.draw(self, "seal_swim", "swim", "south", _t, Vector2(-8, 6 + bob))
+			CastSprite.draw(self, "seal_swim", "swim", "south", _t + 0.4, Vector2(9, 9 - bob), true)
+			return true
+		"whales":
+			return CastSprite.draw(self, "whale", "surface", "south", _t * 0.5, Vector2(0, 10))
+		"orcas":
+			if not CastSprite.has("orca"):
+				return false
+			CastSprite.draw(self, "orca", "surface", "south", _t * 0.6, Vector2(-10, 8))
+			CastSprite.draw(self, "orca", "surface", "south", _t * 0.6 + 0.5, Vector2(14, 12))
+			return true
+	return false
+
+
 func _draw() -> void:
 	if bool(entry.get("done", false)) and str(entry["id"]) not in ["seals"]:
 		return
 	var bob := sin(_t * 3.0) * 1.5
+	if _draw_creatures(str(entry["id"]), bob):
+		return
 	match str(entry["id"]):
 		"cargo":
 			draw_rect(Rect2(-6, -5 + bob, 12, 9), Color("#8c6a4e"))

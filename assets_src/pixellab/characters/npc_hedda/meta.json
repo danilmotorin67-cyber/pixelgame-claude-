@@ -1,0 +1,12 @@
+{
+ "id": "npc_hedda",
+ "method": "create-character-with-4-directions",
+ "prompt": "woman 31, fishing boat captain, weathered face, yellow oilskin coat, blue knit cap, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "2f190d29-7d02-4c90-9ea1-1c3b0c53b55b",
+ "generations": 5.0,
+ "date": "2026-09-25"
+}

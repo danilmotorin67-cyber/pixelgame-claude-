@@ -10,6 +10,7 @@ var child: bool = false
 var facing: String = "down"
 var anim: String = ""
 var _walk: float = 0.0
+var _clock: float = 0.0
 var _moving: bool = false
 var _label: Label
 
@@ -34,7 +35,7 @@ func setup(id: String) -> void:
 	_label.add_theme_color_override("font_color", Color("#f0e7cc"))
 	_label.add_theme_color_override("font_outline_color", Color("#121a26"))
 	_label.add_theme_constant_override("outline_size", 2)
-	_label.position = Vector2(-30, -30)
+	_label.position = Vector2(-30, -40 if CastSprite.has(id) else -30)
 	_label.size = Vector2(60, 10)
 	_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_label.visible = false
@@ -69,12 +70,16 @@ func _process(delta: float) -> void:
 	else:
 		facing = str(s.get("face", facing))
 	anim = str(s.get("anim", ""))
+	_clock += delta
 	var layer := get_parent() as NpcLayer
 	_label.visible = layer != null and layer.nearest == self
 	queue_redraw()
 
 
 func _draw() -> void:
+	if CastSprite.has(npc_id):
+		_draw_sprite()
+		return
 	var skin := Color(str(look.get("skin", "#e0c0a0")))
 	var hair := Color(str(look.get("hair", "#4a3a2a")))
 	var coat := Color(str(look.get("coat", "#4a5a6a")))
@@ -112,6 +117,20 @@ func _draw() -> void:
 	elif anim in ["fish"]:
 		draw_line(Vector2(5, -8), Vector2(12, -20), Color("#6b4a32"), 1.0)
 	draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
+
+
+# PixelLab sprite: walking while moving, the signature action while busy at the
+# schedule spot, breathing otherwise.
+func _draw_sprite() -> void:
+	draw_rect(Rect2(-6, -1, 12, 3), Color(0, 0, 0, 0.22))
+	var state := "idle"
+	var dir := facing
+	if _moving:
+		state = "walk"
+	elif anim != "" and CastSprite.has_anim(npc_id, "work"):
+		state = "work"
+		dir = "down"
+	CastSprite.draw(self, npc_id, state, dir, _walk if _moving else _clock)
 
 
 const EMOTES := {"happy": "♪", "love": "♥", "surprise": "!", "question": "?", "sad": "…", "angry": "#"}

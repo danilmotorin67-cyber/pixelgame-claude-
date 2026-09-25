@@ -23,19 +23,28 @@ PALETTE = ["0b0e14", "121a26", "1b2b3c", "24405a", "2f5a76", "3f7f8f", "6fb0b3",
 def request(method, path, body=None, raw=False):
     data = json.dumps(body).encode() if body is not None else None
     req = urllib.request.Request(API + path, data=data, method=method, headers={"Content-Type": "application/json"})
-    for attempt in range(4):
+    busy = 0
+    attempt = 0
+    while attempt < 4:
         try:
             with urllib.request.urlopen(req, timeout=120) as r:
                 content = r.read()
                 return content if raw else json.loads(content)
         except urllib.error.HTTPError as e:
             msg = e.read().decode(errors="replace")
-            if e.code >= 500 and attempt < 3:
+            # 429: all concurrent job slots are taken; wait for running jobs rather than fail.
+            if e.code == 429 and "concurrent" in msg and busy < 120:
+                busy += 1
+                time.sleep(15)
+                continue
+            attempt += 1
+            if e.code >= 500 and attempt < 4:
                 time.sleep(2 ** attempt * 2)
                 continue
             raise RuntimeError(f"{method} {path}: {e.code} {msg[:500]}")
         except urllib.error.URLError:
-            if attempt == 3:
+            attempt += 1
+            if attempt == 4:
                 raise
             time.sleep(2 ** attempt * 2)
 

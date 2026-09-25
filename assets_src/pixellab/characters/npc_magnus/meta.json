@@ -1,0 +1,12 @@
+{
+ "id": "npc_magnus",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 38, village doctor, ex-navy surgeon, trim dark beard, long dark coat, black medical bag, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "d3f5c351-89c2-4def-b8f1-e113940ab746",
+ "generations": 2.0,
+ "date": "2026-09-25"
+}

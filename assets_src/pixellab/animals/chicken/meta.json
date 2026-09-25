@@ -1,0 +1,35 @@
+{
+ "id": "chicken",
+ "method": "create-character-v3",
+ "prompt": "small brown speckled hen, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  32,
+  32
+ ],
+ "character_id": "ab403d8a-3e69-4171-8be4-ab7f9fa227cd",
+ "generations": 13.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk": {
+   "generations": 6.0,
+   "group": "5dffd0f3-7e04-4dab-a58b-01197f42899b",
+   "action_description": "waddling walk",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ],
+   "frame_count": 6
+  },
+  "idle": {
+   "generations": 0.0,
+   "group": "060fa582-6c6a-43da-9d8c-c349d9e22f80",
+   "action_description": "pecking at the ground",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  }
+ }
+}

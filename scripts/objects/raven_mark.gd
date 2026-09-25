@@ -17,5 +17,8 @@ func _draw() -> void:
 	for i in 3:
 		var a := t * 1.6 + float(i) * TAU / 3.0
 		var p := Vector2(cos(a) * 12.0, -22.0 + sin(a) * 4.0)
+		# Flying towards -sin(a): the sprite faces its direction of travel.
+		if CastSprite.draw(self, "raven_fly", "fly", "south", t + float(i) * 0.25, p + Vector2(0, 6), sin(a) > 0.0):
+			continue
 		draw_rect(Rect2(p + Vector2(-3, 0), Vector2(6, 1)), Color("#1b1b22"))
 		draw_rect(Rect2(p + Vector2(-1, -1), Vector2(2, 2)), Color("#1b1b22"))

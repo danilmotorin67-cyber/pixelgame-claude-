@@ -1,0 +1,12 @@
+{
+ "id": "npc_einar",
+ "method": "create-character-with-4-directions",
+ "prompt": "broad man 29, blacksmith, leather apron, rolled sleeves, soot on face, short dark hair, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "17ac994a-e8a5-44b7-9c5f-1cc2fadce715",
+ "generations": 3.0,
+ "date": "2026-09-25"
+}

@@ -6,6 +6,12 @@
 - Buildings are cropped to their visible pixels and saved to assets/sprites/buildings/<id>.png;
   assets/sprites/buildings/index.json keeps each sprite's size and the offset of the crop.
 
+- Characters and animals become a sprite sheet assets/sprites/cast/<id>.png (one row per
+  animation and direction, frames centred) and <id>.json: {"frame": [w, h], "foot": y of the lowest opaque
+  pixel, "anims": {name: {direction: [row, frames]}}}. Animation names are normalised to
+  walk, idle, work, graze, sleep; "rot" holds the still rotations. Single-direction critters
+  (sea life, flying birds) get the direction "south".
+
 Run: python3 tools/build_art.py"""
 import os, json, glob
 from PIL import Image
@@ -59,5 +65,63 @@ def build_buildings():
     return len(index)
 
 
+CAST_OUT = "assets/sprites/cast"
+NAMES = {"walking": "walk", "walk-6-frames": "walk", "walk-8-frames": "walk", "walk-4-frames": "walk",
+         "animating": "idle", "breathing-idle": "idle"}
+
+
+def _pack(aid, strips):
+    """strips: [(anim, direction, [Image])] -> sheet + json."""
+    fw = max(im.width for _, _, ims in strips for im in ims)
+    fh = max(im.height for _, _, ims in strips for im in ims)
+    cols = max(len(ims) for _, _, ims in strips)
+    sheet = Image.new("RGBA", (fw * cols, fh * len(strips)))
+    anims, foot = {}, 0
+    for row, (anim, direction, ims) in enumerate(strips):
+        for col, im in enumerate(ims):
+            x, y = col * fw + (fw - im.width) // 2, row * fh + (fh - im.height) // 2
+            sheet.paste(im, (x, y))
+            box = im.getbbox()
+            if box and anim == "rot":
+                foot = max(foot, box[3] + (fh - im.height) // 2)
+        anims.setdefault(anim, {})[direction] = [row, len(ims)]
+    sheet.save(os.path.join(CAST_OUT, aid + ".png"))
+    with open(os.path.join(CAST_OUT, aid + ".json"), "w") as f:
+        json.dump({"frame": [fw, fh], "foot": foot or fh, "anims": anims}, f, indent=1, sort_keys=True)
+
+
+def build_cast():
+    os.makedirs(CAST_OUT, exist_ok=True)
+    count = 0
+    for group in ("characters", "animals"):
+        for folder in sorted(glob.glob(os.path.join(SRC, group, "*"))):
+            aid = os.path.basename(folder)
+            strips = []
+            meta_path = os.path.join(folder, "metadata.json")
+            if os.path.exists(meta_path):
+                frames = json.load(open(meta_path))["states"][0]["frames"]
+                load = lambda rel: Image.open(os.path.join(folder, rel)).convert("RGBA")
+                for d in ("south", "east", "north", "west"):
+                    if d in frames["rotations"]:
+                        strips.append(("rot", d, [load(frames["rotations"][d])]))
+                for name, dirs in sorted(frames.get("animations", {}).items()):
+                    for d in ("south", "east", "north", "west"):
+                        if d in dirs:
+                            strips.append((NAMES.get(name, name), d, [load(rel) for rel in dirs[d]]))
+            else:
+                still = os.path.join(folder, aid + ".png")
+                if not os.path.exists(still):
+                    continue
+                strips.append(("rot", "south", [Image.open(still).convert("RGBA")]))
+                for anim in sorted(glob.glob(os.path.join(folder, "*", "frame_000.png"))):
+                    d = os.path.dirname(anim)
+                    strips.append((os.path.basename(d), "south",
+                                   [Image.open(f).convert("RGBA") for f in sorted(glob.glob(os.path.join(d, "frame_*.png")))]))
+            if strips:
+                _pack(aid, strips)
+                count += 1
+    return count
+
+
 if __name__ == "__main__":
-    print("tilesets", build_tilesets(), "buildings", build_buildings())
+    print("tilesets", build_tilesets(), "buildings", build_buildings(), "cast", build_cast())

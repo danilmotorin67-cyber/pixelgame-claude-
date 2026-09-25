@@ -1,0 +1,25 @@
+{
+ "id": "npc_liv",
+ "method": "create-character-with-4-directions",
+ "prompt": "young woman 26, naturalist, long ginger braid, green field coat, binoculars on a strap, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "154ae405-0529-4a3d-80f1-16dd18f07639",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 14.0,
+   "group": "94604b80-67fe-451d-ae9a-313ea413c201",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

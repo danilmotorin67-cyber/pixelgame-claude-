@@ -1,0 +1,25 @@
+{
+ "id": "npc_ingrid",
+ "method": "create-character-with-4-directions",
+ "prompt": "woman 27, village teacher, neat blonde hair bun, grey wool dress, holding books, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "9918fcab-8564-4315-b935-662b2b29826b",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 11.0,
+   "group": "863229f4-c7bf-4a32-8718-b705828f4b61",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}
