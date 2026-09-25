@@ -143,6 +143,14 @@ func _hint(message: String) -> void:
 		hint.text = message
 
 
+static func soil_tile(bed: Dictionary) -> String:
+	var wet := bool(bed["watered"])
+	var salt := int(bed["salt"])
+	if salt > 0:
+		return "tile_soil_watered_salt" if wet else ("tile_soil_salt2" if salt >= 2 else "tile_soil_salt1")
+	return "tile_soil_watered" if wet else "tile_soil_tilled"
+
+
 func _draw() -> void:
 	if not Farm.opened.has(plot):
 		return
@@ -165,22 +173,10 @@ func _draw() -> void:
 			if field and bed.is_empty():
 				_draw_wild(at, cell, Farm.clutter_at(cell, plot))
 				continue
-			# Raised bed, furrows and damp glints remain visible around a crop.
-			paint(at, 0, 0, 16, 16, Color("#2f4a30"))
-			paint(at, 1, 2, 14, 12, Color("#6b4a33"))
-			paint(at, 2, 2, 12, 2, Color("#b08f6c"))
-			paint(at, 2, 12, 12, 2, Color("#4a3428"))
-			paint(at, 2, 5, 12, 6, Color("#8c6a4e") if bed.is_empty() else
-				(Color("#4a3428") if bool(bed["watered"]) else Color("#6b4a33")))
-			paint(at, 3, 8, 3, 1, Color("#b08f6c") if bed.is_empty() else Color("#8c6a4e"))
-			paint(at, 10, 6, 2, 1, Color("#b08f6c") if bed.is_empty() else Color("#8c6a4e"))
-			if not bed.is_empty() and bool(bed["watered"]):
-				paint(at, 3, 10, 3, 1, Color("#3f7f8f"))
+			# Untilled ground stays grass; tilled beds use the PixelLab soil tiles.
 			if bed.is_empty():
 				continue
-			# Salt crust: a couple of white grains on Salt 1, more on Salt 2.
-			for n in int(bed["salt"]) * 2:
-				paint(at, 3 + (n * 5) % 10, 3 + (n * 7) % 9, 1, 1, Color("#e8eef0"))
+			draw_texture_rect(WangGround.single(soil_tile(bed)), Rect2(at, Vector2(TILE, TILE)), false)
 			if str(bed["crop"]) != "":
 				var stage := Farm.stage(bed)
 				if bool(bed["ready"]):

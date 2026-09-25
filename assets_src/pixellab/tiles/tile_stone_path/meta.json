@@ -1,6 +1,6 @@
 {
  "id": "tile_stone_path",
  "method": "derived",
- "source": "tiles_grass_cobble_summer full cobble tile",
+ "source": "tiles_grass_cobble_summer full upper tile",
  "generations": 0
 }

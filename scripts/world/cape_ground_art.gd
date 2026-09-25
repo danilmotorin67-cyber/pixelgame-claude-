@@ -1,73 +1,56 @@
 extends Node2D
 
-# Scenery sits behind the player and the interactive garden. All shapes snap to
-# native screen pixels and use the palette from full.md, section 31.2.
-const ROCK := Color("#45464e")
-const MOSS_DARK := Color("#2f4a30")
-const MOSS := Color("#4e6e3a")
-const MOSS_LIGHT := Color("#7a964c")
-const LICHEN := Color("#a9b36a")
-const PATH := Color("#8c6a4e")
-const PATH_LIGHT := Color("#b08f6c")
+# Ground of the cape from the PixelLab tilesets of the current season: grass inside,
+# bare rock round the edge, a sand strip by the water and worn paths between the
+# house, the beacon, the garden gate and the road to the village.
+const W := 90
+const H := 70
+const GRASS := 0
+const ROCK := 1
+const PATH := 2
+const SAND := 3
+const TERRAINS := {GRASS: "tiles_grass_path", ROCK: "tiles_grass_cliff", PATH: "tiles_grass_path", SAND: "tiles_grass_sand"}
+const PATHS := [
+	[Vector2(600, 344), Vector2(640, 292), Vector2(700, 262), Vector2(744, 262)],
+	[Vector2(676, 280), Vector2(697, 300)],
+	[Vector2(592, 348), Vector2(420, 400), Vector2(250, 470), Vector2(40, 488)],
+]
+
+var _corners := PackedInt32Array()
+
+
+func _ready() -> void:
+	_corners = corners()
+	Events.season_changed.connect(func(_s: String) -> void: queue_redraw())
+
+
+static func corners() -> PackedInt32Array:
+	var out := PackedInt32Array()
+	out.resize((W + 1) * (H + 1))
+	for vy in H + 1:
+		for vx in W + 1:
+			var at := Vector2(vx, vy) * WangGround.CELL
+			var t := GRASS
+			if vy >= 56:
+				t = SAND
+			elif vx < 5 or vx > 80 or vy < 5:
+				t = ROCK
+			if t != SAND and _near_path(at):
+				t = PATH
+			out[vy * (W + 1) + vx] = t
+	return out
+
+
+static func _near_path(at: Vector2) -> bool:
+	for line in PATHS:
+		for i in line.size() - 1:
+			if Geometry2D.get_closest_point_to_segment(at, line[i], line[i + 1]).distance_to(at) < 11.0:
+				return true
+	return false
 
 
 func _draw() -> void:
-	draw_rect(Rect2(0, 0, 1440, 1120), ROCK)
-	# Each 16 pixel cell has several deliberate clusters, with no runtime RNG.
-	for ty in range(5, 55):
-		for tx in range(5, 80):
-			var p := Vector2i(tx * 16, ty * 16)
-			var seed := (tx * 73 + ty * 137 + tx * ty * 19) % 29
-			draw_rect(Rect2(p, Vector2i(16, 16)), MOSS)
-			if seed % 5 == 0:
-				_px(p.x + 1, p.y + 2, 5, 2, MOSS_DARK)
-				_px(p.x + 4, p.y + 4, 4, 1, MOSS_DARK)
-				_px(p.x + 2, p.y + 10, 3, 2, MOSS_DARK)
-			if seed % 7 == 0:
-				_px(p.x + 2, p.y + 5, 5, 2, MOSS_LIGHT)
-				_px(p.x + 4, p.y + 3, 1, 4, LICHEN)
-			if seed % 4 == 1:
-				_px(p.x + 11, p.y + 10, 1, 4, MOSS_DARK)
-				_px(p.x + 13, p.y + 8, 1, 4, MOSS_LIGHT)
-			if seed == 8 or seed == 19:
-				_px(p.x + 6, p.y + 10, 4, 2, Color("#9a9ca3"))
-				_px(p.x + 6, p.y + 9, 2, 1, Color("#c9c8c2"))
-			if seed == 3 and (tx + ty) % 3 == 0:
-				_px(p.x + 10, p.y + 6, 2, 2, Color("#a06a9e"))
-				_px(p.x + 11, p.y + 5, 1, 1, Color("#dfe7ea"))
-
-	# A compact worn trail links the house, the beacon and the garden entrance.
-	draw_colored_polygon(PackedVector2Array([
-		Vector2(594, 336), Vector2(608, 336), Vector2(646, 276),
-		Vector2(700, 251), Vector2(742, 257), Vector2(742, 271),
-		Vector2(706, 266), Vector2(655, 289), Vector2(613, 345)
-	]), PATH)
-	for index in range(34):
-		var x := 618 + index * 4
-		var y := 283 - (index / 5) + ((index * 13) % 7)
-		_px(x, y, 3, 1, PATH_LIGHT)
-	for index in range(8):
-		_px(615 + index * 5, 339 - index * 6, 2, 2, PATH_LIGHT)
-
-	# Dense island plants frame the playable space without obscuring crop cells.
-	for i in range(33):
-		var x := 470 + ((i * 59) % 445)
-		var y := 143 + ((i * 103) % 310)
-		if x > 658 and x < 845 and y > 280:
-			continue
-		if x > 558 and x < 650 and y > 245 and y < 341:
-			continue
-		_heather(x, y, i % 3)
-	for i in range(11):
-		var x := 449 + (i * 89) % 490
-		var y := 168 + (i * 71) % 270
-		if x > 552 and x < 847 and y > 230 and y < 417:
-			continue
-		_px(x, y + 4, 11, 2, MOSS_DARK)
-		_px(x + 1, y + 1, 9, 4, Color("#6c6e76"))
-		_px(x + 3, y, 5, 1, Color("#c9c8c2"))
-		_px(x + 8, y + 2, 2, 2, Color("#9a9ca3"))
-
+	WangGround.draw(self, Vector2.ZERO, W, H, _corners, TERRAINS, Clock.season)
 	# A few low fence posts and a gate make the garden legible from above.
 	for x in range(661, 853, 16):
 		if x > 681 and x < 714:
@@ -76,15 +59,6 @@ func _draw() -> void:
 		_px(x + 1, 290, 1, 2, Color("#d8c49a"))
 	_px(659, 296, 24, 2, Color("#b08f6c"))
 	_px(714, 296, 140, 2, Color("#b08f6c"))
-
-
-func _heather(x: int, y: int, variant: int) -> void:
-	_px(x + 1, y + 9, 11, 2, MOSS_DARK)
-	_px(x + 3, y + 5, 8, 5, MOSS)
-	_px(x, y + 7, 5, 3, MOSS_LIGHT)
-	_px(x + 6, y + 2, 2, 5, Color("#6b3f6e"))
-	_px(x + 5, y + 2 + variant, 4, 2, Color("#a06a9e"))
-	_px(x + 9, y + 4, 3, 2, Color("#6b3f6e"))
 
 
 func _px(x: int, y: int, w: int, h: int, color: Color) -> void:

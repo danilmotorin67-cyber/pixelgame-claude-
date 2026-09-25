@@ -2,7 +2,7 @@
 
 Single tiles are no longer drawn as separate pictures (the model always framed them with grass).
 Instead they are taken from the full tiles of Wang tilesets, which tile seamlessly by construction:
-- tilled soil = the all-soil tile of tiles_grass_soil_summer (so it matches the grass-to-soil edges);
+- tilled soil = the all-soil tile of tiles_grass_soil_summer, toned from orange to dark garden brown;
 - watered soil and the salt variants are derived from it locally;
 - the stone path is the full cobble tile (the slab half of tiles_snow_pair came out blue);
 - floors, peat and snow come from two-terrain tilesets made only for their full tiles."""
@@ -108,9 +108,20 @@ def save_single(aid, img, source):
     pl.save_meta(d, {"id": aid, "method": "derived", "source": source, "generations": 0})
 
 
+def earthen(img):
+    """Pulls the orange tileset soil towards a dark garden brown, keeping its pattern."""
+    px = img.load()
+    for y in range(img.height):
+        for x in range(img.width):
+            r, g, b, a = px[x, y]
+            lum = 0.3 * r + 0.59 * g + 0.11 * b
+            px[x, y] = (int(lum * 0.62 + 20), int(lum * 0.46 + 12), int(lum * 0.34 + 8), a)
+    return img
+
+
 def singles():
-    base = full_tile("tiles_grass_soil_summer", "upper")
-    src = "tiles_grass_soil_summer full soil tile"
+    base = earthen(full_tile("tiles_grass_soil_summer", "upper"))
+    src = "tiles_grass_soil_summer full soil tile, toned to dark brown"
     save_single("tile_soil_tilled", base.copy(), src)
     save_single("tile_soil_watered", shade(base.copy(), 0.62, 6), src + ", darkened")
     save_single("tile_soil_salt1", salt(base.copy(), 7, 1), src + ", salt crystals")

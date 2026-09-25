@@ -1,6 +1,6 @@
 {
  "id": "tile_soil_tilled",
  "method": "derived",
- "source": "tiles_grass_soil_summer full soil tile",
+ "source": "tiles_grass_soil_summer full soil tile, toned to dark brown",
  "generations": 0
 }
