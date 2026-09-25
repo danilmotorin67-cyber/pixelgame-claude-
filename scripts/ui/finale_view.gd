@@ -47,6 +47,18 @@ func _draw() -> void:
 	draw_rect(Rect2(Vector2.ZERO, size), Color("#b08f6c"), false, 1.0)
 	if Finale.hold and Finale.hold.in_window():
 		draw_rect(Rect2(size.x - 60, 8, 50, 10), Color("#e8d27a"))
+	if Finale.hold == null:
+		return
+	# The tower's stair on the right: the lamp at the top, Stern's saboteurs climbing towards it.
+	var stair := Rect2(size.x - 34, 24, 20, size.y - 34)
+	draw_rect(stair, Color("#1b2b3c"))
+	for i in 8:
+		draw_rect(Rect2(stair.position.x, stair.position.y + stair.size.y * float(i) / 8.0, stair.size.x, 1), Color("#45464e"))
+	draw_circle(Vector2(stair.position.x + 10, stair.position.y - 6), 5, Color("#ffc85a") if Finale.hold.lit else Color("#45464e"))
+	for s in Finale.hold.saboteurs:
+		var y := stair.end.y - stair.size.y * clampf(float(s["progress"]), 0.0, 1.0)
+		draw_rect(Rect2(stair.position.x + 7, y - 8, 6, 8), Color("#2a2a30"))
+		draw_rect(Rect2(stair.position.x + 8, y - 11, 4, 3), Color("#8a3a2e"))
 
 
 func _input(event: InputEvent) -> void:
