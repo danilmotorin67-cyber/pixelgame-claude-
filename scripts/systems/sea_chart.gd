@@ -67,8 +67,16 @@ static func angle_multiplier(heading: Vector2) -> float:
 	angle = absf(angle)
 	for row in cfg("wind_angles"):
 		if angle < float(row[0]):
-			return float(row[1])
+			# The Son of the Wind (Seafaring 10) sails into the wind at 80% without tacking.
+			return maxf(float(row[1]), 0.8) if Skills.has_profession("wind_son") else float(row[1])
 	return 1.0
+
+
+# The Fog Navigator (Seafaring 10) keeps the whole view in fog and on Hmar Nights; others see half as far.
+static func view_narrowed() -> bool:
+	if Skills.has_profession("fog_navigator"):
+		return false
+	return Weather.current == "fog" or (Weather.hmar_night and (Clock.hour >= 21 or Clock.hour < 5))
 
 
 static func strength_multiplier() -> float:
@@ -91,7 +99,7 @@ static func chunk_key(at: Vector2) -> String:
 
 
 static func reveal(at: Vector2) -> void:
-	var radius := int(cfg("reveal_radius"))
+	var radius := int(cfg("reveal_radius")) / (2 if view_narrowed() else 1)
 	var size := int(cfg("chunk"))
 	for dy in range(-radius, radius + 1, size):
 		for dx in range(-radius, radius + 1, size):

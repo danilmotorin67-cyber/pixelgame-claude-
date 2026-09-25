@@ -6680,6 +6680,17 @@
     ]
   },
   {
+    "id": "crow_eye",
+    "name": "item.crow_eye.name",
+    "desc": "item.crow_eye.desc",
+    "category": "amulet",
+    "price": 0,
+    "stack": 1,
+    "effect": {
+      "raven_sight": 1
+    }
+  },
+  {
     "id": "ion_violin",
     "name": "item.ion_violin.name",
     "desc": "item.ion_violin.desc",

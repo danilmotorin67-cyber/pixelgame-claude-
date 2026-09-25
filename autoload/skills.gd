@@ -81,6 +81,20 @@ func options(skill: String, at_level: int) -> Array:
 	return tree.get("10", {}).get(first, []).duplicate()
 
 
+# The Well of Oblivion (10 000): one skill's professions are forgotten and chosen anew at the next sleep.
+func forget_professions(skill: String) -> bool:
+	if not professions.has(skill) or (professions[skill] as Array).is_empty() or not Economy.pay(10000):
+		return false
+	professions.erase(skill)
+	for i in range(pending.size() - 1, -1, -1):
+		if str(pending[i]["skill"]) == skill:
+			pending.remove_at(i)
+	for at in [5, 10]:
+		if base_level(skill) >= at:
+			pending.append({"skill": skill, "level": at})
+	return true
+
+
 func choose(skill: String, id: String) -> bool:
 	for i in pending.size():
 		var entry: Dictionary = pending[i]

@@ -46,7 +46,13 @@ static func view(s: Dictionary, v: Dictionary) -> Dictionary:
 		"chapel_crypt":
 			actions = [[Loc.t("spot.act.fresco"), "fresco"]]
 		"circle":
-			v["text"] = str(v["text"]) + "\n" + Loc.t("story.circle") % (Daughters.count() + (1 if Daughters.has("hmar") else 0))
+			v["text"] = str(v["text"]) + "\n" + Loc.t("story.circle") % (Daughters.count() + (1 if Daughters.has("hmar") else 0)) \
+				+ "\nВ середине круга — Колодец забвения. Монета на дно, и остров забывает."
+			for skill in Skills.professions:
+				if not (Skills.professions[skill] as Array).is_empty():
+					actions.append(["Забыть профессии: %s (10 000 кр)" % Loc.t(str(Data.by_id("skills", str(skill)).get("name", skill))), "well:" + str(skill)])
+			if Relationships.ex_spouse != "":
+				actions.append(["Забыть развод (30 000 кр)", "well_divorce"])
 		"daughter":
 			actions = _daughter_actions(str(s.get("daughter", "")))
 		"kronvald":
@@ -63,6 +69,11 @@ static func view(s: Dictionary, v: Dictionary) -> Dictionary:
 
 
 static func act(s: Dictionary, action: String, arg: String = "") -> String:
+	if action.begins_with("well:"):
+		return "Колодец принял монету. Выберете заново, когда уснёте." if Skills.forget_professions(action.get_slice(":", 1)) \
+			else "Колодцу нужна монета побольше: 10 000 кр."
+	if action == "well_divorce":
+		return "Остров забыл. Будто и не было — почти." if Relationships.forget_divorce() else "Колодцу нужно 30 000 кр."
 	match action:
 		"sample":
 			if Inventory.count_of("hand_net") <= 0:

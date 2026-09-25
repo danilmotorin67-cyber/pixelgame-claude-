@@ -566,7 +566,7 @@ func deliver_replies(night_index: int) -> void:
 func whisper(b: Dictionary) -> String:
 	if bool(b["whispered"]) or str(b["where"]) != "morgue" or Clock.day_index != int(b["arrived"]) \
 			or Clock.minutes >= 120:
-		return ""
+		return day_voice(b)
 	b["whispered"] = true
 	var story: Dictionary = b.get("whisper", {})
 	if story.has("text"):
@@ -582,10 +582,30 @@ func whisper(b: Dictionary) -> String:
 		var kinds: Array = CLUE_POOLS.keys()
 		var kind: String = kinds[rng.randi_range(0, kinds.size() - 1)]
 		var fake := "%s:%s" % [kind, CLUE_POOLS[kind][rng.randi_range(0, CLUE_POOLS[kind].size() - 1)]]
+		# The Soul Guide (Gravedigging 10) hears the lie in a false whisper.
+		if Skills.has_profession("soul_guide"):
+			return (Loc.t("whisper.says") % clue_text(fake)) + " — ложь, вы это слышите."
 		return Loc.t("whisper.says") % clue_text(fake)
 	var truth: String = pool[rng.randi_range(0, pool.size() - 1)]
 	b["revealed"].append(truth)
 	return Loc.t("whisper.says") % clue_text(truth)
+
+
+# The Soul Guide: by day (8-20) a body in the morgue may "say" one more clue, once.
+func day_voice(b: Dictionary) -> String:
+	if not Skills.has_profession("soul_guide") or bool(b.get("day_voice", false)) or str(b["where"]) != "morgue" \
+			or Clock.hour < 8 or Clock.hour >= 20:
+		return ""
+	var pool: Array = []
+	for clue in b["hidden"] + b["visible"]:
+		if not b["revealed"].has(clue):
+			pool.append(clue)
+	if pool.is_empty():
+		return ""
+	b["day_voice"] = true
+	var truth: String = pool[_rng(53).randi_range(0, pool.size() - 1)]
+	b["revealed"].append(truth)
+	return "Днём тело говорит тише, но вы слышите: " + clue_text(truth)
 
 
 static func clue_text(clue: String) -> String:
@@ -865,9 +885,12 @@ func lay_ghost(ghost_id: String) -> String:
 	laid_ghosts.append(ghost_id)
 	Knowledge.add_points("rest", 5)
 	Skills.add_xp("keeping", 50)
+	# The Soul Guide: the laid ghosts give twice as much.
+	var times := 2 if Skills.has_profession("soul_guide") else 1
 	for gift in ghost.get("gift", []):
-		if Inventory.add(str(gift[0]), int(gift[1])) != int(gift[1]):
-			Mail.send("mail.ghost_gift", [], 0, [gift])
+		var n := int(gift[1]) * times
+		if Inventory.add(str(gift[0]), n) != n:
+			Mail.send("mail.ghost_gift", [], 0, [[str(gift[0]), n]])
 	if ghost_id == "ghost_ulrika":
 		if Game.flag("keeper_word"):
 			Knowledge.add_points("rest", 20)
@@ -983,7 +1006,7 @@ func weekly_ghost_gift() -> bool:
 	var ghost := Data.by_id("ghosts", str(laid_ghosts[rng.randi_range(0, laid_ghosts.size() - 1)]))
 	var gifts: Array = ghost.get("gift", [])
 	var gift: Array = gifts[0] if not gifts.is_empty() else ["sea_glass", 1]
-	Mail.send("mail.ghost_gift", [], 0, [[str(gift[0]), 1]])
+	Mail.send("mail.ghost_gift", [], 0, [[str(gift[0]), 2 if Skills.has_profession("soul_guide") else 1]])
 	return true
 
 

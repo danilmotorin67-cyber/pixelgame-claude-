@@ -29,6 +29,10 @@ func rebuild() -> void:
 	for g in Sea.gear:
 		if str(g["map"]) == map_id:
 			_feature(str(g["kind"]), g, Vector2(float(g["x"]), float(g["y"])))
+	for mark in Farm.raven_marks.get(map_id, []):
+		var node := RavenMark.new()
+		node.position = Vector2(int(mark["x"]) * TILE + 8, int(mark["y"]) * TILE + 8)
+		add_child(node)
 	if map_id == "wreck_bay":
 		for i in Crafting.HULLS.size():
 			if Crafting.hull_standing(i):

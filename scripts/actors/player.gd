@@ -144,7 +144,8 @@ func _boat_physics(delta: float) -> void:
 			_towed()
 			return
 		_say("Удар о камни! Корпус %d%%." % int(Sea.hull))
-	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") and not Daughters.storm_hull_safe():
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") and not Daughters.storm_hull_safe() \
+			and not Skills.has_profession("wind_son"):
 		_storm_clock += delta
 		if _storm_clock >= float(SeaChart.cfg("storm_damage_every")):
 			_storm_clock = 0.0
@@ -298,6 +299,21 @@ func _gather(at: Vector2) -> bool:
 	if global_position.distance_to(at) > 48.0:
 		return false
 	var id := Inventory.selected_id()
+	if id in ["tool_hoe", "tool_shovel"]:
+		var mark := Farm.raven_mark_at(Router.current_map, at)
+		if not mark.is_empty():
+			if energy <= 0.0:
+				_say("Нужен отдых, сил на работу нет.")
+				return true
+			var got := Farm.dig_raven_mark(Router.current_map, mark)
+			spend_energy("shovel" if id == "tool_shovel" else "hoe")
+			play_tool("hoe", at)
+			var pickups := get_tree().current_scene.get_node_or_null("Pickups") as Pickups
+			if pickups:
+				pickups.rebuild()
+			_say("Вороны не зря кружили: %s." % ("старые монеты, %d кр" % int(got["money"]) if got.has("money")
+				else "%s ×%d" % [Crafting.item_name(str(got["item"])), int(got["count"])]))
+			return true
 	if id == "tool_can":
 		if Farm.fresh_water_at(Router.current_map, at):
 			Farm.fill_can()

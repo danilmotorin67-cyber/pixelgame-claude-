@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	var camera := get_viewport().get_camera_2d()
 	if camera:
 		global_position = camera.get_screen_center_position() - get_viewport_rect().size / 2.0
-	if Weather.current in ["rain", "storm", "snow", "blizzard", "fog"]:
+	if Weather.current in ["rain", "storm", "snow", "blizzard", "fog"] or Router.current_map == "sea":
 		if not Clock.paused:
 			elapsed += delta
 		queue_redraw()
@@ -19,6 +19,15 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
 	var kind := Weather.current
+	# At sea, fog and the Hmar close in around the boat (not for the Fog Navigator).
+	if Router.current_map == "sea" and SeaChart.view_narrowed():
+		var mist := Color(0.62, 0.66, 0.68) if kind == "fog" else Color(0.16, 0.14, 0.2)
+		for y in range(0, 270, 10):
+			for x in range(0, 480, 10):
+				var d := Vector2(x + 5, y + 5).distance_to(Vector2(240, 135))
+				var a := clampf((d - 70.0) / 60.0, 0.0, 0.85)
+				if a > 0.0:
+					draw_rect(Rect2(x, y, 10, 10), Color(mist, a))
 	if kind == "fog":
 		for band in 4:
 			draw_rect(Rect2(0, 40 + band * 57, 480, 8), Color(0.79, 0.83, 0.81, 0.12))

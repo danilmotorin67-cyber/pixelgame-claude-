@@ -16,6 +16,9 @@ var dating: Array = []
 var married_to: String = ""
 var engaged_to: String = ""
 var wedding_day: int = -1
+# 22.2: after a divorce the ex is cold for 28 days (no friendship gained).
+var ex_spouse: String = ""
+var ex_cold_until: int = -1
 var hearts: Dictionary: # read-only view kept for old callers
 	get:
 		var out := {}
@@ -34,6 +37,8 @@ func reset() -> void:
 	married_to = ""
 	engaged_to = ""
 	wedding_day = -1
+	ex_spouse = ""
+	ex_cold_until = -1
 
 
 func hearts_of(npc: String) -> int:
@@ -54,6 +59,8 @@ func cap(npc: String) -> int:
 func add_friendship(npc: String, pts: int) -> void:
 	var freeze := int(Data.by_id("npcs", npc).get("freeze_after_act", 0))
 	if freeze > 0 and Dialogue.story_act() > freeze:
+		return
+	if pts > 0 and is_cold(npc):
 		return
 	var before := hearts_of(npc)
 	points[npc] = clampi(int(points.get(npc, 0)) + pts, 0, cap(npc) * HEART)
@@ -243,10 +250,38 @@ func night_letters() -> int:
 	return sent
 
 
+func is_cold(npc: String) -> bool:
+	return npc != "" and npc == ex_spouse and Clock.day_index < ex_cold_until
+
+
+# At the Pilot Directorate, 50 crowns ("We do not judge here. We only stamp."). The ex drops to 2 hearts.
+func divorce() -> bool:
+	if married_to == "" or not Economy.pay(50):
+		return false
+	ex_spouse = married_to
+	married_to = ""
+	ex_cold_until = Clock.day_index + 28
+	points[ex_spouse] = mini(int(points.get(ex_spouse, 0)), 2 * HEART)
+	Game.set_flag("divorced")
+	Events.quest_event.emit("divorced", ex_spouse)
+	return true
+
+
+# The Well of Oblivion (30 000): the island forgets the divorce; the ex is back at 6 hearts.
+func forget_divorce() -> bool:
+	if ex_spouse == "" or not Economy.pay(30000):
+		return false
+	points[ex_spouse] = maxi(int(points.get(ex_spouse, 0)), 6 * HEART)
+	ex_cold_until = -1
+	ex_spouse = ""
+	Game.set_flag("divorced", false)
+	return true
+
+
 func serialize() -> Dictionary:
 	return {"points": points, "talked_today": talked_today, "gifted_today": gifted_today, "gifts_week": gifts_week,
 		"birthday_gift": birthday_gift, "dating": dating, "married_to": married_to, "engaged_to": engaged_to,
-		"wedding_day": wedding_day}
+		"wedding_day": wedding_day, "ex_spouse": ex_spouse, "ex_cold_until": ex_cold_until}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -265,3 +300,5 @@ func deserialize(d: Dictionary) -> void:
 	married_to = str(d.get("married_to", ""))
 	engaged_to = str(d.get("engaged_to", ""))
 	wedding_day = int(d.get("wedding_day", -1))
+	ex_spouse = str(d.get("ex_spouse", ""))
+	ex_cold_until = int(d.get("ex_cold_until", -1))

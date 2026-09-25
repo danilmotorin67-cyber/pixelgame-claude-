@@ -60,3 +60,27 @@ func _draw() -> void:
 		draw_circle(origin + boat_at * scale, 3.0, Color("#ffc85a"))
 	draw_string(ThemeDB.fallback_font, Vector2(10, 14), "Морская карта · M — закрыть", HORIZONTAL_ALIGNMENT_LEFT, -1, 9,
 		Color("#2a2a30"))
+	var sight := raven_lines()
+	for i in sight.size():
+		draw_string(ThemeDB.fallback_font, Vector2(14, size.y - 22 + i * 10), str(sight[i]), HORIZONTAL_ALIGNMENT_LEFT,
+			size.x - 28, 8, Color("#1b1b22"))
+
+
+# 25 (Foraging 10) / the Raven's Eye charm: today's raven marks and the bottles on the beaches.
+static func raven_lines() -> Array:
+	if not Farm.raven_sight():
+		return []
+	var marks: Array = []
+	for map_id in Farm.raven_marks:
+		var n: int = (Farm.raven_marks[map_id] as Array).size()
+		if n > 0:
+			marks.append("%s ×%d" % [str(MapInfo.region(map_id).get("title", map_id)), n])
+	var bottles: Array = []
+	for map_id in Sea.gifts:
+		for gift in Sea.gifts[map_id]:
+			if str(gift.get("item", "")) == "message_bottle":
+				var title := str(MapInfo.region(map_id).get("title", map_id)) if map_id != "cape" else "мыс"
+				if title not in bottles:
+					bottles.append(title)
+	return ["Вороньи метки: " + (", ".join(marks) if not marks.is_empty() else "нет"),
+		"Бутылки на берегу: " + (", ".join(bottles) if not bottles.is_empty() else "нет")]

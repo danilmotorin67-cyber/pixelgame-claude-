@@ -491,7 +491,7 @@ func can_sail(zone: int = 1) -> String:
 		return "no_boat"
 	if zone > int(SeaChart.boat_info().get("zones", 1)):
 		return "zone"
-	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") \
+	if Weather.current in ["storm", "blizzard"] and not Game.flag("storm_sails") and not Skills.has_profession("wind_son") \
 			and not (Inventory.count_of("storm_sails") > 0 and bool(SeaChart.boat_info().get("storm_ok_with_sails", false) or boat == "sloop")):
 		return "storm"
 	return ""

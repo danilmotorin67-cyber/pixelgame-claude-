@@ -36,6 +36,8 @@ const CHARGE_TILES := [1, 3, 5, 9, 18]
 # Agatha's rain butt by the beds: fresh water before there is a well.
 const RAIN_BUTT := Vector2(656, 300)
 var can_water: int = 40
+# 18.4: ravens circle 2-4 spots a day across the island: map -> [{x, y}] in tiles.
+var raven_marks: Dictionary = {}
 var tiles: Dictionary = {}
 var last_harvest: Dictionary = {}
 # Seasonal wild finds per map: [{item, x, y}] in tiles.
@@ -180,6 +182,7 @@ func reset() -> void:
 	clutter.clear()
 	field_ready = false
 	can_water = CAN_VOLUME[0]
+	raven_marks.clear()
 	Events.farm_changed.emit()
 
 
@@ -566,12 +569,79 @@ func spawn_wild(index: int) -> void:
 					"x": int(zone[0]) + rng.randi_range(0, int(zone[2]) - 1),
 					"y": int(zone[1]) + rng.randi_range(0, int(zone[3]) - 1)})
 		wild[map_id] = list
+	spawn_raven_marks(index)
 	# 13.4: hmar-caps come up by themselves on the cape and the graveyard after a Hmar Night.
 	if Weather.last_hmar_day == index - 1:
 		var caps: Array = wild.get("cape", [])
 		for n in rng.randi_range(3, 6) * (3 if Skills.has_profession("hmar_forager") else 1):
 			caps.append({"item": "hmar_mushroom", "x": rng.randi_range(20, 60), "y": rng.randi_range(14, 40)})
 		wild["cape"] = caps
+
+
+# 18.4: each morning 2-4 raven marks over the island's open ground (the forage zones).
+func spawn_raven_marks(index: int) -> void:
+	raven_marks.clear()
+	var zones: Dictionary = Data.tables.get("forage", {}).get("zones", {})
+	if zones.is_empty():
+		return
+	var maps: Array = zones.keys()
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 5413 + index * 211 + 7, 2147483647)
+	for n in rng.randi_range(2, 4):
+		var map_id := str(maps[rng.randi_range(0, maps.size() - 1)])
+		var list: Array = zones[map_id]
+		var zone: Array = list[rng.randi_range(0, list.size() - 1)]
+		var marks: Array = raven_marks.get(map_id, [])
+		marks.append({"x": int(zone[0]) + rng.randi_range(0, int(zone[2]) - 1), "y": int(zone[1]) + rng.randi_range(0, int(zone[3]) - 1)})
+		raven_marks[map_id] = marks
+
+
+func raven_mark_at(map_id: String, at: Vector2) -> Dictionary:
+	for mark in raven_marks.get(map_id, []):
+		if at.distance_to(Vector2(int(mark["x"]) * 16 + 8, int(mark["y"]) * 16 + 8)) <= 20.0:
+			return mark
+	return {}
+
+
+# A hoe or a shovel at a raven mark: an artifact, a bottle, old coins, worms, now and then a raven's feather
+# (and, rarely, the Raven's Eye). The Raven's Eye profession finds artifacts twice as often.
+func dig_raven_mark(map_id: String, mark: Dictionary) -> Dictionary:
+	var list: Array = raven_marks.get(map_id, [])
+	if not list.has(mark):
+		return {}
+	list.erase(mark)
+	var rng := _rng(Vector2i(int(mark["x"]), int(mark["y"])), 1601)
+	var artifact := 0.5 if Skills.has_profession("raven_eye") else 0.25
+	var roll := rng.randf()
+	var got := {}
+	if rng.randf() < 0.02 and Inventory.count_of("crow_eye") == 0 and not Game.equipment.values().has("crow_eye"):
+		got = {"item": "crow_eye", "count": 1}
+	elif roll < artifact:
+		var pool: Array = []
+		for item in Data.all("items"):
+			if str(item.get("category", "")) == "artifact" and int(item.get("price", 0)) > 0:
+				pool.append(str(item["id"]))
+		got = {"item": str(pool[rng.randi_range(0, pool.size() - 1)]), "count": 1}
+	elif roll < artifact + 0.1:
+		got = {"item": "message_bottle", "count": 1}
+	elif roll < artifact + 0.3:
+		got = {"money": rng.randi_range(40, 120)}
+	elif roll < 0.92:
+		got = {"item": "worms", "count": rng.randi_range(3, 6)}
+	else:
+		got = {"item": "raven_feather", "count": 1}
+	if got.has("money"):
+		Economy.add(int(got["money"]))
+	else:
+		Inventory.add(str(got["item"]), int(got["count"]))
+	Skills.add_xp("foraging", 5)
+	Game.add_stat("raven_marks")
+	return got
+
+
+# What the Raven's Eye (profession or charm) shows on the map: today's marks and the bottles on the beaches.
+func raven_sight() -> bool:
+	return Skills.has_profession("raven_eye") or Game.effect("raven_sight") > 0.0
 
 
 func scatter_rocks() -> void:
@@ -640,7 +710,7 @@ func collect_wild(map_id: String, spot: Dictionary) -> bool:
 
 func serialize() -> Dictionary:
 	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug, "rocks": rocks, "opened": opened, "clutter": clutter,
-		"field_ready": field_ready, "can_water": can_water}
+		"field_ready": field_ready, "can_water": can_water, "raven_marks": raven_marks}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -659,6 +729,13 @@ func deserialize(d: Dictionary) -> void:
 		rocks[map_id] = list
 	clutter.clear()
 	can_water = int(d.get("can_water", can_capacity()))
+	raven_marks.clear()
+	var saved_marks: Dictionary = d.get("raven_marks", {})
+	for map_id in saved_marks:
+		var marks: Array = []
+		for m in saved_marks[map_id]:
+			marks.append({"x": int(m["x"]), "y": int(m["y"])})
+		raven_marks[str(map_id)] = marks
 	field_ready = bool(d.get("field_ready", false))
 	var saved_clutter: Dictionary = d.get("clutter", {})
 	for key in saved_clutter:

@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -450,3 +450,102 @@ func _check_cold() -> void:
 	_check(Cold.is_warm_food("grog") and Cold.is_warm_food("tea") and not Cold.is_warm_food("bread_rye"), "warm food and drink")
 	_check(Cold.shivering(100.0) and not Cold.shivering(99.0), "the Shivers at 100")
 	_check(Game.action_cost("hoe", 60.0) > Game.action_cost("hoe", 10.0), "at 50+ everything costs more")
+
+
+# 25: the Quiet Hand, the Son of the Wind, the Fog Navigator, the Rust Baron, the Raven's Eye, the Soul Guide;
+# 18.4 raven marks; 22.2 divorce and the Well of Oblivion.
+func _check_professions() -> void:
+	_fresh()
+	var fish := Data.by_id("fish", "fish_herring")
+	var plain := Fishing.sim_options("rod_agatha", [], fish, 1)
+	Skills.professions["fishing"] = ["angler", "quiet_hand"]
+	var quiet := Fishing.sim_options("rod_agatha", [], fish, 1)
+	_check(float(quiet["green"]) == float(plain["green"]) + 10.0 and bool(quiet["no_snap"]), "the Quiet Hand: green +10, the line holds")
+	var sim := FishingSim.new(fish, quiet)
+	sim.tension = 100.0
+	for n in 120:
+		sim.step(0.05, true)
+	_check(sim.result != "snapped", "a line at full tension does not snap")
+	# The wind: upwind 80%, storms without storm sails.
+	Weather.calm = false
+	var worst := 1.0
+	for deg in range(0, 360, 10):
+		worst = minf(worst, SeaChart.angle_multiplier(Vector2.RIGHT.rotated(deg_to_rad(float(deg)))))
+	_check(worst == 0.0, "into the wind a boat stops")
+	Skills.professions["seafaring"] = ["pilot", "wind_son"]
+	worst = 1.0
+	for deg in range(0, 360, 10):
+		worst = minf(worst, SeaChart.angle_multiplier(Vector2.RIGHT.rotated(deg_to_rad(float(deg)))))
+	_check(is_equal_approx(worst, 0.8), "the Son of the Wind: 80% upwind")
+	Sea.boat = "dinghy"
+	Weather.current = "storm"
+	_check(Sea.can_sail() == "", "the Son of the Wind sails in a storm without storm sails")
+	Skills.professions["seafaring"] = ["pilot"]
+	_check(Sea.can_sail() == "storm", "others need storm sails")
+	# Fog.
+	Weather.current = "fog"
+	Router.current_map = "sea"
+	_check(SeaChart.view_narrowed(), "fog closes in at sea")
+	Skills.professions["seafaring"] = ["pilot", "fog_navigator"]
+	_check(not SeaChart.view_narrowed(), "not for the Fog Navigator")
+	Router.current_map = "cape"
+	Weather.current = "clear"
+	# The Rust Baron's recipe.
+	_check(str(Crafting._recipe("smelt_iron_baron").get("unlock", "")) == "profession:rust_baron", "the Rust Baron smelts scrap 1:1")
+	# Raven marks.
+	Farm.spawn_raven_marks(3)
+	var total := 0
+	for map_id in Farm.raven_marks:
+		total += (Farm.raven_marks[map_id] as Array).size()
+	_check(total >= 2 and total <= 4, "2-4 raven marks a day (%d)" % total)
+	var found := {}
+	for day in 60:
+		Farm.spawn_raven_marks(day)
+		for map_id in Farm.raven_marks.keys():
+			for mark in (Farm.raven_marks[map_id] as Array).duplicate():
+				var at := Vector2(int(mark["x"]) * 16 + 8, int(mark["y"]) * 16 + 8)
+				_check(not Farm.raven_mark_at(map_id, at).is_empty(), "a mark is found where the ravens circle")
+				var got := Farm.dig_raven_mark(map_id, mark)
+				found["money" if got.has("money") else str(got.get("item", ""))] = true
+	_check(found.has("worms") and found.has("money") and found.has("message_bottle"), "worms, old coins, bottles (%s)" % str(found.keys()))
+	_check(SeaChartPanel.raven_lines().is_empty(), "the marks are not on the map for everyone")
+	Skills.professions["foraging"] = ["beachcomber", "raven_eye"]
+	Farm.spawn_raven_marks(99)
+	_check(SeaChartPanel.raven_lines().size() == 2, "the Raven's Eye sees the marks and bottles on the map")
+	Skills.professions.erase("foraging")
+	Inventory.add("crow_eye", 1)
+	Game.equip("crow_eye")
+	_check(Farm.raven_sight(), "so does the Raven's Eye charm")
+	# The Soul Guide.
+	Skills.professions["keeping"] = ["gravedigger", "soul_guide"]
+	var reg := Graveyard._person(Graveyard._rng(5), "schooner", "ship.test")
+	var b := Graveyard.spawn_body(reg, "cape")
+	b["where"] = "morgue"
+	Clock.set_time(12, 0)
+	var said := Graveyard.whisper(b)
+	_check(said.begins_with("Днём") and b["revealed"].size() == 1 and Graveyard.whisper(b) == "", "by day a body tells the Soul Guide one more clue")
+	var count := Inventory.count_of("sea_glass")
+	Graveyard.lay_ghost("ghost_pim")
+	var gift: Array = Data.by_id("ghosts", "ghost_pim").get("gift", [])
+	if not gift.is_empty():
+		_check(Inventory.count_of(str(gift[0][0])) >= int(gift[0][1]) * 2 or not Mail.letters.is_empty(), "ghosts give the Soul Guide twice as much")
+	# Divorce and the Well of Oblivion.
+	Relationships.married_to = "npc_liv"
+	Relationships.set_hearts("npc_liv", 12)
+	Economy.money = 100
+	_check(Relationships.divorce() and Relationships.married_to == "" and Relationships.hearts_of("npc_liv") == 2 and Economy.money == 50, "divorce: 50 crowns, the ex down to 2 hearts")
+	Relationships.add_friendship("npc_liv", 500)
+	_check(Relationships.hearts_of("npc_liv") == 2, "the ex is cold for 28 days")
+	_goto(Clock.day_index + 29)
+	Relationships.add_friendship("npc_liv", 250)
+	_check(Relationships.hearts_of("npc_liv") == 3, "and warms after")
+	Economy.money = 40000
+	_check(Relationships.forget_divorce() and Relationships.hearts_of("npc_liv") == 6 and Economy.money == 10000 and not Game.flag("divorced"), "the Well forgets the divorce: back to 6 hearts")
+	Skills.levels["fishing"] = 10
+	_check(Skills.forget_professions("fishing") and not Skills.has_profession("quiet_hand") and Economy.money == 0, "the Well forgets a skill's professions for 10 000")
+	_check(Skills.pending.size() >= 2, "chosen anew at the next sleep")
+	var view := Spots.view(Story.spot("nine_maidens"), {"title": "", "text": "", "actions": []})
+	_check(str(view["text"]).contains("Колодец"), "the Well stands in the Nine Maidens")
+	var back: Dictionary = JSON.parse_string(JSON.stringify(Relationships.serialize()))
+	Relationships.deserialize(back)
+	_check(Relationships.ex_spouse == "" and Relationships.ex_cold_until == -1, "saved")

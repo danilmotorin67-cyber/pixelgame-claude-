@@ -45,5 +45,11 @@ func interact(_player: Player) -> void:
 	var body := func() -> String:
 		return "Олаф: «Ящики с крушений, письма семьям, бутылки — всё сюда. Реестр пропавших — копия у вас в вахтенной»." \
 			+ "\nОпознанных без письма: %d." % unsent_letters().size()
+	var divorce := func(_panel: InfoPanel) -> String:
+		if Relationships.married_to == "":
+			return "Олаф: «Разводить некого. Это хорошо или плохо — не мне судить»."
+		if not Relationships.divorce():
+			return "Пошлина — 50 кр."
+		return "Олаф ставит штамп: «Мы тут не судим. Мы только штампуем». Месяц вам будут отвечать холодно."
 	InfoPanel.open(get_tree().current_scene.get_node("HUD"), "Лоцманская управа", body,
-		[["Сдать ящики", crates], ["Письма семьям", letters], ["Бутылка №13", bottle]])
+		[["Сдать ящики", crates], ["Письма семьям", letters], ["Бутылка №13", bottle], ["Развод (50 кр)", divorce]])

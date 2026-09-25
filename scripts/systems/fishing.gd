@@ -212,7 +212,9 @@ static func wait_seconds(rod_id: String, bait: String, rng: RandomNumberGenerato
 
 static func sim_options(rod_id: String, tackles: Array, fish: Dictionary, rng_seed: int) -> Dictionary:
 	return {"seed": rng_seed, "level": Skills.level("fishing"), "difficulty": difficulty(fish),
-		"green": float(rod(rod_id).get("green", 0)) + tackle_bonus(tackles, "green", 0.0),
+		"green": float(rod(rod_id).get("green", 0)) + tackle_bonus(tackles, "green", 0.0)
+			+ (10.0 if Skills.has_profession("quiet_hand") else 0.0),
+		"no_snap": Skills.has_profession("quiet_hand"),
 		"reel": float(rod(rod_id).get("reel", 1.0)), "sinking": tackle_bonus(tackles, "sinking", 1.0),
 		"chest": tackle_bonus(tackles, "chest", 1.0), "assist": Settings.fishing_assist}
 

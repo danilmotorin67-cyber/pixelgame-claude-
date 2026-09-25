@@ -18,6 +18,8 @@ var green_high: float = 75.0
 var reel_speed: float = 70.0
 var release_speed: float = 60.0
 var assist: bool = false
+# The Quiet Hand (Fishing 10): the line never snaps.
+var no_snap: bool = false
 var sinking_mult: float = 1.0
 var perfect: bool = true
 var result: String = ""
@@ -42,6 +44,7 @@ func _init(target: Dictionary, options: Dictionary = {}) -> void:
 	if bool(options.get("assist", false)):
 		width *= 2.0
 		assist = true
+	no_snap = bool(options.get("no_snap", false))
 	width = minf(width, 90.0)
 	green_low = 55.0 - width / 2.0
 	green_high = 55.0 + width / 2.0
@@ -112,7 +115,7 @@ func step(dt: float, holding: bool) -> String:
 	if chest_active and not chest_won and tension > 66.0:
 		chest_hold += dt
 		chest_won = chest_hold >= 2.0
-	if tension >= 100.0 and not assist:
+	if tension >= 100.0 and not assist and not no_snap:
 		_over += dt
 		if _over > SNAP_SECONDS:
 			result = "snapped"
