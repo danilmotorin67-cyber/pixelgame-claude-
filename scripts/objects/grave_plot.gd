@@ -84,13 +84,41 @@ func interact(player: Player) -> void:
 	elif bool(g["filled"]) and str(g["marker"]) == "":
 		var selected := Inventory.selected_id()
 		var marker := "mound" if selected == "stone" else selected
-		hint.text = "Знак поставлен. Качество могилы %d." % int(g["quality"]) if Graveyard.place_marker(plot, marker) \
-			else "Выберите на панели крест или камень (10 шт.) и нажмите E."
+		if Graveyard.place_marker(plot, marker):
+			hint.text = "Знак поставлен. Качество могилы %d." % int(g["quality"])
+			if marker == "headstone":
+				_choose_epitaph()
+		else:
+			hint.text = "Выберите на панели крест или камень (10 шт.) и нажмите E."
 	elif str(g["body"]) != "" and Clock.is_night() and Inventory.selected_id() == "tool_shovel":
 		hint.text = "Эксгумация. Честь −10." if Graveyard.exhume(plot) else "Нельзя."
 	else:
 		var b := Graveyard.body(str(g["body"]))
 		var name := str(g["name"]) if str(g["name"]) != "" else "Безымянный"
-		hint.text = ("%s · качество %d" % [name, int(g["quality"])]) if not b.is_empty() or bool(g["old"]) \
+		hint.text = ("%s · качество %d%s" % [name, int(g["quality"]),
+			(" · «%s»" % str(g["epitaph"])) if str(g.get("epitaph", "")) != "" else ""]) if not b.is_empty() or bool(g["old"]) \
 			else "Свободное место. Копать — лопатой (ЛКМ)."
+		if str(g["marker"]) == "headstone" and str(g.get("epitaph", "")) == "":
+			_choose_epitaph()
 	queue_redraw()
+
+
+# 11.5: the headstone waits for its words — serious, warm or ironic (the Book of Epitaphs adds two).
+func _choose_epitaph() -> void:
+	var hud := get_tree().current_scene.get_node("HUD") as CanvasLayer
+	var options := Graveyard.epitaph_options(plot)
+	var body := func() -> String:
+		var lines: Array = ["Что высечь на камне?"]
+		for o in options:
+			lines.append("• " + str(o["text"]))
+		return "\n".join(lines)
+	var names := {"serious": "Строго", "warm": "Тепло", "ironic": "С усмешкой", "sea": "По-морскому", "masterpiece": "Шедевр"}
+	var buttons: Array = []
+	for i in options.size():
+		var index := i
+		buttons.append([str(names.get(str(options[i]["style"]), options[i]["style"])), func(p: InfoPanel) -> String:
+			Graveyard.set_epitaph(plot, index)
+			p.close()
+			queue_redraw()
+			return ""])
+	InfoPanel.open(hud, "Эпитафия", body, buttons)

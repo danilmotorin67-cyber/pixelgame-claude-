@@ -434,8 +434,10 @@ func _check_land() -> void:
 	_fresh()
 	var rng := RandomNumberGenerator.new()
 	rng.seed = 3
+	Graveyard.peace = 60.0
+	_check(LandFoes.spawns("cape", rng).size() == 3, "Peace 60: half of the six come ashore on the cape")
 	Graveyard.peace = 80.0
-	_check(LandFoes.spawns("cape", rng).size() == 6, "six come ashore on the cape")
+	_check(LandFoes.spawns("cape", rng).is_empty(), "Peace 80: quiet nights, none")
 	Graveyard.peace = 40.0
 	_check(LandFoes.spawns("cape", rng).size() == 8, "the restless graveyard (Peace < 60) adds two hmar-things")
 	for i in 5:

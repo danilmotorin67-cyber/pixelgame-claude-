@@ -7239,3 +7239,4 @@ mail.rescue_crew,"Спасательная станция. Команда вых
 mail.rescue_thanks,"%s, спасённый с «%s»: «Смотритель, я вам жизнью обязан. Это немного — но от сердца».","%s, saved from the %s: ""Keeper, I owe you my life. It is not much — but it is from the heart."""
 mail.rescue_story,"%s, из спасённых: «Не знаю, как отблагодарить. Вот, возьмите — и послушайте, что у нас на борту говорили: %s»","%s, one of the saved: ""I do not know how to thank you. Here, take this — and hear what they said aboard: %s"""
 mail.rescue_recipe,"%s, из спасённых: «Кок наш, царство ему, так готовил — теперь и вы сможете: %s». К письму приложен подарок.","%s, one of the saved: ""Our cook, rest him, made it like this — now you can too: %s."" A gift is enclosed."
+mail.graveyard_bell,"На рассвете звонил колокол погоста: море вернуло тел — %d (%s). Их нужно забрать с берега.","The graveyard bell rang at dawn: the sea has returned %d (%s). They must be fetched from the shore."

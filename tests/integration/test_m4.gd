@@ -162,6 +162,9 @@ func _check_q1_1_and_q1_5() -> void:
 	_check(bool(lars["washed"]) and bool(lars["sewn"]) and bool(lars["stitch"]) and Graveyard.preparation(lars) == 20,
 		"washed, sewn with the last stitch: preparation 8 + 10 + 2")
 	panel.press("Обыскать")
+	_check(not bool(lars["searched"]), "no cabinet yet: the things stay on him")
+	Game.set_flag("morgue_cabinet")
+	panel.press("Обыскать")
 	_check(bool(lars["searched"]) and lars["items"].has("knife_initials_le"), "his knife goes to the family box")
 	panel.press("Нести")
 	_check(Graveyard.carried == "body_lars_ek", "carried out again")

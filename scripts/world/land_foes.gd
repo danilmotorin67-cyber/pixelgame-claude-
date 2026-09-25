@@ -34,6 +34,11 @@ static func spawns(map_id: String, rng: RandomNumberGenerator) -> Array:
 		"village":
 			count = 3
 	count = int(round(float(count) * (1.0 - rowan_cut())))
+	# 11.6: Peace 60+ halves the cape's Hmar creatures, 80+ ("Quiet nights") keeps them all away.
+	if map_id == "cape":
+		count = int(round(float(count) * Graveyard.hmar_cape_mult()))
+		if Graveyard.hmar_cape_mult() <= 0.0:
+			return out
 	for n in count:
 		var kind := "drowned" if n % 2 == 0 else "hmarnik"
 		var at := Vector2(rng.randi_range(6, 60) * 16 + 8, (row0 - 2) * 16 + 8)

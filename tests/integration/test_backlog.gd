@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -307,3 +307,111 @@ func _check_rescue() -> void:
 	var back: Dictionary = JSON.parse_string(JSON.stringify(Lighthouse.serialize()))
 	Lighthouse.deserialize(back)
 	_check(Lighthouse.rescue_guests.size() == 3, "the guests are saved")
+
+
+func _bury(b: Dictionary) -> int:
+	for plot in Graveyard.graves.size():
+		var g: Dictionary = Graveyard.graves[plot]
+		if bool(g["old"]) or str(g["body"]) != "" or bool(g["filled"]):
+			continue
+		g["open"] = true
+		Graveyard.carried = str(b["id"])
+		b["where"] = "carried"
+		if Graveyard.lay(plot) and Graveyard.fill(plot):
+			return plot
+	return -1
+
+
+# 11.5/11.6/11.11: beauty of flowers and rowans, the morgue's upgrades, the bell, the Peace effects, epitaphs.
+func _check_graveyard() -> void:
+	_fresh()
+	var inside := Graveyard.block_origin(0) + Vector2(40, 40)
+	var before := Graveyard.beauty()
+	Crafting.placed["cape"].append({"uid": 900, "id": "decor", "item": "armeria", "x": inside.x, "y": inside.y, "queue": []})
+	Crafting.placed["cape"].append({"uid": 901, "id": "decor", "item": "heather", "x": inside.x + 16, "y": inside.y, "queue": []})
+	_check(is_equal_approx(Graveyard.beauty(), before + 1.0), "armeria and heather add 0.5 each")
+	Crafting.placed["cape"].append({"uid": 902, "id": "tree", "tree": "tree_rowan", "grown": true, "x": inside.x + 32, "y": inside.y, "queue": []})
+	_check(is_equal_approx(Graveyard.beauty(), before + 3.0), "a grown rowan adds 2")
+	_check(str(Data.by_id("items", "armeria").get("place", "")) == "decor", "flowers can be planted")
+	# The morgue's upgrades.
+	var reg := Graveyard._person(Graveyard._rng(3), "schooner", "ship.test")
+	var b := Graveyard.spawn_body(reg, "cape")
+	b["where"] = "morgue"
+	b["items"] = ["sea_glass"]
+	_check(not Graveyard.wash(b), "no bucket, no washroom: no washing")
+	_check(Graveyard.search(b, false).is_empty() and not bool(b["searched"]), "no cabinet: the things stay on the body")
+	_check(not Graveyard.build_upgrade("morgue_washroom"), "the washroom needs stone and iron")
+	Inventory.add("stone", 10)
+	Inventory.add("iron_ingot", 2)
+	_check(Graveyard.build_upgrade("morgue_washroom") and Inventory.count_of("stone") == 0 and Graveyard.wash(b), "the washroom washes without a bucket")
+	Inventory.add("boards", 15)
+	_check(Graveyard.build_upgrade("morgue_cabinet") and Graveyard.search(b, false) == ["sea_glass"], "the cabinet keeps the things")
+	Inventory.add("brass", 1)
+	Inventory.add("glass", 1)
+	Inventory.add("boards", 5)
+	_check(Graveyard.build_upgrade("morgue_lamp_table") and Game.flag("morgue_lamp_table"), "the lamp table is built")
+	Inventory.add("bronze", 5)
+	_check(Graveyard.build_upgrade("graveyard_bell") and not Graveyard.build_upgrade("graveyard_bell"), "the bell is cast once")
+	var letters := Mail.letters.size()
+	_check(Graveyard.ring_bell([b["id"]]) and Mail.letters.size() == letters + 1 and not Graveyard.ring_bell([]), "the bell rings when the sea brings someone")
+	# Peace below 20: crops by the graveyard wither now and then; 40-59: quiet sleep; 60+: fewer Hmar creatures.
+	Graveyard.peace = 5.0
+	_check(Graveyard.near_graveyard(Farm.tile_center(Vector2i(0, 0), "field_s"), 160.0) and not Graveyard.near_graveyard(Farm.tile_center(Vector2i(0, 0)), 160.0),
+		"10 tiles around the graveyard: the shore field, not Agatha's beds")
+	for x in 10:
+		for y in 4:
+			var cell := Vector2i(x, y)
+			Farm.clutter.erase(Farm._key(cell, "field_s"))
+			Farm.till(cell, "field_s")
+			Farm.tiles[Farm._key(cell, "field_s")]["crop"] = "crop_turnip"
+			Farm.tiles[Farm._key(cell, "field_s")]["growth"] = 5.0
+	var hits := 0
+	for night in 10:
+		Clock.day_index += 1
+		hits += Graveyard.unrest_night()
+	_check(hits > 0, "unrest withers crops by the graveyard (%d)" % hits)
+	Graveyard.peace = 30.0
+	_check(Graveyard.unrest_night() == 0, "no unrest at 20+")
+	Graveyard.peace = 50.0
+	var quiet := 0
+	for n in 200:
+		if Graveyard.quiet_sleep(n):
+			quiet += 1
+	_check(quiet > 20 and quiet < 60, "quiet sleep about 20%% of mornings (%d/200)" % quiet)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 3
+	var full := LandFoes.spawns("cape", rng).size()
+	Graveyard.peace = 65.0
+	rng.seed = 3
+	var half := LandFoes.spawns("cape", rng).size()
+	Graveyard.peace = 85.0
+	rng.seed = 3
+	_check(half < full and half >= 3 and LandFoes.spawns("cape", rng).is_empty(), "Peace 60+ halves the cape's Hmar, 80+ keeps it away (%d → %d)" % [full, half])
+	Graveyard.laid_ghosts.append("ghost_pim")
+	_goto(7)
+	letters = Mail.letters.size()
+	_check(Graveyard.weekly_ghost_gift() and Mail.letters.size() == letters + 1, "80+: a ghost's gift on Monday")
+	_goto(8)
+	_check(not Graveyard.weekly_ghost_gift(), "once a week")
+	# Epitaphs on a headstone for a named body.
+	b["identified_as"] = str(reg["id"])
+	var plot := _bury(b)
+	Inventory.add("headstone", 1)
+	_check(plot >= 0 and Graveyard.place_marker(plot, "headstone"), "a headstone for a named grave")
+	var options := Graveyard.epitaph_options(plot)
+	_check(options.size() == 3 and str(options[0]["text"]).contains(str(reg["name"])), "three epitaphs from the person's story")
+	Inventory.add("epitaph_book", 1)
+	options = Graveyard.epitaph_options(plot)
+	_check(options.size() == 5 and str(options[4]["style"]) == "masterpiece", "the Book of Epitaphs adds two, one a masterpiece")
+	Game.set_flag("twenty_buried")
+	Game.set_flag("elmo_bell")
+	var peace_before := Graveyard.recalc_peace()
+	_check(Graveyard.set_epitaph(plot, 4) and not Graveyard.set_epitaph(plot, 0), "the words are cut once")
+	_check(peace_before > 0.0 and is_equal_approx(Graveyard.peace, minf(peace_before + 5.0, 100.0)), "a masterpiece: +5 Peace (%.1f → %.1f)" % [peace_before, Graveyard.peace])
+	var back: Dictionary = JSON.parse_string(JSON.stringify(Graveyard.serialize()))
+	Graveyard.deserialize(back)
+	_check(str(Graveyard.graves[plot].get("epitaph", "")) != "" and bool(Graveyard.graves[plot].get("masterpiece", false)), "the epitaph is saved")
+	Graveyard.extend_plots(24)
+	back = JSON.parse_string(JSON.stringify(Graveyard.serialize()))
+	Graveyard.deserialize(back)
+	_check(Graveyard.graves.size() == 24, "an extended graveyard survives a load")

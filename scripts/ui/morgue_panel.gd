@@ -55,6 +55,8 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 		var b: Dictionary = pick.call(panel)
 		if b.is_empty():
 			return "Нет тела."
+		if not Game.flag("morgue_cabinet"):
+			return "Вещи некуда сложить: нужен шкаф и ящик для родных (15 досок, «Улучшения»)."
 		var items := Graveyard.search(b, false)
 		return "Вещи — в ящик для родных: %d." % items.size() if not items.is_empty() else "При нём ничего или уже обыскан."
 	var wash := func(panel: InfoPanel) -> String:
@@ -66,7 +68,7 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 			keeper.spend_energy("examine_body")
 			Clock.pass_time(30)
 			return "Обмыто. Подготовка +8."
-		return "Нужно ведро пресной воды (колонка у дома)."
+		return "Нужно ведро пресной воды (колонка у дома) — или умывальня."
 	var sew := func(panel: InfoPanel) -> String:
 		var b: Dictionary = pick.call(panel)
 		var keeper: Player = player.call()
@@ -113,7 +115,31 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 		return ""
 	return InfoPanel.open(hud, "Покойницкая", body_text, [["Осмотреть", examine], ["Обыскать", search_box],
 		["Обмыть", wash], ["Зашить", sew], ["В гроб", coffin], ["Отпеть", funeral], ["Слушать", listen],
-		["Опознать", board], ["Нести", carry]], lines)
+		["Опознать", board], ["Нести", carry], ["Улучшения", func(panel: InfoPanel) -> String:
+			panel.close()
+			open_upgrades(hud)
+			return ""]], lines)
+
+
+# 11.11: the washroom, the lamp table, the cabinet and the graveyard bell, built from materials on the spot.
+static func open_upgrades(hud: CanvasLayer) -> InfoPanel:
+	var body := func() -> String:
+		var lines: Array = []
+		for id in Graveyard.UPGRADES:
+			var info: Dictionary = Graveyard.UPGRADES[id]
+			var cost: Array = []
+			for pair in info["cost"]:
+				cost.append("%s ×%d" % [Crafting.item_name(str(pair[0])), int(pair[1])])
+			lines.append("%s %s — %s (%s)" % ["✓" if Game.flag(id) else "•", str(info["title"]), str(info["effect"]), ", ".join(cost)])
+		return "\n".join(lines)
+	var buttons: Array = []
+	for key in Graveyard.UPGRADES:
+		var id: String = key
+		buttons.append([str(Graveyard.UPGRADES[id]["title"]), func(_p: InfoPanel) -> String:
+			if Game.flag(id):
+				return "Уже сделано."
+			return "Готово: %s." % str(Graveyard.UPGRADES[id]["title"]) if Graveyard.build_upgrade(id) else "Не хватает материалов."])
+	return InfoPanel.open(hud, "Улучшения покойницкой", body, buttons)
 
 
 static func clues_text(b: Dictionary) -> String:

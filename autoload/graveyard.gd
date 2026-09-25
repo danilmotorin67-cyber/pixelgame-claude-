@@ -209,7 +209,7 @@ func advance_night(storm: bool) -> Array:
 		if place == "morgue" and Buildings.level("ice_house") > 0:
 			place = "icehouse"
 		b["preservation"] = maxf(0.0, float(b["preservation"]) - float(decay.get(place, 10)))
-		if Clock.day_index - int(b["arrived"]) >= int(cfg("restless_days")):
+		if Clock.day_index - int(b["arrived"]) >= int(cfg("restless_days")) - (2 if peace < 20.0 else 0):
 			b["restless"] = true
 	var keep: Array = []
 	for entry in incoming:
@@ -298,7 +298,8 @@ func examine(b: Dictionary, magnifier: bool = false) -> Array:
 		if not b["revealed"].has(clue):
 			b["revealed"].append(clue)
 			found.append(clue)
-	var chance := 0.3 + 0.05 * float(Skills.level("keeping")) + (0.2 if magnifier else 0.0)
+	var chance := 0.3 + 0.05 * float(Skills.level("keeping")) + (0.2 if magnifier else 0.0) \
+		+ (0.1 if Game.flag("morgue_lamp_table") else 0.0)
 	var rng := _rng(41)
 	for clue in b["hidden"]:
 		if rng.randf() < chance and not b["revealed"].has(clue):
@@ -314,6 +315,9 @@ func examine(b: Dictionary, magnifier: bool = false) -> Array:
 func search(b: Dictionary, keep: bool) -> Array:
 	if bool(b["searched"]) or str(b["where"]) != "morgue":
 		return []
+	# 11.11: the family box needs the cabinet; without it the things stay on the body.
+	if not keep and not Game.flag("morgue_cabinet"):
+		return []
 	b["searched"] = true
 	var items: Array = b["items"].duplicate()
 	if keep:
@@ -325,7 +329,10 @@ func search(b: Dictionary, keep: bool) -> Array:
 
 
 func wash(b: Dictionary) -> bool:
-	if bool(b["washed"]) or str(b["where"]) != "morgue" or not Inventory.take("fresh_water", 1):
+	if bool(b["washed"]) or str(b["where"]) != "morgue":
+		return false
+	# 11.11: the washroom has its own water.
+	if not Game.flag("morgue_washroom") and not Inventory.take("fresh_water", 1):
 		return false
 	b["washed"] = true
 	Skills.add_xp("keeping", 5)
@@ -764,6 +771,12 @@ func recalc_peace() -> float:
 	if Game.flag("twins_peace"):
 		bonus += 2.0
 	bonus += minf(10.0, 5.0 * float(Game.counters.get("drowned_rites", 0)))
+	# 11.5: a masterpiece epitaph, +5 once per grave (at most +15).
+	var masterpieces := 0
+	for g in graves:
+		if bool(g.get("masterpiece", false)):
+			masterpieces += 1
+	bonus += minf(15.0, 5.0 * float(masterpieces))
 	penalties = {"unburied": mini(30, 3 * unburied), "shore": 10 * on_shore, "neglect": 2 * neglect,
 		"restless": 5 * restless}
 	var minus := 0.0
@@ -774,7 +787,9 @@ func recalc_peace() -> float:
 
 
 const DECOR_BEAUTY := {"fence_wood": 0.2, "fence_stone": 0.3, "fence_iron": 0.45, "stone_path": 0.1, "bench": 1.0,
-	"memory_lantern": 1.0, "statue_mourning": 3.0}
+	"memory_lantern": 1.0, "statue_mourning": 3.0, "armeria": 0.5, "heather": 0.5}
+# A grown rowan inside the fence (11.6).
+const ROWAN_BEAUTY := 2.0
 
 
 # 11.11/P12: fences, paths, benches, lanterns and the statue within the graveyard, and the small chapel (+5).
@@ -784,6 +799,8 @@ func beauty() -> float:
 	var block := Vector2(float(size[0]) * float(cfg("cols")), float(size[1]) * float(cfg("rows")))
 	for obj in Crafting.placed.get("cape", []):
 		var bonus := float(DECOR_BEAUTY.get(str(obj.get("item", "")), 0.0))
+		if str(obj.get("tree", "")) == "tree_rowan" and bool(obj.get("grown", false)):
+			bonus = ROWAN_BEAUTY
 		if bonus <= 0.0:
 			continue
 		var at := Vector2(float(obj["x"]), float(obj["y"]))
@@ -860,6 +877,152 @@ func lay_ghost(ghost_id: String) -> String:
 	return Loc.t(str(lines["done"]))
 
 
+# ---- 11.11: the morgue's upgrades and the graveyard bell ----
+
+const UPGRADES := {
+	"morgue_washroom": {"title": "Умывальня", "cost": [["stone", 10], ["iron_ingot", 2]], "effect": "обмывание без ведра"},
+	"morgue_lamp_table": {"title": "Стол с лампой", "cost": [["brass", 1], ["glass", 1], ["boards", 5]], "effect": "+10% к скрытым приметам"},
+	"morgue_cabinet": {"title": "Шкаф и ящик для родных", "cost": [["boards", 15]], "effect": "вещи покойных хранятся до опознания"},
+	"graveyard_bell": {"title": "Колокол погоста", "cost": [["bronze", 5]], "effect": "звонит утром, если на берегу тело"},
+}
+
+
+func can_build(id: String) -> bool:
+	if not UPGRADES.has(id) or Game.flag(id):
+		return false
+	for pair in UPGRADES[id]["cost"]:
+		if Inventory.count_of(str(pair[0])) < int(pair[1]):
+			return false
+	return true
+
+
+func build_upgrade(id: String) -> bool:
+	if not can_build(id):
+		return false
+	for pair in UPGRADES[id]["cost"]:
+		Inventory.take(str(pair[0]), int(pair[1]))
+	Game.set_flag(id)
+	Events.quest_event.emit("morgue_upgrade", id)
+	return true
+
+
+# Morning after the bodies came: the bell rings if the sea left anyone on any shore.
+func ring_bell(arrived: Array) -> bool:
+	if not Game.flag("graveyard_bell") or arrived.is_empty():
+		return false
+	var beaches: Array = []
+	for id in arrived:
+		var map_id := str(body(str(id)).get("map", ""))
+		var title := str(MapInfo.region(map_id).get("title", "мыс")) if map_id != "cape" else "мыс"
+		if title not in beaches:
+			beaches.append(title)
+	Mail.send("mail.graveyard_bell", [arrived.size(), ", ".join(beaches)])
+	return true
+
+
+# ---- 11.6: what the Peace does ----
+
+# Unrest (< 20): crops within 10 tiles of the graveyard wither a stage now and then (10% a night each).
+func unrest_night() -> int:
+	if peace >= 20.0:
+		return 0
+	var hit := 0
+	var rng := _rng(61)
+	for key in Farm.tiles:
+		var tile: Dictionary = Farm.tiles[key]
+		var parsed := Farm.parse_key(key)
+		if str(tile["crop"]) == "" or Farm.indoor(parsed[0]) or bool(tile["ready"]):
+			continue
+		if not near_graveyard(Farm.tile_center(parsed[1], parsed[0]), 10.0 * 16.0):
+			continue
+		if rng.randf() >= 0.1:
+			continue
+		var crop := Data.by_id("crops", str(tile["crop"]))
+		var lengths: Array = crop.get("stage_days", [])
+		var boundary := 0.0
+		for i in maxi(Farm.stage(tile) - 1, 0):
+			boundary += float(lengths[i])
+		tile["growth"] = minf(float(tile["growth"]), boundary)
+		hit += 1
+	return hit
+
+
+func near_graveyard(at: Vector2, reach: float) -> bool:
+	var size: Array = cfg("plot")
+	var block := Vector2(float(size[0]) * float(cfg("cols")), float(size[1]) * float(cfg("rows")))
+	for b in block_count():
+		var rect := Rect2(block_origin(b), block).grow(reach)
+		if rect.has_point(at):
+			return true
+	return false
+
+
+# 40-59: a 20% chance of "Quiet sleep" in the morning (+10% energy).
+func quiet_sleep(night_index: int) -> bool:
+	if peace < 40.0 or peace >= 60.0:
+		return false
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 811 + night_index * 5, 2147483647)
+	return rng.randf() < 0.2
+
+
+# 60-79: half the Hmar's creatures on the cape; 80+: "Quiet nights", none at all.
+func hmar_cape_mult() -> float:
+	if peace >= 80.0:
+		return 0.0
+	if peace >= 60.0:
+		return 0.5
+	return 1.0
+
+
+# 80+: one more gift a week from a ghost laid to rest.
+func weekly_ghost_gift() -> bool:
+	if peace < 80.0 or laid_ghosts.is_empty() or Clock.weekday != "mon":
+		return false
+	var rng := _rng(67)
+	var ghost := Data.by_id("ghosts", str(laid_ghosts[rng.randi_range(0, laid_ghosts.size() - 1)]))
+	var gifts: Array = ghost.get("gift", [])
+	var gift: Array = gifts[0] if not gifts.is_empty() else ["sea_glass", 1]
+	Mail.send("mail.ghost_gift", [], 0, [[str(gift[0]), 1]])
+	return true
+
+
+# ---- 11.5: epitaphs ----
+
+# Three lines (serious, warm, ironic) from the person's story; the Book of Epitaphs adds two, one a masterpiece.
+func epitaph_options(plot: int) -> Array:
+	var g: Dictionary = graves[plot]
+	var b := body(str(g["body"]))
+	var reg := registry_entry(str(b.get("identified_as", "")))
+	var name := str(reg.get("name", g.get("name", "")))
+	var age := int(reg.get("age", 0))
+	var ship := str(reg.get("ship", ""))
+	var ship_name := Loc.t(ship) if ship != "" else ""
+	var out: Array = [
+		{"style": "serious", "text": "%s%s. Море взяло — земля приняла." % [name, (", %d лет" % age) if age > 0 else ""]},
+		{"style": "warm", "text": "%s. Тебя ждали на берегу — и дождались." % name},
+		{"style": "ironic", "text": "%s. Всю жизнь мечтал о твёрдой земле. Получил с запасом." % name},
+	]
+	if Inventory.count_of("epitaph_book") > 0:
+		out.append({"style": "sea", "text": "%s. Спи, матрос: вахту приняли%s." % [name, (" с «%s»" % ship_name) if ship_name != "" else ""]})
+		out.append({"style": "masterpiece", "text": "Здесь лежит %s, что прошёл все ветра до последнего — и вернулся домой, пусть и не так, как обещал." % name})
+	return out
+
+
+func set_epitaph(plot: int, index: int) -> bool:
+	var g: Dictionary = graves[plot]
+	if str(g["marker"]) != "headstone" or str(g.get("epitaph", "")) != "":
+		return false
+	var options := epitaph_options(plot)
+	if index < 0 or index >= options.size():
+		return false
+	g["epitaph"] = str(options[index]["text"])
+	g["masterpiece"] = str(options[index]["style"]) == "masterpiece"
+	Events.quest_event.emit("epitaph", str(options[index]["style"]))
+	recalc_peace()
+	return true
+
+
 func serialize() -> Dictionary:
 	return {"bodies": bodies, "graves": graves, "peace": peace, "incoming": incoming,
 		"registry_extra": registry_extra, "laid_ghosts": laid_ghosts, "replies": replies,
@@ -868,7 +1031,7 @@ func serialize() -> Dictionary:
 
 func deserialize(d: Dictionary) -> void:
 	reset()
-	if d.has("graves") and d["graves"] is Array and d["graves"].size() == graves.size():
+	if d.has("graves") and d["graves"] is Array and d["graves"].size() >= graves.size():
 		graves = d["graves"].duplicate(true)
 		for g in graves:
 			for key in ["plot", "dug", "quality"]:

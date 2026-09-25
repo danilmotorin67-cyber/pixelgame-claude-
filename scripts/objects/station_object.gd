@@ -116,6 +116,11 @@ func _draw_decor() -> void:
 			draw_rect(Rect2(-6, -2, 12, 6), Color("#9a9ca3"))
 			draw_rect(Rect2(-3, -20, 6, 18), Color("#b9bcc3"))
 			draw_circle(Vector2(0, -22), 3, Color("#b9bcc3"))
+		"armeria", "heather":
+			var petal := Color("#e07aa0") if id == "armeria" else Color("#9a6ab8")
+			draw_rect(Rect2(-4, -2, 8, 4), Color("#4e6e3a"))
+			for i in 4:
+				draw_rect(Rect2(-5 + i * 3, -6 + (i % 2) * 2, 2, 2), petal)
 		"memory_lantern":
 			draw_rect(Rect2(-1, -14, 2, 16), Color("#2a2a30"))
 			draw_rect(Rect2(-3, -18, 6, 5), Color("#ffe9a8"))

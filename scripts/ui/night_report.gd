@@ -45,6 +45,12 @@ static func text(report: Dictionary) -> String:
 	var arrived: Array = report.get("bodies_arrived", [])
 	if not arrived.is_empty():
 		lines.append("Море вернуло тел: %d. Над берегом кружат вороны." % arrived.size())
+	if bool(report.get("bell", false)):
+		lines.append("На рассвете звонил колокол погоста.")
+	if int(report.get("unrest", 0)) > 0:
+		lines.append("Беспокойство: в покойницкой всё сдвинуто, у погоста вянут посевы (%d)." % int(report["unrest"]))
+	if bool(report.get("quiet_sleep", false)):
+		lines.append("Тихий сон: погост спокоен, сил на 10% больше.")
 	var started: Array = report.get("quests_started", [])
 	for id in started:
 		lines.append("Новое дело: " + Loc.t(str(Data.by_id("quests", str(id)).get("title", id))))

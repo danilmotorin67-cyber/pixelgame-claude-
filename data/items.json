@@ -841,7 +841,8 @@
     "quality": true,
     "tags": [
       "flower"
-    ]
+    ],
+    "place": "decor"
   },
   {
     "id": "cottongrass",
@@ -897,7 +898,8 @@
     "quality": true,
     "tags": [
       "flower"
-    ]
+    ],
+    "place": "decor"
   },
   {
     "id": "birch_bolete",

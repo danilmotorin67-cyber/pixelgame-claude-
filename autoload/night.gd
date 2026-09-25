@@ -60,9 +60,12 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		report["crafting"] = Crafting.night(weather_today)
 		report["stations_ready"] = Crafting.finished_overnight())
 	_step(report, "bodies", func() -> void:
-		report["bodies_arrived"] = Graveyard.advance_night(storm_today))
+		report["bodies_arrived"] = Graveyard.advance_night(storm_today)
+		report["bell"] = Graveyard.ring_bell(report["bodies_arrived"]))
 	_step(report, "peace", func() -> void:
-		Graveyard.recalc_peace())
+		Graveyard.recalc_peace()
+		report["unrest"] = Graveyard.unrest_night()
+		Graveyard.weekly_ghost_gift())
 	_step(report, "sea", func() -> void:
 		Sea.night_mercy()
 		Sea.night_gear()
@@ -137,6 +140,10 @@ func _wake_hero(report: Dictionary, bedtime: int, fainted: bool, night_index: in
 	var bunk := 1.0 if Game.flag("comfy_bunk") or not watch_sleep or fainted \
 		else float(Lighthouse.cfg("watch_sleep_energy"))
 	state["energy"] = Game.max_energy() * energy_fraction(bedtime, fainted) * bunk
+	# 11.6: a quiet graveyard (Peace 40-59) gives "Quiet sleep" now and then: +10% energy.
+	if not fainted and Graveyard.quiet_sleep(night_index):
+		state["energy"] = float(state["energy"]) * 1.1
+		report["quiet_sleep"] = true
 	state["cold"] = 0.0
 	var wake_map := "lh_3" if watch_sleep and not fainted else "cape"
 	var wake_at := BUNK_SPAWN if wake_map == "lh_3" else HOME_SPAWN
