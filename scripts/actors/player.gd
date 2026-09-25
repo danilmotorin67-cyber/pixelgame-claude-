@@ -22,6 +22,11 @@ var _row_distance: float = 0.0
 var _sail_distance: float = 0.0
 var _hit_cooldown: float = 0.0
 var _storm_clock: float = 0.0
+# A held hoe or can (9): when the press began (-1 when idle), where it aimed and the step shown last.
+var _charge_start: int = -1
+var _charge_at: Vector2 = Vector2.ZERO
+var _charge_step: int = 0
+const CHARGE_MS := 400
 const TOOL_DURATION := 0.34
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
@@ -51,6 +56,11 @@ func _physics_process(delta: float) -> void:
 	if tool_time > 0.0:
 		tool_time = maxf(0.0, tool_time - delta)
 		tool_art.queue_redraw()
+	if _charge_start >= 0:
+		var step := charge_step(Time.get_ticks_msec() - _charge_start)
+		if step != _charge_step:
+			_charge_step = step
+			_say("Замах: %d тайлов…" % int(Farm.CHARGE_TILES[step]))
 	if Router.current_map == "sea":
 		_boat_physics(delta)
 		return
@@ -288,6 +298,14 @@ func _gather(at: Vector2) -> bool:
 	if global_position.distance_to(at) > 48.0:
 		return false
 	var id := Inventory.selected_id()
+	if id == "tool_can":
+		if Farm.fresh_water_at(Router.current_map, at):
+			Farm.fill_can()
+			_say("Лейка полна: %d." % Farm.can_water)
+			return true
+		if Fishing.is_water(Router.current_map, at):
+			_say("Лейка отказывается. Она видела, что соль делает с репой.")
+			return true
 	var scoop := int(Data.by_id("items", id).get("use_water", 0))
 	if scoop > 0:
 		var got := Crafting.scoop_seawater(Router.current_map, at, scoop)
@@ -328,6 +346,11 @@ func _gather(at: Vector2) -> bool:
 			return false
 		return true
 	return false
+
+
+# How far a held blow has charged: one step per 0.4 s, up to what the tool's level allows.
+func charge_step(held_ms: int) -> int:
+	return mini(held_ms / CHARGE_MS, Farm.max_charge(Inventory.selected_id()))
 
 
 func is_tired() -> bool:
@@ -426,7 +449,25 @@ func _unhandled_input(event: InputEvent) -> void:
 				hint.text = ("Торф: +%d" % got) if got > 0 else "Здесь уже копали в этом сезоне."
 			get_viewport().set_input_as_handled()
 			return
+	if event.is_action_released("use_tool") and _charge_start >= 0:
+		var step := charge_step(Time.get_ticks_msec() - _charge_start)
+		_charge_start = -1
+		_charge_step = 0
+		if step > 0:
+			var aim := _charge_at - global_position
+			var dir := Vector2i(signi(roundi(aim.x)), 0) if absf(aim.x) > absf(aim.y) else Vector2i(0, signi(roundi(aim.y)))
+			if aim.length() < 8.0:
+				dir = Vector2i(roundi(facing.x), roundi(facing.y))
+			for garden in get_tree().get_nodes_in_group("gardens"):
+				if garden.use_area(_charge_at, self, step, dir):
+					break
+		get_viewport().set_input_as_handled()
+		return
 	if event.is_action_pressed("use_tool") and Router.current_map == "cape":
+		if Inventory.selected_id() in ["tool_hoe", "tool_can"] and Farm.max_charge(Inventory.selected_id()) > 0:
+			_charge_start = Time.get_ticks_msec()
+			_charge_at = get_global_mouse_position()
+			_charge_step = 0
 		for garden in get_tree().get_nodes_in_group("gardens"):
 			if garden.use_at(get_global_mouse_position(), self):
 				get_viewport().set_input_as_handled()

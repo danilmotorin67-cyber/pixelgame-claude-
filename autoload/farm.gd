@@ -29,6 +29,13 @@ var opened: Dictionary = {"beds": true, "field_nw": true, "field_ne": true, "fie
 # Field tiles still overgrown: key -> {"k": weed|rock|snag, "hp": hits left}.
 var clutter: Dictionary = {}
 var field_ready: bool = false
+# 9: the can holds 40/55/70/85/100 of fresh water by its level; a tile takes one.
+const CAN_VOLUME := [40, 55, 70, 85, 100]
+# 9: held, the hoe and the can reach 1 / 3 / 5 / 3×3 / 6×3 tiles (charge steps open with the tool's level).
+const CHARGE_TILES := [1, 3, 5, 9, 18]
+# Agatha's rain butt by the beds: fresh water before there is a well.
+const RAIN_BUTT := Vector2(656, 300)
+var can_water: int = 40
 var tiles: Dictionary = {}
 var last_harvest: Dictionary = {}
 # Seasonal wild finds per map: [{item, x, y}] in tiles.
@@ -172,6 +179,7 @@ func reset() -> void:
 	rocks.clear()
 	clutter.clear()
 	field_ready = false
+	can_water = CAN_VOLUME[0]
 	Events.farm_changed.emit()
 
 
@@ -191,6 +199,77 @@ func water(cell: Vector2i, plot: String = "beds") -> bool:
 	tile["watered"] = true
 	Events.farm_changed.emit()
 	return true
+
+
+func can_capacity() -> int:
+	return int(CAN_VOLUME[clampi(Buildings.tool_level("tool_can"), 0, CAN_VOLUME.size() - 1)])
+
+
+func fill_can() -> int:
+	var added := maxi(can_capacity() - can_water, 0)
+	can_water = can_capacity()
+	return added
+
+
+# Watering with the can itself: "ok", "empty" or "no" (nothing to water there).
+func water_with_can(cell: Vector2i, plot: String = "beds") -> String:
+	if can_water <= 0:
+		return "empty"
+	if not water(cell, plot):
+		return "no"
+	can_water -= 1
+	return "ok"
+
+
+# Only fresh water fills the can: the rain butt, the well, a cistern, the moor's and the grove's streams.
+func fresh_water_at(map_id: String, at: Vector2) -> bool:
+	if map_id in ["moor", "birch"]:
+		return Fishing.is_water(map_id, at)
+	if map_id != "cape":
+		return false
+	if at.distance_to(RAIN_BUTT) <= 20.0:
+		return true
+	if Buildings.level("well") > 0 and at.distance_to(BuildingObject.home_of("well")) <= 24.0:
+		return true
+	for obj in Crafting.placed.get("cape", []):
+		if str(obj["id"]) == "cistern" and at.distance_to(Vector2(float(obj["x"]), float(obj["y"]))) <= 20.0:
+			return true
+	return false
+
+
+func max_charge(tool_id: String) -> int:
+	return clampi(Buildings.tool_level(tool_id), 0, CHARGE_TILES.size() - 1)
+
+
+# The tiles a charged blow covers, from the aimed tile onward in the facing direction.
+static func charge_cells(cell: Vector2i, facing: Vector2i, step: int) -> Array:
+	var forward := facing if facing != Vector2i.ZERO else Vector2i(0, 1)
+	var side := Vector2i(-forward.y, forward.x)
+	var out: Array = []
+	var length: int = [1, 3, 5, 3, 6][clampi(step, 0, 4)]
+	var width := 1 if step < 3 else 3
+	for i in length:
+		for j in width:
+			out.append(cell + forward * i + side * (j - width / 2))
+	return out
+
+
+# A charged hoe: tills every free tile it covers; returns how many.
+func till_area(cell: Vector2i, plot: String, facing: Vector2i, step: int) -> int:
+	var n := 0
+	for c in charge_cells(cell, facing, step):
+		if till(c, plot):
+			n += 1
+	return n
+
+
+# A charged can: waters until the can runs dry; returns how many tiles.
+func water_area(cell: Vector2i, plot: String, facing: Vector2i, step: int) -> int:
+	var n := 0
+	for c in charge_cells(cell, facing, step):
+		if water_with_can(c, plot) == "ok":
+			n += 1
+	return n
 
 
 func fertility(tile: Dictionary) -> int:
@@ -561,7 +640,7 @@ func collect_wild(map_id: String, spot: Dictionary) -> bool:
 
 func serialize() -> Dictionary:
 	return {"tiles": tiles, "wild": wild, "peat_dug": peat_dug, "rocks": rocks, "opened": opened, "clutter": clutter,
-		"field_ready": field_ready}
+		"field_ready": field_ready, "can_water": can_water}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -579,6 +658,7 @@ func deserialize(d: Dictionary) -> void:
 			list.append({"x": int(rock["x"]), "y": int(rock["y"]), "hp": int(rock["hp"])})
 		rocks[map_id] = list
 	clutter.clear()
+	can_water = int(d.get("can_water", can_capacity()))
 	field_ready = bool(d.get("field_ready", false))
 	var saved_clutter: Dictionary = d.get("clutter", {})
 	for key in saved_clutter:

@@ -29,6 +29,13 @@ func rebuild() -> void:
 	for g in Sea.gear:
 		if str(g["map"]) == map_id:
 			_feature(str(g["kind"]), g, Vector2(float(g["x"]), float(g["y"])))
+	if map_id == "wreck_bay":
+		for i in Crafting.HULLS.size():
+			if Crafting.hull_standing(i):
+				var hull := BigHull.new()
+				hull.index = i
+				hull.position = Vector2(int(Crafting.HULLS[i][0]) * TILE + 8, int(Crafting.HULLS[i][1]) * TILE + 8)
+				add_child(hull)
 	_on_tide_changed(Clock.tide_height())
 
 

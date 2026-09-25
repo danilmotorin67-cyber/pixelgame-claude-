@@ -8,6 +8,7 @@ const GOLD := Color("#ffc85a")
 
 func _ready() -> void:
 	Events.inventory_changed.connect(queue_redraw)
+	Events.farm_changed.connect(queue_redraw)
 	queue_redraw()
 
 
@@ -32,6 +33,10 @@ func _draw() -> void:
 		var id := str(slot["id"])
 		if id != "":
 			_icon(x + 4, 5, id)
+			if id == "tool_can":
+				var share := float(Farm.can_water) / float(maxi(Farm.can_capacity(), 1))
+				draw_rect(Rect2(x + 3, 23, 17, 2), Color("#1b2b3c"))
+				draw_rect(Rect2(x + 3, 23, roundi(17.0 * share), 2), Color("#6fb3c9"))
 			if int(slot["count"]) > 1:
 				var label := str(slot["count"])
 				draw_string(ThemeDB.fallback_font, Vector2(x + 21, 24), label,

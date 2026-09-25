@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field"]:
+	for section in ["_check_field", "_check_tools"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -127,3 +127,52 @@ func _check_field() -> void:
 	back.erase("field_ready")
 	Farm.deserialize(back)
 	_check(Farm.clutter.size() > 0 and Farm.field_ready, "an old save gets an overgrown field")
+
+
+# 9: the can's volume and fresh water, charged blows of the hoe and the can, the big hulls of Wreck Bay.
+func _check_tools() -> void:
+	_fresh()
+	_check(Farm.can_water == 40 and Farm.can_capacity() == 40, "a rusty can holds 40")
+	Game.counters["can_level"] = 4
+	_check(Farm.can_capacity() == 100 and Farm.fill_can() == 60 and Farm.can_water == 100, "a moon-silver can holds 100")
+	Game.counters["can_level"] = 0
+	Farm.can_water = 2
+	for x in 3:
+		Farm.till(Vector2i(x, 0))
+	_check(Farm.water_with_can(Vector2i(0, 0)) == "ok" and Farm.water_with_can(Vector2i(1, 0)) == "ok"
+		and Farm.water_with_can(Vector2i(2, 0)) == "empty" and Farm.can_water == 0, "each tile takes one measure of water")
+	_check(Farm.fresh_water_at("cape", Farm.RAIN_BUTT) and not Farm.fresh_water_at("cape", Vector2(700, 1000))
+		and not Farm.fresh_water_at("wreck_bay", Vector2(100, 500)), "only fresh water fills the can")
+	Crafting.placed["cape"].append({"id": "cistern", "x": 300, "y": 300})
+	_check(Farm.fresh_water_at("cape", Vector2(305, 300)), "a cistern fills the can")
+	# Charge shapes: 1 / 3 / 5 / 3×3 / 6×3.
+	var sizes: Array = []
+	for step in 5:
+		sizes.append(Farm.charge_cells(Vector2i(4, 4), Vector2i(1, 0), step).size())
+	_check(sizes == [1, 3, 5, 9, 18], "charged blows cover 1/3/5/9/18 tiles (%s)" % str(sizes))
+	_check(Farm.charge_cells(Vector2i(0, 0), Vector2i(0, 1), 2) == [Vector2i(0, 0), Vector2i(0, 1), Vector2i(0, 2), Vector2i(0, 3), Vector2i(0, 4)],
+		"a line runs the way the keeper faces")
+	_check(Farm.max_charge("tool_hoe") == 0, "a rusty hoe does not charge")
+	Game.counters["hoe_level"] = 3
+	_check(Farm.max_charge("tool_hoe") == 3, "a silver hoe charges to 3×3")
+	Farm.tiles.clear()
+	_check(Farm.till_area(Vector2i(1, 1), "beds", Vector2i(1, 0), 3) == 9, "a charged hoe tills a 3×3 block")
+	_check(Farm.till_area(Vector2i(8, 0), "beds", Vector2i(1, 0), 2) == 2, "tiles beyond the plot are left alone")
+	Farm.can_water = 5
+	_check(Farm.water_area(Vector2i(1, 1), "beds", Vector2i(1, 0), 3) == 5 and Farm.can_water == 0, "a charged can waters until it runs dry")
+	# The big hulls.
+	_check(Crafting.hull_standing(0) and Crafting.chop_hull(0) == "weak", "an iron axe cannot break a big hull")
+	Game.counters["axe_level"] = 3
+	var boards := Inventory.count_of("boards")
+	var result := ""
+	for n in 6:
+		result = Crafting.chop_hull(0)
+	_check(result == "done" and Inventory.count_of("boards") >= boards + 4 and Inventory.count_of("iron_scrap") >= 2, "a silver axe breaks a hull into boards and scrap")
+	_check(not Crafting.hull_standing(0) and Crafting.chop_hull(0) == "gone", "a broken hull is gone for the season")
+	Clock.day_index += Clock.DAYS_PER_SEASON
+	_check(Crafting.hull_standing(0), "the next season's storms bring another hull")
+	var back: Dictionary = JSON.parse_string(JSON.stringify({"f": Farm.serialize(), "c": Crafting.serialize()}))
+	Farm.can_water = 1
+	Farm.deserialize(back["f"])
+	Crafting.deserialize(back["c"])
+	_check(Farm.can_water == 0 and Crafting.hulls.has("0"), "the can and the hulls are saved")

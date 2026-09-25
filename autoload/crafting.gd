@@ -22,6 +22,11 @@ var next_uid: int = 1
 var made: Dictionary = {}
 var crafted_total: int = 0
 var last_energy: float = 0.0
+# 9: the big hulls of Wreck Bay (tiles) yield only to a silver axe; the season's storms bring the next ones.
+const HULLS := [[13, 27], [18, 29], [22, 27]]
+const HULL_HP := 6
+# "index" -> {"hp": blows left, "gone": season key when it was broken up}.
+var hulls: Dictionary = {}
 
 
 func _ready() -> void:
@@ -36,6 +41,7 @@ func reset() -> void:
 	crafted_total = 0
 	next_uid = 1
 	last_energy = 0.0
+	hulls.clear()
 	for map_id in DEFAULT_PLACED:
 		for entry in DEFAULT_PLACED[map_id]:
 			_add(map_id, str(entry[0]), int(entry[1]), int(entry[2]))
@@ -744,6 +750,38 @@ func fell_birch(map_id: String, at: Vector2) -> Dictionary:
 	return {"log": 1}
 
 
+# ---- the big hulls of Wreck Bay ----
+
+func hull_standing(index: int) -> bool:
+	return int(hulls.get(str(index), {}).get("gone", -1)) != Clock.day_index / Clock.DAYS_PER_SEASON
+
+
+# A blow at a hull: "weak" below the silver axe, "" while it holds, "done" when it comes apart
+# into boards, driftwood, scrap iron and nails.
+func chop_hull(index: int) -> String:
+	if index < 0 or index >= HULLS.size() or not hull_standing(index):
+		return "gone"
+	if Buildings.tool_level("tool_axe") < 3:
+		return "weak"
+	var state: Dictionary = hulls.get(str(index), {})
+	if int(state.get("gone", -1)) >= 0 or not state.has("hp"):
+		state = {"hp": HULL_HP, "gone": -1}
+	state["hp"] = int(state["hp"]) - 1 - (Buildings.tool_level("tool_axe") - 3)
+	hulls[str(index)] = state
+	if int(state["hp"]) > 0:
+		return ""
+	state["gone"] = Clock.day_index / Clock.DAYS_PER_SEASON
+	var rng := RandomNumberGenerator.new()
+	rng.seed = posmod(Game.world_seed * 613 + Clock.day_index * 31 + index, 2147483647)
+	Inventory.add("boards", rng.randi_range(4, 6))
+	Inventory.add("driftwood", rng.randi_range(6, 10))
+	Inventory.add("iron_scrap", rng.randi_range(2, 4))
+	Inventory.add("nails", 5)
+	Skills.add_xp("foraging", 15)
+	Game.add_stat("hulls_broken")
+	return "done"
+
+
 # ---- save ----
 
 # JSON brings whole numbers back as floats; saved objects keep them as ints.
@@ -764,7 +802,8 @@ static func _ints(value: Variant) -> Variant:
 
 
 func serialize() -> Dictionary:
-	return {"placed": placed, "learned": learned, "next_uid": next_uid, "made": made, "crafted_total": crafted_total}
+	return {"placed": placed, "learned": learned, "next_uid": next_uid, "made": made, "crafted_total": crafted_total,
+		"hulls": hulls}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -796,4 +835,5 @@ func deserialize(d: Dictionary) -> void:
 	learned = d.get("learned", {}).duplicate()
 	made = _ints(d.get("made", {}))
 	crafted_total = int(d.get("crafted_total", 0))
+	hulls = _ints(d.get("hulls", {}))
 	next_uid = maxi(int(d.get("next_uid", 1)), next_uid)
