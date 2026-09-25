@@ -23,12 +23,12 @@ static func open(hud: CanvasLayer) -> SpyglassView:
 func _ready() -> void:
 	_was_paused = Clock.paused
 	Clock.paused = true
-	position = Vector2(90, 40)
-	size = Vector2(300, 170)
+	position = Vector2(90, 8)
+	size = Vector2(300, 222)
 	list = Spyglass.targets()
 	_label = Label.new()
-	_label.position = Vector2(10, 108)
-	_label.size = Vector2(280, 60)
+	_label.position = Vector2(10, 92)
+	_label.size = Vector2(280, 126)
 	_label.add_theme_font_size_override("font_size", 8)
 	_label.autowrap_mode = TextServer.AUTOWRAP_WORD
 	add_child(_label)
@@ -70,11 +70,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _draw() -> void:
 	draw_rect(Rect2(Vector2.ZERO, size), Color("#121a26"))
-	draw_circle(Vector2(size.x / 2.0, 55), 48, Color("#8fb0c0"))
-	draw_arc(Vector2(size.x / 2.0, 55), 48, 0, TAU, 40, Color("#b08f6c"), 3.0)
+	draw_circle(Vector2(size.x / 2.0, 44), 36, Color("#8fb0c0"))
+	draw_arc(Vector2(size.x / 2.0, 44), 36, 0, TAU, 40, Color("#b08f6c"), 3.0)
 	if not list.is_empty():
 		var t: Dictionary = list[index]
-		var c := Vector2(size.x / 2.0, 55)
+		var c := Vector2(size.x / 2.0, 44)
 		if str(t["kind"]) == "birds":
 			draw_line(c + Vector2(-10, 0), c + Vector2(0, -4), Color("#2a2a30"), 2.0)
 			draw_line(c + Vector2(0, -4), c + Vector2(10, 0), Color("#2a2a30"), 2.0)
@@ -83,5 +83,5 @@ func _draw() -> void:
 			draw_rect(Rect2(c + Vector2(-2, -18), Vector2(2, 22)), Color("#4a3428"))
 			draw_colored_polygon(PackedVector2Array([c + Vector2(0, -16), c + Vector2(12, 0), c + Vector2(0, 0)]), Color("#eadcb8"))
 	var share := clampf(held / float(Spyglass.cfg("hold", 2.0)), 0.0, 1.0)
-	draw_rect(Rect2(10, 100, 280, 4), Color("#45464e"))
-	draw_rect(Rect2(10, 100, 280.0 * share, 4), Color("#ffc85a"))
+	draw_rect(Rect2(10, 84, 280, 4), Color("#45464e"))
+	draw_rect(Rect2(10, 84, 280.0 * share, 4), Color("#ffc85a"))
