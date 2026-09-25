@@ -1,0 +1,12 @@
+{
+ "id": "hero_stocky",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, navy wool pea coat buttoned up, long grey knitted scarf, dark trousers, brown leather boots, short tousled brown hair, cozy northern island, muted cold palette with warm accents",
+ "size": [
+  32,
+  64
+ ],
+ "character_id": "53a59f7b-a02e-4a08-a2ae-7eb5d17034d2",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

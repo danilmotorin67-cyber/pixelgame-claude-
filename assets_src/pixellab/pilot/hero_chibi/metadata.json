@@ -1,0 +1,32 @@
+{
+  "group_id": "295c18ac-a72d-4a75-a69f-5ce022382b28",
+  "states": [
+    {
+      "character": {
+        "id": "a8fa4275-3329-430d-8e59-a700ca4114f2",
+        "name": "Idle",
+        "prompt": "young lighthouse keeper, navy wool pea coat buttoned up, long grey knitted scarf, dark trousers, brown leather boots, short tousled brown hair, cozy northern island, muted cold palette with warm accents",
+        "size": {
+          "width": 48,
+          "height": 92
+        },
+        "template_id": "mannequin",
+        "directions": 4,
+        "view": "low top-down",
+        "created_at": "2026-09-25T11:05:49.568348+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "west": "Idle/rotations/west.png",
+          "east": "Idle/rotations/east.png",
+          "north": "Idle/rotations/north.png"
+        },
+        "animations": {}
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-25T11:06:39.676907"
+}

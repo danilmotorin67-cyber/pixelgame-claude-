@@ -1,0 +1,12 @@
+{
+ "id": "hero_stylized",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, navy wool pea coat buttoned up, long grey knitted scarf, dark trousers, brown leather boots, short tousled brown hair, cozy northern island, muted cold palette with warm accents",
+ "size": [
+  32,
+  64
+ ],
+ "character_id": "a55f02ae-9b94-4b3f-9089-94644c728642",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

@@ -1,0 +1,12 @@
+{
+ "id": "hero_chibi48",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, cute cozy farming-game style, big head, navy wool pea coat, long grey knitted scarf, dark trousers, brown boots, short tousled brown hair, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "e360990e-16ac-4735-a947-c0dc843cde5b",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

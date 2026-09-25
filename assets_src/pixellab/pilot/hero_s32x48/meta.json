@@ -1,0 +1,12 @@
+{
+ "id": "hero_s32x48",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, cute cozy farming-game style, big head, navy wool pea coat, long grey knitted scarf, dark trousers, brown boots, short tousled brown hair, muted cold palette with warm accents",
+ "size": [
+  32,
+  48
+ ],
+ "character_id": "0b1750ec-630a-4707-99e3-6f584c7aa0a1",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

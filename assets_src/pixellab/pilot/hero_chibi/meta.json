@@ -1,0 +1,12 @@
+{
+ "id": "hero_chibi",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, navy wool pea coat buttoned up, long grey knitted scarf, dark trousers, brown leather boots, short tousled brown hair, cozy northern island, muted cold palette with warm accents",
+ "size": [
+  32,
+  64
+ ],
+ "character_id": "a8fa4275-3329-430d-8e59-a700ca4114f2",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}
