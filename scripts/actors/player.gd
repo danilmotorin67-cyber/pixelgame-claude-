@@ -31,11 +31,17 @@ const TOOL_DURATION := 0.34
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
 
+# The PixelLab hero (assets/sprites/characters/hero_m.png): 6 walk frames × 4 directions (down, left, right, up),
+# drawn at 32 px per tile and shown at Screen.ART_SCALE.
+const WALK_FRAMES := 6
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
 
 
 func _ready() -> void:
+	var cam := get_node_or_null("Camera2D") as Camera2D
+	if cam:
+		cam.zoom = Vector2(Screen.ZOOM, Screen.ZOOM)
 	if Router.current_map == "sea":
 		var art := BoatArt.new()
 		art.name = "BoatArt"
@@ -186,7 +192,7 @@ func _direction_index() -> int:
 
 
 func _update_sprite(moving: bool) -> void:
-	sprite.frame = _direction_index() * 4 + (int(_walk_time * 8.0) % 4 if moving else 0)
+	sprite.frame = _direction_index() * WALK_FRAMES + (int(_walk_time * 8.0) % WALK_FRAMES if moving else 0)
 
 
 func play_tool(kind: String, target: Vector2) -> void:

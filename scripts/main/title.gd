@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	Screen.layout_root(self)
 	Clock.paused = true
 	$Menu/Continue.disabled = not Save.has_save()
 	if $Menu/Continue.disabled:

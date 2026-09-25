@@ -8,6 +8,11 @@ var _last_energy := -1.0
 @onready var energy_bar: EnergyHud = $EnergyBar
 
 
+func _ready() -> void:
+	# The HUD is laid out for 480×270 and shown ×2 at 960×540.
+	scale = Vector2(Screen.ZOOM, Screen.ZOOM)
+
+
 func _process(delta: float) -> void:
 	if hint.text != _hint_text:
 		_hint_text = hint.text

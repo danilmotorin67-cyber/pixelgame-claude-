@@ -4,6 +4,7 @@ extends Node
 
 
 func _ready() -> void:
+	label.add_theme_font_size_override("font_size", 16 * Screen.ZOOM)
 	label.text = "СОЛЁНЫЙ СВЕТ"
 	await get_tree().create_timer(0.6).timeout
 	if not Data.ready_ok:

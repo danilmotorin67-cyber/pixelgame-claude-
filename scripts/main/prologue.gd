@@ -12,6 +12,7 @@ var _love: LineEdit
 
 
 func _ready() -> void:
+	Screen.layout_root(self)
 	Clock.paused = true
 	var bg := ColorRect.new()
 	bg.color = Color("#10161f")

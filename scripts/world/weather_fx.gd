@@ -10,7 +10,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var camera := get_viewport().get_camera_2d()
 	if camera:
-		global_position = camera.get_screen_center_position() - get_viewport_rect().size / 2.0
+		global_position = camera.get_screen_center_position() - Screen.BASE / 2.0
 	if Weather.current in ["rain", "storm", "snow", "blizzard", "fog"] or Router.current_map == "sea":
 		if not Clock.paused:
 			elapsed += delta

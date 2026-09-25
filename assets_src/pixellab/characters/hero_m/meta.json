@@ -1,0 +1,18 @@
+{
+ "id": "hero_m",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, former city clerk, navy wool pea coat buttoned up, long grey knitted scarf, dark trousers, brown leather boots, short tousled brown hair, cozy northern island, muted cold palette with warm accents",
+ "size": [
+  32,
+  64
+ ],
+ "character_id": "9f2edf22-7e17-4bf6-850b-67724d58869e",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 4.0,
+   "group": "cfad8526-2a62-4a27-8274-5b520d59ff68"
+  }
+ }
+}
