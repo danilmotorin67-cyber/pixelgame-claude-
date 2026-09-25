@@ -24,6 +24,32 @@
           "north": "Idle/rotations/north.png"
         },
         "animations": {
+          "animating": {
+            "east": [
+              "Idle/animations/animating/east/frame_000.png",
+              "Idle/animations/animating/east/frame_001.png",
+              "Idle/animations/animating/east/frame_002.png",
+              "Idle/animations/animating/east/frame_003.png"
+            ],
+            "west": [
+              "Idle/animations/animating/west/frame_000.png",
+              "Idle/animations/animating/west/frame_001.png",
+              "Idle/animations/animating/west/frame_002.png",
+              "Idle/animations/animating/west/frame_003.png"
+            ],
+            "north": [
+              "Idle/animations/animating/north/frame_000.png",
+              "Idle/animations/animating/north/frame_001.png",
+              "Idle/animations/animating/north/frame_002.png",
+              "Idle/animations/animating/north/frame_003.png"
+            ],
+            "south": [
+              "Idle/animations/animating/south/frame_000.png",
+              "Idle/animations/animating/south/frame_001.png",
+              "Idle/animations/animating/south/frame_002.png",
+              "Idle/animations/animating/south/frame_003.png"
+            ]
+          },
           "walking": {
             "east": [
               "Idle/animations/walking/east/frame_000.png",
@@ -57,11 +83,22 @@
               "Idle/animations/walking/west/frame_004.png",
               "Idle/animations/walking/west/frame_005.png"
             ]
+          },
+          "work": {
+            "south": [
+              "Idle/animations/work/south/frame_000.png",
+              "Idle/animations/work/south/frame_001.png",
+              "Idle/animations/work/south/frame_002.png",
+              "Idle/animations/work/south/frame_003.png",
+              "Idle/animations/work/south/frame_004.png",
+              "Idle/animations/work/south/frame_005.png",
+              "Idle/animations/work/south/frame_006.png"
+            ]
           }
         }
       }
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-25T13:13:55.484367"
+  "export_date": "2026-09-25T13:16:31.869066"
 }

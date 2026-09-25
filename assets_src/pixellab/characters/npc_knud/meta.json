@@ -1,0 +1,12 @@
+{
+ "id": "npc_knud",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 28, carpenter, curly brown hair, apron with sawdust, pencil behind ear, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "55101000-1a46-41a6-80f1-065e0d3abe03",
+ "generations": 4.0,
+ "date": "2026-09-25"
+}

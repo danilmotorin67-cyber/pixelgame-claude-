@@ -20,6 +20,26 @@
     "north",
     "west"
    ]
+  },
+  "breathing-idle": {
+   "generations": 9.0,
+   "group": "16b722b1-ce93-4fdc-ac2c-e017440e6e56",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 1.0,
+   "group": "6e1a41cb-1504-48f6-9bca-68a1d1dcf9a5",
+   "action_description": "hauling a rope hand over hand",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
   }
  }
 }
