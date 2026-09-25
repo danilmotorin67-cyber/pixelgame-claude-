@@ -10,7 +10,7 @@ static func start(hero: Dictionary = {}) -> void:
 	Weather.start_day(0)
 	for system in [Economy, Inventory, Farm, Lighthouse, Sea, Skills, Crafting, Buildings, Animals, Deep, Grotto, Graveyard,
 			Mail, Knowledge, Quests, Collections, Relationships, Cutscenes, NPCs, Dialogue, Achievements, Story, Twenty,
-			Community, Festivals, Finale]:
+			Community, Festivals, Finale, Boards]:
 		system.reset()
 	Story.stern_phrase = str(hero.get("stern_phrase", ""))
 	Game.set_flag("prologue_done", hero.has("stern_phrase"))

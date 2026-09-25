@@ -39,7 +39,8 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 	var hmar_tonight := Weather.hmar_night
 	var compass_before := [Lighthouse.fire_power, Graveyard.peace, Sea.mercy]
 	_step(report, "lighthouse", func() -> void:
-		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted))
+		report["lighthouse"] = Lighthouse.resolve_night(bedtime, watch_sleep and not fainted)
+		report["rescued"] = Rescue.night(night_index, watch_sleep and not fainted))
 	_step(report, "weather_tides", func() -> void:
 		Clock.start_next_day()
 		report["hmar_night"] = Weather.hmar_night)
@@ -72,6 +73,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		Lighthouse.night_mail(night_index)
 		Graveyard.deliver_replies(Clock.day_index)
 		Relationships.night_letters()
+		Rescue.guests_night()
 		Crafting.recipe_letters()
 		Mail.sunday_gazette()
 		report["mail"] = Mail.unread())
@@ -81,6 +83,7 @@ func end_day(fainted: bool = false, watch_sleep: bool = false) -> void:
 		Relationships.night())
 	_step(report, "quests", func() -> void:
 		report["story"] = Story.night(night_index, hmar_tonight)
+		Boards.night()
 		report["quests_started"] = Quests.check_starts())
 	_step(report, "luck", func() -> void:
 		report["luck"] = Game.roll_luck(Clock.day_index, aurora_tonight))

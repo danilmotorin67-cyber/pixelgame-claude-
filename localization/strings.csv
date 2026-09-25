@@ -7235,3 +7235,7 @@ prologue.arrive,Сойти на берег,Go ashore
 q.hint.board,Доска улик — в вахтенной (3-й этаж маяка).,The evidence board is in the watch room (3rd floor).
 epilogue.twenty.done,На погосте двадцать новых имён. Судовая роль «Фортуны» висит в часовне — все строки закрыты.,Twenty new names in the graveyard. The Fortuna's crew list hangs in the chapel — every line closed.
 epilogue.twenty.waiting,В Зале Двадцати всё ещё слишком тихо.,It is still too quiet in the Hall of the Twenty.
+mail.rescue_crew,"Спасательная станция. Команда выходила ночью к «%s» и вытащила из воды живыми: %d. Все пока в таверне у Бьорна.","Rescue station. The crew went out to the %s last night and pulled %d out of the water alive. They are at Bjorn's tavern for now."
+mail.rescue_thanks,"%s, спасённый с «%s»: «Смотритель, я вам жизнью обязан. Это немного — но от сердца».","%s, saved from the %s: ""Keeper, I owe you my life. It is not much — but it is from the heart."""
+mail.rescue_story,"%s, из спасённых: «Не знаю, как отблагодарить. Вот, возьмите — и послушайте, что у нас на борту говорили: %s»","%s, one of the saved: ""I do not know how to thank you. Here, take this — and hear what they said aboard: %s"""
+mail.rescue_recipe,"%s, из спасённых: «Кок наш, царство ему, так готовил — теперь и вы сможете: %s». К письму приложен подарок.","%s, one of the saved: ""Our cook, rest him, made it like this — now you can too: %s."" A gift is enclosed."

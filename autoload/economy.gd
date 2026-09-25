@@ -42,6 +42,8 @@ func sell_price(id: String, quality: int = 0) -> int:
 	# 5.6: after the trial Grim's house is the Solvik Artel and buys 15% dearer.
 	if Game.flag("artel"):
 		mult *= 1.15
+	# 21.2: the week's demand at the Trading House.
+	mult *= Boards.demand_mult(item)
 	return int(round(float(item.get("price", 0)) * QUALITY_MULT[clampi(quality, 0, 3)] * Skills.price_mult(item) * mult))
 
 

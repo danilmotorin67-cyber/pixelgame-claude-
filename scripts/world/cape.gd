@@ -197,6 +197,32 @@ func _on_morning_ok() -> void:
 	Clock.paused = false
 	$HUD/MorningPanel/MorningOk.release_focus()
 	KnowledgeBook.offer_profession(hud)
+	call_deferred("_offer_rescue")
+
+
+# 10.12: the bell rang at 3:00 — launch the boat, or leave it to the station's crew.
+func _offer_rescue() -> void:
+	var wreck := Rescue.pending()
+	if wreck.is_empty():
+		return
+	var ship := Loc.t(str(wreck["ship"]))
+	var body := func() -> String:
+		return "В 3:00 ударил колокол спасательной станции: «%s» бьётся о Зубы. В воде — %d. Спустить шлюпку?" % [
+			ship, Rescue.survivors(str(wreck["ship"]))]
+	var launch := func(p: InfoPanel) -> String:
+		p.close()
+		MinigameView.open(hud, Rescue.game_for(wreck), func(g: Minigame) -> void:
+			var saved := Rescue.resolve(wreck, int(g.score))
+			$HUD/Hint.text = "Спасено: %d. Их приютит таверна." % saved if saved > 0 else "Никого не удалось вытащить."
+			call_deferred("_offer_rescue"))
+		return ""
+	var stay := func(p: InfoPanel) -> String:
+		var saved := Rescue.decline(wreck)
+		p.close()
+		$HUD/Hint.text = "Команда станции вытащила: %d." % saved
+		call_deferred("_offer_rescue")
+		return ""
+	InfoPanel.open(hud, "Колокол станции", body, [["Спустить шлюпку", launch], ["Пусть идёт команда", stay]])
 
 
 func _refresh_hud() -> void:

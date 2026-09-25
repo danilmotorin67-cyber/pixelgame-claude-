@@ -173,6 +173,12 @@ func _build_furniture() -> void:
 			counter.shop_id = str(f["shop"])
 			counter.position = at + Vector2(dims.x / 2.0, dims.y + 8.0)
 			add_child(counter)
+		if f.has("board"):
+			var notice := NoticeBoard.new()
+			notice.name = "Board_" + str(f["board"])
+			notice.board = str(f["board"])
+			notice.position = at + dims / 2.0
+			add_child(notice)
 		if bool(f.get("directorate", false)):
 			var desk := DirectorateDesk.new()
 			desk.name = "Directorate"

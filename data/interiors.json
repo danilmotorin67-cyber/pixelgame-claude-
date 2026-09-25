@@ -133,7 +133,8 @@
      1,
      1
     ],
-    "walk": true
+    "walk": true,
+    "board": "errands"
    },
    {
     "kind": "counter",
@@ -765,6 +766,19 @@
      2,
      1
     ]
+   },
+   {
+    "kind": "board",
+    "at": [
+     1,
+     4
+    ],
+    "size": [
+     1,
+     1
+    ],
+    "walk": true,
+    "board": "orders"
    }
   ],
   "spots": {

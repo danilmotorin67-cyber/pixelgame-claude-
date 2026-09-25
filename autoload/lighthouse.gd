@@ -35,6 +35,9 @@ var inspected_day: int = -1
 var log_day: int = -1
 var blueprints_given: int = 0
 var strong_streak: int = 0
+# 10.12: wrecks waiting for the keeper's morning choice, and the saved staying at the tavern.
+var rescue_pending: Array = []
+var rescue_guests: Array = []
 
 
 func cfg(key: String) -> Variant:
@@ -42,6 +45,8 @@ func cfg(key: String) -> Variant:
 
 
 func reset() -> void:
+	rescue_pending.clear()
+	rescue_guests.clear()
 	lens = "old_mirror"
 	lamp = "wick"
 	mechanism = "weights"
@@ -685,7 +690,8 @@ func serialize() -> Dictionary:
 		"week_dark": week_dark, "week_wrecked": week_wrecked, "wrecks": wrecks, "pending_shore": pending_shore,
 		"season_powers": season_powers, "year_powers": year_powers, "inspections": inspections,
 		"retake_day": retake_day, "inspected_day": inspected_day, "log_day": log_day,
-		"blueprints_given": blueprints_given, "strong_streak": strong_streak}
+		"blueprints_given": blueprints_given, "strong_streak": strong_streak, "rescue_pending": rescue_pending,
+		"rescue_guests": rescue_guests}
 
 
 func deserialize(d: Dictionary) -> void:
@@ -738,6 +744,10 @@ func deserialize(d: Dictionary) -> void:
 	inspected_day = int(d.get("inspected_day", -1))
 	log_day = int(d.get("log_day", -1))
 	blueprints_given = int(d.get("blueprints_given", 0))
+	for w in d.get("rescue_pending", []):
+		rescue_pending.append({"ship": str(w["ship"]), "type": str(w.get("type", "")), "day": int(w["day"])})
+	for g in d.get("rescue_guests", []):
+		rescue_guests.append({"name": str(g["name"]), "ship": str(g["ship"]), "until": int(g["until"]), "gift": bool(g.get("gift", false))})
 	strong_streak = int(d.get("strong_streak", 0))
 	for entry in d.get("pending_shore", []):
 		pending_shore.append({"item": str(entry["item"]), "beach": str(entry["beach"])})

@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -176,3 +176,134 @@ func _check_tools() -> void:
 	Farm.deserialize(back["f"])
 	Crafting.deserialize(back["c"])
 	_check(Farm.can_water == 0 and Crafting.hulls.has("0"), "the can and the hulls are saved")
+
+
+# 21.2: the tavern's errands, the week's demand and the week's big order.
+func _check_boards() -> void:
+	_fresh()
+	var counts := {}
+	for day in 28:
+		var list := Boards.posted(day)
+		counts[list.size()] = true
+		for notice in list:
+			_check(int(notice["due"]) == day + 1 and int(notice["reward"]) >= 80, "an errand lasts 2 days and pays")
+	_check(counts.has(1) and counts.has(2) and not counts.has(0) and not counts.has(3), "1-2 errands a day")
+	_check(JSON.stringify(Boards.posted(3)) == JSON.stringify(Boards.posted(3)), "the board is the same all day")
+	_goto(5)
+	var notice: Dictionary = Boards.posted()[0]
+	var npc := str(notice["npc"])
+	_check(Boards.take(notice) and not Boards.take(notice) and Boards.taken(notice), "an errand is taken once")
+	_check(Boards.npc_options(npc).size() == 1 and Story.npc_options(npc).has(Boards.npc_options(npc)[0]), "the asker offers to take it")
+	var before := int(Relationships.points.get(npc, 0))
+	var money := Economy.money
+	_check(Story.npc_action(npc, "errand:0").contains("не хватает"), "empty hands are refused")
+	Inventory.add(str(notice["item"]), int(notice["count"]))
+	Story.npc_action(npc, "errand:0")
+	_check(Economy.money == money + int(notice["reward"]) and str(Boards.errands[0]["state"]) == "done", "the errand pays")
+	_check(int(Relationships.points.get(npc, 0)) == before + 150 and Game.stat("errands_done") == 1, "and +150 friendship")
+	# A late one lapses overnight.
+	var second: Dictionary = Boards.posted(6)[0]
+	_goto(6)
+	Boards.take(second)
+	_goto(8)
+	Boards.night()
+	_check(str(Boards.errands[1]["state"]) == "late" and Boards.npc_options(str(second["npc"])).is_empty(), "a late errand lapses")
+	# The week's demand: +25% on one category.
+	_goto(14)
+	var cat := Boards.demand()
+	var probe := ""
+	for item in Data.all("items"):
+		if str(item.get("category", "")) == cat and int(item.get("price", 0)) >= 100:
+			probe = str(item["id"])
+			break
+	var base := int(Data.by_id("items", probe).get("price", 0))
+	_check(probe != "" and Economy.sell_price(probe) >= int(round(base * 1.25)) - 1, "the week's demand pays 25%% more (%s)" % cat)
+	_check(Boards.demand(14) == Boards.demand(20) and Boards.week_of(20) == 14, "the demand lasts the week")
+	# The big order.
+	var order := Boards.order()
+	var price := int(Data.by_id("items", str(order["item"])).get("price", 0))
+	_check(int(order["reward"]) >= int(price * int(order["count"]) * 1.3), "the big order pays about 1.5x")
+	Inventory.add(str(order["item"]), int(order["count"]) - 1)
+	_check(Boards.hand_in_order().begins_with("Принято") and Boards.order_given == int(order["count"]) - 1, "part of an order is handed in")
+	money = Economy.money
+	Inventory.add(str(order["item"]), 1)
+	_check(Boards.hand_in_order().begins_with("Заказ выполнен") and Economy.money == money + int(order["reward"]), "the order pays once complete")
+	_check(Boards.hand_in_order().contains("закрыт"), "only once a week")
+	_goto(21)
+	_check(not Boards.order_text().contains("Оплачен"), "a new week, a new order")
+	var back: Dictionary = JSON.parse_string(JSON.stringify(Boards.serialize()))
+	Boards.deserialize(back)
+	_check(Boards.errands.size() == 2 and str(Boards.errands[0]["state"]) == "done", "the boards are saved")
+
+
+# A wreck of `bodies` sailors tonight (the ship loop's own path).
+func _wreck(bodies: int) -> Dictionary:
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 5
+	var entry := {"name": "ship.test", "type": "schooner"}
+	Lighthouse._wreck(entry, {"bodies": [bodies, bodies], "crates": [0, 0], "crate": "cargo_merchant"}, rng)
+	return Lighthouse.wrecks[Lighthouse.wrecks.size() - 1]
+
+
+# 10.12: the rescue station's bell, the boat and the ring, the crew, the guests at the tavern, the Rescuer.
+func _check_rescue() -> void:
+	_fresh()
+	_goto(10)
+	_wreck(3)
+	_check(Rescue.night(10, true) == 0 and Lighthouse.rescue_pending.is_empty(), "no station, no bell")
+	Game.set_flag("rescue_station")
+	Graveyard.incoming.clear()
+	Lighthouse.wrecks.clear()
+	_wreck(3)
+	_check(Rescue.survivors("ship.test") == 3, "three in the water")
+	Rescue.night(10, true)
+	var wreck := Rescue.pending()
+	_check(not wreck.is_empty() and str(wreck["ship"]) == "ship.test", "asleep in the watch room, the bell wakes the keeper")
+	var game := Rescue.game_for(wreck)
+	_check(game is TimingGame and (game as TimingGame).rounds == 3, "one throw of the ring per sailor")
+	var honor := Game.honor
+	var mercy := Sea.mercy
+	_check(Rescue.resolve(wreck, 2) == 2 and Rescue.survivors("ship.test") == 1, "each hit saves one: one body fewer")
+	_check(Game.honor == honor + 20 and is_equal_approx(Sea.mercy, minf(mercy + 6.0, 100.0)), "+10 honour and +3 mercy each")
+	_check(Lighthouse.rescue_guests.size() == 2 and Rescue.pending().is_empty(), "the saved stay at the tavern")
+	# The guests send thanks once, then leave after 3 days.
+	var letters := Mail.letters.size()
+	Rescue.guests_night()
+	_check(Mail.letters.size() == letters + 2 and not (Mail.letters[letters]["items"] as Array).is_empty(), "each guest sends a gift")
+	Rescue.guests_night()
+	_check(Mail.letters.size() == letters + 2, "only once")
+	_goto(14)
+	Rescue.guests_night()
+	_check(Lighthouse.rescue_guests.is_empty(), "after 3 days they sail home")
+	# Asleep at home: the crew, 30% + 5% per Seafaring level.
+	Graveyard.incoming.clear()
+	Lighthouse.wrecks.clear()
+	_goto(20)
+	Skills.levels["seafaring"] = 6
+	var saved := 0
+	var total := 0
+	for n in 30:
+		Graveyard.incoming.clear()
+		Lighthouse.wrecks.clear()
+		Clock.day_index = 20 + n
+		_wreck(4)
+		total += 4
+		saved += Rescue.night(Clock.day_index, false)
+	var share := float(saved) / float(total)
+	var expect := Rescue.crew_chance()
+	_check(absf(share - expect) < 0.15, "the crew saves about %.0f%% (%.2f)" % [expect * 100.0, share])
+	_check(Lighthouse.rescue_pending.is_empty(), "no bell for a keeper asleep at home")
+	# The Rescuer: two more saved, double rewards.
+	Graveyard.incoming.clear()
+	Lighthouse.wrecks.clear()
+	Lighthouse.rescue_guests.clear()
+	Skills.professions["seafaring"] = ["skipper", "rescuer"]
+	_goto(60)
+	_wreck(1)
+	Rescue.night(60, true)
+	honor = Game.honor
+	Rescue.resolve(Rescue.pending(), 1)
+	_check(Lighthouse.rescue_guests.size() == 3 and Game.honor == mini(honor + 20, 100), "the Rescuer brings two more and doubles honour")
+	var back: Dictionary = JSON.parse_string(JSON.stringify(Lighthouse.serialize()))
+	Lighthouse.deserialize(back)
+	_check(Lighthouse.rescue_guests.size() == 3, "the guests are saved")
