@@ -20,6 +20,17 @@
     "north",
     "west"
    ]
+  },
+  "breathing-idle": {
+   "generations": 12.0,
+   "group": "5bce070a-257f-4df0-9bd0-666b6771c581",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
   }
  }
 }

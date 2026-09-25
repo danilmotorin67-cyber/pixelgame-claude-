@@ -8,5 +8,18 @@
  ],
  "character_id": "2f190d29-7d02-4c90-9ea1-1c3b0c53b55b",
  "generations": 5.0,
- "date": "2026-09-25"
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 21.0,
+   "group": "477a6603-643a-425d-a0b5-f58bedef61c6",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
 }
