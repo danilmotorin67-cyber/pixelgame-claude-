@@ -1,0 +1,18 @@
+{
+ "id": "hero_32x48",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, former city clerk, navy wool jacket, grey knitted scarf, dark trousers, brown boots, short brown hair, cozy northern island pixel art, muted cold palette with warm accents",
+ "size": [
+  32,
+  48
+ ],
+ "character_id": "67f7f017-0db5-4f7d-b043-3b5a6c4c8ee1",
+ "generations": 0.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 4.0,
+   "group": "56996c75-382c-46e4-be4c-e309714cbdb4"
+  }
+ }
+}
