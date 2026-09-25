@@ -1,11 +1,5 @@
 {
  "id": "tile_greenhouse_floor",
  "method": "create-image-pixflux",
- "prompt": "seamless top-down ground texture tile, Пол теплицы, pixel art, farming game, muted cold palette",
- "size": [
-  32,
-  32
- ],
- "generations": 1.0,
- "date": "2026-09-25"
+ "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: wooden plank greenhouse floor, top-down pixel art"
 }

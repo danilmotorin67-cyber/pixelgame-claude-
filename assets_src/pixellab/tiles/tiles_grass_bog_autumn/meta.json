@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_bog_autumn",
  "method": "create-tileset",
- "lower": "short grass in autumn colours",
- "upper": "dark wet peat bog with pools in autumn colours",
+ "lower": "dull olive-yellow autumn grass",
+ "upper": "dark brown wet peat bog with small pools",
  "tile": 32,
- "tileset_id": "47361af7-a80f-45a4-ab3c-b6704dd844ed",
- "generations": 16.0,
+ "tileset_id": "9754f8d3-da44-46f0-b45c-8084628f029a",
+ "generations": 28.0,
  "date": "2026-09-25"
 }

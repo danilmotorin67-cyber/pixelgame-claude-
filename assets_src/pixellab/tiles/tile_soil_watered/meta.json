@@ -1,11 +1,5 @@
 {
  "id": "tile_soil_watered",
  "method": "create-image-pixflux",
- "prompt": "seamless top-down ground texture tile, Политая земля, pixel art, farming game, muted cold palette",
- "size": [
-  32,
-  32
- ],
- "generations": 5.0,
- "date": "2026-09-25"
+ "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: dark wet tilled farm soil, darker and glistening, top-down pixel art"
 }

@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_soil_spring",
  "method": "create-tileset",
- "lower": "short grass",
- "upper": "bare farm soil",
+ "lower": "short green grass",
+ "upper": "dark brown tilled farm soil",
  "tile": 32,
- "tileset_id": "2df0a275-3e27-472c-b4e0-3aa03383c29a",
- "generations": 16.0,
+ "tileset_id": "6ee45ad1-7876-4d85-ab4d-6e971d95cb31",
+ "generations": 12.0,
  "date": "2026-09-25"
 }

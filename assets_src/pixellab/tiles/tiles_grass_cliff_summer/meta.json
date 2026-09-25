@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_cliff_summer",
  "method": "create-tileset",
- "lower": "short northern grass",
- "upper": "dark basalt cliff rock",
+ "lower": "short green grass",
+ "upper": "dark grey basalt cliff rock",
  "tile": 32,
- "tileset_id": "57915cdd-efda-47d0-8693-8bd8d16e0400",
- "generations": 24.0,
+ "tileset_id": "9cdfdd6a-d438-427f-8b9a-1fc5943cd0ec",
+ "generations": 20.0,
  "date": "2026-09-25"
 }

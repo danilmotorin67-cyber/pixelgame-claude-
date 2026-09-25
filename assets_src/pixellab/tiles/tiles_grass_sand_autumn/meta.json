@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_sand_autumn",
  "method": "create-tileset",
- "lower": "short northern grass in autumn colours",
- "upper": "pale dry beach sand with shells in autumn colours",
+ "lower": "dull olive-yellow autumn grass",
+ "upper": "pale beach sand with shells",
  "tile": 32,
- "tileset_id": "295e8546-4311-4992-9f0b-ed767a3c042f",
- "generations": 24.0,
+ "tileset_id": "a67ea3ef-b362-4475-b2bd-273bc640304c",
+ "generations": 6.0,
  "date": "2026-09-25"
 }

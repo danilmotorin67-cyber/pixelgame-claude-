@@ -1,11 +1,5 @@
 {
  "id": "tile_soil_tilled",
  "method": "create-image-pixflux",
- "prompt": "seamless top-down ground texture tile, Вскопанная земля, pixel art, farming game, muted cold palette",
- "size": [
-  32,
-  32
- ],
- "generations": 0.0,
- "date": "2026-09-25"
+ "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: dark brown tilled farm soil with furrows, top-down pixel art"
 }

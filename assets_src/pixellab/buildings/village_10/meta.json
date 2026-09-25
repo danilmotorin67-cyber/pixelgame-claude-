@@ -1,13 +1,13 @@
 {
  "id": "village_10",
  "method": "map-objects",
- "prompt": "northern fishing village building: «Шерсть и кости» Маргит, timber and stone, turf or slate roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "fishing village house with turf roof, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
  "size": [
-  128,
-  192
+  160,
+  128
  ],
- "view": "high top-down",
- "object_id": "5779d185-e202-46f7-b810-4d8e3c365354",
- "generations": 3.0,
+ "view": "side",
+ "object_id": "2c97e0b7-c743-4894-b655-1cb3028a70cc",
+ "generations": 6.0,
  "date": "2026-09-25"
 }

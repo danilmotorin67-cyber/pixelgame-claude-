@@ -1,13 +1,13 @@
 {
  "id": "rann_stone",
  "method": "map-objects",
- "prompt": "split standing stone in the surf, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "tall split standing stone in the sea surf, cracked in two, seaweed at the base, no buildings, pixel art, muted cold palette",
  "size": [
   64,
   64
  ],
  "view": "high top-down",
- "object_id": "435297dc-ba56-4891-9bda-f48f7bd0e29a",
- "generations": 2.0,
+ "object_id": "0ee98225-0daf-429c-a290-6861fb66b27d",
+ "generations": 4.0,
  "date": "2026-09-25"
 }

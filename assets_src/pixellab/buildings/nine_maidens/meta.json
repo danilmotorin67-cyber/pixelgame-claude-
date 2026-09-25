@@ -1,13 +1,13 @@
 {
  "id": "nine_maidens",
  "method": "map-objects",
- "prompt": "circle of nine standing stones on moor, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "ring of nine ancient standing stones on heather moorland, seen from above at an angle, no buildings, pixel art, muted cold palette",
  "size": [
   288,
   288
  ],
  "view": "high top-down",
- "object_id": "16365f5f-160c-4331-b36f-62a215bbb8ff",
+ "object_id": "7a6d14a7-eca3-47c7-834b-cfc90c4428eb",
  "generations": 5.0,
  "date": "2026-09-25"
 }

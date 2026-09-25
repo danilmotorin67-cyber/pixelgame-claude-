@@ -1,13 +1,13 @@
 {
  "id": "steamer_gull",
  "method": "map-objects",
- "prompt": "small mail steamer at the pier, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "small old coastal mail steamer ship with one funnel, side view, moored, pixel art, muted cold palette",
  "size": [
   192,
   96
  ],
- "view": "high top-down",
- "object_id": "d39d4231-3dec-432b-adaa-e1c02f8b53da",
+ "view": "side",
+ "object_id": "628f3b3b-033b-4e58-8c9a-89113bbbe669",
  "generations": 5.0,
  "date": "2026-09-25"
 }

@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_cobble_autumn",
  "method": "create-tileset",
- "lower": "short grass in autumn colours",
- "upper": "grey cobblestone street in autumn colours",
+ "lower": "dull olive-yellow autumn grass",
+ "upper": "grey cobblestone street",
  "tile": 32,
- "tileset_id": "ceaccec1-c5b4-4c07-9971-1cf65c1cbb89",
+ "tileset_id": "74acfdd4-c161-45d0-977b-c444374e87d6",
  "generations": 12.0,
  "date": "2026-09-25"
 }

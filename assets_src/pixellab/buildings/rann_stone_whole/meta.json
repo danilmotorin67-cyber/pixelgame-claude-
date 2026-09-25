@@ -1,13 +1,13 @@
 {
  "id": "rann_stone_whole",
  "method": "map-objects",
- "prompt": "whole glowing standing stone, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "tall whole standing stone glowing with faint blue light, seaweed at the base, no buildings, pixel art, muted cold palette",
  "size": [
   64,
   64
  ],
  "view": "high top-down",
- "object_id": "79e22310-988f-449c-856f-2b933f422f45",
+ "object_id": "baf8db67-f39f-4c7f-b84d-e677cecc4981",
  "generations": 3.0,
  "date": "2026-09-25"
 }

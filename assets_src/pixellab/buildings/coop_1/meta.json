@@ -1,0 +1,13 @@
+{
+ "id": "coop_1",
+ "method": "map-objects",
+ "prompt": "small wooden hen house with little ramp, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  96,
+  80
+ ],
+ "view": "side",
+ "object_id": "58e79a9c-e2d6-4d15-b811-fdd79be84d57",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

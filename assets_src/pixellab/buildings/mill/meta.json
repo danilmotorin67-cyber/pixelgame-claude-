@@ -1,13 +1,13 @@
 {
  "id": "mill",
  "method": "map-objects",
- "prompt": "working windmill, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "stone windmill with four sails, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
  "size": [
   96,
   160
  ],
- "view": "high top-down",
- "object_id": "850b3134-992e-469d-b208-2beccc67cadf",
- "generations": 5.0,
+ "view": "side",
+ "object_id": "5f0ea59e-4646-463f-94fe-fda095277913",
+ "generations": 4.0,
  "date": "2026-09-25"
 }

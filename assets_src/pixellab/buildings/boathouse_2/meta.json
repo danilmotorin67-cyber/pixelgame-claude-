@@ -1,0 +1,13 @@
+{
+ "id": "boathouse_2",
+ "method": "map-objects",
+ "prompt": "larger wooden boathouse with slipway doors, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "size": [
+  160,
+  112
+ ],
+ "view": "side",
+ "object_id": "6215c59c-cc83-4f5c-afcb-0fe6685419bb",
+ "generations": 1.0,
+ "date": "2026-09-25"
+}

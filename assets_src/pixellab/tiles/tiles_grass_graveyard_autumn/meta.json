@@ -1,10 +1,10 @@
 {
  "id": "tiles_grass_graveyard_autumn",
  "method": "create-tileset",
- "lower": "short grass in autumn colours",
- "upper": "trodden graveyard earth with gravel in autumn colours",
+ "lower": "dull olive-yellow autumn grass",
+ "upper": "grey gravel graveyard earth",
  "tile": 32,
- "tileset_id": "87d0e32d-7381-445a-acdb-eebfddda9cbc",
- "generations": 16.0,
+ "tileset_id": "2f93fc37-2334-4585-889b-379880017b14",
+ "generations": 20.0,
  "date": "2026-09-25"
 }

@@ -1,13 +1,13 @@
 {
  "id": "ice_house",
  "method": "map-objects",
- "prompt": "half-buried ice house with turf roof, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "half-buried ice house with turf roof and heavy door, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
  "size": [
   96,
   80
  ],
- "view": "high top-down",
- "object_id": "37657bad-f03a-485d-b4dd-26935ec8d13d",
- "generations": 4.0,
+ "view": "side",
+ "object_id": "234e1f4e-92a5-4708-9c46-11c35610c75f",
+ "generations": 2.0,
  "date": "2026-09-25"
 }

@@ -1,11 +1,5 @@
 {
  "id": "tile_soil_salt2",
  "method": "create-image-pixflux",
- "prompt": "seamless top-down ground texture tile, Земля, Соль 2 (белая корка), pixel art, farming game, muted cold palette",
- "size": [
-  32,
-  32
- ],
- "generations": 7.0,
- "date": "2026-09-25"
+ "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: tilled farm soil covered with a white salt crust, top-down pixel art"
 }

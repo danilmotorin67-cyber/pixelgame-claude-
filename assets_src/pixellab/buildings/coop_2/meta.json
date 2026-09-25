@@ -1,13 +1,13 @@
 {
  "id": "coop_2",
  "method": "map-objects",
- "prompt": "bigger hen house, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "bigger wooden hen house, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
  "size": [
   112,
   88
  ],
- "view": "high top-down",
- "object_id": "4c9cdfd8-16cd-406b-9a9d-4806f873774e",
- "generations": 3.0,
+ "view": "side",
+ "object_id": "2644da39-6099-4749-8259-0f1a2060a823",
+ "generations": 6.0,
  "date": "2026-09-25"
 }

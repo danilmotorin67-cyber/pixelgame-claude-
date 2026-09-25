@@ -1,11 +1,5 @@
 {
  "id": "tile_stone_path",
  "method": "create-image-pixflux",
- "prompt": "seamless top-down ground texture tile, Каменная дорожка, pixel art, farming game, muted cold palette",
- "size": [
-  32,
-  32
- ],
- "generations": 3.0,
- "date": "2026-09-25"
+ "prompt": "seamless tileable ground texture filling the whole square edge to edge, no border, no grass edge: flat grey stone paving slabs, top-down pixel art"
 }

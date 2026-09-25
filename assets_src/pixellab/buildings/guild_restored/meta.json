@@ -1,13 +1,13 @@
 {
  "id": "guild_restored",
  "method": "map-objects",
- "prompt": "restored guild hall with lanterns, straight front view facade facing the camera, orthographic, roof seen from slightly above, cozy farming game building like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
+ "prompt": "restored old guild hall with lanterns and banners, front elevation, flat straight-on view of the front facade, symmetrical, camera directly in front and slightly above, NOT isometric, no side walls visible, cozy farming game like Stardew Valley, northern island, weathered stone and timber, muted cold palette with warm lamp light",
  "size": [
   256,
   192
  ],
- "view": "high top-down",
- "object_id": "84f54c81-601b-4344-86cc-2371c8e9d6a5",
+ "view": "side",
+ "object_id": "119bc000-721d-40ef-8bd5-c6555a0f5dd1",
  "generations": 3.0,
  "date": "2026-09-25"
 }
