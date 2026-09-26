@@ -31,6 +31,15 @@
     "north",
     "west"
    ]
+  },
+  "work": {
+   "generations": 3.0,
+   "group": "ba729980-9a38-4b4d-8598-0b1afd130d95",
+   "action_description": "looking through binoculars",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
   }
  }
 }

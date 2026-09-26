@@ -83,11 +83,22 @@
               "Idle/animations/walking/east/frame_004.png",
               "Idle/animations/walking/east/frame_005.png"
             ]
+          },
+          "work": {
+            "south": [
+              "Idle/animations/work/south/frame_000.png",
+              "Idle/animations/work/south/frame_001.png",
+              "Idle/animations/work/south/frame_002.png",
+              "Idle/animations/work/south/frame_003.png",
+              "Idle/animations/work/south/frame_004.png",
+              "Idle/animations/work/south/frame_005.png",
+              "Idle/animations/work/south/frame_006.png"
+            ]
           }
         }
       }
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-25T13:14:56.293481"
+  "export_date": "2026-09-26T01:55:57.688914"
 }

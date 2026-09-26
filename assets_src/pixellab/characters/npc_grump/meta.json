@@ -20,6 +20,26 @@
     "north",
     "west"
    ]
+  },
+  "breathing-idle": {
+   "generations": 5.0,
+   "group": "31ae9df2-ccc5-491a-a318-b165e29a71d5",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 1.0,
+   "group": "6ed7c715-8744-42d2-9b29-4a45f80a51b5",
+   "action_description": "blowing a whistle",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
   }
  }
 }
