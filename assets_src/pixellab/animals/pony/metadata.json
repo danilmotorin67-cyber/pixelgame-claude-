@@ -24,6 +24,26 @@
           "north": "Idle/rotations/north.png"
         },
         "animations": {
+          "graze": {
+            "east": [
+              "Idle/animations/graze/east/frame_000.png",
+              "Idle/animations/graze/east/frame_001.png",
+              "Idle/animations/graze/east/frame_002.png",
+              "Idle/animations/graze/east/frame_003.png",
+              "Idle/animations/graze/east/frame_004.png",
+              "Idle/animations/graze/east/frame_005.png",
+              "Idle/animations/graze/east/frame_006.png"
+            ],
+            "south": [
+              "Idle/animations/graze/south/frame_000.png",
+              "Idle/animations/graze/south/frame_001.png",
+              "Idle/animations/graze/south/frame_002.png",
+              "Idle/animations/graze/south/frame_003.png",
+              "Idle/animations/graze/south/frame_004.png",
+              "Idle/animations/graze/south/frame_005.png",
+              "Idle/animations/graze/south/frame_006.png"
+            ]
+          },
           "animating": {
             "west": [
               "Idle/animations/animating/west/frame_000.png",
@@ -57,11 +77,65 @@
               "Idle/animations/animating/east/frame_004.png",
               "Idle/animations/animating/east/frame_005.png"
             ]
+          },
+          "animating-dd2d3e20": {
+            "north": [
+              "Idle/animations/animating-dd2d3e20/north/frame_000.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_001.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_002.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_003.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_004.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_005.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_006.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_007.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_008.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_009.png",
+              "Idle/animations/animating-dd2d3e20/north/frame_010.png"
+            ],
+            "west": [
+              "Idle/animations/animating-dd2d3e20/west/frame_000.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_001.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_002.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_003.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_004.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_005.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_006.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_007.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_008.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_009.png",
+              "Idle/animations/animating-dd2d3e20/west/frame_010.png"
+            ],
+            "east": [
+              "Idle/animations/animating-dd2d3e20/east/frame_000.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_001.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_002.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_003.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_004.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_005.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_006.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_007.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_008.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_009.png",
+              "Idle/animations/animating-dd2d3e20/east/frame_010.png"
+            ],
+            "south": [
+              "Idle/animations/animating-dd2d3e20/south/frame_000.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_001.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_002.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_003.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_004.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_005.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_006.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_007.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_008.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_009.png",
+              "Idle/animations/animating-dd2d3e20/south/frame_010.png"
+            ]
           }
         }
       }
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-25T14:35:15.994989"
+  "export_date": "2026-09-26T15:12:16.240330"
 }

@@ -90,7 +90,7 @@ def beast(aid, desc, template_id, size, graze="lowering head and grazing grass",
     if not _meta(folder).get("character_id"):
         pl.create_character(group, aid, f"{desc}, {STYLE}", size, size, {"template_id": template_id})
     _template_any(group, aid, ["walk-6-frames", "walking", "walk"])
-    _template_any(group, aid, ["idle", "breathing-idle"])
+    _template_any(group, aid, ["idle", "breathing-idle", "idle-shaking-head"])
     if graze:
         action(group, aid, "graze", graze, ("south", "east"), 6)
     return aid

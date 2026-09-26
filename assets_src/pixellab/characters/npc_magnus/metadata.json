@@ -70,29 +70,37 @@
             ]
           },
           "animating": {
-            "north": [
-              "Idle/animations/animating/north/frame_000.png",
-              "Idle/animations/animating/north/frame_001.png",
-              "Idle/animations/animating/north/frame_002.png",
-              "Idle/animations/animating/north/frame_003.png"
-            ],
-            "west": [
-              "Idle/animations/animating/west/frame_000.png",
-              "Idle/animations/animating/west/frame_001.png",
-              "Idle/animations/animating/west/frame_002.png",
-              "Idle/animations/animating/west/frame_003.png"
-            ],
-            "east": [
-              "Idle/animations/animating/east/frame_000.png",
-              "Idle/animations/animating/east/frame_001.png",
-              "Idle/animations/animating/east/frame_002.png",
-              "Idle/animations/animating/east/frame_003.png"
-            ],
             "south": [
               "Idle/animations/animating/south/frame_000.png",
               "Idle/animations/animating/south/frame_001.png",
               "Idle/animations/animating/south/frame_002.png",
               "Idle/animations/animating/south/frame_003.png"
+            ]
+          },
+          "animating-c35d42bd": {
+            "north": [
+              "Idle/animations/animating-c35d42bd/north/frame_000.png",
+              "Idle/animations/animating-c35d42bd/north/frame_001.png",
+              "Idle/animations/animating-c35d42bd/north/frame_002.png",
+              "Idle/animations/animating-c35d42bd/north/frame_003.png"
+            ],
+            "west": [
+              "Idle/animations/animating-c35d42bd/west/frame_000.png",
+              "Idle/animations/animating-c35d42bd/west/frame_001.png",
+              "Idle/animations/animating-c35d42bd/west/frame_002.png",
+              "Idle/animations/animating-c35d42bd/west/frame_003.png"
+            ],
+            "east": [
+              "Idle/animations/animating-c35d42bd/east/frame_000.png",
+              "Idle/animations/animating-c35d42bd/east/frame_001.png",
+              "Idle/animations/animating-c35d42bd/east/frame_002.png",
+              "Idle/animations/animating-c35d42bd/east/frame_003.png"
+            ],
+            "south": [
+              "Idle/animations/animating-c35d42bd/south/frame_000.png",
+              "Idle/animations/animating-c35d42bd/south/frame_001.png",
+              "Idle/animations/animating-c35d42bd/south/frame_002.png",
+              "Idle/animations/animating-c35d42bd/south/frame_003.png"
             ]
           },
           "walking-ef1917a4": {
@@ -134,5 +142,5 @@
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-25T13:28:34.812686"
+  "export_date": "2026-09-26T15:04:30.978351"
 }

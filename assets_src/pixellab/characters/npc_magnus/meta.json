@@ -40,6 +40,14 @@
     "south"
    ],
    "frame_count": 6
+  },
+  "breathing-idle:south": {
+   "generations": 4.0,
+   "group": "674477bf-b46e-4576-a0eb-b051bef7760b",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south"
+   ]
   }
  }
 }

@@ -31,6 +31,23 @@
     "north",
     "west"
    ]
+  },
+  "breathing-idle:south": {
+   "generations": 1.0,
+   "group": "928c4685-4dd0-4b82-bfa4-ffc48ce4615c",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south"
+   ]
+  },
+  "idle": {
+   "generations": 2.0,
+   "group": "3191c7c5-8bea-4b49-a037-ffa6d95bc186",
+   "action_description": "standing still facing the viewer, gentle breathing",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
   }
  }
 }

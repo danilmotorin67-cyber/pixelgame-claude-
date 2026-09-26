@@ -44,10 +44,29 @@ func _ready() -> void:
 		add_child(body)
 
 
+# PixelLab sprite for the building at its current level; "" keeps the drawn shape.
+func sprite_id() -> String:
+	var level := maxi(Buildings.level(building), 1)
+	match building:
+		"coop", "barn":
+			return "%s_%d" % [building, mini(level, 3)]
+		"hayloft":
+			return "hayloft_%d" % mini(level, 2)
+		"chapel":
+			return "chapel_small"
+		"stable", "workshop", "well", "ice_house", "hearse":
+			return building
+	return ""
+
+
 func _draw() -> void:
 	var look: Dictionary = LOOK[building]
 	var size: Vector2 = look["size"]
 	var top := -size / 2.0
+	var art := sprite_id()
+	if art != "" and BuildingArt.texture(art) != null:
+		BuildingArt.draw(self, art, Vector2(0, size.y / 2.0))
+		return
 	if building == "pasture":
 		for x in range(int(top.x), int(-top.x) + 1, 10):
 			draw_rect(Rect2(x, top.y, 2, 8), Color(str(look["wall"])))

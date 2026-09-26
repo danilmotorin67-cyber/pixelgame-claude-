@@ -13,7 +13,7 @@
   (sea life, flying birds) get the direction "south".
 
 Run: python3 tools/build_art.py"""
-import os, json, glob
+import os, re, json, glob
 from PIL import Image
 
 SRC = "assets_src/pixellab"
@@ -67,7 +67,7 @@ def build_buildings():
 
 CAST_OUT = "assets/sprites/cast"
 NAMES = {"walking": "walk", "walk-6-frames": "walk", "walk-8-frames": "walk", "walk-4-frames": "walk",
-         "animating": "idle", "breathing-idle": "idle"}
+         "animating": "idle", "breathing-idle": "idle", "idle-shaking-head": "idle"}
 
 
 def _pack(aid, strips):
@@ -90,6 +90,19 @@ def _pack(aid, strips):
         json.dump({"frame": [fw, fh], "foot": foot or fh, "anims": anims}, f, indent=1, sort_keys=True)
 
 
+def _meta_groups(folder):
+    """(export folder name, group id) of each recorded animation, in creation order."""
+    path = os.path.join(folder, "meta.json")
+    if not os.path.exists(path):
+        return []
+    out = []
+    for key, info in json.load(open(path)).get("animations", {}).items():
+        template = info.get("template_animation_id")
+        base = {"breathing-idle": "animating"}.get(template, template) if template else key.split(":")[0]
+        out.append((base, str(info.get("group") or "")))
+    return out
+
+
 def build_cast():
     os.makedirs(CAST_OUT, exist_ok=True)
     count = 0
@@ -104,10 +117,30 @@ def build_cast():
                 for d in ("south", "east", "north", "west"):
                     if d in frames["rotations"]:
                         strips.append(("rot", d, [load(frames["rotations"][d])]))
-                for name, dirs in sorted(frames.get("animations", {}).items()):
+                # A re-run animation gets a folder "<name>-<first 8 of its group id>" or takes the plain
+                # name; meta.json records the groups in creation order. Directions merge oldest first,
+                # so a direction redone later (a fixed south idle) replaces the old one.
+                anims = frames.get("animations", {})
+                order = {}
+                recorded = list(_meta_groups(folder))
+                for name in anims:
+                    m = re.fullmatch(r"(.*)-([0-9a-f]{8})", name)
+                    if m:
+                        order[name] = next((i for i, (b, g) in enumerate(recorded) if g.startswith(m.group(2))), -1)
+                for name in anims:
+                    if name in order:
+                        continue
+                    claimed = {order[n] for n in order if n.startswith(name + "-")}
+                    free = [i for i, (b, g) in enumerate(recorded) if b == name and i not in claimed]
+                    order[name] = free[0] if free else -1
+                merged = {}
+                for name in sorted(anims, key=lambda n: order[n]):
+                    base = re.sub(r"-[0-9a-f]{8}$", "", name)
+                    merged.setdefault(NAMES.get(base, base), {}).update(anims[name])
+                for name, dirs in sorted(merged.items()):
                     for d in ("south", "east", "north", "west"):
                         if d in dirs:
-                            strips.append((NAMES.get(name, name), d, [load(rel) for rel in dirs[d]]))
+                            strips.append((name, d, [load(rel) for rel in dirs[d]]))
             else:
                 still = os.path.join(folder, aid + ".png")
                 if not os.path.exists(still):

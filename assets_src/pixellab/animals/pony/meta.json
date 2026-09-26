@@ -20,6 +20,27 @@
     "north",
     "west"
    ]
+  },
+  "idle-shaking-head": {
+   "generations": 8.0,
+   "group": "dd2d3e20-ae3a-400d-a158-5b467e523b6d",
+   "template_animation_id": "idle-shaking-head",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "graze": {
+   "generations": 3.0,
+   "group": "5bd3c1de-0a1a-48ab-8ca5-78663355bd06",
+   "action_description": "lowering head and grazing grass",
+   "directions": [
+    "south",
+    "east"
+   ],
+   "frame_count": 6
   }
  }
 }

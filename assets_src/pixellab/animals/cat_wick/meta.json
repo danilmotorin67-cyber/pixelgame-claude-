@@ -1,18 +1,18 @@
 {
  "id": "cat_wick",
  "method": "create-character-with-4-directions",
- "prompt": "ginger tabby cat with white paws, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "prompt": "sleek old black cat with yellow eyes, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
  "size": [
   32,
   32
  ],
- "character_id": "76594d49-409d-4bbe-97ae-57d14194a08e",
- "generations": 4.0,
- "date": "2026-09-25",
+ "character_id": "bf881c5f-a8e8-433c-b869-ae889b8954e0",
+ "generations": 1.0,
+ "date": "2026-09-26",
  "animations": {
   "walk-6-frames": {
-   "generations": 9.0,
-   "group": "9e73c4c2-df85-47e8-a710-3daa8b6ba809",
+   "generations": 4.0,
+   "group": "d7381bce-e5a8-40cd-b0dd-276862e8f665",
    "template_animation_id": "walk-6-frames",
    "directions": [
     "south",
@@ -22,8 +22,8 @@
    ]
   },
   "idle": {
-   "generations": 6.0,
-   "group": "2cea4eb6-d2fc-4f78-9f1f-f5721c900388",
+   "generations": 3.0,
+   "group": "c0ec54c0-66e2-436e-8099-53a987348d07",
    "template_animation_id": "idle",
    "directions": [
     "south",
@@ -33,8 +33,8 @@
    ]
   },
   "sleep": {
-   "generations": 5.0,
-   "group": "1c3c7046-b525-4207-aed8-c2cdb9516377",
+   "generations": 2.0,
+   "group": "ea1819ea-5b8b-43da-8b10-ab52bc5ce268",
    "action_description": "curling up into a ball and sleeping",
    "directions": [
     "south"

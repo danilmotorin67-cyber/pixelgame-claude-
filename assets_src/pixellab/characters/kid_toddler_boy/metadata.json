@@ -50,6 +50,15 @@
               "Idle/animations/animating/west/frame_003.png"
             ]
           },
+          "idle": {
+            "south": [
+              "Idle/animations/idle/south/frame_000.png",
+              "Idle/animations/idle/south/frame_001.png",
+              "Idle/animations/idle/south/frame_002.png",
+              "Idle/animations/idle/south/frame_003.png",
+              "Idle/animations/idle/south/frame_004.png"
+            ]
+          },
           "walking": {
             "south": [
               "Idle/animations/walking/south/frame_000.png",
@@ -83,11 +92,19 @@
               "Idle/animations/walking/east/frame_004.png",
               "Idle/animations/walking/east/frame_005.png"
             ]
+          },
+          "animating-928c4685": {
+            "south": [
+              "Idle/animations/animating-928c4685/south/frame_000.png",
+              "Idle/animations/animating-928c4685/south/frame_001.png",
+              "Idle/animations/animating-928c4685/south/frame_002.png",
+              "Idle/animations/animating-928c4685/south/frame_003.png"
+            ]
           }
         }
       }
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-25T14:17:09.865081"
+  "export_date": "2026-09-26T15:08:13.819356"
 }
