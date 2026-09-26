@@ -1,0 +1,45 @@
+{
+ "id": "cat_wick",
+ "method": "create-character-with-4-directions",
+ "prompt": "ginger tabby cat with white paws, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  32,
+  32
+ ],
+ "character_id": "76594d49-409d-4bbe-97ae-57d14194a08e",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk-6-frames": {
+   "generations": 9.0,
+   "group": "9e73c4c2-df85-47e8-a710-3daa8b6ba809",
+   "template_animation_id": "walk-6-frames",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "idle": {
+   "generations": 6.0,
+   "group": "2cea4eb6-d2fc-4f78-9f1f-f5721c900388",
+   "template_animation_id": "idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "sleep": {
+   "generations": 5.0,
+   "group": "1c3c7046-b525-4207-aed8-c2cdb9516377",
+   "action_description": "curling up into a ball and sleeping",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  }
+ }
+}

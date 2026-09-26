@@ -1,0 +1,45 @@
+{
+ "id": "npc_tuve",
+ "method": "create-character-with-4-directions",
+ "prompt": "young selkie person, grey sealskin cloak, long dark wet hair, grey eyes, barefoot, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "16c20a24-d950-4350-9e70-3f13e597435a",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 9.0,
+   "group": "d03bca31-601c-4fe4-9321-2c45f005c9c3",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 5.0,
+   "group": "8dec3c86-270e-4685-8189-6a15629ced79",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 3.0,
+   "group": "c9a1ae96-b7b6-42c7-bb9e-4a1d9d64061e",
+   "action_description": "wringing water from long hair",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

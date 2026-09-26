@@ -31,6 +31,15 @@
     "north",
     "west"
    ]
+  },
+  "work": {
+   "generations": 21.0,
+   "group": "1504f0db-280f-45c5-b76c-1941cdfb3b80",
+   "action_description": "reading an open book",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
   }
  }
 }

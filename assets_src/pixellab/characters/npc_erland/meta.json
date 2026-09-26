@@ -1,0 +1,45 @@
+{
+ "id": "npc_erland",
+ "method": "create-character-with-4-directions",
+ "prompt": "old man 70, retired sea captain, captain's cap, white beard, pipe, wooden leg, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "fce3ac52-23de-4f4d-a439-f56d4cf1af4a",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 8.0,
+   "group": "13dbdc1b-bce7-404c-a652-7c3ea5d122de",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 6.0,
+   "group": "f6f23d69-9f8c-4942-a3d4-c1f5e3a5099f",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 31.0,
+   "group": "90888347-4a5f-4e79-944e-6cbdbec05f80",
+   "action_description": "smoking a pipe",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "gull_fly",
+ "method": "map-objects",
+ "prompt": "white and grey herring gull flying with spread wings, seen from above, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ca7edfd2-fb5d-446c-aabf-4b4390860a44",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "fly": {
+   "generations": 5.0,
+   "action": "flapping wings in flight",
+   "frames": 7
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "id": "sailor_rescued",
+ "method": "create-character-with-4-directions",
+ "prompt": "shivering rescued sailor wrapped in a grey blanket, wet hair, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "b65b70b4-92f6-4dc4-bec7-9cf7561ba8d8",
+ "generations": 7.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "dbabda41-84cd-4f80-9962-cc4636045596",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 8.0,
+   "group": "402687ec-91a7-4c19-8d08-cb3bde9934b8",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

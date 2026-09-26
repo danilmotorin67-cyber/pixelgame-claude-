@@ -1,0 +1,36 @@
+{
+ "id": "villager_1",
+ "method": "create-character-with-4-directions",
+ "prompt": "fisherman villager, wool sweater, knit cap, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "3c6ffb79-3d7c-4dd6-bf7e-b9d39ba20d0a",
+ "generations": 5.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "29d1004e-32c6-40ae-8f76-8a3bdd3d1d76",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 9.0,
+   "group": "af12622a-ed01-4c4d-b0f5-56e1ea819e0a",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

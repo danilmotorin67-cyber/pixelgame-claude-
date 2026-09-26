@@ -8,5 +8,38 @@
  ],
  "character_id": "55101000-1a46-41a6-80f1-065e0d3abe03",
  "generations": 4.0,
- "date": "2026-09-25"
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 8.0,
+   "group": "d6e1ee59-a952-45e1-b55e-77a21a585c8d",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 7.0,
+   "group": "59f3d260-c59f-4380-b69f-b585c233a6f7",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 8.0,
+   "group": "e4a8e787-1b2b-4e4a-a536-df451255ff00",
+   "action_description": "sawing a plank",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
 }

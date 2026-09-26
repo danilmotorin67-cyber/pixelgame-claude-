@@ -1,0 +1,45 @@
+{
+ "id": "npc_solveig",
+ "method": "create-character-with-4-directions",
+ "prompt": "cheerful plump woman 52, baker, red headscarf, flour on apron, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "0ebc29ff-25fb-450a-89ac-3d5abd4c9e45",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 13.0,
+   "group": "531db863-6239-4c07-8ff6-f55b228c9d18",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 10.0,
+   "group": "ede899cb-30b1-415a-87bf-1c1421670c85",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 5.0,
+   "group": "a9bc5155-e1ef-495f-bdfd-623a665b389b",
+   "action_description": "kneading dough",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "npc_sandro",
+ "method": "create-character-with-4-directions",
+ "prompt": "southern merchant, colourful striped clothes, gold earring, wide grin, dark curly hair, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "b043251a-0b7d-403a-9253-18f6ae3103da",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "20d11b48-5067-40da-bc06-2464c975f904",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 11.0,
+   "group": "341e493b-2db5-4c17-8336-28e4506b7765",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 4.0,
+   "group": "b58c46ef-7c67-4bd0-83d3-8da6057f4a7a",
+   "action_description": "showing off wares with open arms",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

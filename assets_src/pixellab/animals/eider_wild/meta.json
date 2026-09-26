@@ -1,0 +1,20 @@
+{
+ "id": "eider_wild",
+ "method": "map-objects",
+ "prompt": "wild eider duck swimming on the sea, seen from above at an angle, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3aee5995-9363-4467-9410-bd0598ff4c69",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "swim": {
+   "generations": 4.0,
+   "action": "duck bobbing on waves",
+   "frames": 5
+  }
+ }
+}

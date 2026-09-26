@@ -1,0 +1,20 @@
+{
+ "id": "raven",
+ "method": "map-objects",
+ "prompt": "black raven sitting, seen from above at an angle, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3526ca91-387c-49a9-963e-72e38bed42d5",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "animations": {
+  "idle": {
+   "generations": 4.0,
+   "action": "tilting head and cawing",
+   "frames": 5
+  }
+ }
+}

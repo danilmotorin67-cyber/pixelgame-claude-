@@ -1,0 +1,20 @@
+{
+ "id": "orca",
+ "method": "map-objects",
+ "prompt": "black and white orca fin and back breaking the sea surface, side view, pixel art, muted cold palette",
+ "size": [
+  128,
+  64
+ ],
+ "view": "side",
+ "object_id": "5bfc0527-0633-4af5-9487-902b7c9a492e",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "surface": {
+   "generations": 1.0,
+   "action": "orca rises and dives back into the water",
+   "frames": 7
+  }
+ }
+}

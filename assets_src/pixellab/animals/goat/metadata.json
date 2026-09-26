@@ -1,0 +1,129 @@
+{
+  "group_id": "704905b8-f0fc-43d3-968e-ad267dcbb075",
+  "states": [
+    {
+      "character": {
+        "id": "7c70b477-54c2-434c-b648-3cdb76043f82",
+        "name": "Idle",
+        "prompt": "white and brown goat with small horns and a beard, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "dog",
+        "directions": 4,
+        "view": "low top-down",
+        "created_at": "2026-09-25T14:26:55.982502+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "west": "Idle/rotations/west.png",
+          "east": "Idle/rotations/east.png",
+          "north": "Idle/rotations/north.png"
+        },
+        "animations": {
+          "graze": {
+            "east": [
+              "Idle/animations/graze/east/frame_000.png",
+              "Idle/animations/graze/east/frame_001.png",
+              "Idle/animations/graze/east/frame_002.png",
+              "Idle/animations/graze/east/frame_003.png",
+              "Idle/animations/graze/east/frame_004.png",
+              "Idle/animations/graze/east/frame_005.png",
+              "Idle/animations/graze/east/frame_006.png"
+            ],
+            "south": [
+              "Idle/animations/graze/south/frame_000.png",
+              "Idle/animations/graze/south/frame_001.png",
+              "Idle/animations/graze/south/frame_002.png",
+              "Idle/animations/graze/south/frame_003.png",
+              "Idle/animations/graze/south/frame_004.png",
+              "Idle/animations/graze/south/frame_005.png",
+              "Idle/animations/graze/south/frame_006.png"
+            ]
+          },
+          "animating": {
+            "south": [
+              "Idle/animations/animating/south/frame_000.png",
+              "Idle/animations/animating/south/frame_001.png",
+              "Idle/animations/animating/south/frame_002.png",
+              "Idle/animations/animating/south/frame_003.png",
+              "Idle/animations/animating/south/frame_004.png",
+              "Idle/animations/animating/south/frame_005.png",
+              "Idle/animations/animating/south/frame_006.png",
+              "Idle/animations/animating/south/frame_007.png"
+            ],
+            "west": [
+              "Idle/animations/animating/west/frame_000.png",
+              "Idle/animations/animating/west/frame_001.png",
+              "Idle/animations/animating/west/frame_002.png",
+              "Idle/animations/animating/west/frame_003.png",
+              "Idle/animations/animating/west/frame_004.png",
+              "Idle/animations/animating/west/frame_005.png",
+              "Idle/animations/animating/west/frame_006.png",
+              "Idle/animations/animating/west/frame_007.png"
+            ],
+            "east": [
+              "Idle/animations/animating/east/frame_000.png",
+              "Idle/animations/animating/east/frame_001.png",
+              "Idle/animations/animating/east/frame_002.png",
+              "Idle/animations/animating/east/frame_003.png",
+              "Idle/animations/animating/east/frame_004.png",
+              "Idle/animations/animating/east/frame_005.png",
+              "Idle/animations/animating/east/frame_006.png",
+              "Idle/animations/animating/east/frame_007.png"
+            ],
+            "north": [
+              "Idle/animations/animating/north/frame_000.png",
+              "Idle/animations/animating/north/frame_001.png",
+              "Idle/animations/animating/north/frame_002.png",
+              "Idle/animations/animating/north/frame_003.png",
+              "Idle/animations/animating/north/frame_004.png",
+              "Idle/animations/animating/north/frame_005.png",
+              "Idle/animations/animating/north/frame_006.png",
+              "Idle/animations/animating/north/frame_007.png"
+            ]
+          },
+          "animating-e7aced66": {
+            "west": [
+              "Idle/animations/animating-e7aced66/west/frame_000.png",
+              "Idle/animations/animating-e7aced66/west/frame_001.png",
+              "Idle/animations/animating-e7aced66/west/frame_002.png",
+              "Idle/animations/animating-e7aced66/west/frame_003.png",
+              "Idle/animations/animating-e7aced66/west/frame_004.png",
+              "Idle/animations/animating-e7aced66/west/frame_005.png"
+            ],
+            "east": [
+              "Idle/animations/animating-e7aced66/east/frame_000.png",
+              "Idle/animations/animating-e7aced66/east/frame_001.png",
+              "Idle/animations/animating-e7aced66/east/frame_002.png",
+              "Idle/animations/animating-e7aced66/east/frame_003.png",
+              "Idle/animations/animating-e7aced66/east/frame_004.png",
+              "Idle/animations/animating-e7aced66/east/frame_005.png"
+            ],
+            "south": [
+              "Idle/animations/animating-e7aced66/south/frame_000.png",
+              "Idle/animations/animating-e7aced66/south/frame_001.png",
+              "Idle/animations/animating-e7aced66/south/frame_002.png",
+              "Idle/animations/animating-e7aced66/south/frame_003.png",
+              "Idle/animations/animating-e7aced66/south/frame_004.png",
+              "Idle/animations/animating-e7aced66/south/frame_005.png"
+            ],
+            "north": [
+              "Idle/animations/animating-e7aced66/north/frame_000.png",
+              "Idle/animations/animating-e7aced66/north/frame_001.png",
+              "Idle/animations/animating-e7aced66/north/frame_002.png",
+              "Idle/animations/animating-e7aced66/north/frame_003.png",
+              "Idle/animations/animating-e7aced66/north/frame_004.png",
+              "Idle/animations/animating-e7aced66/north/frame_005.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-25T14:35:22.998175"
+}

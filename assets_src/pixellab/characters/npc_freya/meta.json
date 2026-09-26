@@ -1,0 +1,45 @@
+{
+ "id": "npc_freya",
+ "method": "create-character-with-4-directions",
+ "prompt": "girl 10, ghost-hunter club, two blonde braids, raincoat, small lantern, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "569bbbcf-65ae-4b44-9e76-040bd8c9214e",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 10.0,
+   "group": "870d9384-7a01-469f-8b31-521af52653c2",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 5.0,
+   "group": "aa1b53f4-3830-4f59-9d87-e75e4518f5bc",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 8.0,
+   "group": "ac49fb59-401b-4a53-abe3-43cfa13a0b5d",
+   "action_description": "raising a lantern high",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

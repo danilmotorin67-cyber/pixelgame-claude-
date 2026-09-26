@@ -1,0 +1,20 @@
+{
+ "id": "seal",
+ "method": "map-objects",
+ "prompt": "grey harbour seal lying on a rock, seen from above at an angle, pixel art, muted cold palette",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3927f3b3-04b1-4a4a-b1db-15b070185781",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "flop": {
+   "generations": 5.0,
+   "action": "seal flopping and lifting its head",
+   "frames": 7
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "npc_tora",
+ "method": "create-character-with-4-directions",
+ "prompt": "strong woman 54, blacksmith, grey hair tied back, bandaged hand, leather apron, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "0facb353-8826-4021-9c96-05f9e799fa22",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "f8d7c924-4bfb-4af1-8eaf-468ec06d51b3",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 10.0,
+   "group": "48f37f08-1136-4394-bad7-f32cc52536ce",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 1.0,
+   "group": "197c93ad-2219-4688-b1d3-afde83cffecb",
+   "action_description": "quenching hot iron in a bucket",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

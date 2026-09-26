@@ -8,5 +8,38 @@
  ],
  "character_id": "d3f5c351-89c2-4def-b8f1-e113940ab746",
  "generations": 2.0,
- "date": "2026-09-25"
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 10.0,
+   "group": "ef1917a4-71b1-42b5-b19a-9c0a4a48db52",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 6.0,
+   "group": "c35d42bd-0928-4115-9d76-0aef51a21284",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 18.0,
+   "group": "2289f5c8-7c19-4e07-a390-ee8583e74224",
+   "action_description": "checking a pocket watch",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
 }

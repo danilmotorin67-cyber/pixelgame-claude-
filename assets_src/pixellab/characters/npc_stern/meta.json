@@ -1,0 +1,45 @@
+{
+ "id": "npc_stern",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 49, city insurance director, black suit, black top hat, walking cane, stern face, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "eaa691d2-da37-493e-939f-ce2b67146c0c",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 10.0,
+   "group": "0322e3e4-cbf5-46c9-b98f-2e102911471e",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 10.0,
+   "group": "720a5861-1a16-4abc-9fdb-514c56ceb4be",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 5.0,
+   "group": "47ea1838-d9a2-4462-9eb0-471e9a54f236",
+   "action_description": "tapping cane impatiently",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

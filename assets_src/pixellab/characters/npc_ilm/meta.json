@@ -1,0 +1,45 @@
+{
+ "id": "npc_ilm",
+ "method": "create-character-with-4-directions",
+ "prompt": "old man 60, taciturn builder, white beard, flat cap, work jacket, carpenter's pencil, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "00cc7366-dfdd-436e-b1d3-aae0aca7381a",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 11.0,
+   "group": "b574b4bd-a4ca-454e-9ba5-a94a945ffc13",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 9.0,
+   "group": "6660a335-db95-4251-910a-6987aca8380e",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 10.0,
+   "group": "81a52310-693e-47ee-9912-3e72eab186e2",
+   "action_description": "measuring with a folding ruler",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "npc_nils",
+ "method": "create-character-with-4-directions",
+ "prompt": "boy 10, ghost-hunter club, flat cap, short trousers, butterfly net, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "aca672cb-9319-4ca6-85ff-310e44b90a70",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 6.0,
+   "group": "545c27a8-39d5-402e-94d5-867378376237",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 8.0,
+   "group": "67f0aa2a-2532-4a41-bef6-633f1fd10769",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 7.0,
+   "group": "09046e5c-7137-4c69-8f78-58a7c2e9a2cc",
+   "action_description": "swinging a butterfly net",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

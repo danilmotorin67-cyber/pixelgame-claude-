@@ -1,0 +1,20 @@
+{
+ "id": "raven_fly",
+ "method": "map-objects",
+ "prompt": "black raven flying with spread wings, seen from above, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b9447bf1-2c43-42b2-95d3-607cf70c2903",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "fly": {
+   "generations": 4.0,
+   "action": "gliding and flapping wings in flight",
+   "frames": 7
+  }
+ }
+}

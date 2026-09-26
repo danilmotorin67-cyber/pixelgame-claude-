@@ -1,0 +1,20 @@
+{
+ "id": "baby_cradle",
+ "method": "map-objects",
+ "prompt": "baby sleeping in a wooden cradle with a knitted blanket, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "1169a5a2-0009-4993-bbe9-11f2e4103b79",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "rock": {
+   "generations": 1.0,
+   "action": "cradle gently rocking",
+   "frames": 5
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "npc_palm",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 50, pedantic lighthouse inspector, navy uniform with brass buttons, clipboard, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "b2872807-925c-48b2-81a1-8601911922df",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 7.0,
+   "group": "1d255f92-a951-4fbb-82a9-b9bc63ae5b59",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 7.0,
+   "group": "dd109575-2814-4603-975c-bf5a501e98b3",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 2.0,
+   "group": "7b8ec527-1fa3-43fb-bdce-48edbc51ce6c",
+   "action_description": "writing on a clipboard",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

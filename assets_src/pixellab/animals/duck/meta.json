@@ -1,0 +1,35 @@
+{
+ "id": "duck",
+ "method": "create-character-v3",
+ "prompt": "white farm duck with orange beak, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  32,
+  32
+ ],
+ "character_id": "bb8cc397-a493-4166-8649-f30eb006c578",
+ "generations": 13.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk": {
+   "generations": 10.0,
+   "group": "ae9bb5da-5e9f-4212-b0a1-1355de8e79b0",
+   "action_description": "waddling walk",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ],
+   "frame_count": 6
+  },
+  "idle": {
+   "generations": 1.0,
+   "group": "fbf3c1b5-4dcf-4acf-9f24-c385547d7b20",
+   "action_description": "pecking at the ground",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  }
+ }
+}

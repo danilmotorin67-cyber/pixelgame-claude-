@@ -1,0 +1,45 @@
+{
+ "id": "npc_nut",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 30, rough fisherman, stubble, blue knit cap, wool sweater, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "f7928166-abbe-4f78-8266-c02efde64a5c",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 10.0,
+   "group": "bf25b318-261f-4b69-af99-720070063f0c",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 4.0,
+   "group": "e743dcc5-d4e5-4a13-bddf-8aaf4f9a3d53",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 6.0,
+   "group": "27c1c97e-f1bd-4d27-b0c0-478fe02d049a",
+   "action_description": "mending a fishing net",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

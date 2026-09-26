@@ -8,5 +8,39 @@
  ],
  "character_id": "e3ce2e4d-3396-4f43-a20e-5bdb5c5f71da",
  "generations": 5.0,
- "date": "2026-09-25"
+ "date": "2026-09-25",
+ "animations": {
+  "walk-6-frames": {
+   "generations": 14.0,
+   "group": "aa4f4651-01bf-498e-9d15-0357eab3aac6",
+   "template_animation_id": "walk-6-frames",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "idle": {
+   "generations": 9.0,
+   "group": "842a44ba-f1a5-4e3b-9353-bdec7f001dd7",
+   "template_animation_id": "idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "graze": {
+   "generations": 7.0,
+   "group": "29fec63e-6429-4612-8e82-3fbdbcbbf63b",
+   "action_description": "lowering head and grazing grass",
+   "directions": [
+    "south",
+    "east"
+   ],
+   "frame_count": 6
+  }
+ }
 }

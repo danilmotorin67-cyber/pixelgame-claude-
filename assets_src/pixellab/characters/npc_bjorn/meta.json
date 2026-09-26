@@ -1,0 +1,45 @@
+{
+ "id": "npc_bjorn",
+ "method": "create-character-with-4-directions",
+ "prompt": "barrel-bellied man 47, tavern keeper, big red beard, white apron, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "59a0642c-0554-41ee-822d-5c83a3f02bb3",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 7.0,
+   "group": "bc1c27ff-9757-4555-9449-8a0910126ef2",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 19.0,
+   "group": "f103548e-f52a-44d9-bf60-007e8bb70cba",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 2.0,
+   "group": "7d134237-35fc-4a00-b73f-598ef2ac68ef",
+   "action_description": "wiping a beer mug with a cloth",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

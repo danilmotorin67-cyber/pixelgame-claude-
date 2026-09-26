@@ -1,0 +1,46 @@
+{
+ "id": "goat",
+ "method": "create-character-with-4-directions",
+ "prompt": "white and brown goat with small horns and a beard, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "7c70b477-54c2-434c-b648-3cdb76043f82",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk-6-frames": {
+   "generations": 13.0,
+   "group": "e7aced66-12d8-4829-9b7d-ff498921e739",
+   "template_animation_id": "walk-6-frames",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "idle": {
+   "generations": 8.0,
+   "group": "9898583b-f618-498e-adba-107952dfbc75",
+   "template_animation_id": "idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "graze": {
+   "generations": 10.0,
+   "group": "0977cdac-725f-4619-90c4-0646ebddde6e",
+   "action_description": "lowering head and grazing grass",
+   "directions": [
+    "south",
+    "east"
+   ],
+   "frame_count": 6
+  }
+ }
+}

@@ -1,0 +1,45 @@
+{
+ "id": "npc_olaf",
+ "method": "create-character-with-4-directions",
+ "prompt": "young man 24, postman and telegraphist, round glasses, blue postal cap, leather satchel, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "a13077e0-cfc6-4e1f-b9b2-9c60bfc071ab",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 10.0,
+   "group": "b8f909d8-b6c8-4d69-be71-982b64daf83d",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 8.0,
+   "group": "fb451a49-3545-488e-b461-0ccfab8dc0f8",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 8.0,
+   "group": "5b7b4b0a-eb37-482a-8326-347e05394d65",
+   "action_description": "sorting letters",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

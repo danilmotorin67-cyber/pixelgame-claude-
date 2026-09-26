@@ -1,0 +1,45 @@
+{
+ "id": "npc_karl",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 55, gloomy shopkeeper, balding, long apron, ledger under arm, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "69e074ed-4b6f-43cb-ae40-3e331772720f",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "bc1d698e-cba2-4cfb-8779-28ad0631596c",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 11.0,
+   "group": "f193f612-f333-436a-8265-7c9217433757",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 3.0,
+   "group": "352ba173-9b88-4b49-9a28-12f1a51a507c",
+   "action_description": "writing in a ledger",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

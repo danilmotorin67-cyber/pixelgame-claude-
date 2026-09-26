@@ -1,0 +1,20 @@
+{
+ "id": "seal_swim",
+ "method": "map-objects",
+ "prompt": "grey seal head and back swimming in water, top-down, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "88ae3da2-69fd-4853-970b-d2dcd0c8159d",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "swim": {
+   "generations": 4.0,
+   "action": "swimming forward, bobbing in waves",
+   "frames": 7
+  }
+ }
+}

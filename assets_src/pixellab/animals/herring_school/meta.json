@@ -1,0 +1,20 @@
+{
+ "id": "herring_school",
+ "method": "map-objects",
+ "prompt": "school of silver herring seen from above in dark water, pixel art, muted cold palette",
+ "size": [
+  96,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "dfae258a-fb6f-432a-9332-4063855c78fd",
+ "generations": 7.0,
+ "date": "2026-09-25",
+ "animations": {
+  "shimmer": {
+   "generations": 2.0,
+   "action": "school of fish swirling and shimmering",
+   "frames": 7
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "puffin",
+ "method": "map-objects",
+ "prompt": "atlantic puffin standing, black and white with orange beak, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "60824e0c-f976-428f-8d6e-20f0f5332e79",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "idle": {
+   "generations": 3.0,
+   "action": "bobbing head, shuffling",
+   "frames": 5
+  }
+ }
+}

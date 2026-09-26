@@ -1,0 +1,25 @@
+{
+ "id": "npc_grump",
+ "method": "create-character-with-4-directions",
+ "prompt": "grumpy old steamer skipper, captain's cap, huge grey moustache, navy coat, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "cbd8bdfa-e76f-44f1-af5a-f3e1c7d5dbe0",
+ "generations": 5.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 13.0,
+   "group": "cf16451d-2281-488b-913d-9a55468fb0b5",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

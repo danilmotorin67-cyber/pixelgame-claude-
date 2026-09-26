@@ -1,0 +1,20 @@
+{
+ "id": "fish_shadow",
+ "method": "map-objects",
+ "prompt": "dark fish shadow under water seen from above, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4f8565c4-1f78-465b-aaa3-9df7c5b3e2ab",
+ "generations": 6.0,
+ "date": "2026-09-25",
+ "animations": {
+  "swim": {
+   "generations": 1.0,
+   "action": "fish shadow swimming, tail swaying",
+   "frames": 7
+  }
+ }
+}

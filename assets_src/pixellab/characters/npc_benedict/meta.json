@@ -1,0 +1,45 @@
+{
+ "id": "npc_benedict",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 45, chapel priest, black cassock, white collar, nervous look, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "1e352018-0f18-4536-b66f-d6c7390cb340",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 13.0,
+   "group": "f5612e05-6bb2-46d1-b4eb-37f776a57c95",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 12.0,
+   "group": "501f3d06-14c1-46d8-bcf1-037006f13875",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 5.0,
+   "group": "1fe3ed62-e4bd-44c9-9cad-87b108f4d757",
+   "action_description": "praying with folded hands",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

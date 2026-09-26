@@ -8,5 +8,38 @@
  ],
  "character_id": "17ac994a-e8a5-44b7-9c5f-1cc2fadce715",
  "generations": 3.0,
- "date": "2026-09-25"
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 5.0,
+   "group": "a146fd45-ced8-4b27-a2ea-ecb472173109",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 9.0,
+   "group": "4420aa17-38af-40f9-bb5c-d5e4e7917f2f",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 8.0,
+   "group": "f2286f11-9909-4965-8a63-a6f0eb5d9b7c",
+   "action_description": "hammering on an anvil",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
 }

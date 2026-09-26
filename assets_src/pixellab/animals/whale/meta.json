@@ -1,0 +1,20 @@
+{
+ "id": "whale",
+ "method": "map-objects",
+ "prompt": "humpback whale back and dorsal fin breaking the grey sea surface, side view, pixel art, muted cold palette",
+ "size": [
+  192,
+  96
+ ],
+ "view": "side",
+ "object_id": "d2eafb3d-2e63-46f0-8839-f006d18477d5",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "surface": {
+   "generations": 6.0,
+   "action": "whale surfaces, blows spray, dives and raises tail fluke",
+   "frames": 9
+  }
+ }
+}

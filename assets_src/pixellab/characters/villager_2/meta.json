@@ -1,0 +1,36 @@
+{
+ "id": "villager_2",
+ "method": "create-character-with-4-directions",
+ "prompt": "fishwife villager, headscarf, apron, basket, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "1f1b7229-cd60-418f-b01b-83729a8cc37a",
+ "generations": 6.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 12.0,
+   "group": "dd6eb54a-a85f-4d6a-b1c6-9fc5060183c4",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 9.0,
+   "group": "04b2e2b8-93fb-42ce-b3e4-f6d2d7fe222d",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

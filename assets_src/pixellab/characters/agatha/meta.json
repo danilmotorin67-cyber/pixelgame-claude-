@@ -1,0 +1,36 @@
+{
+ "id": "agatha",
+ "method": "create-character-with-4-directions",
+ "prompt": "old woman lighthouse keeper, long grey braid, yellow oilskin coat, holding a lantern, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "892388ed-60fb-45b3-b8b2-4bb37b454576",
+ "generations": 4.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 8.0,
+   "group": "b64b652a-3dde-4e31-a2fe-39388445e880",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 8.0,
+   "group": "7a07aefc-78f2-4f01-85cb-a4fcb1368ae8",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

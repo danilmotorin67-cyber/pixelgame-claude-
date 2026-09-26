@@ -1,0 +1,20 @@
+{
+ "id": "gull",
+ "method": "map-objects",
+ "prompt": "white and grey herring gull standing, seen from above at an angle, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "0bcdd4ce-b8d0-4624-9621-6eb18fa41a57",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "idle": {
+   "generations": 3.0,
+   "action": "turning head, looking around",
+   "frames": 5
+  }
+ }
+}

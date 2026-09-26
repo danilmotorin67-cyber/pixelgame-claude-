@@ -1,0 +1,36 @@
+{
+ "id": "kid_child_boy",
+ "method": "create-character-with-4-directions",
+ "prompt": "boy 7, wool sweater, short trousers, tousled hair, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "e68232d9-941d-4f06-8bec-030d5e4a8c44",
+ "generations": 2.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 16.0,
+   "group": "44b6d5c0-502f-48fb-a910-dbc383911ce4",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 7.0,
+   "group": "8b20b615-78e8-4293-b287-292479d5240a",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

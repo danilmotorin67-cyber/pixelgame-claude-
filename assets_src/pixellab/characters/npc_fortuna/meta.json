@@ -1,0 +1,20 @@
+{
+ "id": "npc_fortuna",
+ "method": "map-objects",
+ "prompt": "wooden ship figurehead of a maiden with chipped nose and flaking gilt, hanging on a wall, pixel art, muted cold palette",
+ "size": [
+  48,
+  64
+ ],
+ "view": "side",
+ "object_id": "dc81ac20-08b3-4ddf-bc5b-f8982d58c15f",
+ "generations": 3.0,
+ "date": "2026-09-25",
+ "animations": {
+  "speak": {
+   "generations": 3.0,
+   "action": "eyes glowing softly and lips moving while speaking",
+   "frames": 7
+  }
+ }
+}

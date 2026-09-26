@@ -1,0 +1,45 @@
+{
+ "id": "npc_halvdan",
+ "method": "create-character-with-4-directions",
+ "prompt": "man 58, village elder and merchant, grey beard, fine brown wool coat, holding a lantern, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "12a72676-e62b-4181-95ff-05be951c5c53",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walking": {
+   "generations": 8.0,
+   "group": "4135552b-b016-4ae2-b36e-e1837a809b41",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 13.0,
+   "group": "779ac942-3aab-4b9c-aa3a-8be403299b59",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "work": {
+   "generations": 9.0,
+   "group": "2c5542e6-e252-4d6f-a382-0782395be240",
+   "action_description": "counting coins",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  }
+ }
+}

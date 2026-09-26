@@ -1,0 +1,25 @@
+{
+ "id": "cow",
+ "method": "create-character-with-4-directions",
+ "prompt": "small shaggy northern cow, red-brown with white patches, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  64,
+  64
+ ],
+ "character_id": "e5a18b3e-d697-455f-b170-c8ffeb6a928f",
+ "generations": 8.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk-6-frames": {
+   "generations": 11.0,
+   "group": "87d27f6f-b847-46f1-9475-32dd8a74b52a",
+   "template_animation_id": "walk-6-frames",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

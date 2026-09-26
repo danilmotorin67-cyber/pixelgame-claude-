@@ -1,0 +1,25 @@
+{
+ "id": "pony",
+ "method": "create-character-with-4-directions",
+ "prompt": "small sturdy dun island pony with dark mane, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  64,
+  64
+ ],
+ "character_id": "89da4780-ae1c-484a-bebc-210cb668f48a",
+ "generations": 6.0,
+ "date": "2026-09-25",
+ "animations": {
+  "walk-6-frames": {
+   "generations": 9.0,
+   "group": "859033e9-3794-45e7-9e85-71c23c3806e1",
+   "template_animation_id": "walk-6-frames",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}
