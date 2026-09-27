@@ -1,0 +1,13 @@
+{
+ "id": "crop_flax_ripe",
+ "method": "map-objects",
+ "prompt": "flax with pale blue flowers and seed heads, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ac9fc2f2-a7d2-4739-88fa-4ebad319c827",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

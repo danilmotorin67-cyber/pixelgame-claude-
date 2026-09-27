@@ -1,0 +1,13 @@
+{
+ "id": "crop_rhubarb_3",
+ "method": "map-objects",
+ "prompt": "half-grown rhubarb leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "37448e5a-0c36-420b-811d-76a55cc31332",
+ "generations": 9.0,
+ "date": "2026-09-27"
+}

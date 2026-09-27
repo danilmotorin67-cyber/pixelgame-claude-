@@ -1,0 +1,13 @@
+{
+ "id": "crop_turnip_ripe",
+ "method": "map-objects",
+ "prompt": "white and purple turnip bulb showing above ground with leaves, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e5281b22-ed30-4580-a32b-71890eb02f7a",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

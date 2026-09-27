@@ -1,0 +1,13 @@
+{
+ "id": "crop_dill_1",
+ "method": "map-objects",
+ "prompt": "tiny sprout of feathery dill, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5270854c-3552-4152-8131-f4fec41a900b",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

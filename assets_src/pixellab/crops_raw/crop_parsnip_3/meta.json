@@ -1,0 +1,13 @@
+{
+ "id": "crop_parsnip_3",
+ "method": "map-objects",
+ "prompt": "half-grown parsnip leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c4d34923-e2e5-4d6b-9c98-bc36a6b38e64",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

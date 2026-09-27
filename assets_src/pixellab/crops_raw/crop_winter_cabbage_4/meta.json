@@ -1,0 +1,13 @@
+{
+ "id": "crop_winter_cabbage_4",
+ "method": "map-objects",
+ "prompt": "almost mature frosty cabbage leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "1a158ba0-d3dd-4f18-b445-021c65f55a98",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

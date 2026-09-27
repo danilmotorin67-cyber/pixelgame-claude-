@@ -1,0 +1,13 @@
+{
+ "id": "crop_hops_ripe",
+ "method": "map-objects",
+ "prompt": "hop vine on a pole with green hop cones, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f9494294-bdd1-4a79-900b-7af244c63d0f",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

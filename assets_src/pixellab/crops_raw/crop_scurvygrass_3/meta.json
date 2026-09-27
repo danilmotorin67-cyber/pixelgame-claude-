@@ -1,0 +1,13 @@
+{
+ "id": "crop_scurvygrass_3",
+ "method": "map-objects",
+ "prompt": "half-grown small round glossy leaves of scurvygrass, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "aa799f8c-bf54-4a23-b117-772da3ca726d",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

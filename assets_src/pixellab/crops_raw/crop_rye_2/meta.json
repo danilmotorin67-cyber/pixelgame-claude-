@@ -1,0 +1,13 @@
+{
+ "id": "crop_rye_2",
+ "method": "map-objects",
+ "prompt": "small young rye shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "418de039-52c9-4beb-b465-8db0aa87d6cf",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

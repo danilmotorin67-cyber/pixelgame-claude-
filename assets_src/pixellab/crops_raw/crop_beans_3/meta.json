@@ -1,0 +1,13 @@
+{
+ "id": "crop_beans_3",
+ "method": "map-objects",
+ "prompt": "half-grown bean shoots on a stick, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "a54d67c5-ecd0-41af-960d-37c6072638fc",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

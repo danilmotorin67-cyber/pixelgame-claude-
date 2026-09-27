@@ -1,11 +1,13 @@
-"""Crops (4 growth stages + ripe, in two 64-object batches at 32 px) and crafting stations
-(map-objects, 1 generation each). Output: assets_src/pixellab/crops/<crop>_<1-4|ripe>.png and
+"""Crops (4 growth stages + ripe) and crafting stations, all as map-objects (1 generation each).
+Output: assets_src/pixellab/crops/<crop>_<1-4|ripe>.png (prompts in crops_raw/<id>/meta.json) and
+assets_src/pixellab/stations/<id>/<id>.png; build_art copies them to assets/sprites/props/.
+Crop batches of 64 kept failing server-side (the object vanished mid-way), so each stage is its own
+32x32 map-object. Output: assets_src/pixellab/crops/<crop>_<1-4|ripe>.png and
 assets_src/pixellab/stations/<id>/<id>.png; build_art copies them to assets/sprites/props/."""
 import sys, os, json, time
 import concurrent.futures as cf
 sys.path.insert(0, "tools")
 import pixellab as pl
-import pixellab_icons as ic
 
 CROPS_OUT = os.path.join(pl.RAW, "crops")
 STATIONS_OUT = os.path.join(pl.RAW, "stations")
@@ -99,18 +101,17 @@ STATIONS = {
 }
 
 
-def crop_batch(name, ids):
-    if all(os.path.exists(os.path.join(CROPS_OUT, a + ".png")) for a in ids):
-        return f"{name} done"
-    oid = ic.batch({a: CROPS[a] for a in ids}, 32, name, CROP_STYLE)[0]
-    t0 = time.time()
-    # "review" at 95% shows up while frames are still being drawn: wait until every frame exists.
-    while len(pl.request("GET", f"/objects/{oid}").get("frame_urls") or []) < len(ids) and time.time() - t0 < 2400:
-        time.sleep(15)
-    made = ic.fetch(oid, ids, CROPS_OUT)
-    json.dump({"batch": oid, "items": {a: {"object_id": o, "prompt": CROPS[a]} for a, o in made.items()}},
-              open(os.path.join(CROPS_OUT, f"{name}_meta.json"), "w"), ensure_ascii=False, indent=1)
-    return f"{name} {len(made)}"
+def crop(aid):
+    path = os.path.join(CROPS_OUT, aid + ".png")
+    if os.path.exists(path):
+        return aid
+    try:
+        pl.create_map_object("crops_raw", aid, f"{CROPS[aid]}, {CROP_STYLE}", 32, 32, "high top-down")
+        os.makedirs(CROPS_OUT, exist_ok=True)
+        os.replace(os.path.join(pl.RAW, "crops_raw", aid, aid + ".png"), path)
+        return aid
+    except Exception as e:
+        return f"FAIL {aid} {str(e)[:200]}"
 
 
 def station(aid):
@@ -128,11 +129,10 @@ if __name__ == "__main__":
     start = pl.generations_left()
     ids = list(CROPS)
     with cf.ThreadPoolExecutor(4) as ex:
-        batches = [ex.submit(crop_batch, "crops_a", ids[:64]), ex.submit(crop_batch, "crops_b", ids[64:])]
         for r in ex.map(station, STATIONS):
             print(time.strftime("%H:%M:%S"), r, flush=True)
-        for b in batches:
-            print(b.result(), flush=True)
+        for r in ex.map(crop, ids):
+            print(time.strftime("%H:%M:%S"), r, flush=True)
     if not os.path.exists(os.path.join(pl.RAW, "props", "giant_turnip", "giant_turnip.png")):
         pl.create_map_object("props", "giant_turnip", "giant turnip three times normal size in tilled soil, "
                              "pixel art, 3/4 top-down view, cozy farming game, transparent background", 96, 96, "high top-down")

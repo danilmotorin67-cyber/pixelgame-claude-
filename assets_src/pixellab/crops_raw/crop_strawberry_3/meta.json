@@ -1,0 +1,13 @@
+{
+ "id": "crop_strawberry_3",
+ "method": "map-objects",
+ "prompt": "half-grown strawberry plant leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4ad8a8f0-2b0f-41de-bde0-d71789ed6578",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "crop_samphire_2",
+ "method": "map-objects",
+ "prompt": "small young succulent samphire shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "58e9d0bb-9c08-4945-b8e5-647a8c799641",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

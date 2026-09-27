@@ -1,0 +1,13 @@
+{
+ "id": "crop_flax_3",
+ "method": "map-objects",
+ "prompt": "half-grown thin flax stems, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "457aac72-c493-4498-b3f7-c78bd01ad99b",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

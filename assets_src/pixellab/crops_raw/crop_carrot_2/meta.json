@@ -1,0 +1,13 @@
+{
+ "id": "crop_carrot_2",
+ "method": "map-objects",
+ "prompt": "small young feathery carrot tops, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "025b7994-5511-4af9-bca8-6aaab933ca9b",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

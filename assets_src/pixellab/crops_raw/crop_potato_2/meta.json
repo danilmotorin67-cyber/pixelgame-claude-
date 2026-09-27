@@ -1,0 +1,13 @@
+{
+ "id": "crop_potato_2",
+ "method": "map-objects",
+ "prompt": "small young potato plant leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "2658dd45-7c90-4082-9a39-433a4e0ee45f",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

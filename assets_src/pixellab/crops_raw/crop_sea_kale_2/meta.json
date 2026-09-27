@@ -1,0 +1,13 @@
+{
+ "id": "crop_sea_kale_2",
+ "method": "map-objects",
+ "prompt": "small young blue-grey sea kale leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "57a3dc9f-3a0a-4ed4-9899-0b6f45b5863f",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

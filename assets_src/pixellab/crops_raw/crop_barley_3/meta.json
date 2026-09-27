@@ -1,0 +1,13 @@
+{
+ "id": "crop_barley_3",
+ "method": "map-objects",
+ "prompt": "half-grown barley shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "8d47da4d-9baf-460d-ab07-60265ad40a84",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

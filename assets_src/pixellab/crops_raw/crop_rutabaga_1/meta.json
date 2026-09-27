@@ -1,0 +1,13 @@
+{
+ "id": "crop_rutabaga_1",
+ "method": "map-objects",
+ "prompt": "tiny sprout of rutabaga leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5023b847-abf9-430d-89d9-94807ea0693a",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "crop_potato_ripe",
+ "method": "map-objects",
+ "prompt": "flowering potato plant with potatoes peeking from soil, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "815875de-c2a4-4511-97b0-0fcf24950225",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

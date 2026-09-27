@@ -1,0 +1,13 @@
+{
+ "id": "crop_strawberry_ripe",
+ "method": "map-objects",
+ "prompt": "strawberry plant with red berries, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "7194d66b-4b54-4572-a81f-e46566151a4b",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

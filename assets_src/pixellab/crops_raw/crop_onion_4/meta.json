@@ -1,0 +1,13 @@
+{
+ "id": "crop_onion_4",
+ "method": "map-objects",
+ "prompt": "almost mature onion green shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "41db2e4e-d548-4510-9778-fe61ff2b0bc7",
+ "generations": 7.0,
+ "date": "2026-09-27"
+}

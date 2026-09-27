@@ -1,0 +1,13 @@
+{
+ "id": "crop_pea_ripe",
+ "method": "map-objects",
+ "prompt": "pea vine on a stick full of green pods, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "50db5a1c-baf4-4c47-b8cf-2a31bafa9ea0",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

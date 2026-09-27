@@ -1,0 +1,13 @@
+{
+ "id": "crop_cabbage_3",
+ "method": "map-objects",
+ "prompt": "half-grown young cabbage leaves, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d9bc1188-4a26-454e-ad32-f06a48e2fe9e",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

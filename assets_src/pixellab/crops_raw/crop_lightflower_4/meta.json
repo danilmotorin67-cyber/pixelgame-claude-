@@ -1,0 +1,13 @@
+{
+ "id": "crop_lightflower_4",
+ "method": "map-objects",
+ "prompt": "almost mature glowing pale shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "712755e7-b52c-4375-bfcd-efc8e6e94960",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

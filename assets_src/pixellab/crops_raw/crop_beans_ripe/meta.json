@@ -1,0 +1,13 @@
+{
+ "id": "crop_beans_ripe",
+ "method": "map-objects",
+ "prompt": "bean vine on a stick with long green pods, ripe and ready to harvest, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e8e4f077-0117-448b-aa08-f12e7cef20a4",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

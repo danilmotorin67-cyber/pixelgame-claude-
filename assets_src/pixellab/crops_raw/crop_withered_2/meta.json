@@ -1,0 +1,13 @@
+{
+ "id": "crop_withered_2",
+ "method": "map-objects",
+ "prompt": "dried up grey dead seedling, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "fcd31cc0-84f4-45e6-8b04-a524c7fabba8",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

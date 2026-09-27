@@ -1,0 +1,13 @@
+{
+ "id": "crop_leek_1",
+ "method": "map-objects",
+ "prompt": "tiny sprout of thin leek shoots, single crop plant growing in dark tilled soil, farming game crop sprite like Stardew Valley, seen from above at a 3/4 angle, centred, muted northern palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4f3e197d-61e0-4040-8098-cfdc365f0dad",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}
