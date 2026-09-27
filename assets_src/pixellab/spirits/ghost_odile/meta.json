@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "d398d57b-8e8b-4589-8bd8-05b2659a8395",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 8.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
 }
