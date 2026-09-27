@@ -1,18 +1,18 @@
 {
  "id": "ghost_dog",
  "method": "map-objects",
- "prompt": "ghost of a shaggy brown dog, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "prompt": "ghost dog: a shaggy dog with floppy ears, four legs and a tail, standing side view, whole body pale blue see-through, not a sheet ghost, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
  "size": [
   32,
   48
  ],
  "view": "high top-down",
- "object_id": "fe7ade65-b03a-4d5d-94dd-17ce5cab6ad4",
- "generations": 1.0,
+ "object_id": "ed47bf4c-9456-4769-9500-b0edf2c0b611",
+ "generations": 3.0,
  "date": "2026-09-27",
  "animations": {
   "float": {
-   "generations": 7.0,
+   "generations": 1.0,
    "action": "floating gently up and down, glowing softly",
    "frames": 7
   }

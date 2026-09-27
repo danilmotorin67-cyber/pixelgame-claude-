@@ -1,18 +1,18 @@
 {
  "id": "ghost_grim",
  "method": "map-objects",
- "prompt": "ghost of a crooked old man with a crooked lantern, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "prompt": "ghost of a hunched crooked old man with a long beard, a walking stick and a crooked lantern, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
  "size": [
   32,
   48
  ],
  "view": "high top-down",
- "object_id": "35429013-4c70-4763-b456-aed9b0590808",
- "generations": 4.0,
+ "object_id": "3b024d41-f269-45eb-a143-bc828e74865b",
+ "generations": 2.0,
  "date": "2026-09-27",
  "animations": {
   "float": {
-   "generations": 3.0,
+   "generations": 2.0,
    "action": "floating gently up and down, glowing softly",
    "frames": 7
   }

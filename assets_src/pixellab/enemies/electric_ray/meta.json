@@ -1,14 +1,14 @@
 {
  "id": "electric_ray",
  "method": "map-objects",
- "prompt": "electric ray with blue sparks, enemy, pixel art, muted cold palette",
+ "prompt": "flat grey electric ray fish seen from above, wide wing fins and long thin tail, small blue sparks, enemy, pixel art, muted cold palette",
  "size": [
   48,
   48
  ],
  "view": "high top-down",
- "object_id": "6cb06a18-c2ee-4025-a587-2ff3a33e6883",
- "generations": 4.0,
+ "object_id": "5bdb4fe1-6d0b-4e76-839b-2cdabad8bb28",
+ "generations": 2.0,
  "date": "2026-09-27",
  "animations": {
   "move": {
@@ -17,7 +17,7 @@
    "frames": 7
   },
   "attack": {
-   "generations": 2.0,
+   "generations": 0.0,
    "action": "crackling with electric sparks",
    "frames": 7
   }

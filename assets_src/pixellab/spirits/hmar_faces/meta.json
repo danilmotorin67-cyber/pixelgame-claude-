@@ -1,18 +1,18 @@
 {
  "id": "hmar_faces",
  "method": "map-objects",
- "prompt": "faint pale faces and wisps in lilac fog, pixel art, muted cold palette",
+ "prompt": "lilac mist wisp with one pale sad human face with closed eyes in it, soft and eerie, not a skull, pixel art, muted cold palette",
  "size": [
   64,
   64
  ],
  "view": "high top-down",
- "object_id": "c4f932cc-04f1-4671-93da-7a4e7eefbe54",
+ "object_id": "0fa35a7e-ff92-499f-98f8-4a712b575447",
  "generations": 3.0,
  "date": "2026-09-27",
  "animations": {
   "drift": {
-   "generations": 4.0,
+   "generations": 2.0,
    "action": "fog drifting, faces fading in and out",
    "frames": 9
   }
