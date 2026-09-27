@@ -13,6 +13,8 @@ var fishing_assist: bool = false
 
 func _ready() -> void:
 	apply_language()
+	# The pixel font and the PixelLab frames style every window and HUD panel.
+	UiKit.install(get_tree())
 
 
 # The game speaks Russian unless the player picks English (34).

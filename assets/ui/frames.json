@@ -1,0 +1,27 @@
+{
+ "compass": {
+  "margin": 14,
+  "pad": 1,
+  "tile": true
+ },
+ "inset": {
+  "margin": 6,
+  "pad": 1,
+  "tile": false
+ },
+ "panel": {
+  "margin": 9,
+  "pad": 2,
+  "tile": false
+ },
+ "tooltip": {
+  "margin": 8,
+  "pad": 2,
+  "tile": true
+ },
+ "window": {
+  "margin": 11,
+  "pad": 3,
+  "tile": false
+ }
+}
