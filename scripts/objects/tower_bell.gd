@@ -13,6 +13,8 @@ func _ready() -> void:
 
 
 func _draw() -> void:
+	if PropArt.draw(self, "tower_bell", Vector2(0, 1)):
+		return
 	draw_rect(Rect2(-1, -12, 2, 4), Color("#45464e"))
 	draw_colored_polygon(PackedVector2Array([Vector2(-5, 0), Vector2(-3, -8), Vector2(3, -8), Vector2(5, 0)]),
 		Color("#c9a24a"))

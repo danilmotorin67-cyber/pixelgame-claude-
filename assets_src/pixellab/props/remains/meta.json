@@ -1,13 +1,13 @@
 {
  "id": "remains",
  "method": "map-objects",
- "prompt": "bones of a drowned man in rags on the sand, not gory, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "prompt": "bones of a drowned man lying flat on the sand among rags and seaweed, seen from above, not gory, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
  "size": [
-  32,
-  64
+  64,
+  32
  ],
  "view": "high top-down",
- "object_id": "150c9dc2-52d3-49a4-95be-f532a82cd0de",
- "generations": 3.0,
+ "object_id": "881fa676-e176-47fa-a453-2b3d25435506",
+ "generations": 2.0,
  "date": "2026-09-27"
 }

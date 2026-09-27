@@ -296,7 +296,7 @@ func _draw() -> void:
 				if grain <= 3:
 					draw_rect(Rect2(px + 4, py + 7, 2, 3),
 						Color("#9eae77") if color != HEATHER else Color("#ae8dad"))
-				if biome == "birch" and grain <= 2 and color == GRASS:
+				if biome == "birch" and grain <= 2 and color == GRASS and PropArt.texture("birch_summer") == null:
 					draw_rect(Rect2(px + 7, py + 6, 2, 9), Color("#e4d9bd"))
 					draw_rect(Rect2(px + 3, py + 2, 10, 6), Color("#7b9969"))
 			elif color == SAND and grain == 1:
@@ -336,7 +336,10 @@ func _draw_props() -> void:
 			elif color == ROCK:
 				art = PropArt.variant("boulder", 3, x + y) if roll == 0 and (x + y) % 3 == 0 else PropArt.variant("rock", 4, x + y)
 			elif color == SAND:
-				art = PropArt.variant("driftwood", 3, x) if roll == 0 and (x + y) % 4 == 0 else PropArt.variant("seaweed", 2, x + y)
+				if roll == 0 and (x + y) % 4 == 0:
+					art = PropArt.variant("driftwood", 3, x)
+				elif (x * 5 + y) % 3 == 0:
+					art = PropArt.variant("seaweed", 2, x + y)
 			elif color == GRASS or color == MEADOW:
 				art = PropArt.variant("flowers", 4, x + y) if roll == 0 else PropArt.variant("weeds", 3, x + y)
 			if art != "":
@@ -347,6 +350,11 @@ func _draw_props() -> void:
 func _landmark_art(kind: String, x: int, y: int, w: int, h: int) -> bool:
 	var centre := Vector2(x + w / 2, y + h)
 	match kind:
+		"stones":
+			if BuildingArt.texture("nine_maidens") == null:
+				return false
+			BuildingArt.draw(self, "nine_maidens", centre)
+			return true
 		"wreck":
 			return PropArt.draw(self, "big_hull_1", centre)
 		"cave":

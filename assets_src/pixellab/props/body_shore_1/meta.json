@@ -1,13 +1,13 @@
 {
  "id": "body_shore_1",
  "method": "map-objects",
- "prompt": "drowned sailor lying face down on the sand, respectful, not gory, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "prompt": "drowned sailor lying flat face down on wet sand, seen from above, arms spread, dark wet clothes, respectful, not gory, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
  "size": [
-  32,
-  64
+  64,
+  32
  ],
  "view": "high top-down",
- "object_id": "266b591e-41d2-45e9-8d03-e15c2f779ca4",
- "generations": 5.0,
+ "object_id": "a4037436-034e-4a7e-bc2f-a467634426a9",
+ "generations": 3.0,
  "date": "2026-09-27"
 }

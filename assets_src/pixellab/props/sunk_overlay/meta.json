@@ -1,13 +1,13 @@
 {
  "id": "sunk_overlay",
  "method": "map-objects",
- "prompt": "sunken grave with a hollow of earth, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "prompt": "sunken grave: rectangular hollow of dark damp earth, seen from above, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
  "size": [
   32,
   64
  ],
  "view": "high top-down",
- "object_id": "51789cef-b297-4e35-a853-6d6188461734",
- "generations": 5.0,
+ "object_id": "efb8fff0-199d-4801-9ac5-80dc3d36d692",
+ "generations": 4.0,
  "date": "2026-09-27"
 }

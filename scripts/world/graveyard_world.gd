@@ -42,9 +42,34 @@ func _draw() -> void:
 		_draw_block(Graveyard.block_origin(block))
 	var morgue: Array = Graveyard.cfg("morgue")
 	var m := Vector2(float(morgue[0]), float(morgue[1]))
+	if BuildingArt.texture("morgue") != null:
+		BuildingArt.draw(self, "morgue", m + Vector2(0, -2))
+		return
 	draw_rect(Rect2(m + Vector2(-26, -34), Vector2(52, 30)), Color("#9a9ca3"))
 	draw_rect(Rect2(m + Vector2(-30, -40), Vector2(60, 8)), Color("#45464e"))
 	draw_rect(Rect2(m + Vector2(-7, -18), Vector2(14, 14)), Color("#4a3428"))
+
+
+# The block's wrought-iron fence from the PixelLab props: sections along the top and bottom,
+# end-on pieces down the sides.
+func _draw_iron_fence(rect: Rect2) -> bool:
+	var along := PropArt.texture("fence_iron_h")
+	var side := PropArt.texture("fence_iron_v")
+	if along == null or side == null:
+		return false
+	var step := along.get_size().x * Screen.ART_SCALE
+	var x := rect.position.x + step / 2.0
+	while x < rect.end.x:
+		PropArt.draw(self, "fence_iron_h", Vector2(x, rect.position.y + 4))
+		PropArt.draw(self, "fence_iron_h", Vector2(x, rect.end.y + 2))
+		x += step
+	var down := side.get_size().y * Screen.ART_SCALE * 0.6
+	var y := rect.position.y + down
+	while y < rect.end.y:
+		PropArt.draw(self, "fence_iron_v", Vector2(rect.position.x, y))
+		PropArt.draw(self, "fence_iron_v", Vector2(rect.end.x, y))
+		y += down
+	return true
 
 
 func _draw_block(origin: Vector2) -> void:
@@ -53,6 +78,8 @@ func _draw_block(origin: Vector2) -> void:
 	var h := float(size[1]) * float(Graveyard.cfg("rows"))
 	var rect := Rect2(origin.x - 6, origin.y - 6, w + 12, h + 12)
 	draw_rect(rect, Color("#3f5a36"))
+	if _draw_iron_fence(rect):
+		return
 	for x in range(int(rect.position.x), int(rect.end.x), 8):
 		draw_rect(Rect2(x, rect.position.y, 2, 6), FENCE)
 		draw_rect(Rect2(x, rect.end.y - 6, 2, 6), FENCE)

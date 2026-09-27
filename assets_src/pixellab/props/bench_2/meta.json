@@ -1,13 +1,13 @@
 {
  "id": "bench_2",
  "method": "map-objects",
- "prompt": "stone bench, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "prompt": "long grey stone bench on two stone legs, seen from above at an angle, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
  "size": [
   64,
   32
  ],
  "view": "high top-down",
- "object_id": "f96059bf-b5f6-43e8-86b9-c13091441bd2",
- "generations": 4.0,
+ "object_id": "6842b0c8-8668-4046-9022-7d5b29464146",
+ "generations": 3.0,
  "date": "2026-09-27"
 }

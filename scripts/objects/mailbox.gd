@@ -14,9 +14,11 @@ func _ready() -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(-1, -2, 2, 10), Color("#6b4a32"))
-	draw_rect(Rect2(-5, -9, 10, 7), Color("#24405a"))
-	draw_rect(Rect2(-5, -9, 10, 2), Color("#2f5a76"))
+	if not PropArt.draw(self, "mailbox", Vector2(0, 8)):
+		draw_rect(Rect2(-1, -2, 2, 10), Color("#6b4a32"))
+		draw_rect(Rect2(-5, -9, 10, 7), Color("#24405a"))
+		draw_rect(Rect2(-5, -9, 10, 2), Color("#2f5a76"))
+	# The raised red flag says there is unread mail.
 	if Mail.unread() > 0:
 		draw_rect(Rect2(4, -13, 2, 5), Color("#9b2f2a"))
 

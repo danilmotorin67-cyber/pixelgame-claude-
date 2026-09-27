@@ -39,10 +39,10 @@ func _draw() -> void:
 	if art != "" and PropArt.draw(self, art, Vector2(0, 12)):
 		if bool(g["open"]) and str(g["body"]) != "":
 			PropArt.draw(self, "body_wrapped", Vector2(0, 6))
-		if bool(g["filled"]) and bool(g["sunk"]):
-			PropArt.draw(self, "sunk_overlay", Vector2(0, 12))
+		# A sunk grave already shows its weathered marker; weeds grow along the front edge.
 		if bool(g["weeds"]):
-			PropArt.draw(self, "weeds_overlay", Vector2(0, 12))
+			for i in 3:
+				PropArt.draw(self, "weeds_%d" % (i + 1), Vector2(-7 + i * 7, 13))
 		return
 	if bool(g["old"]):
 		draw_rect(Rect2(-9, -4, 18, 14), Color("#6b5a48"))
