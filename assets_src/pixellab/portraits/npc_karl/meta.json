@@ -1,0 +1,12 @@
+{
+ "id": "npc_karl",
+ "size": 64,
+ "spent": {
+  "neutral": 58.0,
+  "happy": 92.0,
+  "sad": 76.0,
+  "angry": 4.0,
+  "surprised": 74.0,
+  "special": 81.0
+ }
+}

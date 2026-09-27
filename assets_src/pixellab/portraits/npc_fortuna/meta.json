@@ -1,0 +1,12 @@
+{
+ "id": "npc_fortuna",
+ "size": 64,
+ "spent": {
+  "neutral": 27.0,
+  "happy": 2.0,
+  "sad": 1.0,
+  "angry": 4.0,
+  "surprised": 1.0,
+  "special": 2.0
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "id": "daughter_priliva",
+ "size": 64,
+ "spent": {
+  "neutral": 27.0,
+  "happy": 26.0,
+  "sad": 31.0,
+  "angry": 3.0,
+  "surprised": 4.0,
+  "special": 2.0
+ }
+}

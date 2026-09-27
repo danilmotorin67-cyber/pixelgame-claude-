@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "6184f566-bfa9-4416-9a81-6be9017c39de",
  "generations": 49.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "loop": {
+   "generations": 167.0,
+   "action": "spinning slowly, foam spiralling inward",
+   "frames": 9
+  }
+ }
 }

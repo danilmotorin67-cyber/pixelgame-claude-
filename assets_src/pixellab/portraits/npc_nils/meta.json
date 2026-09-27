@@ -1,0 +1,12 @@
+{
+ "id": "npc_nils",
+ "size": 64,
+ "spent": {
+  "neutral": 67.0,
+  "happy": 12.0,
+  "sad": 15.0,
+  "angry": 49.0,
+  "surprised": 59.0,
+  "special": 57.0
+ }
+}

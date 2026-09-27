@@ -1,0 +1,12 @@
+{
+ "id": "hero_male",
+ "size": 64,
+ "spent": {
+  "neutral": 84.0,
+  "happy": 6.0,
+  "sad": 5.0,
+  "angry": 50.0,
+  "surprised": 2.0,
+  "special": 72.0
+ }
+}

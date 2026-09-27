@@ -1,0 +1,11 @@
+{
+ "id": "npc_solveig",
+ "size": 64,
+ "spent": {
+  "happy": 1.0,
+  "sad": 28.0,
+  "angry": 5.0,
+  "surprised": 1.0,
+  "special": 2.0
+ }
+}

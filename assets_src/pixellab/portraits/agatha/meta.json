@@ -1,0 +1,12 @@
+{
+ "id": "agatha",
+ "size": 64,
+ "spent": {
+  "neutral": 63.0,
+  "happy": 32.0,
+  "sad": 6.0,
+  "angry": 3.0,
+  "surprised": 48.0,
+  "special": 2.0
+ }
+}

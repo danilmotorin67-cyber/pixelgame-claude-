@@ -18,7 +18,7 @@ STYLE = "pixel art, northern fishing island, muted cold palette"
 
 BOATS = {
  "yalik": "small wooden sailing dinghy (yalik) with one white canvas sail raised, empty, northern fishing boat",
- "sloop": "small wooden ship's boat (shlyupka) with oars and a short mast with a small raised sail, empty",
+ "sloop": "small wooden ship's boat (shlyupka) with oars and a short mast with a small raised sail, empty, clean isolated boat, nothing around it, no grass, no foam",
  "bot": "sturdy wooden fishing sailboat (bot) with a small cabin at the stern and one big raised gaff sail, empty",
 }
 STATES = {
@@ -57,7 +57,7 @@ BIRDS = {
 }
 SHIPS = {
  "gull": "small black passenger steamer with a red funnel", "queen": "grand white passenger liner Queen of Kronwald with two funnels",
- "pyostraya": "colourful patched xebec with lateen sails", "treska": "small fishing boat Treska", "berta": "old brig Saint Berta",
+ "pyostraya": "colourful patched xebec with lateen sails", "treska": "small old wooden fishing boat with a brown sail", "berta": "old brig Saint Berta",
  "harald": "whaler Harald with a harpoon gun at the bow", "hope": "brig Hope under full sail",
  "silver_herring": "schooner Silver Herring with grey sails", "count_elmstorp": "steamer Count Elmstorp with a tall funnel",
  "north_star": "barque North Star with three masts", "icebreaker": "stubby red icebreaker pushing through ice",

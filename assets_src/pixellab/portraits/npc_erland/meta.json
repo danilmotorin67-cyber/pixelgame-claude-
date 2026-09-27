@@ -1,0 +1,12 @@
+{
+ "id": "npc_erland",
+ "size": 64,
+ "spent": {
+  "neutral": 81.0,
+  "happy": 44.0,
+  "sad": 36.0,
+  "angry": 24.0,
+  "surprised": 43.0,
+  "special": 39.0
+ }
+}

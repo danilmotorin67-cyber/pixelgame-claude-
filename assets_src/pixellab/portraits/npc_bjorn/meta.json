@@ -1,0 +1,12 @@
+{
+ "id": "npc_bjorn",
+ "size": 64,
+ "spent": {
+  "neutral": 98.0,
+  "happy": 73.0,
+  "sad": 52.0,
+  "angry": 50.0,
+  "surprised": 80.0,
+  "special": 36.0
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "id": "npc_tora",
+ "size": 64,
+ "spent": {
+  "neutral": 102.0,
+  "happy": 32.0,
+  "sad": 53.0,
+  "angry": 145.0,
+  "surprised": 100.0,
+  "special": 27.0
+ }
+}

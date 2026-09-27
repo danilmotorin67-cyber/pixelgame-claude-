@@ -1,0 +1,12 @@
+{
+ "id": "daughter_burun",
+ "size": 64,
+ "spent": {
+  "neutral": 47.0,
+  "happy": 26.0,
+  "sad": 75.0,
+  "angry": 3.0,
+  "surprised": 3.0,
+  "special": 2.0
+ }
+}

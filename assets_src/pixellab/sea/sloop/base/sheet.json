@@ -1,8 +1,8 @@
 {
   "object": {
-    "id": "278f1f62-5a75-4771-9730-7903a91ba321",
+    "id": "472beb7f-2ddd-4b76-85f3-53f15d4fbb96",
     "name": "base",
-    "prompt": "small wooden ship's boat (shlyupka) with oars and a short mast with a small raised sail, empty, pixel art, northern fishing island, muted cold palette",
+    "prompt": "small wooden ship's boat (shlyupka) with oars and a short mast with a small raised sail, empty, clean isolated boat, nothing around it, no grass, no foam, pixel art, northern fishing island, muted cold palette",
     "size": {
       "width": 68,
       "height": 68
@@ -41,5 +41,5 @@
     ]
   },
   "export_version": "1.0",
-  "export_date": "2026-09-27T22:30:09.635725+00:00"
+  "export_date": "2026-09-27T22:45:34.969943+00:00"
 }

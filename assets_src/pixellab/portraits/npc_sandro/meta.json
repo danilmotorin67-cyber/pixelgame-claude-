@@ -1,0 +1,12 @@
+{
+ "id": "npc_sandro",
+ "size": 64,
+ "spent": {
+  "neutral": 83.0,
+  "happy": 12.0,
+  "sad": 33.0,
+  "angry": 56.0,
+  "surprised": 8.0,
+  "special": 6.0
+ }
+}

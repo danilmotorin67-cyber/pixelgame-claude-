@@ -144,27 +144,40 @@ func _visible_cells() -> Rect2i:
 	return Rect2i(a, b - a)
 
 
-# Shallow water in the near zone, deep beyond (the tiles_shallow_deep Wang set, corner by corner).
+# The water by zone in the game's palette: near water, beyond the Teeth, the open sea; each border is
+# dithered over one row, and short crests drift across the visible part.
+const ZONE_COLORS := [Color("#2f6f80"), Color("#24405a"), Color("#1b2b3c")]
+
+
 func _draw_water() -> bool:
-	var info := WangGround.tileset("tiles_shallow_deep")
-	if info.is_empty():
-		return false
-	var zone_row := int(SeaChart.cfg("zone2_row"))
 	var view := _visible_cells()
-	var size: int = info["tile"]
-	var tex: Texture2D = info["texture"]
-	var deep_fill := WangGround.full_tile(info, true)
-	for y in range(view.position.y, view.end.y):
-		for x in range(view.position.x, view.end.x):
-			var at := Vector2(x * TILE, y * TILE)
-			if y < 0 or x < 0 or x >= width or y >= height or y >= zone_row + 1:
-				draw_texture_rect_region(tex, Rect2(at, Vector2(TILE, TILE)), deep_fill)
-				continue
-			var key := ""
-			for corner_y in [y, y, y + 1, y + 1]:
-				key += "1" if corner_y >= zone_row else "0"
-			var index := int(info["cells"].get(key, info["cells"]["0000"]))
-			draw_texture_rect_region(tex, Rect2(at, Vector2(TILE, TILE)), Rect2((index % 4) * size, (index / 4) * size, size, size))
+	var rows := [0, int(SeaChart.cfg("zone2_row")), int(SeaChart.cfg("zone3_row")), height]
+	var left := view.position.x * TILE
+	var span := view.size.x * TILE
+	draw_rect(Rect2(left, view.position.y * TILE, span, view.size.y * TILE), ZONE_COLORS[2])
+	for z in 3:
+		var top := maxi(int(rows[z]), view.position.y)
+		var bottom := mini(int(rows[z + 1]), view.end.y)
+		if bottom > top:
+			draw_rect(Rect2(left, top * TILE, span, (bottom - top) * TILE), ZONE_COLORS[z])
+		# Dither the border row into the next zone.
+		if z < 2 and rows[z + 1] >= view.position.y and rows[z + 1] <= view.end.y:
+			var y0: int = int(rows[z + 1]) * TILE - 8
+			for x in range(left, left + span, 4):
+				for dy in range(0, 16, 4):
+					if (x / 4 + dy / 4) % 2 == 0:
+						draw_rect(Rect2(x, y0 + dy, 4, 4), ZONE_COLORS[z + 1] if dy < 8 else ZONE_COLORS[z])
+	var crest := Color(0.8, 0.93, 0.95, 0.35)
+	for i in 420:
+		var x := (i * 97 + int(_t * 6.0) * (1 + i % 3)) % (width * TILE)
+		var y := (i * 53) % (height * TILE)
+		if not view.has_point(Vector2i(x / TILE, y / TILE)):
+			continue
+		var phase := fmod(_t * 0.8 + i * 0.37, 3.0)
+		if phase < 2.0:
+			var w := 3 + i % 4
+			draw_rect(Rect2(x, y, w, 1), crest)
+			draw_rect(Rect2(x + 1, y - 1, w - 2, 1), Color(crest, 0.18))
 	return true
 
 
@@ -236,11 +249,6 @@ func _night() -> bool:
 func _draw_sea_art() -> void:
 	var frame := int(_t * 4.0)
 	var view := _visible_cells()
-	for i in 260:
-		var x := (i * 97) % (width * TILE)
-		var y := (i * 53 + frame * 3) % (height * TILE)
-		if view.has_point(Vector2i(x / TILE, y / TILE)):
-			draw_rect(Rect2(x, y, 4 + i % 4, 1), Color(0.85, 0.95, 1.0, 0.18))
 	var coast := int(SeaChart.cfg("coast_rows"))
 	var sand := WangGround.seasonal("tiles_grass_sand", Clock.season)
 	if not sand.is_empty():

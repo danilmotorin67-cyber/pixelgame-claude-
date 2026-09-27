@@ -1,0 +1,12 @@
+{
+ "id": "npc_kai",
+ "size": 64,
+ "spent": {
+  "neutral": 37.0,
+  "happy": 11.0,
+  "sad": 41.0,
+  "angry": 41.0,
+  "surprised": 17.0,
+  "special": 35.0
+ }
+}

@@ -92,7 +92,7 @@ func _draw() -> void:
 	if tex:
 		var vs := tex.get_size() * 2.0
 		draw_texture_rect(tex, Rect2(c - vs / 2.0, vs), false)
-		draw_arc(c, 56.0, 0, TAU, 64, Color("#1f2740"), 32.0)
+		draw_arc(c, 56.0, 0, TAU, 64, Color("#252b46"), 32.0)
 	else:
 		draw_circle(c, r, Color("#8fb0c0"))
 		if not list.is_empty():

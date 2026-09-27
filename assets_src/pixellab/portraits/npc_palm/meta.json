@@ -1,0 +1,12 @@
+{
+ "id": "npc_palm",
+ "size": 64,
+ "spent": {
+  "neutral": 45.0,
+  "happy": 35.0,
+  "sad": 65.0,
+  "angry": 35.0,
+  "surprised": 27.0,
+  "special": 32.0
+ }
+}

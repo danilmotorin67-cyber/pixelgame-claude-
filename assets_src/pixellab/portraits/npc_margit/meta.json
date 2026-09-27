@@ -1,0 +1,12 @@
+{
+ "id": "npc_margit",
+ "size": 64,
+ "spent": {
+  "neutral": 226.0,
+  "happy": 56.0,
+  "sad": 82.0,
+  "angry": 71.0,
+  "surprised": 18.0,
+  "special": 37.0
+ }
+}

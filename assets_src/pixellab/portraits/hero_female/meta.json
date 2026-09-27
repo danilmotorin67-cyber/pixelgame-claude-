@@ -1,0 +1,12 @@
+{
+ "id": "hero_female",
+ "size": 64,
+ "spent": {
+  "neutral": 158.0,
+  "happy": 50.0,
+  "sad": 3.0,
+  "angry": 4.0,
+  "surprised": 26.0,
+  "special": 53.0
+ }
+}

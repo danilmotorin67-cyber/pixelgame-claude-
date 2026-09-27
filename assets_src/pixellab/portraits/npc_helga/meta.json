@@ -1,0 +1,12 @@
+{
+ "id": "npc_helga",
+ "size": 64,
+ "spent": {
+  "neutral": 55.0,
+  "happy": 66.0,
+  "sad": 38.0,
+  "angry": 19.0,
+  "surprised": 6.0,
+  "special": 39.0
+ }
+}

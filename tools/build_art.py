@@ -303,6 +303,44 @@ def build_portraits():
     return count
 
 
+def drop_specks(img, share=0.35):
+    """Removes stray blobs (foam, grass flecks) smaller than `share` of the largest one and more than 4 px
+    away from it (a sail drawn apart from the hull stays), in place."""
+    from collections import deque
+    w, h = img.size
+    px = img.load()
+    seen, comps = set(), []
+    for y in range(h):
+        for x in range(w):
+            if px[x, y][3] > 20 and (x, y) not in seen:
+                q, comp = deque([(x, y)]), []
+                seen.add((x, y))
+                while q:
+                    a, b = q.popleft()
+                    comp.append((a, b))
+                    for dx in (-1, 0, 1):
+                        for dy in (-1, 0, 1):
+                            n = (a + dx, b + dy)
+                            if 0 <= n[0] < w and 0 <= n[1] < h and n not in seen and px[n][3] > 20:
+                                seen.add(n)
+                                q.append(n)
+                comps.append(comp)
+    if len(comps) > 1:
+        main = max(comps, key=len)
+        near = set()
+        for (a, b) in main:
+            for dx in range(-4, 5):
+                for dy in range(-4, 5):
+                    near.add((a + dx, b + dy))
+        for comp in comps:
+            if comp is main or len(comp) >= len(main) * share:
+                continue
+            if not any(p in near for p in comp):
+                for p in comp:
+                    px[p] = (0, 0, 0, 0)
+    return img
+
+
 def build_sea():
     """Boats (sea/<boat>/<state>/sheet.png, 8 rotations in a row) -> assets/sprites/sea/boat_<boat>_<state>.png +
     .json {frame, dirs}; sea objects (sea/<id>/<id>.png, loops in sea/<id>/loop/) -> assets/sprites/sea/<id>.png
@@ -314,7 +352,12 @@ def build_sea():
         state = os.path.basename(os.path.dirname(sheet))
         boat = os.path.basename(os.path.dirname(os.path.dirname(sheet)))
         meta = json.load(open(sheet[:-4] + ".json"))["spritesheet"]
-        Image.open(sheet).convert("RGBA").save(os.path.join(out, "boat_%s_%s.png" % (boat, state)))
+        img = Image.open(sheet).convert("RGBA")
+        cw = meta["cell_size"]["width"]
+        for i in range(img.width // cw):
+            cell = drop_specks(img.crop((i * cw, 0, (i + 1) * cw, img.height)))
+            img.paste(cell, (i * cw, 0))
+        img.save(os.path.join(out, "boat_%s_%s.png" % (boat, state)))
         json.dump({"frame": [meta["cell_size"]["width"], meta["cell_size"]["height"]], "dirs": meta["rows"][0]["directions"]},
                   open(os.path.join(out, "boat_%s_%s.json" % (boat, state)), "w"))
         count += 1

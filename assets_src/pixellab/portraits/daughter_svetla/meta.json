@@ -1,0 +1,12 @@
+{
+ "id": "daughter_svetla",
+ "size": 64,
+ "spent": {
+  "neutral": 53.0,
+  "happy": 27.0,
+  "sad": 2.0,
+  "angry": 3.0,
+  "surprised": 5.0,
+  "special": 28.0
+ }
+}

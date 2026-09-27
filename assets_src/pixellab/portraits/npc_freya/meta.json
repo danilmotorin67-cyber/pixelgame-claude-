@@ -1,0 +1,12 @@
+{
+ "id": "npc_freya",
+ "size": 64,
+ "spent": {
+  "neutral": 41.0,
+  "happy": 17.0,
+  "sad": 34.0,
+  "angry": 30.0,
+  "surprised": 59.0,
+  "special": 15.0
+ }
+}

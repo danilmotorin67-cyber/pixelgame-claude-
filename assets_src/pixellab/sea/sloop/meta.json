@@ -1,7 +1,8 @@
 {
  "id": "sloop",
  "states": {
-  "keeper_sail": "e54a3bf7-ef3b-4bf0-ab42-cad3af82e23d"
+  "keeper_sail": "82785286-7899-4f89-bf34-cd00a3a3e6d7",
+  "keeper_oars": "6597b440-96b9-45cb-9ab7-4f8ced822052"
  },
- "object_id": "278f1f62-5a75-4771-9730-7903a91ba321"
+ "object_id": "472beb7f-2ddd-4b76-85f3-53f15d4fbb96"
 }

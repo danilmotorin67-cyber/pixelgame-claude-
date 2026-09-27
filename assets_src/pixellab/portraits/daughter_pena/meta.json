@@ -1,0 +1,12 @@
+{
+ "id": "daughter_pena",
+ "size": 64,
+ "spent": {
+  "neutral": 27.0,
+  "happy": 3.0,
+  "sad": 2.0,
+  "angry": 2.0,
+  "surprised": 3.0,
+  "special": 1.0
+ }
+}

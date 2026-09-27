@@ -1,0 +1,12 @@
+{
+ "id": "npc_benedict",
+ "size": 64,
+ "spent": {
+  "neutral": 120.0,
+  "happy": 77.0,
+  "sad": 10.0,
+  "angry": 83.0,
+  "surprised": 40.0,
+  "special": 40.0
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "id": "npc_grump",
+ "size": 64,
+ "spent": {
+  "neutral": 43.0,
+  "happy": 56.0,
+  "sad": 4.0,
+  "angry": 3.0,
+  "surprised": 7.0,
+  "special": 69.0
+ }
+}

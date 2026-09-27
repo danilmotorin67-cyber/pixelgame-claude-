@@ -1,0 +1,10 @@
+{
+ "id": "tiles_sea_open",
+ "method": "create-tileset",
+ "lower": "shallow clear turquoise sea water over pale sand, gentle light ripples, no rocks, no plants",
+ "upper": "deep dark blue open sea water, soft small wave crests, no rocks, no plants, no land",
+ "tile": 32,
+ "tileset_id": "796a5308-6b5e-4b53-8819-e3a9055a618e",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

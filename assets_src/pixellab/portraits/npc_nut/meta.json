@@ -1,0 +1,10 @@
+{
+ "id": "npc_nut",
+ "size": 64,
+ "spent": {
+  "sad": 2.0,
+  "angry": 2.0,
+  "surprised": 3.0,
+  "special": 2.0
+ }
+}

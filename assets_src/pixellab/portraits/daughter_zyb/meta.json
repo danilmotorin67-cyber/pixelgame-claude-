@@ -1,0 +1,11 @@
+{
+ "id": "daughter_zyb",
+ "size": 64,
+ "spent": {
+  "happy": 2.0,
+  "sad": 26.0,
+  "angry": 3.0,
+  "surprised": 1.0,
+  "special": 4.0
+ }
+}
