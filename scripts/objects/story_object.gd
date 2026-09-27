@@ -36,7 +36,14 @@ func _draw() -> void:
 			if Story.bonfire_lit(int(spot.get("index", 0))):
 				var flicker := 2.0 * sin(_time * 9.0)
 				draw_colored_polygon(PackedVector2Array([Vector2(-5, 2), Vector2(0, -10 - flicker), Vector2(5, 2)]), Color("#f0a030"))
-		"glow_water", "daughter":
+		"daughter":
+			# The sea daughter who keeps this spot.
+			var who := "daughter_" + str(spot.get("daughter", ""))
+			if CastSprite.draw(self, who, "idle", "south", _time, Vector2(0, 8)):
+				return
+			var a := 0.45 + 0.25 * sin(_time * 2.5)
+			draw_circle(Vector2.ZERO, 7.0, Color(0.55, 0.85, 1.0, a))
+		"glow_water":
 			var a := 0.45 + 0.25 * sin(_time * 2.5)
 			draw_circle(Vector2.ZERO, 7.0, Color(0.55, 0.85, 1.0, a))
 		"cat":

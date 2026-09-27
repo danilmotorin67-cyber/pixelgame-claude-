@@ -1,0 +1,20 @@
+{
+ "id": "ghost_pim",
+ "method": "map-objects",
+ "prompt": "translucent pale-blue glowing ghost of a young cabin boy in a sailor's shirt, floating, faint glow, see-through, pixel art, muted cold palette",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "f198f4b9-5d55-42b6-b2a0-aa61791553de",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 1.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
+}

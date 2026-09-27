@@ -22,6 +22,12 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
+	# The PixelLab ghost, see-through, over a faint cold glow on the ground.
+	if CastSprite.has(ghost_id):
+		draw_circle(Vector2(0, 5), 7.0, Color(0.6, 0.85, 1.0, 0.18 + 0.08 * sin(_time * 3.0)))
+		modulate = Color(0.85, 0.95, 1.0, 0.7 + 0.1 * sin(_time * 2.0))
+		CastSprite.draw(self, ghost_id, "float", "south", _time, Vector2(0, 6))
+		return
 	var glow := Color(0.75, 0.9, 0.95, 0.55 + 0.15 * sin(_time * 3.0))
 	draw_rect(Rect2(-5, -12, 10, 18), glow)
 	draw_rect(Rect2(-4, -16, 8, 5), glow)

@@ -28,6 +28,12 @@ func _draw() -> void:
 				var a := clampf((d - 70.0) / 60.0, 0.0, 0.85)
 				if a > 0.0:
 					draw_rect(Rect2(x, y, 10, 10), Color(mist, a))
+		# In the Hmar (not plain fog) pale faces drift at the edge of sight.
+		if kind != "fog":
+			for i in 5:
+				var angle := elapsed * 0.05 + float(i) * TAU / 5.0
+				var at := Vector2(240, 135) + Vector2(cos(angle) * 120.0, sin(angle) * 80.0)
+				CastSprite.draw(self, "hmar_faces", "drift", "south", elapsed + float(i) * 0.6, at)
 	if kind == "fog":
 		for band in 4:
 			draw_rect(Rect2(0, 40 + band * 57, 480, 8), Color(0.79, 0.83, 0.81, 0.12))

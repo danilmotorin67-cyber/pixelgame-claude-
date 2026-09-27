@@ -171,6 +171,8 @@ func _draw() -> void:
 			if str(e.get("carry", "")) != "":
 				draw_rect(Rect2(p + Vector2(0, 1), Vector2(3, 2)), Color("#b08f6c"))
 			continue
+		if EnemyArt.draw(self, e):
+			continue
 		var c := Color(0.7, 0.8, 0.9, 0.6) if str(e["kind"]).begins_with("hmar") else (Color("#3a4a3a") if str(e["kind"]) == "drowned" else Color("#4a4038"))
 		draw_circle(e["pos"], 6.0, c)
 	for d in world.drops:

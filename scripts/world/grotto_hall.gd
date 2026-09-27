@@ -132,7 +132,8 @@ func _draw() -> void:
 			if ch in ["<", ">"]:
 				draw_rect(Rect2(at + Vector2(4, 2), Vector2(8, 12)), Color("#1e1a18"))
 	for e in Grotto.world.alive():
-		draw_circle(e["pos"], 6.0, Color("#c0392b"))
+		if not EnemyArt.draw(self, e):
+			draw_circle(e["pos"], 6.0, Color("#c0392b"))
 	if Grotto.carrying:
 		var p: Vector2 = (get_parent().get_node("Player") as Node2D).global_position
 		draw_circle(p + Vector2(0, -18), 5.0, Color("#8c8a8a"))

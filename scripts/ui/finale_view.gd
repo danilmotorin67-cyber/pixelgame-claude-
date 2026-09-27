@@ -57,6 +57,8 @@ func _draw() -> void:
 	draw_circle(Vector2(stair.position.x + 10, stair.position.y - 6), 5, Color("#ffc85a") if Finale.hold.lit else Color("#45464e"))
 	for s in Finale.hold.saboteurs:
 		var y := stair.end.y - stair.size.y * clampf(float(s["progress"]), 0.0, 1.0)
+		if CastSprite.draw(self, "saboteur", "move", "south", Time.get_ticks_msec() / 1000.0, Vector2(stair.position.x + 10, y)):
+			continue
 		draw_rect(Rect2(stair.position.x + 7, y - 8, 6, 8), Color("#2a2a30"))
 		draw_rect(Rect2(stair.position.x + 8, y - 11, 4, 3), Color("#8a3a2e"))
 

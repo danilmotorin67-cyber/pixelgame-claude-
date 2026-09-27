@@ -1,0 +1,20 @@
+{
+ "id": "ghost_martin",
+ "method": "map-objects",
+ "prompt": "ghost of a burly ship's stoker with a coal shovel, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "e0d56aa2-b08c-47c6-93e6-fd0352273b34",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 4.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
+}

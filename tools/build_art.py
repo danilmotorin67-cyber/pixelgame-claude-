@@ -106,7 +106,7 @@ def _meta_groups(folder):
 def build_cast():
     os.makedirs(CAST_OUT, exist_ok=True)
     count = 0
-    for group in ("characters", "animals"):
+    for group in ("characters", "animals", "spirits", "enemies"):
         for folder in sorted(glob.glob(os.path.join(SRC, group, "*"))):
             aid = os.path.basename(folder)
             strips = []

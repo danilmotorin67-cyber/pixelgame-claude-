@@ -107,15 +107,17 @@ func _draw() -> void:
 		var info := CombatWorld.enemy_info(str(e["kind"]))
 		if bool(e["hidden"]):
 			continue
-		var c := Color("#c0392b") if float(info.get("hp", 0)) > 0 else Color("#8c8a9a")
-		if str(e["kind"]).begins_with("hmar"):
-			c = Color(0.7, 0.8, 0.9, 0.6)
-		draw_circle(e["pos"], 6.0, c)
+		if not EnemyArt.draw(self, e):
+			var c := Color("#c0392b") if float(info.get("hp", 0)) > 0 else Color("#8c8a9a")
+			if str(e["kind"]).begins_with("hmar"):
+				c = Color(0.7, 0.8, 0.9, 0.6)
+			draw_circle(e["pos"], 6.0, c)
 		if float(e["max_hp"]) > 0.0 and float(e["hp"]) < float(e["max_hp"]):
 			draw_rect(Rect2((e["pos"] as Vector2) + Vector2(-7, -10), Vector2(14.0 * float(e["hp"]) / float(e["max_hp"]), 2)), Color("#e06a6a"))
 	if not world.boss.is_empty() and float(world.boss["hp"]) > 0.0:
 		var b := world.boss
-		draw_circle(b["pos"], float(b["radius"]), Color("#5a2a3a") if bool(b["vulnerable"]) else Color("#3a2a3a"))
+		if not EnemyArt.draw_boss(self, b):
+			draw_circle(b["pos"], float(b["radius"]), Color("#5a2a3a") if bool(b["vulnerable"]) else Color("#3a2a3a"))
 		for node in b.get("nodes", []):
 			if float(node["hp"]) > 0.0:
 				draw_circle(node["pos"], 6.0, Color("#9fe0ff"))
