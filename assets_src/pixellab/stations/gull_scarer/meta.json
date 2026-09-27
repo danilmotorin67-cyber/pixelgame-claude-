@@ -1,0 +1,13 @@
+{
+ "id": "gull_scarer",
+ "method": "map-objects",
+ "prompt": "gull scarer: pole with fluttering strips and a tin rattle, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "33077fbc-8cde-4883-8d20-a033fcd6f362",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

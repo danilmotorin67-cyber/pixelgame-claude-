@@ -1,0 +1,13 @@
+{
+ "id": "loom",
+ "method": "map-objects",
+ "prompt": "wooden weaving loom with half-woven cloth, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "1dddb7d7-3688-4d69-bae0-9de24e6a60af",
+ "generations": 22.0,
+ "date": "2026-09-27"
+}

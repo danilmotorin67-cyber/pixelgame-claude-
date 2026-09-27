@@ -1,0 +1,13 @@
+{
+ "id": "keeper_scarecrow",
+ "method": "map-objects",
+ "prompt": "scarecrow on a wooden cross pole wearing a navy keeper's coat and a flat cap, straw sticking out, standing in a field, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "51e593f5-9ec1-4b87-ab73-47c8f769fc34",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

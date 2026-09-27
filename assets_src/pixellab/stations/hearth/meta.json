@@ -1,0 +1,13 @@
+{
+ "id": "hearth",
+ "method": "map-objects",
+ "prompt": "small outdoor stone hearth with a cooking pot and a little fire, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "c1a28bc2-2e09-4e3a-9e90-f81f8aec9186",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

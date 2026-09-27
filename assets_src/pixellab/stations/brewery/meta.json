@@ -1,0 +1,13 @@
+{
+ "id": "brewery",
+ "method": "map-objects",
+ "prompt": "small copper brewing kettle on a wooden stand, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "5a1f2a24-74e9-4fbf-8deb-2546df793b23",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

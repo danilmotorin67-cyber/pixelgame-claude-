@@ -1,0 +1,13 @@
+{
+ "id": "big_chest",
+ "method": "map-objects",
+ "prompt": "large dark wooden sea chest with brass corners, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "9e085898-596b-4d8b-89d8-fe031f54066a",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

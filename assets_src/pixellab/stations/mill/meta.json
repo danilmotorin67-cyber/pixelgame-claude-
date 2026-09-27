@@ -1,0 +1,13 @@
+{
+ "id": "mill",
+ "method": "map-objects",
+ "prompt": "hand millstone quern on a wooden base, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "522b83dd-e2b6-4e8f-b8a4-b43da8e594a1",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

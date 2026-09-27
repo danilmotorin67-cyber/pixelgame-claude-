@@ -1,0 +1,13 @@
+{
+ "id": "compost_pit",
+ "method": "map-objects",
+ "prompt": "wooden compost bin full of rotting leaves and scraps, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "1e8d2f9e-faee-45d2-b059-7c72e054f789",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

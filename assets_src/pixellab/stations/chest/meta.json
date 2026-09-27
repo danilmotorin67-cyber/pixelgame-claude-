@@ -1,0 +1,13 @@
+{
+ "id": "chest",
+ "method": "map-objects",
+ "prompt": "small wooden storage chest with iron bands, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "22b4a556-6133-4693-9471-557cfceaf7c6",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

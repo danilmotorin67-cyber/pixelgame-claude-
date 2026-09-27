@@ -1,0 +1,13 @@
+{
+ "id": "herbal_table",
+ "method": "map-objects",
+ "prompt": "herbalist's table with drying herbs, mortar and pestle, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "c5e34ab3-e2ec-4116-98dc-368de39e98a4",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

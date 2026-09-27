@@ -1,0 +1,13 @@
+{
+ "id": "watering_barrel",
+ "method": "map-objects",
+ "prompt": "wooden water barrel with a ladle, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "54f560ca-117a-4598-8daa-51a502584609",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

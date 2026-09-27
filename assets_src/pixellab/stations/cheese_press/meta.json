@@ -1,0 +1,13 @@
+{
+ "id": "cheese_press",
+ "method": "map-objects",
+ "prompt": "wooden cheese press with a screw, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "f03c5562-02f2-4e84-bfda-fe53cfdf4818",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

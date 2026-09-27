@@ -1,0 +1,13 @@
+{
+ "id": "still",
+ "method": "map-objects",
+ "prompt": "small copper still with a coiled pipe, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "f799f574-0a1c-4251-a1d9-88d7b0763064",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "preserve_jars",
+ "method": "map-objects",
+ "prompt": "shelf of glass preserve jars with jam and pickles, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "dcd3a914-ced9-4bf7-bdec-7f23e629e109",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

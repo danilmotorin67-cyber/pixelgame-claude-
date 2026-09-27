@@ -1,0 +1,13 @@
+{
+ "id": "brine_barrel",
+ "method": "map-objects",
+ "prompt": "wooden brine barrel with a lid and a stone weight, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "9c9a2503-35e5-488e-a94c-7456245a12ab",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

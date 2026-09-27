@@ -1,0 +1,13 @@
+{
+ "id": "cellar_barrel",
+ "method": "map-objects",
+ "prompt": "big oak aging barrel on a cradle, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f54bdb0f-6571-4848-89ec-c073e13d76d9",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

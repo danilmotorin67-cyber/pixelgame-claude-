@@ -1,0 +1,13 @@
+{
+ "id": "beehive",
+ "method": "map-objects",
+ "prompt": "traditional straw skep beehive on a stand with bees, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "ab9fa580-fdac-4874-a99e-4e890a40337a",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

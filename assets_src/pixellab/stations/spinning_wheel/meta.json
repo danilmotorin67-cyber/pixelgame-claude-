@@ -1,0 +1,13 @@
+{
+ "id": "spinning_wheel",
+ "method": "map-objects",
+ "prompt": "wooden spinning wheel with wool, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "9828f770-28bf-4756-9d76-df3764e07967",
+ "generations": 21.0,
+ "date": "2026-09-27"
+}

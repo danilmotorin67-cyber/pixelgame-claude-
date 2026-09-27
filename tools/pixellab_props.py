@@ -107,7 +107,8 @@ def small_batch():
         return "small done"
     oid = ic.batch(SMALL, 32, "props_small", BATCH_STYLE)[0]
     t0 = time.time()
-    while (pl.request("GET", f"/objects/{oid}").get("progress_percent") or 0) < 95 and time.time() - t0 < 1800:
+    # "review" at 95% shows up while frames are still being drawn: wait until every frame exists.
+    while len(pl.request("GET", f"/objects/{oid}").get("frame_urls") or []) < len(SMALL) and time.time() - t0 < 2400:
         time.sleep(15)
     made = ic.fetch(oid, list(SMALL), os.path.join(OUT, "small"))
     json.dump({"batch": oid, "items": {a: {"object_id": o, "prompt": SMALL[a]} for a, o in made.items()}},

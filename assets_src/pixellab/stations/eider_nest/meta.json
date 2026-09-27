@@ -1,0 +1,13 @@
+{
+ "id": "eider_nest",
+ "method": "map-objects",
+ "prompt": "eider duck nest of grey down on a little stone shelter, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e3052c5e-ca10-442b-bdd8-e2d6cb9bd541",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

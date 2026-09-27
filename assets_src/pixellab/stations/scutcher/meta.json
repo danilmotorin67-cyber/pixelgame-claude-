@@ -1,0 +1,13 @@
+{
+ "id": "scutcher",
+ "method": "map-objects",
+ "prompt": "wooden flax scutching board and blade, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "a78754b8-22cd-4acb-98fc-2ef744280326",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

@@ -195,6 +195,18 @@ def build_props():
         img = Image.open(path).convert("RGBA")
         img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, os.path.basename(path)))
         count += 1
+    # Crop stages (<crop>_<1-4|ripe>) and stations (station_<id>) share the props folder.
+    for path in sorted(glob.glob(os.path.join(SRC, "crops", "*.png"))):
+        img = Image.open(path).convert("RGBA")
+        img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, os.path.basename(path)))
+        count += 1
+    for folder in sorted(glob.glob(os.path.join(SRC, "stations", "*"))):
+        aid = os.path.basename(folder)
+        path = os.path.join(folder, aid + ".png")
+        if os.path.exists(path):
+            img = Image.open(path).convert("RGBA")
+            img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, "station_" + aid + ".png"))
+            count += 1
     for folder in sorted(glob.glob(os.path.join(SRC, "props", "*"))):
         aid = os.path.basename(folder)
         path = os.path.join(folder, aid + ".png")

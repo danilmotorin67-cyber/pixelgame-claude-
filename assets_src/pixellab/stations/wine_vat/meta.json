@@ -1,0 +1,13 @@
+{
+ "id": "wine_vat",
+ "method": "map-objects",
+ "prompt": "wooden berry wine vat with a tap, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "0c717a57-74c2-4fe3-ae62-70a79ebd0c8f",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

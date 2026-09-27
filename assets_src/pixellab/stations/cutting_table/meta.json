@@ -1,0 +1,13 @@
+{
+ "id": "cutting_table",
+ "method": "map-objects",
+ "prompt": "fish cutting table with a knife and a bucket, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "c1cf73ac-3dc4-4860-aa9f-0c26ae7e7d64",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

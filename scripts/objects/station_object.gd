@@ -16,6 +16,15 @@ func _ready() -> void:
 
 
 func _draw() -> void:
+	if station_id in ["tree", "decor"] or not PropArt.draw(self, "station_" + station_id, Vector2(0, 6)):
+		_draw_shape()
+	var obj := Crafting.find(Router.current_map, uid)
+	if Crafting.ready_jobs(obj) > 0 or not obj.get("stock", []).is_empty() or int(obj.get("fruit", 0)) > 0:
+		draw_circle(Vector2(8, -10), 3, Color("#ffc85a"))
+
+
+# The drawn shapes, kept for stations without PixelLab art, trees and decor.
+func _draw_shape() -> void:
 	match station_id:
 		"workbench":
 			draw_rect(Rect2(-10, -6, 20, 4), Color("#8c6a4e"))
@@ -40,9 +49,6 @@ func _draw() -> void:
 			_draw_decor()
 		_:
 			_draw_generic()
-	var obj := Crafting.find(Router.current_map, uid)
-	if Crafting.ready_jobs(obj) > 0 or not obj.get("stock", []).is_empty() or int(obj.get("fruit", 0)) > 0:
-		draw_circle(Vector2(8, -10), 3, Color("#ffc85a"))
 
 
 # Stations of 19.2 as small pixel machines: body, top and an accent in the station's colours.

@@ -1,0 +1,13 @@
+{
+ "id": "wind_pump",
+ "method": "map-objects",
+ "prompt": "small wooden wind pump with four blades on a frame, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "6303461d-0c0a-45ae-a0f5-ef20e0445171",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

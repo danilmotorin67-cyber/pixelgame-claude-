@@ -179,6 +179,10 @@ func _draw() -> void:
 			draw_texture_rect(WangGround.single(soil_tile(bed)), Rect2(at, Vector2(TILE, TILE)), false)
 			if str(bed["crop"]) != "":
 				var stage := Farm.stage(bed)
+				# PixelLab crop stages: <crop>_1..4 while growing, <crop>_ripe when ready.
+				var art := "%s_%s" % [str(bed["crop"]), "ripe" if bool(bed["ready"]) else str(mini(stage, 3) + 1)]
+				if PropArt.draw(self, art, at + Vector2(8, 14)):
+					continue
 				if bool(bed["ready"]):
 					paint(at, 5, 8, 6, 5, Color("#eadcb8"))
 					paint(at, 6, 8, 3, 3, Color("#fff8e1"))

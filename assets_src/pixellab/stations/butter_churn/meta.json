@@ -1,0 +1,13 @@
+{
+ "id": "butter_churn",
+ "method": "map-objects",
+ "prompt": "tall wooden butter churn, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "0f75da43-6465-47b4-98dc-6e7d9124756f",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

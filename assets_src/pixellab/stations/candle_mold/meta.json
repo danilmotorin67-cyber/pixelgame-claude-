@@ -1,0 +1,13 @@
+{
+ "id": "candle_mold",
+ "method": "map-objects",
+ "prompt": "tin candle mould rack with candles and a wax pot, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d353b13c-7ff2-49d8-b088-aa0b57e3eb1e",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

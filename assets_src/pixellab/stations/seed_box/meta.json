@@ -1,0 +1,13 @@
+{
+ "id": "seed_box",
+ "method": "map-objects",
+ "prompt": "wooden seed sorting box with little drawers, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3933089f-b78f-49bb-a81d-6b4cce364ef2",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

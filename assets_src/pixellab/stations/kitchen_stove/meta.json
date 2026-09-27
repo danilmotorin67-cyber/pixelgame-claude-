@@ -1,0 +1,13 @@
+{
+ "id": "kitchen_stove",
+ "method": "map-objects",
+ "prompt": "cast iron kitchen stove with a pot and a kettle, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "ebac3703-f934-4068-8475-080bec994afc",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

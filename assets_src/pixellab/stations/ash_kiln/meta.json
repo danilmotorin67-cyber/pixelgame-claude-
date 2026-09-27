@@ -1,0 +1,13 @@
+{
+ "id": "ash_kiln",
+ "method": "map-objects",
+ "prompt": "small stone lye ash kiln, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "b0559c04-f958-4fbb-af3f-fc5c62f45b74",
+ "generations": 23.0,
+ "date": "2026-09-27"
+}

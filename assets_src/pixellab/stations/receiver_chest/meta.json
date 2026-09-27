@@ -1,0 +1,13 @@
+{
+ "id": "receiver_chest",
+ "method": "map-objects",
+ "prompt": "copper-bound receiving chest with a slot, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "082a343a-785b-48c1-ba02-6d1fa2380eb8",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "smokehouse",
+ "method": "map-objects",
+ "prompt": "small wooden smokehouse with a smoking chimney, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "27251e00-50d2-4b85-8dcd-5e91d8f47be5",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

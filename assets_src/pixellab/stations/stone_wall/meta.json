@@ -1,0 +1,13 @@
+{
+ "id": "stone_wall",
+ "method": "map-objects",
+ "prompt": "short straight section of dry stone wall made of stacked grey stones, no roof, no building, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ed421535-404c-4468-aea8-66034dfa7a5f",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

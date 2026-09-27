@@ -1,0 +1,13 @@
+{
+ "id": "drying_rack",
+ "method": "map-objects",
+ "prompt": "wooden drying rack with fish and herbs hanging, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "a85e36f4-bab3-415f-a935-17867d216802",
+ "generations": 22.0,
+ "date": "2026-09-27"
+}

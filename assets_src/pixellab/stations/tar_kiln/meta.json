@@ -1,0 +1,13 @@
+{
+ "id": "tar_kiln",
+ "method": "map-objects",
+ "prompt": "small earthen tar kiln with a pipe dripping black tar, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "79648b2e-3b29-4788-88a8-004d99e07c9d",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

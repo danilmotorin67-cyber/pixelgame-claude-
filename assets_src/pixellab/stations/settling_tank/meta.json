@@ -1,0 +1,13 @@
+{
+ "id": "settling_tank",
+ "method": "map-objects",
+ "prompt": "wooden settling tank for fish oil with a tap, crafting station for a cozy farming game, pixel art, 3/4 top-down view, northern fishing island, weathered wood, iron and stone, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "bae41899-38e1-4685-952c-77d4208c44ee",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}
