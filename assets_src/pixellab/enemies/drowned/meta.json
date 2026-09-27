@@ -1,0 +1,25 @@
+{
+ "id": "drowned",
+ "method": "map-objects",
+ "prompt": "drowned sailor with seaweed hair and pale skin, rags, not gory, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "4d424f03-36bf-4aac-92b6-0993cc941efe",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 3.0,
+   "action": "shambling forward",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 7.0,
+   "action": "reaching out to grab",
+   "frames": 7
+  }
+ }
+}

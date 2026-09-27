@@ -1,0 +1,25 @@
+{
+ "id": "deep_crab",
+ "method": "map-objects",
+ "prompt": "huge armoured deep sea crab with barnacles, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "3f4df3a4-b50b-4064-bae8-e2ff8d93994a",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 4.0,
+   "action": "walking slowly",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 5.0,
+   "action": "slamming its big claw",
+   "frames": 7
+  }
+ }
+}

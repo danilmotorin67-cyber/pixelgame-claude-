@@ -1,0 +1,25 @@
+{
+ "id": "net_trap",
+ "method": "map-objects",
+ "prompt": "tangled old fishing net snare with floats, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "cdd79342-c262-428d-aaf4-7ee9d4db057a",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 5.0,
+   "action": "swaying in the current",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 8.0,
+   "action": "snapping shut",
+   "frames": 7
+  }
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "mother_moray",
+ "method": "map-objects",
+ "prompt": "giant ancient moray eel mother coiled in kelp, huge jaws, scarred, boss monster, pixel art, muted cold palette",
+ "size": [
+  128,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "7c26ba81-c116-4ed5-8c52-63dbbf6cdc54",
+ "generations": 4.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 5.0,
+   "action": "coiling and breathing",
+   "frames": 9
+  },
+  "attack": {
+   "generations": 9.0,
+   "action": "lunging with open jaws",
+   "frames": 9
+  }
+ }
+}

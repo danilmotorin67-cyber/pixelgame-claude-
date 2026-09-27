@@ -1,0 +1,20 @@
+{
+ "id": "daughter_stuzha",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of frost, icy blue, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "162aa9d1-948d-4cc9-82aa-a3f8273b8671",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 4.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

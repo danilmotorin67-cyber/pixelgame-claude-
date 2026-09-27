@@ -1,0 +1,25 @@
+{
+ "id": "helmet_crayfish",
+ "method": "map-objects",
+ "prompt": "crayfish wearing an old copper diving helmet as a shell, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b773fa3b-3ac6-4291-8b29-de6d22626e4f",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 3.0,
+   "action": "crawling",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "pinching with claws",
+   "frames": 7
+  }
+ }
+}

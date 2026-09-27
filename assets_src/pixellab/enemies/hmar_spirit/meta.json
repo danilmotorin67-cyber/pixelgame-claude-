@@ -1,0 +1,25 @@
+{
+ "id": "hmar_spirit",
+ "method": "map-objects",
+ "prompt": "hovering lilac fog spirit with a glowing core, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "5b7ece6d-f633-414f-bf65-35d5941444fc",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 1.0,
+   "action": "hovering",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 6.0,
+   "action": "shooting a fog bolt",
+   "frames": 7
+  }
+ }
+}

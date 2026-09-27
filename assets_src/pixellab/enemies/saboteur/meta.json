@@ -1,0 +1,25 @@
+{
+ "id": "saboteur",
+ "method": "map-objects",
+ "prompt": "hooded saboteur in a dark coat with a crowbar, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "52531eaa-ddda-480b-b574-951a8993b84f",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 4.0,
+   "action": "sneaking",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 7.0,
+   "action": "swinging a crowbar",
+   "frames": 7
+  }
+ }
+}

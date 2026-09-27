@@ -1,0 +1,20 @@
+{
+ "id": "daughter_hmar",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of fog, lilac mist, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "784ca18d-7683-4cfb-a6b0-2bec630e6afe",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 2.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

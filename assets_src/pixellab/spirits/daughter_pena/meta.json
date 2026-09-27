@@ -1,0 +1,20 @@
+{
+ "id": "daughter_pena",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea made of white foam, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "69b2c28f-53eb-446d-8932-58735e9b2827",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 4.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

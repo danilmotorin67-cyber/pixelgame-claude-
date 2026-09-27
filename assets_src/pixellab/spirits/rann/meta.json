@@ -1,0 +1,25 @@
+{
+ "id": "rann",
+ "method": "map-objects",
+ "prompt": "vast sea goddess of water and kelp rising from the waves, long flowing hair of seaweed, calm glowing eyes, pixel art, muted cold palette",
+ "size": [
+  128,
+  128
+ ],
+ "view": "high top-down",
+ "object_id": "429cac9d-08ad-46a2-9cdb-ab5e33ea1a80",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "rise": {
+   "generations": 7.0,
+   "action": "rising slowly out of the water",
+   "frames": 9
+  },
+  "speak": {
+   "generations": 11.0,
+   "action": "speaking, hair and water flowing, eyes glowing",
+   "frames": 9
+  }
+ }
+}

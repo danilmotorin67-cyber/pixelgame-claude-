@@ -1,0 +1,25 @@
+{
+ "id": "hot_vent",
+ "method": "map-objects",
+ "prompt": "hot volcanic vent on the sea floor, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "532359bb-1994-4606-8f85-0ca06f22e3a7",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 6.0,
+   "action": "bubbling gently",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "erupting with hot bubbles",
+   "frames": 7
+  }
+ }
+}

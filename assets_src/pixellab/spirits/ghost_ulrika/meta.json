@@ -1,0 +1,20 @@
+{
+ "id": "ghost_ulrika",
+ "method": "map-objects",
+ "prompt": "ghost of an old woman lighthouse keeper with a lantern, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "40a9fe3c-fd92-4c63-99d8-06212218909a",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 8.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
+}

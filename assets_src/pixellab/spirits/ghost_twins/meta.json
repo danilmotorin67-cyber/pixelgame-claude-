@@ -1,0 +1,20 @@
+{
+ "id": "ghost_twins",
+ "method": "map-objects",
+ "prompt": "ghosts of two small twin children holding hands, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "146a0c0a-9a6f-4fad-a5b8-34e26af74c17",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 6.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
+}

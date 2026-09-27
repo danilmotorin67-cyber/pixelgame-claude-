@@ -1,0 +1,25 @@
+{
+ "id": "moray",
+ "method": "map-objects",
+ "prompt": "green kelp moray eel with an open mouth, enemy, pixel art, muted cold palette",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5b858a9c-b3de-4cc3-b3c1-601b996e1511",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 5.0,
+   "action": "slithering forward",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "lunging and biting",
+   "frames": 7
+  }
+ }
+}

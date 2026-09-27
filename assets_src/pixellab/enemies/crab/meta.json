@@ -1,0 +1,25 @@
+{
+ "id": "crab",
+ "method": "map-objects",
+ "prompt": "big red cutter crab with sharp claws, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "825d3a3d-21ca-4e36-8ced-4687146a00a9",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 5.0,
+   "action": "scuttling sideways",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 5.0,
+   "action": "snapping its claws",
+   "frames": 7
+  }
+ }
+}

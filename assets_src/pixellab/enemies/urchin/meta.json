@@ -1,0 +1,25 @@
+{
+ "id": "urchin",
+ "method": "map-objects",
+ "prompt": "black spiny sea urchin, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "a38d3eda-4743-4aa0-a96b-499908916f66",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 5.0,
+   "action": "spines slowly waving",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 6.0,
+   "action": "spines bristling outwards",
+   "frames": 7
+  }
+ }
+}

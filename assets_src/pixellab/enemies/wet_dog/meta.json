@@ -1,0 +1,25 @@
+{
+ "id": "wet_dog",
+ "method": "map-objects",
+ "prompt": "gaunt wet black stray dog with glowing eyes, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ac7ab506-23ce-4177-9780-b2f2145f72b8",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 2.0,
+   "action": "running",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 5.0,
+   "action": "lunging and biting",
+   "frames": 7
+  }
+ }
+}

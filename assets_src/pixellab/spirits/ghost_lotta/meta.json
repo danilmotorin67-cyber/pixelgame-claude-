@@ -1,0 +1,20 @@
+{
+ "id": "ghost_lotta",
+ "method": "map-objects",
+ "prompt": "ghost of a young bride in a wedding veil, translucent pale-blue glowing ghost, see-through, floating, faint glow, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "cd72ab4c-1052-4585-956c-233c3e3eeeb6",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "float": {
+   "generations": 3.0,
+   "action": "floating gently up and down, glowing softly",
+   "frames": 7
+  }
+ }
+}

@@ -1,0 +1,20 @@
+{
+ "id": "daughter_priliva",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of the tide, green and silver, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "e822a811-993a-47a5-a75e-6cc80e4bafd0",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 8.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

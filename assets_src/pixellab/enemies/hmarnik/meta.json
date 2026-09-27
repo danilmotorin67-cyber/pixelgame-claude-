@@ -1,0 +1,25 @@
+{
+ "id": "hmarnik",
+ "method": "map-objects",
+ "prompt": "pale lilac fog creature with long thin arms and hollow eyes, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "16301dcf-7873-4ceb-8bf5-83e44066f694",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 7.0,
+   "action": "flickering and gliding",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 2.0,
+   "action": "phasing forward to strike",
+   "frames": 7
+  }
+ }
+}

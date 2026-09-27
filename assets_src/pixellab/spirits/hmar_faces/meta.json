@@ -1,0 +1,20 @@
+{
+ "id": "hmar_faces",
+ "method": "map-objects",
+ "prompt": "faint pale faces and wisps in lilac fog, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "c4f932cc-04f1-4671-93da-7a4e7eefbe54",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "drift": {
+   "generations": 4.0,
+   "action": "fog drifting, faces fading in and out",
+   "frames": 9
+  }
+ }
+}

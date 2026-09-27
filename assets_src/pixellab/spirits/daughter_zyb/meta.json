@@ -1,0 +1,20 @@
+{
+ "id": "daughter_zyb",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of ripples, rippling water body, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "e6757fd6-3b7c-4784-9bbc-8f852e20a4ff",
+ "generations": 5.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 4.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

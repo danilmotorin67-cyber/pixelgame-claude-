@@ -1,0 +1,25 @@
+{
+ "id": "anglerfish",
+ "method": "map-objects",
+ "prompt": "black deep sea anglerfish with a glowing lure, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "03aaefae-4ade-4e94-9036-bcadcfcc8f18",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 4.0,
+   "action": "swimming, lure glowing",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 6.0,
+   "action": "opening its huge jaws",
+   "frames": 7
+  }
+ }
+}

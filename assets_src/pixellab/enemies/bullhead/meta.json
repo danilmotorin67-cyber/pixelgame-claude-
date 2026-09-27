@@ -1,0 +1,25 @@
+{
+ "id": "bullhead",
+ "method": "map-objects",
+ "prompt": "small spiny brown bullhead fish, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d90b7bde-a007-4d0a-aa56-fd76f444dcd9",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 6.0,
+   "action": "swimming",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "darting forward",
+   "frames": 7
+  }
+ }
+}

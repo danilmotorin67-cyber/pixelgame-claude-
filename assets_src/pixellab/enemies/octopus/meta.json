@@ -1,0 +1,25 @@
+{
+ "id": "octopus",
+ "method": "map-objects",
+ "prompt": "dark red octopus, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "e8b80686-2de4-4e4a-afd4-11e742657214",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 6.0,
+   "action": "crawling with tentacles",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 8.0,
+   "action": "squirting black ink",
+   "frames": 7
+  }
+ }
+}

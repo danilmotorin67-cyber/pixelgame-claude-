@@ -1,0 +1,25 @@
+{
+ "id": "bone_whale",
+ "method": "map-objects",
+ "prompt": "colossal whale skeleton swimming in dark water, glowing blue eye sockets, boss monster, pixel art, muted cold palette",
+ "size": [
+  128,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "679223d7-e177-401f-a0d1-c53c010a6ddf",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 7.0,
+   "action": "swimming slowly, bones creaking",
+   "frames": 9
+  },
+  "attack": {
+   "generations": 7.0,
+   "action": "charging with open jaws",
+   "frames": 9
+  }
+ }
+}

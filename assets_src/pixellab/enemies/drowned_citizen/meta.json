@@ -1,0 +1,25 @@
+{
+ "id": "drowned_citizen",
+ "method": "map-objects",
+ "prompt": "drowned townsman in an old waistcoat, seaweed, pale, not gory, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "539f14f3-655e-4d96-8e7c-29395eb37045",
+ "generations": 3.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 5.0,
+   "action": "shambling forward",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "reaching out to grab",
+   "frames": 7
+  }
+ }
+}

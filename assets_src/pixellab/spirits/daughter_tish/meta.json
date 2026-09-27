@@ -1,0 +1,20 @@
+{
+ "id": "daughter_tish",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of calm, still glassy water, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "04d85a7d-bcc8-4930-ae8d-4f363cef507c",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 8.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

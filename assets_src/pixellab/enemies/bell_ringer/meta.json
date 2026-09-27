@@ -1,0 +1,25 @@
+{
+ "id": "bell_ringer",
+ "method": "map-objects",
+ "prompt": "drowned bell-ringer giant holding a huge green bronze bell, seaweed robes, boss monster, pixel art, muted cold palette",
+ "size": [
+  96,
+  128
+ ],
+ "view": "high top-down",
+ "object_id": "583b4175-4ca2-42bf-8901-ca7d14c790d6",
+ "generations": 4.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 4.0,
+   "action": "swaying, bell swinging slowly",
+   "frames": 9
+  },
+  "attack": {
+   "generations": 7.0,
+   "action": "swinging and ringing the bell hard",
+   "frames": 9
+  }
+ }
+}

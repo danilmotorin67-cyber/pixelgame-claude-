@@ -1,0 +1,20 @@
+{
+ "id": "daughter_burun",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of breaking surf, wild wave hair, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "f4d22e31-271e-4394-9876-3cab939c574d",
+ "generations": 0.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 5.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

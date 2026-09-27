@@ -1,0 +1,20 @@
+{
+ "id": "daughter_svetla",
+ "method": "map-objects",
+ "prompt": "ethereal sea spirit maiden, a daughter of the sea of light, glowing golden, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "ab221b8b-0d8a-4909-a5fa-31e40a5de01e",
+ "generations": 5.0,
+ "date": "2026-09-27",
+ "animations": {
+  "idle": {
+   "generations": 7.0,
+   "action": "floating gently, hair flowing",
+   "frames": 7
+  }
+ }
+}

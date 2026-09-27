@@ -1,0 +1,25 @@
+{
+ "id": "gull_marauder",
+ "method": "map-objects",
+ "prompt": "big angry herring gull with a stolen fish, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "72207840-b092-4d6c-a04e-e48c0ea31461",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 4.0,
+   "action": "flying",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 4.0,
+   "action": "diving and pecking",
+   "frames": 7
+  }
+ }
+}

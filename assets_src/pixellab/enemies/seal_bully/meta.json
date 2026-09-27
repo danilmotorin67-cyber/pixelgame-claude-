@@ -1,0 +1,25 @@
+{
+ "id": "seal_bully",
+ "method": "map-objects",
+ "prompt": "fat grey bully seal with a smug face, enemy, pixel art, muted cold palette",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "520e61cc-9fd6-4b8b-8d12-992e0400e3c6",
+ "generations": 0.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 7.0,
+   "action": "flopping forward",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 5.0,
+   "action": "slapping with its flipper",
+   "frames": 7
+  }
+ }
+}

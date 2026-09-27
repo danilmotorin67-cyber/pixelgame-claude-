@@ -1,0 +1,25 @@
+{
+ "id": "bonefish",
+ "method": "map-objects",
+ "prompt": "skeletal fish made of bones, enemy, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b6ceb7bb-42e3-489d-a00b-aa31c736d461",
+ "generations": 1.0,
+ "date": "2026-09-27",
+ "animations": {
+  "move": {
+   "generations": 8.0,
+   "action": "swimming",
+   "frames": 7
+  },
+  "attack": {
+   "generations": 8.0,
+   "action": "biting",
+   "frames": 7
+  }
+ }
+}
