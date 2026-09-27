@@ -55,6 +55,7 @@ func _ready() -> void:
 	_list = ItemList.new()
 	_list.custom_minimum_size = Vector2(310, 110)
 	_list.add_theme_font_size_override("font_size", 8)
+	_list.fixed_icon_size = Vector2i(16, 16)
 	_list.item_activated.connect(func(_i: int) -> void: act())
 	column.add_child(_list)
 	_status = _label("", Color("#dfe9ea"))
@@ -134,14 +135,14 @@ func refresh() -> void:
 				var s: Dictionary = current["slots"][index]
 				if str(s["id"]) != "":
 					_rows.append(index)
-					_list.add_item(_slot_text(s))
+					_list.add_item(_slot_text(s), ItemIcon.texture(str(s["id"])))
 			if _rows.is_empty():
 				_list.add_item("Пусто.")
 			if kind() == "cellar":
 				_status.text = "Аквавит, вино и сыр: ступень качества примерно каждые 19 дней, до безупречного за 56."
 		"hive":
 			for entry in current.get("stock", []):
-				_list.add_item("%s ×%d" % [item_name(str(entry[0])), int(entry[1])])
+				_list.add_item("%s ×%d" % [item_name(str(entry[0])), int(entry[1])], ItemIcon.texture(str(entry[0])))
 			_status.text = "Зимой пчёлы спят." if Clock.season == "winter" \
 				else "Следующий мёд через %d дн." % maxi(0, int(current.get("next", 0)) - Clock.day_index)
 		"tree":
@@ -169,7 +170,7 @@ func refresh() -> void:
 					parts.append("%s ×%d" % [item_name(str(need[0])), int(need[1])])
 				var out: Array = recipe["out"]
 				var mark := "" if Crafting.has_ingredients(recipe) else "  (нет)"
-				_list.add_item("%s ×%d ← %s%s" % [item_name(str(out[0])), int(out[1]), ", ".join(parts), mark])
+				_list.add_item("%s ×%d ← %s%s" % [item_name(str(out[0])), int(out[1]), ", ".join(parts), mark], ItemIcon.texture(str(out[0])))
 			if _rows.is_empty():
 				_list.add_item("Рецептов пока нет.")
 			if kind() == "process":

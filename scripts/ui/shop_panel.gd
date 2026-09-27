@@ -33,6 +33,7 @@ func _ready() -> void:
 	_list = ItemList.new()
 	_list.custom_minimum_size = Vector2(290, 110)
 	_list.add_theme_font_size_override("font_size", 8)
+	_list.fixed_icon_size = Vector2i(16, 16)
 	_list.item_activated.connect(func(_index: int) -> void: buy_selected(1))
 	column.add_child(_list)
 	_status = _label("", Color("#dfe9ea"))
@@ -74,7 +75,8 @@ func refresh() -> void:
 	_entries = Economy.shop_stock(shop_id)
 	_list.clear()
 	for entry in _entries:
-		_list.add_item("%s — %d кр" % [entry_name(entry), int(entry["price"])])
+		var icon_id := str(entry.get("item", entry.get("tool_upgrade", "")))
+		_list.add_item("%s — %d кр" % [entry_name(entry), int(entry["price"])], ItemIcon.texture(icon_id) if icon_id != "" else null)
 
 
 static func entry_name(entry: Dictionary) -> String:
