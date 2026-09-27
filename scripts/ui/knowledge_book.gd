@@ -41,43 +41,9 @@ static func skill_lines() -> Array:
 	return out
 
 
-static func open(hud: CanvasLayer) -> InfoPanel:
-	var state := {"branch": 0, "skills": false}
-	var body := func() -> String:
-		var head := "Записи: ⚓ %d · 🌿 %d · 🕯 %d." % [Knowledge.sea_pts, Knowledge.land_pts, Knowledge.rest_pts]
-		if bool(state["skills"]):
-			return head + " Навыки и профессии (25):"
-		return head + " Ветвь: %s. ✓ открыт, ○ можно открыть, ? ждёт сюжета." % BRANCH_NAMES[BRANCHES[int(state["branch"])]]
-	var rows := func() -> Array:
-		return skill_lines() if bool(state["skills"]) else node_lines(BRANCHES[int(state["branch"])])
-	var prev := func(panel: InfoPanel) -> String:
-		state["skills"] = false
-		state["branch"] = posmod(int(state["branch"]) - 1, BRANCHES.size())
-		panel.refresh()
-		return ""
-	var next := func(panel: InfoPanel) -> String:
-		state["skills"] = false
-		state["branch"] = posmod(int(state["branch"]) + 1, BRANCHES.size())
-		panel.refresh()
-		return ""
-	var unlock := func(panel: InfoPanel) -> String:
-		if bool(state["skills"]):
-			return "Это страница навыков."
-		var list := nodes_of(BRANCHES[int(state["branch"])])
-		var index := panel.selected_index()
-		if index < 0 or index >= list.size():
-			return "Выберите узел."
-		var id := str(list[index]["id"])
-		var reason := Knowledge.blocked_reason(id)
-		if Knowledge.unlock_node(id):
-			return "Узел %s открыт: %s." % [id, Loc.t("node.%s.name" % id)]
-		return {"unlocked": "Уже открыт.", "requires": "Сначала предыдущие узлы.", "story": "Ждёт событий сюжета.",
-			"points": "Не хватает записей."}.get(reason, "Нельзя.")
-	var skills := func(panel: InfoPanel) -> String:
-		state["skills"] = not bool(state["skills"])
-		panel.refresh()
-		return ""
-	return InfoPanel.open(hud, "Древо знаний", body, [["◀", prev], ["▶", next], ["Открыть узел", unlock], ["Навыки", skills]], rows)
+# The tree itself is drawn by KnowledgeView (branch tabs, nodes, the card of the picked node).
+static func open(hud: CanvasLayer) -> KnowledgeView:
+	return KnowledgeView.open(hud)
 
 
 # Level 5 and 10 (25.1): one of two professions; the offer repeats until the keeper picks.

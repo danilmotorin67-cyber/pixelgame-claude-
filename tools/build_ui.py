@@ -59,6 +59,15 @@ def build_frames():
                         px[x, y] = (min(255, int(r * k)), min(255, int(g * k)), min(255, int(b * k)), a)
             img.save(os.path.join(OUT, "frames", name + ".png"))
             meta[name] = dict(meta[base])
+    # A whole parchment sheet (calendar, sea chart): the outer half of the right page and its mirror.
+    if "book_right" in meta:
+        page = Image.open(os.path.join(OUT, "frames", "book_right.png")).convert("RGBA")
+        outer = page.crop((page.width // 2, 0, page.width, page.height))
+        sheet = Image.new("RGBA", (outer.width * 2, outer.height))
+        sheet.paste(outer.transpose(Image.FLIP_LEFT_RIGHT), (0, 0))
+        sheet.paste(outer, (outer.width, 0))
+        sheet.save(os.path.join(OUT, "frames", "paper.png"))
+        meta["paper"] = dict(meta["book_right"])
     with open(os.path.join(OUT, "frames.json"), "w") as f:
         json.dump(meta, f, indent=1, sort_keys=True)
     return len(meta)

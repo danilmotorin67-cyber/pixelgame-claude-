@@ -39,6 +39,11 @@
   "pad": 2,
   "tile": false
  },
+ "paper": {
+  "margin": 8,
+  "pad": 6,
+  "tile": false
+ },
  "slot": {
   "margin": 6,
   "pad": 0,
