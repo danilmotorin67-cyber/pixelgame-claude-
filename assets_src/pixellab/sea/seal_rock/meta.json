@@ -1,0 +1,13 @@
+{
+ "id": "seal_rock",
+ "method": "map-objects",
+ "prompt": "flat grey sea rock with wet sides and white foam, seals rest on it, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "e9717cef-271e-4981-868e-66ac9be0f341",
+ "generations": 100.0,
+ "date": "2026-09-27"
+}

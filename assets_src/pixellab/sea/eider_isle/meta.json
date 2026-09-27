@@ -1,0 +1,13 @@
+{
+ "id": "eider_isle",
+ "method": "map-objects",
+ "prompt": "small grassy islet with rocks, eider duck nests and down, surrounded by foam, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  96,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "13afe1ba-c1a9-4a13-bc1b-d5618ce61269",
+ "generations": 25.0,
+ "date": "2026-09-27"
+}

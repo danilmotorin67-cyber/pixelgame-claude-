@@ -1,0 +1,12 @@
+{
+ "id": "npc_ingrid",
+ "size": 64,
+ "spent": {
+  "neutral": 170.0,
+  "happy": 10.0,
+  "sad": 6.0,
+  "angry": 6.0,
+  "surprised": 8.0,
+  "special": 78.0
+ }
+}

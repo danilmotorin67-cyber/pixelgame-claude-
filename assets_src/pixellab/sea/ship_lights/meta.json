@@ -1,0 +1,13 @@
+{
+ "id": "ship_lights",
+ "method": "map-objects",
+ "prompt": "a distant ship at night: dark silhouette with lit yellow portholes and a red and a green lantern, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "13ca6f23-f323-4bb3-9951-189a88e7b72d",
+ "generations": 29.0,
+ "date": "2026-09-27"
+}

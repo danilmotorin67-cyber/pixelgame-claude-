@@ -1,0 +1,13 @@
+{
+ "id": "steamer",
+ "method": "map-objects",
+ "prompt": "small black passenger steamer Gull with a red funnel and smoke, seen from above, heading right, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "47fe7b59-90af-4f18-87b7-111d9163712f",
+ "generations": 76.0,
+ "date": "2026-09-27"
+}

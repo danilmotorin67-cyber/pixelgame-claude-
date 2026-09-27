@@ -1,0 +1,12 @@
+{
+ "id": "npc_olaf",
+ "size": 64,
+ "spent": {
+  "neutral": 32.0,
+  "happy": 107.0,
+  "sad": 33.0,
+  "angry": 4.0,
+  "surprised": 10.0,
+  "special": 6.0
+ }
+}

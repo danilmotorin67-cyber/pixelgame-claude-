@@ -1,0 +1,13 @@
+{
+ "id": "iceberg_3",
+ "method": "map-objects",
+ "prompt": "tiny floating ice floe chunk, white and pale blue, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3e0111f1-9db2-4662-96c4-46c58be81a56",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,12 @@
+{
+ "id": "npc_sigrid",
+ "size": 64,
+ "spent": {
+  "neutral": 25.0,
+  "happy": 1.0,
+  "sad": 1.0,
+  "angry": 1.0,
+  "surprised": 1.0,
+  "special": 0.0
+ }
+}

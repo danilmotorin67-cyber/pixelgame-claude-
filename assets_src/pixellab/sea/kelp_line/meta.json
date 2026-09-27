@@ -1,0 +1,13 @@
+{
+ "id": "kelp_line",
+ "method": "map-objects",
+ "prompt": "rope with small cork floats and brown kelp growing on it, floating on water, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "bd05a78d-9bf0-4827-a091-345b6bfc29e5",
+ "generations": 116.0,
+ "date": "2026-09-27"
+}

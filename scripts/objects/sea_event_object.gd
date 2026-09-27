@@ -80,6 +80,8 @@ func _draw() -> void:
 		return
 	match str(entry["id"]):
 		"cargo":
+			if SeaArt.draw(self, "cargo_crates" if int(entry.get("x", 0)) % 2 == 0 else "cargo_barrels", Vector2(0, bob)):
+				return
 			draw_rect(Rect2(-6, -5 + bob, 12, 9), Color("#8c6a4e"))
 		"bottle", "eleonora_chest":
 			draw_rect(Rect2(-2, -6 + bob, 4, 9), Color("#6fa07a") if str(entry["id"]) == "bottle" else Color("#6b4a32"))
@@ -93,6 +95,8 @@ func _draw() -> void:
 			draw_rect(Rect2(-14, bob, 28, 5), Color("#2a2a30"))
 			draw_rect(Rect2(-2, -8 + bob, 2, 8), Color(0.9, 0.95, 1.0, 0.7))
 		"ghost_ship":
+			if SeaArt.draw(self, "eleonora", Vector2(0, -12 + bob), Color(0.7, 1.0, 0.85, 0.55 + 0.15 * sin(_t * 1.3))):
+				return
 			draw_rect(Rect2(-16, bob, 32, 6), Color(0.8, 0.85, 0.9, 0.35))
 			draw_rect(Rect2(-1, -18 + bob, 2, 18), Color(0.8, 0.85, 0.9, 0.35))
 		"fisher_in_trouble":

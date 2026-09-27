@@ -21,6 +21,8 @@ func _process(delta: float) -> void:
 
 func _draw() -> void:
 	var bob := sin(_t * 2.0) * 1.5
+	if PropArt.draw(self, "rest_buoy", Vector2(0, 4 + roundf(bob))):
+		return
 	draw_rect(Rect2(-4, -10 + bob, 8, 12), Color("#c2412d"))
 	draw_rect(Rect2(-4, -6 + bob, 8, 2), Color("#fff8e1"))
 	draw_rect(Rect2(-1, -16 + bob, 2, 6), Color("#45464e"))

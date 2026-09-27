@@ -128,11 +128,50 @@ func _wall(body: StaticBody2D, at: Vector2, size: Vector2) -> void:
 
 func _process(delta: float) -> void:
 	_t += delta
-	if int(_t * 4.0) != int((_t - delta) * 4.0):
-		queue_redraw()
+	# The water tiles follow the camera, so the sea redraws every frame.
+	queue_redraw()
+
+
+# The part of the sea the camera sees, in cells, with a margin.
+func _visible_cells() -> Rect2i:
+	var cam := get_viewport().get_camera_2d()
+	if cam == null:
+		return Rect2i(0, 0, width, height)
+	var half := get_viewport_rect().size / cam.zoom / 2.0
+	var c := cam.get_screen_center_position()
+	var a := Vector2i(floori((c.x - half.x) / TILE) - 2, floori((c.y - half.y) / TILE) - 2)
+	var b := Vector2i(ceili((c.x + half.x) / TILE) + 2, ceili((c.y + half.y) / TILE) + 2)
+	return Rect2i(a, b - a)
+
+
+# Shallow water in the near zone, deep beyond (the tiles_shallow_deep Wang set, corner by corner).
+func _draw_water() -> bool:
+	var info := WangGround.tileset("tiles_shallow_deep")
+	if info.is_empty():
+		return false
+	var zone_row := int(SeaChart.cfg("zone2_row"))
+	var view := _visible_cells()
+	var size: int = info["tile"]
+	var tex: Texture2D = info["texture"]
+	var deep_fill := WangGround.full_tile(info, true)
+	for y in range(view.position.y, view.end.y):
+		for x in range(view.position.x, view.end.x):
+			var at := Vector2(x * TILE, y * TILE)
+			if y < 0 or x < 0 or x >= width or y >= height or y >= zone_row + 1:
+				draw_texture_rect_region(tex, Rect2(at, Vector2(TILE, TILE)), deep_fill)
+				continue
+			var key := ""
+			for corner_y in [y, y, y + 1, y + 1]:
+				key += "1" if corner_y >= zone_row else "0"
+			var index := int(info["cells"].get(key, info["cells"]["0000"]))
+			draw_texture_rect_region(tex, Rect2(at, Vector2(TILE, TILE)), Rect2((index % 4) * size, (index / 4) * size, size, size))
+	return true
 
 
 func _draw() -> void:
+	if _draw_water():
+		_draw_sea_art()
+		return
 	draw_rect(Rect2(-400, -400, width * TILE + 800, height * TILE + 800), DEEP)
 	draw_rect(Rect2(0, 0, width * TILE, height * TILE), WATER)
 	var zone_row := int(SeaChart.cfg("zone2_row"))
@@ -185,3 +224,75 @@ func _draw() -> void:
 		var label_at := SeaChart.place_pos(place) + Vector2(-30, -30)
 		draw_string(ThemeDB.fallback_font, label_at, Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8,
 			Color("#f0e7cc"))
+
+
+func _night() -> bool:
+	return Clock.hour >= 21 or Clock.hour < 5
+
+
+# The sea drawn with PixelLab art: a light wave shimmer on the tiles, the coast, the islands and rocks, the
+# whirlpool of the Drowned Well, the sea garden, icebergs in winter, the steamer by day, ship lights by night
+# and the ghost ship Eleonora on Hmar nights.
+func _draw_sea_art() -> void:
+	var frame := int(_t * 4.0)
+	var view := _visible_cells()
+	for i in 260:
+		var x := (i * 97) % (width * TILE)
+		var y := (i * 53 + frame * 3) % (height * TILE)
+		if view.has_point(Vector2i(x / TILE, y / TILE)):
+			draw_rect(Rect2(x, y, 4 + i % 4, 1), Color(0.85, 0.95, 1.0, 0.18))
+	var coast := int(SeaChart.cfg("coast_rows"))
+	var sand := WangGround.seasonal("tiles_grass_sand", Clock.season)
+	if not sand.is_empty():
+		var grass_tile := WangGround.full_tile(sand, false)
+		var sand_tile := WangGround.full_tile(sand, true)
+		for x in range(maxi(view.position.x, 0), mini(view.end.x, width)):
+			for y in coast:
+				draw_texture_rect_region(sand["texture"], Rect2(x * TILE, y * TILE, TILE, TILE), sand_tile if y == coast - 1 else grass_tile)
+	for x in range(0, width * TILE, 12):
+		draw_rect(Rect2(x, coast * TILE - 1 + (frame + x / 12) % 2, 8, 1), FOAM)
+	var dock: Array = SeaChart.cfg("dock")
+	if not BuildingArt.draw_fit(self, "pier_cape", Rect2(int(dock[0]) * TILE - 12, (coast - 1) * TILE - 4, 40, 32)):
+		draw_rect(Rect2(int(dock[0]) * TILE - 8, (coast - 1) * TILE, 32, 24), Color("#8c6a4e"))
+	var fairway := SeaChart.place_pos("fairway")
+	for x in range(0, width * TILE, 40):
+		draw_rect(Rect2(x, fairway.y, 20, 2), Color(0.9, 0.9, 0.7, 0.25))
+	# Reefs: rocks with foam; the Teeth get their own jagged cluster.
+	for reef in SeaChart.cfg("reefs"):
+		var at := Vector2(int(reef[0]) * TILE + 8, int(reef[1]) * TILE + 8)
+		draw_rect(Rect2(at + Vector2(-9, 3), Vector2(18, 2)), FOAM)
+		if not PropArt.draw(self, "rock_%d" % (1 + (int(reef[0]) + int(reef[1])) % 4), at + Vector2(0, 5)):
+			draw_rect(Rect2(at + Vector2(-7, -5), Vector2(14, 10)), ROCK)
+	SeaArt.draw(self, "teeth", SeaChart.place_pos("teeth"))
+	SeaArt.draw(self, "seal_rock", SeaChart.place_pos("seal_rock"))
+	SeaArt.draw(self, "eider_isle", SeaChart.place_pos("eider_isle"))
+	SeaArt.draw(self, "nameless_isle", SeaChart.place_pos("nameless_isle"))
+	if BuildingArt.texture("dead_fire"):
+		BuildingArt.draw(self, "dead_fire", SeaChart.place_pos("dead_fire") + Vector2(0, 18))
+	SeaArt.draw_loop(self, "whirlpool", SeaChart.place_pos("drowned_well"), _t, 6.0)
+	var garden := SeaChart.place_pos("sea_garden")
+	for i in 3:
+		SeaArt.draw(self, "sea_garden", garden + Vector2(-48 + i * 48, -24 + (i % 2) * 20))
+	if Clock.season == "winter":
+		var field := SeaChart.place_pos("ice_field")
+		for i in 8:
+			SeaArt.draw(self, "iceberg_%d" % (1 + i % 3), field + Vector2.from_angle(i * TAU / 8.0) * 90.0)
+		for i in 5:
+			SeaArt.draw(self, "iceberg_3", field + Vector2.from_angle(i * 1.3) * 40.0)
+	# The Gull runs the fairway by day; ships show only their lights by night.
+	if not _night() and Clock.hour >= 8 and Clock.hour < 18 and Weather.current not in ["storm", "blizzard"]:
+		var run := fmod(float(Clock.minutes - 8 * 60) / 600.0, 1.0)
+		SeaArt.draw(self, "steamer", Vector2(run * width * TILE, fairway.y - 20))
+	elif _night():
+		for i in 2:
+			var along := fmod(float(Clock.minutes) * (0.6 + i * 0.25) + i * 700.0, float(width * TILE))
+			var blink := 0.75 + 0.25 * sin(_t * 3.0 + i)
+			SeaArt.draw(self, "ship_lights", Vector2(along, fairway.y + 30 + i * 60), Color(1, 1, 1, blink))
+	if Weather.hmar_night and _night():
+		var drift := Vector2(sin(_t * 0.05) * 120.0, cos(_t * 0.04) * 40.0)
+		SeaArt.draw(self, "eleonora", SeaChart.place_pos("nameless_isle") + Vector2(-140, 40) + drift,
+			Color(0.7, 1.0, 0.85, 0.5 + 0.15 * sin(_t * 1.3)))
+	for place in SeaChart.cfg("places"):
+		var label_at := SeaChart.place_pos(place) + Vector2(-30, -34)
+		draw_string(UiKit.font(), label_at + Vector2(0, 1), Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8, Color(0, 0, 0, 0.5))
+		draw_string(UiKit.font(), label_at, Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8, Color("#f0e7cc"))

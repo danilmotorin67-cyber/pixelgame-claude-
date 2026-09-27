@@ -1,0 +1,45 @@
+{
+  "object": {
+    "id": "d1ddf398-6124-4644-a9b5-ec1193573496",
+    "name": "keeper_sail",
+    "prompt": "small wooden sailing dinghy (yalik) with one white canvas sail raised, empty, northern fishing boat, pixel art, muted cold palette",
+    "size": {
+      "width": 68,
+      "height": 68
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "small_wooden_sailing_dinghy_y.png",
+    "cell_size": {
+      "width": 68,
+      "height": 68
+    },
+    "sheet_size": {
+      "width": 544,
+      "height": 68
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-09-27T22:29:58.566544+00:00"
+}

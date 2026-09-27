@@ -290,6 +290,59 @@ def build_derived_icons(out):
     return count
 
 
+def build_portraits():
+    """Talk portraits: assets_src/pixellab/portraits/<id>/<emotion>.png -> assets/sprites/portraits/<id>_<emotion>.png."""
+    out = "assets/sprites/portraits"
+    os.makedirs(out, exist_ok=True)
+    count = 0
+    for path in sorted(glob.glob(os.path.join(SRC, "portraits", "*", "*.png"))):
+        pid = os.path.basename(os.path.dirname(path))
+        emo = os.path.splitext(os.path.basename(path))[0]
+        Image.open(path).convert("RGBA").save(os.path.join(out, "%s_%s.png" % (pid, emo)))
+        count += 1
+    return count
+
+
+def build_sea():
+    """Boats (sea/<boat>/<state>/sheet.png, 8 rotations in a row) -> assets/sprites/sea/boat_<boat>_<state>.png +
+    .json {frame, dirs}; sea objects (sea/<id>/<id>.png, loops in sea/<id>/loop/) -> assets/sprites/sea/<id>.png
+    and <id>_loop.png strips; spyglass vignettes -> assets/sprites/spyglass/."""
+    out = "assets/sprites/sea"
+    os.makedirs(out, exist_ok=True)
+    count = 0
+    for sheet in sorted(glob.glob(os.path.join(SRC, "sea", "*", "*", "sheet.png"))):
+        state = os.path.basename(os.path.dirname(sheet))
+        boat = os.path.basename(os.path.dirname(os.path.dirname(sheet)))
+        meta = json.load(open(sheet[:-4] + ".json"))["spritesheet"]
+        Image.open(sheet).convert("RGBA").save(os.path.join(out, "boat_%s_%s.png" % (boat, state)))
+        json.dump({"frame": [meta["cell_size"]["width"], meta["cell_size"]["height"]], "dirs": meta["rows"][0]["directions"]},
+                  open(os.path.join(out, "boat_%s_%s.json" % (boat, state)), "w"))
+        count += 1
+    for folder in sorted(glob.glob(os.path.join(SRC, "sea", "*"))):
+        oid = os.path.basename(folder)
+        png = os.path.join(folder, oid + ".png")
+        if not os.path.exists(png):
+            continue
+        img = Image.open(png).convert("RGBA")
+        img.crop(img.getbbox()).save(os.path.join(out, oid + ".png"))
+        count += 1
+        frames = sorted(glob.glob(os.path.join(folder, "loop", "frame_*.png")))
+        if frames:
+            imgs = [Image.open(f).convert("RGBA") for f in frames]
+            w, h = imgs[0].size
+            strip = Image.new("RGBA", (w * len(imgs), h))
+            for i, im in enumerate(imgs):
+                strip.paste(im, (i * w, 0))
+            strip.save(os.path.join(out, oid + "_loop.png"))
+            json.dump({"frame": [w, h], "frames": len(imgs)}, open(os.path.join(out, oid + "_loop.json"), "w"))
+    spy = "assets/sprites/spyglass"
+    os.makedirs(spy, exist_ok=True)
+    for path in sorted(glob.glob(os.path.join(SRC, "spyglass", "*.png"))):
+        Image.open(path).convert("RGBA").save(os.path.join(spy, os.path.basename(path)))
+        count += 1
+    return count
+
+
 if __name__ == "__main__":
-    print("icons", build_icons(), "props", build_props())
+    print("icons", build_icons(), "props", build_props(), "portraits", build_portraits(), "sea", build_sea())
     print("tilesets", build_tilesets(), "buildings", build_buildings(), "cast", build_cast(), "hero", build_hero())

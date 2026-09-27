@@ -1,0 +1,13 @@
+{
+ "id": "cargo_crates",
+ "method": "map-objects",
+ "prompt": "floating wooden cargo crates tied together, drifting on water, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5b60b1f3-f014-420c-a463-f601a85a4d92",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

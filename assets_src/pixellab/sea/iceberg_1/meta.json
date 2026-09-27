@@ -1,0 +1,13 @@
+{
+ "id": "iceberg_1",
+ "method": "map-objects",
+ "prompt": "small white-blue iceberg floating in dark water, jagged top, seen from above, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "52f76006-c906-4532-ba6f-83ff528429b5",
+ "generations": 9.0,
+ "date": "2026-09-27"
+}

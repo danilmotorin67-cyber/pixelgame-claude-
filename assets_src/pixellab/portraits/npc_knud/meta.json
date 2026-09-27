@@ -1,0 +1,12 @@
+{
+ "id": "npc_knud",
+ "size": 64,
+ "spent": {
+  "neutral": 100.0,
+  "happy": 75.0,
+  "sad": 7.0,
+  "angry": 5.0,
+  "surprised": 10.0,
+  "special": 30.0
+ }
+}

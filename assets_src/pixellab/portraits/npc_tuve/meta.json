@@ -1,0 +1,12 @@
+{
+ "id": "npc_tuve",
+ "size": 64,
+ "spent": {
+  "neutral": 83.0,
+  "happy": 54.0,
+  "sad": 30.0,
+  "angry": 5.0,
+  "surprised": 5.0,
+  "special": 9.0
+ }
+}

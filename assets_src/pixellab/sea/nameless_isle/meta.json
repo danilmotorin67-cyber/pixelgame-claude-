@@ -1,0 +1,13 @@
+{
+ "id": "nameless_isle",
+ "method": "map-objects",
+ "prompt": "misty rocky island with a ring of old standing stones and dead grass, foam around it, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  128,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "594bdb11-3ea0-4b99-b11f-cfb909c16ff7",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

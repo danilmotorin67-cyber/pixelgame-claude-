@@ -1,0 +1,45 @@
+{
+  "object": {
+    "id": "278f1f62-5a75-4771-9730-7903a91ba321",
+    "name": "base",
+    "prompt": "small wooden ship's boat (shlyupka) with oars and a short mast with a small raised sail, empty, pixel art, northern fishing island, muted cold palette",
+    "size": {
+      "width": 68,
+      "height": 68
+    },
+    "directions": 8,
+    "view": "high top-down"
+  },
+  "spritesheet": {
+    "path": "small_wooden_ship_s_boat_shly.png",
+    "cell_size": {
+      "width": 68,
+      "height": 68
+    },
+    "sheet_size": {
+      "width": 544,
+      "height": 68
+    },
+    "columns": 8,
+    "pivot": "cell-center",
+    "rows": [
+      {
+        "row": 0,
+        "type": "rotations",
+        "frame_count": 8,
+        "directions": [
+          "south",
+          "south-east",
+          "east",
+          "north-east",
+          "north",
+          "north-west",
+          "west",
+          "south-west"
+        ]
+      }
+    ]
+  },
+  "export_version": "1.0",
+  "export_date": "2026-09-27T22:30:09.635725+00:00"
+}

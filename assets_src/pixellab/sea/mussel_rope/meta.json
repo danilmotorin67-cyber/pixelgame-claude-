@@ -1,0 +1,13 @@
+{
+ "id": "mussel_rope",
+ "method": "map-objects",
+ "prompt": "buoy with a hanging rope of dark mussels, floating on water, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "265c9c79-5e89-4510-91f1-581c7431f983",
+ "generations": 87.0,
+ "date": "2026-09-27"
+}

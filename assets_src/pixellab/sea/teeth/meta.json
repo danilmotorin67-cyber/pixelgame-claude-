@@ -1,0 +1,13 @@
+{
+ "id": "teeth",
+ "method": "map-objects",
+ "prompt": "the Teeth: a cluster of sharp black sea rocks jutting out of the water with white foam around them, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  96,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "ef51f443-e899-4a5a-8560-7a91ac40dde5",
+ "generations": 25.0,
+ "date": "2026-09-27"
+}

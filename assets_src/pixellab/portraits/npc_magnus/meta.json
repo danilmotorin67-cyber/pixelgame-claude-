@@ -1,0 +1,12 @@
+{
+ "id": "npc_magnus",
+ "size": 64,
+ "spent": {
+  "neutral": 100.0,
+  "happy": 73.0,
+  "sad": 2.0,
+  "angry": 6.0,
+  "surprised": 8.0,
+  "special": 5.0
+ }
+}

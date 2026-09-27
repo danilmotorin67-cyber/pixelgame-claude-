@@ -1,0 +1,12 @@
+{
+ "id": "npc_ilm",
+ "size": 64,
+ "spent": {
+  "neutral": 81.0,
+  "happy": 8.0,
+  "sad": 8.0,
+  "angry": 9.0,
+  "surprised": 27.0,
+  "special": 75.0
+ }
+}

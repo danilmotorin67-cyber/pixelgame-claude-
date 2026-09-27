@@ -16,6 +16,12 @@ func _ready() -> void:
 
 
 func _draw() -> void:
+	var kind := str(entry.get("kind", ""))
+	var tint := Color(0.55, 0.55, 0.6) if bool(entry.get("broken", false)) else Color.WHITE
+	if SeaArt.draw(self, kind, Vector2.ZERO, tint):
+		if bool(entry.get("ready", false)):
+			draw_circle(Vector2(6, -6), 2, Color("#ffc85a"))
+		return
 	var color := {"kelp_line": Color("#4e6e3a"), "mussel_rope": Color("#2a2a40"), "oyster_cage": Color("#9a9ca3")}.get(str(entry.get("kind", "")), Color.WHITE) as Color
 	draw_circle(Vector2(0, -2), 3, Color("#e9643a") if not bool(entry.get("broken", false)) else Color("#6b6b73"))
 	draw_rect(Rect2(-6, 2, 12, 2), color)

@@ -2,9 +2,24 @@ extends Node2D
 class_name BoatArt
 
 
+func _process(_delta: float) -> void:
+	queue_redraw()
+
+
 func _draw() -> void:
 	var player := get_parent() as Player
 	var heading := player.boat_heading
+	# The PixelLab boat of the keeper's hull, in 8 directions: the keeper aboard under sail or at the oars.
+	var boat := Sea.boat if Sea.boat != "" else "yalik"
+	var state := "keeper_sail" if player.sail_up else "keeper_oars"
+	if not SeaArt.has_boat(boat, state):
+		state = "base"
+	var bob := roundf(sin(Time.get_ticks_msec() / 400.0) * 0.5)
+	var drawn := SeaArt.draw_boat(self, boat, state, heading, Vector2(0, -2 + bob))
+	# The keeper is part of the boat's picture except on the bare hull.
+	player.sprite.visible = not drawn or state == "base"
+	if drawn:
+		return
 	var angle := heading.angle() - PI / 2.0
 	draw_set_transform(Vector2(0, -2), angle, Vector2.ONE)
 	draw_colored_polygon(PackedVector2Array([Vector2(0, 18), Vector2(-9, 8), Vector2(-9, -14), Vector2(9, -14), Vector2(9, 8)]),

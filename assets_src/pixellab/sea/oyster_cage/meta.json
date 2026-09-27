@@ -1,0 +1,13 @@
+{
+ "id": "oyster_cage",
+ "method": "map-objects",
+ "prompt": "wire oyster cage hanging under a small buoy, floating on water, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "cbeb760a-33c1-451c-8a3f-c5f8e25b6d14",
+ "generations": 45.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,12 @@
+{
+ "id": "npc_einar",
+ "size": 64,
+ "spent": {
+  "neutral": 75.0,
+  "happy": 97.0,
+  "sad": 5.0,
+  "angry": 6.0,
+  "surprised": 4.0,
+  "special": 5.0
+ }
+}

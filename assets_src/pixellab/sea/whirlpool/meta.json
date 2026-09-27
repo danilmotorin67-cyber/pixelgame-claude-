@@ -1,0 +1,13 @@
+{
+ "id": "whirlpool",
+ "method": "map-objects",
+ "prompt": "dark swirling whirlpool in the sea, spiral of foam, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "6184f566-bfa9-4416-9a81-6be9017c39de",
+ "generations": 49.0,
+ "date": "2026-09-27"
+}

@@ -72,23 +72,23 @@ func _ready() -> void:
 	_was_paused = Clock.paused
 	Clock.paused = true
 	_panel = Panel.new()
-	_panel.position = Vector2(10, 194)
-	_panel.size = Vector2(460, 68)
+	_panel.position = Vector2(10, 186)
+	_panel.size = Vector2(460, 80)
 	_panel.add_theme_stylebox_override("panel", UiKit.box("window"))
 	add_child(_panel)
 	_portrait = Control.new()
-	_portrait.position = Vector2(7, 6)
-	_portrait.size = Vector2(52, 56)
+	_portrait.position = Vector2(7, 7)
+	_portrait.size = Vector2(66, 66)
 	_portrait.draw.connect(_draw_portrait)
 	_panel.add_child(_portrait)
-	_name = _label(Vector2(66, 3), Vector2(250, 12), 9, Color("#ffc85a"))
-	_hearts = _label(Vector2(320, 3), Vector2(132, 12), 8, Color("#e06a6a"))
+	_name = _label(Vector2(80, 5), Vector2(236, 12), 9, Color("#ffc85a"))
+	_hearts = _label(Vector2(320, 5), Vector2(132, 12), 8, Color("#e06a6a"))
 	_hearts.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
-	_text = _label(Vector2(66, 17), Vector2(386, 46), 9, Color("#f0e7cc"))
+	_text = _label(Vector2(80, 20), Vector2(372, 52), 9, Color("#f0e7cc"))
 	_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_text.max_lines_visible = LINES
 	_choice_box = VBoxContainer.new()
-	_choice_box.position = Vector2(76, 120)
+	_choice_box.position = Vector2(76, 112)
 	_choice_box.size = Vector2(330, 70)
 	_choice_box.alignment = BoxContainer.ALIGNMENT_END
 	add_child(_choice_box)
@@ -215,6 +215,8 @@ func _draw_portrait() -> void:
 	var p := _portrait
 	# The PixelLab character's head and shoulders in a bevelled frame; the drawn face as a fallback.
 	p.draw_style_box(UiKit.box("inset"), Rect2(Vector2.ZERO, p.size))
+	if PortraitArt.draw(p, _npc, _emotion, Rect2(Vector2.ZERO, p.size)):
+		return
 	if CastSprite.draw_portrait(p, _npc, Rect2(3, 3, p.size.x - 6, p.size.y - 6)):
 		return
 	p.draw_rect(Rect2(Vector2(3, 3), p.size - Vector2(6, 6)), Color("#28344a"))

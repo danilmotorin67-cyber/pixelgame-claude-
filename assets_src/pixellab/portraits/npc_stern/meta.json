@@ -1,0 +1,12 @@
+{
+ "id": "npc_stern",
+ "size": 64,
+ "spent": {
+  "neutral": 102.0,
+  "happy": 30.0,
+  "sad": 3.0,
+  "angry": 6.0,
+  "surprised": 9.0,
+  "special": 8.0
+ }
+}

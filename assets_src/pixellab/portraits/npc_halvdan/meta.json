@@ -1,0 +1,12 @@
+{
+ "id": "npc_halvdan",
+ "size": 64,
+ "spent": {
+  "neutral": 55.0,
+  "happy": 106.0,
+  "sad": 7.0,
+  "angry": 7.0,
+  "surprised": 4.0,
+  "special": 34.0
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "id": "npc_hedda",
+ "size": 64,
+ "spent": {
+  "neutral": 125.0,
+  "happy": 50.0,
+  "sad": 4.0,
+  "angry": 7.0,
+  "surprised": 14.0,
+  "special": 27.0
+ }
+}

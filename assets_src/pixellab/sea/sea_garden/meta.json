@@ -1,0 +1,13 @@
+{
+ "id": "sea_garden",
+ "method": "map-objects",
+ "prompt": "sea farm: rows of wooden floats and ropes with kelp and mussels on the water, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "25f7eb8c-61cc-4417-b0cb-8c2f098ee7ef",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

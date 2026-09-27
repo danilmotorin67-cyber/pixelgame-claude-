@@ -1,0 +1,13 @@
+{
+ "id": "eleonora",
+ "method": "map-objects",
+ "prompt": "ghost ship Eleonora: an old three-masted sailing ship, translucent pale green, glowing, tattered sails, spectral mist, pixel art, northern fishing island, muted cold palette, pixel art, muted cold palette",
+ "size": [
+  96,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "ad7fe19c-2e32-42fe-927f-698ae81b8142",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}
