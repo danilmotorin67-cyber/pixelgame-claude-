@@ -1,0 +1,13 @@
+{
+ "id": "body_shore_2",
+ "method": "map-objects",
+ "prompt": "drowned body lying on its back on the sand wrapped in seaweed, respectful, not gory, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "b1fc8dec-70e4-45f5-a6f6-70cbe307b6e7",
+ "generations": 10.0,
+ "date": "2026-09-27"
+}

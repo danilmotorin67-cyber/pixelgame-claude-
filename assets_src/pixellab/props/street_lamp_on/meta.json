@@ -1,0 +1,13 @@
+{
+ "id": "street_lamp_on",
+ "method": "map-objects",
+ "prompt": "iron village lantern post, lamp glowing warm, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "1dc767d2-5801-4972-9095-10aafc381504",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

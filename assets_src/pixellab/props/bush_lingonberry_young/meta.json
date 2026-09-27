@@ -1,0 +1,13 @@
+{
+ "id": "bush_lingonberry_young",
+ "method": "map-objects",
+ "prompt": "lingonberry shrub with red berries, young small bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "44c96f87-96b3-41c7-824f-c5bf63c9da91",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

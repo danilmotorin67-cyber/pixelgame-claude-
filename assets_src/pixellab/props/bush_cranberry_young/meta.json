@@ -1,0 +1,13 @@
+{
+ "id": "bush_cranberry_young",
+ "method": "map-objects",
+ "prompt": "bog cranberry with red berries on moss, young small bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ff00b268-3a55-4c7b-bf2b-8155783ebd39",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

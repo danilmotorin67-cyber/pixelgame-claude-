@@ -1,0 +1,13 @@
+{
+ "id": "bush_blueberry_fruiting",
+ "method": "map-objects",
+ "prompt": "blueberry bush with blue berries, bush covered with ripe berries, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "9c7d831d-ae1c-4ee1-a749-0bdff9930296",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

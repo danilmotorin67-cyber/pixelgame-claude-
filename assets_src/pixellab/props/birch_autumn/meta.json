@@ -1,0 +1,13 @@
+{
+ "id": "birch_autumn",
+ "method": "map-objects",
+ "prompt": "slender white birch tree, yellow autumn leaves, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "56bef9d6-092a-4aa7-97b8-a596415b7391",
+ "generations": 9.0,
+ "date": "2026-09-27"
+}

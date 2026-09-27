@@ -21,10 +21,11 @@ func _process(delta: float) -> void:
 
 
 func _draw() -> void:
-	# A quiet figure wrapped in canvas; crows circle above ("the crows know").
-	draw_rect(Rect2(-10, -3, 20, 7), Color("#c9b89a"))
-	draw_rect(Rect2(-10, -3, 20, 1), Color("#e9dcc6"))
-	draw_rect(Rect2(-12, -2, 3, 5), Color("#d8c49a"))
+	# A quiet figure on the shore; crows circle above ("the crows know").
+	if not PropArt.draw(self, PropArt.variant("body_shore", 3, body_id.hash()), Vector2(0, 5)):
+		draw_rect(Rect2(-10, -3, 20, 7), Color("#c9b89a"))
+		draw_rect(Rect2(-10, -3, 20, 1), Color("#e9dcc6"))
+		draw_rect(Rect2(-12, -2, 3, 5), Color("#d8c49a"))
 	for i in 2:
 		var angle := _time * 1.4 + float(i) * PI
 		var at := Vector2(cos(angle) * 12.0, -22.0 + sin(angle) * 4.0)

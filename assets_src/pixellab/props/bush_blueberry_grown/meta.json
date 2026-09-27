@@ -1,0 +1,13 @@
+{
+ "id": "bush_blueberry_grown",
+ "method": "map-objects",
+ "prompt": "blueberry bush with blue berries, full grown bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "77db283a-14cd-4855-84fa-e36801d8a862",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

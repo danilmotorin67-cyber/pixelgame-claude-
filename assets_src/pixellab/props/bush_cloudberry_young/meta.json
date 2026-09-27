@@ -1,0 +1,13 @@
+{
+ "id": "bush_cloudberry_young",
+ "method": "map-objects",
+ "prompt": "cloudberry plant with amber berries, young small bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "9ff26478-46ca-4aa3-bf7c-40a9ea9b3023",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

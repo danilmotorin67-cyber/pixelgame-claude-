@@ -1,0 +1,13 @@
+{
+ "id": "bush_cloudberry_winter",
+ "method": "map-objects",
+ "prompt": "cloudberry plant with amber berries, bare bush in winter with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "273d11bf-f334-49be-aff0-42ba4f1af18a",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

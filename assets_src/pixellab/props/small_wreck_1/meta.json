@@ -1,0 +1,13 @@
+{
+ "id": "small_wreck_1",
+ "method": "map-objects",
+ "prompt": "small wrecked boat on its side, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "02eb9b95-53f2-41e2-b50b-ea9a2f6a81f8",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

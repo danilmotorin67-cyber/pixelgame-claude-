@@ -69,13 +69,13 @@ def _png(item):
     raise RuntimeError("no image in " + json.dumps(item)[:200])
 
 
-def batch(icons, size=32, name="batch"):
+def batch(icons, size=32, name="batch", style=STYLE):
     """icons: {id: description}. Up to 64 per call at size <= 42."""
     ids = list(icons)
     before = pl.generations_left()
     res = pl.request("POST", "/create-1-direction-object", {
-        "description": STYLE, "size": size, "view": "top-down",
-        "item_descriptions": [f"{icons[i]}, {STYLE}" for i in ids]})
+        "description": style, "size": size, "view": "top-down",
+        "item_descriptions": [f"{icons[i]}, {style}" for i in ids]})
     oid = res["object_id"]
     t0 = time.time()
     while True:
@@ -88,6 +88,61 @@ def batch(icons, size=32, name="batch"):
     with open(os.path.join(OUT, f"_{name}_object.json"), "w") as f:
         json.dump({k: v for k, v in info.items() if k not in ("frames", "images", "candidates")}, f, indent=1, default=str)
     return oid, info, ids, before
+
+
+def fetch(oid, ids, out_dir, clean=True):
+    """Keeps frames 0..len(ids)-1 of a batch object as single objects and saves each one's image
+    from the API spritesheet ZIP (the frame storage host is not reachable from the container)."""
+    import zipfile
+    sel = pl.request("POST", f"/objects/{oid}/select-frames", {"indices": list(range(len(ids)))})
+    os.makedirs(out_dir, exist_ok=True)
+    made = {}
+    for aid, obj in zip(ids, sel["created_object_ids"]):
+        z = zipfile.ZipFile(io.BytesIO(pl.request("GET", f"/objects/{obj}/spritesheet", raw=True)))
+        img = Image.open(io.BytesIO(z.read(next(n for n in z.namelist() if n.endswith(".png"))))).convert("RGBA")
+        img = img.crop((0, 0, min(img.width, img.height), min(img.width, img.height)))
+        if clean:
+            img = strip_captions(img)
+        img.save(os.path.join(out_dir, aid + ".png"))
+        made[aid] = obj
+    return made
+
+
+def strip_captions(img):
+    """The model sometimes letters a caption under the object: separate pixel blobs smaller than
+    a quarter of the object are dropped and the object is centred again."""
+    from collections import deque
+    w, h = img.size
+    px = img.load()
+    seen, comps = set(), []
+    for y in range(h):
+        for x in range(w):
+            if px[x, y][3] > 20 and (x, y) not in seen:
+                q, c = deque([(x, y)]), []
+                seen.add((x, y))
+                while q:
+                    a, b = q.popleft()
+                    c.append((a, b))
+                    for dx in (-1, 0, 1):
+                        for dy in (-1, 0, 1):
+                            n = (a + dx, b + dy)
+                            if 0 <= n[0] < w and 0 <= n[1] < h and n not in seen and px[n][3] > 20:
+                                seen.add(n)
+                                q.append(n)
+                comps.append(c)
+    if not comps:
+        return img
+    big = max(len(c) for c in comps)
+    out = Image.new("RGBA", img.size)
+    op = out.load()
+    for c in comps:
+        if len(c) >= big * 0.25:
+            for p in c:
+                op[p] = px[p]
+    crop = out.crop(out.getbbox())
+    res = Image.new("RGBA", img.size)
+    res.paste(crop, ((w - crop.width) // 2, h - crop.height - max(0, (h - crop.height) // 2)))
+    return res
 
 
 if __name__ == "__main__":

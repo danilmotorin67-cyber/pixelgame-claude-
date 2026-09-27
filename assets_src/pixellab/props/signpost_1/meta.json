@@ -1,0 +1,13 @@
+{
+ "id": "signpost_1",
+ "method": "map-objects",
+ "prompt": "wooden signpost with two arrows, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "878938b8-b67b-4515-8f30-dafb9080f414",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

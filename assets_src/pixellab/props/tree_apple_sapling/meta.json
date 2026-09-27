@@ -1,0 +1,13 @@
+{
+ "id": "tree_apple_sapling",
+ "method": "map-objects",
+ "prompt": "small northern apple tree with red apples, tiny sapling, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "95f44a0e-31fb-426c-9e54-7f61c534b918",
+ "generations": 23.0,
+ "date": "2026-09-27"
+}

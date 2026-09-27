@@ -1,0 +1,13 @@
+{
+ "id": "bush_cranberry_fruiting",
+ "method": "map-objects",
+ "prompt": "bog cranberry with red berries on moss, bush covered with ripe berries, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "217a279b-ba7a-42df-a221-96d74d45bb91",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "cave_entrance_1",
+ "method": "map-objects",
+ "prompt": "dark cave mouth in a basalt cliff, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "509e5135-d39d-4d67-a15f-4902d72611e3",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

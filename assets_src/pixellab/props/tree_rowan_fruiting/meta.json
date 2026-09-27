@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_fruiting",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, grown tree full of ripe fruit, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "2301e0dd-083f-4670-9f9f-797a65d19972",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

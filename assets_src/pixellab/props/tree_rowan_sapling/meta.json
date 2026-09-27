@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_sapling",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, tiny sapling, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "df3a5de3-ed4f-4bff-b874-564f3e457b1d",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

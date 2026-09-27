@@ -1,0 +1,13 @@
+{
+ "id": "small_wreck_2",
+ "method": "map-objects",
+ "prompt": "broken boat planks and a rudder, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "1bf1843c-5c43-462a-b70a-fb103ed42faf",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

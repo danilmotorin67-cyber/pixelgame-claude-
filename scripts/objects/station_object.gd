@@ -79,9 +79,28 @@ func _draw_generic() -> void:
 		draw_rect(Rect2(-7, -16, 14, 2), Color(str(look[1])))
 
 
+# PixelLab sprite for a tree or bush by its growth, fruit and the season.
+static func tree_sprite(obj: Dictionary, info: Dictionary, season: String) -> String:
+	var id := str(obj.get("tree", ""))
+	var base := "bush_cranberry" if id == "bog_cranberry" else id
+	var days := maxi(int(info.get("days", 28)), 1)
+	var stage := "grown"
+	if not bool(obj.get("grown", false)):
+		stage = "sapling" if int(obj.get("age", 0)) * 3 < days else "young"
+	elif int(obj.get("fruit", 0)) > 0:
+		stage = "fruiting"
+	elif season == "winter":
+		stage = "winter"
+	elif base.begins_with("tree_") and season in ["autumn", "spring"]:
+		stage = season
+	return "%s_%s" % [base, stage]
+
+
 func _draw_tree() -> void:
 	var obj := Crafting.find(Router.current_map, uid)
 	var info := Crafting.tree_info(obj)
+	if PropArt.draw(self, tree_sprite(obj, info, Clock.season), Vector2(0, 6)):
+		return
 	if str(obj.get("tree", "")) == "bog_cranberry":
 		draw_rect(Rect2(-24, -24, 48, 48), Color("#3f5a36"))
 		draw_rect(Rect2(-20, -20, 40, 40), Color("#4e6e3a"))
@@ -104,6 +123,10 @@ func _draw_decor() -> void:
 	var obj := Crafting.find(Router.current_map, uid)
 	var id := str(obj.get("item", ""))
 	var tint := Color.from_hsv(float(absi(id.hash()) % 360) / 360.0, 0.35, 0.75)
+	var art := {"fence_wood": "fence_wood_h", "fence_stone": "fence_stone_h", "fence_iron": "fence_iron_h", "bench": "bench_1",
+		"armeria": "flowers_1", "heather": "heather_1"}.get(id, "") as String
+	if art != "" and PropArt.draw(self, art, Vector2(0, 5)):
+		return
 	match id:
 		"fence_wood", "fence_stone", "fence_iron":
 			var c := {"fence_wood": "#8c6a4e", "fence_stone": "#9a9ca3", "fence_iron": "#2a2a30"}[id] as String

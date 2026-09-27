@@ -1,0 +1,13 @@
+{
+ "id": "drowned_well",
+ "method": "map-objects",
+ "prompt": "old stone well half flooded with dark water, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "b9c607f4-72da-4495-97a7-b4397910201f",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

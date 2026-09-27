@@ -1,0 +1,13 @@
+{
+ "id": "old_grave",
+ "method": "map-objects",
+ "prompt": "old broken neglected grave with a cracked stone, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "c57bb7c2-4c84-4417-ac00-902208f4976c",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "bush_cranberry_winter",
+ "method": "map-objects",
+ "prompt": "bog cranberry with red berries on moss, bare bush in winter with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "cfe9044b-8f5a-4034-a3c5-59636fdc9362",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

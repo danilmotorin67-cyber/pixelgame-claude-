@@ -1,0 +1,13 @@
+{
+ "id": "grave_beacon_stone_new",
+ "method": "map-objects",
+ "prompt": "grave with a stone carved like a small lighthouse, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "59b5b4aa-32a9-432d-ae50-43ba8b6fe56b",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

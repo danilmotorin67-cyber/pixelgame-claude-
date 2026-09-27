@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_spring",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, grown tree in spring blossom, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "6cdd5abc-c7a1-45fe-b0cc-b42d86d93e82",
+ "generations": 22.0,
+ "date": "2026-09-27"
+}

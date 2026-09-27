@@ -1,0 +1,13 @@
+{
+ "id": "small_wreck_3",
+ "method": "map-objects",
+ "prompt": "small wreck with torn sail, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c55e4165-ba0a-45f5-918d-d1768c72e9fe",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "grave_wooden_cross_new",
+ "method": "map-objects",
+ "prompt": "fresh grave with a plain wooden cross, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "ec1550a4-7e91-4d29-8b54-c9a3c55ac8eb",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

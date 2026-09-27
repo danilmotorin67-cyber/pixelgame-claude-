@@ -1,0 +1,13 @@
+{
+ "id": "boulder_3",
+ "method": "map-objects",
+ "prompt": "split grey boulder, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "b3a9c0b2-dccd-44eb-aa7d-cf12cec308e8",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

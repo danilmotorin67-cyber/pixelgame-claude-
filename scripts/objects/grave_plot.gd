@@ -19,8 +19,31 @@ func grave() -> Dictionary:
 	return Graveyard.graves[plot]
 
 
+# PixelLab grave pieces: the grave itself, then the sunk and weed overlays.
+static func grave_sprite(g: Dictionary) -> String:
+	if bool(g["old"]):
+		return "old_grave_fixed" if bool(g["repaired"]) else "old_grave"
+	if bool(g["filled"]):
+		var marker := str(g["marker"])
+		if marker == "":
+			return "filled_grave"
+		return "grave_%s_%s" % [marker, "old" if bool(g["sunk"]) or bool(g["weeds"]) else "new"]
+	if bool(g["open"]) or int(g["dug"]) > 0:
+		return "open_pit"
+	return ""
+
+
 func _draw() -> void:
 	var g := grave()
+	var art := grave_sprite(g)
+	if art != "" and PropArt.draw(self, art, Vector2(0, 12)):
+		if bool(g["open"]) and str(g["body"]) != "":
+			PropArt.draw(self, "body_wrapped", Vector2(0, 6))
+		if bool(g["filled"]) and bool(g["sunk"]):
+			PropArt.draw(self, "sunk_overlay", Vector2(0, 12))
+		if bool(g["weeds"]):
+			PropArt.draw(self, "weeds_overlay", Vector2(0, 12))
+		return
 	if bool(g["old"]):
 		draw_rect(Rect2(-9, -4, 18, 14), Color("#6b5a48"))
 		if bool(g["repaired"]):

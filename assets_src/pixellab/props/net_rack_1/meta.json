@@ -1,0 +1,13 @@
+{
+ "id": "net_rack_1",
+ "method": "map-objects",
+ "prompt": "fishing nets drying on a wooden rack, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "0730ce53-a2b7-4504-aa6f-ca9122ef02ca",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

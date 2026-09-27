@@ -303,6 +303,7 @@ func _draw() -> void:
 				draw_rect(Rect2(px + 9, py + 10, 2, 1), WET_SAND)
 			elif color == ROCK and grain <= 3:
 				draw_rect(Rect2(px + 2, py + 4, 7, 1), Color("#a4a1a1"))
+	_draw_props()
 	for item in region.get("landmarks", []):
 		_draw_landmark(item)
 	for f in region.get("furniture", []):
@@ -316,6 +317,56 @@ func _draw() -> void:
 			draw_rect(Rect2(rect.position + Vector2(3, rect.size.y - 8), Vector2(rect.size.x - 6, 5)), Color("#e07a2e"))
 
 
+# PixelLab props scattered by ground and biome; the same seed keeps them in place every visit.
+func _draw_props() -> void:
+	if PropArt.texture("rock_1") == null:
+		return
+	for y in height:
+		for x in width:
+			var roll := posmod(x * 73 + y * 151 + x * y * 7 + int(Game.world_seed), 29)
+			if roll > 1:
+				continue
+			var color := _tile_color(x, y)
+			var bottom := Vector2(x * TILE + 8, y * TILE + 14)
+			var art := ""
+			if biome == "birch" and color == GRASS:
+				art = "birch_" + Clock.season if roll == 0 else PropArt.variant("flowers", 4, x + y)
+			elif color == HEATHER:
+				art = PropArt.variant("heather", 3, x * 3 + y)
+			elif color == ROCK:
+				art = PropArt.variant("boulder", 3, x + y) if roll == 0 and (x + y) % 3 == 0 else PropArt.variant("rock", 4, x + y)
+			elif color == SAND:
+				art = PropArt.variant("driftwood", 3, x) if roll == 0 and (x + y) % 4 == 0 else PropArt.variant("seaweed", 2, x + y)
+			elif color == GRASS or color == MEADOW:
+				art = PropArt.variant("flowers", 4, x + y) if roll == 0 else PropArt.variant("weeds", 3, x + y)
+			if art != "":
+				PropArt.draw(self, art, bottom)
+
+
+# Landmarks with a PixelLab prop; false keeps the drawn shape.
+func _landmark_art(kind: String, x: int, y: int, w: int, h: int) -> bool:
+	var centre := Vector2(x + w / 2, y + h)
+	match kind:
+		"wreck":
+			return PropArt.draw(self, "big_hull_1", centre)
+		"cave":
+			return PropArt.draw(self, "cave_entrance_1", centre)
+		"nests":
+			if PropArt.texture("bird_nest_1") == null:
+				return false
+			for n in 5:
+				PropArt.draw(self, PropArt.variant("bird_nest", 3, n), Vector2(x + 16 + n * 23, y + 24 + n % 2 * 22))
+			return true
+		"bog", "reeds":
+			if PropArt.texture("reeds_1") == null:
+				return false
+			draw_rect(Rect2(x, y, w, h), Color("#5b6750"))
+			for offset in range(10, w - 6, 18):
+				PropArt.draw(self, PropArt.variant("reeds", 2, offset), Vector2(x + offset, y + 18 + offset % 13))
+			return true
+	return false
+
+
 func _draw_landmark(item: Dictionary) -> void:
 	var at: Array = item["at"]
 	var dimensions: Array = item["size"]
@@ -324,6 +375,8 @@ func _draw_landmark(item: Dictionary) -> void:
 	var w := int(dimensions[0]) * TILE
 	var h := int(dimensions[1]) * TILE
 	var kind := str(item["kind"])
+	if _landmark_art(kind, x, y, w, h):
+		return
 	if kind in ["house", "hall", "smith", "tavern", "chapel", "ruin"]:
 		var wall := Color("#938579")
 		if kind == "smith":

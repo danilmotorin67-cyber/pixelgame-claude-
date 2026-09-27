@@ -1,0 +1,13 @@
+{
+ "id": "pine_2",
+ "method": "map-objects",
+ "prompt": "small wind-bent pine on a rock, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "be1dff1f-5e96-441e-900f-f2359ff2e462",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

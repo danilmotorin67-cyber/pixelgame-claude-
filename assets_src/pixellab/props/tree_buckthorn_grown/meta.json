@@ -1,0 +1,13 @@
+{
+ "id": "tree_buckthorn_grown",
+ "method": "map-objects",
+ "prompt": "sea buckthorn with silver-green leaves and orange berries, fully grown tree, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "5e2a3197-28cd-4422-a0bb-2231285518fc",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

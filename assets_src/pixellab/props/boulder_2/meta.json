@@ -1,0 +1,13 @@
+{
+ "id": "boulder_2",
+ "method": "map-objects",
+ "prompt": "mossy boulder, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "e8810fb4-a136-4897-9049-c27888638926",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

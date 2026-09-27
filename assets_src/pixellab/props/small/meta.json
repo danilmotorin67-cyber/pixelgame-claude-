@@ -1,0 +1,209 @@
+{
+ "batch": "a9d4c56e-ca77-467c-bac6-15b7edab2ce1",
+ "items": {
+  "rock_1": {
+   "object_id": "eb730bb4-7425-4483-ae71-61880ab55ca5",
+   "prompt": "small grey stone"
+  },
+  "rock_2": {
+   "object_id": "069fc56a-5bbb-4809-9600-d4f773671055",
+   "prompt": "two small grey stones"
+  },
+  "rock_3": {
+   "object_id": "8d824f56-8c9f-4eeb-9345-b12888f80551",
+   "prompt": "flat grey pebble with lichen"
+  },
+  "rock_4": {
+   "object_id": "d418bc40-809c-40ad-8d53-882fc2ef2e23",
+   "prompt": "mossy small rock"
+  },
+  "snag_1": {
+   "object_id": "9791b57f-fdb6-45c7-9010-7d7617410cf5",
+   "prompt": "twisted driftwood snag"
+  },
+  "snag_2": {
+   "object_id": "53663730-c27a-416d-8676-acf5d41b972b",
+   "prompt": "grey dead root snag"
+  },
+  "snag_3": {
+   "object_id": "85b37d0e-da15-48b7-b33e-b2b257815f34",
+   "prompt": "broken branch on the ground"
+  },
+  "weeds_1": {
+   "object_id": "2c9c0cff-567b-4ea1-8433-95ca2da30bbb",
+   "prompt": "clump of tall weeds"
+  },
+  "weeds_2": {
+   "object_id": "4e71d14a-e793-4c66-8919-61d34fb3fd7c",
+   "prompt": "thistle weed"
+  },
+  "weeds_3": {
+   "object_id": "73b7dcb7-8e97-4646-83b1-d48fe8f2fb58",
+   "prompt": "dry grass tuft"
+  },
+  "stump_1": {
+   "object_id": "b2c1da6f-3ca6-4d31-8c33-48da40f4c9c7",
+   "prompt": "old tree stump"
+  },
+  "stump_2": {
+   "object_id": "52debb36-aeab-4f64-a417-e5d2fd5bc243",
+   "prompt": "mossy tree stump"
+  },
+  "heather_1": {
+   "object_id": "3118a944-e6bb-417a-a0ce-f443b1d55688",
+   "prompt": "purple heather bush"
+  },
+  "heather_2": {
+   "object_id": "040a1c82-0fea-4d2f-ab01-74dda8b0babf",
+   "prompt": "small heather tuft"
+  },
+  "heather_3": {
+   "object_id": "2b731f53-3179-4c95-a55e-1e014efa0f33",
+   "prompt": "faded brown heather"
+  },
+  "flowers_1": {
+   "object_id": "c7677eb1-4924-4c91-be8a-102c14a5e668",
+   "prompt": "pink sea thrift flowers"
+  },
+  "flowers_2": {
+   "object_id": "29063975-de18-4a2f-9296-28015017b25b",
+   "prompt": "white cottongrass tufts"
+  },
+  "flowers_3": {
+   "object_id": "f0310c11-f647-47c6-9799-469908a6763a",
+   "prompt": "yellow buttercups"
+  },
+  "flowers_4": {
+   "object_id": "7e046850-4c65-45cf-b063-ac3334c5964d",
+   "prompt": "blue harebells"
+  },
+  "clam_bubbles": {
+   "object_id": "88e70ece-259a-4a17-a06f-9cbe842c9d0e",
+   "prompt": "bubbles and small holes in wet sand"
+  },
+  "seaweed_1": {
+   "object_id": "0a9ae830-233b-49b1-b2d8-2c988f07d833",
+   "prompt": "washed-up brown seaweed"
+  },
+  "seaweed_2": {
+   "object_id": "ea25faeb-8d64-4159-88f1-1703914b268d",
+   "prompt": "washed-up green kelp"
+  },
+  "bird_nest_1": {
+   "object_id": "7770f0ae-0781-4fe5-882d-487dd4c457bb",
+   "prompt": "sea bird nest with eggs"
+  },
+  "bird_nest_2": {
+   "object_id": "b3937a34-21b7-4a89-9662-5ae3d915ef49",
+   "prompt": "empty twig nest"
+  },
+  "bird_nest_3": {
+   "object_id": "344a059c-7c91-4675-9996-564fa0549693",
+   "prompt": "nest with a sitting gull chick"
+  },
+  "bonfire_unlit": {
+   "object_id": "6935872f-6f43-4566-99c7-fb2bb0b245a0",
+   "prompt": "unlit bonfire of stacked driftwood in a stone ring"
+  },
+  "bonfire_lit": {
+   "object_id": "01dd3ffd-ff06-49eb-9f27-34986342f937",
+   "prompt": "burning bonfire with bright flames in a stone ring"
+  },
+  "mailbox": {
+   "object_id": "6632f110-56fe-4247-98b7-f5201da7fbaf",
+   "prompt": "wooden mailbox on a post, painted blue"
+  },
+  "shipping_box_1": {
+   "object_id": "7bb44af8-3da0-4070-8627-86133d4fe120",
+   "prompt": "wooden shipping crate with lid"
+  },
+  "shipping_box_2": {
+   "object_id": "d9b547b3-1988-4413-9564-5047e0a2dbdc",
+   "prompt": "wooden shipping crate with lid open"
+  },
+  "rain_butt": {
+   "object_id": "cca35781-2b97-494a-94a2-86807d932fb6",
+   "prompt": "wooden rain water barrel"
+  },
+  "tower_bell": {
+   "object_id": "90ff5b4c-b802-4bb2-9dbb-8d9d97af9d07",
+   "prompt": "small brass hand bell on a hook"
+  },
+  "barrel": {
+   "object_id": "1762a2ef-33c8-4fc6-8094-80d37263d7f7",
+   "prompt": "wooden barrel"
+  },
+  "crate": {
+   "object_id": "f5cd0664-4548-49c3-946c-ed2c7557c062",
+   "prompt": "wooden crate"
+  },
+  "barrels_stack": {
+   "object_id": "e83013ea-4bb7-4bca-af24-d5c1f249cc76",
+   "prompt": "two barrels together"
+  },
+  "crates_stack": {
+   "object_id": "b514050a-aac6-4635-94d0-2aab212fbb33",
+   "prompt": "stack of crates"
+  },
+  "fence_wood_post": {
+   "object_id": "28cf1805-9aa0-4c48-9328-734062f1bb27",
+   "prompt": "wooden fence post"
+  },
+  "fence_wood_h": {
+   "object_id": "45f803bf-9383-4026-b669-c3e7cd0b0350",
+   "prompt": "horizontal wooden fence section"
+  },
+  "fence_wood_v": {
+   "object_id": "5e738483-5ff0-432c-b388-2acafbb70ed0",
+   "prompt": "wooden fence section seen end-on"
+  },
+  "fence_stone_post": {
+   "object_id": "ae6415e2-d660-42ec-bdfd-230fbd76c0f8",
+   "prompt": "dry stone wall pillar"
+  },
+  "fence_stone_h": {
+   "object_id": "ae257a0b-8b5c-4f42-acf6-dda47e5cfb9c",
+   "prompt": "horizontal dry stone wall section"
+  },
+  "fence_stone_v": {
+   "object_id": "af0a53b1-3710-4e93-ba60-61892435ee2d",
+   "prompt": "dry stone wall seen end-on"
+  },
+  "fence_iron_post": {
+   "object_id": "b854af17-a8d5-4d40-8417-bc3219492137",
+   "prompt": "wrought iron fence post"
+  },
+  "fence_iron_h": {
+   "object_id": "f497804b-3675-4ad9-b9e6-10bd28b289c4",
+   "prompt": "horizontal wrought iron fence section"
+  },
+  "fence_iron_v": {
+   "object_id": "55a5712a-7e9d-4d74-b0de-904cff0c8572",
+   "prompt": "wrought iron fence seen end-on"
+  },
+  "gate_wood": {
+   "object_id": "e8be868b-4b3d-49e5-b12e-26bf5e5e3849",
+   "prompt": "wooden farm gate"
+  },
+  "gate_stone": {
+   "object_id": "3edb59c1-43cc-41cb-a97b-0a23002d515b",
+   "prompt": "gap in a stone wall with a wooden gate"
+  },
+  "gate_iron": {
+   "object_id": "e45c836a-755b-4f4b-b8f9-6e48bfbd01ee",
+   "prompt": "wrought iron cemetery gate"
+  },
+  "raven_mark": {
+   "object_id": "ddccd0e1-e66f-4a65-929c-1095410a0556",
+   "prompt": "patch of freshly disturbed dark earth"
+  },
+  "rest_buoy": {
+   "object_id": "c0a2f47f-85ed-4e96-a94a-91281732d999",
+   "prompt": "small red and white buoy"
+  },
+  "stone_cairn": {
+   "object_id": "81917e4e-c859-435e-8787-c1bd2c583364",
+   "prompt": "small stone cairn"
+  }
+ }
+}

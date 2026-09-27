@@ -1,0 +1,13 @@
+{
+ "id": "tree_buckthorn_winter",
+ "method": "map-objects",
+ "prompt": "sea buckthorn with silver-green leaves and orange berries, bare grown tree in winter with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "b0f3b31f-3814-46c2-804d-fe380f1dc4a7",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

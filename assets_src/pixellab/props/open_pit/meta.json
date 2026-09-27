@@ -1,0 +1,13 @@
+{
+ "id": "open_pit",
+ "method": "map-objects",
+ "prompt": "freshly dug empty grave pit with a spade, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "77329f47-bf90-44c6-b077-f5e92d5f3c91",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

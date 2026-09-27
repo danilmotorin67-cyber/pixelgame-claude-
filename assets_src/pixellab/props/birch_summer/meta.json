@@ -1,0 +1,13 @@
+{
+ "id": "birch_summer",
+ "method": "map-objects",
+ "prompt": "slender white birch tree, full green leaves, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "43fb897e-5da9-4303-b2ae-893ad1b78407",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

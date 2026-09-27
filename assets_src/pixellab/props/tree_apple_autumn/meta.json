@@ -1,0 +1,13 @@
+{
+ "id": "tree_apple_autumn",
+ "method": "map-objects",
+ "prompt": "small northern apple tree with red apples, grown tree with autumn leaves, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "666c8f55-c9d9-4ae7-9983-4415da5e5028",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

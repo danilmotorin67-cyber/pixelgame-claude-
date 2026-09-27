@@ -1,0 +1,13 @@
+{
+ "id": "coffin_open_2",
+ "method": "map-objects",
+ "prompt": "open dark oak coffin with a body inside, respectful, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "f6d5dd89-b4aa-4d35-93e2-56a82db0e25c",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

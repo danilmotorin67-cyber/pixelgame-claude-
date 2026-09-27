@@ -1,0 +1,13 @@
+{
+ "id": "grave_carved_cross_new",
+ "method": "map-objects",
+ "prompt": "grave with a carved wooden cross, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "5aa75d31-5783-4f84-b06e-7627b04cd5d0",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

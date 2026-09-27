@@ -1,0 +1,13 @@
+{
+ "id": "beached_boat_1",
+ "method": "map-objects",
+ "prompt": "small wooden rowing boat pulled up on sand, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "9b1fd1ba-2edb-4379-808a-bb6a8b7a7347",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

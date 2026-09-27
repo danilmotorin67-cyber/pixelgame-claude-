@@ -1,0 +1,13 @@
+{
+ "id": "bush_lingonberry_sapling",
+ "method": "map-objects",
+ "prompt": "lingonberry shrub with red berries, tiny sprout, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "bdc960e8-17f2-4896-8e88-586664691037",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

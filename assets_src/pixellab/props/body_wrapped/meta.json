@@ -1,0 +1,13 @@
+{
+ "id": "body_wrapped",
+ "method": "map-objects",
+ "prompt": "body wrapped in grey sailcloth tied with rope, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "20a8dc67-e343-4a9b-bbc1-bda23e824d89",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

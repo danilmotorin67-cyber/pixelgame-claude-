@@ -1,0 +1,13 @@
+{
+ "id": "tide_pool_3",
+ "method": "map-objects",
+ "prompt": "shallow rock pool with pebbles, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "86ba4628-8847-4cd4-bff0-87f30e69455a",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

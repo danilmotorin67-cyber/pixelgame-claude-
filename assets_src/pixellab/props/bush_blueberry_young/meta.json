@@ -1,0 +1,13 @@
+{
+ "id": "bush_blueberry_young",
+ "method": "map-objects",
+ "prompt": "blueberry bush with blue berries, young small bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "11bae24c-7ebf-4503-9966-4e5db099d543",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

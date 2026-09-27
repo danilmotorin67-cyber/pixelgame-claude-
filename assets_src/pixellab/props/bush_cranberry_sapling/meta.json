@@ -1,0 +1,13 @@
+{
+ "id": "bush_cranberry_sapling",
+ "method": "map-objects",
+ "prompt": "bog cranberry with red berries on moss, tiny sprout, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5f54058a-d3db-40fb-bf74-d1231b61fe58",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

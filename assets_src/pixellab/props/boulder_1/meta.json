@@ -1,0 +1,13 @@
+{
+ "id": "boulder_1",
+ "method": "map-objects",
+ "prompt": "large dark basalt boulder, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "3f7cb9d7-f0aa-4bf0-8240-b90576820b75",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

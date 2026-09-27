@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_autumn",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, grown tree with autumn leaves, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "099639fe-6061-4043-a78d-b9b608ebf50a",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

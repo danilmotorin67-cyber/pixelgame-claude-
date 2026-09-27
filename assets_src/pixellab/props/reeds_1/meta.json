@@ -1,0 +1,13 @@
+{
+ "id": "reeds_1",
+ "method": "map-objects",
+ "prompt": "tall reed clump, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "890ec9eb-ffa4-474c-829b-0e78814311a6",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

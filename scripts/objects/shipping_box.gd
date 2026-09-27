@@ -18,6 +18,8 @@ func _ready() -> void:
 
 
 func _draw() -> void:
+	if PropArt.draw(self, "shipping_box_1", Vector2(0, 7)):
+		return
 	draw_rect(Rect2(-10, -8, 20, 14), WOOD)
 	draw_rect(Rect2(-10, -8, 20, 3), WOOD_LIGHT)
 	draw_rect(Rect2(-10, -1, 20, 1), IRON)

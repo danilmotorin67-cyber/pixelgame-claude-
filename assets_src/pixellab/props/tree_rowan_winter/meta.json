@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_winter",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, bare grown tree in winter with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "eb6c1c54-32b0-44e8-a963-e315d581331e",
+ "generations": 23.0,
+ "date": "2026-09-27"
+}

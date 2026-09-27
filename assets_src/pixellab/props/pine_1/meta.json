@@ -1,0 +1,13 @@
+{
+ "id": "pine_1",
+ "method": "map-objects",
+ "prompt": "wind-bent scots pine, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "a6c6a6f4-e7c1-4dde-a475-e58ee602f1f8",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

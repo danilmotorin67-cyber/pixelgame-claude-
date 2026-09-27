@@ -1,0 +1,13 @@
+{
+ "id": "old_grave_fixed",
+ "method": "map-objects",
+ "prompt": "old grave repaired and tidied with flowers, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "11d59c84-595c-4a28-82d0-398a0129c842",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "filled_grave",
+ "method": "map-objects",
+ "prompt": "freshly filled grave, bare earth mound, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "57fe3f42-8bc5-4b45-82eb-2032e005df04",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

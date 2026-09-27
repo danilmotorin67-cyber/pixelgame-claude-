@@ -1,0 +1,13 @@
+{
+ "id": "tree_buckthorn_young",
+ "method": "map-objects",
+ "prompt": "sea buckthorn with silver-green leaves and orange berries, young small tree, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "b4e0bc68-9789-492c-a2e1-1bd27399d871",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

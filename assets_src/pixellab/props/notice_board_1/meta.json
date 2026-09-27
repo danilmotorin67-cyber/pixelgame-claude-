@@ -1,0 +1,13 @@
+{
+ "id": "notice_board_1",
+ "method": "map-objects",
+ "prompt": "wooden notice board with pinned papers under a little roof, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "08bce315-500c-46e2-ac0c-e87eae45ca07",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

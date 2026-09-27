@@ -1,0 +1,13 @@
+{
+ "id": "grave_stone_slab_new",
+ "method": "map-objects",
+ "prompt": "grave with a flat stone slab, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "9ee9067e-051e-4dcc-8364-3159eee4bdf7",
+ "generations": 7.0,
+ "date": "2026-09-27"
+}

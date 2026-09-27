@@ -1,0 +1,13 @@
+{
+ "id": "bush_cloudberry_grown",
+ "method": "map-objects",
+ "prompt": "cloudberry plant with amber berries, full grown bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "eb80d990-d473-42b9-bbd7-9ac18c16a9aa",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

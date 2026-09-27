@@ -191,6 +191,8 @@ func _draw() -> void:
 
 
 func _draw_butt(at: Vector2) -> void:
+	if PropArt.draw(self, "rain_butt", at + Vector2(0, 7)):
+		return
 	draw_rect(Rect2(at + Vector2(-6, -8), Vector2(12, 14)), Color("#6b4a32"))
 	draw_rect(Rect2(at + Vector2(-6, -4), Vector2(12, 2)), Color("#45464e"))
 	draw_rect(Rect2(at + Vector2(-6, 2), Vector2(12, 2)), Color("#45464e"))
@@ -211,6 +213,10 @@ func _draw_stakes(size: Vector2i) -> void:
 
 func _draw_wild(at: Vector2, cell: Vector2i, clutter: String) -> void:
 	var v := (cell.x * 7 + cell.y * 13) % 5
+	var art := {"weed": PropArt.variant("weeds", 3, v), "rock": PropArt.variant("rock", 4, v),
+		"snag": PropArt.variant("snag", 3, v)}.get(clutter, "") as String
+	if art != "" and PropArt.draw(self, art, at + Vector2(8, 15)):
+		return
 	match clutter:
 		"weed":
 			paint(at, 2 + v, 6, 2, 8, Color("#5d6b35"))

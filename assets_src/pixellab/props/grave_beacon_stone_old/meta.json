@@ -1,0 +1,13 @@
+{
+ "id": "grave_beacon_stone_old",
+ "method": "map-objects",
+ "prompt": "grave with an old lighthouse-shaped stone, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "5cd74b38-4550-4745-8cc1-f208bd1b54cb",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

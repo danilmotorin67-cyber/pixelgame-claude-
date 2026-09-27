@@ -1,0 +1,13 @@
+{
+ "id": "birch_spring",
+ "method": "map-objects",
+ "prompt": "slender white birch tree, light green spring leaves, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "e7f65870-46e0-462e-883d-5d0fa5f151a7",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

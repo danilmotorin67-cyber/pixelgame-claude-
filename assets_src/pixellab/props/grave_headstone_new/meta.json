@@ -1,0 +1,13 @@
+{
+ "id": "grave_headstone_new",
+ "method": "map-objects",
+ "prompt": "grave with an upright headstone, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "0795f595-d58a-478d-8936-374bc40d1628",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

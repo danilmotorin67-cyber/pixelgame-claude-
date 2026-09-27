@@ -1,0 +1,13 @@
+{
+ "id": "big_hull_1",
+ "method": "map-objects",
+ "prompt": "large broken wooden shipwreck hull half buried in sand, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "e13a4d03-3acf-42e1-96f6-36420c09d188",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

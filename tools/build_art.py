@@ -185,6 +185,27 @@ def build_hero():
     return made
 
 
+def build_props():
+    """Map props: batch pieces from props/small/ and map-objects, all cropped to their pixels
+    (PropArt stands them on their bottom edge)."""
+    out = "assets/sprites/props"
+    os.makedirs(out, exist_ok=True)
+    count = 0
+    for path in sorted(glob.glob(os.path.join(SRC, "props", "small", "*.png"))):
+        img = Image.open(path).convert("RGBA")
+        img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, os.path.basename(path)))
+        count += 1
+    for folder in sorted(glob.glob(os.path.join(SRC, "props", "*"))):
+        aid = os.path.basename(folder)
+        path = os.path.join(folder, aid + ".png")
+        if aid == "small" or not os.path.exists(path):
+            continue
+        img = Image.open(path).convert("RGBA")
+        img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, aid + ".png"))
+        count += 1
+    return count
+
+
 def build_icons():
     """Inventory icons: assets_src/pixellab/icons/<item id>.png -> assets/sprites/icons/."""
     out = "assets/sprites/icons"
@@ -197,5 +218,5 @@ def build_icons():
 
 
 if __name__ == "__main__":
-    print("icons", build_icons())
+    print("icons", build_icons(), "props", build_props())
     print("tilesets", build_tilesets(), "buildings", build_buildings(), "cast", build_cast(), "hero", build_hero())

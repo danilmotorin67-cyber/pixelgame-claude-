@@ -1,0 +1,13 @@
+{
+ "id": "body_table",
+ "method": "map-objects",
+ "prompt": "body under a white sheet on a wooden table, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "2fec86e3-5da6-4d83-9e7d-f04e050d6731",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

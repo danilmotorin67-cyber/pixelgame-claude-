@@ -1,0 +1,13 @@
+{
+ "id": "tree_apple_spring",
+ "method": "map-objects",
+ "prompt": "small northern apple tree with red apples, grown tree in spring blossom, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "8af4cf97-692f-4d30-a01d-04304d5ab216",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "bush_lingonberry_winter",
+ "method": "map-objects",
+ "prompt": "lingonberry shrub with red berries, bare bush in winter with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "25bc0aba-1e20-4686-91b8-1465784eab52",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

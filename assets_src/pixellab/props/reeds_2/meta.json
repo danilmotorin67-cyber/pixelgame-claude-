@@ -1,0 +1,13 @@
+{
+ "id": "reeds_2",
+ "method": "map-objects",
+ "prompt": "reeds with cattails, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "6c0b38e3-871b-4fd4-9314-374c8751a9ee",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

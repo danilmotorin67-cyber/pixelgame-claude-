@@ -1,0 +1,13 @@
+{
+ "id": "signpost_2",
+ "method": "map-objects",
+ "prompt": "weathered wooden signpost with one board, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "2025bfb4-bb59-46cc-8cec-531d359d93fb",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

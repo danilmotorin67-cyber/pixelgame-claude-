@@ -1,0 +1,13 @@
+{
+ "id": "big_hull_3",
+ "method": "map-objects",
+ "prompt": "wrecked hull with a broken mast, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "41c38a60-c51c-417b-8413-ee126f7d328e",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

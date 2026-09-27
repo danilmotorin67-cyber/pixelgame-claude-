@@ -1,0 +1,13 @@
+{
+ "id": "beached_boat_3",
+ "method": "map-objects",
+ "prompt": "old rotten rowing boat, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "83f7e5ac-59ea-44b4-b980-4753dc7ac137",
+ "generations": 7.0,
+ "date": "2026-09-27"
+}

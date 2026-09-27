@@ -1,0 +1,13 @@
+{
+ "id": "driftwood_2",
+ "method": "map-objects",
+ "prompt": "driftwood log with roots, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5796b9f8-0060-4e7a-88eb-253fab65a94a",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

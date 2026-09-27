@@ -1,0 +1,13 @@
+{
+ "id": "tree_rowan_young",
+ "method": "map-objects",
+ "prompt": "rowan tree with red berry clusters, young small tree, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "57310947-6089-488d-a14f-9e1e24e30188",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

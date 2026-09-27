@@ -1,0 +1,13 @@
+{
+ "id": "tide_pool_2",
+ "method": "map-objects",
+ "prompt": "rock pool with a starfish, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "2f72bab7-295b-4276-86aa-9d65dedc5efc",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

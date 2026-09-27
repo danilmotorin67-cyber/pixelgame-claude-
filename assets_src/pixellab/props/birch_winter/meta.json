@@ -1,0 +1,13 @@
+{
+ "id": "birch_winter",
+ "method": "map-objects",
+ "prompt": "slender white birch tree, bare white branches with a little snow, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "403e5dd2-b031-4d16-9f9b-7a891ca56ec5",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

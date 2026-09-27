@@ -1,0 +1,13 @@
+{
+ "id": "big_hull_2",
+ "method": "map-objects",
+ "prompt": "shipwreck ribs sticking out of sand, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "8a728a2e-cf6e-4fbe-9ec4-83553d4e3210",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "grave_mound_new",
+ "method": "map-objects",
+ "prompt": "fresh grave with a small pile of stones, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "7d6de96c-1bab-4538-9346-cd3d58bdb450",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

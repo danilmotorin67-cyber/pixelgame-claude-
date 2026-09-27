@@ -1,0 +1,13 @@
+{
+ "id": "coffin_open_3",
+ "method": "map-objects",
+ "prompt": "open coffin lined with white cloth and flowers, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "2f7bc6bf-a624-4016-a5f2-d2cd6038a1fe",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

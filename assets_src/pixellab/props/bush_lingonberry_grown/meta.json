@@ -1,0 +1,13 @@
+{
+ "id": "bush_lingonberry_grown",
+ "method": "map-objects",
+ "prompt": "lingonberry shrub with red berries, full grown bush, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "bb6c2a67-5503-4bb2-8216-ecb9f61cde5f",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

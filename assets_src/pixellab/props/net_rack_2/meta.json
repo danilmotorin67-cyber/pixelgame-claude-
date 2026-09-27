@@ -1,0 +1,13 @@
+{
+ "id": "net_rack_2",
+ "method": "map-objects",
+ "prompt": "net rack with floats, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "01e68ccc-1c60-473b-b90b-a944ce64e0a5",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

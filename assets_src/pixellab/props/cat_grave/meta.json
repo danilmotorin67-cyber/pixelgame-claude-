@@ -1,0 +1,13 @@
+{
+ "id": "cat_grave",
+ "method": "map-objects",
+ "prompt": "tiny cat grave with a small stone and a fish bone, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "f34aca5b-b470-4a21-a28e-16c57e9e403c",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

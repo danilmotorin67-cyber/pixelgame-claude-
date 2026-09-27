@@ -1,0 +1,13 @@
+{
+ "id": "weeds_overlay",
+ "method": "map-objects",
+ "prompt": "weeds and nettles growing over a grave, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "41d7ff5e-960d-4647-8c44-e69fd282567c",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "tree_apple_grown",
+ "method": "map-objects",
+ "prompt": "small northern apple tree with red apples, fully grown tree, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  64,
+  96
+ ],
+ "view": "high top-down",
+ "object_id": "5f7e2629-7d76-4609-90fb-a6fa71538c7b",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

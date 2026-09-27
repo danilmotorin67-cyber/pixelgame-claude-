@@ -1,0 +1,13 @@
+{
+ "id": "coffin_open_1",
+ "method": "map-objects",
+ "prompt": "open plain pine coffin with a body inside, respectful, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "dfc5a483-4852-4b77-9dc5-a30e6ddae1e0",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

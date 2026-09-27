@@ -30,6 +30,8 @@ func _process(delta: float) -> void:
 func _draw() -> void:
 	match kind():
 		"bonfire":
+			if PropArt.draw(self, "bonfire_lit" if Story.bonfire_lit(int(spot.get("index", 0))) else "bonfire_unlit", Vector2(0, 7)):
+				return
 			draw_rect(Rect2(-6, 2, 12, 4), Color("#6b4a32"))
 			if Story.bonfire_lit(int(spot.get("index", 0))):
 				var flicker := 2.0 * sin(_time * 9.0)
@@ -38,6 +40,8 @@ func _draw() -> void:
 			var a := 0.45 + 0.25 * sin(_time * 2.5)
 			draw_circle(Vector2.ZERO, 7.0, Color(0.55, 0.85, 1.0, a))
 		"cat":
+			if PropArt.draw(self, "cat_grave", Vector2(0, 6)):
+				return
 			draw_rect(Rect2(-4, -5, 8, 9), Color("#8a8d93"))
 			draw_rect(Rect2(-3, -8, 2, 3), Color("#8a8d93"))
 			draw_rect(Rect2(1, -8, 2, 3), Color("#8a8d93"))

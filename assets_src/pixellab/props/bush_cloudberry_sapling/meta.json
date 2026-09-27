@@ -1,0 +1,13 @@
+{
+ "id": "bush_cloudberry_sapling",
+ "method": "map-objects",
+ "prompt": "cloudberry plant with amber berries, tiny sprout, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "35ba6107-96f3-45d7-9e61-61da95a2ca9d",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "bush_blueberry_sapling",
+ "method": "map-objects",
+ "prompt": "blueberry bush with blue berries, tiny sprout, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3c42355f-d13c-4311-92f3-3dfa51efa29a",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

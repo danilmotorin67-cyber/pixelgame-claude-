@@ -1,0 +1,13 @@
+{
+ "id": "grave_headstone_old",
+ "method": "map-objects",
+ "prompt": "grave with an old lichen-covered headstone, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "2e43c5f8-d914-424e-a506-e36d63d945ff",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

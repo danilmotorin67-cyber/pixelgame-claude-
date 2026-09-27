@@ -1,0 +1,13 @@
+{
+ "id": "graveyard_bell",
+ "method": "map-objects",
+ "prompt": "small bell hanging in a wooden frame, pixel art, 3/4 top-down view, cozy farming game, northern fishing island, muted cold palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "b9465321-c767-4685-b1f6-f0774b7721fd",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}
