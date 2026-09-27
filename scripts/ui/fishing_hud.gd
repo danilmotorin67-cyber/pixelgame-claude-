@@ -154,6 +154,10 @@ func _finish(result: String) -> void:
 
 
 func _draw() -> void:
+	# The catch rises over the float for the seconds it can still be let go.
+	if landed_left > 0.0 and not landed.is_empty():
+		var at := get_viewport().get_canvas_transform() * target
+		ItemIcon.draw(self, str(landed.get("id", fish.get("id", ""))), Rect2(at + Vector2(-8, -30 + landed_left * 4.0), Vector2(16, 16)))
 	if state == "idle":
 		return
 	if state == "charging":

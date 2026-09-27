@@ -156,5 +156,46 @@ def build_cast():
     return count
 
 
+HERO_ORDER = ("south", "west", "east", "north")  # the player's rows: down, left, right, up
+
+
+def build_hero():
+    """The player's sheets assets/sprites/characters/hero_<male|female>.png: rows 0-3 walk (6 frames),
+    rows 4-7 breathing idle (padded to 6), in Player._direction_index order; <id>.json keeps the foot."""
+    out = "assets/sprites/characters"
+    made = 0
+    for aid in ("hero_male", "hero_female"):
+        path = os.path.join(CAST_OUT, aid + ".json")
+        if not os.path.exists(path):
+            continue
+        info = json.load(open(path))
+        fw, fh = info["frame"]
+        src = Image.open(os.path.join(CAST_OUT, aid + ".png")).convert("RGBA")
+        sheet = Image.new("RGBA", (fw * 6, fh * 8))
+        for block, anim in enumerate(("walk", "idle")):
+            for r, d in enumerate(HERO_ORDER):
+                row, count = info["anims"][anim][d]
+                for k in range(6):
+                    frame = src.crop((k % count * fw, row * fh, (k % count + 1) * fw, (row + 1) * fh))
+                    sheet.paste(frame, (k * fw, (block * 4 + r) * fh))
+        sheet.save(os.path.join(out, aid + ".png"))
+        with open(os.path.join(out, aid + ".json"), "w") as f:
+            json.dump({"frame": [fw, fh], "foot": info["foot"], "idle_frames": info["anims"]["idle"]["south"][1]}, f)
+        made += 1
+    return made
+
+
+def build_icons():
+    """Inventory icons: assets_src/pixellab/icons/<item id>.png -> assets/sprites/icons/."""
+    out = "assets/sprites/icons"
+    os.makedirs(out, exist_ok=True)
+    count = 0
+    for path in sorted(glob.glob(os.path.join(SRC, "icons", "*.png"))):
+        Image.open(path).convert("RGBA").save(os.path.join(out, os.path.basename(path)))
+        count += 1
+    return count
+
+
 if __name__ == "__main__":
-    print("tilesets", build_tilesets(), "buildings", build_buildings(), "cast", build_cast())
+    print("icons", build_icons())
+    print("tilesets", build_tilesets(), "buildings", build_buildings(), "cast", build_cast(), "hero", build_hero())

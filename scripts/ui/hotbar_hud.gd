@@ -46,6 +46,8 @@ func _draw() -> void:
 
 
 func _icon(x: int, y: int, id: String) -> void:
+	if ItemIcon.draw(self, id, Rect2(x - 1, y - 1, 16, 16)):
+		return
 	if id == "tool_hoe":
 		_px(x + 4, y, 2, 14, Color("#b08f6c"))
 		_px(x + 1, y + 1, 9, 2, Color("#c9c8c2"))

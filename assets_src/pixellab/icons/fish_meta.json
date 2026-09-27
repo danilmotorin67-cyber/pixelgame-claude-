@@ -1,0 +1,179 @@
+{
+ "batch": "b64ca101-d86d-45c1-b6b0-cc4b0d73e86d",
+ "method": "create-1-direction-object (32 px, 64 per call)",
+ "generations": 34,
+ "icons": {
+  "fish_cod": {
+   "object_id": "0b598c53-d6bf-45db-a677-c557d36c8725",
+   "prompt": "atlantic cod, olive-brown speckled back, pale belly, chin barbel"
+  },
+  "fish_saithe": {
+   "object_id": "52ab2005-081b-4966-9b13-9a8d5f4ffb43",
+   "prompt": "saithe (coalfish), dark green-grey back, silver belly, slim"
+  },
+  "fish_haddock": {
+   "object_id": "be9b4f5d-9ccb-418b-b112-8f5c49c7a2ca",
+   "prompt": "haddock, grey with a black lateral line and a dark thumbprint spot"
+  },
+  "fish_herring": {
+   "object_id": "ff26031e-5897-4910-a6cf-012141ef22bc",
+   "prompt": "atlantic herring, small silver fish with blue-green back"
+  },
+  "fish_mackerel": {
+   "object_id": "b78b5363-3e2a-43ff-9d9d-5e0a4384f022",
+   "prompt": "atlantic mackerel, blue-green back with black wavy stripes, silver belly"
+  },
+  "fish_capelin": {
+   "object_id": "b983c077-70ca-4c60-afbc-584330e9183b",
+   "prompt": "capelin, tiny slender silver-olive fish"
+  },
+  "fish_flounder": {
+   "object_id": "4a6df8b3-e26a-4b10-bc9a-3080951f4c1b",
+   "prompt": "flounder, flat brown fish with orange spots, both eyes on one side"
+  },
+  "fish_bullhead": {
+   "object_id": "d995852e-1325-4ccc-a6c6-ffcb840118cf",
+   "prompt": "sea bullhead, grumpy brown fish with big head and spiny fins"
+  },
+  "fish_lumpfish": {
+   "object_id": "c2e87387-81c7-4e7e-9d5c-777ae451a697",
+   "prompt": "lumpfish, round lumpy green-grey fish with bumps"
+  },
+  "fish_redfish": {
+   "object_id": "9265a318-ffb3-45a6-9ea7-30f92c1403c5",
+   "prompt": "redfish (ocean perch), bright red fish with huge eyes"
+  },
+  "fish_wolffish": {
+   "object_id": "e106413e-21a3-4698-bac0-d8bec1a66583",
+   "prompt": "atlantic wolffish, long grey-blue fish with big fang teeth and dark stripes"
+  },
+  "fish_navaga": {
+   "object_id": "3b147aab-3fd5-43d8-9c29-eeb48e1c70a5",
+   "prompt": "navaga (saffron cod), small grey-yellow cod-like fish"
+  },
+  "fish_smelt": {
+   "object_id": "a42ab865-6983-4dc8-9a34-5463c07686d7",
+   "prompt": "european smelt, slim translucent silver fish"
+  },
+  "fish_halibut": {
+   "object_id": "b4421897-7a90-493c-af58-35f70c965008",
+   "prompt": "atlantic halibut, big flat dark olive-brown fish"
+  },
+  "fish_skate": {
+   "object_id": "1020673e-3235-4b3c-a397-9c026d04e20e",
+   "prompt": "thornback skate, flat diamond-shaped ray with long tail, brown with spots"
+  },
+  "fish_monkfish": {
+   "object_id": "b7a45127-9f9c-4bea-98b9-ae05efaf3a72",
+   "prompt": "monkfish, ugly wide-mouthed brown fish with lure on its head"
+  },
+  "fish_squid": {
+   "object_id": "b3ff1f03-3459-41cf-a18a-6234e9d5f152",
+   "prompt": "squid, pale pink-white with tentacles"
+  },
+  "fish_porbeagle": {
+   "object_id": "04d6be2d-d84a-4071-be16-0a744e713bab",
+   "prompt": "porbeagle shark, small grey-blue shark"
+  },
+  "fish_whiting": {
+   "object_id": "17d6e535-6b4e-4b9e-8124-8f8bc637a024",
+   "prompt": "whiting, pale silvery fish with a small dark spot at the pectoral fin"
+  },
+  "fish_sandeel": {
+   "object_id": "a15af862-5f8a-4512-99b0-10e9f46e7b7d",
+   "prompt": "sand eel, very thin long silver fish"
+  },
+  "fish_sea_scorpion": {
+   "object_id": "286542e5-cb19-43e5-8818-7c28376b6288",
+   "prompt": "sea scorpion, spiky mottled red-brown rock-pool fish"
+  },
+  "fish_garfish": {
+   "object_id": "16ed70dd-b110-4e74-93bc-56b1af015a6b",
+   "prompt": "garfish, needle-thin green-blue fish with long beak jaw"
+  },
+  "fish_sea_trout": {
+   "object_id": "ebcdcb25-0265-48bc-9a2b-13dd930efdd9",
+   "prompt": "sea trout, silver trout with dark spots"
+  },
+  "fish_char": {
+   "object_id": "a83d1572-7601-456c-97ce-1c0048aeffae",
+   "prompt": "arctic char, olive back, red-orange belly, pale spots"
+  },
+  "fish_grayling": {
+   "object_id": "b28bef11-e8b4-4925-95e9-decb5ac83ab9",
+   "prompt": "grayling, grey fish with a big colourful sail-like dorsal fin"
+  },
+  "fish_salmon": {
+   "object_id": "63a6f5a8-b735-4e6e-a224-1c48e4a2364f",
+   "prompt": "atlantic salmon, silver with small black spots, pink tint"
+  },
+  "fish_burbot": {
+   "object_id": "746cb5d5-4450-43fd-a861-ae03ed2b1e17",
+   "prompt": "burbot, long mottled brown freshwater cod with chin barbel"
+  },
+  "fish_pike": {
+   "object_id": "25310c65-db71-4642-9a4d-fb22a47bf8a6",
+   "prompt": "northern pike, long green fish with pale spots and duck-bill jaw"
+  },
+  "fish_perch": {
+   "object_id": "fbbb37e3-711e-497c-be3e-abd19f89460d",
+   "prompt": "european perch, green-yellow with dark vertical stripes and red fins"
+  },
+  "fish_eel": {
+   "object_id": "40b496ab-1dc4-4cd0-8cec-485535e81daf",
+   "prompt": "european eel, long snake-like dark olive fish"
+  },
+  "fish_stickleback": {
+   "object_id": "8ff7c44b-1a05-4c0b-893b-992696cb6f06",
+   "prompt": "three-spined stickleback, tiny fish with spines"
+  },
+  "fish_eelpout": {
+   "object_id": "6acf83a5-12a6-47d6-9d9c-45f73c810dd2",
+   "prompt": "eelpout, long brown-yellow fish with tapered tail"
+  },
+  "fish_whitefish": {
+   "object_id": "937d11bd-4b51-4557-b43c-6daad442c6c9",
+   "prompt": "whitefish, sleek silvery lake fish"
+  },
+  "fish_old_codger": {
+   "object_id": "4c578d64-2583-419e-966b-049128bc6e72",
+   "prompt": "legendary giant old cod, scarred, grey-green, with an old fishing hook in its lip, golden glow outline"
+  },
+  "fish_herring_king": {
+   "object_id": "c56525aa-3382-4306-9ded-9e4dca0c058f",
+   "prompt": "legendary oarfish, long silver ribbon body with a crimson crown-like fin, golden glow outline"
+  },
+  "fish_golden_halibut": {
+   "object_id": "14cbbc25-d125-4ffe-b88c-de0e044dd941",
+   "prompt": "legendary golden halibut, flat fish shining gold, golden glow outline"
+  },
+  "fish_grandmother": {
+   "object_id": "dc91a369-e70e-47fe-a93b-adbe25cb5d68",
+   "prompt": "legendary ancient huge pike, grey-green, frost on its scales, wise old eyes, golden glow outline"
+  },
+  "fish_lantern_fish": {
+   "object_id": "eb2c0bd8-c0f6-4a77-a425-0a6e16574070",
+   "prompt": "legendary deep-sea lanternfish, black with glowing blue-green lights along its body, golden glow outline"
+  },
+  "fish_codger_son": {
+   "object_id": "bce037cd-4e28-404c-9f52-74b6d9d60f50",
+   "prompt": "young giant cod with a tiny hook scar, grey-green, golden glow outline"
+  },
+  "fish_herring_princess": {
+   "object_id": "770d8c57-9155-4b0e-ac7e-53df4e4c3fb3",
+   "prompt": "slender silver oarfish with a small crimson crown fin, golden glow outline"
+  },
+  "fish_golden_calf": {
+   "object_id": "28464f32-ebaa-46ea-abfd-cec9a4215a11",
+   "prompt": "small golden halibut shining gold, golden glow outline"
+  },
+  "fish_granddaughter": {
+   "object_id": "2f96606a-d209-4ec5-830f-8ef645819773",
+   "prompt": "young pike with frost on its scales, golden glow outline"
+  },
+  "fish_lantern_fry": {
+   "object_id": "24d3cbae-2006-4fb2-abe2-a0172723fbef",
+   "prompt": "small black lanternfish with glowing blue-green dots, golden glow outline"
+  }
+ }
+}

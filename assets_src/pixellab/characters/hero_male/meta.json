@@ -1,0 +1,37 @@
+{
+ "id": "hero_male",
+ "method": "create-character-with-4-directions",
+ "prompt": "young lighthouse keeper, cute cozy farming-game style, big head, navy wool pea coat, long grey knitted scarf, dark trousers, brown boots, short tousled brown hair, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "632f9858-2452-4c05-b7a3-30a2a9bd11c3",
+ "generations": 1.0,
+ "date": "2026-09-25",
+ "note": "the approved variant 3 pilot (pilot/hero_s48)",
+ "animations": {
+  "walking": {
+   "generations": 5.0,
+   "group": "6a11702c-50d7-489d-9662-7d7fe722bf6a",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 7.0,
+   "group": "d9fbac82-0813-470d-a78d-90c6cd74c78f",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

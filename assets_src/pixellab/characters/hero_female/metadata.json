@@ -1,0 +1,93 @@
+{
+  "group_id": "38a354c0-ee51-490d-bb16-b509e1d97fdc",
+  "states": [
+    {
+      "character": {
+        "id": "b4610e37-788b-4887-9799-94fff00877a1",
+        "name": "Idle",
+        "prompt": "young woman lighthouse keeper, navy wool pea coat, long grey knitted scarf, dark trousers, brown boots, auburn hair in a low ponytail, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+        "size": {
+          "width": 68,
+          "height": 68
+        },
+        "template_id": "mannequin",
+        "directions": 4,
+        "view": "low top-down",
+        "created_at": "2026-09-27T06:28:17.933041+00:00"
+      },
+      "folder": "Idle",
+      "frames": {
+        "rotations": {
+          "south": "Idle/rotations/south.png",
+          "west": "Idle/rotations/west.png",
+          "east": "Idle/rotations/east.png",
+          "north": "Idle/rotations/north.png"
+        },
+        "animations": {
+          "walking": {
+            "north": [
+              "Idle/animations/walking/north/frame_000.png",
+              "Idle/animations/walking/north/frame_001.png",
+              "Idle/animations/walking/north/frame_002.png",
+              "Idle/animations/walking/north/frame_003.png",
+              "Idle/animations/walking/north/frame_004.png",
+              "Idle/animations/walking/north/frame_005.png"
+            ],
+            "west": [
+              "Idle/animations/walking/west/frame_000.png",
+              "Idle/animations/walking/west/frame_001.png",
+              "Idle/animations/walking/west/frame_002.png",
+              "Idle/animations/walking/west/frame_003.png",
+              "Idle/animations/walking/west/frame_004.png",
+              "Idle/animations/walking/west/frame_005.png"
+            ],
+            "east": [
+              "Idle/animations/walking/east/frame_000.png",
+              "Idle/animations/walking/east/frame_001.png",
+              "Idle/animations/walking/east/frame_002.png",
+              "Idle/animations/walking/east/frame_003.png",
+              "Idle/animations/walking/east/frame_004.png",
+              "Idle/animations/walking/east/frame_005.png"
+            ],
+            "south": [
+              "Idle/animations/walking/south/frame_000.png",
+              "Idle/animations/walking/south/frame_001.png",
+              "Idle/animations/walking/south/frame_002.png",
+              "Idle/animations/walking/south/frame_003.png",
+              "Idle/animations/walking/south/frame_004.png",
+              "Idle/animations/walking/south/frame_005.png"
+            ]
+          },
+          "animating": {
+            "north": [
+              "Idle/animations/animating/north/frame_000.png",
+              "Idle/animations/animating/north/frame_001.png",
+              "Idle/animations/animating/north/frame_002.png",
+              "Idle/animations/animating/north/frame_003.png"
+            ],
+            "south": [
+              "Idle/animations/animating/south/frame_000.png",
+              "Idle/animations/animating/south/frame_001.png",
+              "Idle/animations/animating/south/frame_002.png",
+              "Idle/animations/animating/south/frame_003.png"
+            ],
+            "east": [
+              "Idle/animations/animating/east/frame_000.png",
+              "Idle/animations/animating/east/frame_001.png",
+              "Idle/animations/animating/east/frame_002.png",
+              "Idle/animations/animating/east/frame_003.png"
+            ],
+            "west": [
+              "Idle/animations/animating/west/frame_000.png",
+              "Idle/animations/animating/west/frame_001.png",
+              "Idle/animations/animating/west/frame_002.png",
+              "Idle/animations/animating/west/frame_003.png"
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "export_version": "3.1",
+  "export_date": "2026-09-27T06:33:23.666894"
+}

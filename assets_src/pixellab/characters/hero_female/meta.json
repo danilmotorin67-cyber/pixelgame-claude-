@@ -1,0 +1,36 @@
+{
+ "id": "hero_female",
+ "method": "create-character-with-4-directions",
+ "prompt": "young woman lighthouse keeper, navy wool pea coat, long grey knitted scarf, dark trousers, brown boots, auburn hair in a low ponytail, cute cozy farming-game style, big head, northern fishing island, muted cold palette with warm accents",
+ "size": [
+  48,
+  48
+ ],
+ "character_id": "b4610e37-788b-4887-9799-94fff00877a1",
+ "generations": 2.0,
+ "date": "2026-09-27",
+ "animations": {
+  "walking": {
+   "generations": 7.0,
+   "group": "0c9ce802-e90b-4cda-bcb4-4d7158aea051",
+   "template_animation_id": "walking",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  },
+  "breathing-idle": {
+   "generations": 27.0,
+   "group": "23e3f958-ae43-4e48-a903-af12133432c2",
+   "template_animation_id": "breathing-idle",
+   "directions": [
+    "south",
+    "east",
+    "north",
+    "west"
+   ]
+  }
+ }
+}

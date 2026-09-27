@@ -31,9 +31,12 @@ const TOOL_DURATION := 0.34
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
 
-# The PixelLab hero (assets/sprites/characters/hero_m.png): 6 walk frames × 4 directions (down, left, right, up),
-# drawn at 32 px per tile and shown at Screen.ART_SCALE.
+# The PixelLab hero in the variant 3 format (assets/sprites/characters/hero_<male|female>.png, built by
+# tools/build_art.py): rows 0-3 walk, rows 4-7 breathing idle, 6 columns, in _direction_index order
+# (down, left, right, up); drawn at Screen.ART_SCALE with the feet on the body's origin.
 const WALK_FRAMES := 6
+const IDLE_ROW := 4
+var _idle_frames := 4
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
 
@@ -51,6 +54,7 @@ func _ready() -> void:
 		global_position = Router.spawn
 	else:
 		restore_state(Game.player_state)
+	_setup_sprite()
 	_update_sprite(false)
 	Events.time_tick.connect(warm_or_chill)
 
@@ -191,8 +195,31 @@ func _direction_index() -> int:
 	return 3 if facing.y < 0.0 else 0
 
 
+func _setup_sprite() -> void:
+	var id := "hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male"
+	var path := "res://assets/sprites/characters/%s" % id
+	var file := FileAccess.open(path + ".json", FileAccess.READ)
+	if file == null or not ResourceLoader.exists(path + ".png"):
+		return
+	var info: Dictionary = JSON.parse_string(file.get_as_text())
+	sprite.texture = load(path + ".png")
+	sprite.hframes = WALK_FRAMES
+	sprite.vframes = 8
+	sprite.centered = false
+	sprite.offset = Vector2(-float(info["frame"][0]) / 2.0, -float(info["foot"]))
+	sprite.position = Vector2(0, 1)
+	_idle_frames = int(info.get("idle_frames", 4))
+
+
+# Walking cycles the walk row; standing breathes; a tool swing holds the first walk frame.
 func _update_sprite(moving: bool) -> void:
-	sprite.frame = _direction_index() * WALK_FRAMES + (int(_walk_time * 8.0) % WALK_FRAMES if moving else 0)
+	var row := _direction_index()
+	if moving:
+		sprite.frame = row * WALK_FRAMES + int(_walk_time * 8.0) % WALK_FRAMES
+	elif tool_time > 0.0 or sprite.vframes < 8:
+		sprite.frame = row * WALK_FRAMES
+	else:
+		sprite.frame = (IDLE_ROW + row) * WALK_FRAMES + int(Time.get_ticks_msec() / 160) % _idle_frames
 
 
 func play_tool(kind: String, target: Vector2) -> void:
