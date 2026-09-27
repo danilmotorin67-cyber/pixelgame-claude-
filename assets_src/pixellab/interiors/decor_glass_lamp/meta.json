@@ -1,0 +1,13 @@
+{
+ "id": "decor_glass_lamp",
+ "method": "map-objects",
+ "prompt": "tall glass oil lamp with a warm flame on a small wooden side table, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "4082b7d4-b8f5-482b-9e96-d4a6ac591819",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

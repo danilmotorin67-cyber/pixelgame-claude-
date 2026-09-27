@@ -1,0 +1,13 @@
+{
+ "id": "decor_stuffed_lantern_fish",
+ "method": "map-objects",
+ "prompt": "mounted black deep sea lanternfish with glowing blue dots, trophy on a wooden plaque stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4654e208-e664-4352-98e1-4ae786865830",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

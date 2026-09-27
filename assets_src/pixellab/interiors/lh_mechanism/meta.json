@@ -1,0 +1,13 @@
+{
+ "id": "lh_mechanism",
+ "method": "map-objects",
+ "prompt": "clockwork rotation mechanism with brass gears, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4b0a8ffd-e4f3-4ec8-9778-ae42529f802e",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

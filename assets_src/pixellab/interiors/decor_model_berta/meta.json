@@ -1,0 +1,13 @@
+{
+ "id": "decor_model_berta",
+ "method": "map-objects",
+ "prompt": "model of a sailing boat on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "2376b1a0-5ab2-4217-8ae2-5c8a25c7954e",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

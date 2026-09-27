@@ -1,0 +1,13 @@
+{
+ "id": "decor_aquarium",
+ "method": "map-objects",
+ "prompt": "glass aquarium with small fish on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "802ae413-1e5d-4cb4-9eae-bc03bdb76771",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

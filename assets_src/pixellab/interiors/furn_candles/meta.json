@@ -1,0 +1,13 @@
+{
+ "id": "furn_candles",
+ "method": "map-objects",
+ "prompt": "iron candle stand with many lit candles, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "62fff9ee-d2c9-430f-8f33-b9e6ba788d86",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

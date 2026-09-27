@@ -1,0 +1,13 @@
+{
+ "id": "decor_seasonal_garland",
+ "method": "map-objects",
+ "prompt": "garland of leaves and berries on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "706657df-12ea-4975-9b3e-c0dcf2fc023d",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

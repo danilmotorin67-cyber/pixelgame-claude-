@@ -1,0 +1,13 @@
+{
+ "id": "furn_loom",
+ "method": "map-objects",
+ "prompt": "wooden floor weaving loom frame with warp threads and half-woven wool cloth, no chair, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "3824032c-eacd-4e7e-94c5-f90305d0a203",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

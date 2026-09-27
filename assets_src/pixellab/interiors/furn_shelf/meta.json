@@ -1,0 +1,13 @@
+{
+ "id": "furn_shelf",
+ "method": "map-objects",
+ "prompt": "tall wooden shelf full of jars, boxes and bottles, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  112
+ ],
+ "view": "high top-down",
+ "object_id": "d24c80c0-3e2f-46ab-9286-5e134c67554b",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

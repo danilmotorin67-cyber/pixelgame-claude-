@@ -1,0 +1,13 @@
+{
+ "id": "decor_wall_shelf",
+ "method": "map-objects",
+ "prompt": "wall shelf with jars, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e4324371-cf0d-4ab8-8b51-0892be36ec7f",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

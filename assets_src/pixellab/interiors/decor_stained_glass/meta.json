@@ -1,0 +1,13 @@
+{
+ "id": "decor_stained_glass",
+ "method": "map-objects",
+ "prompt": "small stained glass panel on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "abe6a3d3-22be-4ffc-a486-1a03a2e198a0",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

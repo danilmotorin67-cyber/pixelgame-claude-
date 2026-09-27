@@ -1,0 +1,13 @@
+{
+ "id": "lh_barometer",
+ "method": "map-objects",
+ "prompt": "brass wall barometer, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3c6dc805-2c26-47a1-8b7e-3a3a139b6ddf",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_solvik_pennant",
+ "method": "map-objects",
+ "prompt": "blue and white pennant flag on a pole, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "b645e1e9-3fd9-455a-8a14-65d66733dd2d",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

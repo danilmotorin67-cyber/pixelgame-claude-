@@ -1,0 +1,13 @@
+{
+ "id": "lh_lamp_on",
+ "method": "map-objects",
+ "prompt": "large brass oil lamp burner with a bright amber flame inside a glass chimney, no building, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "821a78f6-3f3b-46d6-9f41-03f9154d4390",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

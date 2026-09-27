@@ -1,0 +1,13 @@
+{
+ "id": "decor_sea_chest_decor",
+ "method": "map-objects",
+ "prompt": "sailor's sea chest with rope handles, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4bd83d23-fae0-4282-9452-bb11db197999",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

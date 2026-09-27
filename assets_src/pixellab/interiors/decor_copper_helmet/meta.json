@@ -1,0 +1,13 @@
+{
+ "id": "decor_copper_helmet",
+ "method": "map-objects",
+ "prompt": "old copper diving helmet, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "a82ec619-73f6-4062-8b86-cf84b668f627",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

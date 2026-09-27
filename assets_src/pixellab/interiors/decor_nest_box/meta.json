@@ -1,0 +1,13 @@
+{
+ "id": "decor_nest_box",
+ "method": "map-objects",
+ "prompt": "wooden eider nest box, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e097f0d7-db63-4dd3-954d-9863afe21f5a",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "lh_desk",
+ "method": "map-objects",
+ "prompt": "keeper's desk with logbook and oil lamp, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b3343dd0-5c39-4676-a9ac-4de8677d53f5",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

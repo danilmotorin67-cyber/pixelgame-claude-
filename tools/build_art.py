@@ -207,6 +207,14 @@ def build_props():
             img = Image.open(path).convert("RGBA")
             img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, "station_" + aid + ".png"))
             count += 1
+    # Interior furniture (furn_*), lighthouse fittings (lh_*) and placeable decor (decor_*).
+    for folder in sorted(glob.glob(os.path.join(SRC, "interiors", "*"))):
+        aid = os.path.basename(folder)
+        path = os.path.join(folder, aid + ".png")
+        if os.path.exists(path):
+            img = Image.open(path).convert("RGBA")
+            img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, aid + ".png"))
+            count += 1
     for folder in sorted(glob.glob(os.path.join(SRC, "props", "*"))):
         aid = os.path.basename(folder)
         path = os.path.join(folder, aid + ".png")

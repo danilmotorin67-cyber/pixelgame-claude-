@@ -1,0 +1,13 @@
+{
+ "id": "decor_rag_rug",
+ "method": "map-objects",
+ "prompt": "round colourful rag rug, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f139b462-7a14-481c-bfe1-63156c10941b",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_barometer_decor",
+ "method": "map-objects",
+ "prompt": "round brass barometer on a wooden stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "dbfc0deb-375c-4454-a8f3-c021c73828b8",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

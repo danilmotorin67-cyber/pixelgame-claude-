@@ -1,0 +1,13 @@
+{
+ "id": "furn_stairs",
+ "method": "map-objects",
+ "prompt": "wooden stairs going up, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "83891e93-1030-40d8-8858-1d8894ed7e86",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

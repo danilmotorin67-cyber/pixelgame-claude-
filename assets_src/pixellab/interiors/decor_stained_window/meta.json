@@ -1,0 +1,13 @@
+{
+ "id": "decor_stained_window",
+ "method": "map-objects",
+ "prompt": "stained glass window in a wooden frame on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "406bc328-9568-49e5-94a0-1960e95f5e6e",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

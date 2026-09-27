@@ -1,0 +1,13 @@
+{
+ "id": "decor_driftwood_frame",
+ "method": "map-objects",
+ "prompt": "mirror in a driftwood frame, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "753dbaa4-eaa7-418c-9963-29f8fa7b51f8",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

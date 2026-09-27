@@ -1,0 +1,13 @@
+{
+ "id": "decor_cork_garland",
+ "method": "map-objects",
+ "prompt": "string of round cork fishing floats hanging between two small posts, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "af1157c7-8fa1-41c4-9a86-12e6d090a134",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

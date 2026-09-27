@@ -1,0 +1,13 @@
+{
+ "id": "decor_ship_in_bottle",
+ "method": "map-objects",
+ "prompt": "ship in a bottle on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "96b317cb-16cf-4868-95b1-e596211a3a02",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

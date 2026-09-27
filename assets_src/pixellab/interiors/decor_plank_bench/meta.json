@@ -1,0 +1,13 @@
+{
+ "id": "decor_plank_bench",
+ "method": "map-objects",
+ "prompt": "plank bench, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d85b911e-9baf-40c8-bf1f-c6e7f6c82072",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

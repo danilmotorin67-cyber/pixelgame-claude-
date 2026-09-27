@@ -1,0 +1,13 @@
+{
+ "id": "decor_lantern_hook",
+ "method": "map-objects",
+ "prompt": "iron hook with a hanging lantern, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "37446f96-7cf1-4c89-8795-81742df5d57c",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

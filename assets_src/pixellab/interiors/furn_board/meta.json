@@ -1,0 +1,13 @@
+{
+ "id": "furn_board",
+ "method": "map-objects",
+ "prompt": "wooden notice board with pinned papers, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "8f392dc4-53f8-47f8-a6a1-4e3011dc9ea8",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

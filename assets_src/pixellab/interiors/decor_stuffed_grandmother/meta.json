@@ -1,0 +1,13 @@
+{
+ "id": "decor_stuffed_grandmother",
+ "method": "map-objects",
+ "prompt": "mounted huge old pike trophy on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "2b5821cc-2d99-4df0-b83a-bb0935f5a6c1",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

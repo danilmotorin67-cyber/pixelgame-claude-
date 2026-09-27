@@ -1,0 +1,13 @@
+{
+ "id": "furn_bed",
+ "method": "map-objects",
+ "prompt": "wooden bed with a patchwork quilt, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "41713f91-fa44-4633-8790-8b5b0b79c937",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_wardrobe",
+ "method": "map-objects",
+ "prompt": "tall wooden wardrobe, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "06cf0ec6-4fb3-4201-8613-bf3e4d3c26ae",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

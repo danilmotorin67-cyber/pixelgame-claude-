@@ -1,0 +1,13 @@
+{
+ "id": "decor_net_curtain",
+ "method": "map-objects",
+ "prompt": "fishing net curtain with shells, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "68ebea94-5614-4fd0-9776-4301681bfc1c",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

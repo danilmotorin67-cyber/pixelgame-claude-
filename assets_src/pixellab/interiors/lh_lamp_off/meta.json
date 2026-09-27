@@ -1,0 +1,13 @@
+{
+ "id": "lh_lamp_off",
+ "method": "map-objects",
+ "prompt": "big unlit lighthouse lamp with brass burner, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "d49a5991-aa04-4832-a522-70e57f2a8137",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "lh_glass",
+ "method": "map-objects",
+ "prompt": "large faceted glass fresnel lens panel in a brass frame, no plant, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "32aabe2f-975b-4c9d-9d64-e44d41be643b",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_carved_bed",
+ "method": "map-objects",
+ "prompt": "big carved wooden double bed, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "993c40e0-559b-40a6-ab41-9da577850b1b",
+ "generations": 8.0,
+ "date": "2026-09-27"
+}

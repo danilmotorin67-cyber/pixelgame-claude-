@@ -1,0 +1,13 @@
+{
+ "id": "decor_bookshelf",
+ "method": "map-objects",
+ "prompt": "tall bookshelf full of books, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "db9edf72-9dc9-441c-adb2-58f9c23cfb94",
+ "generations": 7.0,
+ "date": "2026-09-27"
+}

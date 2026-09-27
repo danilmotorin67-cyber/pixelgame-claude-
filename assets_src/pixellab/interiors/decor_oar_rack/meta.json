@@ -1,0 +1,13 @@
+{
+ "id": "decor_oar_rack",
+ "method": "map-objects",
+ "prompt": "rack of wooden oars, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "cbd19e27-436f-484e-b360-84c677a1b89b",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

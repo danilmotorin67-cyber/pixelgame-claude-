@@ -131,7 +131,12 @@ func _draw_decor() -> void:
 	var tint := Color.from_hsv(float(absi(id.hash()) % 360) / 360.0, 0.35, 0.75)
 	var art := {"fence_wood": "fence_wood_h", "fence_stone": "fence_stone_h", "fence_iron": "fence_iron_h", "bench": "bench_1",
 		"armeria": "flowers_1", "heather": "heather_1"}.get(id, "") as String
-	if art != "" and PropArt.draw(self, art, Vector2(0, 5)):
+	if id == "stone_path" and WangGround.single("tile_stone_path") != null:
+		draw_texture_rect(WangGround.single("tile_stone_path"), Rect2(-8, -8, 16, 16), false)
+		return
+	if art == "":
+		art = id if id.begins_with("decor_") else "decor_" + id
+	if PropArt.draw(self, art, Vector2(0, 5)):
 		return
 	match id:
 		"fence_wood", "fence_stone", "fence_iron":

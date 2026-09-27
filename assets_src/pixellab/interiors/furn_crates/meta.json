@@ -1,0 +1,13 @@
+{
+ "id": "furn_crates",
+ "method": "map-objects",
+ "prompt": "stack of wooden crates, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "d660509c-569b-46ad-8906-110bf3f48103",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

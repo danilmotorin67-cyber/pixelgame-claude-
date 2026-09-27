@@ -1,0 +1,13 @@
+{
+ "id": "decor_stuffed_golden_halibut",
+ "method": "map-objects",
+ "prompt": "mounted shining gold flat halibut fish trophy on a wooden plaque stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c7a8e9c1-6c0a-49cf-b627-786d43534bd7",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

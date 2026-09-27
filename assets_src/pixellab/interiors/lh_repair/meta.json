@@ -1,0 +1,13 @@
+{
+ "id": "lh_repair",
+ "method": "map-objects",
+ "prompt": "repair table with tools, lamp parts and a vice, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "14700226-0f1e-4a48-9e26-d5aa5d0f57bd",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "lh_door",
+ "method": "map-objects",
+ "prompt": "heavy arched wooden door in a stone wall, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "b5e329bd-cbe3-4c70-a9d5-eb09872df62c",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

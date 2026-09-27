@@ -1,0 +1,13 @@
+{
+ "id": "furn_hay",
+ "method": "map-objects",
+ "prompt": "pile of hay bales, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "e86e393c-3fba-4d46-a98c-24a657ee2000",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

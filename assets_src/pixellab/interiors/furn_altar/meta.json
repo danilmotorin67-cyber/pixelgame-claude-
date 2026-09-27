@@ -1,0 +1,13 @@
+{
+ "id": "furn_altar",
+ "method": "map-objects",
+ "prompt": "small chapel altar with white cloth, candles and a brass cross, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "80c684e5-e66d-471e-96b1-2b796f15cd81",
+ "generations": 1.0,
+ "date": "2026-09-27"
+}

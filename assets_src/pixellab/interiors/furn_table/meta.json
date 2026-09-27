@@ -1,0 +1,13 @@
+{
+ "id": "furn_table",
+ "method": "map-objects",
+ "prompt": "wooden table with two stools, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "0af6a167-ae2b-4ef0-9bcd-c0f65d369745",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

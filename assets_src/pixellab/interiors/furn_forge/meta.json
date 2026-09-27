@@ -1,0 +1,13 @@
+{
+ "id": "furn_forge",
+ "method": "map-objects",
+ "prompt": "blacksmith's brick forge with glowing coals and bellows, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  96,
+  80
+ ],
+ "view": "high top-down",
+ "object_id": "da4b024c-574a-46fe-a397-7d8f17eba145",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

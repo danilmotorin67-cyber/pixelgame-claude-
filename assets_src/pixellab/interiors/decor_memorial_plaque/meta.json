@@ -1,0 +1,13 @@
+{
+ "id": "decor_memorial_plaque",
+ "method": "map-objects",
+ "prompt": "bronze memorial plaque on a stone, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "55a06fe5-7236-47a0-bd5f-811cf5cf7caa",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

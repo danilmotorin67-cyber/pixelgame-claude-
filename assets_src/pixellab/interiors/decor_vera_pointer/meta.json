@@ -1,0 +1,13 @@
+{
+ "id": "decor_vera_pointer",
+ "method": "map-objects",
+ "prompt": "long thin wooden school pointer stick resting on a small blackboard, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "012a39d7-bf37-4ca1-b1e3-c5d8051bfb9a",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

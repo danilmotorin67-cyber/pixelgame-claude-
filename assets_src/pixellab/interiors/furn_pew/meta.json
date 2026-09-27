@@ -1,0 +1,13 @@
+{
+ "id": "furn_pew",
+ "method": "map-objects",
+ "prompt": "wooden chapel pew bench, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "863d3518-7d85-4258-94bf-2c7021e86272",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

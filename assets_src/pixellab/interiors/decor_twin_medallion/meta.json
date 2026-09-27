@@ -1,0 +1,13 @@
+{
+ "id": "decor_twin_medallion",
+ "method": "map-objects",
+ "prompt": "two-half silver medallion on a velvet stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "cbb66492-09df-42b2-a237-198c8401916e",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

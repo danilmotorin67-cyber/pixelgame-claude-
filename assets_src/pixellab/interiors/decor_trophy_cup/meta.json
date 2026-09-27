@@ -1,0 +1,13 @@
+{
+ "id": "decor_trophy_cup",
+ "method": "map-objects",
+ "prompt": "silver trophy cup on a pedestal, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "de54cd3f-6214-4799-8602-6e4d7eee5d68",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

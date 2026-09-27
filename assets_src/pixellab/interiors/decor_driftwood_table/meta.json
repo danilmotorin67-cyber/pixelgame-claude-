@@ -1,0 +1,13 @@
+{
+ "id": "decor_driftwood_table",
+ "method": "map-objects",
+ "prompt": "table made of driftwood, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "53b12a71-1acc-4ca2-b884-8626f1064a02",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

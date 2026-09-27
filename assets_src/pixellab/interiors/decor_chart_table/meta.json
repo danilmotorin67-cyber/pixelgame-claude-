@@ -1,0 +1,13 @@
+{
+ "id": "decor_chart_table",
+ "method": "map-objects",
+ "prompt": "chart table with a sea map and compass, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f91a90e0-4ca0-49e0-b574-08dc39c3d0e7",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

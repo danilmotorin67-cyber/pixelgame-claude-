@@ -1,0 +1,13 @@
+{
+ "id": "decor_rope_coil",
+ "method": "map-objects",
+ "prompt": "coil of thick rope, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "8099062f-a235-4155-92a8-177b8f552f13",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

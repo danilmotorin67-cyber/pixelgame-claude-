@@ -1,0 +1,13 @@
+{
+ "id": "decor_bartholomew_ladle",
+ "method": "map-objects",
+ "prompt": "dented copper ladle on a hook, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c29faced-f41a-438d-b0bf-02b40d622387",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -50,8 +50,33 @@ func _wall(body: StaticBody2D, at: Vector2, size: Vector2) -> void:
 	body.add_child(collision)
 
 
+var _corners := PackedInt32Array()
+
+
+# The tower's worn stone floor and curved wall from the PixelLab lighthouse set.
+func _draw_tiles() -> bool:
+	if WangGround.tileset("tiles_lighthouse_round").is_empty():
+		return false
+	if _corners.is_empty():
+		var cells := PackedInt32Array()
+		cells.resize(WIDTH * HEIGHT)
+		for y in HEIGHT:
+			for x in WIDTH:
+				cells[y * WIDTH + x] = 1 if x == 0 or y == 0 or x == WIDTH - 1 or y == HEIGHT - 1 else 0
+		_corners = WangGround.corners_from_cells(cells, WIDTH, HEIGHT, [0, 1])
+	WangGround.draw(self, Vector2.ZERO, WIDTH, HEIGHT, _corners, {0: "tiles_lighthouse_round", 1: "tiles_lighthouse_round"},
+		Clock.season)
+	return true
+
+
 func _draw() -> void:
 	draw_rect(Rect2(-160, -120, WIDTH * TILE + 320, HEIGHT * TILE + 240), Color("#121a26"))
+	if _draw_tiles():
+		if Router.current_map == "lh_4":
+			for x in range(1, WIDTH - 1, 2):
+				if Game.flag("lantern_glass_repaired") or x % 3 != 0:
+					PropArt.draw(self, "lh_glass", Vector2(x * TILE + 8, 14))
+		return
 	for y in HEIGHT:
 		for x in WIDTH:
 			var edge := x == 0 or y == 0 or x == WIDTH - 1 or y == HEIGHT - 1

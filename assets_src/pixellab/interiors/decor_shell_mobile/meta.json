@@ -1,0 +1,13 @@
+{
+ "id": "decor_shell_mobile",
+ "method": "map-objects",
+ "prompt": "hanging shell mobile, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "f02989df-cd4d-4861-adb2-38a97825b16e",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_carved_armchair",
+ "method": "map-objects",
+ "prompt": "carved wooden armchair with a cushion, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "76985827-3b60-44a8-9201-abad7c3e13e7",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_flower_box",
+ "method": "map-objects",
+ "prompt": "window flower box with red flowers, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "fcf216c6-6d93-4c3e-b749-743c4a771edb",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

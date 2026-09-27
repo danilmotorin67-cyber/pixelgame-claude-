@@ -1,0 +1,13 @@
+{
+ "id": "lh_calendar",
+ "method": "map-objects",
+ "prompt": "paper tide calendar pinned to a board, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "0bb114ff-aca7-43b7-a243-407e4a45b3ca",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

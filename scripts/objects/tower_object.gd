@@ -33,6 +33,14 @@ func _hud() -> CanvasLayer:
 
 
 func _draw() -> void:
+	var art := {"stairs_up": "lh_stairs_up", "stairs_down": "lh_stairs_down", "exit_door": "lh_door", "gallery": "lh_door",
+		"barrel": "lh_barrel", "repair": "lh_repair", "desk": "lh_desk", "bunk": "lh_bunk", "barometer": "lh_barometer",
+		"calendar": "lh_calendar", "mechanism": "lh_mechanism", "glass": "lh_glass",
+		"lamp": "lh_lamp_on" if Lighthouse.lamp_on else "lh_lamp_off"}.get(kind, "") as String
+	if kind == "fortuna" and CastSprite.draw(self, "npc_fortuna", "speak", "south", Time.get_ticks_msec() / 1000.0, Vector2(0, 8)):
+		return
+	if art != "" and PropArt.draw(self, art, Vector2(0, 8)):
+		return
 	match kind:
 		"stairs_up", "stairs_down":
 			for step in 4:
@@ -290,6 +298,8 @@ func add_rotation(radians: float) -> bool:
 
 
 func _process(delta: float) -> void:
+	if kind == "fortuna":
+		queue_redraw()
 	if _winding:
 		if _keeper == null or _keeper.global_position.distance_to(global_position) > 40.0:
 			_winding = false

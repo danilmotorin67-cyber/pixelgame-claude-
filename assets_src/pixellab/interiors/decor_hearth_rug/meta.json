@@ -1,0 +1,13 @@
+{
+ "id": "decor_hearth_rug",
+ "method": "map-objects",
+ "prompt": "sheepskin hearth rug, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "27c19ec8-8078-4704-84b3-373ea7ab0675",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_aurora_rug",
+ "method": "map-objects",
+ "prompt": "rug woven with green aurora pattern, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "556e1d4e-9142-4b18-bf57-2bbf027325ba",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

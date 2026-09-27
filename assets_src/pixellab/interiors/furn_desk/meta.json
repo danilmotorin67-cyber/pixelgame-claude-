@@ -1,0 +1,13 @@
+{
+ "id": "furn_desk",
+ "method": "map-objects",
+ "prompt": "wooden writing desk with papers and an inkwell, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "8fd26b19-282c-47e6-b44b-e18356df3acb",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

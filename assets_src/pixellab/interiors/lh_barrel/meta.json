@@ -1,0 +1,13 @@
+{
+ "id": "lh_barrel",
+ "method": "map-objects",
+ "prompt": "wooden fuel oil barrel with a brass tap, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "67496ef8-164d-4cf9-b676-5a1c2502726b",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

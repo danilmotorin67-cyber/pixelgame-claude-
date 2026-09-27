@@ -1,0 +1,13 @@
+{
+ "id": "decor_stuffed_herring_king",
+ "method": "map-objects",
+ "prompt": "mounted long silver ribbon oarfish with a red crest fin, trophy on a long wooden plaque stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "42843d22-15ea-41e8-a97f-c9c39a3753b5",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

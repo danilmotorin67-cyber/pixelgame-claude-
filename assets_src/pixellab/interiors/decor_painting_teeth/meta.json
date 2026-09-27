@@ -1,0 +1,13 @@
+{
+ "id": "decor_painting_teeth",
+ "method": "map-objects",
+ "prompt": "framed painting of jagged sea rocks on an easel, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "77e71d53-219f-43c2-a23f-f45af30caaae",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

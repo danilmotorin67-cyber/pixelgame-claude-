@@ -1,0 +1,13 @@
+{
+ "id": "decor_tide_board",
+ "method": "map-objects",
+ "prompt": "wooden board painted with a tide table chart on a small easel, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "2724c450-2cd8-4e40-af11-f5d4da9a5cfa",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_stuffed_old_codger",
+ "method": "map-objects",
+ "prompt": "mounted huge old grey-green cod fish with a hook in its lip, trophy on a wooden plaque stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b5ef7850-a04d-4a66-be54-35312555304f",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

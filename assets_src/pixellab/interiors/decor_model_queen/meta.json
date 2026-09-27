@@ -1,0 +1,13 @@
+{
+ "id": "decor_model_queen",
+ "method": "map-objects",
+ "prompt": "model of a sailing ship on a stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b20dab10-b850-4a6a-856b-cd2ea422cfde",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

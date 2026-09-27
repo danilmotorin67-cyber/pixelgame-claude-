@@ -1,0 +1,13 @@
+{
+ "id": "furn_workbench",
+ "method": "map-objects",
+ "prompt": "carpenter's workbench with planks and tools, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  96,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "3746d40e-d5e9-4b0b-aff0-ba09b4099f02",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

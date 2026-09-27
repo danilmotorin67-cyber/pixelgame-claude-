@@ -1,0 +1,13 @@
+{
+ "id": "lh_stairs_down",
+ "method": "map-objects",
+ "prompt": "worn stone stairs going down into darkness, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d80280f8-b6dd-4970-8993-c8101e6e5df9",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

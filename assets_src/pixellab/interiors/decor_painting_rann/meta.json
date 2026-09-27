@@ -1,0 +1,13 @@
+{
+ "id": "decor_painting_rann",
+ "method": "map-objects",
+ "prompt": "framed painting of a standing stone in the sea on an easel, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "c5939c76-3cd7-4d50-85e3-2f30e1d4ea2c",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "furn_barrel",
+ "method": "map-objects",
+ "prompt": "two wooden barrels side by side, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "fbc347f3-c79f-4b0b-b77b-24950337a1bd",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

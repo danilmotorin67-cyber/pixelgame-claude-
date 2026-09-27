@@ -1,0 +1,13 @@
+{
+ "id": "decor_crate_table",
+ "method": "map-objects",
+ "prompt": "table made of crates, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "91380bf4-fd8f-4c45-a321-31d8e8b1bc6d",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

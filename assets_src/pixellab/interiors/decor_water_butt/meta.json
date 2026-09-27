@@ -1,0 +1,13 @@
+{
+ "id": "decor_water_butt",
+ "method": "map-objects",
+ "prompt": "wooden water butt barrel with iron hoops and a tap, no house, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "43b7dfc0-4c14-43cf-8558-7733d97510af",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

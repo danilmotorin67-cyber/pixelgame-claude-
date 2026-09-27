@@ -1,0 +1,13 @@
+{
+ "id": "decor_statue_mourning",
+ "method": "map-objects",
+ "prompt": "stone statue of a mourning woman on a plinth, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "2bd3025d-2a9b-41e9-9b47-275c8287dbc7",
+ "generations": 2.0,
+ "date": "2026-09-27"
+}

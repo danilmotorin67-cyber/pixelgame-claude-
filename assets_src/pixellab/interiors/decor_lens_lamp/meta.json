@@ -1,0 +1,13 @@
+{
+ "id": "decor_lens_lamp",
+ "method": "map-objects",
+ "prompt": "lamp with a prism lens casting rainbow light, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "d8e32628-3393-4bee-aafd-ddd381a98f0f",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "furn_bar",
+ "method": "map-objects",
+ "prompt": "long wooden tavern bar counter with taps and mugs, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  256,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "a31c7c68-ccba-4733-9f53-9c9485b1ee43",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

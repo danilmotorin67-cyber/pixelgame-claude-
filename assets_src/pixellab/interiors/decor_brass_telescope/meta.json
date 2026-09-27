@@ -1,0 +1,13 @@
+{
+ "id": "decor_brass_telescope",
+ "method": "map-objects",
+ "prompt": "brass telescope on a tripod, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "d914ccf7-55b3-4f4e-ab2a-e44a4b0861e2",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

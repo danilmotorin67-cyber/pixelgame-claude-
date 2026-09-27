@@ -1,0 +1,13 @@
+{
+ "id": "decor_painting_agatha",
+ "method": "map-objects",
+ "prompt": "framed portrait of an old woman lighthouse keeper on an easel, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "9b25407d-1164-459d-ad79-8fdffc6970f7",
+ "generations": 3.0,
+ "date": "2026-09-27"
+}

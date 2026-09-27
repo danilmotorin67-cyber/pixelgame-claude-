@@ -1,0 +1,13 @@
+{
+ "id": "decor_wool_rug",
+ "method": "map-objects",
+ "prompt": "woven wool rug with a pattern, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "bc0272fb-9628-42b8-b957-19c221c03030",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_coat_rack",
+ "method": "map-objects",
+ "prompt": "wooden coat rack with a coat and cap, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "432c3e28-6737-4f0b-95fb-8e70364be0e5",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

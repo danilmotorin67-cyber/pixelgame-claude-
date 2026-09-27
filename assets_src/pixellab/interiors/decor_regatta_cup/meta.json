@@ -1,0 +1,13 @@
+{
+ "id": "decor_regatta_cup",
+ "method": "map-objects",
+ "prompt": "dented silver regatta cup, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "434b45d0-388d-4d82-863c-a864fc8f9000",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

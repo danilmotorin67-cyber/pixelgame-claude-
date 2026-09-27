@@ -1,0 +1,13 @@
+{
+ "id": "furn_boat",
+ "method": "map-objects",
+ "prompt": "small wooden rowing boat on trestles being built, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  64,
+  112
+ ],
+ "view": "high top-down",
+ "object_id": "5819d604-47f2-4888-8174-3608a0176ddc",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

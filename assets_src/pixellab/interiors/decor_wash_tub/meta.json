@@ -1,0 +1,13 @@
+{
+ "id": "decor_wash_tub",
+ "method": "map-objects",
+ "prompt": "wooden wash tub with washboard, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "fc56694a-4264-4784-b99b-cec787da0bac",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

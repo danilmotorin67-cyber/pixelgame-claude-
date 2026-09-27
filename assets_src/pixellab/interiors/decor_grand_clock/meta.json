@@ -1,0 +1,13 @@
+{
+ "id": "decor_grand_clock",
+ "method": "map-objects",
+ "prompt": "tall grandfather clock, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "9d450072-6b40-4439-aa3d-8280ab6c777b",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

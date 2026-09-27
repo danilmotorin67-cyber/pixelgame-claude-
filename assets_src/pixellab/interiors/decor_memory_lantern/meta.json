@@ -1,0 +1,13 @@
+{
+ "id": "decor_memory_lantern",
+ "method": "map-objects",
+ "prompt": "graveyard memory lantern on a post, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "ea39e553-aee2-43af-b280-295cb9e2f2a7",
+ "generations": 6.0,
+ "date": "2026-09-27"
+}

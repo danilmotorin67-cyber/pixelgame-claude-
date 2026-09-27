@@ -1,0 +1,13 @@
+{
+ "id": "decor_painting_cape",
+ "method": "map-objects",
+ "prompt": "framed painting of a lighthouse on a cape on an easel, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "f81ea29d-e111-43f4-97e6-8aaa4ebc078c",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

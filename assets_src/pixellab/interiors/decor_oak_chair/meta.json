@@ -1,0 +1,13 @@
+{
+ "id": "decor_oak_chair",
+ "method": "map-objects",
+ "prompt": "oak chair, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "21042d3a-765e-469e-a32c-63e9e776f765",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "decor_gudmund_hammer",
+ "method": "map-objects",
+ "prompt": "old blacksmith's hammer with a worn wooden handle lying on a small wooden stand, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "aaae654b-431b-4f8a-8ddb-3aca0a4286e2",
+ "generations": 5.0,
+ "date": "2026-09-27"
+}

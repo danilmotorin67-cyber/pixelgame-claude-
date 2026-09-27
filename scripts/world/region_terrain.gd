@@ -392,8 +392,38 @@ func _draw_ground() -> bool:
 	return true
 
 
+# Interiors: floor and walls from one of the PixelLab floor sets (lower = floor, upper = wall).
+const INTERIOR_SETS := {"village_smithy": "tiles_floor_stone", "village_chapel": "tiles_floor_stone",
+	"village_office": "tiles_floor_plaster", "village_doctor": "tiles_floor_plaster", "village_grim": "tiles_floor_plaster",
+	"moor_helga": "tiles_floor_hut"}
+
+
+func _draw_interior() -> bool:
+	var set_id := str(INTERIOR_SETS.get(Router.current_map, "tiles_floor_wood"))
+	if WangGround.tileset(set_id).is_empty():
+		return false
+	if _land_corners.is_empty():
+		var cells := PackedInt32Array()
+		cells.resize(width * height)
+		for y in height:
+			for x in width:
+				var wall := y == 0 or x == 0 or x == width - 1 or (y == height - 1 and x != width / 2)
+				cells[y * width + x] = 1 if wall else 0
+		_land_corners = WangGround.corners_from_cells(cells, width, height, [0, 1])
+	WangGround.draw(self, Vector2.ZERO, width, height, _land_corners, {0: set_id, 1: set_id}, Clock.season)
+	for f in region.get("furniture", []):
+		if bool(f.get("hidden", false)):
+			continue
+		var rect := Rect2(float(f["at"][0]) * TILE, float(f["at"][1]) * TILE, float(f["size"][0]) * TILE, float(f["size"][1]) * TILE)
+		if not PropArt.draw_fit(self, "furn_" + str(f["kind"]), rect):
+			draw_rect(rect.grow(-1), Color(str(FURNITURE_COLORS.get(str(f["kind"]), "#6b5040"))))
+	return true
+
+
 func _draw() -> void:
 	if region.is_empty():
+		return
+	if bool(region.get("interior", false)) and _draw_interior():
 		return
 	if not bool(region.get("interior", false)) and _draw_ground():
 		_draw_props()

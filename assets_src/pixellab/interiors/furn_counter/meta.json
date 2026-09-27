@@ -1,0 +1,13 @@
+{
+ "id": "furn_counter",
+ "method": "map-objects",
+ "prompt": "wooden shop counter with a till and scales, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  128,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "0be6cc5b-5eaf-43ac-b7d2-a6a3559b9287",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

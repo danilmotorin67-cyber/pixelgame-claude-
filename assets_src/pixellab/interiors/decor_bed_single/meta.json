@@ -1,0 +1,13 @@
+{
+ "id": "decor_bed_single",
+ "method": "map-objects",
+ "prompt": "narrow single wooden bed with a grey wool blanket and a white pillow, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  64
+ ],
+ "view": "high top-down",
+ "object_id": "5126edcb-b3e8-4d4c-bfe3-00236e39d047",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "furn_herbs",
+ "method": "map-objects",
+ "prompt": "bundles of drying herbs on a small rack, pixel art, 3/4 top-down view, cozy farming game interior furniture, northern fishing village, warm wood, muted palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "a32ed8f1-57d5-49d2-bfbe-742e55d3fa55",
+ "generations": 4.0,
+ "date": "2026-09-27"
+}
