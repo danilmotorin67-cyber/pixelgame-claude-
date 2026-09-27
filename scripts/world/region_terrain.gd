@@ -276,8 +276,129 @@ func _tile_color(x: int, y: int) -> Color:
 	return GRASS
 
 
+# Ground of the island regions from the PixelLab tilesets: a grass-based Wang layer for the land
+# (paths, cobbles, heather, cliff rock, sand, peat), then the tide's wet sand and water, then ice.
+const G_GRASS := 0
+const G_PATH := 1
+const G_COBBLE := 2
+const G_HEATHER := 3
+const G_CLIFF := 4
+const G_SAND := 5
+const G_BOG := 6
+const LAND_SETS := {G_GRASS: "tiles_grass_path", G_PATH: "tiles_grass_path", G_COBBLE: "tiles_grass_cobble",
+	G_HEATHER: "tiles_grass_heather", G_CLIFF: "tiles_grass_cliff", G_SAND: "tiles_grass_sand", G_BOG: "tiles_grass_bog"}
+const LAND_PRIORITY := [G_PATH, G_COBBLE, G_BOG, G_CLIFF, G_SAND, G_HEATHER, G_GRASS]
+
+var _land_corners := PackedInt32Array()
+var _pond := {}
+
+
+func _landmark_cells(kinds: Array) -> Array:
+	var out: Array = []
+	for item in region.get("landmarks", []):
+		if str(item["kind"]) in kinds:
+			out.append(Rect2i(int(item["at"][0]), int(item["at"][1]), int(item["size"][0]), int(item["size"][1])))
+	return out
+
+
+# The ground under a cell, whatever the tide: the beach lies under the sea rows.
+func _land(x: int, y: int) -> int:
+	var cell := Vector2i(x, y)
+	for r in _landmark_cells(["bog", "reeds"]):
+		if r.has_point(cell):
+			return G_BOG
+	for r in _landmark_cells(["cliff"]):
+		if r.has_point(cell):
+			return G_CLIFF
+	if _pond.has(cell):
+		return G_SAND
+	if coast_row >= 0 and y >= coast_row:
+		return G_SAND
+	if biome in ["village", "moor"] and (abs(x - width / 2) <= 1 or abs(y - height / 2) <= 1):
+		return G_COBBLE if biome == "village" else G_PATH
+	match biome:
+		"beach":
+			return G_SAND
+		"moor":
+			return G_HEATHER
+		"cliffs":
+			return G_CLIFF
+	return G_GRASS
+
+
+func _build_ground() -> void:
+	_pond.clear()
+	for r in _landmark_cells(["lake", "stream"]):
+		for y in range(r.position.y, r.end.y):
+			for x in range(r.position.x, r.end.x):
+				_pond[Vector2i(x, y)] = true
+	if biome == "birch":
+		for y in height:
+			for x in range(12, 17):
+				if y < 18 or y > 22:
+					_pond[Vector2i(x, y)] = true
+	var cells := PackedInt32Array()
+	cells.resize(width * height)
+	for y in height:
+		for x in width:
+			cells[y * width + x] = _land(x, y)
+	_land_corners = WangGround.corners_from_cells(cells, width, height, LAND_PRIORITY)
+
+
+func _is_water(x: int, y: int) -> bool:
+	if _pond.has(Vector2i(x, y)):
+		return true
+	return coast_row >= 0 and y >= coast_row and _tile_color(x, y) == WATER
+
+
+func _draw_ground() -> bool:
+	if WangGround.seasonal("tiles_grass_path", Clock.season).is_empty():
+		return false
+	if _land_corners.is_empty():
+		_build_ground()
+	WangGround.draw(self, Vector2.ZERO, width, height, _land_corners, LAND_SETS, Clock.season)
+	# Open beach uses the plain dry sand of the shore set, so it meets the wet sand without a seam.
+	var shore := WangGround.tileset("tiles_sand_wet")
+	if not shore.is_empty():
+		var dry := WangGround.full_tile(shore, false)
+		for y in height:
+			for x in width:
+				var i := y * (width + 1) + x
+				if _land_corners[i] == G_SAND and _land_corners[i + 1] == G_SAND \
+						and _land_corners[i + width + 1] == G_SAND and _land_corners[i + width + 2] == G_SAND:
+					draw_texture_rect_region(shore["texture"], Rect2(x * TILE, y * TILE, TILE, TILE), dry)
+	var wet := PackedInt32Array()
+	var water := PackedInt32Array()
+	wet.resize(width * height)
+	water.resize(width * height)
+	var frozen := _lagoon_frozen()
+	for y in height:
+		for x in width:
+			var sea := coast_row >= 0 and y >= coast_row and _tile_color(x, y) in [WET_SAND, WATER]
+			wet[y * width + x] = 1 if sea and not frozen else 0
+			water[y * width + x] = 1 if _is_water(x, y) and not (frozen and y >= coast_row) else 0
+	var none := [0, 1]
+	WangGround.draw(self, Vector2.ZERO, width, height, WangGround.corners_from_cells(wet, width, height, none),
+		{0: "tiles_sand_wet", 1: "tiles_sand_wet"}, Clock.season, true)
+	WangGround.draw(self, Vector2.ZERO, width, height, WangGround.corners_from_cells(water, width, height, none),
+		{0: "tiles_wet_shallow", 1: "tiles_wet_shallow"}, Clock.season, true)
+	if frozen:
+		var ice := WangGround.tileset("tiles_lagoon_ice")
+		if not ice.is_empty():
+			var src := WangGround.full_tile(ice)
+			for y in range(coast_row, height):
+				for x in width:
+					draw_texture_rect_region(ice["texture"], Rect2(x * TILE, y * TILE, TILE, TILE), src)
+	return true
+
+
 func _draw() -> void:
 	if region.is_empty():
+		return
+	if not bool(region.get("interior", false)) and _draw_ground():
+		_draw_props()
+		for item in region.get("landmarks", []):
+			_draw_landmark(item)
 		return
 	for y in height:
 		for x in width:
@@ -327,6 +448,8 @@ func _draw_props() -> void:
 			if roll > 1:
 				continue
 			var color := _tile_color(x, y)
+			if _pond.has(Vector2i(x, y)):
+				continue
 			var bottom := Vector2(x * TILE + 8, y * TILE + 14)
 			var art := ""
 			if biome == "birch" and color == GRASS:
@@ -346,31 +469,57 @@ func _draw_props() -> void:
 				PropArt.draw(self, art, bottom)
 
 
-# Landmarks with a PixelLab prop; false keeps the drawn shape.
-func _landmark_art(kind: String, x: int, y: int, w: int, h: int) -> bool:
+# Village buildings by their sign; the guild hall follows its restoration, the rest are fixed.
+const BUILDING_ART := {"Лавка Бергов": "village_01", "Кузня Торы": "village_02", "Лоцманская управа": "village_03",
+	"Сухой Утопленник": "village_04", "Часовня Эльма": "village_05", "Торговый дом Грима": "village_06",
+	"Доктор Фальк": "village_07", "Гробы и колыбели": "village_08", "Лавка Эрланда": "village_09",
+	"Шерсть и кости": "village_10", "Дом Хедды": "village_11", "Дом Гримов": "village_12", "Дом Олафа": "village_13",
+	"Хижина Скау": "village_14", "Школа": "village_16", "Хижина Хельги": "helga_hut", "Старая мельница": "mill_ruin",
+	"Гильдейский дом": "guild_ruin"}
+
+
+func building_art(title: String) -> String:
+	var id := str(BUILDING_ART.get(title, ""))
+	if id == "guild_ruin":
+		if Game.flag("guild_house_restored"):
+			id = "guild_restored"
+		elif Community.rooms_done() > 0:
+			id = "guild_room_x6"
+	return id
+
+
+# Landmarks with PixelLab art; false keeps the drawn shape. Water, peat, cliffs and clearings are
+# part of the tiled ground already.
+func _landmark_art(item: Dictionary, x: int, y: int, w: int, h: int) -> bool:
+	var kind := str(item["kind"])
 	var centre := Vector2(x + w / 2, y + h)
+	if WangGround.seasonal("tiles_grass_path", Clock.season).is_empty():
+		return false
 	match kind:
-		"stones":
-			if BuildingArt.texture("nine_maidens") == null:
-				return false
-			BuildingArt.draw(self, "nine_maidens", centre)
+		"house", "hall", "smith", "tavern", "chapel", "ruin":
+			return BuildingArt.draw_fit(self, building_art(str(item["title"])), Rect2(x, y, w, h))
+		"lake", "stream", "cliff", "clearing":
 			return true
+		"stones":
+			if str(item["title"]) == "Девять Дев" and BuildingArt.texture("nine_maidens") != null:
+				BuildingArt.draw(self, "nine_maidens", centre)
+				return true
+			for n in 3:
+				PropArt.draw(self, PropArt.variant("boulder", 3, n), Vector2(x + 12 + n * 22, y + h - 4 + n % 2 * 6))
+			return true
+		"pier":
+			return BuildingArt.draw_fit(self, "pier_village", Rect2(x, y, w, h))
 		"wreck":
 			return PropArt.draw(self, "big_hull_1", centre)
 		"cave":
 			return PropArt.draw(self, "cave_entrance_1", centre)
 		"nests":
-			if PropArt.texture("bird_nest_1") == null:
-				return false
 			for n in 5:
 				PropArt.draw(self, PropArt.variant("bird_nest", 3, n), Vector2(x + 16 + n * 23, y + 24 + n % 2 * 22))
 			return true
 		"bog", "reeds":
-			if PropArt.texture("reeds_1") == null:
-				return false
-			draw_rect(Rect2(x, y, w, h), Color("#5b6750"))
-			for offset in range(10, w - 6, 18):
-				PropArt.draw(self, PropArt.variant("reeds", 2, offset), Vector2(x + offset, y + 18 + offset % 13))
+			for offset in range(10, w - 6, 26 if kind == "bog" else 16):
+				PropArt.draw(self, PropArt.variant("reeds", 2, offset), Vector2(x + offset, y + 18 + offset % 29))
 			return true
 	return false
 
@@ -383,7 +532,7 @@ func _draw_landmark(item: Dictionary) -> void:
 	var w := int(dimensions[0]) * TILE
 	var h := int(dimensions[1]) * TILE
 	var kind := str(item["kind"])
-	if _landmark_art(kind, x, y, w, h):
+	if _landmark_art(item, x, y, w, h):
 		return
 	if kind in ["house", "hall", "smith", "tavern", "chapel", "ruin"]:
 		var wall := Color("#938579")

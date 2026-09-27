@@ -20,3 +20,15 @@ static func draw(canvas: CanvasItem, id: String, offset := Vector2.ZERO) -> void
 		return
 	var size := tex.get_size() * Screen.ART_SCALE
 	canvas.draw_texture_rect(tex, Rect2(offset + Vector2(-size.x / 2.0, -size.y), size), false)
+
+
+# Fitted to a footprint: at most 90% of the plot's width and two tiles taller than it, centred and
+# standing on its bottom edge, so the roof rises a little above the walled plot.
+static func draw_fit(canvas: CanvasItem, id: String, plot: Rect2) -> bool:
+	var tex := texture(id)
+	if tex == null:
+		return false
+	var k := minf(plot.size.x * 0.9 / tex.get_size().x, (plot.size.y + 32.0) / tex.get_size().y)
+	var size := tex.get_size() * k
+	canvas.draw_texture_rect(tex, Rect2(Vector2(plot.get_center().x - size.x / 2.0, plot.end.y - size.y), size), false)
+	return true
