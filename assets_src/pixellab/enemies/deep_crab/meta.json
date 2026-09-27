@@ -20,6 +20,11 @@
    "generations": 5.0,
    "action": "slamming its big claw",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "shell cracking, collapsing",
+   "frames": 7
   }
  }
 }

@@ -20,6 +20,11 @@
    "generations": 4.0,
    "action": "darting forward",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "turning belly-up and fading",
+   "frames": 7
   }
  }
 }

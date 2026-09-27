@@ -20,6 +20,11 @@
    "generations": 7.0,
    "action": "charging with open jaws",
    "frames": 9
+  },
+  "die": {
+   "generations": 2.0,
+   "action": "bones falling apart, eye glow fading",
+   "frames": 9
   }
  }
 }

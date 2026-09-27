@@ -20,6 +20,11 @@
    "generations": 5.0,
    "action": "slapping with its flipper",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "flopping over and fading away",
+   "frames": 7
   }
  }
 }

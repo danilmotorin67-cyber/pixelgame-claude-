@@ -34,7 +34,7 @@ static func has_anim(id: String, anim: String) -> bool:
 # facing: down/up/left/right or south/north/west/east. A missing direction falls back
 # to south, a missing animation to the still rotation.
 static func draw(canvas: CanvasItem, id: String, anim: String, facing: String, t: float,
-		offset := Vector2.ZERO, flip := false, scale := 1.0) -> bool:
+		offset := Vector2.ZERO, flip := false, scale := 1.0, tint := Color.WHITE) -> bool:
 	var info := sheet(id)
 	if info.is_empty():
 		return false
@@ -60,10 +60,10 @@ static func draw(canvas: CanvasItem, id: String, anim: String, facing: String, t
 	var foot := float(info.get("foot", size.y)) * Screen.ART_SCALE
 	if flip or scale != 1.0:
 		canvas.draw_set_transform(offset, 0.0, Vector2(-scale if flip else scale, scale))
-		canvas.draw_texture_rect_region(info["texture"], Rect2(Vector2(-scaled.x / 2.0, -foot), scaled), src)
+		canvas.draw_texture_rect_region(info["texture"], Rect2(Vector2(-scaled.x / 2.0, -foot), scaled), src, tint)
 		canvas.draw_set_transform(Vector2.ZERO, 0.0, Vector2.ONE)
 	else:
-		canvas.draw_texture_rect_region(info["texture"], Rect2(offset + Vector2(-scaled.x / 2.0, -foot), scaled), src)
+		canvas.draw_texture_rect_region(info["texture"], Rect2(offset + Vector2(-scaled.x / 2.0, -foot), scaled), src, tint)
 	return true
 
 

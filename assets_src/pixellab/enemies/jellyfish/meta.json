@@ -20,6 +20,11 @@
    "generations": 6.0,
    "action": "lashing its tentacles",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "deflating and dissolving into the water",
+   "frames": 7
   }
  }
 }

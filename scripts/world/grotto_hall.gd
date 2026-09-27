@@ -131,6 +131,7 @@ func _draw() -> void:
 				draw_rect(Rect2(at + Vector2(inset, inset), Vector2(TILE - inset * 2, TILE - inset * 2)), Color(str(LOOK[ch])))
 			if ch in ["<", ">"]:
 				draw_rect(Rect2(at + Vector2(4, 2), Vector2(8, 12)), Color("#1e1a18"))
+	EnemyArt.draw_fallen(self, Grotto.world)
 	for e in Grotto.world.alive():
 		if not EnemyArt.draw(self, e):
 			draw_circle(e["pos"], 6.0, Color("#c0392b"))

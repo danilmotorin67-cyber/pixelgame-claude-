@@ -20,6 +20,11 @@
    "generations": 6.0,
    "action": "spines bristling outwards",
    "frames": 7
+  },
+  "die": {
+   "generations": 0.0,
+   "action": "spines drooping and crumbling apart",
+   "frames": 7
   }
  }
 }

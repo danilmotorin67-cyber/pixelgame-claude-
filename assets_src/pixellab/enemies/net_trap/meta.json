@@ -20,6 +20,11 @@
    "generations": 8.0,
    "action": "snapping shut",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "net tearing apart and falling",
+   "frames": 7
   }
  }
 }

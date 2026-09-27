@@ -20,6 +20,11 @@
    "generations": 0.0,
    "action": "crackling with electric sparks",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "sparks fizzling out, sinking",
+   "frames": 7
   }
  }
 }

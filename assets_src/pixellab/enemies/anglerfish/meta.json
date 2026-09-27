@@ -20,6 +20,11 @@
    "generations": 6.0,
    "action": "opening its huge jaws",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "lure going dark, sinking",
+   "frames": 7
   }
  }
 }

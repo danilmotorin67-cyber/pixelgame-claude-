@@ -20,6 +20,11 @@
    "generations": 7.0,
    "action": "swinging and ringing the bell hard",
    "frames": 9
+  },
+  "die": {
+   "generations": 0.0,
+   "action": "bell cracking, giant crumbling into seaweed",
+   "frames": 9
   }
  }
 }

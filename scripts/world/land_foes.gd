@@ -155,6 +155,7 @@ func _beam(delta: float) -> void:
 
 
 func _draw() -> void:
+	EnemyArt.draw_fallen(self, world)
 	for e in world.alive():
 		if str(e["kind"]) == "gull_marauder":
 			var p: Vector2 = e["pos"]

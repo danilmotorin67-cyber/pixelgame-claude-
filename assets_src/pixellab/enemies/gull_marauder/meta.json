@@ -20,6 +20,11 @@
    "generations": 4.0,
    "action": "diving and pecking",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "tumbling down in a burst of feathers",
+   "frames": 7
   }
  }
 }

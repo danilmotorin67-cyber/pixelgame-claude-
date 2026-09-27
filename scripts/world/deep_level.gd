@@ -103,6 +103,7 @@ func _draw() -> void:
 		var d := Deep.cell_center(Deep.data["exit"])
 		draw_rect(Rect2(d - Vector2(9, 7), Vector2(18, 14)), Color("#6b5040"))
 	var world := Deep.world
+	EnemyArt.draw_fallen(self, world)
 	for e in world.alive():
 		var info := CombatWorld.enemy_info(str(e["kind"]))
 		if bool(e["hidden"]):
@@ -114,6 +115,8 @@ func _draw() -> void:
 			draw_circle(e["pos"], 6.0, c)
 		if float(e["max_hp"]) > 0.0 and float(e["hp"]) < float(e["max_hp"]):
 			draw_rect(Rect2((e["pos"] as Vector2) + Vector2(-7, -10), Vector2(14.0 * float(e["hp"]) / float(e["max_hp"]), 2)), Color("#e06a6a"))
+	if not world.boss.is_empty() and float(world.boss["hp"]) <= 0.0:
+		EnemyArt.draw_boss_death(self, world.boss, world.time)
 	if not world.boss.is_empty() and float(world.boss["hp"]) > 0.0:
 		var b := world.boss
 		if not EnemyArt.draw_boss(self, b):

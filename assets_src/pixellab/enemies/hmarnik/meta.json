@@ -20,6 +20,11 @@
    "generations": 2.0,
    "action": "phasing forward to strike",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "dissolving into lilac mist",
+   "frames": 7
   }
  }
 }

@@ -20,6 +20,11 @@
    "generations": 5.0,
    "action": "lunging and biting",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "whimpering and dissolving into shadow",
+   "frames": 7
   }
  }
 }

@@ -20,6 +20,11 @@
    "generations": 7.0,
    "action": "swinging a crowbar",
    "frames": 7
+  },
+  "die": {
+   "generations": 0.0,
+   "action": "falling down and dropping the crowbar",
+   "frames": 7
   }
  }
 }

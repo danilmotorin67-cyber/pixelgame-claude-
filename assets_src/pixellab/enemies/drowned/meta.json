@@ -20,6 +20,11 @@
    "generations": 7.0,
    "action": "reaching out to grab",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "collapsing into seaweed and water",
+   "frames": 7
   }
  }
 }

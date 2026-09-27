@@ -15,6 +15,8 @@ var player := {"pos": Vector2.ZERO, "hp": 100.0, "max_hp": 100.0, "facing": Vect
 	"stolen": [], "down": false}
 var enemies: Array = []
 var shots: Array = []
+# Enemies just killed, kept a moment for their death animation: {kind, pos, t, flip}.
+var fallen: Array = []
 var drops: Array = []
 var events: Array = []
 var boss: Dictionary = {}
@@ -154,6 +156,8 @@ func _kill(e: Dictionary) -> void:
 	# A downed snatcher drops what it carried.
 	if str(e.get("carry", "")) != "" and str(info.get("behavior", "")) == "snatcher":
 		drops.append({"item": str(e["carry"]), "count": 1, "pos": e["pos"]})
+	var heading: Vector2 = e.get("vel", Vector2.ZERO)
+	fallen.append({"kind": e["kind"], "pos": e["pos"], "t": time, "flip": heading.x > 0.0})
 	enemies.erase(e)
 
 
@@ -185,6 +189,7 @@ func hurt_player(amount: float, from: Vector2, stun: float = 0.0) -> bool:
 
 func step(delta: float) -> void:
 	time += delta
+	fallen = fallen.filter(func(f: Dictionary) -> bool: return time - float(f["t"]) < 1.5)
 	for key in ["invuln", "dodge_t", "dodge_cd", "attack_cd", "held", "stun", "blind"]:
 		player[key] = maxf(0.0, float(player[key]) - delta)
 	for e in alive():
@@ -499,6 +504,7 @@ func _hit_boss(weapon_id: String) -> void:
 	boss["hp"] = maxf(0.0, float(boss["hp"]) - dmg)
 	events.append({"t": time, "event": "boss_hit", "damage": dmg})
 	if float(boss["hp"]) <= 0.0:
+		boss["dead_t"] = time
 		events.append({"t": time, "event": "boss_down", "id": boss["id"]})
 
 

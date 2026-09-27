@@ -20,6 +20,11 @@
    "generations": 8.0,
    "action": "biting",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "bones scattering apart",
+   "frames": 7
   }
  }
 }

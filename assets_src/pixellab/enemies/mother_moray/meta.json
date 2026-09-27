@@ -20,6 +20,11 @@
    "generations": 9.0,
    "action": "lunging with open jaws",
    "frames": 9
+  },
+  "die": {
+   "generations": 2.0,
+   "action": "thrashing then sinking lifeless into the kelp",
+   "frames": 9
   }
  }
 }

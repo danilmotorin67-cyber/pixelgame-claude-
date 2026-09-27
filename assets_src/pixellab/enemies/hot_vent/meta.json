@@ -20,6 +20,11 @@
    "generations": 4.0,
    "action": "erupting with hot bubbles",
    "frames": 7
+  },
+  "die": {
+   "generations": 1.0,
+   "action": "eruption dying down to still rock",
+   "frames": 7
   }
  }
 }
