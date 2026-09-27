@@ -1,4 +1,29 @@
 {
+ "book_left": {
+  "margin": 8,
+  "pad": 6,
+  "tile": false
+ },
+ "book_right": {
+  "margin": 8,
+  "pad": 6,
+  "tile": false
+ },
+ "button": {
+  "margin": 6,
+  "pad": 2,
+  "tile": false
+ },
+ "button_hover": {
+  "margin": 6,
+  "pad": 2,
+  "tile": false
+ },
+ "button_pressed": {
+  "margin": 6,
+  "pad": 2,
+  "tile": false
+ },
  "compass": {
   "margin": 14,
   "pad": 1,
@@ -12,6 +37,16 @@
  "panel": {
   "margin": 9,
   "pad": 2,
+  "tile": false
+ },
+ "slot": {
+  "margin": 6,
+  "pad": 0,
+  "tile": false
+ },
+ "slot_selected": {
+  "margin": 6,
+  "pad": 0,
   "tile": false
  },
  "tooltip": {

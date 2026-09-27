@@ -32,12 +32,7 @@ func _ready() -> void:
 	Clock.paused = true
 	position = Vector2(60, 20)
 	custom_minimum_size = Vector2(360, 200)
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color("#121a26")
-	style.border_color = Color("#b08f6c")
-	style.set_border_width_all(1)
-	style.set_content_margin_all(5)
-	add_theme_stylebox_override("panel", style)
+	add_theme_stylebox_override("panel", UiKit.box("window"))
 	var column := VBoxContainer.new()
 	add_child(column)
 	var title := Label.new()

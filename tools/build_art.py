@@ -234,6 +234,59 @@ def build_icons():
     for path in sorted(glob.glob(os.path.join(SRC, "icons", "*.png"))):
         Image.open(path).convert("RGBA").save(os.path.join(out, os.path.basename(path)))
         count += 1
+    return count + build_derived_icons(out)
+
+
+SAPLINGS = {"sapling_buckthorn": "tree_buckthorn_young", "sapling_rowan": "tree_rowan_young",
+            "sapling_apple": "tree_apple_young", "bush_blueberry": "bush_blueberry_fruiting",
+            "bush_lingonberry": "bush_lingonberry_fruiting", "cloudberry_bush": "bush_cloudberry_fruiting"}
+
+
+def icon_fit(img, size=32):
+    """A map sprite as a 32 px icon: trimmed, shrunk by whole steps (box filter, hard alpha), centred."""
+    img = img.crop(img.getbbox())
+    k = 1
+    while img.width / k > size or img.height / k > size:
+        k += 1
+    if k > 1:
+        img = img.reduce(k)
+        a = img.getchannel("A").point(lambda v: 255 if v >= 110 else 0)
+        img.putalpha(a)
+    out = Image.new("RGBA", (size, size))
+    out.paste(img, ((size - img.width) // 2, (size - img.height) // 2))
+    return out
+
+
+def build_derived_icons(out):
+    """Items whose map sprite already reads as an icon (decor, stations, saplings, grave markers),
+    and seed packets: the paper packet with the crop drawn small in its corner."""
+    items = json.load(open("data/items.json"))
+    props = "assets/sprites/props"
+    count = 0
+    for it in items:
+        iid = it["id"]
+        dest = os.path.join(out, iid + ".png")
+        if os.path.exists(os.path.join(SRC, "icons", iid + ".png")):
+            continue
+        if iid.startswith("seed_"):
+            packet = os.path.join(SRC, "ui", "icons", "seed_packet.png")
+            crop = os.path.join(SRC, "icons", iid[5:] + ".png")
+            if not os.path.exists(packet):
+                continue
+            img = Image.open(packet).convert("RGBA")
+            if os.path.exists(crop):
+                small = Image.open(crop).convert("RGBA")
+                small = small.crop(small.getbbox())
+                small = small.resize((max(1, small.width * 14 // 32), max(1, small.height * 14 // 32)), Image.NEAREST)
+                img.alpha_composite(small, (img.width - small.width - 6, img.height - small.height - 6))
+            img.save(dest)
+            count += 1
+            continue
+        names = [SAPLINGS.get(iid, ""), iid, "decor_" + iid, "station_" + iid, iid + "_h", "grave_%s_new" % iid]
+        src = next((os.path.join(props, n + ".png") for n in names if n and os.path.exists(os.path.join(props, n + ".png"))), "")
+        if src:
+            icon_fit(Image.open(src).convert("RGBA")).save(dest)
+            count += 1
     return count
 
 

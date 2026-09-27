@@ -74,14 +74,10 @@ func _ready() -> void:
 	_panel = Panel.new()
 	_panel.position = Vector2(10, 194)
 	_panel.size = Vector2(460, 68)
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color("#1b2433")
-	style.border_color = Color("#b08f6c")
-	style.set_border_width_all(2)
-	_panel.add_theme_stylebox_override("panel", style)
+	_panel.add_theme_stylebox_override("panel", UiKit.box("window"))
 	add_child(_panel)
 	_portrait = Control.new()
-	_portrait.position = Vector2(6, 6)
+	_portrait.position = Vector2(7, 6)
 	_portrait.size = Vector2(52, 56)
 	_portrait.draw.connect(_draw_portrait)
 	_panel.add_child(_portrait)
@@ -217,7 +213,11 @@ func _draw_portrait() -> void:
 	var hair := Color(str(look["hair"]))
 	var coat := Color(str(look["coat"]))
 	var p := _portrait
-	p.draw_rect(Rect2(Vector2.ZERO, p.size), Color("#28344a"))
+	# The PixelLab character's head and shoulders in a bevelled frame; the drawn face as a fallback.
+	p.draw_style_box(UiKit.box("inset"), Rect2(Vector2.ZERO, p.size))
+	if CastSprite.draw_portrait(p, _npc, Rect2(3, 3, p.size.x - 6, p.size.y - 6)):
+		return
+	p.draw_rect(Rect2(Vector2(3, 3), p.size - Vector2(6, 6)), Color("#28344a"))
 	p.draw_rect(Rect2(8, 40, 36, 16), coat)
 	p.draw_rect(Rect2(14, 12, 24, 28), skin)
 	p.draw_rect(Rect2(12, 6, 28, 9), hair)

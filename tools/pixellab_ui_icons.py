@@ -126,30 +126,74 @@ def queue():
     return jobs
 
 
+def recover(jobs, created_at):
+    """PixelLab sometimes promotes a finished batch to single objects on its own (the batch then
+    answers 404): find them among the account's objects by creation time and prompt prefix."""
+    import zipfile, io
+    from PIL import Image
+    objs, off = [], 0
+    while off <= 1000:
+        page = pl.request("GET", f"/objects?limit=100&offset={off}").get("objects") or []
+        objs += [o for o in page if o.get("created_at") == created_at]
+        if len(page) < 100:
+            break
+        off += 100
+    got = 0
+    for iid, desc, dest in jobs:
+        full = f"{desc}, {STYLE}"
+        match = [o for o in objs if full.startswith(str(o.get("name")))]
+        if not match:
+            continue
+        objs.remove(match[0])
+        z = zipfile.ZipFile(io.BytesIO(pl.request("GET", f"/objects/{match[0]['id']}/spritesheet", raw=True)))
+        img = Image.open(io.BytesIO(z.read(next(n for n in z.namelist() if n.endswith(".png"))))).convert("RGBA")
+        img = ic.strip_captions(img.crop((0, 0, min(img.size), min(img.size))))
+        os.makedirs(dest, exist_ok=True)
+        img.save(os.path.join(dest, iid + ".png"))
+        got += 1
+    return got
+
+
 def run_batch(n):
     jobs = queue()[:64]
     if not jobs:
         return 0
     icons = {j[0]: j[1] for j in jobs}
     oid, info, ids, before = ic.batch(icons, 32, "ui_%d" % n, STYLE)
+    created = info.get("created_at")
     # Frame links exist from the start: wait for 95% ("review") and every frame.
     t0 = time.time()
+    gone = False
     while time.time() - t0 < 2400:
-        info = pl.request("GET", f"/objects/{oid}")
-        if (info.get("progress_percent") or 0) >= 95 and len(info.get("frame_urls") or []) >= len(ids):
+        try:
+            info = pl.request("GET", f"/objects/{oid}")
+        except RuntimeError as e:
+            gone = "404" in str(e)
+            break
+        created = info.get("created_at", created)
+        if str(info.get("status")) in ("review", "completed") and len(info.get("frame_urls") or []) >= len(ids):
             break
         time.sleep(15)
-    tmp = os.path.join(pl.RAW, "icons", "_batch_%d" % n)
-    made = ic.fetch(oid, ids, tmp)
-    for iid, obj in made.items():
-        dest = next(j[2] for j in jobs if j[0] == iid)
-        os.makedirs(dest, exist_ok=True)
-        os.replace(os.path.join(tmp, iid + ".png"), os.path.join(dest, iid + ".png"))
-    os.rmdir(tmp)
+    made = 0
+    if not gone:
+        tmp = os.path.join(pl.RAW, "icons", "_batch_%d" % n)
+        try:
+            done = ic.fetch(oid, ids, tmp)
+            for iid in done:
+                dest = next(j[2] for j in jobs if j[0] == iid)
+                os.makedirs(dest, exist_ok=True)
+                os.replace(os.path.join(tmp, iid + ".png"), os.path.join(dest, iid + ".png"))
+            made = len(done)
+        except RuntimeError as e:
+            gone = "404" in str(e)
+        if os.path.isdir(tmp) and not os.listdir(tmp):
+            os.rmdir(tmp)
+    if gone:
+        made = recover(jobs, created)
     with open(os.path.join(pl.RAW, "icons", "_ui_batches.json"), "a") as f:
         f.write(json.dumps({"batch": n, "object": oid, "items": {i: icons[i] for i in ids},
                             "spent": before - pl.generations_left()}) + "\n")
-    return len(made)
+    return made
 
 
 if __name__ == "__main__":

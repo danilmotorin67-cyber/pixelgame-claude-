@@ -3,24 +3,16 @@ extends Node2D
 @export var map_id: String = "cape"
 
 @onready var hud: CanvasLayer = $HUD
-@onready var time_label: Label = $HUD/TimePanel/TimeLabel
-@onready var tide_label: Label = $HUD/TidePanel/TideLabel
-@onready var weather_label: Label = $HUD/WeatherLabel
-@onready var compass_label: Label = $HUD/Compass/CompassLabel
+@onready var status_hud: StatusHud = $HUD/Status
 @onready var compass_hud: CompassHud = $HUD/Compass
-@onready var money_label: Label = $HUD/MoneyLabel
 @onready var hotbar_label: Label = $HUD/HotbarLabel
 @onready var inventory_panel: Panel = $HUD/InventoryPanel
-@onready var inventory_list: Label = $HUD/InventoryPanel/InventoryScroll/InventoryList
+@onready var inventory_grid: InventoryGrid = $HUD/InventoryPanel/InventoryGrid
 @onready var console: LineEdit = $HUD/Console
 @onready var console_out: Label = $HUD/ConsoleOut
 @onready var morning_panel: Panel = $HUD/MorningPanel
 @onready var morning_text: Label = $HUD/MorningPanel/MorningText
 
-const WEATHER_NAMES := {
-	"clear": "Ясно", "cloud": "Облачно", "rain": "Дождь",
-	"fog": "Туман", "storm": "Шторм", "snow": "Снег", "blizzard": "Метель",
-}
 
 var _was_paused_before_console: bool = false
 var _was_paused_before_inventory: bool = false
@@ -237,40 +229,15 @@ func _offer_rescue() -> void:
 
 
 func _refresh_hud() -> void:
-	var wd := {"mon":"Пн","tue":"Вт","wed":"Ср","thu":"Чт","fri":"Пт","sat":"Сб","sun":"Вс"}
-	var sn := {"spring":"Весна","summer":"Лето","autumn":"Осень","winter":"Зима"}
-	time_label.text = "%s, %s %d  %02d:%02d" % [
-		wd.get(Clock.weekday, Clock.weekday),
-		sn.get(Clock.season, Clock.season),
-		Clock.day,
-		Clock.hour,
-		Clock.minute,
-	]
-	var peak := Clock.next_high_tide()
-	tide_label.text = "%s %.1f    Пик %02d:%02d" % [
-		"↑" if Clock.tide_rising() else "↓", Clock.tide_height(),
-		peak / 60, peak % 60]
-	weather_label.text = "%s · %s" % [WEATHER_NAMES.get(Weather.current, ""), Clock.moon_name()]
-	compass_label.text = "Свет %d     Покой %d     Море %d" % [
-		int(Lighthouse.fire_power),
-		int(Graveyard.peace),
-		int(Sea.mercy),
-	]
+	status_hud.queue_redraw()
 	compass_hud.set_values(Lighthouse.fire_power, Graveyard.peace, Sea.mercy)
-	money_label.text = "  %d кр" % Economy.money
 
 
 func _refresh_inventory() -> void:
 	var slot: Dictionary = Inventory.slots[Inventory.selected_hotbar]
 	var id := str(slot["id"])
-	var name := "Пусто" if id == "" else Loc.t(str(Data.by_id("items", id).get("name", id)))
-	hotbar_label.text = "%d / 12   ·   %s ×%d" % [
-		Inventory.selected_hotbar + 1, name, int(slot["count"])]
-	var lines: Array[String] = []
-	for index in Inventory.slots.size():
-		var stored: Dictionary = Inventory.slots[index]
-		if str(stored["id"]) == "":
-			continue
-		var item := Data.by_id("items", str(stored["id"]))
-		lines.append("%02d  %s ×%d" % [index + 1, Loc.t(str(item.get("name", stored["id"]))), int(stored["count"])])
-	inventory_list.text = "\n".join(lines) if not lines.is_empty() else "Рюкзак пуст."
+	hotbar_label.visible = id != ""
+	if id != "":
+		var name := Loc.t(str(Data.by_id("items", id).get("name", id)))
+		hotbar_label.text = name + ("  ×%d" % int(slot["count"]) if int(slot["count"]) > 1 else "")
+	inventory_grid.queue_redraw()

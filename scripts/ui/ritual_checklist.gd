@@ -24,10 +24,7 @@ func _ready() -> void:
 	size = Vector2(158, 90)
 	add_theme_font_size_override("font_size", 8)
 	add_theme_color_override("font_color", Color("#eadcb8"))
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color(0.07, 0.1, 0.15, 0.85)
-	style.set_content_margin_all(3)
-	add_theme_stylebox_override("normal", style)
+	add_theme_stylebox_override("normal", UiKit.box("tooltip"))
 
 
 func _process(_delta: float) -> void:

@@ -11,6 +11,10 @@ var _last_energy := -1.0
 func _ready() -> void:
 	# The HUD is laid out for 480×270 and shown ×2 at 960×540.
 	scale = Vector2(Screen.ZOOM, Screen.ZOOM)
+	hint.add_theme_stylebox_override("normal", UiKit.box("tooltip"))
+	$HotbarLabel.add_theme_stylebox_override("normal", UiKit.box("tooltip"))
+	$InventoryPanel.add_theme_stylebox_override("panel", UiKit.box("window"))
+	$MorningPanel.add_theme_stylebox_override("panel", UiKit.box("window"))
 
 
 func _process(delta: float) -> void:

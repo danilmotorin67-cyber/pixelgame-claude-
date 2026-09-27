@@ -65,3 +65,46 @@ static func draw(canvas: CanvasItem, id: String, anim: String, facing: String, t
 	else:
 		canvas.draw_texture_rect_region(info["texture"], Rect2(offset + Vector2(-scaled.x / 2.0, -foot), scaled), src)
 	return true
+
+
+# The head and shoulders of a character's front view for talk portraits: a 30×32 texel window
+# around the top of the figure in `frame` (a region of `tex`), cached per sheet.
+static var _busts := {}
+
+
+static func bust(key: String, tex: Texture2D, frame: Rect2i) -> Rect2:
+	if not _busts.has(key):
+		var used := tex.get_image().get_region(frame).get_used_rect()
+		var cx := frame.position.x + used.position.x + used.size.x / 2
+		_busts[key] = Rect2(cx - 15, frame.position.y + maxi(used.position.y - 1, 0), 30, 32)
+	return _busts[key]
+
+
+# Draws the portrait of an NPC (or the hero) into `rect`; false when there is no sheet.
+static func draw_portrait(canvas: CanvasItem, id: String, rect: Rect2) -> bool:
+	var tex: Texture2D
+	var frame: Rect2i
+	if id == "hero":
+		var hero_id := "hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male"
+		var path := "res://assets/sprites/characters/%s.png" % hero_id
+		if not ResourceLoader.exists(path):
+			return false
+		tex = load(path)
+		var size := tex.get_width() / Player.WALK_FRAMES
+		frame = Rect2i(0, Player.IDLE_ROW * size, size, size)
+		id = hero_id
+	else:
+		var info := sheet(id)
+		if info.is_empty():
+			return false
+		tex = info["texture"]
+		var anims: Dictionary = info["anims"]
+		var rows: Dictionary = anims.get("rot", anims.values()[0])
+		var row: Array = rows.get("south", rows.values()[0])
+		frame = Rect2i(0, int(row[0]) * int(info["frame"][1]), int(info["frame"][0]), int(info["frame"][1]))
+	var src := bust(id, tex, frame)
+	# 1.5 units a texel: three screen pixels each, so the pixels stay even at the HUD's ×2.
+	var scale := floorf(minf(rect.size.x / src.size.x, rect.size.y / src.size.y) * 2.0) / 2.0
+	var size := src.size * scale
+	canvas.draw_texture_rect_region(tex, Rect2(rect.position + Vector2((rect.size.x - size.x) / 2.0, rect.size.y - size.y), size), src)
+	return true

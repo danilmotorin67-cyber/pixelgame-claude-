@@ -29,11 +29,7 @@ func _ready() -> void:
 	Clock.paused = true
 	position = Vector2(52, 14)
 	size = Vector2(388, 238)
-	var style := StyleBoxFlat.new()
-	style.bg_color = Color("#121a26")
-	style.border_color = Color("#b08f6c")
-	style.set_border_width_all(2)
-	add_theme_stylebox_override("panel", style)
+	add_theme_stylebox_override("panel", UiKit.box("window"))
 	_title = Label.new()
 	_title.position = Vector2(12, 6)
 	_title.size = Vector2(364, 14)

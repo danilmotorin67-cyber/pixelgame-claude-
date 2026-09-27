@@ -199,6 +199,15 @@ func take_slot(index: int, count: int) -> bool:
 	Events.inventory_changed.emit()
 	return true
 
+# Swaps two slots (the backpack grid; the first twelve are the hotbar).
+func swap(a: int, b: int) -> void:
+	if a < 0 or b < 0 or a >= slots.size() or b >= slots.size() or a == b:
+		return
+	var held: Dictionary = slots[a]
+	slots[a] = slots[b]
+	slots[b] = held
+	Events.inventory_changed.emit()
+
 func serialize() -> Dictionary:
 	return {"slots": slots, "selected_hotbar": selected_hotbar, "capacity": capacity}
 
