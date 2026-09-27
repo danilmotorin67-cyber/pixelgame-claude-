@@ -128,14 +128,15 @@ def queue():
 
 def recover(jobs, created_at):
     """PixelLab sometimes promotes a finished batch to single objects on its own (the batch then
-    answers 404): find them among the account's objects by creation time and prompt prefix."""
+    answers 404): find them among the newest objects by their prompt prefix (the promoted objects
+    carry the time of promotion, not the batch's)."""
     import zipfile, io
     from PIL import Image
     objs, off = [], 0
     while off <= 1000:
         page = pl.request("GET", f"/objects?limit=100&offset={off}").get("objects") or []
-        objs += [o for o in page if o.get("created_at") == created_at]
-        if len(page) < 100:
+        objs += [o for o in page if created_at is None or str(o.get("created_at", "")) >= str(created_at)]
+        if len(page) < 100 or off >= 200:
             break
         off += 100
     got = 0

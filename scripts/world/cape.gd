@@ -134,16 +134,17 @@ func _unhandled_input(event: InputEvent) -> void:
 	if morning_panel.visible:
 		return
 	if event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_TAB:
-		inventory_panel.visible = not inventory_panel.visible
-		if inventory_panel.visible:
-			_was_paused_before_inventory = Clock.paused
-			Clock.paused = true
-			_refresh_inventory()
-		else:
-			Clock.paused = _was_paused_before_inventory
+		toggle_inventory()
 		get_viewport().set_input_as_handled()
 		return
 	if inventory_panel.visible:
+		if event.is_action_pressed("pause"):
+			toggle_inventory()
+			get_viewport().set_input_as_handled()
+		return
+	if (event.is_action_pressed("open_journal") or event.is_action_pressed("pause")) and not console.visible:
+		JournalBook.toggle(hud)
+		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("debug_console"):
 		console.visible = not console.visible
@@ -175,8 +176,6 @@ func _unhandled_input(event: InputEvent) -> void:
 			return "\n".join(lines) if not lines.is_empty() else "Пока никаких поручений. Наслаждайтесь.")
 		get_viewport().set_input_as_handled()
 		return
-	if event.is_action_pressed("pause") and not console.visible:
-		Clock.paused = not Clock.paused
 
 
 func _on_console_submitted(text: String) -> void:
@@ -231,6 +230,17 @@ func _offer_rescue() -> void:
 func _refresh_hud() -> void:
 	status_hud.queue_redraw()
 	compass_hud.set_values(Lighthouse.fire_power, Graveyard.peace, Sea.mercy)
+
+
+# Tab: the backpack grid (time stands while it is open).
+func toggle_inventory() -> void:
+	inventory_panel.visible = not inventory_panel.visible
+	if inventory_panel.visible:
+		_was_paused_before_inventory = Clock.paused
+		Clock.paused = true
+		_refresh_inventory()
+	else:
+		Clock.paused = _was_paused_before_inventory
 
 
 func _refresh_inventory() -> void:
