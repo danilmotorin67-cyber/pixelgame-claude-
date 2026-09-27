@@ -14,7 +14,7 @@
 
 Run: python3 tools/build_art.py"""
 import os, re, json, glob
-from PIL import Image
+from PIL import Image, ImageChops
 
 SRC = "assets_src/pixellab"
 TILES_OUT = "assets/tilesets"
@@ -230,11 +230,28 @@ def build_icons():
     """Inventory icons: assets_src/pixellab/icons/<item id>.png -> assets/sprites/icons/."""
     out = "assets/sprites/icons"
     os.makedirs(out, exist_ok=True)
+    legend = {f["id"] for f in json.load(open("data/fish.json")) if f.get("legendary")}
     count = 0
     for path in sorted(glob.glob(os.path.join(SRC, "icons", "*.png"))):
-        Image.open(path).convert("RGBA").save(os.path.join(out, os.path.basename(path)))
+        img = Image.open(path).convert("RGBA")
+        if os.path.basename(path)[:-4] in legend:
+            img = gold_ring(img)
+        img.save(os.path.join(out, os.path.basename(path)))
         count += 1
     return count + build_derived_icons(out)
+
+
+def gold_ring(img, color=(242, 210, 122, 255)):
+    """Legendary fish: a crisp one-pixel pale gold ring around the silhouette."""
+    a = img.getchannel("A").point(lambda v: 255 if v > 40 else 0)
+    ring = Image.new("L", img.size)
+    for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+        ring = ImageChops.lighter(ring, ImageChops.offset(a, dx, dy))
+    ring = ImageChops.subtract(ring, a)
+    out = Image.new("RGBA", img.size, color)
+    out.putalpha(ring)
+    out.alpha_composite(img)
+    return out
 
 
 SAPLINGS = {"sapling_buckthorn": "tree_buckthorn_young", "sapling_rowan": "tree_rowan_young",
