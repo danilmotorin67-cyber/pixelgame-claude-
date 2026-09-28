@@ -3,7 +3,7 @@ extends Area2D
 # 5.1: the house is locked until the key under the cat is found ("The key is under the cat").
 
 
-func interact(_player: Player) -> void:
+func interact(player: Player) -> void:
 	if Clock.paused:
 		return
 	if not Game.flag("house_key") and Game.flag("prologue_done"):
@@ -11,4 +11,7 @@ func interact(_player: Player) -> void:
 		if hint:
 			hint.text = "Дверь заперта. Агата писала: «Ключ — под кошкой»."
 		return
-	Night.end_day(false)
+	if player:
+		player.lie_down(func() -> void: Night.end_day(false))
+	else:
+		Night.end_day(false)

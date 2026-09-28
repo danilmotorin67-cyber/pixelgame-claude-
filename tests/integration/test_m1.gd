@@ -181,14 +181,16 @@ func _run() -> void:
 	await tree.process_frame
 	TranslationServer.set_locale("ru")
 	var player: Player = cape.get_node("Player")
-	_check(player.sprite.hframes * player.sprite.vframes == 8 * Player.WALK_FRAMES, "keeper walk and idle frames are missing")
+	_check(player.sprite.vframes >= 8 and player.has_anim("walk") and player.has_anim("idle"),
+		"keeper walk and idle frames are missing")
 	for direction in [Vector2.DOWN, Vector2.LEFT, Vector2.RIGHT, Vector2.UP]:
 		player.facing = direction
 		player._update_sprite(false)
-		_check(player.sprite.frame / Player.WALK_FRAMES == Player.IDLE_ROW + player._direction_index(),
+		_check(player.sprite.frame / player.sprite.hframes == Player.IDLE_ROW + player._direction_index(),
 			"keeper does not face %s" % direction)
 	player.play_tool("hoe", player.global_position + Vector2.LEFT * 16)
-	_check(player.tool_time > 0.0 and player.tool_kind == "hoe" and player.sprite.frame == Player.WALK_FRAMES,
+	var hoe_row: int = player._anims.get(player.tool_anim(), [Player.IDLE_ROW])[0] + 1
+	_check(player.tool_time > 0.0 and player.sprite.frame / player.sprite.hframes == (hoe_row if player.has_anim(player.tool_anim()) else Player.IDLE_ROW + 1),
 		"hoe use must face the worked plot")
 	player.tool_time = 0.0
 	player.facing = Vector2.DOWN

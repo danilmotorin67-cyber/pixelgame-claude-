@@ -157,30 +157,48 @@ def build_cast():
 
 
 HERO_ORDER = ("south", "west", "east", "north")  # the player's rows: down, left, right, up
+# Blocks of four rows (HERO_ORDER) in this order; the first two keep the old walk/idle layout.
+HERO_ANIMS = ("walk", "idle", "hoe", "water", "axe", "pick", "scythe", "shovel", "cast", "reel", "net", "attack",
+              "carry", "swim", "sit", "sleep")
 
 
 def build_hero():
-    """The player's sheets assets/sprites/characters/hero_<male|female>.png: rows 0-3 walk (6 frames),
-    rows 4-7 breathing idle (padded to 6), in Player._direction_index order; <id>.json keeps the foot."""
+    """The player's sheets assets/sprites/characters/<hero_male|hero_female|hero_suit>.png: one block of four
+    rows (down, left, right, up) per animation of HERO_ANIMS the hero has, columns = the longest cycle.
+    West is east mirrored where PixelLab drew no west; a direction it lacks takes the south one.
+    <id>.json: frame size, foot, columns and {anim: [first row, frames]}."""
     out = "assets/sprites/characters"
     made = 0
-    for aid in ("hero_male", "hero_female"):
+    for aid in ("hero_male", "hero_female", "hero_suit"):
         path = os.path.join(CAST_OUT, aid + ".json")
         if not os.path.exists(path):
             continue
         info = json.load(open(path))
         fw, fh = info["frame"]
         src = Image.open(os.path.join(CAST_OUT, aid + ".png")).convert("RGBA")
-        sheet = Image.new("RGBA", (fw * 6, fh * 8))
-        for block, anim in enumerate(("walk", "idle")):
+        cast = dict(info["anims"])
+        if "idle" not in cast:
+            cast["idle"] = {d: v for d, v in cast["rot"].items()}
+        names = [a for a in HERO_ANIMS if a in cast]
+        cols = max(max(n for _, n in cast[a].values()) for a in names)
+        sheet = Image.new("RGBA", (fw * cols, fh * 4 * len(names)))
+        layout = {}
+        for block, anim in enumerate(names):
+            dirs = cast[anim]
+            count = max(n for _, n in dirs.values())
             for r, d in enumerate(HERO_ORDER):
-                row, count = info["anims"][anim][d]
-                for k in range(6):
-                    frame = src.crop((k % count * fw, row * fh, (k % count + 1) * fw, (row + 1) * fh))
+                flip = d == "west" and "west" not in dirs and "east" in dirs
+                row, n = dirs["east"] if flip else dirs.get(d, dirs.get("south", next(iter(dirs.values()))))
+                for k in range(count):
+                    frame = src.crop((k % n * fw, row * fh, (k % n + 1) * fw, (row + 1) * fh))
+                    if flip:
+                        frame = frame.transpose(Image.FLIP_LEFT_RIGHT)
                     sheet.paste(frame, (k * fw, (block * 4 + r) * fh))
+            layout[anim] = [block * 4, count]
         sheet.save(os.path.join(out, aid + ".png"))
         with open(os.path.join(out, aid + ".json"), "w") as f:
-            json.dump({"frame": [fw, fh], "foot": info["foot"], "idle_frames": info["anims"]["idle"]["south"][1]}, f)
+            json.dump({"frame": [fw, fh], "foot": info["foot"], "cols": cols, "anims": layout,
+                       "idle_frames": layout["idle"][1]}, f)
         made += 1
     return made
 

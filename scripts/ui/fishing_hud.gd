@@ -3,6 +3,8 @@ class_name FishingHud
 
 # Drives one cast from charge to landing and draws the float and the tension bar (15.2).
 var state: String = "idle"
+# The state the keeper's sprite saw last (Player starts the cast swing on charging -> waiting).
+var state_seen: String = "idle"
 var player: Player
 var charge: float = 0.0
 var target: Vector2 = Vector2.ZERO

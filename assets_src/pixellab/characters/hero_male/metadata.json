@@ -24,6 +24,35 @@
           "north": "Idle/rotations/north.png"
         },
         "animations": {
+          "hoe": {
+            "east": [
+              "Idle/animations/hoe/east/frame_000.png",
+              "Idle/animations/hoe/east/frame_001.png",
+              "Idle/animations/hoe/east/frame_002.png",
+              "Idle/animations/hoe/east/frame_003.png",
+              "Idle/animations/hoe/east/frame_004.png",
+              "Idle/animations/hoe/east/frame_005.png",
+              "Idle/animations/hoe/east/frame_006.png"
+            ],
+            "north": [
+              "Idle/animations/hoe/north/frame_000.png",
+              "Idle/animations/hoe/north/frame_001.png",
+              "Idle/animations/hoe/north/frame_002.png",
+              "Idle/animations/hoe/north/frame_003.png",
+              "Idle/animations/hoe/north/frame_004.png",
+              "Idle/animations/hoe/north/frame_005.png",
+              "Idle/animations/hoe/north/frame_006.png"
+            ],
+            "south": [
+              "Idle/animations/hoe/south/frame_000.png",
+              "Idle/animations/hoe/south/frame_001.png",
+              "Idle/animations/hoe/south/frame_002.png",
+              "Idle/animations/hoe/south/frame_003.png",
+              "Idle/animations/hoe/south/frame_004.png",
+              "Idle/animations/hoe/south/frame_005.png",
+              "Idle/animations/hoe/south/frame_006.png"
+            ]
+          },
           "walking": {
             "north": [
               "Idle/animations/walking/north/frame_000.png",
@@ -89,5 +118,5 @@
     }
   ],
   "export_version": "3.1",
-  "export_date": "2026-09-27T06:31:54.434501"
+  "export_date": "2026-09-28T05:40:45.733367"
 }

@@ -1,1 +1,1 @@
-{"frame": [68, 68], "foot": 57, "idle_frames": 4}
+{"frame": [68, 68], "foot": 57, "cols": 6, "anims": {"walk": [0, 6], "idle": [4, 4]}, "idle_frames": 4}

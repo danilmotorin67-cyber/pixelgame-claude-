@@ -27,16 +27,31 @@ var _charge_start: int = -1
 var _charge_at: Vector2 = Vector2.ZERO
 var _charge_step: int = 0
 const CHARGE_MS := 400
-const TOOL_DURATION := 0.34
+const TOOL_DURATION := 0.5
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
 
 # The PixelLab hero in the variant 3 format (assets/sprites/characters/hero_<male|female>.png, built by
-# tools/build_art.py): rows 0-3 walk, rows 4-7 breathing idle, 6 columns, in _direction_index order
-# (down, left, right, up); drawn at Screen.ART_SCALE with the feet on the body's origin.
+# tools/build_art.py): blocks of four rows in _direction_index order (down, left, right, up), one block
+# per animation — walk (rows 0-3), breathing idle (rows 4-7), then the actions; drawn at
+# Screen.ART_SCALE with the feet on the body's origin. Under water in the suit the sheet is hero_suit.
 const WALK_FRAMES := 6
 const IDLE_ROW := 4
+const SIT_AFTER := 12.0
+# What each play_tool kind shows; "hoe" is also the generic blow and follows the item in hand.
+const TOOL_ANIMS := {"hoe": "hoe", "can": "water", "water": "water", "axe": "axe", "pick": "pick",
+	"scythe": "scythe", "shovel": "shovel", "net": "net", "attack": "attack", "cast": "cast"}
+const ITEM_ANIMS := {"tool_hoe": "hoe", "tool_can": "water", "tool_axe": "axe", "tool_pick": "pick",
+	"tool_scythe": "scythe", "tool_shovel": "shovel", "hand_net": "net"}
 var _idle_frames := 4
+var _cols := WALK_FRAMES
+var _anims: Dictionary = {}
+var _sheets: Dictionary = {}
+var _sheet_id := ""
+var _still_time := 0.0
+var _fish_state := "idle"
+var pose := ""
+var anim_name := "idle"
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
 
@@ -60,8 +75,10 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	if Cutscenes.playing or Clock.paused:
+	if Cutscenes.playing or Clock.paused or pose != "":
 		velocity = Vector2.ZERO
+		if pose != "":
+			_update_sprite(false)
 		return
 	if tool_time > 0.0:
 		tool_time = maxf(0.0, tool_time - delta)
@@ -113,8 +130,10 @@ func _physics_process(delta: float) -> void:
 			energy = maxf(0.0, energy - 1.0)
 	if dir.length() > 0.1:
 		_walk_time += delta
+		_still_time = 0.0
 	else:
 		_walk_time = 0.0
+		_still_time += delta
 	_update_sprite(dir.length() > 0.1)
 	if Router.current_map == "cape":
 		# Keep the lantern visible while the keeper works at the tower door.
@@ -196,36 +215,129 @@ func _direction_index() -> int:
 
 
 func _setup_sprite() -> void:
-	var id := "hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male"
-	var path := "res://assets/sprites/characters/%s" % id
-	var file := FileAccess.open(path + ".json", FileAccess.READ)
-	if file == null or not ResourceLoader.exists(path + ".png"):
+	_use_sheet("hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male")
+
+
+func _load_sheet(id: String) -> Dictionary:
+	if not _sheets.has(id):
+		var path := "res://assets/sprites/characters/%s" % id
+		var file := FileAccess.open(path + ".json", FileAccess.READ)
+		_sheets[id] = {}
+		if file != null and ResourceLoader.exists(path + ".png"):
+			var info: Dictionary = JSON.parse_string(file.get_as_text())
+			info["texture"] = load(path + ".png")
+			_sheets[id] = info
+	return _sheets[id]
+
+
+func _use_sheet(id: String) -> void:
+	if id == _sheet_id:
 		return
-	var info: Dictionary = JSON.parse_string(file.get_as_text())
-	sprite.texture = load(path + ".png")
-	sprite.hframes = WALK_FRAMES
-	sprite.vframes = 8
+	var info := _load_sheet(id)
+	if info.is_empty():
+		return
+	_sheet_id = id
+	var anims: Dictionary = info.get("anims", {"walk": [0, WALK_FRAMES], "idle": [IDLE_ROW, int(info.get("idle_frames", 4))]})
+	_anims = anims
+	_cols = int(info.get("cols", WALK_FRAMES))
+	var rows := 0
+	for anim in anims.values():
+		rows = maxi(rows, int(anim[0]) + 4)
+	sprite.texture = info["texture"]
+	sprite.hframes = _cols
+	sprite.vframes = rows
 	sprite.centered = false
 	sprite.offset = Vector2(-float(info["frame"][0]) / 2.0, -float(info["foot"]))
 	sprite.position = Vector2(0, 1)
-	_idle_frames = int(info.get("idle_frames", 4))
+	_idle_frames = int(anims["idle"][1])
 
 
-# Walking cycles the walk row; standing breathes; a tool swing holds the first walk frame.
-func _update_sprite(moving: bool) -> void:
-	var row := _direction_index()
+func has_anim(anim: String) -> bool:
+	return _anims.has(anim)
+
+
+# The animation the keeper shows now and its frame: a tool blow runs once through its cycle, the rod
+# follows the fishing state, the Deep swims (or walks the bottom in the suit), a body rides the
+# shoulder, and a keeper left standing long enough sits down.
+func _pick_anim(moving: bool) -> Array:
+	var ticks := Time.get_ticks_msec()
+	if pose != "" and has_anim(pose):
+		return [pose, ticks / 250]
+	if tool_time > 0.0 and has_anim(tool_anim()):
+		var total: int = int(_anims[tool_anim()][1])
+		return [tool_anim(), mini(total - 1, int((1.0 - tool_time / TOOL_DURATION) * total))]
+	match _fish_state:
+		"charging":
+			return ["cast", 1]
+		"waiting", "bite":
+			return ["cast", -1]
+		"reeling":
+			return ["reel", ticks / 110]
+	if Router.current_map == "deep" and Deep.active and Deep.gear() != "suit" and has_anim("swim"):
+		return ["swim", ticks / (110 if moving else 220)]
+	if Graveyard.carried != "" and has_anim("carry"):
+		return ["carry", int(_walk_time * 8.0) if moving else 0]
 	if moving:
-		sprite.frame = row * WALK_FRAMES + int(_walk_time * 8.0) % WALK_FRAMES
-	elif tool_time > 0.0 or sprite.vframes < 8:
-		sprite.frame = row * WALK_FRAMES
-	else:
-		sprite.frame = (IDLE_ROW + row) * WALK_FRAMES + int(Time.get_ticks_msec() / 160) % _idle_frames
+		return ["walk", int(_walk_time * 8.0)]
+	if _still_time > SIT_AFTER and has_anim("sit") and not Router.current_map in ["deep", "grotto", "sea"]:
+		# The sitting-down frames once, then the last ones breathe.
+		var total: int = int(_anims["sit"][1])
+		var k := int((_still_time - SIT_AFTER) * 6.0)
+		return ["sit", k if k < total else total - 2 + (ticks / 600) % 2]
+	return ["idle", ticks / 160]
+
+
+# Lying down before sleep (the bed, the bot's cabin): a moment on the pillow, then the night.
+func lie_down(then: Callable) -> void:
+	if pose != "":
+		return
+	if not has_anim("sleep") or not is_inside_tree():
+		then.call()
+		return
+	pose = "sleep"
+	facing = Vector2.DOWN
+	_update_sprite(false)
+	await get_tree().create_timer(0.9).timeout
+	pose = ""
+	then.call()
+
+
+func tool_anim() -> String:
+	return str(TOOL_ANIMS.get(tool_kind, tool_kind))
+
+
+func _update_sprite(moving: bool) -> void:
+	var hud: Node = get_tree().current_scene.get_node_or_null("HUD/FishingHud") if is_inside_tree() and get_tree().current_scene else null
+	_fish_state = str(hud.state) if hud else "idle"
+	_use_sheet("hero_suit" if Router.current_map == "deep" and Deep.active and Deep.gear() == "suit" \
+		else ("hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male"))
+	if moving or tool_time > 0.0 or _fish_state != "idle":
+		_still_time = 0.0
+	if _fish_state == "waiting" and str(hud.get("state_seen")) == "charging":
+		# The cast itself: the rod swings once toward the float, then holds.
+		tool_kind = "cast"
+		tool_time = TOOL_DURATION
+		var toward: Vector2 = hud.target - global_position
+		if toward.length() > 4.0:
+			facing = toward.normalized()
+	if hud:
+		hud.set("state_seen", _fish_state)
+	var picked := _pick_anim(moving)
+	anim_name = str(picked[0]) if has_anim(str(picked[0])) else "idle"
+	var anim: Array = _anims.get(anim_name, [IDLE_ROW, _idle_frames])
+	var count := int(anim[1])
+	var k := int(picked[1]) if anim_name == str(picked[0]) else Time.get_ticks_msec() / 160
+	k = count - 1 if k < 0 else k % count
+	sprite.frame = (int(anim[0]) + _direction_index()) * _cols + k
 
 
 func play_tool(kind: String, target: Vector2) -> void:
 	var toward := target - global_position
 	if toward.length() > 4.0:
 		facing = toward.normalized()
+	if kind == "hoe":
+		var held := Inventory.selected_id()
+		kind = "attack" if str(Data.by_id("items", held).get("category", "")) == "weapon" else str(ITEM_ANIMS.get(held, "hoe"))
 	tool_kind = kind
 	tool_time = TOOL_DURATION * (float(Game.balance("fatigue_tool_time", 1.25)) if is_tired() else 1.0) \
 		* (1.2 if Cold.shivering(cold) else 1.0)
@@ -704,5 +816,5 @@ func _offer_cabin() -> void:
 		return "Лечь в каюте? Проснётесь здесь же, в море.", [["Спать", func(p: InfoPanel) -> String:
 			p.close()
 			Game.set_flag("cabin_sleep")
-			Night.end_day()
+			lie_down(func() -> void: Night.end_day())
 			return ""]])

@@ -4,7 +4,7 @@ extends Node2D
 # clicked garden tile; the actual farm action is still performed by Farm.
 func _draw() -> void:
 	var player := get_parent() as Player
-	if player == null or player.tool_time <= 0.0:
+	if player == null or player.tool_time <= 0.0 or player.has_anim(player.tool_anim()):
 		return
 	var quarter_turn: float = [PI / 2.0, PI, 0.0, -PI / 2.0][player._direction_index()]
 	var swing := player.tool_time < Player.TOOL_DURATION * 0.55

@@ -32,6 +32,96 @@
     "north",
     "west"
    ]
+  },
+  "hoe": {
+   "group": "5dce7805-072e-473e-8c16-1571e738347b",
+   "action_description": "raising a garden hoe over the head with both hands and striking the ground in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "axe": {
+   "group": "b2d6f018-dc73-4fb1-aff2-1259d654a1b2",
+   "action_description": "swinging a wood axe over the shoulder and chopping forward",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "pick": {
+   "group": "d575783e-a080-441a-899e-1dd941d6c47d",
+   "action_description": "swinging a pickaxe high over the head and striking down at a rock in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "net": {
+   "group": "d657055b-62ab-4550-9b02-35445b3cb7fa",
+   "action_description": "sweeping a small hand net on a pole down and forward, scooping",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "water": {
+   "group": "79b68f4d-1690-4592-bb1b-d835a36cd42f",
+   "action_description": "tilting a metal watering can forward, water pouring onto the ground in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "shovel": {
+   "group": "b409e5a4-f558-4774-9ec4-509ebb33dc03",
+   "action_description": "digging with a spade: pushing it into the ground and lifting a clump of earth",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "scythe": {
+   "group": "85999fd5-e76b-43ec-a786-0b1520ea7f2e",
+   "action_description": "sweeping a long scythe low from side to side, mowing",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "reel": {
+   "group": "94ae71d7-dce1-42c5-94d7-46d055e440a4",
+   "action_description": "holding a bent fishing rod with both hands, pulling back and reeling in a fighting fish",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "cast": {
+   "group": "25a595e2-9c37-41af-b98a-f46671733739",
+   "action_description": "casting a fishing rod: swinging the rod back over the shoulder and flicking it forward",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }
