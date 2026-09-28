@@ -1,0 +1,55 @@
+{
+ "runs": [
+  {
+   "method": "generate-image-v2, reference sketch.png",
+   "prompt": "top-down pixel art game sea chart of a cold northern sea south of a small island, seen straight from above: the island's green coast with a sandy shore, a wooden pier and a white lighthouse along the top edge; the water turning from teal shallows to deep dark blue towards the bottom; scattered black rocks with foam; a cluster of jagged black sea stacks; a flat grey rock with seals; a small grassy islet with white birds; a rocky islet with an old dead stone signal tower; a larger wooded island in the far south; a dark whirlpool; rows of kelp on floats; a ring of white buoys; ice floes; a dashed shipping lane with a small black steamer with a red funnel; muted colours, crisp pixels, no text, no letters, no border",
+   "size": [
+    360,
+    420
+   ],
+   "seed": 3,
+   "variant": 1,
+   "generations": 40.0
+  },
+  {
+   "method": "move (by hand, no generation)",
+   "from": 1,
+   "box": [
+    201,
+    183,
+    252,
+    210
+   ],
+   "centre": [
+    55,
+    121
+   ],
+   "fill_from": [
+    201,
+    240
+   ],
+   "variant": 2,
+   "generations": 0
+  },
+  {
+   "method": "move (by hand, no generation)",
+   "from": 2,
+   "box": [
+    96,
+    275,
+    161,
+    334
+   ],
+   "centre": [
+    67,
+    229
+   ],
+   "fill_from": [
+    170,
+    275
+   ],
+   "variant": 3,
+   "generations": 0
+  }
+ ]
+}

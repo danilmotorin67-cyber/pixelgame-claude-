@@ -744,6 +744,10 @@ func _check_island_chart() -> void:
 	_fresh()
 	var full := Rect2(Vector2.ZERO, IslandChart.size() / IslandChart.SCALE)
 	_check(IslandChart.texture() != null, "the island chart picture is there")
+	var sea_art := SeaChartPanel._sea_art()
+	var sea_size: Array = SeaChart.cfg("size")
+	_check(sea_art != null and sea_art.get_size() == Vector2(int(sea_size[0]) * 3, int(sea_size[1]) * 3),
+		"the sea chart picture is there, three pixels a sea tile")
 	for id in Router.ISLAND_MAPS:
 		var r := IslandChart.region_rect(id)
 		_check(r.size.x > 0 and full.encloses(r), "%s lies on the chart" % id)
