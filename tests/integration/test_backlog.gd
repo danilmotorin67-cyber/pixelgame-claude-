@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family", "_check_island_chart"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family", "_check_island_chart", "_check_title"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -782,3 +782,45 @@ func _check_island_chart() -> void:
 	(hud.get_node("SeaChartPanel") as SeaChartPanel).close()
 	hud.queue_free()
 	Router.current_map = "cape"
+
+
+# The title screen: slots with their headers, the latest save for «Продолжить», deleting, the settings file,
+# and the menu itself.
+func _check_title() -> void:
+	_fresh()
+	var root := Save.save_root
+	Save.save_root = "user://saltlight_title_test"
+	for slot in Save.SLOT_COUNT:
+		Save.delete_slot(slot)
+	_check(Save.latest_slot() == -1 and Save.slot_info(0).is_empty(), "no saves: nothing to continue")
+	Game.hero["name"] = "Анна"
+	Economy.money = 1250
+	_check(Save.save_game(1), "a game saved to slot 2")
+	var info := Save.slot_info(1)
+	_check(str(info.get("name", "")) == "Анна" and int(info.get("money", 0)) == 1250 and Save.latest_slot() == 1,
+		"slot 2 tells who and how rich, and is the latest")
+	_check(SlotList.describe(info).begins_with("Анна · Весна 1, год 1"), "the slot line reads well (%s)" % SlotList.describe(info))
+	var title := (load("res://scenes/main/title.tscn") as PackedScene).instantiate()
+	add_child(title)
+	var buttons: Dictionary = title.get("_buttons")
+	_check(buttons.size() == 6 and not (buttons["continue"] as Button).disabled, "six buttons; «Продолжить» is on with a save")
+	title.call("_on_new_game")
+	var list := title.get("_window") as SlotList
+	_check(list != null and list.mode == "new", "«Новая игра» opens the slots")
+	list.close()
+	title.queue_free()
+	Save.delete_slot(1)
+	_check(Save.latest_slot() == -1 and not Save.has_save(1), "a deleted slot is gone with its backups")
+	Save.save_root = root
+	# Settings live in their own file, not in the save.
+	var path := Settings.prefs_path
+	Settings.prefs_path = "user://saltlight_title_test/settings.json"
+	Settings.fishing_assist = true
+	Settings.save_prefs()
+	Settings.fishing_assist = false
+	Settings.load_prefs()
+	_check(Settings.fishing_assist and Settings.has_prefs(), "the settings file keeps the player's choice")
+	DirAccess.remove_absolute(ProjectSettings.globalize_path(Settings.prefs_path))
+	Settings.fishing_assist = false
+	Settings.prefs_path = path
+

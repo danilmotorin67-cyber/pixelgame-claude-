@@ -28,6 +28,42 @@ func _candidate_paths(slot: int) -> Array[String]:
 	return candidates
 
 
+# What the title screen shows of a slot: the header (name, day, money, play time) and when it was last
+# written; empty when the slot has no readable save.
+func slot_info(slot: int) -> Dictionary:
+	if slot < 0 or slot >= SLOT_COUNT:
+		return {}
+	for path in _candidate_paths(slot):
+		var payload := _read_payload(path)
+		if payload.is_empty():
+			continue
+		var info: Dictionary = (payload.get("header", {}) as Dictionary).duplicate()
+		info["modified"] = FileAccess.get_modified_time(path)
+		return info
+	return {}
+
+
+# The slot saved most recently, or -1 when there is none («Продолжить»).
+func latest_slot() -> int:
+	var best := -1
+	var when := -1
+	for slot in SLOT_COUNT:
+		var info := slot_info(slot)
+		if not info.is_empty() and int(info["modified"]) > when:
+			when = int(info["modified"])
+			best = slot
+	return best
+
+
+# Removes a slot with all its backups.
+func delete_slot(slot: int) -> void:
+	if slot < 0 or slot >= SLOT_COUNT:
+		return
+	for path in _candidate_paths(slot):
+		if FileAccess.file_exists(path):
+			DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
+
+
 func _read_payload(path: String) -> Dictionary:
 	if not FileAccess.file_exists(path):
 		return {}
@@ -168,7 +204,9 @@ func load_game(slot: int) -> bool:
 	Festivals.deserialize(payload.get("festivals", {}))
 	Finale.deserialize(payload.get("finale", {}))
 	Boards.deserialize(payload.get("boards", {}))
-	Settings.deserialize(payload.get("settings", {}))
+	# The player's own settings (user://settings.json) win over the ones a save was written with.
+	if not Settings.has_prefs():
+		Settings.deserialize(payload.get("settings", {}))
 	current_slot = slot
 	NPCs.deserialize(payload.get("npcs", {}))
 	Events.tide_changed.emit(Clock.tide_height())

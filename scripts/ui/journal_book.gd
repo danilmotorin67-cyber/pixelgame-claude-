@@ -75,9 +75,10 @@ func _gui_input(event: InputEvent) -> void:
 		if row >= 0 and row < SETTINGS.size():
 			var key := str(SETTINGS[row][0])
 			Settings.set(key, not bool(Settings.get(key)))
+			Settings.save_prefs()
 	elif tab == "tab_settings" and LEFT.has_point(p) and p.y > LEFT.position.y + 150.0:
 		Settings.language = "en" if Settings.language == "ru" else "ru"
-		Settings.apply_language()
+		Settings.save_prefs()
 	accept_event()
 	queue_redraw()
 
