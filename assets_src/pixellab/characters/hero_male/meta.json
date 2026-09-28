@@ -322,6 +322,16 @@
     "north"
    ],
    "frame_count": 6
+  },
+  "wind": {
+   "group": "d2561486-8b7b-4221-a092-2b924a76b250",
+   "action_description": "turning a big crank handle round and round with both hands",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }

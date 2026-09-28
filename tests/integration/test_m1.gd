@@ -192,7 +192,9 @@ func _run() -> void:
 	var hoe_row: int = player._anims.get(player.tool_anim(), [Player.IDLE_ROW])[0] + 1
 	_check(player.tool_time > 0.0 and player.sprite.frame / player.sprite.hframes == (hoe_row if player.has_anim(player.tool_anim()) else Player.IDLE_ROW + 1),
 		"hoe use must face the worked plot")
-	for anim in ["hoe", "water", "axe", "pick", "scythe", "shovel", "cast", "reel", "net", "attack", "carry", "swim", "sit", "sleep"]:
+	for anim in ["hoe", "water", "axe", "pick", "scythe", "shovel", "cast", "reel", "net", "attack", "carry", "swim", "sit", "sleep",
+			"harpoon", "dodge", "rite", "light_lamp", "clean_glass", "wind", "ring_bell", "pet", "eat", "faint", "lift_cat",
+			"surprised", "happy"]:
 		_check(player.has_anim(anim), "the keeper has no %s animation" % anim)
 	player.tool_time = 0.0
 	player.facing = Vector2.DOWN
