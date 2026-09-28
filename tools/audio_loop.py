@@ -77,6 +77,14 @@ def fades(audio, sr, fade_in=0.005, fade_out=0.03):
     return audio
 
 
+# libsndfile's Vorbis encoder can crash on a long buffer written at once, so it gets one second at a time.
+def write_ogg(dest, audio, sr):
+    with sf.SoundFile(dest, "w", samplerate=sr, channels=audio.shape[1], format="OGG", subtype="VORBIS") as f:
+        data = audio.astype(np.float32)
+        for start in range(0, len(data), sr):
+            f.write(data[start:start + sr])
+
+
 def read(path):
     audio, sr = sf.read(path, always_2d=True, dtype="float64")
     if audio.shape[1] == 1:
@@ -98,7 +106,7 @@ def process(kind, path, loop_from=None, xfade=2.0):
         info = {"loop_start": round(loop_start, 3), "length": round(len(audio) / sr, 2)}
     os.makedirs(os.path.join(OUT, kind), exist_ok=True)
     dest = os.path.join(OUT, kind, ident + ".ogg")
-    sf.write(dest, audio.astype(np.float32), sr, format="OGG", subtype="VORBIS")
+    write_ogg(dest, audio, sr)
     return ident, dest, info
 
 
