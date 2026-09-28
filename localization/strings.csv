@@ -609,6 +609,10 @@ sea.sea_garden,Морской огород,Sea garden
 sea.teeth,Скалы Зубы,The Teeth
 sea.eider_isle,Остров Гаг,Eider Isle
 sea.dead_fire,Мёртвый Огонь,The Dead Fire
+sea.open_sea,Открытое море,Open sea
+sea.ice_field,Ледяное поле,Ice field
+sea.nameless_isle,Остров Без Имени,The Nameless Isle
+sea.fairway,Кронвальдский фарватер,Kronvald fairway
 rann.loves_1,Мы приняли. Мы помним.,We have taken it. We remember.
 rann.loves_2,"Такого нам не дарили с тех пор, как тонули короли.",No one has given us this since the kings drowned.
 rann.likes_1,Красиво. Мы положим это к своим.,Lovely. We will lay it with our own.
@@ -681,7 +685,7 @@ item.fish_pie.desc,"+110 энергии. Пирог, в котором рыба 
 item.aged_aquavit.name,Выдержанный аквавит,Aged aquavit
 item.aged_aquavit.desc,Магнус и Хальвдан сходятся только в одном — в нём.,Magnus and Halvdan agree on one thing only: this.
 item.sea_chart.name,Морская карта,Sea chart
-item.sea_chart.desc,Q — открыть на своей карте залив целиком. Олаф рисует их по старым лоциям.,Q — reveal the whole bay on your chart. Olaf copies them from old pilot books.
+item.sea_chart.desc,"Карта залива: мели, рифы, течения. Олаф рисует их по старым лоциям, моряки берут в подарок.","A chart of the bay: shoals, reefs, currents. Olaf copies them from old pilot books; sailors like one as a gift."
 item.old_sea_chart.name,Старая морская карта,Old sea chart
 item.old_sea_chart.desc,Олаф и Эрланд отдали бы за неё руку. Левую.,Olaf and Erland would give an arm for it. The left one.
 item.heather_tea.name,Вересковый чай,Heather tea

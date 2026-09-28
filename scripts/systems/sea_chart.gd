@@ -92,15 +92,3 @@ static func sail_speed(heading: Vector2) -> float:
 		* Daughters.boat_speed_mult()
 
 
-static func chunk_key(at: Vector2) -> String:
-	var size := int(cfg("chunk"))
-	var cell := tile_of(at)
-	return "%d,%d" % [floori(float(cell.x) / size), floori(float(cell.y) / size)]
-
-
-static func reveal(at: Vector2) -> void:
-	var radius := int(cfg("reveal_radius")) / (2 if view_narrowed() else 1)
-	var size := int(cfg("chunk"))
-	for dy in range(-radius, radius + 1, size):
-		for dx in range(-radius, radius + 1, size):
-			Sea.revealed[chunk_key(at + Vector2(dx, dy) * TILE)] = true

@@ -1,18 +1,14 @@
 class_name IslandChart
 extends RefCounted
 
-# The island chart (M, tab «Остров»): the PixelLab picture of the whole island (tools/island_map.py), fog
-# over the land maps the keeper has not set foot on yet, their names, the keeper, and with the Raven's Eye
-# today's raven marks and the bottles on the beaches. data/island_map.json says where each map lies on it.
+# The island chart (M, tab «Остров»): the PixelLab picture of the whole island (tools/island_map.py), open
+# whole from the start, the names of the land maps, the keeper, and with the Raven's Eye today's raven marks
+# and the bottles on the beaches. data/island_map.json says where each map lies on it.
 const IMAGE := "res://assets/sprites/ui/island_map.png"
 const SCALE := 0.5
-const FOG := Color(0.86, 0.79, 0.64, 0.92)
-const HATCH := Color(0.54, 0.45, 0.35, 0.35)
 const INK := Color("#2b1f1a")
 const LABEL := Color("#f4f7f6")
 const RED := Color("#c2412d")
-# Maps always known: the cape (home) and Solvik (the pier the keeper came in by).
-const KNOWN := ["cape", "village"]
 
 static var _texture: Texture2D
 
@@ -38,10 +34,6 @@ static func region_rect(map_id: String) -> Rect2:
 	if r.size() < 4:
 		return Rect2()
 	return Rect2(float(r[0]), float(r[1]), float(r[2]), float(r[3]))
-
-
-static func seen(map_id: String) -> bool:
-	return map_id in KNOWN or Game.flag("map_seen_" + map_id)
 
 
 static func title(map_id: String) -> String:
@@ -98,19 +90,6 @@ static func draw(canvas: CanvasItem, frame: Rect2, zoom: int, map_id: String, at
 	else:
 		canvas.draw_rect(frame, Color("#24405a"))
 	var regions: Dictionary = chart().get("regions", {})
-	# Fog over the maps not yet walked, hatched like the sea chart.
-	for id in regions:
-		if seen(str(id)):
-			continue
-		var r := region_rect(str(id))
-		var fog := Rect2(to_screen.call(r.position), r.size * k).intersection(frame)
-		if fog.size.x <= 0.0 or fog.size.y <= 0.0:
-			continue
-		canvas.draw_rect(fog, FOG)
-		for n in range(0, int(fog.size.x + fog.size.y), 4):
-			var a := fog.position + Vector2(minf(n, fog.size.x), maxf(0.0, n - fog.size.x))
-			var b := fog.position + Vector2(maxf(0.0, n - fog.size.y), minf(n, fog.size.y))
-			canvas.draw_line(a, b, HATCH, 1.0)
 	# With the Raven's Eye: today's raven marks and the bottles washed up.
 	if Farm.raven_sight():
 		for id in Farm.raven_marks:
@@ -130,11 +109,9 @@ static func draw(canvas: CanvasItem, frame: Rect2, zoom: int, map_id: String, at
 				var p: Vector2 = to_screen.call(point(str(id), Vector2(int(gift["x"]) * 16 + 8, (coast + int(gift["row"])) * 16 + 8)))
 				if frame.grow(-3).has_point(p):
 					bottle(canvas, p)
-	# The names of the known maps.
+	# The names of the land maps.
 	var font := UiKit.font()
 	for id in regions:
-		if not seen(str(id)):
-			continue
 		var name := title(str(id))
 		var w := font.get_string_size(name, HORIZONTAL_ALIGNMENT_LEFT, -1, 8).x
 		var at_label: Vector2 = (to_screen.call(region_rect(str(id)).get_center()) + Vector2(-w / 2.0, 3)).round()

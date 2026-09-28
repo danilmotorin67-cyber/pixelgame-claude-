@@ -2,16 +2,15 @@ extends Control
 class_name SeaChartPanel
 
 # The map (M), two tabs on one parchment sheet. «Остров» is the island chart (IslandChart): the whole island
-# with the keeper on it. «Море» is the sea chart as an old pilot chart: hatched where the keeper has not
-# sailed, the chart itself where the keeper has, the coast along the top, the zone borders dashed, reefs, the
-# known places, the dock and the boat, over the PixelLab picture of the sea (tools/sea_chart.py). Beside each the legend, the places found and the raven's sight.
+# with the keeper on it. «Море» is the PixelLab picture of the sea (tools/sea_chart.py) with the zone borders
+# dashed, the places pinned and named, the dock and the boat. Both are open whole from the start. Beside
+# each the legend, the places and the raven's sight.
 # It opens on the tab of where the keeper is; Tab or the arrows switch, a click on a tab too.
 const SHEET := Rect2(34, 6, 412, 258)
 const MAP := Rect2(48, 24, 180, 210)
 const INK := Color("#3a2a20")
 const FADED := Color("#8a7458")
 const RED := Color("#9b2f2a")
-const FOG := Color("#dccaa2")
 const LAND := Color("#7a964c")
 const ZONES := [Color("#5c798b"), Color("#375473"), Color("#2b3c58")]
 const ZONE_NAMES := ["I · ближние воды", "II · за Зубами", "III · открытое море"]
@@ -157,8 +156,7 @@ func _draw_island() -> void:
 	_text(Vector2(x, y), "Места", RED)
 	y += 11
 	for id in Router.ISLAND_MAPS:
-		var known := IslandChart.seen(id)
-		_text(Vector2(x, y), ("• " + str(MapInfo.region(id).get("title", id))) if known else "• ???", INK if known else FADED, width)
+		_text(Vector2(x, y), "• " + str(MapInfo.region(id).get("title", id)), INK, width)
 		y += 10
 	var sight := raven_lines()
 	y = SHEET.end.y - 28 - sight.size() * 10
@@ -169,14 +167,11 @@ func _draw_island() -> void:
 	var ky := ISLAND_AT.y + extent.y + 16
 	IslandChart.keeper_pin(self, Vector2(ISLAND_AT.x + 4, ky - 3))
 	_text(Vector2(ISLAND_AT.x + 12, ky), "вы", INK)
-	draw_rect(Rect2(ISLAND_AT.x + 34, ky - 7, 8, 6), IslandChart.FOG)
-	draw_rect(Rect2(ISLAND_AT.x + 34, ky - 7, 8, 6), FADED, false, 1.0)
-	_text(Vector2(ISLAND_AT.x + 46, ky), "ещё не бывали", FADED)
 	if Farm.raven_sight():
-		IslandChart.raven_mark(self, Vector2(ISLAND_AT.x + 128, ky - 3))
-		_text(Vector2(ISLAND_AT.x + 134, ky), "вороны", INK)
-		IslandChart.bottle(self, Vector2(ISLAND_AT.x + 174, ky - 3))
-		_text(Vector2(ISLAND_AT.x + 180, ky), "бутылки", INK)
+		IslandChart.raven_mark(self, Vector2(ISLAND_AT.x + 38, ky - 3))
+		_text(Vector2(ISLAND_AT.x + 44, ky), "вороны", INK)
+		IslandChart.bottle(self, Vector2(ISLAND_AT.x + 84, ky - 3))
+		_text(Vector2(ISLAND_AT.x + 90, ky), "бутылки", INK)
 	_text(Vector2(ISLAND_AT.x, ky + 14), "Колесо или Z — %s" % ("отдалить" if zoom > 1 else "приблизить"), FADED, extent.x)
 	_text(Vector2(x, SHEET.end.y - 14), "M — закрыть · Tab — море", FADED, width)
 
@@ -186,25 +181,16 @@ func _draw_sea() -> void:
 	var scale := minf(MAP.size.x / float(map_size[0]), MAP.size.y / float(map_size[1]))
 	var origin := MAP.position
 	var extent := Vector2(float(map_size[0]), float(map_size[1])) * scale
-	var chunk := int(SeaChart.cfg("chunk"))
-	# The PixelLab chart (tools/sea_chart.py) where sailed; hatched fog elsewhere, the coast always shown.
+	# The PixelLab chart (tools/sea_chart.py), the whole sea at once.
 	var coast := float(SeaChart.cfg("coast_rows")) * scale
 	var art := _sea_art()
 	if art:
 		draw_texture_rect(art, Rect2(origin, extent), false)
-	for cy in range(0, int(map_size[1]), chunk):
-		for cx in range(0, int(map_size[0]), chunk):
-			var cell := Rect2(origin + Vector2(cx, cy) * scale, Vector2(chunk, chunk) * scale)
-			if Sea.revealed.has("%d,%d" % [cx / chunk, cy / chunk]):
-				if art == null:
-					draw_rect(cell, ZONES[zone_of_row(cy + chunk / 2.0)])
-				continue
-			if cy == 0:
-				cell = Rect2(cell.position + Vector2(0, coast), cell.size - Vector2(0, coast))
-			draw_rect(cell, FOG)
-			for k in range(0, int(cell.size.x), 4):
-				draw_line(cell.position + Vector2(k, cell.size.y), cell.position + Vector2(minf(k + cell.size.y, cell.size.x), maxf(cell.size.y - (cell.size.x - k), 0.0)),
-					Color(0.54, 0.45, 0.35, 0.18), 1.0)
+	else:
+		for i in 3:
+			var top := [0.0, float(SeaChart.cfg("zone2_row")), float(SeaChart.cfg("zone3_row"))][i] as float
+			var bottom := [float(SeaChart.cfg("zone2_row")), float(SeaChart.cfg("zone3_row")), float(map_size[1])][i] as float
+			draw_rect(Rect2(origin + Vector2(0, top * scale), Vector2(extent.x, (bottom - top) * scale)), ZONES[i])
 	# The coast of the island along the top.
 	if art == null:
 		draw_rect(Rect2(origin, Vector2(extent.x, coast)), LAND)
@@ -223,20 +209,23 @@ func _draw_sea() -> void:
 	var taken: Array[Rect2] = [Rect2(origin + Vector2(2, coast - 6), Vector2(70, 10))]
 	var bounds := Rect2(origin, extent)
 	for place in SeaChart.cfg("places"):
-		if not Sea.revealed.has(SeaChart.chunk_key(SeaChart.place_pos(place))):
-			continue
 		var at: Array = SeaChart.cfg("places")[place]["at"]
 		var p := origin + Vector2(int(at[0]), int(at[1])) * scale
 		draw_circle(p, 2.5, INK)
 		draw_circle(p, 1.5, RED)
 		var label := Loc.t("sea." + place)
 		var w := UiKit.font().get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, 8).x
+		# Right, left, below, above; failing all, the right side pulled back inside the chart.
 		var spot := Vector2(p.x + 5, p.y + 3)
+		var placed := false
 		for c in [Vector2(p.x + 5, p.y + 3), Vector2(p.x - 5 - w, p.y + 3), Vector2(p.x - w / 2.0, p.y + 13), Vector2(p.x - w / 2.0, p.y - 6)]:
 			var box := Rect2(c - Vector2(1, 8), Vector2(w + 2, 10))
 			if bounds.encloses(box) and taken.all(func(t: Rect2) -> bool: return not t.intersects(box)):
 				spot = c
+				placed = true
 				break
+		if not placed:
+			spot = Vector2(clampf(spot.x, bounds.position.x + 2, bounds.end.x - w - 2), clampf(spot.y, bounds.position.y + 9, bounds.end.y - 2))
 		spot = spot.round()
 		taken.append(Rect2(spot - Vector2(1, 8), Vector2(w + 2, 10)))
 		_label(spot, label)
@@ -246,7 +235,7 @@ func _draw_sea() -> void:
 		draw_colored_polygon(PackedVector2Array([boat + Vector2(0, -4), boat + Vector2(3, 3), boat + Vector2(-3, 3)]), INK)
 		draw_colored_polygon(PackedVector2Array([boat + Vector2(0, -3), boat + Vector2(2, 2), boat + Vector2(-2, 2)]), Color("#ffc85a"))
 	draw_rect(Rect2(origin - Vector2(1, 1), extent + Vector2(2, 2)), INK, false, 1.0)
-	UiKit.draw_icon(self, "tab_compass", origin + extent - Vector2(26, 26), 24.0)
+	UiKit.draw_icon(self, "tab_compass", origin + Vector2(extent.x - 26, float(SeaChart.cfg("zone3_row")) * scale + 4), 24.0)
 	# The legend column.
 	var x := MAP.end.x + 18
 	var width := SHEET.end.x - 14 - x
@@ -257,18 +246,11 @@ func _draw_sea() -> void:
 		draw_rect(Rect2(x, y - 6, 10, 7), INK, false, 1.0)
 		_text(Vector2(x + 14, y), ZONE_NAMES[i], INK, width - 14)
 		y += 11
-	draw_rect(Rect2(x, y - 6, 10, 7), FOG)
-	draw_rect(Rect2(x, y - 6, 10, 7), INK, false, 1.0)
-	_text(Vector2(x + 14, y), "ещё не хожено", FADED, width - 14)
-	y += 18
+	y += 7
 	_text(Vector2(x, y), "Места", RED)
 	y += 11
 	for place in SeaChart.cfg("places"):
-		var info: Dictionary = SeaChart.cfg("places")[place]
-		var known := Sea.revealed.has(SeaChart.chunk_key(SeaChart.place_pos(place)))
-		if not known and bool(info.get("secret", false)):
-			continue
-		_text(Vector2(x, y), ("• " + Loc.t("sea." + place)) if known else "• ???", INK if known else FADED, width)
+		_text(Vector2(x, y), "• " + Loc.t("sea." + place), INK, width)
 		y += 10
 	var sight := raven_lines()
 	y = SHEET.end.y - 18 - sight.size() * 10

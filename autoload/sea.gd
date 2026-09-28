@@ -7,7 +7,6 @@ const FAR_ROW := 3
 var mercy: float = START_MERCY
 var blessings: Array = []
 var boat: String = ""
-var revealed: Dictionary = {}
 # Beach gifts per map: [{item, x, row}], `row` counts from the high-water line (0) seaward (5).
 var gifts: Dictionary = {}
 var trash_mercy_today: float = 0.0
@@ -34,7 +33,6 @@ func reset() -> void:
 	mercy = START_MERCY
 	blessings.clear()
 	boat = ""
-	revealed.clear()
 	gifts.clear()
 	trash_mercy_today = 0.0
 	scheduled.clear()
@@ -566,7 +564,7 @@ func night_boats() -> void:
 
 
 func serialize() -> Dictionary:
-	return {"mercy": mercy, "blessings": blessings, "boat": boat, "revealed": revealed,
+	return {"mercy": mercy, "blessings": blessings, "boat": boat,
 		"gifts": gifts, "trash_mercy_today": trash_mercy_today, "scheduled": scheduled,
 		"gear": gear, "hull": hull, "hold": hold, "visited": visited, "boat_ready_day": boat_ready_day,
 		"pools": pools, "clams": clams, "pools_fished": pools_fished, "sea_garden": sea_garden}
@@ -576,7 +574,6 @@ func deserialize(d: Dictionary) -> void:
 	mercy = clampf(float(d.get("mercy", START_MERCY)), 0.0, 100.0)
 	blessings = d.get("blessings", [])
 	boat = str(d.get("boat", ""))
-	revealed = d.get("revealed", {})
 	trash_mercy_today = float(d.get("trash_mercy_today", 0.0))
 	hull = clampf(float(d.get("hull", 100.0)), 0.0, 100.0)
 	hold = d.get("hold", []).duplicate(true)

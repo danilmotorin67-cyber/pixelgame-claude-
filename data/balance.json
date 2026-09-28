@@ -340,8 +340,6 @@
     "hull": 100,
     "storm_damage_every": 5,
     "tow_price": 500,
-    "reveal_radius": 10,
-    "chunk": 8,
     "places": {
       "rest_place": {
         "at": [

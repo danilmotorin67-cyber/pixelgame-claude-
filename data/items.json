@@ -2493,8 +2493,7 @@
     "desc": "item.sea_chart.desc",
     "category": "gift",
     "price": 250,
-    "stack": 5,
-    "use": "reveal_sea"
+    "stack": 5
   },
   {
     "id": "old_sea_chart",

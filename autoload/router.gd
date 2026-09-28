@@ -54,9 +54,6 @@ func goto_map(id: String, pos: Vector2 = Vector2.ZERO) -> bool:
 		path = "res://scenes/world/grotto.tscn"
 	if not ResourceLoader.exists(path):
 		return false
-	# The island chart lifts its fog from every land map the keeper has set foot on.
-	if ISLAND_MAPS.has(id):
-		Game.set_flag("map_seen_" + id)
 	var tree := get_tree()
 	if tree == null:
 		return false

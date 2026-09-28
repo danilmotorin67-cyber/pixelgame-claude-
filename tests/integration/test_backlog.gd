@@ -738,8 +738,8 @@ func _check_family() -> void:
 	_check(Relationships.children.size() == 2, "saved")
 
 
-# The map (M): the island chart places every land map, interior and tower floor; fog lifts where the keeper
-# has walked; the panel opens on the island ashore and on the sea chart at sea.
+# The map (M): the island chart places every land map, interior and tower floor; the panel opens on the
+# island ashore and on the sea chart at sea.
 func _check_island_chart() -> void:
 	_fresh()
 	var full := Rect2(Vector2.ZERO, IslandChart.size() / IslandChart.SCALE)
@@ -760,9 +760,6 @@ func _check_island_chart() -> void:
 	_check(IslandChart.keeper("lh_3", Vector2.ZERO)[0] == "cape", "in the lighthouse: on the cape")
 	_check(IslandChart.keeper("grotto", Vector2.ZERO)[0] == "seal_shore", "in the grottoes: by the Seal Shore")
 	_check(IslandChart.keeper("sea", Vector2(100, 100)).is_empty(), "at sea: not on the island chart")
-	_check(IslandChart.seen("cape") and IslandChart.seen("village") and not IslandChart.seen("moor"), "home and Solvik are known, the moor is not")
-	Game.set_flag("map_seen_moor")
-	_check(IslandChart.seen("moor"), "a map walked is known")
 	var z1 := IslandChart.view(Rect2(Vector2.ZERO, IslandChart.size()), 1, "moor", Vector2(560, 480))
 	var z2 := IslandChart.view(Rect2(Vector2.ZERO, IslandChart.size()), 2, "moor", Vector2(560, 480))
 	_check(z1 == full and z2.size * 2.0 == full.size and full.encloses(z2), "zoom shows half the chart, inside it")

@@ -209,9 +209,8 @@ func _boat_physics(delta: float) -> void:
 		_sail_distance -= 20.0 * 16.0
 		var mult := 2.0 if Weather.current == "storm" else (1.5 if Weather.current in ["rain", "fog"] else 1.0)
 		Skills.add_xp("seafaring", int(round(mult)))
-	SeaChart.reveal(global_position)
 	if Sea.visit(SeaChart.near_place(global_position, 4.0)):
-		_say("Новое место на карте: %s." % Loc.t("sea." + SeaChart.near_place(global_position, 4.0)))
+		_say("Новое место: %s." % Loc.t("sea." + SeaChart.near_place(global_position, 4.0)))
 	facing = boat_heading
 	_update_sprite(false)
 	var art := get_node_or_null("BoatArt")
@@ -434,18 +433,11 @@ func max_health() -> float:
 	return float(Game.balance("health_max", 100)) + 5.0 * float(Skills.level("diving"))
 
 
-# Items with a "use": the sea chart reveals the bay, star amber adds 30 energy for good (21.3).
+# Items with a "use": star amber adds 30 energy for good (21.3).
 func use_selected() -> String:
 	var index := Inventory.selected_hotbar
 	var id := str(Inventory.slots[index]["id"])
 	match str(Data.by_id("items", id).get("use", "")):
-		"reveal_sea":
-			var size: Array = Game.balance("sea", {}).get("size", [120, 90])
-			for y in range(0, int(size[1]), 8):
-				for x in range(0, int(size[0]), 8):
-					SeaChart.reveal(Vector2(x * 16 + 8, y * 16 + 8))
-			Inventory.take_slot(index, 1)
-			return "Карта залива перенесена на вашу: мели, рифы, течения."
 		"star_amber":
 			Inventory.take_slot(index, 1)
 			Game.counters["star_amber"] = int(Game.counters.get("star_amber", 0)) + 1

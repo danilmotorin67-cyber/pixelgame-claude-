@@ -331,8 +331,6 @@ func _check_boat() -> void:
 	var xp := int(Skills.xp["seafaring"])
 	_check(Sea.visit("rest_place") and not Sea.visit("rest_place"), "a place is discovered once")
 	_check(int(Skills.xp["seafaring"]) == xp + 30 and Sea.visited.has("rest_place"), "discovery: +30 seafaring XP")
-	SeaChart.reveal(SeaChart.place_pos("rest_place"))
-	_check(Sea.revealed.has(SeaChart.chunk_key(SeaChart.place_pos("rest_place"))), "sailing reveals the chart")
 
 	Inventory.add("fish_cod", 1)
 	Crafting.store({"slots": Sea.hold}, Inventory.slots.find_custom(func(s: Dictionary) -> bool: return s["id"] == "fish_cod"))
