@@ -142,7 +142,9 @@ def recover(jobs, created_at):
     got = 0
     for iid, desc, dest in jobs:
         full = f"{desc}, {STYLE}"
-        match = [o for o in objs if full.startswith(str(o.get("name")))]
+        # Names are cut to 30 characters; the prompt (cut later) tells apart items that start alike.
+        match = [o for o in objs if o.get("prompt") and full.startswith(str(o["prompt"]))] or \
+                [o for o in objs if not o.get("prompt") and full.startswith(str(o.get("name")))]
         if not match:
             continue
         objs.remove(match[0])
