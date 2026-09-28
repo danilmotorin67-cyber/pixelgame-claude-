@@ -23,6 +23,29 @@ static func draw(canvas: CanvasItem, id: String, bottom := Vector2.ZERO, modulat
 	return true
 
 
+# Swaying in the wind: the base stays put, the top leans by up to `lean` units; neighbours sway out of step.
+static func draw_sway(canvas: CanvasItem, id: String, bottom: Vector2, t: float, lean := 1.0, modulate := Color.WHITE) -> bool:
+	var tex := texture(id)
+	if tex == null:
+		return false
+	var size := tex.get_size() * Screen.ART_SCALE
+	var shift := roundf(sin(t * 1.7 + bottom.x * 0.071 + bottom.y * 0.037) * lean)
+	canvas.draw_set_transform_matrix(Transform2D(Vector2(1, 0), Vector2(-shift / maxf(size.y, 1.0), 1), bottom))
+	canvas.draw_texture_rect(tex, Rect2(Vector2(-size.x / 2.0, -size.y), size), false, modulate)
+	canvas.draw_set_transform_matrix(Transform2D.IDENTITY)
+	return true
+
+
+# How hard the wind blows for swaying things.
+static func wind_lean() -> float:
+	match Weather.current:
+		"storm", "blizzard":
+			return 2.5
+		"rain", "snow", "cloud":
+			return 1.4
+	return 0.8
+
+
 static var _loops := {}
 
 

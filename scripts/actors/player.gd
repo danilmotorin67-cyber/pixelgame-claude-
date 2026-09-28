@@ -78,7 +78,10 @@ func _ready() -> void:
 	_update_sprite(false)
 	Events.time_tick.connect(warm_or_chill)
 	# A little cheer for a new skill level, a finished quest and a legendary fish.
-	Events.level_up.connect(func(_s: String, _l: int) -> void: _cheer())
+	Events.level_up.connect(func(_s: String, _l: int) -> void:
+		_cheer()
+		if is_inside_tree():
+			Fx.burst("levelup", global_position + Vector2(0, -8)))
 	Events.quest_completed.connect(func(_q: String) -> void: _cheer())
 	Events.fish_caught.connect(func(id: String, _q: int, _s: float) -> void:
 		if bool(Data.by_id("fish", id).get("legendary", false)):
@@ -377,7 +380,16 @@ func _update_sprite(moving: bool) -> void:
 		else ("hero_female" if str(Game.hero.get("gender", "m")) == "f" else "hero_male"))
 	if moving or tool_time > 0.0 or _fish_state != "idle":
 		_still_time = 0.0
-	if _fish_state == "waiting" and str(hud.get("state_seen")) == "charging":
+	var seen := str(hud.get("state_seen")) if hud else "idle"
+	if hud and seen != _fish_state:
+		# The float lands, a fish bites, the line comes out of the water.
+		if _fish_state == "waiting" and seen == "charging":
+			Fx.burst_later("splash", hud.target, 0.35)
+		elif _fish_state == "bite":
+			Fx.burst("splash_small", hud.target)
+		elif _fish_state == "idle" and seen == "reeling":
+			Fx.burst("splash", hud.target)
+	if _fish_state == "waiting" and seen == "charging":
 		# The cast itself: the rod swings once toward the float, then holds.
 		tool_kind = "cast"
 		tool_time = TOOL_DURATION
@@ -411,6 +423,11 @@ func play_tool(kind: String, target: Vector2) -> void:
 		* (1.2 if Cold.shivering(cold) else 1.0)
 	_update_sprite(false)
 	tool_art.queue_redraw()
+	# Soil, sparks, chips, cut grass or a splash where the blow lands.
+	var fx := str({"hoe": "clod", "shovel": "clod", "pick": "sparks", "axe": "chips", "scythe": "grass", "water": "splash_small",
+		"net": "splash_small"}.get(tool_anim(), ""))
+	if fx != "" and toward.length() > 4.0:
+		Fx.burst_later(fx, target, TOOL_DURATION * 0.55)
 
 
 func max_health() -> float:
@@ -486,6 +503,8 @@ func eat_selected() -> String:
 		cold = maxf(0.0, cold - float(Cold.cfg("warm_food_relief", 20)))
 	if is_inside_tree():
 		play_pose("eat", 0.9)
+		if float(edible.get("health", 0)) > 0.0 or not buff.is_empty():
+			Fx.burst("heal", global_position + Vector2(0, -10))
 	return id
 
 
@@ -729,6 +748,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if _combat() != null and not _combat().dodge():
 			return
 		_dodge_t = DODGE_TIME
+		Fx.burst("dust", global_position)
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label

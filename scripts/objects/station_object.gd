@@ -32,6 +32,9 @@ var _was_working := false
 
 
 func _process(_delta: float) -> void:
+	if station_id == "tree":
+		queue_redraw()
+		return
 	if PropArt.texture("station_%s_work" % station_id) == null:
 		return
 	var now := working()
@@ -133,7 +136,8 @@ static func tree_sprite(obj: Dictionary, info: Dictionary, season: String) -> St
 func _draw_tree() -> void:
 	var obj := Crafting.find(Router.current_map, uid)
 	var info := Crafting.tree_info(obj)
-	if PropArt.draw(self, tree_sprite(obj, info, Clock.season), Vector2(0, 6)):
+	if PropArt.draw_sway(self, tree_sprite(obj, info, Clock.season), Vector2(0, 6), Time.get_ticks_msec() / 1000.0,
+			PropArt.wind_lean() * (0.5 if not bool(obj.get("grown", false)) else 1.0)):
 		return
 	if str(obj.get("tree", "")) == "bog_cranberry":
 		draw_rect(Rect2(-24, -24, 48, 48), Color("#3f5a36"))

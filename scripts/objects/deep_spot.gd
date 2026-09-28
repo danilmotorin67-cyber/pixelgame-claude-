@@ -84,6 +84,8 @@ func interact(_player: Player) -> void:
 		"resource":
 			var item := Deep.take_resource(cell)
 			_say("Взято: " + Crafting.item_name(item) if item != "" else "Здесь пусто (или рюкзак полон).")
+			if item != "":
+				Fx.burst("pickup", global_position + Vector2(0, -4))
 			queue_redraw()
 		"chest":
 			var got := Deep.open_chest(cell)
@@ -93,6 +95,8 @@ func interact(_player: Player) -> void:
 
 func use_tool(_player: Player, tool: String) -> String:
 	if kind == "rope_down" and Deep.break_debris(tool):
+		Fx.burst("sparks", global_position)
+		Fx.burst("dust", global_position)
 		get_parent().queue_redraw()
 		return "Обломки разбиты — трос вниз свободен."
 	return ""

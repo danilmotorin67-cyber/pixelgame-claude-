@@ -284,6 +284,8 @@ def build_props():
         img = Image.open(path).convert("RGBA")
         img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, aid + ".png"))
         count += 1
+        # A prop's own loop (the flag's flutter) packs like a station's work loop.
+        count += _station_work(img, folder, os.path.join(out, aid + "_work"))
     return count
 
 

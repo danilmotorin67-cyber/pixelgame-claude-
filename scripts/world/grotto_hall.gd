@@ -92,6 +92,7 @@ func _process(delta: float) -> void:
 		Router.goto_map("seal_shore", Grotto.ENTRANCE + Vector2(0, 16))
 		return
 	Grotto.world.collect_drops()
+	Fx.fallen(Grotto.world, false)
 	if Grotto.dive_tick(delta, player.global_position) == "gasp":
 		player.global_position = Grotto.cell_center(Grotto.entry_cell())
 		_hint("Воздух кончился — вы вынырнули у входа в зал.")

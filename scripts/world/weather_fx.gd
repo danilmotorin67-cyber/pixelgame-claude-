@@ -1,6 +1,11 @@
 extends Node2D
 
 var elapsed: float = 0.0
+# A storm's lightning: a jagged bolt and (unless flashes are turned off in the settings) a white flash.
+var _next_bolt := 4.0
+var _bolt_t := 0.0
+var _bolt: PackedVector2Array = PackedVector2Array()
+var _rng := RandomNumberGenerator.new()
 
 
 func _ready() -> void:
@@ -14,10 +19,35 @@ func _process(delta: float) -> void:
 	if Weather.current in ["rain", "storm", "snow", "blizzard", "fog"] or Router.current_map == "sea":
 		if not Clock.paused:
 			elapsed += delta
+			_storm(delta)
 		queue_redraw()
 
 
+func _storm(delta: float) -> void:
+	_bolt_t = maxf(0.0, _bolt_t - delta)
+	if Weather.current != "storm" or Router.current_map in ["deep", "grotto"] or Router.current_map.begins_with("lh_"):
+		return
+	_next_bolt -= delta
+	if _next_bolt > 0.0:
+		return
+	_next_bolt = _rng.randf_range(5.0, 12.0)
+	_bolt_t = 0.35
+	_bolt = PackedVector2Array()
+	var x := _rng.randf_range(60.0, 420.0)
+	var y := -4.0
+	while y < 150.0:
+		_bolt.append(Vector2(x, y))
+		x += _rng.randf_range(-12.0, 12.0)
+		y += _rng.randf_range(10.0, 22.0)
+
+
 func _draw() -> void:
+	if _bolt_t > 0.0:
+		if Settings.lightning_flash:
+			draw_rect(Rect2(0, 0, 480, 270), Color(0.9, 0.93, 1.0, 0.45 * _bolt_t / 0.35))
+		if _bolt_t > 0.2 and _bolt.size() > 1:
+			draw_polyline(_bolt, Color(1.0, 1.0, 0.92), 2.0)
+			draw_polyline(_bolt, Color(0.75, 0.85, 1.0, 0.6), 4.0)
 	var kind := Weather.current
 	# At sea, fog and the Hmar close in around the boat (not for the Fog Navigator).
 	if Router.current_map == "sea" and SeaChart.view_narrowed():

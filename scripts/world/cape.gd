@@ -78,6 +78,10 @@ func _ready() -> void:
 		mailbox.name = "Mailbox"
 		mailbox.position = Vector2(664, 348)
 		add_child(mailbox)
+		var flag := FlagPole.new()
+		flag.name = "FlagPole"
+		flag.position = Vector2(786, 286)
+		add_child(flag)
 		if Game.flag("house_key"):
 			var cat := WickCat.new()
 			cat.name = "WickCat"

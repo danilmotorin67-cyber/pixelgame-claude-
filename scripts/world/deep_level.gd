@@ -14,6 +14,7 @@ const DECOR := {
 }
 
 var _message_t: float = 0.0
+var _bubble_t := 0.0
 var _cells := PackedInt32Array()
 
 
@@ -69,6 +70,13 @@ func _process(delta: float) -> void:
 		Router.goto_map("cape", Vector2(600, 360))
 		return
 	player.health = float(Deep.world.player["hp"])
+	Fx.fallen(Deep.world, true)
+	# Air rising from the helmet or the bell hose now and then (the Gills breathe the sea itself).
+	_bubble_t -= delta
+	if _bubble_t <= 0.0:
+		_bubble_t = 1.1
+		if Deep.gear() != "gills":
+			Fx.burst("bubbles", player.global_position + Vector2(0, -18))
 	var picked := Deep.world.collect_drops()
 	if not picked.is_empty():
 		_hint("Подобрано: " + ", ".join(picked.map(func(d: Dictionary) -> String: return Crafting.item_name(str(d["item"])))))

@@ -18,6 +18,8 @@ var width: int = 0
 var height: int = 0
 var coast_row: int = -1
 var biome: String = ""
+var _swaying: Array = []
+var _sway_layer: SwayLayer
 var _shore_shapes: Array[CollisionShape2D] = []
 var _shore_flooded: Array[bool] = []
 var _bounds: StaticBody2D
@@ -49,6 +51,11 @@ func _ready() -> void:
 	if bool(region.get("interior", false)):
 		_build_furniture()
 	_build_exits()
+	_build_smoke()
+	# Trees and reeds sway in their own layer, redrawn every frame (the ground is drawn once).
+	_sway_layer = SwayLayer.new()
+	_sway_layer.name = "SwayLayer"
+	add_child(_sway_layer)
 	Events.tide_changed.connect(_on_tide_changed)
 	_on_tide_changed(Clock.tide_height())
 
@@ -423,6 +430,9 @@ func _draw_interior() -> bool:
 func _draw() -> void:
 	if region.is_empty():
 		return
+	_swaying.clear()
+	if _sway_layer:
+		_sway_layer.items = _swaying
 	if bool(region.get("interior", false)) and _draw_interior():
 		return
 	if not bool(region.get("interior", false)) and _draw_ground():
@@ -495,7 +505,9 @@ func _draw_props() -> void:
 					art = PropArt.variant("seaweed", 2, x + y)
 			elif color == GRASS or color == MEADOW:
 				art = PropArt.variant("flowers", 4, x + y) if roll == 0 else PropArt.variant("weeds", 3, x + y)
-			if art != "":
+			if art.begins_with("birch_"):
+				_swaying.append([art, bottom])
+			elif art != "":
 				PropArt.draw(self, art, bottom)
 
 
@@ -506,6 +518,34 @@ const BUILDING_ART := {"Лавка Бергов": "village_01", "Кузня То
 	"Шерсть и кости": "village_10", "Дом Хедды": "village_11", "Дом Гримов": "village_12", "Дом Олафа": "village_13",
 	"Хижина Скау": "village_14", "Школа": "village_16", "Хижина Хельги": "helga_hut", "Старая мельница": "mill_ruin",
 	"Гильдейский дом": "guild_ruin"}
+
+
+# Chimney smoke over the village houses that have a chimney; it follows the hour.
+func _build_smoke() -> void:
+	var puffs: Array = []
+	for item in region.get("landmarks", []):
+		if str(item["kind"]) == "pier":
+			# A pennant at the landward end of the pier.
+			var flag := FlagPole.new()
+			flag.position = Vector2(int(item["at"][0]) * TILE + 10, int(item["at"][1]) * TILE + 14)
+			add_child(flag)
+			continue
+		if str(item["kind"]) not in ["house", "hall", "smith", "tavern", "chapel", "ruin"]:
+			continue
+		var at: Array = item["at"]
+		var dimensions: Array = item["size"]
+		var plot := Rect2(int(at[0]) * TILE, int(at[1]) * TILE, int(dimensions[0]) * TILE, int(dimensions[1]) * TILE)
+		for point in BuildingArt.chimneys_fit(building_art(str(item["title"])), plot):
+			var smoke := Fx.smoke()
+			smoke.position = point
+			smoke.emitting = Fx.smoking()
+			add_child(smoke)
+			puffs.append(smoke)
+	if not puffs.is_empty():
+		Events.hour_changed.connect(func(_h: int) -> void:
+			for smoke in puffs:
+				if is_instance_valid(smoke):
+					smoke.emitting = Fx.smoking())
 
 
 func building_art(title: String) -> String:
@@ -549,8 +589,8 @@ func _landmark_art(item: Dictionary, x: int, y: int, w: int, h: int) -> bool:
 			return true
 		"bog", "reeds":
 			for offset in range(10, w - 6, 26 if kind == "bog" else 16):
-				PropArt.draw(self, PropArt.variant("reeds", 2, offset), Vector2(x + offset, y + 18 + offset % 29))
-			return true
+				_swaying.append([PropArt.variant("reeds", 2, offset), Vector2(x + offset, y + 18 + offset % 29)])
+			return PropArt.texture("reeds_1") != null
 	return false
 
 

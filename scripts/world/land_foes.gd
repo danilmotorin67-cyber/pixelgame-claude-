@@ -131,6 +131,7 @@ func _process(delta: float) -> void:
 	player.velocity += world.player["push"] as Vector2
 	world.player["push"] = Vector2.ZERO
 	world.collect_drops()
+	Fx.fallen(world, false)
 	if bool(world.player["down"]):
 		world.enemies.clear()
 		world.player["down"] = false

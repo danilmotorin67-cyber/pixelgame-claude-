@@ -45,4 +45,5 @@ func interact(_player: Player) -> void:
 		var name := Loc.t(str(Data.by_id("items", id).get("name", id)))
 		hint.text = ("Подобрано: %s" % name) if ok else "Рюкзак полон."
 	if ok:
+		Fx.burst("pickup", global_position + Vector2(0, -4))
 		queue_free()

@@ -1,0 +1,20 @@
+{
+ "id": "flag_pole",
+ "method": "map-objects",
+ "prompt": "tall wooden flagpole with a long blue and white pennant flag streaming to the side, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, pixel art, muted cold palette",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "bb49e0f1-5bbd-4aeb-b864-92f62683c3f9",
+ "generations": 1.0,
+ "date": "2026-09-28",
+ "animations": {
+  "work": {
+   "generations": 0.0,
+   "action": "the pennant flag fluttering and waving in a strong wind, seamless loop",
+   "frames": 7
+  }
+ }
+}
