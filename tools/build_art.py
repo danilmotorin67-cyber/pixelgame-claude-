@@ -91,15 +91,18 @@ def _pack(aid, strips):
 
 
 def _meta_groups(folder):
-    """(export folder name, group id) of each recorded animation, in creation order."""
+    """(names the export folder may carry, group id, animation name in the sheet) of each recorded animation,
+    in creation order. PixelLab exports skeleton templates under "animating" (or their own name), custom
+    ones under their animation name; "<name>:2" keys are second takes of <name>."""
     path = os.path.join(folder, "meta.json")
     if not os.path.exists(path):
         return []
     out = []
     for key, info in json.load(open(path)).get("animations", {}).items():
         template = info.get("template_animation_id")
-        base = {"breathing-idle": "animating"}.get(template, template) if template else key.split(":")[0]
-        out.append((base, str(info.get("group") or "")))
+        base = template or key.split(":")[0]
+        names = {base, "animating"} if template else {base}
+        out.append((names, str(info.get("group") or ""), NAMES.get(base, base)))
     return out
 
 
@@ -125,22 +128,26 @@ def build_cast():
                 # name; meta.json records the groups in creation order. Directions merge oldest first,
                 # so a direction redone later (a fixed south idle) replaces the old one.
                 anims = frames.get("animations", {})
-                order = {}
+                # Each export folder is matched to its recorded animation: by the group id in its suffix, else by
+                # its name among the animations not yet matched; the sheet name comes from the recorded one.
+                # Folders merge in creation order, so a later take replaces a direction drawn before.
                 recorded = list(_meta_groups(folder))
+                order = {}
                 for name in anims:
                     m = re.fullmatch(r"(.*)-([0-9a-f]{8})", name)
                     if m:
-                        order[name] = next((i for i, (b, g) in enumerate(recorded) if g.startswith(m.group(2))), -1)
-                for name in anims:
-                    if name in order:
-                        continue
-                    claimed = {order[n] for n in order if n.startswith(name + "-")}
-                    free = [i for i, (b, g) in enumerate(recorded) if b == name and i not in claimed]
+                        order[name] = next((i for i, (n, g, _) in enumerate(recorded) if g.startswith(m.group(2))), -1)
+                # Plain folders named after their animation are matched before the generic "animating" ones.
+                plain = sorted((n for n in anims if n not in order), key=lambda n: n == "animating")
+                for name in plain:
+                    claimed = set(order.values())
+                    free = [i for i, (n, g, _) in enumerate(recorded) if name in n and i not in claimed]
                     order[name] = free[0] if free else -1
                 merged = {}
                 for name in sorted(anims, key=lambda n: order[n]):
                     base = re.sub(r"-[0-9a-f]{8}$", "", name)
-                    merged.setdefault(NAMES.get(base, base), {}).update(anims[name])
+                    sheet_name = recorded[order[name]][2] if order[name] >= 0 else NAMES.get(base, base)
+                    merged.setdefault(sheet_name, {}).update(anims[name])
                 for name, dirs in sorted(merged.items()):
                     for d in ("south", "east", "north", "west"):
                         if d in dirs:

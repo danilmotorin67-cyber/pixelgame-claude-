@@ -65,6 +65,9 @@ func _draw() -> void:
 	if CastSprite.has(kind()):
 		draw_rect(Rect2(-5, -1, 10, 2), Color(0, 0, 0, 0.2))
 		var anim: String = {"walk": "walk", "graze": "graze", "idle": "idle"}.get(_state, "rot")
+		# Four-legged ones breathe while they rest; they have the idle in every direction.
+		if _state == "rest" and kind() in ["sheep", "goat", "cow", "pony"]:
+			anim = "idle"
 		# Birds peck only facing south; the rest shows the still pose.
 		CastSprite.draw(self, kind(), anim, _facing, _clock)
 		return

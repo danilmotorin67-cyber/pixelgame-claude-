@@ -78,6 +78,10 @@ func _ready() -> void:
 		mailbox.name = "Mailbox"
 		mailbox.position = Vector2(664, 348)
 		add_child(mailbox)
+		if Game.flag("house_key"):
+			var cat := WickCat.new()
+			cat.name = "WickCat"
+			add_child(cat)
 	Clock.paused = not Night.pending_report.is_empty()
 	Events.map_entered.emit(map_id)
 	Events.time_tick.connect(_on_world_changed)
