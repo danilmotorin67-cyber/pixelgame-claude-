@@ -23,6 +23,30 @@ static func draw(canvas: CanvasItem, id: String, bottom := Vector2.ZERO, modulat
 	return true
 
 
+static var _loops := {}
+
+
+# A looping strip (<id>.png + <id>.json: frame, frames, anchor) placed so that the anchor — the still
+# sprite's bottom centre — lands on `bottom`; the frame follows time `t`. False when there is no strip.
+static func draw_loop(canvas: CanvasItem, id: String, bottom: Vector2, t: float, fps := 6.0) -> bool:
+	var tex := texture(id)
+	if tex == null:
+		return false
+	if not _loops.has(id):
+		var path := "res://assets/sprites/props/%s.json" % id
+		_loops[id] = JSON.parse_string(FileAccess.get_file_as_string(path)) if FileAccess.file_exists(path) else {}
+	var m: Dictionary = _loops[id]
+	if m.is_empty():
+		return false
+	var fr: Array = m["frame"]
+	var anchor: Array = m.get("anchor", [float(fr[0]) / 2.0, float(fr[1])])
+	var size := Vector2(float(fr[0]), float(fr[1]))
+	var frame := int(t * fps) % maxi(int(m.get("frames", 1)), 1)
+	var at := bottom - Vector2(float(anchor[0]), float(anchor[1])) * Screen.ART_SCALE
+	canvas.draw_texture_rect_region(tex, Rect2(at, size * Screen.ART_SCALE), Rect2(frame * size.x, 0, size.x, size.y))
+	return true
+
+
 # Fitted to a footprint (furniture): as wide as the plot, standing on its bottom edge.
 static func draw_fit(canvas: CanvasItem, id: String, plot: Rect2) -> bool:
 	var tex := texture(id)

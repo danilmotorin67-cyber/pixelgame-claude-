@@ -209,6 +209,32 @@ def build_hero():
     return made
 
 
+def _station_work(base, folder, dest):
+    """A station's work loop (stations/<id>/work/frame_*.png) as one strip cropped to what any frame
+    covers; <dest>.json keeps the frame size, the count and the anchor — where the still sprite's
+    bottom centre falls in the frame, so smoke and sparks may leave the sprite's box."""
+    paths = sorted(glob.glob(os.path.join(folder, "work", "frame_*.png")))
+    if not paths:
+        return 0
+    frames = [Image.open(p).convert("RGBA") for p in paths]
+    frames = [f if f.size == base.size else f.resize(base.size, Image.NEAREST) for f in frames]
+    sb = base.getbbox() or (0, 0, base.width, base.height)
+    ub = list(sb)
+    for f in frames:
+        b = f.getbbox()
+        if b:
+            ub = [min(ub[0], b[0]), min(ub[1], b[1]), max(ub[2], b[2]), max(ub[3], b[3])]
+    w, h = ub[2] - ub[0], ub[3] - ub[1]
+    strip = Image.new("RGBA", (w * len(frames), h))
+    for i, f in enumerate(frames):
+        strip.paste(f.crop(tuple(ub)), (i * w, 0))
+    strip.save(dest + ".png")
+    with open(dest + ".json", "w") as fh:
+        json.dump({"frame": [w, h], "frames": len(frames),
+                   "anchor": [(sb[0] + sb[2]) / 2.0 - ub[0], sb[3] - ub[1]]}, fh)
+    return 1
+
+
 def build_props():
     """Map props: batch pieces from props/small/ and map-objects, all cropped to their pixels
     (PropArt stands them on their bottom edge)."""
@@ -231,6 +257,7 @@ def build_props():
             img = Image.open(path).convert("RGBA")
             img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, "station_" + aid + ".png"))
             count += 1
+            count += _station_work(img, folder, os.path.join(out, "station_" + aid + "_work"))
     # Interior furniture (furn_*), lighthouse fittings (lh_*) and placeable decor (decor_*).
     for folder in sorted(glob.glob(os.path.join(SRC, "interiors", "*"))):
         aid = os.path.basename(folder)

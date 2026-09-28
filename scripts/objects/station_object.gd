@@ -15,8 +15,36 @@ func _ready() -> void:
 	add_child(collision)
 
 
+# Outdoor stations that move all the time; the rest play their work loop while a job is under way.
+const AMBIENT := ["beehive", "gull_scarer", "wind_pump", "keeper_scarecrow"]
+
+
+func working() -> bool:
+	if station_id in AMBIENT:
+		return not (station_id == "beehive" and (Clock.season == "winter" or Clock.hour < 7 or Clock.hour >= 20))
+	for job in Crafting.find(Router.current_map, uid).get("queue", []):
+		if int(job["ready_at"]) > Crafting.now():
+			return true
+	return false
+
+
+var _was_working := false
+
+
+func _process(_delta: float) -> void:
+	if PropArt.texture("station_%s_work" % station_id) == null:
+		return
+	var now := working()
+	# Redraw every frame while it works, and once more when it stops, to settle on the still sprite.
+	if now or _was_working:
+		queue_redraw()
+	_was_working = now
+
+
 func _draw() -> void:
-	if station_id in ["tree", "decor"] or not PropArt.draw(self, "station_" + station_id, Vector2(0, 6)):
+	var moving := working() and PropArt.draw_loop(self, "station_%s_work" % station_id, Vector2(0, 6),
+		Time.get_ticks_msec() / 1000.0 + float(uid % 7) * 0.13)
+	if not moving and (station_id in ["tree", "decor"] or not PropArt.draw(self, "station_" + station_id, Vector2(0, 6))):
 		_draw_shape()
 	var obj := Crafting.find(Router.current_map, uid)
 	if Crafting.ready_jobs(obj) > 0 or not obj.get("stock", []).is_empty() or int(obj.get("fruit", 0)) > 0:
