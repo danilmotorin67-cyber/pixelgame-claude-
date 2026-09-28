@@ -292,6 +292,36 @@
     "south"
    ],
    "frame_count": 4
+  },
+  "ring_bell": {
+   "group": "0994dbd3-ff44-4052-a3a0-64a27d47432a",
+   "action_description": "pulling a bell rope down hard, then letting it go up",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "pet": {
+   "group": "975685cb-4252-4fbe-a777-77e4d4991841",
+   "action_description": "crouching down and stroking a small animal on the ground",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "clean_glass": {
+   "group": "03e71463-fe7a-4788-b766-b7ef6ab89983",
+   "action_description": "wiping a pane of glass in circles with a rag, arm raised",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }

@@ -212,6 +212,116 @@
     "north"
    ],
    "frame_count": 6
+  },
+  "dodge": {
+   "group": "ff5b017b-9198-44bd-96e7-2bc578d47e6c",
+   "action_description": "quick dodge roll forward along the ground and back up",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "rite": {
+   "group": "8c936408-759a-46a3-bc81-f1fd68678ca9",
+   "action_description": "kneeling before a low stone, laying both hands on it, head bowed",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "wind": {
+   "group": "d2c667b1-ec42-479f-852f-c49927493d6f",
+   "action_description": "turning a big crank handle round and round with both hands",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "light_lamp": {
+   "group": "49f0bb74-1642-4a4f-9655-3778ee91eb69",
+   "action_description": "reaching up with a long burning match and lighting a lamp, the flame catching",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "faint": {
+   "group": "df9f251e-ce31-4cf4-8b4c-3ff14abe8ad6",
+   "action_description": "swaying on the spot, eyes closing, then collapsing to the ground",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "surprised": {
+   "group": "53f92d83-551a-419d-bef3-ace3a507312d",
+   "action_description": "startled: a small jump back with both hands raised, eyes wide",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  },
+  "lift_cat": {
+   "group": "cf16f1e6-e811-4335-a98d-1de8392fdebb",
+   "action_description": "picking up a black cat and holding it in the arms, smiling",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "happy": {
+   "group": "ea65a452-09f1-4dd4-aadb-1768a3cbe590",
+   "action_description": "happy little jump, cheering with both arms raised",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  },
+  "ring_bell": {
+   "group": "e01717b9-8fb7-458d-83f0-28408879a9ba",
+   "action_description": "pulling a bell rope down hard, then letting it go up",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "eat": {
+   "group": "7006bf6e-322f-4af5-9623-0a895227360b",
+   "action_description": "eating: lifting food to the mouth and chewing happily",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "pet": {
+   "group": "fb8d9a2c-8f29-4071-926c-a2abb528e08a",
+   "action_description": "crouching down and stroking a small animal on the ground",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "clean_glass": {
+   "group": "4d3b7f90-60a2-4d12-8a05-f0904266914c",
+   "action_description": "wiping a pane of glass in circles with a rag, arm raised",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }
