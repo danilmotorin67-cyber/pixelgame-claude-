@@ -32,6 +32,7 @@ func _ready() -> void:
 	version.position.x = Screen.BASE.x - 8 - version.get_combined_minimum_size().x
 	_refresh()
 	_fade_in()
+	AudioMgr.play_music("main_theme")
 
 
 # The stand-in: a night sky over a dark sea, with the title picture over it once there is one.

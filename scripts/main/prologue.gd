@@ -21,6 +21,7 @@ var _shown := ""
 func _ready() -> void:
 	Screen.layout_root(self)
 	Clock.paused = true
+	AudioMgr.play_music("kronvald")
 	var bg := ColorRect.new()
 	bg.color = Color("#10161f")
 	bg.set_anchors_preset(Control.PRESET_FULL_RECT)

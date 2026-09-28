@@ -45,12 +45,19 @@ static func _layer() -> Node:
 	return tree.current_scene if tree else null
 
 
+# The sound each burst makes (AudioMgr; silence until the file exists).
+const SOUNDS := {"clod": "hoe_dig", "dust": "dodge", "sparks": "pick_stone", "chips": "axe_chop", "grass": "scythe_swish",
+	"splash": "splash", "splash_small": "splash_small", "bubbles": "bubbles", "ink": "octopus_ink", "feathers": "gull_down",
+	"heal": "eat", "levelup": "ui_levelup", "pickup": "pickup"}
+
+
 # A one-shot burst of `kind` at a world position.
 static func burst(kind: String, at: Vector2, parent: Node = null) -> void:
 	var spec: Array = KINDS.get(kind, [])
 	var host := parent if parent else _layer()
 	if spec.is_empty() or host == null or not host.is_inside_tree():
 		return
+	AudioMgr.play_sfx(str(SOUNDS.get(kind, "")))
 	var p := _particles(spec[0], int(spec[1]), float(spec[6]))
 	p.one_shot = true
 	p.explosiveness = 0.9

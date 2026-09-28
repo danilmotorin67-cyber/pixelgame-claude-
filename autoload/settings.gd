@@ -34,7 +34,7 @@ func apply_audio() -> void:
 	if bus >= 0:
 		AudioServer.set_bus_volume_db(bus, linear_to_db(maxf(master_vol, 0.0001)))
 		AudioServer.set_bus_mute(bus, master_vol <= 0.0)
-	for name in ["Music", "SFX"]:
+	for name in ["Music", "SFX", "Ambience", "UI"]:
 		var index := AudioServer.get_bus_index(name)
 		var vol := music_vol if name == "Music" else sfx_vol
 		if index >= 0:

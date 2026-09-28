@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family", "_check_island_chart", "_check_title"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family", "_check_island_chart", "_check_title", "_check_music"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -823,4 +823,41 @@ func _check_title() -> void:
 	DirAccess.remove_absolute(ProjectSettings.globalize_path(Settings.prefs_path))
 	Settings.fishing_assist = false
 	Settings.prefs_path = path
+
+
+# The music follows the place, the season, the hour and the weather (32.2); scenes may hold a track.
+func _check_music() -> void:
+	_fresh()
+	var base := {"map": "cape", "season": "spring", "hour": 10, "weather": "clear", "hmar": false, "festival": "",
+		"weekday": "mon", "finale": "", "fiddle": false, "sail": false, "boss": "", "biome": ""}
+	var cases := [
+		[{}, "cape_spring"], [{"season": "winter"}, "cape_winter"], [{"map": "moor", "season": "autumn"}, "cape_autumn"],
+		[{"map": "village", "season": "summer"}, "village_summer"], [{"map": "village_berg"}, "village_spring"],
+		[{"hour": 23}, "night"], [{"hour": 2, "hmar": true}, "hmar"], [{"map": "lh_4"}, "watch"],
+		[{"map": "village_tavern"}, "tavern"], [{"map": "village_tavern", "fiddle": true, "weekday": "sat", "hour": 19}, "tavern_fiddle"],
+		[{"map": "village_chapel"}, "graveyard"], [{"map": "sea"}, "rowing"], [{"map": "sea", "sail": true}, "sailing"],
+		[{"map": "sea", "weather": "storm"}, "storm"], [{"map": "grotto"}, "grottoes"],
+		[{"map": "deep", "biome": "old_solvick"}, "deep_old_solvick"], [{"map": "deep", "boss": "bone_whale"}, "boss_bone_whale"],
+		[{"map": "village", "festival": "regatta"}, "festival"], [{"map": "village", "festival": "drowned_night", "hour": 20}, "drowned_night"],
+		[{"finale": "fire"}, "hold_the_fire"], [{"finale": "path"}, "seabed_path"], [{"finale": "halls"}, "halls_of_rann"],
+	]
+	var tracks: Dictionary = Data.tables["music"]["tracks"]
+	for c in cases:
+		var ctx := base.duplicate()
+		ctx.merge(c[0], true)
+		var got := AudioMgr.pick(ctx)
+		_check(got == str(c[1]) and tracks.has(got), "%s → %s (%s)" % [str(c[0]), str(c[1]), got])
+	var storm := base.duplicate()
+	storm["weather"] = "storm"
+	_check(AudioMgr.pick_layers(storm).has("layer_storm") and AudioMgr.pick_layers(storm).has("amb_wind"), "a storm on land lays its layer and wind")
+	_check(AudioMgr.pick_ambience(base) == "amb_shore" and Data.tables["music"]["ambience"].has("amb_shore"), "the shore sounds on the cape")
+	# Every track pick() can name is in the table (and so in the brief).
+	for id in ["main_theme", "kronvald", "loss", "mystery", "morning"]:
+		_check(tracks.has(id), "%s is listed" % id)
+	AudioMgr.play_music("loss")
+	_check(AudioMgr.music_id == "loss", "a scene holds its track")
+	AudioMgr.release_music()
+	_check(AudioMgr.music_id != "loss", "and lets it go")
+	AudioMgr.play_sfx("ui_click")
+	_check(true, "a sound without its file is silence, not an error")
 

@@ -86,6 +86,7 @@ func _gui_input(event: InputEvent) -> void:
 # A page tab turns the page; the others hand over to their own window (or save the game).
 func open_tab(id: String) -> void:
 	_status = ""
+	AudioMgr.play_sfx("ui_page")
 	if id in PAGES:
 		tab = id
 		queue_redraw()
