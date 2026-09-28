@@ -9,27 +9,27 @@
     "kronvald": {
       "title": "Кронвальд",
       "where": "пролог",
-      "loop_start": 29.5
+      "loop_start": 31.29
     },
     "cape_spring": {
       "title": "Вороний мыс: весна",
       "where": "мыс и остров днём, весна",
-      "loop_start": 0.0
+      "loop_start": 3.74
     },
     "cape_summer": {
       "title": "Вороний мыс: лето",
       "where": "мыс и остров днём, лето",
-      "loop_start": 0.0
+      "loop_start": 3.77
     },
     "cape_autumn": {
       "title": "Вороний мыс: осень",
       "where": "мыс и остров днём, осень",
-      "loop_start": 0.0
+      "loop_start": 3.16
     },
     "cape_winter": {
       "title": "Вороний мыс: зима",
       "where": "мыс и остров днём, зима",
-      "loop_start": 0.0
+      "loop_start": 3.0
     },
     "village_spring": {
       "title": "Сольвик: весна",
