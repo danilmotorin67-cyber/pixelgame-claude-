@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "c1cf73ac-3dc4-4860-aa9f-0c26ae7e7d64",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 1.0,
+   "action": "a knife chopping up and down, fish scales flying, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

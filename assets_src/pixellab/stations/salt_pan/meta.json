@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "c1621582-86e7-4c7c-9ddf-14b37473a623",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 8.0,
+   "action": "brine simmering, steam rising, fire flickering beneath, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

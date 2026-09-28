@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "c44df7e3-0559-4baa-a6cc-69089ed0b76f",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "furnace glow pulsing orange, sparks rising, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "e5f237cf-1e6f-46ed-a779-5900f8c5489c",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 1.0,
+   "action": "coals glowing brighter and dimmer, sparks flying, bellows pumping, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

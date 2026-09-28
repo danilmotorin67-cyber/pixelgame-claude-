@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "3933089f-b78f-49bb-a81d-6b4cce364ef2",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 3.0,
+   "action": "tiny seedlings swaying and growing a little, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

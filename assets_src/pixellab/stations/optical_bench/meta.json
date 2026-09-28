@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "7a495529-c6d6-42f6-9da1-6b135231b416",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "lens glinting, a light beam flickering through the glass, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

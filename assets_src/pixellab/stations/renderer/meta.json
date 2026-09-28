@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "0ee5bf28-9d02-4215-81ae-fc930b8d4f4b",
  "generations": 3.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "fat bubbling in the pot, fire flickering underneath, steam rising, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

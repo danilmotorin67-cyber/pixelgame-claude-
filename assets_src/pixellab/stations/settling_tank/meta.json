@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "bae41899-38e1-4685-952c-77d4208c44ee",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 2.0,
+   "action": "oil slowly swirling, bubbles rising to the surface, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

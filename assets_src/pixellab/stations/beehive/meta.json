@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "ab9fa580-fdac-4874-a99e-4e890a40337a",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 1.0,
+   "action": "several small yellow and black bees flying in circles around the hive, clearly visible, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

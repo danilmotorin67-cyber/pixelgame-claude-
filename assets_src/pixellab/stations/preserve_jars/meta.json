@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "dcd3a914-ced9-4bf7-bdec-7f23e629e109",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "jars bubbling in a hot water bath, steam rising, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

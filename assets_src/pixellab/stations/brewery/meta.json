@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "5a1f2a24-74e9-4fbf-8deb-2546df793b23",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "wort bubbling in the kettle, steam rising, fire underneath, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "51e593f5-9ec1-4b87-ab73-47c8f769fc34",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "old coat and scarf flapping in the wind, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

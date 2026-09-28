@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "1dddb7d7-3688-4d69-bae0-9de24e6a60af",
  "generations": 22.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "the shuttle sliding back and forth, threads moving, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

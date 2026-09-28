@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "33077fbc-8cde-4883-8d20-a033fcd6f362",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 8.0,
+   "action": "pinwheel spinning in the wind, ribbons fluttering, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

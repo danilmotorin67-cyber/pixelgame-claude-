@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "c1a28bc2-2e09-4e3a-9e90-f81f8aec9186",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 4.0,
+   "action": "fire flickering, flames dancing, embers glowing, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

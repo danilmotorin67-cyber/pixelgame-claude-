@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "9828f770-28bf-4756-9d76-df3764e07967",
  "generations": 21.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "the wheel spinning, yarn twisting onto the spindle, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

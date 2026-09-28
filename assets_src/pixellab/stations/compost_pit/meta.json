@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "1e8d2f9e-faee-45d2-b059-7c72e054f789",
  "generations": 3.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 1.0,
+   "action": "white wisps of warm steam curling up from the compost heap, clearly visible, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

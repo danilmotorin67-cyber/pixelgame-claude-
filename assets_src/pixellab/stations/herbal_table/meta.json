@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "c5e34ab3-e2ec-4116-98dc-368de39e98a4",
  "generations": 3.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 4.0,
+   "action": "a pestle grinding in the mortar, herb dust puffing, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "d353b13c-7ff2-49d8-b088-aa0b57e3eb1e",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "melted wax dripping into the molds, small flames flickering, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

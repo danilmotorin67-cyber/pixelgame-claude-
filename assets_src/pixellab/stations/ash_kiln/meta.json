@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "b0559c04-f958-4fbb-af3f-fc5c62f45b74",
  "generations": 23.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "fire glowing inside, smoke rising from the top, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

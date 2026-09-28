@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "2ec5b22b-1a29-46f7-802d-ed28a9de68d9",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "a saw cutting through a log back and forth, sawdust falling, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

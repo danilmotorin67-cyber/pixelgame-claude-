@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "a78754b8-22cd-4acb-98fc-2ef744280326",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "wooden blade beating flax up and down, fibres flying, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

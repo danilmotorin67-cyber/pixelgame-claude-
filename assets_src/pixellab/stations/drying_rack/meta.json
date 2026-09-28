@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "a85e36f4-bab3-415f-a935-17867d216802",
  "generations": 22.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "fish and herbs swaying gently in the wind, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

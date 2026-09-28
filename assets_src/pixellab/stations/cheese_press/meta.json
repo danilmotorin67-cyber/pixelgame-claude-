@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "f03c5562-02f2-4e84-bfda-fe53cfdf4818",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 6.0,
+   "action": "the press screw turning down slowly, whey dripping, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

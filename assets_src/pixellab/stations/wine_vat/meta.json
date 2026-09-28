@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "0c717a57-74c2-4fe3-ae62-70a79ebd0c8f",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 10.0,
+   "action": "juice bubbling, fermenting foam rising, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

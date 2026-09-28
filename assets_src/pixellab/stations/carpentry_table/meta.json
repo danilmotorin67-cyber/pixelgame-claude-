@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "87b41e2e-edf6-40f9-af11-0a5141909ce0",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "a plane gliding along the board, shavings curling up, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

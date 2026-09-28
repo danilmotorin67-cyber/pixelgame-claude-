@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "0f75da43-6465-47b4-98dc-6e7d9124756f",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 8.0,
+   "action": "the churn plunger moving up and down, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

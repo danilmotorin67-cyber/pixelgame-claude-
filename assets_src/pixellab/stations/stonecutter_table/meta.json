@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "71ce5bb9-7e31-4347-becf-cf6ee843d81e",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 4.0,
+   "action": "a chisel tapping the stone, chips and dust flying, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

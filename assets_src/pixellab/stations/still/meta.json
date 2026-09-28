@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "f799f574-0a1c-4251-a1d9-88d7b0763064",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "the copper still bubbling, steam puffing, drops dripping from the coil, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

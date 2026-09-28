@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "ebac3703-f934-4068-8475-080bec994afc",
  "generations": 3.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "fire flickering in the stove, the pot on top steaming, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

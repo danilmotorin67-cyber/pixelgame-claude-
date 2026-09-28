@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "6303461d-0c0a-45ae-a0f5-ef20e0445171",
  "generations": 2.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "windmill blades turning, water trickling, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

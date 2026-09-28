@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "522b83dd-e2b6-4e8f-b8a4-b43da8e594a1",
  "generations": 1.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 7.0,
+   "action": "the millstone turning, flour dust puffing, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }

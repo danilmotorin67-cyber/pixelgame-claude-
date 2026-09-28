@@ -9,5 +9,12 @@
  "view": "high top-down",
  "object_id": "27251e00-50d2-4b85-8dcd-5e91d8f47be5",
  "generations": 3.0,
- "date": "2026-09-27"
+ "date": "2026-09-27",
+ "animations": {
+  "work": {
+   "generations": 5.0,
+   "action": "smoke puffing from the roof, hanging fish swaying inside, seamless loop, same object",
+   "frames": 7
+  }
+ }
 }
