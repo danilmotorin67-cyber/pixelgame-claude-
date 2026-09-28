@@ -1,1 +1,1 @@
-{"frame": [68, 68], "foot": 57, "cols": 6, "anims": {"walk": [0, 6], "idle": [4, 4]}, "idle_frames": 4}
+{"frame": [80, 80], "foot": 63, "cols": 7, "anims": {"walk": [0, 6], "idle": [4, 4], "hoe": [8, 7], "water": [12, 7], "axe": [16, 7], "pick": [20, 7], "scythe": [24, 7], "shovel": [28, 7], "cast": [32, 7], "reel": [36, 7], "net": [40, 7], "attack": [44, 7], "carry": [48, 7], "swim": [52, 7], "sit": [56, 5], "sleep": [60, 5]}, "idle_frames": 4}

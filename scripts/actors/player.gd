@@ -51,6 +51,7 @@ var _sheet_id := ""
 var _still_time := 0.0
 var _fish_state := "idle"
 var pose := ""
+var _pose_start := 0
 var anim_name := "idle"
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
@@ -262,7 +263,8 @@ func has_anim(anim: String) -> bool:
 func _pick_anim(moving: bool) -> Array:
 	var ticks := Time.get_ticks_msec()
 	if pose != "" and has_anim(pose):
-		return [pose, ticks / 250]
+		# Lying down plays once and stays down.
+		return [pose, mini(int(_anims[pose][1]) - 1, (ticks - _pose_start) / 150)]
 	if tool_time > 0.0 and has_anim(tool_anim()):
 		var total: int = int(_anims[tool_anim()][1])
 		return [tool_anim(), mini(total - 1, int((1.0 - tool_time / TOOL_DURATION) * total))]
@@ -276,7 +278,9 @@ func _pick_anim(moving: bool) -> Array:
 	if Router.current_map == "deep" and Deep.active and Deep.gear() != "suit" and has_anim("swim"):
 		return ["swim", ticks / (110 if moving else 220)]
 	if Graveyard.carried != "" and has_anim("carry"):
-		return ["carry", int(_walk_time * 8.0) if moving else 0]
+		# PixelLab's cycle lifts the body first: the last four frames are the walk under the load.
+		var carried: int = int(_anims["carry"][1])
+		return ["carry", carried - 4 + int(_walk_time * 8.0) % 4 if moving else carried - 1]
 	if moving:
 		return ["walk", int(_walk_time * 8.0)]
 	if _still_time > SIT_AFTER and has_anim("sit") and not Router.current_map in ["deep", "grotto", "sea"]:
@@ -295,9 +299,10 @@ func lie_down(then: Callable) -> void:
 		then.call()
 		return
 	pose = "sleep"
+	_pose_start = Time.get_ticks_msec()
 	facing = Vector2.DOWN
 	_update_sprite(false)
-	await get_tree().create_timer(0.9).timeout
+	await get_tree().create_timer(1.4).timeout
 	pose = ""
 	then.call()
 

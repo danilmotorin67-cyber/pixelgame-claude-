@@ -31,6 +31,177 @@
     "north",
     "west"
    ]
+  },
+  "hoe": {
+   "group": "f003100d-5f6f-4a8b-85cf-06c6ee88486e",
+   "action_description": "raising a garden hoe over the head with both hands and striking the ground in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "pick": {
+   "group": "9283de12-366e-49d9-b656-6f0c37776371",
+   "action_description": "swinging a pickaxe high over the head and striking down at a rock in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "scythe": {
+   "group": "fc4ae4d9-a3a0-4033-90eb-b9c1865eea9e",
+   "action_description": "sweeping a long scythe low from side to side, mowing",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "axe": {
+   "group": "82a8c2ca-0a6f-4ae2-91d4-f3bfad29c03c",
+   "action_description": "swinging a wood axe over the shoulder and chopping forward",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "shovel": {
+   "group": "4c499545-78c2-4795-b5be-674b20bfb806",
+   "action_description": "digging with a spade: pushing it into the ground and lifting a clump of earth",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "water": {
+   "group": "c43523a6-6174-4ac5-9a41-9b134c310021",
+   "action_description": "tilting a metal watering can forward, water pouring onto the ground in front",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "reel": {
+   "group": "8874afce-28d1-48b9-8ee2-6fcb73acf647",
+   "action_description": "holding a bent fishing rod with both hands, pulling back and reeling in a fighting fish",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "cast": {
+   "group": "84659897-5914-40f5-874b-013f3e762f5e",
+   "action_description": "casting a fishing rod: swinging the rod back over the shoulder and flicking it forward",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "net": {
+   "group": "a06128f5-eff5-4099-84e1-8fef7b8c3603",
+   "action_description": "sweeping a small hand net on a pole down and forward, scooping",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "attack": {
+   "group": "19b0dcfd-5d34-4877-9926-40229bd73d15",
+   "action_description": "slashing forward with a short cutlass in one hand, quick strike",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "carry": {
+   "group": "df1a8a4c-6212-4de2-8c75-9ca952107f85",
+   "action_description": "walking slowly while carrying a long canvas-wrapped body over one shoulder",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "sleep": {
+   "group": "9554db50-f4d7-44b5-8b7e-fac0a4e86653",
+   "action_description": "lying on the ground on the back, asleep, chest rising and falling slowly",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  },
+  "sit": {
+   "group": "9804c4c6-5e3c-4184-a85b-fa17574739da",
+   "action_description": "sitting on the ground with knees up, resting and breathing slowly",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 4
+  },
+  "swim": {
+   "group": "6cdda6ad-5d89-43b9-8e6e-b3d676d233e9",
+   "action_description": "swimming breaststroke underwater, body horizontal, arms and legs kicking",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "net:2": {
+   "group": "7a5c5272-7f66-4001-ae46-78e516e2b294",
+   "action_description": "sweeping a small hand net on a pole down and forward, scooping",
+   "directions": [
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "shovel:2": {
+   "group": "ac32a43f-fd37-4c25-8ce2-4c5733e9da78",
+   "action_description": "digging with a spade, the spade clearly visible: pushing it into the ground and lifting a clump of earth",
+   "directions": [
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "pick:2": {
+   "group": "1db30d1d-972c-480d-b240-90fcc0c1e832",
+   "action_description": "swinging a pickaxe: lifting it over the shoulder and bringing it down hard onto a rock on the ground in front, no magic, no glow, no effects",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "reel:2": {
+   "group": "0547369a-b5e4-4b4d-bc3d-ecc83d28704f",
+   "action_description": "holding a bent fishing rod with both hands, pulling back and reeling in a fighting fish",
+   "directions": [
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }

@@ -112,7 +112,11 @@ def build_cast():
             strips = []
             meta_path = os.path.join(folder, "metadata.json")
             if os.path.exists(meta_path):
-                frames = json.load(open(meta_path))["states"][0]["frames"]
+                # A character made as a state of another (hero_suit) exports the whole group; meta.json
+                # names which state is its own.
+                own = json.load(open(os.path.join(folder, "meta.json"))).get("state", 0) \
+                    if os.path.exists(os.path.join(folder, "meta.json")) else 0
+                frames = json.load(open(meta_path))["states"][own]["frames"]
                 load = lambda rel: Image.open(os.path.join(folder, rel)).convert("RGBA")
                 for d in ("south", "east", "north", "west"):
                     if d in frames["rotations"]:
@@ -190,7 +194,9 @@ def build_hero():
                 flip = d == "west" and "west" not in dirs and "east" in dirs
                 row, n = dirs["east"] if flip else dirs.get(d, dirs.get("south", next(iter(dirs.values()))))
                 for k in range(count):
-                    frame = src.crop((k % n * fw, row * fh, (k % n + 1) * fw, (row + 1) * fh))
+                    # Cycles wrap; a one-off action shorter in this direction holds its last pose.
+                    j = k % n if anim in ("walk", "idle") else min(k, n - 1)
+                    frame = src.crop((j * fw, row * fh, (j + 1) * fw, (row + 1) * fh))
                     if flip:
                         frame = frame.transpose(Image.FLIP_LEFT_RIGHT)
                     sheet.paste(frame, (k * fw, (block * 4 + r) * fh))

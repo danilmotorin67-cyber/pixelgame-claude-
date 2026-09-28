@@ -122,6 +122,96 @@
     "north"
    ],
    "frame_count": 6
+  },
+  "attack": {
+   "group": "eb41b7eb-369a-4962-b830-976e0b9e9874",
+   "action_description": "slashing forward with a short cutlass in one hand, quick strike",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "carry": {
+   "group": "93d80e37-c74c-45ce-b1d1-5c36e4443ee1",
+   "action_description": "walking slowly while carrying a long canvas-wrapped body over one shoulder",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "swim": {
+   "group": "172fab44-50c1-402a-9cc6-51fc397f2459",
+   "action_description": "swimming breaststroke underwater, body horizontal, arms and legs kicking",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "sleep": {
+   "group": "663937a2-06f2-4c1f-89ea-462936e62333",
+   "action_description": "lying on the ground on the back, asleep, chest rising and falling slowly",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  },
+  "sit": {
+   "group": "d3d76206-0536-4418-aea8-a498296d048b",
+   "action_description": "sitting on the ground with knees up, resting and breathing slowly",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 4
+  },
+  "cast:2": {
+   "group": "3f00ff59-da87-43f6-87a3-a8c700dbb81e",
+   "action_description": "casting a fishing rod: swinging the rod back over the shoulder and flicking it forward",
+   "directions": [
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "sleep:2": {
+   "group": "a9b27c8c-34c2-434a-b50c-3378fe5321f8",
+   "action_description": "slowly lying down on the ground on the side and falling asleep",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "water:2": {
+   "group": "41c0ec03-9968-4986-a7ea-9d28c8e68681",
+   "action_description": "tilting a metal watering can forward, water pouring onto the ground in front",
+   "directions": [
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "sit:2": {
+   "group": "d83983a0-0878-470a-8851-2774dc555532",
+   "action_description": "sitting down cross-legged on the ground and resting",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "pick:2": {
+   "group": "836602d1-62b6-4814-8f22-cee238412414",
+   "action_description": "swinging a pickaxe: lifting it over the shoulder and bringing it down hard onto a rock on the ground in front, no magic, no glow, no effects",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }

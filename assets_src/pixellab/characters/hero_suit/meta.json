@@ -1,0 +1,15 @@
+{
+ "id": "hero_suit",
+ "method": "create-character-state",
+ "prompt": "wearing an old brass diving helmet with a round glass window and a thick canvas diving suit with heavy lead boots, the face hidden behind the helmet glass",
+ "source": "hero_male",
+ "character_id": "79b6fcfc-9fae-42b2-b448-30702f1cc7fd",
+ "date": "2026-09-28",
+ "animations": {
+  "walking": {
+   "generations": 4.0,
+   "group": "e51bdf9e-d1ea-4a72-beee-135f9dcfad1d"
+  }
+ },
+ "state": 1
+}
