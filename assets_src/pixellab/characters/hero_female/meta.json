@@ -202,6 +202,16 @@
     "north"
    ],
    "frame_count": 6
+  },
+  "harpoon": {
+   "group": "671daaf5-ca2d-4fe1-a4f9-53dd4fa7a836",
+   "action_description": "aiming a harpoon gun at the shoulder and firing it, the gun kicking back",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
   }
  }
 }

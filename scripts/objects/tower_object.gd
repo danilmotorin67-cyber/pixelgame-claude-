@@ -135,6 +135,7 @@ func interact(player: Player) -> void:
 				_hint("Нужен отдых, сил на работу нет.")
 			elif Lighthouse.clean_glass():
 				player.spend_energy("clean_glass")
+				player.play_pose("clean_glass", 1.2)
 				_hint("Стёкла протёрты: чистота %d." % int(Lighthouse.cleanliness))
 			else:
 				_hint("Нужна ветошь.")
@@ -261,6 +262,7 @@ func _use_lamp(player: Player) -> void:
 		return
 	_keeper = player
 	_held = 0.0
+	player.play_pose("light_lamp", hold_seconds() + 0.3)
 
 
 func hold_seconds() -> float:
@@ -276,6 +278,7 @@ func _start_winding(player: Player) -> void:
 		return
 	_keeper = player
 	_winding = true
+	player.play_pose("wind", 0.0, true)
 	_wind_angle = 0.0
 	_last_angle = (get_global_mouse_position() - global_position).angle()
 	_hint("Заводка: три круга мышью вокруг механизма.")
@@ -289,6 +292,8 @@ func add_rotation(radians: float) -> bool:
 	queue_redraw()
 	if _wind_angle >= TAU * WIND_TURNS:
 		_winding = false
+		if _keeper:
+			_keeper.stop_pose()
 		if Lighthouse.wind() and _keeper:
 			_keeper.spend_energy("wind_mechanism")
 		_hint("Механизм заведён · сила %d" % int(Lighthouse.base_power()))
@@ -303,6 +308,8 @@ func _process(delta: float) -> void:
 	if _winding:
 		if _keeper == null or _keeper.global_position.distance_to(global_position) > 40.0:
 			_winding = false
+			if _keeper:
+				_keeper.stop_pose()
 			return
 		var angle := (get_global_mouse_position() - global_position).angle()
 		var stick := Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -315,6 +322,7 @@ func _process(delta: float) -> void:
 		return
 	if Clock.paused or not Input.is_action_pressed("interact") or \
 			_keeper.global_position.distance_to(global_position) > 40.0:
+		_keeper.stop_pose()
 		_keeper = null
 		_hint("Спичка погасла. Удерживайте E дольше.")
 		return

@@ -82,13 +82,19 @@ func _draw() -> void:
 		draw_rect(Rect2(Vector2(size.x / 2.0 - 3, size.y / 2.0), Vector2(2, 3)), Color("#4a3428"))
 
 
-func interact(_player: Player) -> void:
+func interact(player: Player) -> void:
 	var a := Animals.find(animal_id)
 	var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
 	if a.is_empty() or hint == null:
 		return
-	if kind() == "pony" and Animals.pet(animal_id) == false:
+	var petted := Animals.pet(animal_id)
+	if kind() == "pony" and not petted:
 		hint.text = "Пони осёдлан." if Animals.toggle_ride() else "Вы спешились."
 		return
-	hint.text = "%s довольно фыркает. Дружба: %d." % [str(a["name"]), int(a["friendship"])] if Animals.pet(animal_id) \
-		else "Сегодня %s уже гладили." % str(a["name"])
+	if petted:
+		hint.text = "%s довольно фыркает. Дружба: %d." % [str(a["name"]), int(a["friendship"])]
+		if player:
+			player.facing = (global_position - player.global_position).normalized()
+			player.play_pose("pet", 1.0)
+	else:
+		hint.text = "Сегодня %s уже гладили." % str(a["name"])

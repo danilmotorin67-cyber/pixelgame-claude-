@@ -62,8 +62,13 @@ func _draw() -> void:
 		draw_rect(Rect2(-4, -5, 8, 6), Color("#2a2a30"))
 
 
-func interact(_player: Player) -> void:
+func interact(player: Player) -> void:
 	var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
 	if hint:
 		hint.text = "Фитиль приоткрывает жёлтый глаз и снова засыпает." if sleeping() \
-			else "Фитиль трётся о сапог и громко мурлычет."
+			else "Фитиль позволяет себя поднять и громко мурлычет."
+	if player and not sleeping():
+		# The keeper holds him a moment; he is part of the picture meanwhile.
+		player.play_pose("lift_cat", 1.6)
+		visible = false
+		get_tree().create_timer(1.6).timeout.connect(func() -> void: visible = true)

@@ -28,6 +28,7 @@ var _charge_at: Vector2 = Vector2.ZERO
 var _charge_step: int = 0
 const CHARGE_MS := 400
 const TOOL_DURATION := 0.5
+const DODGE_TIME := 0.18
 const CARRY_SPEED := 0.6
 const CARRY_TILES_PER_ENERGY := 10.0
 
@@ -40,7 +41,7 @@ const IDLE_ROW := 4
 const SIT_AFTER := 12.0
 # What each play_tool kind shows; "hoe" is also the generic blow and follows the item in hand.
 const TOOL_ANIMS := {"hoe": "hoe", "can": "water", "water": "water", "axe": "axe", "pick": "pick",
-	"scythe": "scythe", "shovel": "shovel", "net": "net", "attack": "attack", "cast": "cast"}
+	"scythe": "scythe", "shovel": "shovel", "net": "net", "attack": "attack", "cast": "cast", "harpoon": "harpoon"}
 const ITEM_ANIMS := {"tool_hoe": "hoe", "tool_can": "water", "tool_axe": "axe", "tool_pick": "pick",
 	"tool_scythe": "scythe", "tool_shovel": "shovel", "hand_net": "net"}
 var _idle_frames := 4
@@ -52,6 +53,9 @@ var _still_time := 0.0
 var _fish_state := "idle"
 var pose := ""
 var _pose_start := 0
+# A short pose (eating, lighting the lamp, stroking a sheep): plays once for its time, or loops (winding).
+var _pose_until := 0
+var _pose_loop := false
 var anim_name := "idle"
 @onready var sprite: Sprite2D = $Body
 @onready var tool_art: Node2D = $ToolArt
@@ -73,9 +77,18 @@ func _ready() -> void:
 	_setup_sprite()
 	_update_sprite(false)
 	Events.time_tick.connect(warm_or_chill)
+	# A little cheer for a new skill level, a finished quest and a legendary fish.
+	Events.level_up.connect(func(_s: String, _l: int) -> void: _cheer())
+	Events.quest_completed.connect(func(_q: String) -> void: _cheer())
+	Events.fish_caught.connect(func(id: String, _q: int, _s: float) -> void:
+		if bool(Data.by_id("fish", id).get("legendary", false)):
+			_cheer())
 
 
 func _physics_process(delta: float) -> void:
+	if pose != "" and _pose_until > 0 and Time.get_ticks_msec() >= _pose_until:
+		pose = ""
+		_pose_until = 0
 	if Cutscenes.playing or Clock.paused or pose != "":
 		velocity = Vector2.ZERO
 		if pose != "":
@@ -263,16 +276,22 @@ func has_anim(anim: String) -> bool:
 func _pick_anim(moving: bool) -> Array:
 	var ticks := Time.get_ticks_msec()
 	if pose != "" and has_anim(pose):
-		# Lying down plays once and stays down.
-		return [pose, mini(int(_anims[pose][1]) - 1, (ticks - _pose_start) / 150)]
+		# A pose plays once and holds its last frame (lying down stays down), or loops.
+		var n := (ticks - _pose_start) / 150
+		return [pose, n if _pose_loop else mini(int(_anims[pose][1]) - 1, n)]
+	if _dodge_t > 0.0 and has_anim("dodge"):
+		return ["dodge", int((1.0 - _dodge_t / DODGE_TIME) * float(_anims["dodge"][1]))]
 	if tool_time > 0.0 and has_anim(tool_anim()):
 		var total: int = int(_anims[tool_anim()][1])
 		return [tool_anim(), mini(total - 1, int((1.0 - tool_time / TOOL_DURATION) * total))]
 	match _fish_state:
 		"charging":
 			return ["cast", 1]
-		"waiting", "bite":
+		"waiting":
 			return ["cast", -1]
+		"bite":
+			# Plop! The keeper starts.
+			return ["surprised", (ticks / 120) % 4] if has_anim("surprised") else ["cast", -1]
 		"reeling":
 			return ["reel", ticks / 110]
 	if Router.current_map == "deep" and Deep.active and Deep.gear() != "suit" and has_anim("swim"):
@@ -289,6 +308,46 @@ func _pick_anim(moving: bool) -> Array:
 		var k := int((_still_time - SIT_AFTER) * 6.0)
 		return ["sit", k if k < total else total - 2 + (ticks / 600) % 2]
 	return ["idle", ticks / 160]
+
+
+# A short pose of the keeper's own business: `seconds` of it, or until stop_pose() when `loop`.
+# Poses the sheet lacks are skipped. The keeper stands still meanwhile.
+func play_pose(name: String, seconds := 1.0, loop := false) -> void:
+	if not has_anim(name) or pose == "sleep" or pose == "faint":
+		return
+	pose = name
+	_pose_loop = loop
+	_pose_start = Time.get_ticks_msec()
+	_pose_until = 0 if loop else _pose_start + int(seconds * 1000.0)
+	_update_sprite(false)
+
+
+func _cheer() -> void:
+	if is_inside_tree() and pose == "" and tool_time <= 0.0 and Router.current_map != "sea":
+		play_pose("happy", 1.0)
+
+
+func stop_pose() -> void:
+	if pose != "sleep" and pose != "faint":
+		pose = ""
+		_pose_until = 0
+		_pose_loop = false
+
+
+# Two in the morning on your feet (6.4): the keeper sways and drops, then the night.
+func collapse(then: Callable) -> void:
+	if not has_anim("faint") or not is_inside_tree():
+		then.call()
+		return
+	pose = "faint"
+	_pose_loop = false
+	_pose_until = 0
+	_pose_start = Time.get_ticks_msec()
+	facing = Vector2.DOWN
+	_update_sprite(false)
+	await get_tree().create_timer(1.4).timeout
+	pose = ""
+	then.call()
 
 
 # Lying down before sleep (the bed, the bot's cabin): a moment on the pillow, then the night.
@@ -342,7 +401,11 @@ func play_tool(kind: String, target: Vector2) -> void:
 		facing = toward.normalized()
 	if kind == "hoe":
 		var held := Inventory.selected_id()
-		kind = "attack" if str(Data.by_id("items", held).get("category", "")) == "weapon" else str(ITEM_ANIMS.get(held, "hoe"))
+		if str(Data.by_id("items", held).get("category", "")) == "weapon":
+			# Guns that shoot from afar fire; the rest strike.
+			kind = "harpoon" if int(Data.by_id("weapons", held).get("ranged", 1)) > 1 else "attack"
+		else:
+			kind = str(ITEM_ANIMS.get(held, "hoe"))
 	tool_kind = kind
 	tool_time = TOOL_DURATION * (float(Game.balance("fatigue_tool_time", 1.25)) if is_tired() else 1.0) \
 		* (1.2 if Cold.shivering(cold) else 1.0)
@@ -421,6 +484,8 @@ func eat_selected() -> String:
 			cold = 0.0
 	if Cold.is_warm_food(id):
 		cold = maxf(0.0, cold - float(Cold.cfg("warm_food_relief", 20)))
+	if is_inside_tree():
+		play_pose("eat", 0.9)
 	return id
 
 
@@ -663,7 +728,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("dodge") and _dodge_t <= 0.0:
 		if _combat() != null and not _combat().dodge():
 			return
-		_dodge_t = 0.18
+		_dodge_t = DODGE_TIME
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label

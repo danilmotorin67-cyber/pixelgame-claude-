@@ -170,7 +170,8 @@ def build_cast():
 HERO_ORDER = ("south", "west", "east", "north")  # the player's rows: down, left, right, up
 # Blocks of four rows (HERO_ORDER) in this order; the first two keep the old walk/idle layout.
 HERO_ANIMS = ("walk", "idle", "hoe", "water", "axe", "pick", "scythe", "shovel", "cast", "reel", "net", "attack",
-              "carry", "swim", "sit", "sleep")
+              "carry", "swim", "sit", "sleep", "harpoon", "dodge", "rite", "light_lamp", "clean_glass", "wind",
+              "ring_bell", "pet", "eat", "faint", "lift_cat", "surprised", "happy")
 
 
 def build_hero():

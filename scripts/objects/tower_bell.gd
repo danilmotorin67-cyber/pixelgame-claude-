@@ -20,11 +20,13 @@ func _draw() -> void:
 		Color("#c9a24a"))
 
 
-func interact(_player: Player) -> void:
+func interact(player: Player) -> void:
 	var hint: Label = get_tree().current_scene.get_node("HUD/Hint")
 	if not Lighthouse.foggy():
 		hint.text = "Колокол нужен в туман и в Ночи Хмари."
 	elif Lighthouse.ring_bell():
 		hint.text = "Колокол звонит над туманом. Следующий раз — через час."
+		if player:
+			player.play_pose("ring_bell", 1.0)
 	else:
 		hint.text = "В этот час уже звонили."

@@ -212,6 +212,86 @@
     "north"
    ],
    "frame_count": 6
+  },
+  "dodge": {
+   "group": "744bccb6-17e1-44af-a92f-2ff1b5d9fbbf",
+   "action_description": "quick dodge roll forward along the ground and back up",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "rite": {
+   "group": "a3d1560a-ae36-46d8-a62b-dff35288a3dc",
+   "action_description": "kneeling before a low stone, laying both hands on it, head bowed",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "light_lamp": {
+   "group": "f9a28699-b8bd-4b2d-871c-7bcdf82d4420",
+   "action_description": "reaching up with a long burning match and lighting a lamp, the flame catching",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "faint": {
+   "group": "d3d53daa-2565-440e-a69b-b8b24c5ed03d",
+   "action_description": "swaying on the spot, eyes closing, then collapsing to the ground",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "harpoon": {
+   "group": "d5b8ff9c-0e51-4241-822e-72f209087c25",
+   "action_description": "aiming a harpoon gun at the shoulder and firing it, the gun kicking back",
+   "directions": [
+    "south",
+    "east",
+    "north"
+   ],
+   "frame_count": 6
+  },
+  "surprised": {
+   "group": "4db7f93c-50c3-4209-90e8-13924052e81f",
+   "action_description": "startled: a small jump back with both hands raised, eyes wide",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
+  },
+  "lift_cat": {
+   "group": "e881b089-3fce-4945-b935-afb25894a36e",
+   "action_description": "picking up a black cat and holding it in the arms, smiling",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "eat": {
+   "group": "6b6a8735-c03e-4883-b890-d99c39317a7e",
+   "action_description": "eating: lifting food to the mouth and chewing happily",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 6
+  },
+  "happy": {
+   "group": "bca6e219-a4b5-4c3a-ba37-423113f65ad8",
+   "action_description": "happy little jump, cheering with both arms raised",
+   "directions": [
+    "south"
+   ],
+   "frame_count": 4
   }
  }
 }

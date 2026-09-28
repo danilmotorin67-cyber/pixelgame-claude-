@@ -70,7 +70,13 @@ func advance(mins: int) -> void:
 		if hour != old_hour:
 			Events.hour_changed.emit(hour)
 		if old_minutes < FAINT_MINUTE and minutes >= FAINT_MINUTE:
-			Night.end_day(true)
+			# On screen the keeper sways and drops first; headless runs (tests) go straight to the night.
+			var keeper := get_tree().current_scene.get_node_or_null("Player") if get_tree().current_scene else null
+			if keeper and keeper.has_method("collapse") and DisplayServer.get_name() != "headless":
+				paused = true
+				keeper.collapse(func() -> void: Night.end_day(true))
+			else:
+				Night.end_day(true)
 			return
 
 

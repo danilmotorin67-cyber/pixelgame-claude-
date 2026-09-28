@@ -27,6 +27,20 @@ ACTIONS = {
  "swim": ("swimming breaststroke underwater, body horizontal, arms and legs kicking", SIDE, 6),
  "sit": ("sitting on the ground with knees up, resting and breathing slowly", SIDE, 4),
  "sleep": ("lying on the ground on the back, asleep, chest rising and falling slowly", ["south"], 4),
+ # The keeper's own business, the rest of the manifest.
+ "harpoon": ("aiming a harpoon gun at the shoulder and firing it, the gun kicking back", SIDE, 6),
+ "dodge": ("quick dodge roll forward along the ground and back up", SIDE, 6),
+ "rite": ("kneeling before a low stone, laying both hands on it, head bowed", SIDE, 6),
+ "light_lamp": ("reaching up with a long burning match and lighting a lamp, the flame catching", SIDE, 6),
+ "clean_glass": ("wiping a pane of glass in circles with a rag, arm raised", SIDE, 6),
+ "wind": ("turning a big crank handle round and round with both hands", SIDE, 6),
+ "ring_bell": ("pulling a bell rope down hard, then letting it go up", SIDE, 6),
+ "pet": ("crouching down and stroking a small animal on the ground", SIDE, 6),
+ "eat": ("eating: lifting food to the mouth and chewing happily", ["south"], 6),
+ "faint": ("swaying on the spot, eyes closing, then collapsing to the ground", ["south"], 6),
+ "lift_cat": ("picking up a black cat and holding it in the arms, smiling", ["south"], 6),
+ "surprised": ("startled: a small jump back with both hands raised, eyes wide", ["south"], 4),
+ "happy": ("happy little jump, cheering with both arms raised", ["south"], 4),
 }
 # Second takes ("<action>:2"): directions PixelLab left out and the weakest ones. They are stored
 # under the same animation name; build_art.py lets the later take win direction by direction.

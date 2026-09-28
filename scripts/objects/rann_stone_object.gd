@@ -27,7 +27,7 @@ func _draw() -> void:
 		draw_rect(Rect2(-11, 1, 6, 1), Color("#e8f4f0"))
 
 
-func interact(_player: Player) -> void:
+func interact(player: Player) -> void:
 	var hud := get_tree().current_scene.get_node("HUD") as CanvasLayer
 	var body := func() -> String:
 		var where := "Камень сух: подношение кладут на него." if RannStone.dry() \
@@ -36,7 +36,10 @@ func interact(_player: Player) -> void:
 		return "Камень Ранн. %s\nМилость моря: %d. %s" % [where, int(Sea.mercy),
 			"Сегодня можно сделать подношение." if left > 0 else "Сегодня море уже приняло дар."]
 	var give := func(_panel: InfoPanel) -> String:
-		return str(RannStone.offer(Inventory.selected_hotbar)["text"])
+		var result := RannStone.offer(Inventory.selected_hotbar)
+		if bool(result.get("ok", false)) and player:
+			player.play_pose("rite", 1.6)
+		return str(result["text"])
 	var calm := func(_panel: InfoPanel) -> String:
 		return str(RannStone.request_calm()["text"])
 	var buttons: Array = [["Поднести", give]]
