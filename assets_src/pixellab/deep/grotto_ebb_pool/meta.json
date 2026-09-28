@@ -1,0 +1,13 @@
+{
+ "id": "grotto_ebb_pool",
+ "method": "map-objects",
+ "prompt": "shallow round puddle of blue-green sea water with a grey stone rim and small shells, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "202d2090-caa5-4f54-b9db-0eb2a3bdd103",
+ "generations": 8.0,
+ "date": "2026-09-28"
+}

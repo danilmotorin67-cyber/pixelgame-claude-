@@ -1,0 +1,13 @@
+{
+ "id": "deep_bone_coral",
+ "method": "map-objects",
+ "prompt": "branching pale deep-sea coral bush glowing faint blue, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "7f4e982f-0570-4557-80d8-74e605c1e5bf",
+ "generations": 2.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "grotto_entry",
+ "method": "map-objects",
+ "prompt": "short flight of worn stone steps going up, wet grey stone, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "fef78bc2-9a1c-45d5-893a-e705e65ae7c3",
+ "generations": 9.0,
+ "date": "2026-09-28"
+}

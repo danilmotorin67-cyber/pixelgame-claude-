@@ -1,0 +1,13 @@
+{
+ "id": "deep_chest_solvik",
+ "method": "map-objects",
+ "prompt": "iron-bound wooden chest half buried among old cobblestones, closed, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b5139c08-f2e3-4200-91a7-157929434ef0",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

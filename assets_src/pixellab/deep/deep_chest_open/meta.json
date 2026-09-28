@@ -1,0 +1,13 @@
+{
+ "id": "deep_chest_open",
+ "method": "map-objects",
+ "prompt": "old sea chest with the lid thrown open, empty inside, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "abb42fd1-dff0-4ff3-8e48-24af43b84fb2",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

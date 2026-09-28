@@ -1,0 +1,13 @@
+{
+ "id": "grotto_tidepool",
+ "method": "map-objects",
+ "prompt": "small rocky basin of clear sea water with a red starfish and green anemones, grey rock rim, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "22c7f4b4-5c19-4c00-b0f9-42790f7c1330",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

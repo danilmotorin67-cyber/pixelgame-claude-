@@ -1,0 +1,13 @@
+{
+ "id": "grotto_pedestal",
+ "method": "map-objects",
+ "prompt": "carved stone pedestal with an empty round hollow on top, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "576604d1-b062-4b40-a1ab-d4006fcfad45",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

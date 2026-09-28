@@ -1,0 +1,13 @@
+{
+ "id": "grotto_salt",
+ "method": "map-objects",
+ "prompt": "cluster of white salt crystals growing on rock, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e0de9489-1067-49b0-b770-c959d1f58666",
+ "generations": 8.0,
+ "date": "2026-09-28"
+}

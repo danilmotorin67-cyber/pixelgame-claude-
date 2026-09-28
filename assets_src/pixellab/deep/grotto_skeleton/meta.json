@@ -1,0 +1,13 @@
+{
+ "id": "grotto_skeleton",
+ "method": "map-objects",
+ "prompt": "old sailor's skeleton sitting against a rock with a rusty lantern, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "8982a2af-52c2-49a9-b39e-72e0e3366f54",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

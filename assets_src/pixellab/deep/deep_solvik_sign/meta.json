@@ -1,0 +1,13 @@
+{
+ "id": "deep_solvik_sign",
+ "method": "map-objects",
+ "prompt": "tilted wooden shop sign with a painted fish picture on a post, overgrown with weed, blank board, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "f20e4eed-e480-4ce2-8c40-7b740ac1dd56",
+ "generations": 1.0,
+ "date": "2026-09-28"
+}

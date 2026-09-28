@@ -1,0 +1,13 @@
+{
+ "id": "deep_solvik_door",
+ "method": "map-objects",
+ "prompt": "fallen wooden house door with an iron knocker, covered in silt, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "99f17156-35b6-48c1-9e7d-20d471f10a89",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

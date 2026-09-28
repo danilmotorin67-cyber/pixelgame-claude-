@@ -1,0 +1,13 @@
+{
+ "id": "grotto_plate",
+ "method": "map-objects",
+ "prompt": "square stone pressure plate set into the cave floor, carved rim, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "7c3aabd9-a97c-49f0-908c-685c4a3f9567",
+ "generations": 9.0,
+ "date": "2026-09-28"
+}

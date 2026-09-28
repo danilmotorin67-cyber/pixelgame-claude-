@@ -86,6 +86,31 @@ static func corners_from_cells(cells: PackedInt32Array, w: int, h: int, priority
 	return out
 
 
+# A cell map (1 = upper terrain) drawn on the dual grid: tile corners sit on cell centres, so a single wall
+# cell still shows and the edge between terrains falls on the cell border, where collisions are.
+# overlay: skip tiles with no upper corner (the lower terrain drawn before shows through).
+static func draw_cells(canvas: CanvasItem, cells: PackedInt32Array, w: int, h: int, set_id: String,
+		overlay := false) -> bool:
+	var info := tileset(set_id)
+	if info.is_empty():
+		return false
+	var size: int = info["tile"]
+	for ty in h + 1:
+		for tx in w + 1:
+			var key := ""
+			for d in [Vector2i(-1, -1), Vector2i(0, -1), Vector2i(-1, 0), Vector2i(0, 0)]:
+				var cx := clampi(tx + d.x, 0, w - 1)
+				var cy := clampi(ty + d.y, 0, h - 1)
+				key += "1" if cells[cy * w + cx] == 1 else "0"
+			if overlay and key == "0000":
+				continue
+			var index := int(info["cells"].get(key, info["cells"]["0000"]))
+			canvas.draw_texture_rect_region(info["texture"],
+				Rect2(Vector2(tx * CELL - CELL / 2, ty * CELL - CELL / 2), Vector2(CELL, CELL)),
+				Rect2((index % 4) * size, (index / 4) * size, size, size))
+	return true
+
+
 # A texture's full tile (every corner `side`) for flat fills such as deep water or ice.
 static func full_tile(info: Dictionary, upper := true) -> Rect2:
 	var index := int(info["cells"]["1111" if upper else "0000"])

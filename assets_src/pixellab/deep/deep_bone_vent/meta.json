@@ -1,0 +1,13 @@
+{
+ "id": "deep_bone_vent",
+ "method": "map-objects",
+ "prompt": "black rock chimney of a hydrothermal vent with orange glow, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "387c766d-3da8-4ee3-b61b-fa75897e6c30",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

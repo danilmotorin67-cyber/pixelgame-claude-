@@ -1,0 +1,13 @@
+{
+ "id": "deep_bone_rib",
+ "method": "map-objects",
+ "prompt": "giant curved whale rib bone sticking out of dark silt, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "2e8637d0-93f0-437e-89cf-59caa3170d35",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

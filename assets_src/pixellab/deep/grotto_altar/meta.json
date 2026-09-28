@@ -1,0 +1,13 @@
+{
+ "id": "grotto_altar",
+ "method": "map-objects",
+ "prompt": "ancient grey stone altar block carved with waves and nine small figures, a shell on top, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  48,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "8308f0e0-5ead-4839-a6f3-26c83a034940",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

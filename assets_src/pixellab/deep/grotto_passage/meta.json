@@ -1,0 +1,13 @@
+{
+ "id": "grotto_passage",
+ "method": "map-objects",
+ "prompt": "round dark hole in the rock floor with worn stone steps leading down into it, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "6fc5ea69-4fd5-4e8d-8ddd-f9300697cb82",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

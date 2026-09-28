@@ -1,0 +1,13 @@
+{
+ "id": "grotto_stalactite",
+ "method": "map-objects",
+ "prompt": "stalactite column dripping water, wet rock, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "7b3a8840-b805-4260-9cba-deacbb59e942",
+ "generations": 8.0,
+ "date": "2026-09-28"
+}

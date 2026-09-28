@@ -1,0 +1,13 @@
+{
+ "id": "deep_rope_up",
+ "method": "map-objects",
+ "prompt": "thick knotted hemp rope hanging down from the surface, a lead weight at its end, bubbles, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "a076f545-8b90-49cc-b162-5918b496c6a9",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

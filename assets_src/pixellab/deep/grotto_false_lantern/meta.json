@@ -1,0 +1,13 @@
+{
+ "id": "grotto_false_lantern",
+ "method": "map-objects",
+ "prompt": "crooked old wrecker's lantern on a pole, glowing orange, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "5c1f585d-d205-4cf0-955a-3a7a0fa81774",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

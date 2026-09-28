@@ -1,0 +1,13 @@
+{
+ "id": "deep_debris",
+ "method": "map-objects",
+ "prompt": "big heap of shipwreck debris: broken planks, a ship wheel, rusty chains and a crushed barrel piled up, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f7c7974a-cc4f-4fb4-850d-bfbec72f4407",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "deep_kelp_rock",
+ "method": "map-objects",
+ "prompt": "rock covered with barnacles and small anemones, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "23e87446-3f41-4d70-8662-23b5676e73a7",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

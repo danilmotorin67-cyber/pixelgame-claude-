@@ -1,0 +1,13 @@
+{
+ "id": "deep_bone_pile",
+ "method": "map-objects",
+ "prompt": "pile of small fish bones and vertebrae, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "98665046-225a-467c-96b6-17486289750d",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

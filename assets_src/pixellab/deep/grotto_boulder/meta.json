@@ -1,0 +1,13 @@
+{
+ "id": "grotto_boulder",
+ "method": "map-objects",
+ "prompt": "round grey boulder, heavy, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e84c5a5a-dcf4-4716-8219-cf797b5915f4",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

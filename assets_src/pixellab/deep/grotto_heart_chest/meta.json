@@ -1,0 +1,13 @@
+{
+ "id": "grotto_heart_chest",
+ "method": "map-objects",
+ "prompt": "ornate chest decorated with a heart of red coral, closed, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f725de7e-4130-4fe1-a921-4a6a41140804",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

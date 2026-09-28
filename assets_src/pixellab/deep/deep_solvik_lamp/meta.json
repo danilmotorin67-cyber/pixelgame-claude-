@@ -1,0 +1,13 @@
+{
+ "id": "deep_solvik_lamp",
+ "method": "map-objects",
+ "prompt": "fallen iron street lamp overgrown with weed, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ccae6cc5-5b29-4272-9bef-811e1e2323ab",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

@@ -113,10 +113,91 @@ func _hint(text: String = "") -> void:
 		(" · воздух %d" % int(Grotto.breath)) if Grotto.hall == 6 else ""]
 
 
+# PixelLab art of each hall letter (tools/pixellab_deep_objects.py); rock and deep water come from tilesets.
+const SPRITES := {"P": "grotto_tidepool", "M": "grotto_mussels", "B": "grotto_boulder", "p": "grotto_plate",
+	"g": "grotto_grate", "X": "grotto_page_niche", "F": "grotto_pedestal", "S": "grotto_salt", "G": "grotto_cat_grave",
+	"C": "grotto_crate", "K": "grotto_skeleton", "T": "grotto_stalactite", "O": "grotto_echo_pool", "R": "grotto_rubble",
+	"E": "grotto_eleonora_niche", "$": "grotto_treasure", "L": "grotto_false_lantern", "~": "grotto_ebb_pool",
+	"H": "grotto_heart_chest", "A": "grotto_altar", "<": "grotto_entry", ">": "grotto_passage", "s": "grotto_slippery"}
+# Flat things lie on the floor (centred on the cell); the rest stand on the cell's bottom edge.
+const FLAT := ["P", "p", "O", "~", "s", "<", ">"]
+var _cells := PackedInt32Array()
+var _water := PackedInt32Array()
+
+
 func _draw() -> void:
 	if not Grotto.active:
 		return
 	var rows := Grotto.rows()
+	var w := str(rows[0]).length()
+	if _cells.is_empty():
+		_cells.resize(w * rows.size())
+		_water.resize(w * rows.size())
+		for y in rows.size():
+			for x in w:
+				var c := str(rows[y])[x]
+				_cells[y * w + x] = 1 if c == "#" else 0
+				_water[y * w + x] = 1 if c == "W" else 0
+	if WangGround.draw_cells(self, _cells, w, rows.size(), "tiles_grotto_floor"):
+		WangGround.draw_cells(self, _water, w, rows.size(), "tiles_grotto_water", true)
+		for y in rows.size():
+			for x in w:
+				_draw_thing(str(rows[y])[x], Vector2i(x, y))
+	else:
+		_draw_plain(rows)
+	EnemyArt.draw_fallen(self, Grotto.world)
+	for e in Grotto.world.alive():
+		if not EnemyArt.draw(self, e):
+			draw_circle(e["pos"], 6.0, Color("#c0392b"))
+	if Grotto.carrying:
+		var p: Vector2 = (get_parent().get_node("Player") as Node2D).global_position
+		if not PropArt.draw(self, "grotto_boulder", p + Vector2(0, -14)):
+			draw_circle(p + Vector2(0, -18), 5.0, Color("#8c8a8a"))
+
+
+# One hall letter as it stands now: a moved boulder is gone, a pressed plate is down with its stone, the
+# grate is raised and the rubble cleared once solved, opened chests stand open, today's picked pools dim.
+func _draw_thing(ch: String, cell: Vector2i) -> void:
+	if not SPRITES.has(ch):
+		return
+	var key := "grotto_%d_%d_%d" % [Grotto.hall, cell.x, cell.y]
+	var art := str(SPRITES[ch])
+	var tint := Color.WHITE
+	match ch:
+		"B":
+			if Grotto.boulders_left.has(key):
+				return
+		"p":
+			if Grotto.plates.has(key):
+				art = "grotto_plate_down"
+		"g":
+			if Grotto.gate_open():
+				return
+		"R":
+			if Game.flag("grotto_rubble"):
+				return
+		"$", "C":
+			if Game.flag(key):
+				art = "deep_chest_open"
+		"H":
+			if Game.flag("grotto_heart"):
+				art = "deep_chest_open"
+		"L":
+			if Game.flag("grotto_false_lantern"):
+				return
+		"P", "M", "S":
+			if Game.flag("%s_%d" % [key, Clock.day_index]):
+				tint = Color(0.6, 0.6, 0.65)
+	var center := Grotto.cell_center(cell)
+	var bottom := center + (Vector2(0, 4) if ch in FLAT else Vector2(0, 8))
+	if not PropArt.draw(self, art, bottom, tint):
+		draw_rect(Rect2(center - Vector2(4, 4), Vector2(8, 8)), Color(str(LOOK.get(ch, "#8c8a8a"))))
+	if ch == "p" and Grotto.plates.has(key):
+		PropArt.draw(self, "grotto_boulder", center + Vector2(0, 5))
+
+
+# The coloured blocks the halls were drawn with before their tilesets existed.
+func _draw_plain(rows: Array) -> void:
 	for y in rows.size():
 		for x in str(rows[y]).length():
 			var ch := str(rows[y])[x]
@@ -131,10 +212,3 @@ func _draw() -> void:
 				draw_rect(Rect2(at + Vector2(inset, inset), Vector2(TILE - inset * 2, TILE - inset * 2)), Color(str(LOOK[ch])))
 			if ch in ["<", ">"]:
 				draw_rect(Rect2(at + Vector2(4, 2), Vector2(8, 12)), Color("#1e1a18"))
-	EnemyArt.draw_fallen(self, Grotto.world)
-	for e in Grotto.world.alive():
-		if not EnemyArt.draw(self, e):
-			draw_circle(e["pos"], 6.0, Color("#c0392b"))
-	if Grotto.carrying:
-		var p: Vector2 = (get_parent().get_node("Player") as Node2D).global_position
-		draw_circle(p + Vector2(0, -18), 5.0, Color("#8c8a8a"))

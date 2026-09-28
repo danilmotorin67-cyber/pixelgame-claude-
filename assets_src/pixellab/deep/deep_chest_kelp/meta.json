@@ -1,0 +1,13 @@
+{
+ "id": "deep_chest_kelp",
+ "method": "map-objects",
+ "prompt": "old wooden sea chest overgrown with kelp and barnacles, closed, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "64b23814-0185-47d0-9ea2-418f25f04937",
+ "generations": 1.0,
+ "date": "2026-09-28"
+}

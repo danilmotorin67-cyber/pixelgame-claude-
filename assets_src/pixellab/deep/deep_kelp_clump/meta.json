@@ -1,0 +1,13 @@
+{
+ "id": "deep_kelp_clump",
+ "method": "map-objects",
+ "prompt": "tall clump of brown kelp swaying, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "81d80562-ba86-4f43-885c-75ddf3697af9",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

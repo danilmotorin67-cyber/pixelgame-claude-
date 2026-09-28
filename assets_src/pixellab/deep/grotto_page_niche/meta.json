@@ -1,0 +1,13 @@
+{
+ "id": "grotto_page_niche",
+ "method": "map-objects",
+ "prompt": "grey stone block with a small arched niche carved into it, a rolled yellow paper page inside, single object found in a tidal sea cave, isolated, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b408d706-d0c6-4031-aabc-80bdf1b91dba",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

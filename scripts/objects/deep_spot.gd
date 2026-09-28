@@ -16,18 +16,47 @@ func _ready() -> void:
 	add_child(collision)
 
 
+const CHESTS := {"kelp": "deep_chest_kelp", "old_solvick": "deep_chest_solvik", "bone_abyss": "deep_chest_bone"}
+
+
+func _process(_delta: float) -> void:
+	if kind == "resource":
+		queue_redraw()
+
+
 func _draw() -> void:
 	match kind:
-		"rope_up", "rope_down":
-			draw_rect(Rect2(-1, -40 if kind == "rope_up" else -8, 2, 40 if kind == "rope_up" else 16), Color("#c9b89a"))
-			if kind == "rope_up" and Deep.gear() == "bell":
-				draw_arc(Vector2(0, -6), 12, PI, TAU, 12, Color("#b87333"), 3.0)
+		"rope_up":
+			# A bell station every few levels; the bell when the keeper dives in one; else the rope up.
+			var art := "deep_station" if DeepGen.has_station(Deep.level) else ("deep_bell" if Deep.gear() == "bell" else "deep_rope_up")
+			if not PropArt.draw(self, art, Vector2(0, 8)):
+				draw_rect(Rect2(-1, -40, 2, 40), Color("#c9b89a"))
+				if Deep.gear() == "bell":
+					draw_arc(Vector2(0, -6), 12, PI, TAU, 12, Color("#b87333"), 3.0)
+		"rope_down":
+			if not PropArt.draw(self, "deep_rope_down", Vector2(0, 8)):
+				draw_rect(Rect2(-1, -8, 2, 16), Color("#c9b89a"))
 		"resource":
-			if not Deep.resource_at(cell).is_empty():
+			var r := Deep.resource_at(cell)
+			if r.is_empty():
+				return
+			# The find itself, bobbing a little, with a glint now and then.
+			var t := Time.get_ticks_msec() / 1000.0 + float(cell.x * 7 + cell.y * 3) * 0.37
+			var icon := ItemIcon.texture(str(r["item"]))
+			var bob := roundf(sin(t * 2.0))
+			if icon:
+				draw_texture_rect(icon, Rect2(Vector2(-6, -8 + bob), Vector2(12, 12)), false)
+			else:
 				draw_circle(Vector2.ZERO, 4, Color("#dfe9ea"))
+			if fmod(t, 3.0) < 0.25:
+				draw_rect(Rect2(3, -8 + bob, 1, 3), Color(1, 1, 0.85, 0.9))
+				draw_rect(Rect2(2, -7 + bob, 3, 1), Color(1, 1, 0.85, 0.9))
 		"chest":
-			draw_rect(Rect2(-6, -4, 12, 8), Color("#6b4a32"))
-			draw_rect(Rect2(-1, -2, 2, 2), Color("#ffc85a"))
+			var opened := Deep.taken.has("c%d:%d:%d" % [Deep.level, cell.x, cell.y])
+			var art := "deep_chest_open" if opened else str(CHESTS.get(str(Deep.data["biome"]), "deep_chest_kelp"))
+			if not PropArt.draw(self, art, Vector2(0, 7)):
+				draw_rect(Rect2(-6, -4, 12, 8), Color("#6b4a32"))
+				draw_rect(Rect2(-1, -2, 2, 2), Color("#ffc85a"))
 
 
 func _say(text: String) -> void:
@@ -59,6 +88,7 @@ func interact(_player: Player) -> void:
 		"chest":
 			var got := Deep.open_chest(cell)
 			_say("Сундук: " + Crafting.item_name(got) if got != "" else "Сундук пуст.")
+			queue_redraw()
 
 
 func use_tool(_player: Player, tool: String) -> String:

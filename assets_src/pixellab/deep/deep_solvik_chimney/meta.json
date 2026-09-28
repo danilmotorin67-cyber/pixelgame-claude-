@@ -1,0 +1,13 @@
+{
+ "id": "deep_solvik_chimney",
+ "method": "map-objects",
+ "prompt": "stump of a brick chimney sticking out of the seabed, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "9b9f8893-5d2a-432c-9d41-6cc3c7895563",
+ "generations": 8.0,
+ "date": "2026-09-28"
+}

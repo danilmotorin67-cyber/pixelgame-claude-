@@ -4,8 +4,17 @@ extends Node2D
 # bosses are drawn from the fight model each frame.
 const TILE := 16
 const COLORS := {"k": "#4e8a3a", "n": "#8c7a5a", "v": "#e9643a", "u": "#3a2a40"}
+# Each biome's floor-and-wall tileset and its sea-floor decor (tools/pixellab_deep_objects.py): the first
+# stands on the biome's own decor marks, the rest are scattered over the floor by the level's seed.
+const TILESETS := {"kelp": "tiles_deep_kelp", "old_solvick": "tiles_deep_solvik", "bone_abyss": "tiles_deep_bone"}
+const DECOR := {
+	"kelp": ["deep_kelp_clump", "deep_kelp_rock", "deep_kelp_starfish", "deep_kelp_shells"],
+	"old_solvick": ["deep_solvik_lamp", "deep_solvik_wheel", "deep_solvik_door", "deep_solvik_chimney", "deep_solvik_sign"],
+	"bone_abyss": ["deep_bone_vent", "deep_bone_rib", "deep_bone_skull", "deep_bone_coral", "deep_bone_pile"],
+}
 
 var _message_t: float = 0.0
+var _cells := PackedInt32Array()
 
 
 func _ready() -> void:
@@ -69,6 +78,54 @@ func _process(delta: float) -> void:
 	queue_redraw()
 
 
+# The coloured blocks the level was drawn with before its tileset existed.
+func _draw_plain(rows: Array) -> void:
+	var colors: Dictionary = Data.by_id("deep_biomes", str(Deep.data["biome"])).get("colors", {})
+	var floor_c := Color(str(colors.get("floor", "#2f5a5a")))
+	var wall_c := Color(str(colors.get("wall", "#4a4a3e")))
+	for y in DeepGen.H:
+		for x in DeepGen.W:
+			var ch := str(rows[y])[x]
+			var at := Vector2(x * TILE, y * TILE)
+			draw_rect(Rect2(at, Vector2(TILE, TILE)), wall_c if ch == "#" else floor_c)
+			if COLORS.has(ch):
+				draw_rect(Rect2(at + Vector2(6, 2), Vector2(3, 12)), Color(str(COLORS[ch])))
+
+
+# Sea-floor decor: the biome's mark letter gets its signature piece; a few more lie about by the seed,
+# on open floor away from walls and from the level's ropes, finds and chests.
+func _draw_decor(biome_id: String, rows: Array) -> void:
+	var pieces: Array = DECOR.get(biome_id, [])
+	if pieces.is_empty():
+		return
+	var mark := str(Data.by_id("deep_biomes", biome_id).get("decor", ""))
+	var busy := {}
+	for key in ["resources", "chests"]:
+		for thing in Deep.data[key]:
+			busy[Vector2i(int(thing["x"]), int(thing["y"]))] = true
+	busy[Vector2i(Deep.data["entry"])] = true
+	busy[Vector2i(Deep.data["exit"])] = true
+	for y in range(1, DeepGen.H - 1):
+		for x in range(1, DeepGen.W - 1):
+			var ch := str(rows[y])[x]
+			var cell := Vector2i(x, y)
+			var seed := absi(hash(Vector3i(Deep.level, x, y)))
+			var piece := ""
+			if ch == mark and mark != "":
+				piece = str(pieces[0]) if seed % 3 != 0 else str(pieces[seed % pieces.size()])
+			elif ch == "." and seed % 29 == 0 and not busy.has(cell) and _open_around(rows, x, y):
+				piece = str(pieces[1 + seed % (pieces.size() - 1)])
+			if piece != "":
+				PropArt.draw(self, piece, Deep.cell_center(cell) + Vector2(0, 7))
+
+
+func _open_around(rows: Array, x: int, y: int) -> bool:
+	for d in [Vector2i(1, 0), Vector2i(-1, 0), Vector2i(0, 1), Vector2i(0, -1)]:
+		if str(rows[y + d.y])[x + d.x] == "#":
+			return false
+	return true
+
+
 func _hint(text: String = "") -> void:
 	var hint := get_parent().get_node_or_null("HUD/Hint") as Label
 	if hint == null:
@@ -85,23 +142,20 @@ func _hint(text: String = "") -> void:
 func _draw() -> void:
 	if not Deep.active:
 		return
-	var biome := Data.by_id("deep_biomes", str(Deep.data["biome"]))
-	var colors: Dictionary = biome.get("colors", {})
-	var floor_c := Color(str(colors.get("floor", "#2f5a5a")))
-	var wall_c := Color(str(colors.get("wall", "#4a4a3e")))
+	var biome_id := str(Deep.data["biome"])
 	var rows: Array = Deep.data["rows"]
-	for y in DeepGen.H:
-		for x in DeepGen.W:
-			var ch := str(rows[y])[x]
-			var at := Vector2(x * TILE, y * TILE)
-			draw_rect(Rect2(at, Vector2(TILE, TILE)), wall_c if ch == "#" else floor_c)
-			if ch == "#" and (x + y) % 3 == 0:
-				draw_rect(Rect2(at + Vector2(3, 4), Vector2(6, 2)), wall_c.lightened(0.15))
-			elif COLORS.has(ch):
-				draw_rect(Rect2(at + Vector2(6, 2), Vector2(3, 12)), Color(str(COLORS[ch])))
+	if _cells.is_empty():
+		_cells.resize(DeepGen.W * DeepGen.H)
+		for y in DeepGen.H:
+			for x in DeepGen.W:
+				_cells[y * DeepGen.W + x] = 1 if str(rows[y])[x] == "#" else 0
+	if not WangGround.draw_cells(self, _cells, DeepGen.W, DeepGen.H, str(TILESETS.get(biome_id, ""))):
+		_draw_plain(rows)
+	_draw_decor(biome_id, rows)
 	if not Deep.debris_broken:
 		var d := Deep.cell_center(Deep.data["exit"])
-		draw_rect(Rect2(d - Vector2(9, 7), Vector2(18, 14)), Color("#6b5040"))
+		if not PropArt.draw(self, "deep_debris", d + Vector2(0, 7)):
+			draw_rect(Rect2(d - Vector2(9, 7), Vector2(18, 14)), Color("#6b5040"))
 	var world := Deep.world
 	EnemyArt.draw_fallen(self, world)
 	for e in world.alive():

@@ -1,0 +1,13 @@
+{
+ "id": "deep_solvik_wheel",
+ "method": "map-objects",
+ "prompt": "broken wooden cart wheel lying in silt, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "9793b3a7-10d8-402b-b955-25f677d6b0df",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

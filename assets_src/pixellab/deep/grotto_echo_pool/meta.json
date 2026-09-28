@@ -1,0 +1,13 @@
+{
+ "id": "grotto_echo_pool",
+ "method": "map-objects",
+ "prompt": "dark round pool that glows faintly blue, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "3f21e271-74a3-407f-8d28-c3368b8db964",
+ "generations": 9.0,
+ "date": "2026-09-28"
+}

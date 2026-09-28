@@ -1,0 +1,13 @@
+{
+ "id": "grotto_mussels",
+ "method": "map-objects",
+ "prompt": "cluster of dark blue mussels on a wet rock, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c5bb69a6-a72d-4574-8a97-e427b3ece419",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

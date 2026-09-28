@@ -1,0 +1,13 @@
+{
+ "id": "grotto_grate",
+ "method": "map-objects",
+ "prompt": "rusty iron grate gate set in rock, closed, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d675c7e1-1a74-471d-8abe-ac7b142cfb8b",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

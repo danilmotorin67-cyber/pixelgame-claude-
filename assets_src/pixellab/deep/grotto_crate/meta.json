@@ -1,0 +1,13 @@
+{
+ "id": "grotto_crate",
+ "method": "map-objects",
+ "prompt": "old wet wooden crate washed into a cave, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "ee0b5f75-0569-42b0-b18f-b42715e8ac7a",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

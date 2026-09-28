@@ -1,0 +1,13 @@
+{
+ "id": "grotto_cat_grave",
+ "method": "map-objects",
+ "prompt": "tiny grave: a small stone with a carved cat and a shell on it, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "90df1046-86e6-469e-a2dc-469f6124edc6",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

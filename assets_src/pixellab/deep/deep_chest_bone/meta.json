@@ -1,0 +1,13 @@
+{
+ "id": "deep_chest_bone",
+ "method": "map-objects",
+ "prompt": "chest made of whale bone and rusty iron bands, closed, faint pale glow, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "e3fc0690-996d-466b-ba45-2d32d2c74339",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

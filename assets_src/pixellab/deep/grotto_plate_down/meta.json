@@ -1,0 +1,13 @@
+{
+ "id": "grotto_plate_down",
+ "method": "map-objects",
+ "prompt": "square stone pressure plate pressed down into the floor, glowing rim, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "d5c46b40-0417-4f93-b74c-f878a857afc7",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "grotto_treasure",
+ "method": "map-objects",
+ "prompt": "small open treasure chest spilling old gold coins, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "5a718c5f-a7e8-4286-a87e-14065908a7e0",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

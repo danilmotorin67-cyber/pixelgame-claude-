@@ -1,0 +1,13 @@
+{
+ "id": "grotto_eleonora_niche",
+ "method": "map-objects",
+ "prompt": "carved niche with an old ship's nameboard and burnt-down candles, no text, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "84368fc5-b68d-4cb7-b27c-7952e87519c6",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

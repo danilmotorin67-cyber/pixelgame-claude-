@@ -1,0 +1,13 @@
+{
+ "id": "deep_kelp_starfish",
+ "method": "map-objects",
+ "prompt": "orange starfish and sea urchins on sand, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "05ae60b0-f6c9-4840-a50d-8b9edf0a5104",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

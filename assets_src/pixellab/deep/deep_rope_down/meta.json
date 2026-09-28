@@ -1,0 +1,13 @@
+{
+ "id": "deep_rope_down",
+ "method": "map-objects",
+ "prompt": "iron ring bolted into a flat rock on the seabed with a thick hemp rope coiled around it and leading down, dark crack beside it, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f309410b-31b8-40b1-a490-c103ea2446cb",
+ "generations": 1.0,
+ "date": "2026-09-28"
+}

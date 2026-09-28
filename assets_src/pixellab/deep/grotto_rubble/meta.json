@@ -1,0 +1,13 @@
+{
+ "id": "grotto_rubble",
+ "method": "map-objects",
+ "prompt": "pile of fallen cave rocks blocking a passage, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c23dd08e-2b73-45f2-accb-05d6e9d54c56",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

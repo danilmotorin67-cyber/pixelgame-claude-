@@ -1,0 +1,13 @@
+{
+ "id": "deep_kelp_shells",
+ "method": "map-objects",
+ "prompt": "pile of scallop and mussel shells on sand, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "0f39104d-5f78-4be3-a5fe-6e76e854d1ef",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "deep_bone_skull",
+ "method": "map-objects",
+ "prompt": "single enormous whale skull bone with empty eye sockets, bleached white, half buried in silt, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b064c6ba-39c1-48d5-a4f7-8d286d42f4cf",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

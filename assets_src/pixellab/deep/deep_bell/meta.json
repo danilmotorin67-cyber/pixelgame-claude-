@@ -1,0 +1,13 @@
+{
+ "id": "deep_bell",
+ "method": "map-objects",
+ "prompt": "old brass diving bell with a small round glass window hanging on a chain, air bubbles, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "521ca032-a142-4de1-b226-b5c74027c90a",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "deep_station",
+ "method": "map-objects",
+ "prompt": "diving bell station: a brass diving bell anchored to the seabed with chains, an air hose going up, a small lamp glowing, underwater on the sea floor, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "3d5a1172-6cb5-47df-8471-2ac70ec2cfc2",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

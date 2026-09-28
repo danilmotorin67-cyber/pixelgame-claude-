@@ -1,0 +1,13 @@
+{
+ "id": "grotto_slippery",
+ "method": "map-objects",
+ "prompt": "patch of wet slippery green seaweed on the cave floor, inside a wet tidal sea cave, pixel art, 3/4 top-down view, muted cold palette, transparent background",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "a7a70136-a8ab-4d8c-ba11-10d1eb98c9a4",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}
