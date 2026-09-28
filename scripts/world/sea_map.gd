@@ -234,6 +234,8 @@ func _draw() -> void:
 		draw_rect(Rect2(isle + Vector2(-28, -18), Vector2(56, 36)), Color("#6f6a60"))
 		draw_rect(Rect2(isle + Vector2(-22, -20), Vector2(44, 8)), Color("#4e6e3a") if place == "eider_isle" else Color("#45464e"))
 	for place in SeaChart.cfg("places"):
+		if not SeaChart.place_known(place):
+			continue
 		var label_at := SeaChart.place_pos(place) + Vector2(-30, -30)
 		draw_string(ThemeDB.fallback_font, label_at, Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8,
 			Color("#f0e7cc"))
@@ -301,6 +303,8 @@ func _draw_sea_art() -> void:
 		SeaArt.draw(self, "eleonora", SeaChart.place_pos("nameless_isle") + Vector2(-140, 40) + drift,
 			Color(0.7, 1.0, 0.85, 0.5 + 0.15 * sin(_t * 1.3)))
 	for place in SeaChart.cfg("places"):
+		if not SeaChart.place_known(place):
+			continue
 		var label_at := SeaChart.place_pos(place) + Vector2(-30, -34)
 		draw_string(UiKit.font(), label_at + Vector2(0, 1), Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8, Color(0, 0, 0, 0.5))
 		draw_string(UiKit.font(), label_at, Loc.t("sea." + place), HORIZONTAL_ALIGNMENT_LEFT, -1, 8, Color("#f0e7cc"))

@@ -11,6 +11,12 @@ static func boat_info(boat: String = "") -> Dictionary:
 	return cfg("boats").get(boat if boat != "" else Sea.boat, {})
 
 
+# Whether a place is named on the charts: a secret one (the Nameless Isle) only once its "<place>_open" flag
+# is set — the Nameless Isle by Emmerich's full chart of the skerries.
+static func place_known(place: String) -> bool:
+	return not bool(cfg("places").get(place, {}).get("secret", false)) or Game.flag(place + "_open")
+
+
 static func tile_of(at: Vector2) -> Vector2i:
 	return Vector2i(floori(at.x / TILE), floori(at.y / TILE))
 

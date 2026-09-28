@@ -764,6 +764,9 @@ func _check_island_chart() -> void:
 	var z2 := IslandChart.view(Rect2(Vector2.ZERO, IslandChart.size()), 2, "moor", Vector2(560, 480))
 	_check(z1 == full and z2.size * 2.0 == full.size and full.encloses(z2), "zoom shows half the chart, inside it")
 	_check(z2.has_point(IslandChart.keeper("moor", Vector2(560, 480))[1]), "zoomed in on the keeper")
+	_check(SeaChart.place_known("teeth") and not SeaChart.place_known("nameless_isle"), "the Nameless Isle is not named at first")
+	Game.set_flag("nameless_isle_open")
+	_check(SeaChart.place_known("nameless_isle"), "Emmerich's full chart names it")
 	var hud := CanvasLayer.new()
 	add_child(hud)
 	Router.current_map = "village"

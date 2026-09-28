@@ -209,6 +209,8 @@ func _draw_sea() -> void:
 	var taken: Array[Rect2] = [Rect2(origin + Vector2(2, coast - 6), Vector2(70, 10))]
 	var bounds := Rect2(origin, extent)
 	for place in SeaChart.cfg("places"):
+		if not SeaChart.place_known(place):
+			continue
 		var at: Array = SeaChart.cfg("places")[place]["at"]
 		var p := origin + Vector2(int(at[0]), int(at[1])) * scale
 		draw_circle(p, 2.5, INK)
@@ -250,6 +252,8 @@ func _draw_sea() -> void:
 	_text(Vector2(x, y), "Места", RED)
 	y += 11
 	for place in SeaChart.cfg("places"):
+		if not SeaChart.place_known(place):
+			continue
 		_text(Vector2(x, y), "• " + Loc.t("sea." + place), INK, width)
 		y += 10
 	var sight := raven_lines()
