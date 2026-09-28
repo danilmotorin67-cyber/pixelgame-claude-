@@ -1,0 +1,13 @@
+{
+ "id": "story_board",
+ "method": "map-objects",
+ "prompt": "cork evidence board on an easel with pinned papers, photographs and red string between them, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "86d73a1b-2c37-4524-bf32-fba6c9b832a0",
+ "generations": 1.0,
+ "date": "2026-09-28"
+}

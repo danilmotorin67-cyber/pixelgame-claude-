@@ -23,11 +23,25 @@ func kind() -> String:
 
 func _process(delta: float) -> void:
 	_time += delta
-	if kind() in ["glow_water", "daughter", "ritual", "bonfire"]:
+	if kind() in ["glow_water", "daughter", "ritual", "bonfire", "ghost", "agatha", "cat_key", "circle"]:
 		queue_redraw()
 
 
+# Kinds drawn from PixelLab map-objects (tools/pixellab_story_objects.py) or furniture, standing on the
+# spot's bottom edge; people and animals of the story are cast sprites.
+const ART := {"code_lock": "story_code_lock", "journal": "story_journal", "board": "story_board",
+	"archive": "story_archive", "cabinet": "story_cabinet", "neptune_counter": "story_neptune_counter",
+	"chapel_crypt": "story_chapel_crypt", "berta_wreck": "story_berta_wreck", "crypt": "story_crypt",
+	"ambush": "story_ambush", "lantern_dive": "story_lantern_dive", "treska": "story_treska", "cairn": "story_cairn",
+	"raven_mark": "story_raven_mark", "ritual": "story_ritual", "circle": "story_circle", "owl": "story_owl",
+	"dig": "story_dig", "sketch": "story_sketch", "guild": "story_guild", "cannery": "story_cannery",
+	"kronvald": "story_kronvald", "telegraph": "furn_telegraph", "safe": "furn_safe"}
+const FLAT := ["chapel_crypt", "dig", "raven_mark", "lantern_dive", "glow_water"]
+
+
 func _draw() -> void:
+	if _draw_art():
+		return
 	match kind():
 		"bonfire":
 			if PropArt.draw(self, "bonfire_lit" if Story.bonfire_lit(int(spot.get("index", 0))) else "bonfire_unlit", Vector2(0, 7)):
@@ -68,6 +82,32 @@ func _draw() -> void:
 		_:
 			draw_circle(Vector2.ZERO, 4.0, Color("#e8d27a"))
 			draw_circle(Vector2.ZERO, 2.0, Color("#6b4a32"))
+
+
+func _draw_art() -> bool:
+	var k := kind()
+	match k:
+		"ghost":
+			# The ghost of this place, half there.
+			var a := 0.55 + 0.2 * sin(_time * 2.0)
+			return CastSprite.draw(self, str(spot.get("ghost", "")), "idle", "south", _time, Vector2(0, 8), false, 1.0, Color(1, 1, 1, a)) \
+				or PropArt.draw(self, "story_ghost_mark", Vector2(0, 4), Color(1, 1, 1, a))
+		"agatha":
+			return CastSprite.draw(self, "agatha", "idle", "south", _time, Vector2(0, 8))
+		"cat_key":
+			return CastSprite.draw(self, "cat_wick", "idle", "south", _time, Vector2(0, 8))
+		"glow_water":
+			var a := 0.6 + 0.3 * sin(_time * 2.5)
+			return PropArt.draw(self, "story_glow_water", Vector2(0, 8), Color(1, 1, 1, a))
+		"ritual", "circle":
+			if not PropArt.draw(self, str(ART[k]), Vector2(0, 8)):
+				return false
+			# The stone answers with a soft pulse of sea-light.
+			draw_circle(Vector2(0, -1), 2.0, Color(0.7, 0.9, 1.0, 0.35 + 0.25 * sin(_time * 3.0)))
+			return true
+	if not ART.has(k):
+		return false
+	return PropArt.draw(self, str(ART[k]), Vector2(0, 4 if k in FLAT else 8))
 
 
 func _hud() -> CanvasLayer:

@@ -1,0 +1,13 @@
+{
+ "id": "story_cannery",
+ "method": "map-objects",
+ "prompt": "small grim fish cannery shed of corrugated iron with a smoking chimney and a trident emblem, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "309155a5-0bf8-4296-a5cf-6a32837eea20",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

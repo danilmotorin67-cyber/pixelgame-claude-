@@ -1,0 +1,13 @@
+{
+ "id": "story_sketch",
+ "method": "map-objects",
+ "prompt": "small wooden sketching easel with a half-finished pencil drawing of the sea, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "aabe5067-b592-47ca-9144-e4a3ae509fc4",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

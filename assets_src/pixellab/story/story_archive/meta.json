@@ -1,0 +1,13 @@
+{
+ "id": "story_archive",
+ "method": "map-objects",
+ "prompt": "tall wooden archive shelves full of ledgers, folders and document boxes, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "89bfa454-6535-4fdf-b57c-0fe2bb392a62",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

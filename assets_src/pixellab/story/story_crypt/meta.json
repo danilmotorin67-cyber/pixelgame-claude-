@@ -1,0 +1,13 @@
+{
+ "id": "story_crypt",
+ "method": "map-objects",
+ "prompt": "small stone crypt with an iron door on a rocky islet, a dead signal fire basket beside it, single object standing in the sea, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  48,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "ec3cd549-2889-4d35-9e08-15a7af67e6e3",
+ "generations": 8.0,
+ "date": "2026-09-28"
+}

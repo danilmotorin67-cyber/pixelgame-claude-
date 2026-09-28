@@ -1,0 +1,13 @@
+{
+ "id": "story_guild",
+ "method": "map-objects",
+ "prompt": "wooden notice stand with a carved guild emblem of a lantern and an anchor, a hanging lamp, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  40
+ ],
+ "view": "high top-down",
+ "object_id": "9ef49315-9ef0-4d8a-9940-aceaed18ad91",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "story_circle",
+ "method": "map-objects",
+ "prompt": "nine small rough standing stones arranged in a ring on moorland grass and heather, open grass in the middle, no platform, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  64,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "fb370b2d-1445-4ffb-83a7-c90518ee9960",
+ "generations": 1.0,
+ "date": "2026-09-28"
+}

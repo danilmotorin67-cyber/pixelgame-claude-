@@ -266,8 +266,9 @@ def build_props():
             img = Image.open(path).convert("RGBA")
             img.crop(img.getbbox() or (0, 0, img.width, img.height)).save(os.path.join(out, aid + ".png"))
             count += 1
-    # Map props, and the Deep's and the grottoes' objects (deep_*, grotto_*).
-    for folder in sorted(glob.glob(os.path.join(SRC, "props", "*")) + glob.glob(os.path.join(SRC, "deep", "*"))):
+    # Map props, the Deep's and the grottoes' objects (deep_*, grotto_*) and the story's places (story_*).
+    for folder in sorted(glob.glob(os.path.join(SRC, "props", "*")) + glob.glob(os.path.join(SRC, "deep", "*"))
+                         + glob.glob(os.path.join(SRC, "story", "*"))):
         aid = os.path.basename(folder)
         path = os.path.join(folder, aid + ".png")
         if aid == "small" or not os.path.exists(path):

@@ -1,0 +1,13 @@
+{
+ "id": "story_code_lock",
+ "method": "map-objects",
+ "prompt": "old writing desk with a small iron strongbox on it closed with a brass combination dial lock, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f02276cd-753f-46f8-bbc1-89fb29816354",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

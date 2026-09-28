@@ -1,0 +1,13 @@
+{
+ "id": "story_lantern_dive",
+ "method": "map-objects",
+ "prompt": "old brass lantern lying under clear shallow water among rocks, glowing faintly, single object standing in the sea, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "debb0c70-a282-4482-9889-fa33e04ce8c2",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

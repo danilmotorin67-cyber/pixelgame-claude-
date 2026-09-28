@@ -1,0 +1,13 @@
+{
+ "id": "story_glow_water",
+ "method": "map-objects",
+ "prompt": "patch of sea water glowing soft blue with tiny sparkles, single object standing in the sea, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "dfba4e9b-d109-4b5b-8724-ddc44e30efef",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

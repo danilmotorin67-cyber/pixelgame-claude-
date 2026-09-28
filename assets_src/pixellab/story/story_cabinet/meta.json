@@ -1,0 +1,13 @@
+{
+ "id": "story_cabinet",
+ "method": "map-objects",
+ "prompt": "cabinet of curiosities: glass-fronted wooden cabinet with shells, a small skull, bottles and oddities, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  48
+ ],
+ "view": "high top-down",
+ "object_id": "60fee35c-93b7-4b24-ab64-457df7203320",
+ "generations": 7.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "story_neptune_counter",
+ "method": "map-objects",
+ "prompt": "insurance office counter with a trident emblem, a ledger, a brass bell and tins of fish, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "aed02c80-d7ed-4949-8222-8de17a5aec04",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

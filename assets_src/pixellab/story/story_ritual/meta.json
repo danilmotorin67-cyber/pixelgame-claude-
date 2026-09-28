@@ -1,0 +1,13 @@
+{
+ "id": "story_ritual",
+ "method": "map-objects",
+ "prompt": "flat ancient stone slab carved with a spiral, a shallow bowl of sea water and two candles on it, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "794df1d8-bb19-4f74-b13e-c3d9b77a71ba",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

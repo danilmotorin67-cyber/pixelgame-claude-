@@ -1,0 +1,13 @@
+{
+ "id": "story_ambush",
+ "method": "map-objects",
+ "prompt": "cluster of black rocks with ropes, a hidden dark lantern and a smugglers' rowboat tied behind them, single object standing in the sea, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "594e9663-d9b0-4097-afef-a86c25cd58a0",
+ "generations": 2.0,
+ "date": "2026-09-28"
+}

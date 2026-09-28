@@ -1,0 +1,13 @@
+{
+ "id": "story_chapel_crypt",
+ "method": "map-objects",
+ "prompt": "square stone floor hatch with an iron ring handle leading down to a crypt, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "4db95494-ca50-4ce4-b5fc-2677b64c8eca",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}

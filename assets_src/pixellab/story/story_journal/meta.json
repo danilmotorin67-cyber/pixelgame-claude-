@@ -1,0 +1,13 @@
+{
+ "id": "story_journal",
+ "method": "map-objects",
+ "prompt": "keeper's logbook lying open on a small desk beside an inkwell and a candle, single piece of furniture indoors, pixel art, 3/4 top-down view, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "82ac23ff-4270-4f63-9561-3b812dc644a3",
+ "generations": 3.0,
+ "date": "2026-09-28"
+}

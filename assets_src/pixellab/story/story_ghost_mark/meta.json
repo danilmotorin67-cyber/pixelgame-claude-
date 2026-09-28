@@ -1,0 +1,13 @@
+{
+ "id": "story_ghost_mark",
+ "method": "map-objects",
+ "prompt": "faint cold mist swirling above the ground, pale blue, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "b8890617-98d9-4336-baa8-07beb4acd38f",
+ "generations": 4.0,
+ "date": "2026-09-28"
+}

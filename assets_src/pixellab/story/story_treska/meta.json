@@ -1,0 +1,13 @@
+{
+ "id": "story_treska",
+ "method": "map-objects",
+ "prompt": "old wooden fishing boat beached on its side on sand, peeling blue paint, torn brown sail, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  48,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "f121b33d-b186-49cb-9789-fb014c6e182c",
+ "generations": 5.0,
+ "date": "2026-09-28"
+}

@@ -1,0 +1,13 @@
+{
+ "id": "story_raven_mark",
+ "method": "map-objects",
+ "prompt": "three black ravens standing around a patch of freshly disturbed earth, single object, pixel art, 3/4 top-down view, northern fishing island, muted cold palette, transparent background, no text",
+ "size": [
+  32,
+  32
+ ],
+ "view": "high top-down",
+ "object_id": "c7a42114-b8a5-4e2e-abdc-29aae5576f09",
+ "generations": 6.0,
+ "date": "2026-09-28"
+}
