@@ -12,7 +12,7 @@ const DATA_FILES: PackedStringArray = [
 	"weather", "tides", "festivals", "bundles", "neptune", "regions",
 	"skills", "knowledge_tree", "achievements", "collections",
 	"bottles", "pages", "tales", "shops", "buildings", "balance", "forage", "interiors", "places",
-	"story", "story_spots"
+	"story", "story_spots", "island_map"
 ]
 const DATA_DIRS: PackedStringArray = ["schedules", "events", "dialogue"]
 

@@ -1,0 +1,67 @@
+{
+ "runs": [
+  {
+   "method": "create-image-pixflux, init image sketch_big.png",
+   "prompt": "top-down pixel art game world map of a small cold northern island in a slate-grey sea, old explorer's chart look: basalt cliffs in the north, lilac heather moorland with a lake and a stone circle, a birch wood with a stream, sandy beaches with seals in the south-west, a bay with ship wrecks, a fishing village of tarred wooden houses with turf roofs and a pier, a quiet reedy lagoon, a basalt cape in the east with a white stone lighthouse, a cottage, fields and a small graveyard; jagged black rocks in the sea; muted colours, crisp pixels, no text, no letters, no labels, no border",
+   "size": [
+    400,
+    276
+   ],
+   "strengths": [
+    300
+   ],
+   "first_variant": 2,
+   "generations": 1.0
+  },
+  {
+   "method": "create-image-pixflux, init image sketch_big.png",
+   "prompt": "top-down pixel art game world map of a small cold northern island in a slate-grey sea, old explorer's chart look: basalt cliffs in the north, lilac heather moorland with a lake and a stone circle, a birch wood with a stream, sandy beaches with seals in the south-west, a bay with ship wrecks, a fishing village of tarred wooden houses with turf roofs and a pier, a quiet reedy lagoon, a basalt cape in the east with a white stone lighthouse, a cottage, fields and a small graveyard; jagged black rocks in the sea; muted colours, crisp pixels, no text, no letters, no labels, no border",
+   "size": [
+    400,
+    276
+   ],
+   "strengths": [
+    400
+   ],
+   "first_variant": 3,
+   "generations": 1.0
+  },
+  {
+   "method": "generate-image-v2, reference sketch.png",
+   "prompt": "top-down pixel art game world map of a small cold northern island in a slate-grey sea, old explorer's chart look: basalt cliffs in the north, lilac heather moorland with a lake and a stone circle, a birch wood with a stream, sandy beaches with seals in the south-west, a bay with ship wrecks, a fishing village of tarred wooden houses with turf roofs and a pier, a quiet reedy lagoon, a basalt cape in the east with a white stone lighthouse, a cottage, fields and a small graveyard; jagged black rocks in the sea; muted colours, crisp pixels, no text, no letters, no labels, no border",
+   "size": [
+    416,
+    288
+   ],
+   "seed": 1,
+   "first_variant": 4,
+   "generations": 40.0
+  },
+  {
+   "method": "inpaint-v3",
+   "from": 4,
+   "box": [
+    2,
+    120,
+    24,
+    150
+   ],
+   "prompt": "grassy rocky shore of the island and slate-grey sea water, top-down pixel art map, nothing else",
+   "first_variant": 5,
+   "generations": 40.0
+  },
+  {
+   "method": "inpaint-v3",
+   "from": 5,
+   "box": [
+    312,
+    122,
+    332,
+    151
+   ],
+   "prompt": "a tall white stone lighthouse tower with a red top and a glowing lamp, standing on green grass near the shore, seen from above at an angle, pixel art map icon",
+   "first_variant": 6,
+   "generations": 40.0
+  }
+ ]
+}

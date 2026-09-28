@@ -1,0 +1,125 @@
+{
+  "note": "The island chart (M, tab «Остров»). `layout` places each land map on the sketch that tools/island_map.py draws for PixelLab ([x, y, w, h] in sketch pixels); `chart` is where each map came out on the finished picture assets/sprites/ui/island_map.png ([x, y, w, h] in its pixels), which the game uses for the keeper, the fog and the marks; `names` are the short labels.",
+  "layout": {
+    "size": [
+      260,
+      180
+    ],
+    "regions": {
+      "bird_cliffs": [
+        130,
+        8,
+        30,
+        38
+      ],
+      "moor": [
+        118,
+        46,
+        52,
+        45
+      ],
+      "birch": [
+        76,
+        54,
+        40,
+        30
+      ],
+      "seal_shore": [
+        64,
+        86,
+        52,
+        30
+      ],
+      "wreck_bay": [
+        16,
+        88,
+        48,
+        30
+      ],
+      "village": [
+        114,
+        91,
+        60,
+        45
+      ],
+      "lagoon": [
+        120,
+        130,
+        38,
+        30
+      ],
+      "cape": [
+        174,
+        84,
+        68,
+        52
+      ]
+    }
+  },
+  "chart": {
+    "size": [
+      416,
+      288
+    ],
+    "regions": {
+      "bird_cliffs": [
+        205,
+        6,
+        46,
+        64
+      ],
+      "moor": [
+        186,
+        70,
+        86,
+        70
+      ],
+      "birch": [
+        116,
+        84,
+        70,
+        52
+      ],
+      "seal_shore": [
+        16,
+        136,
+        86,
+        54
+      ],
+      "wreck_bay": [
+        96,
+        160,
+        82,
+        72
+      ],
+      "village": [
+        180,
+        142,
+        98,
+        64
+      ],
+      "lagoon": [
+        190,
+        206,
+        86,
+        52
+      ],
+      "cape": [
+        280,
+        128,
+        110,
+        88
+      ]
+    }
+  },
+  "names": {
+    "bird_cliffs": "Птичий утёс",
+    "moor": "Пустошь",
+    "birch": "Лощина",
+    "seal_shore": "Тюлений берег",
+    "wreck_bay": "Бухта",
+    "village": "Сольвик",
+    "lagoon": "Заводь",
+    "cape": "Вороний мыс"
+  }
+}

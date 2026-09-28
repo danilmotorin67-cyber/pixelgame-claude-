@@ -34,7 +34,7 @@ func _goto(index: int, hour: int = 8) -> void:
 
 
 func _run() -> void:
-	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family"]:
+	for section in ["_check_field", "_check_tools", "_check_boards", "_check_rescue", "_check_graveyard", "_check_cold", "_check_professions", "_check_sea_and_gulls", "_check_spyglass", "_check_family", "_check_island_chart"]:
 		print("- ", section)
 		call(section)
 	print("Backlog integration: %d failure(s)" % failures.size())
@@ -736,3 +736,45 @@ func _check_family() -> void:
 	var back: Dictionary = JSON.parse_string(JSON.stringify(Relationships.serialize()))
 	Relationships.deserialize(back)
 	_check(Relationships.children.size() == 2, "saved")
+
+
+# The map (M): the island chart places every land map, interior and tower floor; fog lifts where the keeper
+# has walked; the panel opens on the island ashore and on the sea chart at sea.
+func _check_island_chart() -> void:
+	_fresh()
+	var full := Rect2(Vector2.ZERO, IslandChart.size() / IslandChart.SCALE)
+	_check(IslandChart.texture() != null, "the island chart picture is there")
+	for id in Router.ISLAND_MAPS:
+		var r := IslandChart.region_rect(id)
+		_check(r.size.x > 0 and full.encloses(r), "%s lies on the chart" % id)
+		var tiles := MapInfo.size(id)
+		var p := IslandChart.point(id, Vector2(tiles.x * 8, tiles.y * 8))
+		_check(r.grow(0.5).has_point(p), "the middle of %s is inside its place" % id)
+	for id in Data.tables.get("interiors", {}):
+		var where := IslandChart.keeper(str(id), Vector2(40, 40))
+		_check(where.size() == 2 and full.has_point(where[1]), "indoors in %s the keeper is on the chart" % id)
+	_check(IslandChart.keeper("lh_3", Vector2.ZERO)[0] == "cape", "in the lighthouse: on the cape")
+	_check(IslandChart.keeper("grotto", Vector2.ZERO)[0] == "seal_shore", "in the grottoes: by the Seal Shore")
+	_check(IslandChart.keeper("sea", Vector2(100, 100)).is_empty(), "at sea: not on the island chart")
+	_check(IslandChart.seen("cape") and IslandChart.seen("village") and not IslandChart.seen("moor"), "home and Solvik are known, the moor is not")
+	Game.set_flag("map_seen_moor")
+	_check(IslandChart.seen("moor"), "a map walked is known")
+	var z1 := IslandChart.view(Rect2(Vector2.ZERO, IslandChart.size()), 1, "moor", Vector2(560, 480))
+	var z2 := IslandChart.view(Rect2(Vector2.ZERO, IslandChart.size()), 2, "moor", Vector2(560, 480))
+	_check(z1 == full and z2.size * 2.0 == full.size and full.encloses(z2), "zoom shows half the chart, inside it")
+	_check(z2.has_point(IslandChart.keeper("moor", Vector2(560, 480))[1]), "zoomed in on the keeper")
+	var hud := CanvasLayer.new()
+	add_child(hud)
+	Router.current_map = "village"
+	SeaChartPanel.toggle(hud)
+	var panel := hud.get_node("SeaChartPanel") as SeaChartPanel
+	_check(panel.tab == "island", "ashore the map opens on the island")
+	panel.switch_tab("sea")
+	_check(panel.tab == "sea", "and turns to the sea chart")
+	panel.close()
+	Router.current_map = "sea"
+	SeaChartPanel.toggle(hud)
+	_check((hud.get_node("SeaChartPanel") as SeaChartPanel).tab == "sea", "at sea it opens on the sea chart")
+	(hud.get_node("SeaChartPanel") as SeaChartPanel).close()
+	hud.queue_free()
+	Router.current_map = "cape"
