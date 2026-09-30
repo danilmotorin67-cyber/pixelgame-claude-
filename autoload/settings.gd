@@ -10,7 +10,7 @@ var sfx_vol: float = 1.0
 var save_anytime: bool = false
 var fortuna_reminder: bool = true
 var fishing_assist: bool = false
-var fullscreen: bool = false
+var fullscreen: bool = true
 
 # The settings are the player's, not the save's: they live in their own file, read at start and written on
 # every change (from the title screen or the journal).
@@ -22,6 +22,9 @@ func _ready() -> void:
 	apply_language()
 	apply_audio()
 	apply_window()
+	if DisplayServer.get_name() != "headless":
+		get_tree().root.size_changed.connect(_fit_scale)
+		_fit_scale()
 	# The pixel font and the PixelLab frames style every window and HUD panel.
 	UiKit.install(get_tree())
 
@@ -46,6 +49,23 @@ func apply_window() -> void:
 	var want := DisplayServer.WINDOW_MODE_FULLSCREEN if fullscreen else DisplayServer.WINDOW_MODE_MAXIMIZED
 	if DisplayServer.window_get_mode() != want:
 		DisplayServer.window_set_mode(want)
+
+
+# The picture is drawn at 960×540 and scaled up whole times (×2, ×3) while that fills the window, so the
+# pixels stay even; a window a little short of the next whole step (a maximized window under the taskbar)
+# would drop to far less, so then the picture scales to fit instead.
+func _fit_scale() -> void:
+	var root := get_tree().root
+	var base := Vector2(ProjectSettings.get_setting("display/window/size/viewport_width", 960),
+		ProjectSettings.get_setting("display/window/size/viewport_height", 540))
+	root.content_scale_stretch = Window.CONTENT_SCALE_STRETCH_INTEGER if whole_scale(Vector2(root.size), base) \
+		else Window.CONTENT_SCALE_STRETCH_FRACTIONAL
+
+
+# Whole-times scaling suits a window when it still fills at least 90% of what fitting would.
+static func whole_scale(window: Vector2, base: Vector2) -> bool:
+	var fit := minf(window.x / base.x, window.y / base.y)
+	return floorf(fit) >= 1.0 and floorf(fit) / fit >= 0.9
 
 
 func apply_audio() -> void:

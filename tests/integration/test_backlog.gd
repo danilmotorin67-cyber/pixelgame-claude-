@@ -787,6 +787,12 @@ func _check_island_chart() -> void:
 # The title screen: slots with their headers, the latest save for «Продолжить», deleting, the settings file,
 # and the menu itself.
 func _check_title() -> void:
+	# The picture scales whole times when that fills the window, and fits a window just short of a step.
+	var base := Vector2(960, 540)
+	_check(Settings.whole_scale(Vector2(1920, 1080), base) and Settings.whole_scale(Vector2(3840, 2160), base),
+		"a 1080p or 4K screen scales ×2 / ×4")
+	_check(not Settings.whole_scale(Vector2(1916, 1017), base) and not Settings.whole_scale(Vector2(1366, 768), base),
+		"a maximized window under the taskbar or a small laptop screen scales to fit")
 	_fresh()
 	var root := Save.save_root
 	Save.save_root = "user://saltlight_title_test"
