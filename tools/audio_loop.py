@@ -12,7 +12,8 @@ and made to loop without a seam: the last `xfade` seconds are blended with the s
 so when the player jumps from the end back to `loop_start` nothing clicks; the start is nudged (--search
 seconds) to where the rhythm before it matches the ending, so the beats of the crossfade fall together. loop_start is written to
 data/music.json. By default the loop goes back to the very start (--loop-from 0); a track with an intro gets
---loop-from at the first bar after it. Sounds are trimmed, given short fades and peak at -6 dBFS.
+--loop-from at the first bar after it. Sounds are trimmed, given short fades and brought to one loudness by
+their loudest 50 ms (so a sharp clink and a long scrape sound alike), their peaks kept under -1 dBFS.
 Output: assets/audio/<kind>/<id>.ogg. Needs numpy and soundfile (pip install numpy soundfile).
 """
 import argparse
@@ -31,7 +32,8 @@ KINDS = ("music", "ambience", "sfx")
 EXTS = (".mp3", ".wav", ".ogg", ".flac")
 # Loudness targets as RMS (dBFS), a simple stand-in for LUFS: music ≈ -16 LUFS, ambience under it.
 TARGET_RMS = {"music": -19.0, "ambience": -26.0}
-SFX_PEAK = -6.0
+SFX_LOUDEST = -18.0
+SFX_PEAK = -1.0
 
 
 def db(x):
@@ -97,6 +99,18 @@ def level_to(audio, target_rms):
     return audio
 
 
+def level_sfx(audio, sr, window=0.05):
+    """Brings the loudest `window` seconds to SFX_LOUDEST, with the peak held under SFX_PEAK."""
+    mono = audio.mean(axis=1)
+    w = max(int(window * sr), 1)
+    energy = np.convolve(mono ** 2, np.ones(w) / w, "valid") if len(mono) > w else np.array([np.mean(mono ** 2)])
+    gain = 10 ** ((SFX_LOUDEST - 10 * np.log10(max(float(energy.max()), 1e-12))) / 20)
+    peak = np.abs(audio).max() * gain
+    if peak > 10 ** (SFX_PEAK / 20):
+        gain *= 10 ** (SFX_PEAK / 20) / peak
+    return audio * gain
+
+
 def fades(audio, sr, fade_in=0.005, fade_out=0.03):
     a, b = int(fade_in * sr), int(fade_out * sr)
     if a:
@@ -127,7 +141,7 @@ def process(kind, path, loop_from=None, xfade=2.0, search=4.0, level=None):
     audio = trim(audio, sr)
     info = {}
     if kind == "sfx":
-        audio = audio / max(np.abs(audio).max(), 1e-9) * 10 ** (SFX_PEAK / 20)
+        audio = level_sfx(audio, sr)
         audio = fades(audio, sr)
     else:
         audio = level_to(audio, TARGET_RMS[kind] if level is None else level)

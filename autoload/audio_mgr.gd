@@ -29,6 +29,7 @@ var _layers := {}
 var _sfx: Array[AudioStreamPlayer] = []
 var _next_voice := 0
 var _streams := {}
+var _last_played := {}
 var _check_t := 0.0
 # Without a screen (tests, servers) there is no sound: the choices are still made, nothing is played, so no
 # stream is left mid-play when the engine quits.
@@ -62,9 +63,19 @@ func _ready() -> void:
 	Events.fish_caught.connect(func(_id: String, _q: int, _s: float) -> void: play_sfx("fish_landed"))
 	Events.ship_wrecked.connect(func(_ship: String) -> void: play_sfx("station_bell"))
 	Events.body_buried.connect(func(_id: String, _q: int) -> void: play_sfx("grave_fill"))
-	Events.item_added.connect(func(_id: String, _n: int) -> void: play_sfx("item_get", -8.0))
+	Events.item_added.connect(func(_id: String, _n: int) -> void: _item_got.call_deferred())
 	Events.money_changed.connect(func(_amount: int) -> void: play_sfx("ui_coins", -6.0))
 	get_tree().node_added.connect(_on_node_added)
+
+
+# A new thing in the pack chimes once, however many come at a time, and not over the sound of picking it up.
+func _item_got() -> void:
+	if not (_played_within("pickup", 200) or _played_within("item_get", 200)):
+		play_sfx("item_get", -8.0)
+
+
+func _played_within(id: String, msec: int) -> bool:
+	return Time.get_ticks_msec() - int(_last_played.get(id, -100000)) < msec
 
 
 # Every button clicks when pressed; one with the meta `sfx` plays that sound instead ("" for none).
@@ -374,6 +385,7 @@ func play_sfx(id: String, volume_db := 0.0) -> void:
 		pitch = float(STAND_INS[id][1])
 	if stream == null:
 		return
+	_last_played[id] = Time.get_ticks_msec()
 	var p := _sfx[_next_voice]
 	_next_voice = (_next_voice + 1) % _sfx.size()
 	p.bus = "UI" if id in UI_SOUNDS else "SFX"
