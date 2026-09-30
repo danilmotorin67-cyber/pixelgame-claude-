@@ -67,6 +67,7 @@ func _ready() -> void:
 	var cam := get_node_or_null("Camera2D") as Camera2D
 	if cam:
 		cam.zoom = Vector2(Screen.ZOOM, Screen.ZOOM)
+		_fit_camera(cam)
 	if Router.current_map == "sea":
 		var art := BoatArt.new()
 		art.name = "BoatArt"
@@ -444,6 +445,31 @@ func play_tool(kind: String, target: Vector2) -> void:
 		"net": "splash_small"}.get(tool_anim(), ""))
 	if fx != "" and toward.length() > 4.0:
 		Fx.burst_later(fx, target, TOOL_DURATION * 0.55)
+
+
+# The camera stays over the map: it stops at the edges instead of looking past them into the void, and a
+# map smaller than the screen (a small room) sits in the middle of it.
+func _fit_camera(cam: Camera2D) -> void:
+	var world := world_size(Router.current_map)
+	if world == Vector2.ZERO:
+		return
+	var view := Screen.BASE
+	cam.limit_left = int(minf(0.0, (world.x - view.x) / 2.0))
+	cam.limit_right = int(maxf(world.x, (world.x + view.x) / 2.0))
+	cam.limit_top = int(minf(0.0, (world.y - view.y) / 2.0))
+	cam.limit_bottom = int(maxf(world.y, (world.y + view.y) / 2.0))
+
+
+# The size of a map in pixels (zero where there is no fixed size: the tower, the grottoes).
+static func world_size(map: String) -> Vector2:
+	if map == "sea":
+		var s: Array = SeaChart.cfg("size")
+		return Vector2(float(s[0]), float(s[1])) * float(SeaChart.TILE)
+	if map == "deep":
+		return Vector2(DeepGen.W, DeepGen.H) * Deep.TILE
+	if MapInfo.exists(map):
+		return Vector2(MapInfo.size(map)) * float(MapInfo.TILE)
+	return Vector2.ZERO
 
 
 func _footstep() -> void:

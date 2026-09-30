@@ -70,6 +70,8 @@ window/stretch/scale_mode="integer"
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(0.043, 0.055, 0.078, 1)
+
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 textures/canvas_textures/default_texture_filter=0
