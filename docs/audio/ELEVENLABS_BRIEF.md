@@ -131,6 +131,8 @@ no fade-in, no fade-out, no big ending.
 
 ### Вторая очередь — звуки подключу в игре, как только появятся файлы
 
+Промпты, длительности и имена файлов для каждого звука — в `docs/audio/SFX_WAVE2.md` (и `.pdf`).
+
 - **Шаги** — по 3 варианта на поверхность: `step_grass`, `step_sand`, `step_stone`, `step_wood`, `step_snow`,
   `step_water`, `step_mud`, `step_indoor`.
 - **Рыбалка:** `fish_cast` (свист лески и всплеск поплавка), `fish_bite` (плеск поплавка), `fish_reel`
