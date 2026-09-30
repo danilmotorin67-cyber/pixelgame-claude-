@@ -188,57 +188,57 @@
     "amb_shore": {
       "title": "Берег",
       "where": "мыс, пляжи",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_sea": {
       "title": "Открытое море",
       "where": "море",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_village": {
       "title": "Деревня",
       "where": "Сольвик днём",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_tavern": {
       "title": "Таверна",
       "where": "таверна",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_moor": {
       "title": "Пустошь и лес",
       "where": "пустошь, лощина, утёс",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_night": {
       "title": "Ночь",
       "where": "суша ночью",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_interior": {
       "title": "В доме",
       "where": "дома, маяк",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_cave": {
       "title": "Пещера",
       "where": "гроты",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_underwater": {
       "title": "Под водой",
       "where": "Глубь",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_rain": {
       "title": "Дождь",
       "where": "поверх, когда идёт дождь",
-      "loop_start": 0.0
+      "loop_start": 4.0
     },
     "amb_wind": {
       "title": "Ветер шторма",
       "where": "поверх, в шторм",
-      "loop_start": 0.0
+      "loop_start": 4.0
     }
   }
 }

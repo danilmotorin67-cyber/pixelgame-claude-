@@ -121,7 +121,7 @@ def read(path):
     return audio[:, :2], sr
 
 
-def process(kind, path, loop_from=None, xfade=2.0, search=4.0):
+def process(kind, path, loop_from=None, xfade=2.0, search=4.0, level=None):
     ident = os.path.splitext(os.path.basename(path))[0]
     audio, sr = read(path)
     audio = trim(audio, sr)
@@ -130,7 +130,7 @@ def process(kind, path, loop_from=None, xfade=2.0, search=4.0):
         audio = audio / max(np.abs(audio).max(), 1e-9) * 10 ** (SFX_PEAK / 20)
         audio = fades(audio, sr)
     else:
-        audio = level_to(audio, TARGET_RMS[kind])
+        audio = level_to(audio, TARGET_RMS[kind] if level is None else level)
         audio, loop_start = make_loop(audio, sr, loop_from or 0.0, xfade, search)
         info = {"loop_start": round(loop_start, 3), "length": round(len(audio) / sr, 2)}
     os.makedirs(os.path.join(OUT, kind), exist_ok=True)
@@ -164,6 +164,8 @@ def main():
     ap.add_argument("ids", nargs="*", help="only these ids (default: all new or changed files)")
     ap.add_argument("--loop-from", type=float, default=None, help="seconds where the loop starts again")
     ap.add_argument("--xfade", type=float, default=2.0, help="seconds of the seam crossfade")
+    ap.add_argument("--level", type=float, default=None,
+                    help="loudness to bring it to (RMS dBFS) instead of the kind's default")
     ap.add_argument("--search", type=float, default=4.0,
                     help="seconds after the loop start to look for the spot whose rhythm matches the ending (0: off)")
     args = ap.parse_args()
@@ -176,7 +178,7 @@ def main():
         if not args.ids and os.path.exists(dest) and os.path.getmtime(dest) >= os.path.getmtime(path):
             continue
         try:
-            ident, dest, info = process(kind, path, args.loop_from, args.xfade, args.search)
+            ident, dest, info = process(kind, path, args.loop_from, args.xfade, args.search, args.level)
         except ValueError as e:
             print(f"{ident}: {e}", file=sys.stderr)
             continue
