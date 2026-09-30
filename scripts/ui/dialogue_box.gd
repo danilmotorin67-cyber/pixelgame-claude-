@@ -126,6 +126,14 @@ func _show() -> void:
 	_text.lines_skipped = 0
 	_portrait.queue_redraw()
 	_clear_choices()
+	_mumble()
+
+
+# A few syllables in the speaker's voice (npcs.json "voice": low_m … high_f) with each line and page.
+func _mumble() -> void:
+	var voice := str(Data.by_id("npcs", _npc).get("voice", ""))
+	if voice != "":
+		AudioMgr.play_sfx("voice_" + voice, -8.0)
 
 
 func page_count() -> int:
@@ -141,6 +149,7 @@ func advance() -> void:
 		return
 	if _text.lines_skipped + LINES < _text.get_line_count():
 		_text.lines_skipped += LINES
+		_mumble()
 		return
 	var line: Dictionary = _queue[0]
 	if not (line["choices"] as Array).is_empty() and _choice_box.get_child_count() == 0:

@@ -3,6 +3,7 @@ class_name GhostObject
 
 var ghost_id: String = ""
 var _time: float = 0.0
+var _seen := false
 
 
 func _ready() -> void:
@@ -17,6 +18,11 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	_time += delta
+	if not _seen:
+		var keeper := get_tree().current_scene.get_node_or_null("Player") as Node2D if get_tree().current_scene else null
+		if keeper and keeper.global_position.distance_to(global_position) < 100.0:
+			_seen = true
+			AudioMgr.ghost_seen(ghost_id)
 	position.y += sin(_time * 2.0) * 0.05
 	queue_redraw()
 
@@ -38,6 +44,7 @@ func _draw() -> void:
 func interact(_player: Player) -> void:
 	var name := Loc.t(str(Data.by_id("ghosts", ghost_id).get("name", ghost_id)))
 	var line := Graveyard.talk_ghost(ghost_id)
+	AudioMgr.play_sfx("whisper", -6.0)
 	var buttons: Array = []
 	for pair in Ghosts.actions(ghost_id):
 		var action := str(pair[0])

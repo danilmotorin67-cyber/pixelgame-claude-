@@ -30,6 +30,12 @@ var _sfx: Array[AudioStreamPlayer] = []
 var _next_voice := 0
 var _streams := {}
 var _last_played := {}
+var _loops := {}
+# Seconds until each sound of the world around the keeper comes again (_world_sounds).
+var _next := {}
+var _rng := RandomNumberGenerator.new()
+var _was_night := false
+var _ghosts_heard := {}
 var _check_t := 0.0
 # Without a screen (tests, servers) there is no sound: the choices are still made, nothing is played, so no
 # stream is left mid-play when the engine quits.
@@ -66,6 +72,16 @@ func _ready() -> void:
 	Events.item_added.connect(func(_id: String, _n: int) -> void: _item_got.call_deferred())
 	Events.money_changed.connect(func(_amount: int) -> void: play_sfx("ui_coins", -6.0))
 	get_tree().node_added.connect(_on_node_added)
+	# The story's accents: a find, the sea's voice with a blessing, dread when a Hmar night falls.
+	Events.quest_event.connect(func(what: String, _arg: String) -> void:
+		if what in ["page", "evidence"]:
+			play_sfx("sting_discovery", -4.0))
+	Events.blessing_gained.connect(func(_id: String) -> void: play_sfx("sting_rann"))
+	Events.hour_changed.connect(func(_h: int) -> void:
+		var night := Clock.is_night()
+		if night and not _was_night and Weather.hmar_night:
+			play_sfx("sting_dread", -4.0)
+		_was_night = night)
 
 
 # A new thing in the pack chimes once, however many come at a time, and not over the sound of picking it up.
@@ -108,7 +124,7 @@ func _notification(what: int) -> void:
 
 
 func _let_go() -> void:
-	for p in _players + _sfx + [_ambience] + _layers.values():
+	for p in _players + _sfx + [_ambience] + _layers.values() + _loops.values():
 		var player := p as AudioStreamPlayer
 		if player:
 			player.stop()
@@ -151,6 +167,54 @@ func _process(delta: float) -> void:
 	if _check_t <= 0.0:
 		_check_t = 0.5
 		refresh()
+	_world_sounds(delta)
+
+
+# Sounds of the place that no action makes: the foghorn over the fog, gulls over the shore, the rigging
+# and the waves at sea, far thunder heard indoors, breath in the helmet under water.
+func _world_sounds(delta: float) -> void:
+	if silent or Clock.paused:
+		return
+	var map := Router.current_map
+	var scene := get_tree().current_scene
+	var player := scene.get_node_or_null("Player") if scene else null
+	var outdoors := map in Router.ISLAND_MAPS or map == "sea"
+	var by_day := Clock.hour >= 6 and Clock.hour < 20
+	var tower := map == "cape" or map in Router.TOWER_MAPS
+	if Lighthouse.lamp_on and Lighthouse.foggy() and Lighthouse.signal_level() >= 3 and (tower or map == "sea"):
+		_every("foghorn", delta, 28.0, 36.0, -4.0 if map == "cape" else -12.0)
+	if by_day and Weather.current not in ["storm", "blizzard"] and map in ["cape", "seal_shore", "wreck_bay", "bird_cliffs", "lagoon", "village"]:
+		_every("gulls", delta, 30.0 if map == "bird_cliffs" else 50.0, 100.0, -12.0)
+	if map == "sea" and player:
+		var storm := Weather.current == "storm"
+		_every("wave_hit", delta, 4.0 if storm else 10.0, 8.0 if storm else 20.0, -6.0 if storm else -14.0)
+		if bool(player.get("sail_up")):
+			_every("rigging_creak", delta, 6.0, 14.0, -12.0)
+	if Weather.current == "storm" and not outdoors and map != "deep":
+		_every("thunder_far", delta, 12.0, 25.0, -8.0)
+	var breathing := map == "deep" and Deep.active and Deep.gear() in ["suit", "bell"]
+	if breathing:
+		play_loop("helmet_breath", "helmet_breath", -10.0)
+	elif looping("helmet_breath"):
+		stop_loop("helmet_breath")
+
+
+# A ghost come into view: its sting once a day for each ghost.
+func ghost_seen(ghost_id: String) -> void:
+	var key := "%s:%d" % [ghost_id, Clock.day_index]
+	if not _ghosts_heard.has(key):
+		_ghosts_heard[key] = true
+		play_sfx("sting_ghost", -4.0)
+
+
+# Plays `id` every `low`..`high` seconds (the first time after a random part of that).
+func _every(id: String, delta: float, low: float, high: float, volume_db: float) -> void:
+	if not _next.has(id):
+		_next[id] = _rng.randf_range(low * 0.3, high)
+	_next[id] = float(_next[id]) - delta
+	if float(_next[id]) <= 0.0:
+		_next[id] = _rng.randf_range(low, high)
+		play_sfx(id, volume_db)
 
 
 # --- What plays where --------------------------------------------------------------------------------------
@@ -393,6 +457,50 @@ func play_sfx(id: String, volume_db := 0.0) -> void:
 	p.volume_db = volume_db
 	p.pitch_scale = pitch * (1.0 if id in UI_SOUNDS else randf_range(0.95, 1.05))
 	p.play()
+
+
+# A sound that goes on while something lasts (a reel winding, breath in a helmet, a purr), under `key` so
+# the same loop is not started twice; stop_loop ends it.
+func play_loop(id: String, key := "", volume_db := 0.0) -> void:
+	if silent:
+		return
+	key = key if key != "" else id
+	var p := _loops.get(key) as AudioStreamPlayer
+	if p and p.playing and p.get_meta("sfx", "") == id:
+		p.volume_db = volume_db
+		return
+	var stream := _sfx_stream(id)
+	if stream == null:
+		return
+	if p == null:
+		p = _player("SFX")
+		_loops[key] = p
+	if stream is AudioStreamOggVorbis:
+		(stream as AudioStreamOggVorbis).loop = true
+	elif stream is AudioStreamWAV:
+		(stream as AudioStreamWAV).loop_mode = AudioStreamWAV.LOOP_FORWARD
+	p.set_meta("sfx", id)
+	p.stream = stream
+	p.volume_db = volume_db
+	p.play()
+
+
+func stop_loop(key: String) -> void:
+	var p := _loops.get(key) as AudioStreamPlayer
+	if p and p.playing:
+		p.stop()
+
+
+func looping(key: String) -> bool:
+	var p := _loops.get(key) as AudioStreamPlayer
+	return p != null and p.playing
+
+
+# The same, `delay` seconds from now (a bell after the candle is lit).
+func play_sfx_later(id: String, delay: float, volume_db := 0.0) -> void:
+	if silent:
+		return
+	get_tree().create_timer(delay).timeout.connect(func() -> void: play_sfx(id, volume_db))
 
 
 func _sfx_stream(id: String) -> AudioStream:

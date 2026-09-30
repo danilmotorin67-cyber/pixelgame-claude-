@@ -78,6 +78,7 @@ func interact(_player: Player) -> void:
 				return
 			match Deep.descend():
 				"ok":
+					AudioMgr.play_sfx("bell_descent", -6.0)
 					Router.goto_map("deep", Deep.cell_center(Deep.data["entry"]))
 				"depth":
 					_say("Глубже с этим снаряжением не спуститься.")

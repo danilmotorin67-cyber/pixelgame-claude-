@@ -32,6 +32,7 @@ func _storm(delta: float) -> void:
 		return
 	_next_bolt = _rng.randf_range(5.0, 12.0)
 	_bolt_t = 0.35
+	AudioMgr.play_sfx("thunder_near", -3.0)
 	_bolt = PackedVector2Array()
 	var x := _rng.randf_range(60.0, 420.0)
 	var y := -4.0

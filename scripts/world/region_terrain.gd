@@ -28,6 +28,7 @@ var _deep_shape: CollisionShape2D
 
 
 func _ready() -> void:
+	add_to_group("terrain")
 	region = MapInfo.region(Router.current_map)
 	if region.is_empty():
 		push_error("Unknown island region: %s" % Router.current_map)
@@ -229,6 +230,31 @@ func _build_exits() -> void:
 
 func _elevation(x: int, y: int) -> float:
 	return 1.25 - float(y - coast_row) * 0.5 + sin(float(x) * 0.37) * 0.06
+
+
+# What the feet meet at a point: grass, sand, stone, snow, water, mud, wood (a pier, a wreck's deck) or
+# indoor (footsteps).
+func surface_at(at: Vector2) -> String:
+	if bool(region.get("interior", false)):
+		return "indoor"
+	var x := int(at.x / TILE)
+	var y := int(at.y / TILE)
+	for r in _landmark_cells(["pier", "wreck"]):
+		if r.has_point(Vector2i(x, y)):
+			return "wood"
+	if coast_row >= 0 and y >= coast_row:
+		if _lagoon_frozen():
+			return "snow"
+		if Clock.tide_height() >= _elevation(x, y) - 0.5:
+			return "water"
+	var ground := _land(x, y)
+	if ground == G_BOG:
+		return "mud"
+	if ground in [G_CLIFF, G_COBBLE]:
+		return "stone"
+	if ground == G_SAND:
+		return "sand"
+	return "snow" if Clock.season == "winter" else "grass"
 
 
 func _lagoon_frozen() -> bool:

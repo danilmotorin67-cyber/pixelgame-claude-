@@ -12,6 +12,8 @@ var cold: float = 0.0
 var lantern_on: bool = false
 var _dodge_t: float = 0.0
 var _walk_time: float = 0.0
+var _step_frame := -1
+var _oar_t := 0.0
 var tool_kind: String = ""
 var tool_time: float = 0.0
 var _carry_distance: float = 0.0
@@ -148,8 +150,14 @@ func _physics_process(delta: float) -> void:
 	if dir.length() > 0.1:
 		_walk_time += delta
 		_still_time = 0.0
+		# A footfall on the frames the foot comes down (two in each six-frame stride).
+		var frame := int(_walk_time * 8.0)
+		if frame != _step_frame and frame % 3 == 1:
+			_footstep()
+		_step_frame = frame
 	else:
 		_walk_time = 0.0
+		_step_frame = -1
 		_still_time += delta
 	_update_sprite(dir.length() > 0.1)
 	if Router.current_map == "cape":
@@ -186,6 +194,7 @@ func _boat_physics(delta: float) -> void:
 	if get_slide_collision_count() > 0 and speed > 30.0 and _hit_cooldown <= 0.0:
 		_hit_cooldown = 1.0
 		boat_speed *= 0.3
+		AudioMgr.play_sfx("hull_hit")
 		if Sea.damage_hull(lerpf(10.0, 30.0, clampf(speed / 130.0, 0.0, 1.0))):
 			_towed()
 			return
@@ -198,6 +207,14 @@ func _boat_physics(delta: float) -> void:
 			if Sea.damage_hull(1.0):
 				_towed()
 				return
+	if rowing and input.length() > 0.1 and moved > 0.0:
+		# One stroke of the oars a second while pulling.
+		_oar_t -= delta
+		if _oar_t <= 0.0:
+			_oar_t = 1.1
+			AudioMgr.play_sfx("oar", -6.0)
+	else:
+		_oar_t = 0.0
 	if rowing and moved > 0.0:
 		_row_distance += moved
 		var per_energy := float(SeaChart.cfg("row_tiles_per_energy")) * 16.0
@@ -383,9 +400,9 @@ func _update_sprite(moving: bool) -> void:
 	if hud and seen != _fish_state:
 		# The float lands, a fish bites, the line comes out of the water.
 		if _fish_state == "waiting" and seen == "charging":
-			Fx.burst_later("splash", hud.target, 0.35)
+			Fx.burst_later("splash", hud.target, 0.35, false)
 		elif _fish_state == "bite":
-			Fx.burst("splash_small", hud.target)
+			Fx.burst("splash_small", hud.target, null, false)
 		elif _fish_state == "idle" and seen == "reeling":
 			Fx.burst("splash", hud.target)
 	if _fish_state == "waiting" and seen == "charging":
@@ -427,6 +444,30 @@ func play_tool(kind: String, target: Vector2) -> void:
 		"net": "splash_small"}.get(tool_anim(), ""))
 	if fx != "" and toward.length() > 4.0:
 		Fx.burst_later(fx, target, TOOL_DURATION * 0.55)
+
+
+func _footstep() -> void:
+	var ground := surface()
+	if ground != "":
+		AudioMgr.play_sfx("step_" + ground, -16.0 if Input.is_action_pressed("walk_slow") else -10.0)
+
+
+# The ground under the keeper for footsteps: from the map's terrain, stone in the grottoes, the sea bed
+# under the suit, the tower's plank floors, none while swimming or in the boat; floors inside.
+func surface() -> String:
+	if Router.current_map in Router.TOWER_MAPS:
+		return "wood"
+	match Router.current_map:
+		"sea":
+			return ""
+		"grotto":
+			return "stone"
+		"deep":
+			return "mud" if Deep.gear() == "suit" else ""
+	var terrain := get_tree().get_first_node_in_group("terrain") if is_inside_tree() else null
+	if terrain and terrain.has_method("surface_at"):
+		return str(terrain.call("surface_at", global_position))
+	return "indoor"
 
 
 func max_health() -> float:
@@ -728,6 +769,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Router.current_map == "sea" and event.is_action_pressed("dodge"):
 		if float(SeaChart.boat_info().get("sail", 0.0)) > 0.0:
 			sail_up = not sail_up
+			AudioMgr.play_sfx("sail_flap")
 			boat_speed = velocity.length()
 			_say("Парус поднят: руль — A/D." if sail_up else "Парус спущен: на вёслах.")
 		get_viewport().set_input_as_handled()

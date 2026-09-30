@@ -23,7 +23,8 @@
    "hate": []
   },
   "static": true,
-  "max_hearts": 10
+  "max_hearts": 10,
+  "voice": "mid_f"
  },
  {
   "id": "npc_sigrid",
@@ -62,7 +63,8 @@
     "rhubarb_pie",
     "lutefisk"
    ]
-  }
+  },
+  "voice": "mid_f"
  },
  {
   "id": "npc_liv",
@@ -104,7 +106,8 @@
     "fly_agaric"
    ]
   },
-  "arrives": "day_index >= 32"
+  "arrives": "day_index >= 32",
+  "voice": "high_f"
  },
  {
   "id": "npc_hedda",
@@ -144,7 +147,8 @@
     "bouquet_armeria",
     "heather_tea"
    ]
-  }
+  },
+  "voice": "low_f"
  },
  {
   "id": "npc_ingrid",
@@ -183,7 +187,8 @@
     "fish_oil",
     "tag:seaweed"
    ]
-  }
+  },
+  "voice": "mid_f"
  },
  {
   "id": "npc_einar",
@@ -222,7 +227,8 @@
     "tag:seaweed",
     "bouquet_armeria"
    ]
-  }
+  },
+  "voice": "low_m"
  },
  {
   "id": "npc_knud",
@@ -260,7 +266,8 @@
     "lutefisk",
     "tag:trash"
    ]
-  }
+  },
+  "voice": "mid_m"
  },
  {
   "id": "npc_magnus",
@@ -299,7 +306,8 @@
     "lutefisk",
     "neptune_can"
    ]
-  }
+  },
+  "voice": "mid_m"
  },
  {
   "id": "npc_olaf",
@@ -337,7 +345,8 @@
     "fish_oil",
     "tag:trash"
    ]
-  }
+  },
+  "voice": "high_m"
  },
  {
   "id": "npc_tuve",
@@ -381,7 +390,8 @@
   "arrive": {
    "map": "seal_shore",
    "spot": "seal_rock"
-  }
+  },
+  "voice": "high_f"
  },
  {
   "id": "npc_halvdan",
@@ -418,7 +428,8 @@
    ]
   },
   "max_hearts": 6,
-  "freeze_after_act": 3
+  "freeze_after_act": 3,
+  "voice": "low_m"
  },
  {
   "id": "npc_stern",
@@ -454,7 +465,8 @@
     "broken_lantern"
    ]
   },
-  "visitor": true
+  "visitor": true,
+  "voice": "mid_m"
  },
  {
   "id": "npc_tora",
@@ -488,7 +500,8 @@
    "hate": [
     "tag:flower"
    ]
-  }
+  },
+  "voice": "low_f"
  },
  {
   "id": "npc_ilm",
@@ -520,7 +533,8 @@
     "tag:trash"
    ],
    "hate": []
-  }
+  },
+  "voice": "low_m"
  },
  {
   "id": "npc_karl",
@@ -563,7 +577,8 @@
     ],
     "recipe": "cook_berg_herring"
    }
-  }
+  },
+  "voice": "mid_m"
  },
  {
   "id": "npc_solveig",
@@ -607,7 +622,8 @@
     ],
     "recipe": "cook_rhubarb_pie"
    }
-  }
+  },
+  "voice": "mid_f"
  },
  {
   "id": "npc_bjorn",
@@ -663,7 +679,8 @@
     ],
     "recipe": "cook_dry_drowned_ale"
    }
-  }
+  },
+  "voice": "low_m"
  },
  {
   "id": "npc_margit",
@@ -694,7 +711,8 @@
    ],
    "dislike": [],
    "hate": []
-  }
+  },
+  "voice": "low_f"
  },
  {
   "id": "npc_benedict",
@@ -727,7 +745,8 @@
    "hate": [
     "tag:fish"
    ]
-  }
+  },
+  "voice": "mid_m"
  },
  {
   "id": "npc_helga",
@@ -761,7 +780,8 @@
    "hate": [
     "neptune_can"
    ]
-  }
+  },
+  "voice": "low_f"
  },
  {
   "id": "npc_erland",
@@ -794,7 +814,8 @@
     "tag:sweet"
    ],
    "hate": []
-  }
+  },
+  "voice": "low_m"
  },
  {
   "id": "npc_kai",
@@ -827,7 +848,8 @@
    ],
    "hate": []
   },
-  "static": true
+  "static": true,
+  "voice": "low_m"
  },
  {
   "id": "npc_nils",
@@ -863,7 +885,8 @@
     "lutefisk"
    ]
   },
-  "child": true
+  "child": true,
+  "voice": "high_m"
  },
  {
   "id": "npc_freya",
@@ -899,7 +922,8 @@
     "lutefisk"
    ]
   },
-  "child": true
+  "child": true,
+  "voice": "high_f"
  },
  {
   "id": "npc_palm",
@@ -922,7 +946,8 @@
    "dislike": [],
    "hate": []
   },
-  "visitor": true
+  "visitor": true,
+  "voice": "mid_m"
  },
  {
   "id": "npc_nut",
@@ -962,7 +987,8 @@
   "birthday": {
    "season": "autumn",
    "day": 18
-  }
+  },
+  "voice": "mid_m"
  },
  {
   "id": "npc_rud",
@@ -1011,7 +1037,8 @@
      ]
     ]
    }
-  }
+  },
+  "voice": "low_m"
  },
  {
   "id": "npc_sandro",
@@ -1053,7 +1080,8 @@
   "birthday": {
    "season": "summer",
    "day": 9
-  }
+  },
+  "voice": "high_m"
  },
  {
   "id": "npc_grump",
@@ -1076,6 +1104,7 @@
    "dislike": [],
    "hate": []
   },
-  "visitor": true
+  "visitor": true,
+  "voice": "low_m"
  }
 ]

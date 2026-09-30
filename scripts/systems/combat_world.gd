@@ -103,6 +103,7 @@ func attack(weapon_id: String) -> Array:
 	if int(w.get("ranged", 0)) > 0:
 		if w.has("ammo") and not Inventory.take(str(w["ammo"]), 1):
 			return []
+		events.append({"t": time, "event": "shot", "weapon": weapon_id})
 		shots.append({"from": "player", "pos": player["pos"], "dir": (player["facing"] as Vector2).normalized(), "speed": 260.0,
 			"range": float(w["ranged"]) * TILE, "travel": 0.0, "weapon": weapon_id, "pierce": bool(w.get("pierce", false)) or Skills.has_profession("harpooner"), "hit": []})
 		return []

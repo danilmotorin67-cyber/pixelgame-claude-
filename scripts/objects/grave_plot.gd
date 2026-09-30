@@ -87,6 +87,7 @@ func use_tool(player: Player, tool: String) -> String:
 				result = "Могила засыпана. Качество %d. Поставьте знак: E с крестом или 10 камнями." % int(g["quality"])
 		elif not bool(g["old"]) and str(g["body"]) == "" and not bool(g["open"]):
 			var state := Graveyard.dig(plot)
+			AudioMgr.play_sfx("grave_dig", -4.0)
 			player.energy = maxf(0.0, player.energy - float(Graveyard.cfg("dig_energy")))
 			result = "Могила выкопана. Положите тело: E с ношей." if state == "open" \
 				else "Копаете: %d из %d." % [int(g["dug"]), Graveyard.dig_hits_needed()]
@@ -108,6 +109,7 @@ func interact(player: Player) -> void:
 		var selected := Inventory.selected_id()
 		var marker := "mound" if selected == "stone" else selected
 		if Graveyard.place_marker(plot, marker):
+			AudioMgr.play_sfx("marker_set")
 			hint.text = "Знак поставлен. Качество могилы %d." % int(g["quality"])
 			if marker == "headstone":
 				_choose_epitaph()

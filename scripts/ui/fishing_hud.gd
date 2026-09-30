@@ -73,6 +73,7 @@ func _cast() -> void:
 	fish = Fishing.pick(ctx, _rng, bait == "legend_lure")
 	wait_left = Fishing.wait_seconds(rod_id, bait, _rng)
 	state = "waiting"
+	AudioMgr.play_sfx("fish_cast")
 	_hint("Поплавок покачивается…")
 
 
@@ -100,6 +101,7 @@ func _process(delta: float) -> void:
 				_hint("Смотали леску.")
 			elif wait_left <= 0.0:
 				state = "bite"
+				AudioMgr.play_sfx("fish_bite")
 				bite_left = 0.8 + Fishing.tackle_bonus(tackles, "window", 0.0)
 				_hint("Плюх! Подсекай!")
 		"bite":
@@ -113,7 +115,16 @@ func _process(delta: float) -> void:
 			var result := sim.step(delta, holding)
 			if result != "":
 				_finish(result)
+	# The reel's ratchet runs while the line is wound in.
+	if state == "reeling" and holding:
+		AudioMgr.play_loop("fish_reel", "fish_reel", -6.0)
+	else:
+		AudioMgr.stop_loop("fish_reel")
 	queue_redraw()
+
+
+func _exit_tree() -> void:
+	AudioMgr.stop_loop("fish_reel")
 
 
 func _auto_strike() -> bool:
@@ -148,6 +159,7 @@ func _finish(result: String) -> void:
 				landed = got
 				landed_left = 3.0
 		"snapped":
+			AudioMgr.play_sfx("line_snap")
 			if bait != "":
 				Inventory.take(bait, 1)
 			_hint("Леска лопнула. Рыба ушла с наживкой и чувством превосходства.")

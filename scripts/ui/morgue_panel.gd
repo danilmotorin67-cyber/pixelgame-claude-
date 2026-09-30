@@ -75,6 +75,7 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 		if b.is_empty() or keeper == null:
 			return "Нет тела."
 		if Graveyard.sew(b, true):
+			AudioMgr.play_sfx("needle")
 			keeper.spend_energy("examine_body")
 			Clock.pass_time(60)
 			return "Зашито в парусину, последний стежок — через нос. Моряк не возражал."
@@ -90,6 +91,8 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 		if b.is_empty() or keeper == null:
 			return "Нет тела."
 		if Graveyard.self_funeral(b):
+			AudioMgr.play_sfx("candle")
+			AudioMgr.play_sfx_later("funeral_bell", 1.2)
 			keeper.energy = maxf(0.0, keeper.energy - 20.0)
 			Clock.pass_time(30)
 			return "Слово смотрителя сказано."
@@ -99,6 +102,8 @@ static func open(hud: CanvasLayer) -> InfoPanel:
 		if b.is_empty():
 			return "Нет тела."
 		var said := Graveyard.whisper(b)
+		if said != "":
+			AudioMgr.play_sfx("whisper", -4.0)
 		return said if said != "" else "Тишина. Шепчут только в первую ночь, с полуночи до двух."
 	var carry := func(panel: InfoPanel) -> String:
 		var b: Dictionary = pick.call(panel)

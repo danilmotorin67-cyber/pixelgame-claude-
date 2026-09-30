@@ -20,6 +20,7 @@ var _corners := PackedInt32Array()
 
 
 func _ready() -> void:
+	add_to_group("terrain")
 	_corners = corners()
 	Events.season_changed.connect(func(_s: String) -> void: queue_redraw())
 
@@ -39,6 +40,20 @@ static func corners() -> PackedInt32Array:
 				t = PATH
 			out[vy * (W + 1) + vx] = t
 	return out
+
+
+# What the feet meet at a point (footsteps): the tide wets the shore rows as TideShore floods them.
+func surface_at(at: Vector2) -> String:
+	var row := int(at.y / WangGround.CELL) - 54
+	if row >= 0 and Clock.tide_height() >= 1.25 - float(row) * 0.5 + sin(float(int(at.x / WangGround.CELL)) * 0.37) * 0.06 - 0.5:
+		return "water"
+	var v := Vector2i((at / float(WangGround.CELL)).round())
+	var t := _corners[clampi(v.y, 0, H) * (W + 1) + clampi(v.x, 0, W)] if not _corners.is_empty() else GRASS
+	if t == SAND:
+		return "sand"
+	if t == ROCK:
+		return "stone"
+	return "snow" if Clock.season == "winter" else "grass"
 
 
 static func _near_path(at: Vector2) -> bool:

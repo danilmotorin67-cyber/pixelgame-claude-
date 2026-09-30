@@ -91,6 +91,7 @@ func interact(player: Player) -> void:
 		var name_text := Loc.t(str(Data.by_id("items", part)["name"]))
 		match Lighthouse.install_part(part):
 			"ok":
+				AudioMgr.play_sfx("lens_set")
 				_hint("Установлено: %s. Сила огня теперь %d." % [name_text, int(Lighthouse.base_power())])
 			"worse":
 				_hint("Стоящее сейчас не хуже.")
@@ -134,6 +135,7 @@ func interact(player: Player) -> void:
 			elif player.energy <= 0.0:
 				_hint("Нужен отдых, сил на работу нет.")
 			elif Lighthouse.clean_glass():
+				AudioMgr.play_sfx("glass_wipe")
 				player.spend_energy("clean_glass")
 				player.play_pose("clean_glass", 1.2)
 				_hint("Стёкла протёрты: чистота %d." % int(Lighthouse.cleanliness))
@@ -278,6 +280,7 @@ func _start_winding(player: Player) -> void:
 		return
 	_keeper = player
 	_winding = true
+	AudioMgr.play_sfx("lens_wind")
 	player.play_pose("wind", 0.0, true)
 	_wind_angle = 0.0
 	_last_angle = (get_global_mouse_position() - global_position).angle()

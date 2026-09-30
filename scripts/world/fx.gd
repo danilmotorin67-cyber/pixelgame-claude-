@@ -82,11 +82,11 @@ static func burst(kind: String, at: Vector2, parent: Node = null, sound := true)
 
 
 # A burst a moment later — when the blow lands rather than when the swing starts.
-static func burst_later(kind: String, at: Vector2, delay: float) -> void:
+static func burst_later(kind: String, at: Vector2, delay: float, sound := true) -> void:
 	var host := _layer()
 	if host == null or not host.is_inside_tree():
 		return
-	host.get_tree().create_timer(delay).timeout.connect(func() -> void: burst(kind, at))
+	host.get_tree().create_timer(delay).timeout.connect(func() -> void: burst(kind, at, null, sound))
 
 
 # Chimney smoke: a thin grey column that drifts with the wind, thicker in the cold months.
@@ -126,10 +126,34 @@ static func smoking() -> bool:
 static func fallen(world: CombatWorld, underwater: bool) -> void:
 	if world == null:
 		return
+	_combat_sounds(world)
 	for f in world.fallen:
 		if f.has("fx"):
 			continue
 		f["fx"] = true
 		var kind := str(f["kind"])
 		var what := "ink" if kind == "octopus" else ("feathers" if kind == "gull_marauder" else ("bubbles" if underwater else "dust"))
-		burst(what, f["pos"])
+		# Ink and feathers have sounds of their own; any other foe gives its death cry.
+		burst(what, f["pos"], null, what in ["ink", "feathers"])
+		if what not in ["ink", "feathers"]:
+			AudioMgr.play_sfx("enemy_die", -3.0)
+
+
+# The blows, shots and wounds of a fight since last looked, and a boss's roar when it first shows.
+static func _combat_sounds(world: CombatWorld) -> void:
+	var heard := int(world.get_meta("heard", 0))
+	for ev in world.events.slice(heard):
+		match str(ev.get("event", "")):
+			"hit", "boss_hit":
+				AudioMgr.play_sfx("hit_enemy", -4.0)
+			"hurt":
+				AudioMgr.play_sfx("hit_player", -2.0)
+			"shot":
+				if int(world.weapon(str(ev.get("weapon", ""))).get("ranged", 0)) > 1:
+					AudioMgr.play_sfx("harpoon", -3.0)
+			"boss_down":
+				AudioMgr.play_sfx("boss_roar", -6.0)
+	world.set_meta("heard", world.events.size())
+	if not world.boss.is_empty() and not world.has_meta("roared"):
+		world.set_meta("roared", true)
+		AudioMgr.play_sfx("boss_roar")

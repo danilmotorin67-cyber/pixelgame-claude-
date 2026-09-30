@@ -12,6 +12,7 @@ var _left := 1.0
 var _clock := 0.0
 var _facing := "down"
 var _rng := RandomNumberGenerator.new()
+var _meow_t := 20.0
 
 
 func _ready() -> void:
@@ -52,6 +53,13 @@ func _process(delta: float) -> void:
 			_facing = ["down", "left", "right"][_rng.randi() % 3]
 		_clock = 0.0
 		_left = _rng.randf_range(2.0, 6.0)
+	# Awake, he meows now and then at the keeper passing by.
+	_meow_t -= delta
+	if _meow_t <= 0.0:
+		_meow_t = _rng.randf_range(20.0, 50.0)
+		var keeper := get_tree().current_scene.get_node_or_null("Player") as Node2D if get_tree().current_scene else null
+		if not sleeping() and keeper and keeper.global_position.distance_to(global_position) < 90.0:
+			AudioMgr.play_sfx("cat_meow", -10.0)
 	queue_redraw()
 
 
@@ -67,8 +75,13 @@ func interact(player: Player) -> void:
 	if hint:
 		hint.text = "Фитиль приоткрывает жёлтый глаз и снова засыпает." if sleeping() \
 			else "Фитиль позволяет себя поднять и громко мурлычет."
+	if sleeping():
+		AudioMgr.play_sfx("cat_meow", -14.0)
 	if player and not sleeping():
-		# The keeper holds him a moment; he is part of the picture meanwhile.
+		# The keeper holds him a moment; he is part of the picture meanwhile, purring.
 		player.play_pose("lift_cat", 1.6)
 		visible = false
-		get_tree().create_timer(1.6).timeout.connect(func() -> void: visible = true)
+		AudioMgr.play_loop("cat_purr", "cat_purr", -6.0)
+		get_tree().create_timer(1.6).timeout.connect(func() -> void:
+			visible = true
+			AudioMgr.stop_loop("cat_purr"))

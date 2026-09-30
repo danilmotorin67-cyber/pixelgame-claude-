@@ -129,7 +129,7 @@ no fade-in, no fade-out, no big ending.
 | `station_bell` | Колокол спасательной станции (крушение) | Urgent brass ship bell ringing three times in the distance. |
 | `grave_fill` | Похороны: засыпать могилу | Shovel throwing soil onto a grave, two throws. |
 
-### Вторая очередь — звуки подключу в игре, как только появятся файлы
+### Вторая очередь — подключены в игре
 
 Промпты, длительности и имена файлов для каждого звука — в `docs/audio/SFX_WAVE2.md` (и `.pdf`).
 

@@ -46,8 +46,11 @@ func _ready() -> void:
 		buttons.add_child(_button("Продать с панели", sell_selected_hotbar))
 	if shop_id == "shop_chapel":
 		buttons.add_child(_button("Отпевание", func() -> void:
+			var done := Graveyard.chapel_funeral()
+			if done == "ok":
+				AudioMgr.play_sfx("funeral_bell")
 			_status.text = {"ok": "Бенедикт отпел тело из покойницкой.", "hours": "Отпевания — по воскресеньям с 10 до 12.",
-				"nobody": "В покойницкой некого отпевать.", "cost": "Нужно 50 кр и 2 свечи."}.get(Graveyard.chapel_funeral(), "")))
+				"nobody": "В покойницкой некого отпевать.", "cost": "Нужно 50 кр и 2 свечи."}.get(done, "")))
 	buttons.add_child(_button("Закрыть", close))
 	refresh()
 	if _list.item_count > 0:

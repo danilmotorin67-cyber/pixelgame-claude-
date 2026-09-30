@@ -25,6 +25,7 @@ func interact(player: Player) -> void:
 	if not Lighthouse.foggy():
 		hint.text = "Колокол нужен в туман и в Ночи Хмари."
 	elif Lighthouse.ring_bell():
+		AudioMgr.play_sfx("lighthouse_bell")
 		hint.text = "Колокол звонит над туманом. Следующий раз — через час."
 		if player:
 			player.play_pose("ring_bell", 1.0)

@@ -28,4 +28,5 @@ func interact(_player: Player) -> void:
 	var starts := Deep.start_levels()
 	var from_level: int = starts[-1]
 	if Deep.begin(from_level) == "ok":
+		AudioMgr.play_sfx("bell_descent")
 		Router.goto_map("deep", Deep.cell_center(Deep.data["entry"]))

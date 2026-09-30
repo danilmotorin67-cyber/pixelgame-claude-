@@ -866,3 +866,36 @@ func _check_music() -> void:
 		"station_bell", "grave_fill", "dodge"]
 	var missing := wanted.filter(func(id: String) -> bool: return AudioMgr._sfx_stream(id) == null)
 	_check(missing.is_empty(), "every sound in use has a file (missing: %s)" % [missing])
+
+	# ...and so does every sound the scripts name (play_sfx / play_loop / play_sfx_later), every footstep
+	# surface and every villager's voice.
+	var named := {}
+	var re := RegEx.create_from_string("play_(?:sfx|loop|sfx_later)\\(\"([a-z0-9_]+)\"")
+	for path in _gd_files("res://scripts") + _gd_files("res://autoload"):
+		for m in re.search_all(FileAccess.get_file_as_string(path)):
+			if not m.get_string(1).ends_with("_"):  # "step_" + surface, "voice_" + voice: listed below
+				named[m.get_string(1)] = true
+	for surface in ["grass", "sand", "stone", "wood", "snow", "water", "mud", "indoor"]:
+		named["step_" + surface] = true
+	for npc in Data.all("npcs"):
+		named["voice_" + str(npc.get("voice", "none"))] = true
+	var unheard := named.keys().filter(func(id: String) -> bool: return AudioMgr._sfx_stream(id) == null)
+	_check(named.size() > 50 and unheard.is_empty(), "%d named sounds all have files (missing: %s)" % [named.size(), unheard])
+
+	# Footsteps read the cape's ground: grass inland, bare rock at the edge, sand or surf by the sea.
+	var ground: Node2D = load("res://scripts/world/cape_ground_art.gd").new()
+	ground.set("_corners", ground.call("corners"))
+	_check(str(ground.call("surface_at", Vector2(40 * 16, 30 * 16))) in ["grass", "snow"], "the cape inland is grass (or snow)")
+	_check(str(ground.call("surface_at", Vector2(2 * 16, 30 * 16))) == "stone", "its rim is rock")
+	_check(str(ground.call("surface_at", Vector2(40 * 16, 57 * 16))) in ["sand", "water"], "its shore is sand or surf")
+	ground.free()
+
+
+func _gd_files(dir: String) -> Array:
+	var out: Array = []
+	for f in DirAccess.get_files_at(dir):
+		if f.ends_with(".gd"):
+			out.append(dir.path_join(f))
+	for d in DirAccess.get_directories_at(dir):
+		out += _gd_files(dir.path_join(d))
+	return out

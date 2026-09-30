@@ -33,6 +33,8 @@ EXTS = (".mp3", ".wav", ".ogg", ".flac")
 # Loudness targets as RMS (dBFS), a simple stand-in for LUFS: music ≈ -16 LUFS, ambience under it.
 TARGET_RMS = {"music": -19.0, "ambience": -26.0}
 SFX_LOUDEST = -18.0
+# Sounds that play as a loop (a reel winding, breath in a helmet, a purr): the end runs into the start.
+SFX_LOOPS = ("fish_reel", "helmet_breath", "cat_purr")
 SFX_PEAK = -1.0
 
 
@@ -111,6 +113,15 @@ def level_sfx(audio, sr, window=0.05):
     return audio * gain
 
 
+def seamless(audio, sr, xfade=0.25):
+    """A loop from 0 to the end with no seam: the first `xfade` seconds are blended under the tail and cut."""
+    n = min(int(xfade * sr), len(audio) // 4)
+    out = audio[n:].copy()
+    w = np.linspace(0.0, 1.0, n)[:, None]
+    out[-n:] = audio[-n:] * np.cos(w * np.pi / 2) + audio[:n] * np.sin(w * np.pi / 2)
+    return out
+
+
 def fades(audio, sr, fade_in=0.005, fade_out=0.03):
     a, b = int(fade_in * sr), int(fade_out * sr)
     if a:
@@ -142,7 +153,7 @@ def process(kind, path, loop_from=None, xfade=2.0, search=4.0, level=None):
     info = {}
     if kind == "sfx":
         audio = level_sfx(audio, sr)
-        audio = fades(audio, sr)
+        audio = seamless(audio, sr) if ident in SFX_LOOPS else fades(audio, sr)
     else:
         audio = level_to(audio, TARGET_RMS[kind] if level is None else level)
         audio, loop_start = make_loop(audio, sr, loop_from or 0.0, xfade, search)

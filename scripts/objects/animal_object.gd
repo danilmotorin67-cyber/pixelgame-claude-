@@ -16,6 +16,10 @@ var _left := 0.0
 var _clock := 0.0
 var _facing := "down"
 var _rng := RandomNumberGenerator.new()
+var _call_t := 0.0
+# The sound each kind makes (the eider as a duck).
+const CALLS := {"chicken": "chicken", "duck": "duck", "eider": "duck", "sheep": "sheep", "goat": "goat", "cow": "cow",
+	"pony": "pony", "pig": "pig"}
 
 
 func _ready() -> void:
@@ -30,11 +34,19 @@ func _ready() -> void:
 	_target = position
 	_rng.seed = animal_id * 7919 + 17
 	_left = _rng.randf_range(0.5, 3.0)
+	_call_t = _rng.randf_range(4.0, 30.0)
 
 
 func _process(delta: float) -> void:
 	_clock += delta
 	_left -= delta
+	# Now and then a cluck, a bleat or a moo, heard when the keeper is near.
+	_call_t -= delta
+	if _call_t <= 0.0:
+		_call_t = _rng.randf_range(15.0, 40.0)
+		var keeper := get_tree().current_scene.get_node_or_null("Player") as Node2D if get_tree().current_scene else null
+		if keeper and keeper.global_position.distance_to(global_position) < 140.0:
+			AudioMgr.play_sfx(str(CALLS.get(kind(), "")), -14.0)
 	if _state == "walk":
 		var d := _target - position
 		if d.length() < 1.0:
@@ -93,6 +105,7 @@ func interact(player: Player) -> void:
 		return
 	if petted:
 		hint.text = "%s довольно фыркает. Дружба: %d." % [str(a["name"]), int(a["friendship"])]
+		AudioMgr.play_sfx(str(CALLS.get(kind(), "")), -6.0)
 		if player:
 			player.facing = (global_position - player.global_position).normalized()
 			player.play_pose("pet", 1.0)
