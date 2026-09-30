@@ -96,9 +96,7 @@ func _build_menu() -> void:
 		var b := Button.new()
 		b.name = str(entry[0]).capitalize()
 		b.text = str(entry[1])
-		b.pressed.connect(func() -> void:
-			AudioMgr.play_sfx("ui_click")
-			(entry[2] as Callable).call())
+		b.pressed.connect(entry[2] as Callable)
 		_menu.add_child(b)
 		_buttons[entry[0]] = b
 	_menu.reset_size()
@@ -155,7 +153,7 @@ func _on_credits() -> void:
 
 
 func _on_quit() -> void:
-	_leave(func() -> void: get_tree().quit())
+	_leave(AudioMgr.quit)
 
 
 func _load(slot: int) -> void:

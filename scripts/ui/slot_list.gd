@@ -55,7 +55,6 @@ func _list() -> void:
 
 
 func _pick(slot: int) -> void:
-	AudioMgr.play_sfx("ui_click")
 	var info := Save.slot_info(slot)
 	if mode == "new" and not info.is_empty():
 		_ask("Слот %d занят: «%s». Новая игра заменит это сохранение, когда смотритель впервые ляжет спать. Начать?"
@@ -65,7 +64,6 @@ func _pick(slot: int) -> void:
 
 
 func _ask_delete(slot: int) -> void:
-	AudioMgr.play_sfx("ui_click")
 	_ask("Удалить сохранение слота %d «%s»? Вернуть его будет нельзя." % [slot + 1, describe(Save.slot_info(slot))],
 		"Удалить", func() -> void:
 			Save.delete_slot(slot)

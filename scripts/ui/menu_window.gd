@@ -26,6 +26,7 @@ func _init(heading: String) -> void:
 	column.add_child(body)
 	var back := Button.new()
 	back.text = "Назад"
+	back.set_meta("sfx", "")  # close() plays ui_back
 	back.pressed.connect(close)
 	column.add_child(back)
 

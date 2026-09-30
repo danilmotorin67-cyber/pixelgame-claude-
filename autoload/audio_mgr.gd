@@ -15,6 +15,8 @@ const FADE := 1.6
 const SILENT := -60.0
 const SFX_VOICES := 8
 const UI_SOUNDS := ["ui_click", "ui_back", "ui_page", "ui_coins", "ui_levelup", "ui_achievement"]
+# A sound not made yet borrows another at a pitch of its own: id -> [stand-in, pitch].
+const STAND_INS := {"ui_back": ["ui_click", 0.8]}
 
 var music_id: String = ""
 var ambience_id: String = ""
@@ -36,6 +38,7 @@ var silent := false
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	silent = DisplayServer.get_name() == "headless"
+	get_tree().auto_accept_quit = false
 	_make_buses()
 	for i in 2:
 		_players.append(_player("Music"))
@@ -61,16 +64,44 @@ func _ready() -> void:
 	Events.body_buried.connect(func(_id: String, _q: int) -> void: play_sfx("grave_fill"))
 	Events.item_added.connect(func(_id: String, _n: int) -> void: play_sfx("item_get", -8.0))
 	Events.money_changed.connect(func(_amount: int) -> void: play_sfx("ui_coins", -6.0))
+	get_tree().node_added.connect(_on_node_added)
+
+
+# Every button clicks when pressed; one with the meta `sfx` plays that sound instead ("" for none).
+func _on_node_added(node: Node) -> void:
+	if node is BaseButton:
+		var b := node as BaseButton
+		b.pressed.connect(func() -> void:
+			var id := str(b.get_meta("sfx", "ui_click"))
+			if id != "":
+				play_sfx(id))
 
 
 # On quit the players let go of their streams and the cache empties, so nothing is left in use.
 func _exit_tree() -> void:
+	_let_go()
+	_streams.clear()
+
+
+# The audio thread drops a stopped stream only on its next mix, so leaving the game stops everything and
+# waits a moment before quitting; closing the window goes the same way.
+func quit() -> void:
+	_let_go()
+	await get_tree().create_timer(0.2, true, false, true).timeout
+	get_tree().quit()
+
+
+func _notification(what: int) -> void:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
+		quit()
+
+
+func _let_go() -> void:
 	for p in _players + _sfx + [_ambience] + _layers.values():
 		var player := p as AudioStreamPlayer
 		if player:
 			player.stop()
 			player.stream = null
-	_streams.clear()
 
 
 func _make_buses() -> void:
@@ -337,6 +368,10 @@ func play_sfx(id: String, volume_db := 0.0) -> void:
 	if silent:
 		return
 	var stream := _sfx_stream(id)
+	var pitch := 1.0
+	if stream == null and STAND_INS.has(id):
+		stream = _sfx_stream(str(STAND_INS[id][0]))
+		pitch = float(STAND_INS[id][1])
 	if stream == null:
 		return
 	var p := _sfx[_next_voice]
@@ -344,7 +379,7 @@ func play_sfx(id: String, volume_db := 0.0) -> void:
 	p.bus = "UI" if id in UI_SOUNDS else "SFX"
 	p.stream = stream
 	p.volume_db = volume_db
-	p.pitch_scale = 1.0 if id in UI_SOUNDS else randf_range(0.95, 1.05)
+	p.pitch_scale = pitch * (1.0 if id in UI_SOUNDS else randf_range(0.95, 1.05))
 	p.play()
 
 
