@@ -50,6 +50,9 @@ func _load_all() -> void:
 func _load_dir(dir_name: String) -> Dictionary:
 	var out := {}
 	var path := "res://data/%s" % dir_name
+	# An empty folder is not packed into an exported game, so a missing one is simply empty.
+	if not DirAccess.dir_exists_absolute(path):
+		return out
 	for file in DirAccess.get_files_at(path):
 		if not file.ends_with(".json"):
 			continue

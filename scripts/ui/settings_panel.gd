@@ -3,7 +3,7 @@ extends MenuWindow
 
 # The settings from the title screen (34): language, the three volumes and the comfort switches. Every
 # change is written to the player's settings file at once (Settings.save_prefs).
-const SWITCHES := [["shake", "Тряска экрана"], ["lightning_flash", "Вспышки молний"],
+const SWITCHES := [["fullscreen", "Полный экран (F11)"], ["shake", "Тряска экрана"], ["lightning_flash", "Вспышки молний"],
 	["fortuna_reminder", "Напоминание Фортуны"], ["fishing_assist", "Помощь в рыбалке"],
 	["save_anytime", "Сохранение в любой момент"]]
 const VOLUMES := [["master_vol", "Громкость"], ["music_vol", "Музыка"], ["sfx_vol", "Звуки"]]

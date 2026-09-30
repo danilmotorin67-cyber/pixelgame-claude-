@@ -8,10 +8,12 @@ config_version=5
 config/name="Солёный свет"
 config/name_locale={"en":"Saltlight"}
 config/description="Хроники смотрителя маяка"
-config/version="0.10.1-m9-dev"
+config/version="0.11.0-playtest1"
 run/main_scene="res://scenes/main/boot.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://assets/sprites/icon.png"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Saltlight"
 
 [autoload]
 
@@ -61,6 +63,7 @@ window/size/viewport_width=960
 window/size/viewport_height=540
 window/size/window_width_override=1920
 window/size/window_height_override=1080
+window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="keep"
 window/stretch/scale_mode="integer"

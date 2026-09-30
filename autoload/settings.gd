@@ -10,6 +10,7 @@ var sfx_vol: float = 1.0
 var save_anytime: bool = false
 var fortuna_reminder: bool = true
 var fishing_assist: bool = false
+var fullscreen: bool = false
 
 # The settings are the player's, not the save's: they live in their own file, read at start and written on
 # every change (from the title screen or the journal).
@@ -20,6 +21,7 @@ func _ready() -> void:
 	load_prefs()
 	apply_language()
 	apply_audio()
+	apply_window()
 	# The pixel font and the PixelLab frames style every window and HUD panel.
 	UiKit.install(get_tree())
 
@@ -27,6 +29,23 @@ func _ready() -> void:
 # The game speaks Russian unless the player picks English (34).
 func apply_language() -> void:
 	TranslationServer.set_locale(language if language in ["ru", "en"] else "ru")
+
+
+# F11 or Alt+Enter anywhere switches between full screen and a maximized window, and is remembered.
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed and not event.echo \
+			and (event.keycode == KEY_F11 or (event.keycode == KEY_ENTER and event.alt_pressed)):
+		fullscreen = not fullscreen
+		save_prefs()
+		get_viewport().set_input_as_handled()
+
+
+func apply_window() -> void:
+	if DisplayServer.get_name() == "headless":
+		return
+	var want := DisplayServer.WINDOW_MODE_FULLSCREEN if fullscreen else DisplayServer.WINDOW_MODE_MAXIMIZED
+	if DisplayServer.window_get_mode() != want:
+		DisplayServer.window_set_mode(want)
 
 
 func apply_audio() -> void:
@@ -60,6 +79,7 @@ func save_prefs() -> void:
 		file.store_string(JSON.stringify(serialize(), "\t"))
 	apply_language()
 	apply_audio()
+	apply_window()
 
 
 func serialize() -> Dictionary:
@@ -67,7 +87,7 @@ func serialize() -> Dictionary:
 		"language": language, "ui_scale": ui_scale, "shake": shake,
 		"lightning_flash": lightning_flash, "master_vol": master_vol,
 		"music_vol": music_vol, "sfx_vol": sfx_vol, "save_anytime": save_anytime,
-		"fortuna_reminder": fortuna_reminder, "fishing_assist": fishing_assist,
+		"fortuna_reminder": fortuna_reminder, "fishing_assist": fishing_assist, "fullscreen": fullscreen,
 	}
 
 func deserialize(d: Dictionary) -> void:
@@ -81,4 +101,5 @@ func deserialize(d: Dictionary) -> void:
 	save_anytime = bool(d.get("save_anytime", false))
 	fortuna_reminder = bool(d.get("fortuna_reminder", true))
 	fishing_assist = bool(d.get("fishing_assist", false))
+	fullscreen = bool(d.get("fullscreen", fullscreen))
 	apply_language()
