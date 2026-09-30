@@ -34,154 +34,154 @@
     "village_spring": {
       "title": "Сольвик: весна",
       "where": "деревня днём",
-      "loop_start": 0.0
+      "loop_start": 3.89
     },
     "village_summer": {
       "title": "Сольвик: лето",
       "where": "деревня днём",
-      "loop_start": 0.0
+      "loop_start": 4.8
     },
     "village_autumn": {
       "title": "Сольвик: осень",
       "where": "деревня днём",
-      "loop_start": 0.0
+      "loop_start": 3.01
     },
     "village_winter": {
       "title": "Сольвик: зима",
       "where": "деревня днём",
-      "loop_start": 0.0
+      "loop_start": 3.95
     },
     "tavern": {
       "title": "Сухой Утопленник",
       "where": "таверна",
-      "loop_start": 0.0
+      "loop_start": 3.0
     },
     "tavern_fiddle": {
       "title": "Сухой Утопленник: скрипка Иона",
       "where": "таверна, суббота вечером со скрипкой Иона",
-      "loop_start": 0.0
+      "loop_start": 3.35
     },
     "night": {
       "title": "Ночь",
       "where": "везде на суше ночью",
-      "loop_start": 0.0
+      "loop_start": 23.17
     },
     "watch": {
       "title": "Вахта",
       "where": "фонарная",
-      "loop_start": 0.0
+      "loop_start": 6.36
     },
     "graveyard": {
       "title": "Погост",
       "where": "погост, часовня",
-      "loop_start": 0.0
+      "loop_start": 4.67
     },
     "hmar": {
       "title": "Хмарь",
       "where": "ночи Хмари на суше",
-      "loop_start": 0.0
+      "loop_start": 5.58
     },
     "rowing": {
       "title": "Гребля",
       "where": "море, на вёслах",
-      "loop_start": 0.0
+      "loop_start": 31.41
     },
     "sailing": {
       "title": "Под парусом",
       "where": "море, под парусом",
-      "loop_start": 0.0
+      "loop_start": 4.8
     },
     "storm": {
       "title": "Шторм",
       "where": "море в шторм",
-      "loop_start": 0.0
+      "loop_start": 5.69
     },
     "grottoes": {
       "title": "Гроты",
       "where": "Гроты Отлива",
-      "loop_start": 0.0
+      "loop_start": 3.06
     },
     "deep_kelp": {
       "title": "Глубь: Кельповый лес",
       "where": "Глубь",
-      "loop_start": 0.0
+      "loop_start": 5.28
     },
     "deep_old_solvick": {
       "title": "Глубь: Старый Сольвик",
       "where": "Глубь",
-      "loop_start": 0.0
+      "loop_start": 5.64
     },
     "deep_bone_abyss": {
       "title": "Глубь: Костяная Бездна",
       "where": "Глубь",
-      "loop_start": 0.0
+      "loop_start": 12.58
     },
     "boss_mother_moray": {
       "title": "Мать-Мурена",
       "where": "босс",
-      "loop_start": 0.0
+      "loop_start": 40.5
     },
     "boss_bell_ringer": {
       "title": "Звонарь",
       "where": "босс",
-      "loop_start": 0.0
+      "loop_start": 5.94
     },
     "boss_bone_whale": {
       "title": "Костяной Кит",
       "where": "босс",
-      "loop_start": 0.0
+      "loop_start": 37.62
     },
     "festival": {
       "title": "Праздник",
       "where": "праздники в деревне",
-      "loop_start": 0.0
+      "loop_start": 3.62
     },
     "drowned_night": {
       "title": "Ночь Утопленников",
       "where": "праздник",
-      "loop_start": 0.0
+      "loop_start": 3.33
     },
     "loss": {
       "title": "Утрата",
       "where": "грустные сцены",
-      "loop_start": 0.0
+      "loop_start": 5.83
     },
     "mystery": {
       "title": "Тайна",
       "where": "расследование, доска улик",
-      "loop_start": 0.0
+      "loop_start": 5.54
     },
     "hold_the_fire": {
       "title": "Держать огонь",
       "where": "финал, фаза 1",
-      "loop_start": 0.0
+      "loop_start": 20.21
     },
     "seabed_path": {
       "title": "Тропа на дне",
       "where": "финал, фаза 2",
-      "loop_start": 0.0
+      "loop_start": 6.47
     },
     "halls_of_rann": {
       "title": "Чертоги Ранн",
       "where": "финал, фаза 3",
-      "loop_start": 0.0
+      "loop_start": 5.82
     },
     "morning": {
       "title": "Утро",
       "where": "эпилог",
-      "loop_start": 0.0
+      "loop_start": 6.17
     }
   },
   "layers": {
     "layer_storm": {
       "title": "Слой шторма",
       "where": "поверх музыки на суше в шторм",
-      "loop_start": 0.0
+      "loop_start": 3.4
     },
     "layer_hmar": {
       "title": "Слой Хмари",
       "where": "поверх музыки на море в ночь Хмари",
-      "loop_start": 0.0
+      "loop_start": 6.83
     }
   },
   "ambience": {

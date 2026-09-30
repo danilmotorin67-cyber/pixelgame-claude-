@@ -28,10 +28,14 @@ var _sfx: Array[AudioStreamPlayer] = []
 var _next_voice := 0
 var _streams := {}
 var _check_t := 0.0
+# Without a screen (tests, servers) there is no sound: the choices are still made, nothing is played, so no
+# stream is left mid-play when the engine quits.
+var silent := false
 
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	silent = DisplayServer.get_name() == "headless"
 	_make_buses()
 	for i in 2:
 		_players.append(_player("Music"))
@@ -57,6 +61,16 @@ func _ready() -> void:
 	Events.body_buried.connect(func(_id: String, _q: int) -> void: play_sfx("grave_fill"))
 	Events.item_added.connect(func(_id: String, _n: int) -> void: play_sfx("item_get", -8.0))
 	Events.money_changed.connect(func(_amount: int) -> void: play_sfx("ui_coins", -6.0))
+
+
+# On quit the players let go of their streams and the cache empties, so nothing is left in use.
+func _exit_tree() -> void:
+	for p in _players + _sfx + [_ambience] + _layers.values():
+		var player := p as AudioStreamPlayer
+		if player:
+			player.stop()
+			player.stream = null
+	_streams.clear()
 
 
 func _make_buses() -> void:
@@ -229,6 +243,8 @@ func _set_music(id: String) -> void:
 	if id == music_id:
 		return
 	music_id = id
+	if silent:
+		return
 	var old := _players[_active]
 	_active = 1 - _active
 	var new := _players[_active]
@@ -245,6 +261,8 @@ func _set_ambience(id: String) -> void:
 	if id == ambience_id:
 		return
 	ambience_id = id
+	if silent:
+		return
 	var stream := _stream(AMBIENCE_DIR, id, _table("ambience").get(id, {}))
 	_fade(_ambience, SILENT, true)
 	if stream:
@@ -258,6 +276,8 @@ func _set_ambience(id: String) -> void:
 
 func _set_layers(ids: Array) -> void:
 	layers_on = ids
+	if silent:
+		return
 	for id in _layers:
 		var p: AudioStreamPlayer = _layers[id]
 		if id in ids and not p.playing:
@@ -314,6 +334,8 @@ func _stream(dir: String, id: String, info: Dictionary) -> AudioStream:
 
 # A sound by id; `<id>_1`, `<id>_2`… are variants picked at random. Interface sounds go to the UI bus.
 func play_sfx(id: String, volume_db := 0.0) -> void:
+	if silent:
+		return
 	var stream := _sfx_stream(id)
 	if stream == null:
 		return
