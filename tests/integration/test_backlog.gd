@@ -861,3 +861,8 @@ func _check_music() -> void:
 	AudioMgr.play_sfx("ui_click")
 	_check(true, "a sound without its file is silence, not an error")
 
+	# Every sound the game already asks for has its file.
+	var wanted: Array = Fx.SOUNDS.values() + AudioMgr.UI_SOUNDS + ["item_get", "lamp_light", "fish_landed",
+		"station_bell", "grave_fill", "dodge"]
+	var missing := wanted.filter(func(id: String) -> bool: return AudioMgr._sfx_stream(id) == null)
+	_check(missing.is_empty(), "every sound in use has a file (missing: %s)" % [missing])

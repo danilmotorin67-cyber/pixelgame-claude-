@@ -15,6 +15,7 @@ const DECOR := {
 
 var _message_t: float = 0.0
 var _bubble_t := 0.0
+var _breaths := 0
 var _cells := PackedInt32Array()
 
 
@@ -76,7 +77,11 @@ func _process(delta: float) -> void:
 	if _bubble_t <= 0.0:
 		_bubble_t = 1.1
 		if Deep.gear() != "gills":
-			Fx.burst("bubbles", player.global_position + Vector2(0, -18))
+			# Heard on every third, softly, like breathing out.
+			_breaths += 1
+			Fx.burst("bubbles", player.global_position + Vector2(0, -18), null, false)
+			if _breaths % 3 == 0:
+				AudioMgr.play_sfx("bubbles", -8.0)
 	var picked := Deep.world.collect_drops()
 	if not picked.is_empty():
 		_hint("Подобрано: " + ", ".join(picked.map(func(d: Dictionary) -> String: return Crafting.item_name(str(d["item"])))))

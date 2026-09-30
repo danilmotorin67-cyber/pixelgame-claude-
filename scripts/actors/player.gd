@@ -741,6 +741,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 		_dodge_t = DODGE_TIME
 		Fx.burst("dust", global_position)
+		AudioMgr.play_sfx("dodge")
 		velocity = facing * dodge_speed
 	if event.is_action_pressed("quick_eat"):
 		var hint := get_tree().current_scene.get_node_or_null("HUD/Hint") as Label
